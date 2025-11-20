@@ -16,55 +16,57 @@
   <p><strong>App:</strong> Expense Tracker</p>
 
   <h2>1. Summary</h2>
-  <p>Expense Tracker is an offline mobile application that helps you record and manage personal expenses. This app does <strong>not</strong> require user accounts or sign-in. It stores all expense data locally on your device.</p>
+  <p>Expense Tracker helps users record and manage personal expenses. Some features operate completely offline, while the app also uses third-party services such as Firebase and Google Mobile Ads for analytics, crash reporting, and advertising.</p>
 
   <h2>2. Personal data we collect</h2>
-  <p><strong>We do not collect personal information (such as name, email, phone number) through the app.</strong> All expense entries, notes, and related data remain on your device only, unless you choose to export or share them yourself.</p>
+  <p><strong>The app does not ask you to create an account and does not collect personal information such as your name, email, phone number, or financial details.</strong></p>
+  <p>Your expense entries remain stored locally on your device unless you choose to export or share them.</p>
 
-  <h2>3. Usage data and analytics</h2>
-  <p>To help improve the app and diagnose issues, Expense Tracker uses <strong>Firebase</strong> services (for example: Analytics and Crashlytics). Firebase may collect limited technical information such as:</p>
+  <h2>3. Analytics and usage data</h2>
+  <p>To help improve performance and stability, the app uses <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>. These may collect:</p>
   <ul>
-    <li>Device identifiers (for example: advertising identifier or instance ID)</li>
-    <li>App version and operating system version</li>
-    <li>Crash reports and performance data</li>
-    <li>Basic usage events (e.g. feature usage counts, screen views)</li>
+    <li>Device identifiers (e.g., advertising ID or instance ID)</li>
+    <li>App version and OS version</li>
+    <li>Crash logs</li>
+    <li>Usage events (e.g., screen views, feature interactions)</li>
   </ul>
-  <p>These analytics are used in aggregate to improve the app’s stability and user experience. They are not used to build a personal profile of you or to identify you.</p>
+  <p>This information is used in aggregate and not linked to your identity.</p>
 
-  <h2>4. Third‑party services</h2>
-  <p>The app uses the following third‑party service:</p>
+  <h2>4. Advertising (Google Mobile Ads)</h2>
+  <p>The app displays banner advertisements using <strong>Google Mobile Ads SDK (AdMob)</strong>. AdMob may collect and process certain data, such as:</p>
   <ul>
-    <li><strong>Firebase</strong> — analytics and crash reporting. Firebase is provided by Google and operates under its own privacy policy. You can review Google’s privacy information at Google’s official privacy site.</li>
+    <li>Device information (e.g., device model, OS version)</li>
+    <li>General location (city-level, not precise GPS)</li>
+    <li>Advertising identifiers (e.g., IDFA on iOS)</li>
+    <li>Interaction data with ads (e.g., views, clicks)</li>
+  </ul>
+  <p>AdMob uses this data to deliver and improve ads. You can manage or reset your advertising identifier in your device settings.</p>
+  <p>Google's advertising policies apply. You may review them on Google's official privacy page.</p>
+
+  <h2>5. Third-party services</h2>
+  <p>The app uses the following services:</p>
+  <ul>
+    <li><strong>Firebase Analytics & Crashlytics</strong> — performance monitoring and crash reporting</li>
+    <li><strong>Google Mobile Ads (AdMob)</strong> — displaying ads in the app</li>
   </ul>
 
-  <h2>5. Storage and retention</h2>
-  <p>All expense data is stored locally on your device (for example, using local storage or the device’s database). Expense data remains on the device until you delete it or uninstall the app. We do not retain backups on servers or in the cloud.</p>
+  <h2>6. Storage and retention</h2>
+  <p>Your personal expense data is stored locally on your device and is never uploaded to any server by the app. Data remains on the device until you delete it or uninstall the app.</p>
 
-  <h2>6. No advertising</h2>
-  <p>This version of Expense Tracker does not display ads and does not share data for advertising purposes.</p>
-
-  <h2>7. iCloud and external servers</h2>
-  <p>The app does not use iCloud sync, external servers, or any other remote storage for user expense data.</p>
+  <h2>7. iCloud and remote servers</h2>
+  <p>The app does not use iCloud sync or store your expense data on external servers.</p>
 
   <h2>8. Children</h2>
-  <p>The app is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13.</p>
+  <p>The app is not intended for children under 13. The app does not knowingly collect personal information from children.</p>
 
   <h2>9. Your rights</h2>
-  <p>Because the app does not collect personal information tied to your identity, there is limited personal data to access or delete. If you wish to remove your expense data, delete it from inside the app or uninstall the app which will remove local data stored on the device.</p>
+  <p>Because the app does not collect personal information that identifies you, you do not need to request data deletion. To remove your data, simply delete entries from within the app or uninstall the app.</p>
 
   <h2>10. Security</h2>
-  <p>We take reasonable steps to protect the data stored locally on the device. However, no method of storage is 100% secure — please treat your device securely (use device passcode/biometrics) to protect access to the app’s data.</p>
+  <p>The app stores all data locally. Please use device-level protections (PIN, Face ID, Touch ID) to keep your data secure.</p>
 
   <h2>11. Changes to this policy</h2>
-  <p>We may update this policy from time to time. If we make significant changes, we will update the effective date shown at the top of the page.</p>
+  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.</p>
 
-  </footer>
-
-  <script>
-    const d = new Date();
-    const formatted = d.toLocaleDateString('en-GB');
-    document.getElementById('today').textContent = formatted;
-    document.getElementById('today2').textContent = formatted;
-  </script>
 </body>
 </html>
