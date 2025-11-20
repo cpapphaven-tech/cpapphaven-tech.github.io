@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +5,15 @@
   <title>Expense Tracker – Support</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 0; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 0; max-width:900px; }
     h1 { color: #333; }
     h2 { color: #666; margin-top: 1.2em; }
     p { margin: 0.6em 0; }
-    .contact { background: #f4f4f4; padding: 10px; border-radius: 4px; }
+    .contact { background: #f4f4f4; padding: 12px; border-radius: 6px; }
     .footer { margin-top: 2em; font-size: 0.9em; color: #777; }
+    .note { background: #fff8e6; padding: 10px; border-left: 4px solid #ffd93d; border-radius: 4px; }
+    ul, ol { margin-left: 1.05em; }
+    a { color: #0b62d1; }
   </style>
 </head>
 <body>
@@ -28,21 +30,46 @@
   <ol>
     <li><strong>How do I add a new expense?</strong><br>
         Tap the Add Expense button, enter the amount, category, and optional note, then save.</li>
+
     <li><strong>Where is my data stored?</strong><br>
-        All data is stored locally on your device only. No information is uploaded to any server.</li>
+        All expense data is stored locally on your device only. No personal expense data is uploaded to our servers by default.</li>
+
     <li><strong>Do I need an account or login?</strong><br>
         No — the app works without login. You can start tracking expenses instantly.</li>
+
     <li><strong>Can I use the app offline?</strong><br>
         Yes. The app works completely offline, anytime, anywhere.</li>
-    <li><strong>Will my data be shared?</strong><br>
-        Never. We do not collect or share your personal information.</li>
+
+    <li><strong>Why am I seeing ads?</strong><br>
+        We display banner ads in the app using <strong>Google Mobile Ads (AdMob)</strong>. Ads help keep the app free to use and support ongoing development.</li>
+
+    <li><strong>Will my expense data be shared?</strong><br>
+        No — your expense entries remain on your device. However, AdMob (the ad provider) may collect limited technical information necessary to show and personalize ads; see details below.</li>
   </ol>
 
-  <h2>🔐 Privacy & Security</h2>
-  <p>Your data stays only on your device.</p>
-  <p>We use Firebase Analytics to understand app usage and improve features.</p>
-  <p>We use Firebase Crashlytics to fix bugs and crashes.</p>
-  <p>No personal data is collected. No tracking or advertising profiles.</p>
+  <h2>🔐 Privacy, Ads & Security</h2>
+  <p class="note"><strong>Important:</strong> Expense Tracker still stores your expense entries locally. <em>However</em>, because the app includes ads, the ad provider (Google/AdMob) may collect limited device and advertising data to deliver and improve ads.</p>
+
+  <h3>What AdMob may collect</h3>
+  <p>Google Mobile Ads may collect or use:</p>
+  <ul>
+    <li>Device information (model, OS version)</li>
+    <li>Advertising identifiers (for example: IDFA on iOS)</li>
+    <li>General location information (city-level, not precise GPS) — only if your device settings allow</li>
+    <li>Interaction data with ads (e.g., impressions, clicks)</li>
+  </ul>
+  <p>AdMob uses this information to deliver ads and (when enabled) to personalize ad content. This is governed by Google’s privacy policies; you can review Google’s privacy information on their official site.</p>
+
+  <h3>Manage ad personalization</h3>
+  <p>If you prefer not to receive personalized ads, you can turn off ad personalization or reset your advertising identifier using your device settings:</p>
+  <ul>
+    <li><strong>On iOS:</strong> go to <em>Settings → Privacy &amp; Security → Tracking</em> and choose whether apps can request to track. You can also reset your Advertising Identifier in <em>Settings → Privacy &amp; Security → Apple Advertising</em> (availability depends on OS version).</li>
+    <li><strong>On Android:</strong> open <em>Settings → Google → Ads</em> (or similar) and choose “Opt out of Ads Personalization” or reset your advertising ID.</li>
+  </ul>
+  <p>Note: exact menu names may vary by OS version and device model.</p>
+
+  <h3>Firebase Analytics & Crash Reporting</h3>
+  <p>We also use Firebase Analytics and Crashlytics to understand app usage and fix crashes. These services collect aggregate usage and crash data (device model, app version, crash stack traces) and are <em>not</em> used to build a personal profile tied to your identity.</p>
 
   <h2>📱 App Features Overview</h2>
   <ul>
@@ -54,6 +81,15 @@
     <li>No login required</li>
   </ul>
 
-  <p class="footer">Thank you for using Expense Tracker!</p>
+  <h2>🔎 Additional Support</h2>
+  <p>If you experience issues with ads (for example, inappropriate content shown in an ad, or a technical problem), please contact us at <a href="mailto:cpapphaven@gmail.com">cpapphaven@gmail.com</a> and include:</p>
+  <ul>
+    <li>Your device model and OS version</li>
+    <li>A short description of the issue</li>
+    <li>A screenshot if possible</li>
+  </ul>
+  <p>For issues specifically with Google ads, you can also follow the reporting options provided in the ad itself (many ads include a small info or \"Ad choices\" link).</p>
+
+  <p class="footer">Thank you for using Expense Tracker — if you have feedback or ideas for improvements, we’d love to hear from you.</p>
 </body>
 </html>
