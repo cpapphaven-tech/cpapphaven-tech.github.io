@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Stack 3D - PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- CrazyGames SDK (Placeholder) -->
+    <!-- <script src="https://sdk.crazygames.com/crazygames-sdk-v1.js"></script> -->
+</head>
+
+<body>
+    <div id="ui-container">
+        <div id="score-container">
+            <h1 id="score">0</h1>
+        </div>
+
+        <div id="main-menu" class="overlay">
+            <h2 id="title">STACK 3D</h2>
+            <p id="prompt">Tap to Start</p>
+        </div>
+
+        <div id="game-over" class="overlay hidden">
+            <h2>GAME OVER</h2>
+            <p>Score: <span id="final-score">0</span></p>
+            <p>Best: <span id="best-score">0</span></p>
+            <button id="restart-btn">Try Again</button>
+            <button id="revive-btn" class="hidden">Revive (Video AD)</button>
+        </div>
+    </div>
+
+    <canvas id="game-canvas"></canvas>
+
+    <script src="game.js"></script>
+    <script>
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('SW Registered'))
+                    .catch(err => console.log('SW Registration Failed', err));
+            });
+        }
+    </script>
+</body>
+
+</html>
