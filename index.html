@@ -60,15 +60,33 @@
         </div>
     </section>
 
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <p class="copyright">&copy; 2026 PlayMixGames. All rights reserved.</p>
     </footer>
+
+    <!-- Service Worker Cleanup Script (Fixes Firefox/Chrome Caching Issues) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                for (let registration of registrations) {
+                    registration.unregister();
+                    console.log('Old Service Worker Unregistered');
+                }
+            });
+        }
+
+        // Clear all caches to force the new Portal UI
+        if ('caches' in window) {
+            caches.keys().then(function (names) {
+                for (let name of names) caches.delete(name);
+                console.log('Old Game Caches Cleared');
+            });
+        }
+
+        // Hard reload if coming from an old session
+        if (!sessionStorage.getItem('hard-reloaded')) {
+            sessionStorage.setItem('hard-reloaded', 'true');
+            setTimeout(() => window.location.reload(true), 1000);
+        }
+    </script>
 </body>
 
 </html>
