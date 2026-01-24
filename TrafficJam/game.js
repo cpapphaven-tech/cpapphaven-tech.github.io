@@ -10,18 +10,113 @@ const CELL_SIZE = 1;
 // --- Level Data ---
 const levels = [
     {
+        // Level 1: Intro (Solved in ~2 moves)
         cars: [
-            { x: 0, z: 2, len: 2, ori: 'H', color: 0xff0000, isPlayer: true },
-            { x: 2, z: 0, len: 3, ori: 'V', color: 0x0000ff, isPlayer: false },
-            { x: 4, z: 4, len: 2, ori: 'H', color: 0x00ff00, isPlayer: false }
+            { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 2, z: 0, len: 3, ori: 'V', color: 0x4d79ff, isPlayer: false },
+            { x: 4, z: 4, len: 2, ori: 'H', color: 0x4dff4d, isPlayer: false }
         ]
     },
     {
+        // Level 2: Simple Vertical Block
         cars: [
-            { x: 1, z: 2, len: 2, ori: 'H', color: 0xff0000, isPlayer: true },
+            { x: 1, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
             { x: 3, z: 1, len: 3, ori: 'V', color: 0xffa500, isPlayer: false },
             { x: 0, z: 0, len: 2, ori: 'V', color: 0x800080, isPlayer: false },
             { x: 4, z: 4, len: 2, ori: 'H', color: 0x00ffff, isPlayer: false }
+        ]
+    },
+    {
+        // Level 3: The Double Gate
+        cars: [
+            { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 2, z: 1, len: 2, ori: 'V', color: 0xffff00, isPlayer: false },
+            { x: 3, z: 2, len: 3, ori: 'V', color: 0xff00ff, isPlayer: false },
+            { x: 4, z: 0, len: 2, ori: 'V', color: 0xcccccc, isPlayer: false },
+            { x: 0, z: 4, len: 3, ori: 'H', color: 0x6699ff, isPlayer: false }
+        ]
+    },
+    {
+        // Level 4: Narrow Path
+        cars: [
+            { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 2, z: 2, len: 2, ori: 'V', color: 0x33ff33, isPlayer: false },
+            { x: 4, z: 1, len: 3, ori: 'V', color: 0xff9900, isPlayer: false },
+            { x: 2, z: 4, len: 2, ori: 'H', color: 0xff33cc, isPlayer: false },
+            { x: 0, z: 0, len: 3, ori: 'H', color: 0x00ccff, isPlayer: false },
+            { x: 5, z: 3, len: 2, ori: 'V', color: 0x999999, isPlayer: false }
+        ]
+    },
+    {
+        // Level 5: Grid Lock Intro
+        cars: [
+            { x: 2, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 1, z: 1, len: 3, ori: 'V', color: 0x4d79ff, isPlayer: false },
+            { x: 4, z: 2, len: 3, ori: 'V', color: 0x4dff4d, isPlayer: false },
+            { x: 0, z: 4, len: 2, ori: 'H', color: 0xffcc00, isPlayer: false },
+            { x: 3, z: 0, len: 2, ori: 'H', color: 0xff00ff, isPlayer: false }
+        ]
+    },
+    {
+        // Level 6: The Barrier
+        cars: [
+            { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 2, z: 0, len: 3, ori: 'V', color: 0x4444ff, isPlayer: false },
+            { x: 3, z: 1, len: 2, ori: 'H', color: 0x44ff44, isPlayer: false },
+            { x: 5, z: 0, len: 6, ori: 'V', color: 0x888888, isPlayer: false }, // Long truck
+            { x: 0, z: 4, len: 2, ori: 'V', color: 0xff9999, isPlayer: false },
+            { x: 1, z: 5, len: 3, ori: 'H', color: 0x99ff99, isPlayer: false }
+        ]
+    },
+    {
+        // Level 7: Tight Maneuvers
+        cars: [
+            { x: 1, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 0, z: 1, len: 2, ori: 'V', color: 0xffcc33, isPlayer: false },
+            { x: 3, z: 1, len: 2, ori: 'V', color: 0x33ccff, isPlayer: false },
+            { x: 4, z: 2, len: 2, ori: 'V', color: 0xcc33ff, isPlayer: false },
+            { x: 2, z: 3, len: 2, ori: 'H', color: 0xff3366, isPlayer: false },
+            { x: 0, z: 4, len: 3, ori: 'H', color: 0x66ff33, isPlayer: false },
+            { x: 4, z: 4, len: 2, ori: 'H', color: 0x3366ff, isPlayer: false }
+        ]
+    },
+    {
+        // Level 8: Cornered
+        cars: [
+            { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 2, z: 2, len: 2, ori: 'V', color: 0xaaaaaa, isPlayer: false },
+            { x: 3, z: 0, len: 3, ori: 'V', color: 0x555555, isPlayer: false },
+            { x: 4, z: 0, len: 2, ori: 'H', color: 0xffaa00, isPlayer: false },
+            { x: 4, z: 4, len: 2, ori: 'V', color: 0x00aaff, isPlayer: false },
+            { x: 1, z: 0, len: 2, ori: 'V', color: 0x00ffaa, isPlayer: false },
+            { x: 0, z: 5, len: 3, ori: 'H', color: 0xaa00ff, isPlayer: false }
+        ]
+    },
+    {
+        // Level 9: Heavy Traffic
+        cars: [
+            { x: 1, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 3, z: 2, len: 2, ori: 'V', color: 0xffffff, isPlayer: false },
+            { x: 0, z: 0, len: 2, ori: 'H', color: 0x333333, isPlayer: false },
+            { x: 4, z: 0, len: 2, ori: 'V', color: 0x444444, isPlayer: false },
+            { x: 0, z: 3, len: 2, ori: 'V', color: 0x555555, isPlayer: false },
+            { x: 2, z: 4, len: 2, ori: 'H', color: 0x666666, isPlayer: false },
+            { x: 5, z: 2, len: 3, ori: 'V', color: 0x777777, isPlayer: false },
+            { x: 1, z: 5, len: 3, ori: 'H', color: 0x888888, isPlayer: false }
+        ]
+    },
+    {
+        // Level 10: Grand Finale
+        cars: [
+            { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
+            { x: 2, z: 0, len: 3, ori: 'V', color: 0x111111, isPlayer: false },
+            { x: 3, z: 1, len: 2, ori: 'H', color: 0x222222, isPlayer: false },
+            { x: 4, z: 2, len: 2, ori: 'V', color: 0x333333, isPlayer: false },
+            { x: 0, z: 4, len: 2, ori: 'H', color: 0x444444, isPlayer: false },
+            { x: 3, z: 3, len: 3, ori: 'V', color: 0x555555, isPlayer: false },
+            { x: 1, z: 0, len: 2, ori: 'V', color: 0x666666, isPlayer: false },
+            { x: 5, z: 0, len: 2, ori: 'V', color: 0x777777, isPlayer: false },
+            { x: 0, z: 5, len: 5, ori: 'H', color: 0x888888, isPlayer: false }
         ]
     }
 ];
