@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
+
+:root {
+    --bg-color: #0f111a;
+    --card-bg: #1a1d2e;
+    --accent-color: #4d79ff;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0c0;
+    --header-height: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header & Navigation */
+header {
+    height: var(--header-height);
+    background: rgba(15, 17, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    margin-top: var(--header-height);
+    padding: 100px 5%;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a237e 0%, var(--bg-color) 70%);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Game Gallery */
+.gallery {
+    padding: 50px 5%;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-color);
+}
+
+.card-img {
+    height: 200px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Content Pages */
+.page-content {
+    margin-top: calc(var(--header-height) + 50px);
+    padding: 0 10% 100px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-content h1 {
+    margin-bottom: 40px;
+}
+
+.page-content h2 {
+    margin: 30px 0 15px;
+}
+
+.page-content p {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    padding: 50px 5%;
+    background: #080a11;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+}

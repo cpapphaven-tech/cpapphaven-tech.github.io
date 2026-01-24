@@ -267,7 +267,6 @@ function gameOver() {
 }
 
 function restartGame() {
-    // Reset Everything
     resetGame();
     gameOverMenu.classList.add('hidden');
     mainMenu.classList.remove('hidden');

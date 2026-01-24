@@ -47,6 +47,20 @@ body {
     opacity: 0.8;
 }
 
+#banner-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    pointer-events: auto;
+    width: 320px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .overlay {
     position: absolute;
     top: 50%;
@@ -107,12 +121,6 @@ button {
 button:active {
     transform: scale(0.95);
     background: #3366ff;
-}
-
-#revive-btn {
-    background: #ffcc00;
-    color: #1a1a2e;
-    margin-top: 10px;
 }
 
 @keyframes pulse {

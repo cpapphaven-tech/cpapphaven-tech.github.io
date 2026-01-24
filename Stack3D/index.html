@@ -16,8 +16,9 @@
     <!-- Three.js CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    <!-- CrazyGames SDK (Placeholder) -->
-    <!-- <script src="https://sdk.crazygames.com/crazygames-sdk-v1.js"></script> -->
+    <!-- Google AdSense (Replace ca-pub-XXXXXXXXXXXXXXXX with your Publisher ID) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,7 +37,16 @@
             <p>Score: <span id="final-score">0</span></p>
             <p>Best: <span id="best-score">0</span></p>
             <button id="restart-btn">Try Again</button>
-            <button id="revive-btn" class="hidden">Revive (Video AD)</button>
+        </div>
+
+        <!-- Ad Sense Banner Container -->
+        <div id="banner-container">
+            <!-- AdSense Unit (Replace the data-ad-client and data-ad-slot with yours) -->
+            <ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px"
+                data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="XXXXXXXXXX"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
 
