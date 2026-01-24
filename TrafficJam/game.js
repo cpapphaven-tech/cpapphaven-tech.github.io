@@ -63,7 +63,8 @@ const levels = [
             { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
             { x: 2, z: 0, len: 3, ori: 'V', color: 0x4444ff, isPlayer: false },
             { x: 3, z: 1, len: 2, ori: 'H', color: 0x44ff44, isPlayer: false },
-            { x: 5, z: 0, len: 6, ori: 'V', color: 0x888888, isPlayer: false }, // Long truck
+            { x: 5, z: 0, len: 3, ori: 'V', color: 0x888888, isPlayer: false }, // Shortened truck to creating gap
+            { x: 5, z: 4, len: 2, ori: 'V', color: 0x555555, isPlayer: false }, // Added lower blocker
             { x: 0, z: 4, len: 2, ori: 'V', color: 0xff9999, isPlayer: false },
             { x: 1, z: 5, len: 3, ori: 'H', color: 0x99ff99, isPlayer: false }
         ]
