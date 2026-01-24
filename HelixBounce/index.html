@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helix Bounce - PlayMixGames</title>
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="logo">PlayMixGames</a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="game-container">
+        <h1>Helix Bounce</h1>
+
+        <div id="game-ui">
+            <div id="score">0</div>
+            <div id="main-menu" class="overlay">
+                <h2>HELIX BOUNCE</h2>
+                <p>Rotate the tower to fall through the gaps!</p>
+                <button id="start-btn">Start Game</button>
+            </div>
+            <div id="game-over" class="overlay hidden">
+                <h2>CRASHED!</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">Try Again</button>
+            </div>
+        </div>
+
+        <canvas id="game-canvas"></canvas>
+
+        <section class="game-description">
+            <h2>About Helix Bounce</h2>
+            <p>Helix Bounce is a thrilling arcade experience where precision and reflexes are your best allies. Navigate
+                a bouncing ball through a series of rotating platforms, aiming for the gaps to descend deeper into the
+                tower. But be warned: touching the colored "death zones" will end your run instantly!</p>
+
+            <p>Designed with smooth 3D physics and vibrant visuals, Helix Bounce offers an addictive "just one more go"
+                gameplay loop. As you progress, the speed increases and the gaps become narrower, testing even the most
+                seasoned arcade players. How deep can you go?</p>
+
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Rotate Tower:</strong> Click and drag (Desktop) or swipe (Mobile) horizontally to rotate the
+                    helix tower.</li>
+                <li><strong>Avoid Red Zones:</strong> Landing on a red segment will result in a game over.</li>
+                <li><strong>Score Points:</strong> Each floor you pass through increases your score. Clear multiple
+                    levels in a single jump for a combo bonus!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

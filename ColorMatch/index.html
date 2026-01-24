@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Match 3D - PlayMixGames</title>
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="logo">PlayMixGames</a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="game-container">
+        <h1>Color Match 3D</h1>
+
+        <div id="game-ui">
+            <div id="top-bar">
+                <div id="score-label">Score: <span id="score">0</span></div>
+                <div id="timer-label">Time: <span id="timer">30</span>s</div>
+            </div>
+
+            <div id="target-container">
+                <p>Tap this color:</p>
+                <div id="target-color-display"></div>
+            </div>
+
+            <div id="main-menu" class="overlay">
+                <h2>COLOR MATCH</h2>
+                <p>Fast reaction puzzle! Tap the matching cubes.</p>
+                <button id="start-btn">Start Game</button>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <h2>TIME'S UP!</h2>
+                <p>Your Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">Play Again</button>
+            </div>
+        </div>
+
+        <canvas id="game-canvas"></canvas>
+
+        <section class="game-description">
+            <h2>About Color Match 3D</h2>
+            <p>Color Match 3D is a vibrant and addictive reaction game designed to test your visual processing speed and
+                accuracy. In this 3D environment, you are presented with a series of colorful cubes and a single "Target
+                Color." Your mission is to identify and tap only the cubes that match the target before they disappear
+                or the time runs out.</p>
+
+            <p>Perfect for quick gaming sessions, Color Match 3D features procedurally generated levels and a dynamic
+                difficulty curve. As you score more points, the colors become more similar and the pace quickens,
+                pushing your reflexes to the limit. It's a simple yet incredibly satisfying experience built with
+                high-performance WebGL technology for the smootliest possible gameplay.</p>
+
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Identify Target:</strong> Look at the color displayed in the "Tap this color" box at the
+                    top.</li>
+                <li><strong>Tap Cubes:</strong> Click or tap the 3D cubes in the arena that match that exact color.</li>
+                <li><strong>Speed Matters:</strong> You have 30 seconds to score as many points as possible. Tapping the
+                    wrong color results in a time penalty!</li>
+                <li><strong>High Scores:</strong> Chain correct taps together to climb the leaderboard.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

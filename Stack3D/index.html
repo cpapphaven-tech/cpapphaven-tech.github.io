@@ -22,6 +22,15 @@
 </head>
 
 <body>
+    <header>
+        <a href="../index.html" class="logo">PlayMixGames</a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div id="ui-container">
         <div id="score-container">
             <h1 id="score">0</h1>
@@ -51,6 +60,44 @@
     </div>
 
     <canvas id="game-canvas"></canvas>
+
+    <section class="game-description"
+        style="max-width: 800px; margin: 40px auto; padding: 20px; color: #a0a0c0; line-height: 1.8;">
+        <h2 style="color: #fff; margin-bottom: 20px;">Master the Art of Stacking in 3D</h2>
+        <p>Stack 3D is a minimalist yet challenging physics-based game that tests your timing, precision, and focus.
+            Built using the powerful Three.js engine, this game brings a modern twist to the classic tower-building
+            genre. The goal is simple: stack the moving blocks as high as you can without missing. Each perfect
+            placement rewards you with a satisfying "ding" and maintains the size of your block, while any overlap will
+            result in the excess part being trimmed away, making your tower increasingly narrow and difficult to manage.
+        </p>
+
+        <p>As you ascend higher into the sky, the speed of the blocks increases, demanding faster reaction times and a
+            steady hand. The vibrant, procedurally generated colors provide a beautiful visual progression as you climb.
+            Whether you're looking for a quick mental break or a competitive challenge to beat your high score, Stack 3D
+            offers a seamless, high-performance experience directly in your browser with no installation required.</p>
+
+        <h3 style="color: #fff; margin: 30px 0 15px;">Gameplay Instructions</h3>
+        <ul style="list-style-position: inside; margin-bottom: 30px;">
+            <li><strong>Place Block:</strong> Tap the screen or click your mouse to drop the moving block onto the
+                stack.</li>
+            <li><strong>Perfect Hits:</strong> Align the block perfectly with the one below to keep its full size.</li>
+            <li><strong>Physics logic:</strong> Anything hanging off the edge will break off and fall away as rubble!
+            </li>
+            <li><strong>Survival:</strong> The game ends when you miss the stack entirely.</li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="../index.html" style="color: var(--accent-color); text-decoration: none; font-weight: bold;">← Back
+                to Game Gallery</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links" style="text-align:center; padding: 40px;">
+            <a href="../privacy.html" style="color: #666; text-decoration: none; margin: 0 10px;">Privacy Policy</a>
+            <a href="../contact.html" style="color: #666; text-decoration: none; margin: 0 10px;">Contact Support</a>
+        </div>
+    </footer>
 
     <script src="game.js"></script>
     <script>

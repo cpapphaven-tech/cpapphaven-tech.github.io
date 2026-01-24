@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Jam - PlayMixGames</title>
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" class="logo">PlayMixGames</a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="game-container">
+        <h1>Traffic Jam</h1>
+
+        <div id="game-ui">
+            <div id="level-indicator">Level 1</div>
+            <div id="main-menu" class="overlay">
+                <h2>PUZZLE TIME</h2>
+                <p>Slide the cars to clear a path for the red sports car!</p>
+                <button id="start-btn">Start Playing</button>
+            </div>
+            <div id="game-over" class="overlay hidden">
+                <h2>LEVEL CLEAR!</h2>
+                <p>Great job navigating the rush hour.</p>
+                <button id="next-btn">Next Level</button>
+            </div>
+        </div>
+
+        <canvas id="game-canvas"></canvas>
+
+        <section class="game-description">
+            <h2>About Traffic Jam</h2>
+            <p>Traffic Jam is a classic spatial reasoning puzzle where you take the role of a traffic controller in a
+                congested city parking lot. Your goal is simple but challenging: get the red car to the exit gate on the
+                right side of the grid. However, the path is blocked by various trucks and cars that can only move along
+                their own axis.</p>
+
+            <p>With dozens of levels ranging from "Beginner" to "Expert", Traffic Jam will test your ability to plan
+                several moves ahead. Each car you move affects the board's state, creating a domino effect of
+                possibilities. It's a perfect blend of strategy and logic, rendered in high-fidelity 3D with smooth
+                isometric camera angles.</p>
+
+            <h3>Rules of the Road</h3>
+            <ul>
+                <li><strong>Horizontal Cars:</strong> Can only slide left and right.</li>
+                <li><strong>Vertical Cars:</strong> Can only slide up and down.</li>
+                <li><strong>The Exit:</strong> Slide the Red Car all the way to the green gate on the right to win.</li>
+                <li><strong>No Jumping:</strong> Cars cannot jump over or pass through other vehicles.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
