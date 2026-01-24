@@ -143,8 +143,12 @@ function init() {
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x1a1a2e);
 
-    const aspect = 400 / 480;
-    camera = new THREE.PerspectiveCamera(45, aspect, 0.1, 1000);
+    const container = document.getElementById('game-ui');
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    const aspect = 400 / 480; // Keep logical aspect ratio
+    camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
     camera.position.set(2.5, 10, 8);
     camera.lookAt(2.5, 0, 2.5);
 
@@ -152,8 +156,11 @@ function init() {
         canvas: document.getElementById('game-canvas'),
         antialias: true
     });
-    renderer.setSize(400, 480);
+    renderer.setSize(width, height);
     renderer.setPixelRatio(window.devicePixelRatio);
+
+    // Handle window resize
+    window.addEventListener('resize', onWindowResize);
 
     // Light
     const amb = new THREE.AmbientLight(0xffffff, 0.6);
@@ -364,6 +371,18 @@ function getMouseCoords(event) {
 function animate() {
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
+}
+
+function onWindowResize() {
+    const container = document.getElementById('game-ui');
+    if (!container || !camera || !renderer) return;
+
+    const width = container.clientWidth;
+    const height = container.clientHeight;
+
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
 }
 
 init();
