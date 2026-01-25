@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Color Twist — Support</title>
+  <style>
+    :root{--bg:#fff8f0;--card:#ffffff;--muted:#6b6b6b;--accent:#4f46e5;--kid:#ff7aa2}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);margin:0;color:#222}
+    header{padding:28px 20px;text-align:center}
+    h1{margin:.1rem 0;font-size:1.6rem}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    main{max-width:900px;margin:18px auto;padding:0 18px}
+    .card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(36,37,38,0.06);margin-bottom:14px}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    .faq dt{font-weight:600;margin-top:12px}
+    .faq dd{margin:6px 0 0;color:var(--muted)}
+    .mild{color:var(--muted);font-size:.95rem}
+    .cta{display:inline-block;background:var(--kid);color:#fff;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:600}
+    footer{padding:18px;text-align:center;color:var(--muted);font-size:.9rem}
+    @media(min-width:720px){.grid{grid-template-columns:1fr 320px}}
+    .support-list{list-style:none;padding:0;margin:0}
+    .support-list li{padding:8px 0;border-bottom:1px dashed #eee}
+    .tag{display:inline-block;font-size:.78rem;padding:6px 8px;background:#f3f4f6;border-radius:8px}
+    .banner-note{font-size:.92rem;margin-top:8px}
+    .contact{display:flex;flex-direction:column;gap:8px}
+    input,textarea{padding:10px;border-radius:8px;border:1px solid #e6e6e6;font-size:1rem}
+    button{border-radius:10px;padding:10px 14px;border:0;background:var(--accent);color:#fff;font-weight:600}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to <span style="color:var(--kid)">Color Twist</span> Support</h1>
+    <p class="lead">Thanks for playing! Find help, FAQs, troubleshooting steps, and ways to contact us.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>About the Game</h2>
+      <p class="mild">Color Twist is a fast-paced visual brain game with two modes designed for all ages.</p>
+
+      <div class="grid" style="margin-top:12px;align-items:start">
+        <div>
+          <h3>🎨 Color Match</h3>
+          <p class="mild">A word appears in one color—but the text says another color. Tap the color you <strong>see</strong>, not the word you read.</p>
+
+          <h3 style="margin-top:12px">🎧 Avoid the Spoken Color</h3>
+          <p class="mild">The app speaks a color name. Tap any color <strong>except</strong> the spoken color. Be quick—the difficulty increases as you score.</p>
+
+          <p class="mild" style="margin-top:12px">Built for kids, teens, and adults to improve focus and reaction speed.</p>
+        </div>
+
+        <aside style="padding-left:12px">
+          <div class="card" style="padding:12px;margin:0">
+            <strong>Quick Info</strong>
+            <ul class="support-list" style="margin-top:8px">
+              <li><span class="tag">Offline</span> The game works offline (internet is optional).</li>
+              <li><span class="tag">Scores</span> High scores are stored locally on the device.</li>
+              <li><span class="tag">Analytics</span> We use analytics to improve the game.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Frequently Asked Questions (FAQ)</h2>
+      <dl class="faq">
+        <dt>1. The game is too fast!</dt>
+        <dd>You can select <strong>Easy</strong>, <strong>Medium</strong>, or <strong>Hard</strong> from the level selection screen.</dd>
+
+        <dt>2. How are high scores saved?</dt>
+        <dd>High scores are saved locally on your device. Reinstalling the app will reset them.</dd>
+
+        <dt>3. Does the game require internet?</dt>
+        <dd>No — Color Twist works offline. Internet is used only for analytics and crash reports (Firebase).</dd>
+
+        <dt>4. Why do you collect analytics?</dt>
+        <dd>We use Firebase Analytics & Crashlytics only to:<br>- Improve gameplay<br>- Fix crashes<br>- Understand feature usage<br><br>We do not track users for advertising purposes.</dd>
+      </dl>
+    </section>
+
+    <section class="card">
+      <h2>Advertising — AdMob</h2>
+      <p class="mild">Color Twist displays ads served by <strong>Google AdMob</strong>. Ads help keep the game free while supporting development and updates.</p>
+
+      <p class="mild banner-note"><strong>What we show:</strong> banner and interstitial ads during natural breaks (for example, after a round). <strong>We do not use ads for tracking users across apps.</strong></p>
+
+    </section>
+
+    <section class="card">
+      <h2>Troubleshooting</h2>
+      <ul>
+        <li><strong>No sound?</strong> Make sure your device volume is up and the app's mute switch (if any) is off.</li>
+        <li><strong>Ads not showing?</strong> Ads may not show in development unless using test IDs, or if the device has no network. In production, ad fill depends on regional availability.</li>
+        <li><strong>App crashes?</strong> Please send crash logs if available. We use Crashlytics to gather automatic crash reports.</li>
+      </ul>
+    </section>
+
+    <section id="privacy" class="card">
+      <h2>Privacy & Data</h2>
+      <p class="mild">We collect only minimal analytics (Firebase Analytics & Crashlytics) to improve the app and fix crashes. We do not collect personal information for advertising. AdMob may collect certain ad-related data — please refer to Google's AdMob documentation and our full privacy policy for details.</p>
+      </section>
+
+  </main>
+
+  <footer>
+    <small>Color Twist — fun, colorful, kid-friendly brain training. &nbsp;© <span id="year"></span>
+    </small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
