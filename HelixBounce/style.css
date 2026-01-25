@@ -131,34 +131,3 @@ button:hover {
         height: 80vh;
     }
 }
-
-/* Joystick Styles */
-#joystick-zone {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    width: 120px;
-    height: 120px;
-    z-index: 15;
-    /* Ensure it receives touch events */
-    touch-action: none;
-}
-
-#joystick-base {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
-}
-
-#joystick-stick {
-    position: absolute;
-    top: 30px; /* (120 - 60) / 2 */
-    left: 30px;
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-    pointer-events: none; /* Let clicks pass through to base */
-}
