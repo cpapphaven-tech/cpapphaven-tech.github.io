@@ -14,12 +14,13 @@
 
     <!-- Adsterra Ads - Conditional Loading -->
     <script>
-        // Check if dev mode is enabled via URL parameter (?dev=true)
-        const urlParams = new URLSearchParams(window.location.search);
-        const IS_DEV = urlParams.get("dev") === "true";
+        // Check if ads are disabled via cookie
+        // To disable ads in your browser, run in console: document.cookie = "noads=true; path=/";
+        // To enable ads again, run: document.cookie = "noads=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        const adsDisabled = document.cookie.includes("noads=true");
 
-        // Load ads only in production (not in dev mode)
-        if (!IS_DEV) {
+        // Load ads only if not disabled
+        if (!adsDisabled) {
             // Social Bar
             const socialBarScript = document.createElement('script');
             socialBarScript.src = 'https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js';
@@ -32,7 +33,7 @@
             nativeBannerScript.src = 'https://pl28566919.effectivegatecpm.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js';
             document.head.appendChild(nativeBannerScript);
         } else {
-            console.log('🚧 Dev mode enabled - Ads disabled. Remove ?dev=true to see ads.');
+            console.log('🚧 Ads disabled via cookie. To enable: document.cookie = "noads=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";');
         }
     </script>
 </head>

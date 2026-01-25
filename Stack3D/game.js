@@ -289,13 +289,12 @@ function gameOver() {
 
 // Smartlink Interstitial Ad
 function showInterstitialAd() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const IS_DEV = urlParams.get("dev") === "true";
+    const adsDisabled = document.cookie.includes("noads=true");
 
-    if (!IS_DEV) {
+    if (!adsDisabled) {
         window.open("https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66", "_blank");
     } else {
-        console.log('🚧 Dev mode - Interstitial ad skipped');
+        console.log('🚧 Ads disabled via cookie - Interstitial ad skipped');
     }
 }
 
