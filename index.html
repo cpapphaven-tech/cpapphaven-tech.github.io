@@ -12,8 +12,29 @@
         crossorigin="anonymous"></script>
     <script type="module" src="./analytics.js"></script>
 
-    <!-- Adsterra Social Bar -->
-    <script src="https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js"></script>
+    <!-- Adsterra Ads - Conditional Loading -->
+    <script>
+        // Check if dev mode is enabled via URL parameter (?dev=true)
+        const urlParams = new URLSearchParams(window.location.search);
+        const IS_DEV = urlParams.get("dev") === "true";
+
+        // Load ads only in production (not in dev mode)
+        if (!IS_DEV) {
+            // Social Bar
+            const socialBarScript = document.createElement('script');
+            socialBarScript.src = 'https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js';
+            document.head.appendChild(socialBarScript);
+
+            // Native Banner
+            const nativeBannerScript = document.createElement('script');
+            nativeBannerScript.async = true;
+            nativeBannerScript.setAttribute('data-cfasync', 'false');
+            nativeBannerScript.src = 'https://pl28566919.effectivegatecpm.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js';
+            document.head.appendChild(nativeBannerScript);
+        } else {
+            console.log('🚧 Dev mode enabled - Ads disabled. Remove ?dev=true to see ads.');
+        }
+    </script>
 </head>
 
 <body>
@@ -82,8 +103,6 @@
 
     <!-- Adsterra Native Banner Ad -->
     <section style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-        <script async="async" data-cfasync="false"
-            src="https://pl28566919.effectivegatecpm.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js"></script>
         <div id="container-63208462c4f9ec6018b4ea2e1903489d"></div>
     </section>
 
