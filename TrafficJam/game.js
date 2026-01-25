@@ -196,6 +196,12 @@ function init() {
     startBtn.addEventListener('click', () => {
         gameState = 'PLAYING';
         mainMenu.classList.add('hidden');
+        if (window.trackGameEvent) {
+            window.trackGameEvent("game_start", {
+                game_name: "Traffic Jam",
+                level: 1
+            });
+        }
     });
     nextBtn.addEventListener('click', () => {
         currentLevelIdx = (currentLevelIdx + 1) % levels.length;
@@ -353,6 +359,13 @@ function checkWin() {
     if (c.isPlayer && c.x === 4) {
         gameState = 'GAMEOVER';
         gameOverMenu.classList.remove('hidden');
+
+        if (window.trackGameEvent) {
+            window.trackGameEvent("level_coomplete", {
+                game_name: "Traffic Jam",
+                level_completed: currentLevelIdx + 1
+            });
+        }
     }
 }
 

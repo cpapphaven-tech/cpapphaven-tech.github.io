@@ -93,6 +93,12 @@ function startGame() {
     gameState = 'PLAYING';
     mainMenu.classList.add('hidden');
 
+    if (window.trackGameEvent) {
+        window.trackGameEvent("game_start", {
+            game_name: "Color Match 3D"
+        });
+    }
+
     if (timerId) clearInterval(timerId);
     timerId = setInterval(() => {
         timeLeft--;
@@ -182,6 +188,13 @@ function endGame() {
     clearInterval(timerId);
     finalScoreEl.innerText = score;
     gameOverMenu.classList.remove('hidden');
+
+    if (window.trackGameEvent) {
+        window.trackGameEvent("game_over", {
+            game_name: "Color Match 3D",
+            score: score
+        });
+    }
 }
 
 function animate() {

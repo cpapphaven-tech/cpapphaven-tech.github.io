@@ -109,6 +109,12 @@ function startGame() {
     gameState = 'PLAYING';
     mainMenu.classList.add('hidden');
     spawnBlock();
+
+    if (window.trackGameEvent) {
+        window.trackGameEvent("game_start", {
+            game_name: "Stack 3D"
+        });
+    }
 }
 
 function spawnBlock() {
@@ -264,6 +270,13 @@ function gameOver() {
     finalScoreEl.innerText = score;
     bestScoreEl.innerText = bestScore;
     gameOverMenu.classList.remove('hidden');
+
+    if (window.trackGameEvent) {
+        window.trackGameEvent("game_over", {
+            game_name: "Stack 3D",
+            score: score
+        });
+    }
 }
 
 function restartGame() {
