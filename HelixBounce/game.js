@@ -31,15 +31,19 @@ let stabilizeCooldown = 400; // ms
 
 // Joystick
 let joystickVector = { x: 0, y: 0 };
-const JOYSTICK_FORCE = 6.5;
+const JOYSTICK_FORCE = 3.5;
 
 // DOM Elements
+const levelEl = document.getElementById('level');
 const scoreEl = document.getElementById('score');
 const mainMenu = document.getElementById('main-menu');
 const gameOverMenu = document.getElementById('game-over');
 const finalScoreEl = document.getElementById('final-score');
 const startBtn = document.getElementById('start-btn');
+const resumeBtn = document.getElementById('resume-btn');
+const resumeLevelSpan = document.getElementById('resume-level');
 const restartBtn = document.getElementById('restart-btn');
+const nextLevelBtn = document.getElementById('next-level-btn');
 
 // Joystick DOM
 const joystickBase = document.getElementById('joystick-base');
@@ -57,6 +61,14 @@ let ballMaterial, platformMaterial, deathMaterial, lastPlatformMaterial;
 let physicsMaterial; // Cannon material
 
 function init() {
+    // Load saved level from localStorage
+    const savedLevel = localStorage.getItem('helixBounceLevel');
+    if (savedLevel) {
+        currentLevel = parseInt(savedLevel);
+        resumeLevelSpan.innerText = currentLevel;
+        resumeBtn.classList.remove('hidden');
+    }
+    
     // 1. Setup Three.js
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x1a1a33); // UIColor(0.1, 0.1, 0.2)
@@ -114,30 +126,45 @@ function init() {
 }
 
 function startNewGame() {
+    currentLevel = 1;
+    startGame();
+}
+
+function resumeGame() {
+    startGame();
+}
+
+function startGame() {
     isGameOver = false;
     score = 0;
     scoreEl.innerText = "0";
+    levelEl.innerText = `Level ${currentLevel}`;
+    
+    // Save current level to localStorage
+    localStorage.setItem('helixBounceLevel', currentLevel);
     
     // UI
     mainMenu.classList.add('hidden');
     gameOverMenu.classList.add('hidden');
+    restartBtn.classList.remove('hidden');
+    nextLevelBtn.classList.add('hidden');
 
-    // Clean Scale
+    // Clean up old tower and ball
     if (towerGroup) {
         scene.remove(towerGroup);
-        // Clean cannon bodies associated with tower?
-        // We need to track them to remove them.
-        // For simplicity in this port, we'll iterate world bodies and remove static ones.
-        // A better way is to keep a list.
     }
     if (ballBody) {
         world.removeBody(ballBody);
+    }
+    if (ballMesh) {
         scene.remove(ballMesh);
     }
     
-    // Remove all existing bodies except ball (which we just removed)
-    // Actually, let's just clear the world bodies list gently.
-    world.bodies = []; 
+    // Clear all physics bodies from world
+    const bodiesToRemove = world.bodies.slice();
+    bodiesToRemove.forEach(body => {
+        world.removeBody(body);
+    });
 
     buildTower();
     spawnBall();
@@ -147,19 +174,22 @@ function buildTower() {
     towerGroup = new THREE.Group();
     scene.add(towerGroup);
 
+    // Calculate number of floors based on level: Level 1 = 3, Level 2 = 5, Level 3 = 7, etc.
+    let numFloors = 3 + (currentLevel - 1) * 2;
+
     // Central Cylinder (Visual)
-    const cylinderGeo = new THREE.CylinderGeometry(CYLINDER_RADIUS * 0.8, CYLINDER_RADIUS * 0.8,NUM_FLOORS * LEVEL_HEIGHT * 1.5, 32);
+    const cylinderGeo = new THREE.CylinderGeometry(CYLINDER_RADIUS * 0.8, CYLINDER_RADIUS * 0.8, numFloors * LEVEL_HEIGHT * 1.5, 32);
     const cylinderMat = new THREE.MeshPhongMaterial({ color: 0x888888 });
     const cylinderMesh = new THREE.Mesh(cylinderGeo, cylinderMat);
     // Position y: - (numFloors * levelHeight) / 2
     // Swift: cylinderNode.position.y = Float(-CGFloat(numFloors) * levelHeight / 2)
-    cylinderMesh.position.y = -(NUM_FLOORS * LEVEL_HEIGHT) / 2;
+    cylinderMesh.position.y = -(numFloors * LEVEL_HEIGHT) / 2;
     towerGroup.add(cylinderMesh);
 
     // Floors
-    for (let i = 0; i < NUM_FLOORS; i++) {
+    for (let i = 0; i < numFloors; i++) {
         const yPos = -i * LEVEL_HEIGHT;
-        const isLast = (i === NUM_FLOORS - 1);
+        const isLast = (i === numFloors - 1);
         createFloor(yPos, isLast);
     }
 }
@@ -414,16 +444,30 @@ function gameOver(win) {
     if (isGameOver) return;
     isGameOver = true;
     
+    // Update score to current depth when game over
+    const depth = -ballBody.position.y;
+    score = Math.floor(depth / LEVEL_HEIGHT);
+    scoreEl.innerText = score;
+    
     finalScoreEl.innerText = score;
     gameOverMenu.classList.remove('hidden');
     
     const h2 = gameOverMenu.querySelector('h2');
     if (win) {
-        h2.innerText = "Congratulations!";
+        h2.innerText = "Level Complete!";
         h2.style.color = "#00ff00";
+        // Show next level button, hide restart button
+        restartBtn.classList.add('hidden');
+        nextLevelBtn.classList.remove('hidden');
+        // Increment level for next game
+        currentLevel++;
     } else {
         h2.innerText = "Game Over";
         h2.style.color = "#ff3333";
+        // Show restart button, hide next level button
+        restartBtn.classList.remove('hidden');
+        nextLevelBtn.classList.add('hidden');
+        // Keep same level - user can retry at same level
     }
 }
 
@@ -545,4 +589,6 @@ function handleSwipeUp() {
 // Start
 init();
 startBtn.addEventListener('click', startNewGame);
-restartBtn.addEventListener('click', startNewGame);
+resumeBtn.addEventListener('click', resumeGame);
+restartBtn.addEventListener('click', startGame);
+nextLevelBtn.addEventListener('click', startGame);

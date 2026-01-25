@@ -27,9 +27,22 @@
     touch-action: none;
 }
 
+#level {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 10;
+    color: #00ff00;
+    pointer-events: none;
+}
+
 #score {
     position: absolute;
-    top: 20px;
+    top: 50px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -82,6 +95,7 @@ button {
     cursor: pointer;
     font-weight: bold;
     transition: transform 0.2s;
+    margin: 10px;
 }
 
 button:hover {

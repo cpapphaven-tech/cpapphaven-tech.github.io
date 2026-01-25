@@ -30,16 +30,19 @@
         <h1>Helix Bounce</h1>
 
         <div id="game-ui">
+            <div id="level">Level 1</div>
             <div id="score">0</div>
             <div id="main-menu" class="overlay">
                 <h2>HELIX BOUNCE</h2>
                 <p>Rotate the tower to fall through the gaps!</p>
-                <button id="start-btn">Start Game</button>
+                <button id="resume-btn" class="hidden">Resume Level <span id="resume-level">1</span></button>
+                <button id="start-btn">Start New Game</button>
             </div>
             <div id="game-over" class="overlay hidden">
                 <h2>CRASHED!</h2>
                 <p>Final Score: <span id="final-score">0</span></p>
                 <button id="restart-btn">Try Again</button>
+                <button id="next-level-btn" class="hidden">Next Level</button>
             </div>
 
             <div id="joystick-zone">
