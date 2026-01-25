@@ -10,6 +10,8 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
         crossorigin="anonymous"></script>
     <script type="module" src="../analytics.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <link rel="manifest" href="manifest.json">
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
@@ -88,6 +90,13 @@
     </footer>
 
     <script src="game.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
 </body>
 
 </html>
