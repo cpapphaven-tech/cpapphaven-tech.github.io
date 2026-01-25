@@ -195,6 +195,21 @@ function endGame() {
             score: score
         });
     }
+
+    // Show interstitial ad on game over
+    showInterstitialAd();
+}
+
+// Smartlink Interstitial Ad
+function showInterstitialAd() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const IS_DEV = urlParams.get("dev") === "true";
+
+    if (!IS_DEV) {
+        window.open("https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66", "_blank");
+    } else {
+        console.log('🚧 Dev mode - Interstitial ad skipped');
+    }
 }
 
 function animate() {

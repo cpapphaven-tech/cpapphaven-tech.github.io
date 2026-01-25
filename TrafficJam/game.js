@@ -278,11 +278,11 @@ function createCarMesh(c) {
         // Large bright headlights
         const lightGeom = new THREE.SphereGeometry(0.15, 12, 12);
         const lightMat = new THREE.MeshBasicMaterial({ color: 0xFFFFFF });
-        
+
         const light1 = new THREE.Mesh(lightGeom, lightMat);
         light1.position.set(-w * 0.32, h * 0.65, -d * 0.48);
         carBody.add(light1);
-        
+
         const light2 = new THREE.Mesh(lightGeom, lightMat);
         light2.position.set(w * 0.32, h * 0.65, -d * 0.48);
         carBody.add(light2);
@@ -290,11 +290,11 @@ function createCarMesh(c) {
         // Bright red tail lights
         const tailGeom = new THREE.SphereGeometry(0.13, 12, 12);
         const tailMat = new THREE.MeshBasicMaterial({ color: 0xFF0000 });
-        
+
         const tail1 = new THREE.Mesh(tailGeom, tailMat);
         tail1.position.set(-w * 0.32, h * 0.55, d * 0.48);
         carBody.add(tail1);
-        
+
         const tail2 = new THREE.Mesh(tailGeom, tailMat);
         tail2.position.set(w * 0.32, h * 0.55, d * 0.48);
         carBody.add(tail2);
@@ -305,10 +305,10 @@ function createCarMesh(c) {
         const beacon = new THREE.Mesh(beaconGeom, beaconMat);
         beacon.position.y = h + 0.5;
         carBody.add(beacon);
-        
+
         // Beacon glow ring
         const glowGeom = new THREE.TorusGeometry(0.2, 0.05, 8, 16);
-        const glowMat = new THREE.MeshBasicMaterial({ 
+        const glowMat = new THREE.MeshBasicMaterial({
             color: 0xFFFF00,
             emissive: 0xFFFF00
         });
@@ -316,7 +316,7 @@ function createCarMesh(c) {
         glow.position.y = h + 0.5;
         glow.rotation.x = Math.PI / 2;
         carBody.add(glow);
-        
+
         carBody.userData.beacon = beacon;
         carBody.userData.glow = glow;
 
@@ -333,7 +333,7 @@ function createCarMesh(c) {
 
     } else {
         // Regular cars - gray/colored, less shiny
-        const bodyMat = new THREE.MeshPhongMaterial({ 
+        const bodyMat = new THREE.MeshPhongMaterial({
             color: c.color,
             shininess: 30
         });
@@ -354,15 +354,15 @@ function createCarMesh(c) {
         );
         cabin.position.y = h + 0.08;
         carBody.add(cabin);
-        
+
         // Dim headlights for other cars
         const lightGeom = new THREE.SphereGeometry(0.08, 8, 8);
         const lightMat = new THREE.MeshBasicMaterial({ color: 0xCCCCCC });
-        
+
         const light1 = new THREE.Mesh(lightGeom, lightMat);
         light1.position.set(-w * 0.3, h * 0.6, -d * 0.45);
         carBody.add(light1);
-        
+
         const light2 = new THREE.Mesh(lightGeom, lightMat);
         light2.position.set(w * 0.3, h * 0.6, -d * 0.45);
         carBody.add(light2);
@@ -373,14 +373,14 @@ function createCarMesh(c) {
     const wheelThickness = 0.15;
     const wheelGeom = new THREE.CylinderGeometry(wheelRadius, wheelRadius, wheelThickness, 16);
     const wheelMat = new THREE.MeshPhongMaterial({ color: 0x222222 });
-    
+
     const wheelPositions = [
         [-w * 0.35, wheelRadius, -d * 0.35],
         [w * 0.35, wheelRadius, -d * 0.35],
         [-w * 0.35, wheelRadius, d * 0.35],
         [w * 0.35, wheelRadius, d * 0.35]
     ];
-    
+
     wheelPositions.forEach(pos => {
         const wheel = new THREE.Mesh(wheelGeom, wheelMat);
         wheel.rotation.z = Math.PI / 2;
@@ -391,7 +391,7 @@ function createCarMesh(c) {
     // Wheel rims (center caps)
     const rimGeom = new THREE.CylinderGeometry(wheelRadius * 0.5, wheelRadius * 0.5, 0.05, 16);
     const rimMat = new THREE.MeshPhongMaterial({ color: 0xaaaaaa, shininess: 80 });
-    
+
     wheelPositions.forEach(pos => {
         const rim = new THREE.Mesh(rimGeom, rimMat);
         rim.rotation.z = Math.PI / 2;
@@ -526,6 +526,21 @@ function checkWin() {
                 level_completed: currentLevelIdx + 1
             });
         }
+
+        // Show interstitial ad on level complete
+        showInterstitialAd();
+    }
+}
+
+// Smartlink Interstitial Ad
+function showInterstitialAd() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const IS_DEV = urlParams.get("dev") === "true";
+
+    if (!IS_DEV) {
+        window.open("https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66", "_blank");
+    } else {
+        console.log('🚧 Dev mode - Interstitial ad skipped');
     }
 }
 
@@ -544,7 +559,7 @@ function getMouseCoords(event) {
 
 function animate() {
     requestAnimationFrame(animate);
-    
+
     // Animate player car effects
     if (carsGroup) {
         const time = Date.now() * 0.001;
@@ -553,7 +568,7 @@ function animate() {
                 // Pulse the outline opacity
                 const pulse = 0.5 + Math.sin(time * 3) * 0.3;
                 carGroup.userData.outline.material.opacity = pulse;
-                
+
                 // Pulse the beacon light
                 const carBody = carGroup.userData.carBody;
                 if (carBody && carBody.userData.beacon) {
@@ -564,7 +579,7 @@ function animate() {
             }
         });
     }
-    
+
     renderer.render(scene, camera);
 }
 

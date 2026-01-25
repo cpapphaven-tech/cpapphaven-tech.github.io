@@ -260,22 +260,42 @@ function resetCamera() {
     camera.position.set(20, 20, 20);
 }
 
+let isGameOver = false; // Global variable to track game over state
+
 function gameOver() {
-    gameState = 'GAMEOVER';
-    if (score > bestScore) {
+    if (isGameOver) return;
+    isGameOver = true;
+
+    gameState = 'GAMEOVER'; // Keep original game state update
+    if (score > bestScore) { // Keep original best score logic
         bestScore = score;
         localStorage.setItem('stackBestScore', bestScore);
     }
 
     finalScoreEl.innerText = score;
-    bestScoreEl.innerText = bestScore;
+    bestScoreEl.innerText = bestScore; // Keep original best score display
     gameOverMenu.classList.remove('hidden');
 
     if (window.trackGameEvent) {
         window.trackGameEvent("game_over", {
             game_name: "Stack 3D",
-            score: score
+            final_score: score // Changed to final_score as per instruction
         });
+    }
+
+    // Show interstitial ad on game over
+    showInterstitialAd();
+}
+
+// Smartlink Interstitial Ad
+function showInterstitialAd() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const IS_DEV = urlParams.get("dev") === "true";
+
+    if (!IS_DEV) {
+        window.open("https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66", "_blank");
+    } else {
+        console.log('🚧 Dev mode - Interstitial ad skipped');
     }
 }
 
