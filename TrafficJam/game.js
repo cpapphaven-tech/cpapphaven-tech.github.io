@@ -40,9 +40,9 @@ const levels = [
         // Level 4: Narrow Path
         cars: [
             { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
-            { x: 2, z: 2, len: 2, ori: 'V', color: 0x33ff33, isPlayer: false },
-            { x: 4, z: 1, len: 3, ori: 'V', color: 0xff9900, isPlayer: false },
-            { x: 2, z: 4, len: 2, ori: 'H', color: 0xff33cc, isPlayer: false },
+            { x: 2, z: 1, len: 2, ori: 'V', color: 0x33ff33, isPlayer: false },
+            { x: 2, z: 4, len: 2, ori: 'V', color: 0xff9900, isPlayer: false },
+            { x: 3, z: 3, len: 2, ori: 'H', color: 0xff33cc, isPlayer: false },
             { x: 0, z: 0, len: 3, ori: 'H', color: 0x00ccff, isPlayer: false },
             { x: 5, z: 3, len: 2, ori: 'V', color: 0x999999, isPlayer: false }
         ]
@@ -51,21 +51,21 @@ const levels = [
         // Level 5: Grid Lock Intro
         cars: [
             { x: 2, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
-            { x: 1, z: 1, len: 3, ori: 'V', color: 0x4d79ff, isPlayer: false },
-            { x: 4, z: 2, len: 3, ori: 'V', color: 0x4dff4d, isPlayer: false },
+            { x: 1, z: 0, len: 2, ori: 'V', color: 0x4d79ff, isPlayer: false },
+            { x: 0, z: 1, len: 2, ori: 'H', color: 0x4dff4d, isPlayer: false },
             { x: 0, z: 4, len: 2, ori: 'H', color: 0xffcc00, isPlayer: false },
-            { x: 3, z: 0, len: 2, ori: 'H', color: 0xff00ff, isPlayer: false }
+            { x: 5, z: 1, len: 2, ori: 'V', color: 0xff00ff, isPlayer: false }
         ]
     },
     {
         // Level 6: The Barrier
         cars: [
             { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
-            { x: 2, z: 0, len: 3, ori: 'V', color: 0x4444ff, isPlayer: false },
-            { x: 3, z: 1, len: 2, ori: 'H', color: 0x44ff44, isPlayer: false },
-            { x: 5, z: 0, len: 3, ori: 'V', color: 0x888888, isPlayer: false }, // Shortened truck to creating gap
-            { x: 5, z: 4, len: 2, ori: 'V', color: 0x555555, isPlayer: false }, // Added lower blocker
-            { x: 0, z: 4, len: 2, ori: 'V', color: 0xff9999, isPlayer: false },
+            { x: 2, z: 1, len: 2, ori: 'V', color: 0x4444ff, isPlayer: false },
+            { x: 2, z: 3, len: 2, ori: 'V', color: 0x44ff44, isPlayer: false },
+            { x: 4, z: 0, len: 2, ori: 'V', color: 0x888888, isPlayer: false },
+            { x: 4, z: 4, len: 2, ori: 'V', color: 0x555555, isPlayer: false },
+            { x: 0, z: 4, len: 2, ori: 'H', color: 0xff9999, isPlayer: false },
             { x: 1, z: 5, len: 3, ori: 'H', color: 0x99ff99, isPlayer: false }
         ]
     },
@@ -85,12 +85,12 @@ const levels = [
         // Level 8: Cornered
         cars: [
             { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
-            { x: 2, z: 2, len: 2, ori: 'V', color: 0xaaaaaa, isPlayer: false },
+            { x: 2, z: 1, len: 2, ori: 'V', color: 0xaaaaaa, isPlayer: false },
             { x: 3, z: 0, len: 3, ori: 'V', color: 0x555555, isPlayer: false },
-            { x: 4, z: 0, len: 2, ori: 'H', color: 0xffaa00, isPlayer: false },
+            { x: 2, z: 4, len: 2, ori: 'H', color: 0xffaa00, isPlayer: false },
             { x: 4, z: 4, len: 2, ori: 'V', color: 0x00aaff, isPlayer: false },
             { x: 1, z: 0, len: 2, ori: 'V', color: 0x00ffaa, isPlayer: false },
-            { x: 0, z: 5, len: 3, ori: 'H', color: 0xaa00ff, isPlayer: false }
+            { x: 5, z: 3, len: 2, ori: 'V', color: 0xaa00ff, isPlayer: false }
         ]
     },
     {
@@ -111,13 +111,13 @@ const levels = [
         cars: [
             { x: 0, z: 2, len: 2, ori: 'H', color: 0xff4d4d, isPlayer: true },
             { x: 2, z: 0, len: 3, ori: 'V', color: 0x111111, isPlayer: false },
-            { x: 3, z: 1, len: 2, ori: 'H', color: 0x222222, isPlayer: false },
-            { x: 4, z: 2, len: 2, ori: 'V', color: 0x333333, isPlayer: false },
+            { x: 2, z: 3, len: 2, ori: 'H', color: 0x222222, isPlayer: false },
+            { x: 3, z: 1, len: 2, ori: 'V', color: 0x333333, isPlayer: false },
             { x: 0, z: 4, len: 2, ori: 'H', color: 0x444444, isPlayer: false },
-            { x: 3, z: 3, len: 3, ori: 'V', color: 0x555555, isPlayer: false },
-            { x: 1, z: 0, len: 2, ori: 'V', color: 0x666666, isPlayer: false },
-            { x: 5, z: 0, len: 2, ori: 'V', color: 0x777777, isPlayer: false },
-            { x: 0, z: 5, len: 5, ori: 'H', color: 0x888888, isPlayer: false }
+            { x: 5, z: 1, len: 3, ori: 'V', color: 0x555555, isPlayer: false },
+            { x: 1, z: 4, len: 2, ori: 'V', color: 0x666666, isPlayer: false },
+            { x: 3, z: 4, len: 2, ori: 'V', color: 0x777777, isPlayer: false },
+            { x: 1, z: 5, len: 3, ori: 'H', color: 0x888888, isPlayer: false }
         ]
     }
 ];
@@ -244,20 +244,180 @@ function createCarMesh(c) {
     const d = c.ori === 'V' ? c.len * 0.95 : 0.9;
 
     const group = new THREE.Group();
+    const carBody = new THREE.Group();
 
-    const body = new THREE.Mesh(
-        new THREE.BoxGeometry(w, h, d),
-        new THREE.MeshPhongMaterial({ color: c.color })
-    );
-    body.position.y = h / 2;
-    group.add(body);
+    // Different appearance for player vs other cars
+    if (c.isPlayer) {
+        // Player car - GOLD/YELLOW color with extreme glow
+        const playerBodyMat = new THREE.MeshPhongMaterial({
+            color: 0xFFD700,  // Gold color
+            emissive: 0xFFFF00,
+            emissiveIntensity: 0.6,
+            shininess: 120
+        });
+        const body = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), playerBodyMat);
+        body.position.y = h / 2;
+        carBody.add(body);
 
-    const cabin = new THREE.Mesh(
-        new THREE.BoxGeometry(w * 0.7, h * 0.4, d * 0.7),
-        new THREE.MeshPhongMaterial({ color: 0x111111, transparent: true, opacity: 0.8 })
-    );
-    cabin.position.y = h + 0.1;
-    group.add(cabin);
+        // Bright gold window
+        const windowMat = new THREE.MeshPhongMaterial({
+            color: 0xFFAA00,
+            emissive: 0xFFFF00,
+            emissiveIntensity: 0.5,
+            transparent: true,
+            opacity: 0.7,
+            shininess: 100
+        });
+        const cabin = new THREE.Mesh(
+            new THREE.BoxGeometry(w * 0.75, h * 0.35, d * 0.65),
+            windowMat
+        );
+        cabin.position.y = h + 0.08;
+        carBody.add(cabin);
+
+        // Large bright headlights
+        const lightGeom = new THREE.SphereGeometry(0.15, 12, 12);
+        const lightMat = new THREE.MeshBasicMaterial({ color: 0xFFFFFF });
+        
+        const light1 = new THREE.Mesh(lightGeom, lightMat);
+        light1.position.set(-w * 0.32, h * 0.65, -d * 0.48);
+        carBody.add(light1);
+        
+        const light2 = new THREE.Mesh(lightGeom, lightMat);
+        light2.position.set(w * 0.32, h * 0.65, -d * 0.48);
+        carBody.add(light2);
+
+        // Bright red tail lights
+        const tailGeom = new THREE.SphereGeometry(0.13, 12, 12);
+        const tailMat = new THREE.MeshBasicMaterial({ color: 0xFF0000 });
+        
+        const tail1 = new THREE.Mesh(tailGeom, tailMat);
+        tail1.position.set(-w * 0.32, h * 0.55, d * 0.48);
+        carBody.add(tail1);
+        
+        const tail2 = new THREE.Mesh(tailGeom, tailMat);
+        tail2.position.set(w * 0.32, h * 0.55, d * 0.48);
+        carBody.add(tail2);
+
+        // Add large emergency beacon light on top (police car style)
+        const beaconGeom = new THREE.CylinderGeometry(0.2, 0.2, 0.15, 16);
+        const beaconMat = new THREE.MeshBasicMaterial({ color: 0xFF0000 });
+        const beacon = new THREE.Mesh(beaconGeom, beaconMat);
+        beacon.position.y = h + 0.5;
+        carBody.add(beacon);
+        
+        // Beacon glow ring
+        const glowGeom = new THREE.TorusGeometry(0.2, 0.05, 8, 16);
+        const glowMat = new THREE.MeshBasicMaterial({ 
+            color: 0xFFFF00,
+            emissive: 0xFFFF00
+        });
+        const glow = new THREE.Mesh(glowGeom, glowMat);
+        glow.position.y = h + 0.5;
+        glow.rotation.x = Math.PI / 2;
+        carBody.add(glow);
+        
+        carBody.userData.beacon = beacon;
+        carBody.userData.glow = glow;
+
+        // Add stripe down the middle for extra distinctiveness
+        const stripeGeom = new THREE.BoxGeometry(0.08, h * 0.95, d * 0.9);
+        const stripeMat = new THREE.MeshPhongMaterial({
+            color: 0xFF0000,
+            emissive: 0xFF0000,
+            emissiveIntensity: 0.4
+        });
+        const stripe = new THREE.Mesh(stripeGeom, stripeMat);
+        stripe.position.y = h / 2;
+        carBody.add(stripe);
+
+    } else {
+        // Regular cars - gray/colored, less shiny
+        const bodyMat = new THREE.MeshPhongMaterial({ 
+            color: c.color,
+            shininess: 30
+        });
+        const body = new THREE.Mesh(new THREE.BoxGeometry(w, h, d), bodyMat);
+        body.position.y = h / 2;
+        carBody.add(body);
+
+        // Dark tinted windows for regular cars
+        const windowMat = new THREE.MeshPhongMaterial({
+            color: 0x1a1a2e,
+            transparent: true,
+            opacity: 0.5,
+            shininess: 50
+        });
+        const cabin = new THREE.Mesh(
+            new THREE.BoxGeometry(w * 0.75, h * 0.35, d * 0.65),
+            windowMat
+        );
+        cabin.position.y = h + 0.08;
+        carBody.add(cabin);
+        
+        // Dim headlights for other cars
+        const lightGeom = new THREE.SphereGeometry(0.08, 8, 8);
+        const lightMat = new THREE.MeshBasicMaterial({ color: 0xCCCCCC });
+        
+        const light1 = new THREE.Mesh(lightGeom, lightMat);
+        light1.position.set(-w * 0.3, h * 0.6, -d * 0.45);
+        carBody.add(light1);
+        
+        const light2 = new THREE.Mesh(lightGeom, lightMat);
+        light2.position.set(w * 0.3, h * 0.6, -d * 0.45);
+        carBody.add(light2);
+    }
+
+    // Add wheels (same for all cars)
+    const wheelRadius = 0.25;
+    const wheelThickness = 0.15;
+    const wheelGeom = new THREE.CylinderGeometry(wheelRadius, wheelRadius, wheelThickness, 16);
+    const wheelMat = new THREE.MeshPhongMaterial({ color: 0x222222 });
+    
+    const wheelPositions = [
+        [-w * 0.35, wheelRadius, -d * 0.35],
+        [w * 0.35, wheelRadius, -d * 0.35],
+        [-w * 0.35, wheelRadius, d * 0.35],
+        [w * 0.35, wheelRadius, d * 0.35]
+    ];
+    
+    wheelPositions.forEach(pos => {
+        const wheel = new THREE.Mesh(wheelGeom, wheelMat);
+        wheel.rotation.z = Math.PI / 2;
+        wheel.position.set(pos[0], pos[1], pos[2]);
+        carBody.add(wheel);
+    });
+
+    // Wheel rims (center caps)
+    const rimGeom = new THREE.CylinderGeometry(wheelRadius * 0.5, wheelRadius * 0.5, 0.05, 16);
+    const rimMat = new THREE.MeshPhongMaterial({ color: 0xaaaaaa, shininess: 80 });
+    
+    wheelPositions.forEach(pos => {
+        const rim = new THREE.Mesh(rimGeom, rimMat);
+        rim.rotation.z = Math.PI / 2;
+        rim.position.set(pos[0], pos[1], pos[2]);
+        carBody.add(rim);
+    });
+
+    group.add(carBody);
+
+    // Add glowing outline for player car only
+    if (c.isPlayer) {
+        const outlineGeom = new THREE.BoxGeometry(w + 0.15, h + 0.15, d + 0.15);
+        const outlineMat = new THREE.MeshBasicMaterial({
+            color: 0xFFFF00,
+            transparent: true,
+            opacity: 0.7,
+            wireframe: false
+        });
+        const outline = new THREE.Mesh(outlineGeom, outlineMat);
+        outline.position.y = h / 2;
+        group.add(outline);
+
+        group.userData.isPlayer = true;
+        group.userData.outline = outline;
+        group.userData.carBody = carBody;
+    }
 
     // Position in grid
     const cx = c.x + (c.ori === 'H' ? c.len / 2 - 0.5 : 0);
@@ -384,6 +544,27 @@ function getMouseCoords(event) {
 
 function animate() {
     requestAnimationFrame(animate);
+    
+    // Animate player car effects
+    if (carsGroup) {
+        const time = Date.now() * 0.001;
+        carsGroup.children.forEach(carGroup => {
+            if (carGroup.userData.isPlayer && carGroup.userData.outline) {
+                // Pulse the outline opacity
+                const pulse = 0.5 + Math.sin(time * 3) * 0.3;
+                carGroup.userData.outline.material.opacity = pulse;
+                
+                // Pulse the beacon light
+                const carBody = carGroup.userData.carBody;
+                if (carBody && carBody.userData.beacon) {
+                    const beaconPulse = 0.6 + Math.sin(time * 5) * 0.4;
+                    carBody.userData.beacon.material.opacity = beaconPulse;
+                    carBody.userData.glow.material.opacity = beaconPulse * 0.8;
+                }
+            }
+        });
+    }
+    
     renderer.render(scene, camera);
 }
 
