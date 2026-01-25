@@ -8,7 +8,7 @@ const BALL_RADIUS = 0.3;
 const CYLINDER_RADIUS = 2.0;
 const PLATFORM_HEIGHT = 0.45;
 const LEVEL_HEIGHT = 4.0;
-const NUM_FLOORS = 20; // Swift uses level+2, we'll fix simple or use logic
+let numFloors = 20; // Will be calculated based on current level
 
 // Physics Categories (Bitmasks)
 const CATEGORY_BALL = 1;
@@ -38,7 +38,6 @@ const levelEl = document.getElementById('level');
 const scoreEl = document.getElementById('score');
 const mainMenu = document.getElementById('main-menu');
 const gameOverMenu = document.getElementById('game-over');
-const finalScoreEl = document.getElementById('final-score');
 const startBtn = document.getElementById('start-btn');
 const resumeBtn = document.getElementById('resume-btn');
 const resumeLevelSpan = document.getElementById('resume-level');
@@ -175,7 +174,7 @@ function buildTower() {
     scene.add(towerGroup);
 
     // Calculate number of floors based on level: Level 1 = 3, Level 2 = 5, Level 3 = 7, etc.
-    let numFloors = 3 + (currentLevel - 1) * 2;
+    numFloors = 3 + (currentLevel - 1) * 2;
 
     // Central Cylinder (Visual)
     const cylinderGeo = new THREE.CylinderGeometry(CYLINDER_RADIUS * 0.8, CYLINDER_RADIUS * 0.8, numFloors * LEVEL_HEIGHT * 1.5, 32);
@@ -185,6 +184,35 @@ function buildTower() {
     // Swift: cylinderNode.position.y = Float(-CGFloat(numFloors) * levelHeight / 2)
     cylinderMesh.position.y = -(numFloors * LEVEL_HEIGHT) / 2;
     towerGroup.add(cylinderMesh);
+
+    // Add invisible inner cylinder wall to keep ball from going inside
+    const innerWallRadius = CYLINDER_RADIUS * 0.8;
+    const wallHeight = numFloors * LEVEL_HEIGHT * 1.5;
+    const wallBody = new CANNON.Body({ mass: 0 }); // Static body
+    
+    // Create cylinder collision shape using a composite of boxes (cylinder approximation)
+    const segments = 12;
+    const angle = (2 * Math.PI) / segments;
+    const thickness = 0.15;
+    
+    for (let i = 0; i < segments; i++) {
+        const currentAngle = i * angle;
+        const nextAngle = (i + 1) * angle;
+        
+        // Use box shape to approximate cylinder
+        const wallMidX = (innerWallRadius + thickness / 2) * Math.cos(currentAngle + angle / 2);
+        const wallMidZ = (innerWallRadius + thickness / 2) * Math.sin(currentAngle + angle / 2);
+        
+        const wallShape = new CANNON.Box(
+            new CANNON.Vec3(thickness / 2, wallHeight / 2, (innerWallRadius * angle) / 2)
+        );
+        
+        wallBody.addShape(wallShape, new CANNON.Vec3(wallMidX, 0, wallMidZ));
+    }
+    
+    wallBody.collisionFilterGroup = CATEGORY_PLATFORM;
+    wallBody.collisionFilterMask = CATEGORY_BALL;
+    world.addBody(wallBody);
 
     // Floors
     for (let i = 0; i < numFloors; i++) {
@@ -371,6 +399,45 @@ function updatePhysics() {
     ballMesh.position.copy(ballBody.position);
     ballMesh.quaternion.copy(ballBody.quaternion);
 
+    // Keep ball from going inside the inner cylinder
+    // Calculate horizontal distance from center (x, z plane)
+    const ballDistFromCenter = Math.sqrt(
+        ballBody.position.x * ballBody.position.x + 
+        ballBody.position.z * ballBody.position.z
+    );
+    const minDistance = CYLINDER_RADIUS * 0.8 + BALL_RADIUS;
+    
+    if (ballDistFromCenter < minDistance) {
+        // Ball is too close to center, push it outward
+        const angle = Math.atan2(ballBody.position.z, ballBody.position.x);
+        const pushDistance = minDistance - ballDistFromCenter + 0.1;
+        
+        ballBody.position.x += Math.cos(angle) * pushDistance;
+        ballBody.position.z += Math.sin(angle) * pushDistance;
+        
+        // Also push velocity outward to prevent it from being pushed back in
+        const velocityAngle = Math.atan2(ballBody.velocity.z, ballBody.velocity.x);
+        const velocityMagnitude = Math.sqrt(
+            ballBody.velocity.x * ballBody.velocity.x + 
+            ballBody.velocity.z * ballBody.velocity.z
+        );
+        
+        // If velocity is pointing inward, reverse it to point outward
+        const velAngleDiff = Math.abs(velocityAngle - angle);
+        if (velAngleDiff > Math.PI) {
+            // Angles wrap, check the other way
+            if (Math.abs(velAngleDiff - 2 * Math.PI) < Math.PI / 2) {
+                // Velocity is inward, push outward
+                ballBody.velocity.x = Math.cos(angle) * velocityMagnitude;
+                ballBody.velocity.z = Math.sin(angle) * velocityMagnitude;
+            }
+        } else if (velAngleDiff < Math.PI / 2) {
+            // Velocity is inward, push outward
+            ballBody.velocity.x = Math.cos(angle) * velocityMagnitude;
+            ballBody.velocity.z = Math.sin(angle) * velocityMagnitude;
+        }
+    }
+
     // Apply Joystick Force
     // Swift: forceX = dx * 6.5, forceZ = -dy * 6.5
     // Only if near platform? Swift check: abs(body.velocity.y) < 4
@@ -382,7 +449,10 @@ function updatePhysics() {
     }
     
     // Check Fall off
-    const limitY = -(NUM_FLOORS * LEVEL_HEIGHT) - 10.0;
+    // Last floor is at y = -(numFloors - 1) * LEVEL_HEIGHT
+    // Allow ball to fall 3-4 floors below last floor before game over
+    const lastFloorY = -(numFloors - 1) * LEVEL_HEIGHT;
+    const limitY = lastFloorY - (3.5 * LEVEL_HEIGHT); // 3-4 floors below last floor
     if (ballBody.position.y < limitY) {
         gameOver(false);
     }
@@ -449,7 +519,6 @@ function gameOver(win) {
     score = Math.floor(depth / LEVEL_HEIGHT);
     scoreEl.innerText = score;
     
-    finalScoreEl.innerText = score;
     gameOverMenu.classList.remove('hidden');
     
     const h2 = gameOverMenu.querySelector('h2');
