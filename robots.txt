@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://cpapphaven-tech.github.io/sitemap.xml
+Sitemap: https://playmixgames.in/sitemap.xml
