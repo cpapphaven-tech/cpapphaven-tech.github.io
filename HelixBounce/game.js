@@ -1,31 +1,39 @@
 /**
- * Helix Bounce - Three.js Implementation
- * Ported from Swift/SceneKit
+ * Helix Bounce - Three.js + Cannon.js Implementation
+ * Ported from Swift/SceneKit (HelixBounceViewController.swift)
  */
 
-// --- Constants ---
-const TOWER_RADIUS = 2;
+// --- Constants (Matching Swift) ---
 const BALL_RADIUS = 0.3;
-const FLOOR_HEIGHT = 4.0;
-const SEGMENTS_PER_FLOOR = 12;
-const NUM_FLOORS = 20;
+const CYLINDER_RADIUS = 2.0;
+const PLATFORM_HEIGHT = 0.45;
+const LEVEL_HEIGHT = 4.0;
+const NUM_FLOORS = 20; // Swift uses level+2, we'll fix simple or use logic
 
-// --- State ---
-let scene, camera, renderer, tower;
-let ball;
-let gameState = 'MENU'; // MENU, PLAYING, GAMEOVER
+// Physics Categories (Bitmasks)
+const CATEGORY_BALL = 1;
+const CATEGORY_PLATFORM = 2;
+const CATEGORY_LAST_PLATFORM = 4;
+const CATEGORY_DEATH = 10;
+
+// Game State
+let scene, camera, renderer;
+let world; // Cannon.js world
+let ballMesh, ballBody;
+let towerGroup; // For rotation logic
+let towerBody; // Not used as a single body, but logic grouping
+
+let isGameOver = false;
 let score = 0;
-let currentFloorIdx = 0;
-let rotationSpeed = 0;
-let isDragging = false;
-let previousMouseX = 0;
+let currentLevel = 1;
+let canStabilizeBall = true;
+let stabilizeCooldown = 400; // ms
 
-// Physics helper
-let ballVelocityY = 0;
-const gravity = -0.015;
-const bounceVelocity = 0.35;
+// Joystick
+let joystickVector = { x: 0, y: 0 };
+const JOYSTICK_FORCE = 6.5;
 
-// DOM
+// DOM Elements
 const scoreEl = document.getElementById('score');
 const mainMenu = document.getElementById('main-menu');
 const gameOverMenu = document.getElementById('game-over');
@@ -33,14 +41,30 @@ const finalScoreEl = document.getElementById('final-score');
 const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
 
-function init() {
-    scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x0a0a1a);
+// Joystick DOM
+const joystickBase = document.getElementById('joystick-base');
+const joystickStick = document.getElementById('joystick-stick');
 
-    const aspect = 360 / 600;
+// Input State
+let isDraggingTower = false;
+let previousPointerX = 0;
+let isJoystickActive = false;
+let joystickStartPos = { x: 0, y: 0 }; // relative to base center or touch start
+let joystickMaxRadius = 60; // base width / 2 ideally
+
+// Materials
+let ballMaterial, platformMaterial, deathMaterial, lastPlatformMaterial;
+let physicsMaterial; // Cannon material
+
+function init() {
+    // 1. Setup Three.js
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x1a1a33); // UIColor(0.1, 0.1, 0.2)
+
+    const aspect = 360 / 600; // Fixed aspect ratio for container mostly
     camera = new THREE.PerspectiveCamera(60, aspect, 0.1, 1000);
     camera.position.set(0, 5, 12);
-    camera.lookAt(0, 0, 0);
+    camera.rotation.x = -0.3;
 
     renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('game-canvas'),
@@ -48,223 +72,477 @@ function init() {
     });
     renderer.setSize(360, 600);
     renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.shadowMap.enabled = true;
 
-    // Light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+    // Lights
+    const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
     scene.add(ambientLight);
+
     const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
-    dirLight.position.set(5, 10, 7);
+    dirLight.position.set(0, 50, 20);
+    dirLight.castShadow = true;
     scene.add(dirLight);
 
-    // Initial setup
-    setupGame();
-    animate();
+    // 2. Setup Cannon.js
+    world = new CANNON.World();
+    world.gravity.set(0, -6.0, 0); // Matching Swift SCNVector3(0, -6.0, 0)
+    world.broadphase = new CANNON.NaiveBroadphase();
+    world.solver.iterations = 10;
 
-    // Events
-    window.addEventListener('pointerdown', onPointerDown);
-    window.addEventListener('pointermove', onPointerMove);
-    window.addEventListener('pointerup', onPointerUp);
-    startBtn.addEventListener('click', startGame);
-    restartBtn.addEventListener('click', setupGame);
+    physicsMaterial = new CANNON.Material("physics");
+    const physicsContactMaterial = new CANNON.ContactMaterial(
+        physicsMaterial,
+        physicsMaterial,
+        {
+            friction: 0.5,
+            restitution: 0.8 // Bounciness
+        }
+    );
+    world.addContactMaterial(physicsContactMaterial);
+
+    // 3. Materials
+    ballMaterial = new THREE.MeshPhongMaterial({ color: 0xffff00 }); // Yellow
+    platformMaterial = new THREE.MeshPhongMaterial({ color: 0x00ffff }); // Cyan
+    deathMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 }); // Red
+    lastPlatformMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 }); // Green
+
+    // 4. Events
+    setupInputs();
+
+    // Loop
+    requestAnimationFrame(animate);
 }
 
-function setupGame() {
-    gameState = 'MENU';
+function startNewGame() {
+    isGameOver = false;
     score = 0;
-    currentFloorIdx = 0;
-    ballVelocityY = 0;
-    scoreEl.innerText = '0';
-    mainMenu.classList.remove('hidden');
+    scoreEl.innerText = "0";
+    
+    // UI
+    mainMenu.classList.add('hidden');
     gameOverMenu.classList.add('hidden');
 
-    if (tower) scene.remove(tower);
-    if (ball) scene.remove(ball);
+    // Clean Scale
+    if (towerGroup) {
+        scene.remove(towerGroup);
+        // Clean cannon bodies associated with tower?
+        // We need to track them to remove them.
+        // For simplicity in this port, we'll iterate world bodies and remove static ones.
+        // A better way is to keep a list.
+    }
+    if (ballBody) {
+        world.removeBody(ballBody);
+        scene.remove(ballMesh);
+    }
+    
+    // Remove all existing bodies except ball (which we just removed)
+    // Actually, let's just clear the world bodies list gently.
+    world.bodies = []; 
 
-    // Create Tower
-    tower = new THREE.Group();
-    scene.add(tower);
+    buildTower();
+    spawnBall();
+}
 
-    // Central Pillar
-    const pillarGeom = new THREE.CylinderGeometry(TOWER_RADIUS * 0.7, TOWER_RADIUS * 0.7, NUM_FLOORS * FLOOR_HEIGHT + 10, 16);
-    const pillarMat = new THREE.MeshPhongMaterial({ color: 0x333333 });
-    const pillar = new THREE.Mesh(pillarGeom, pillarMat);
-    pillar.position.y = -(NUM_FLOORS * FLOOR_HEIGHT) / 2 + 5;
-    tower.add(pillar);
+function buildTower() {
+    towerGroup = new THREE.Group();
+    scene.add(towerGroup);
+
+    // Central Cylinder (Visual)
+    const cylinderGeo = new THREE.CylinderGeometry(CYLINDER_RADIUS * 0.8, CYLINDER_RADIUS * 0.8,NUM_FLOORS * LEVEL_HEIGHT * 1.5, 32);
+    const cylinderMat = new THREE.MeshPhongMaterial({ color: 0x888888 });
+    const cylinderMesh = new THREE.Mesh(cylinderGeo, cylinderMat);
+    // Position y: - (numFloors * levelHeight) / 2
+    // Swift: cylinderNode.position.y = Float(-CGFloat(numFloors) * levelHeight / 2)
+    cylinderMesh.position.y = -(NUM_FLOORS * LEVEL_HEIGHT) / 2;
+    towerGroup.add(cylinderMesh);
 
     // Floors
     for (let i = 0; i < NUM_FLOORS; i++) {
-        createFloor(i);
+        const yPos = -i * LEVEL_HEIGHT;
+        const isLast = (i === NUM_FLOORS - 1);
+        createFloor(yPos, isLast);
     }
-
-    // Ball
-    const ballGeom = new THREE.SphereGeometry(BALL_RADIUS, 16, 16);
-    const ballMat = new THREE.MeshPhongMaterial({ color: 0xffff00 });
-    ball = new THREE.Mesh(ballGeom, ballMat);
-    ball.position.set(0, 3, TOWER_RADIUS + 0.2);
-    scene.add(ball);
-
-    resetCamera();
 }
 
-function createFloor(index) {
-    const floorGroup = new THREE.Group();
-    floorGroup.position.y = -index * FLOOR_HEIGHT;
-    tower.add(floorGroup);
+function createFloor(y, isLast) {
+    const gapSizeDeg = 45.0;
+    const gapStartDeg = Math.random() * 360;
+    const segmentCount = 12;
+    const anglePerSegment = 360 / segmentCount;
 
-    const gapStart = Math.floor(Math.random() * SEGMENTS_PER_FLOOR);
-    const gapSize = 2; // 2 segments wide gap
+    for (let i = 0; i < segmentCount; i++) {
+        const startAngle = i * anglePerSegment;
 
-    for (let i = 0; i < SEGMENTS_PER_FLOOR; i++) {
-        // Skip for gap
-        let inGap = false;
-        for (let g = 0; g < gapSize; g++) {
-            if (i === (gapStart + g) % SEGMENTS_PER_FLOOR) inGap = true;
+        // Gap check
+        const diff = Math.abs(angleDifference(startAngle, gapStartDeg));
+        if (diff < gapSizeDeg && !isLast) {
+            continue; // Create gap
         }
-        if (inGap && index > 0) continue;
 
-        const angle = (i / SEGMENTS_PER_FLOOR) * Math.PI * 2;
-        const segmentGeom = new THREE.BoxGeometry(TOWER_RADIUS * 1.2, 0.2, TOWER_RADIUS * 0.8);
-
-        // Random death zones
-        const isDeath = Math.random() < 0.15 && index > 0;
-        const color = isDeath ? 0xff3333 : (index % 2 === 0 ? 0x00ffff : 0x00cccc);
-
-        const mat = new THREE.MeshPhongMaterial({ color: color });
-        const segment = new THREE.Mesh(segmentGeom, mat);
-
-        // Position on ring
-        segment.position.x = Math.sin(angle) * TOWER_RADIUS;
-        segment.position.z = Math.cos(angle) * TOWER_RADIUS;
-        segment.rotation.y = angle;
-
-        segment.userData = { isDeath: isDeath, floorIdx: index };
-        floorGroup.add(segment);
+        createSegmentBlock(y, startAngle, isLast);
     }
 }
 
-function startGame() {
-    gameState = 'PLAYING';
-    mainMenu.classList.add('hidden');
+function angleDifference(a1, a2) {
+    let diff = a1 - a2;
+    while (diff < -180) diff += 360;
+    while (diff > 180) diff -= 360;
+    return diff;
 }
 
-function onPointerDown(e) {
-    if (gameState !== 'PLAYING') return;
-    isDragging = true;
-    previousMouseX = e.clientX;
+function createSegmentBlock(y, angleDeg, isLast) {
+    // Swift: SCNBox(width: width, height: platformHeight, length: outerR - innerR)
+    // Pivot at center.
+    // Three.js BoxGeometry is centered.
+    // We need to match Swift "pivot" logic by positioning the mesh offset from the group center.
+    
+    const outerR = CYLINDER_RADIUS + 1.2;
+    const innerR = CYLINDER_RADIUS * 0.8;
+    const width = 2 * Math.PI * CYLINDER_RADIUS / 12.0;
+    const length = outerR - innerR; // Depth in 3D terms
+
+    // Visual Mesh
+    const geometry = new THREE.BoxGeometry(width, PLATFORM_HEIGHT, length);
+    
+    // Mat
+    let mat = platformMaterial;
+    let collisionFilterGroup = CATEGORY_PLATFORM;
+    
+    // Random Death (Swift logic: !isLast && y < 0 && Bool.random... 1/8 chance)
+    // Simplifying for JS port to keep it consistent
+    // Swift: let isDeath = !isLast && y < 0 && Bool.random() && ...
+    // Let's implement roughly 10% death panels
+    const isDeath = !isLast && (y < 0) && (Math.random() < 0.1); 
+
+    if (isLast) {
+        mat = lastPlatformMaterial;
+        collisionFilterGroup = CATEGORY_LAST_PLATFORM;
+    } else if (isDeath) {
+        mat = deathMaterial;
+        collisionFilterGroup = CATEGORY_DEATH;
+    }
+
+    const mesh = new THREE.Mesh(geometry, mat);
+    
+    // Position logic
+    // Swift: node.pivot = Translation(0, 0, -offset)
+    // This moves the box OUT.
+    const offset = (outerR + innerR) / 2.0;
+    
+    // We need to rotate the segment around the TOWER center (0,0).
+    // The segment itself is at distance `offset`.
+    // Angle: angleDeg.
+    
+    const rad = THREE.MathUtils.degToRad(angleDeg);
+    // In Three.js, x/z plane.
+    // Swift eulerAngles.y = angle.
+    
+    mesh.position.set(Math.sin(rad) * offset, y, Math.cos(rad) * offset);
+    mesh.rotation.y = rad;
+    
+    towerGroup.add(mesh); // Add to rotating tower group
+
+    // Physics Body
+    // Cannon.js Box shape is half-extents
+    const shape = new CANNON.Box(new CANNON.Vec3(width / 2, PLATFORM_HEIGHT / 2, length / 2));
+    const body = new CANNON.Body({
+        mass: 0, // Static
+        material: physicsMaterial,
+        type: CANNON.Body.KINEMATIC
+    });
+    body.addShape(shape);
+    
+    // Match position/rotation of visual mesh
+    body.position.copy(mesh.position);
+    body.quaternion.copy(mesh.quaternion);
+    
+    body.collisionFilterGroup = collisionFilterGroup;
+    body.collisionFilterMask = CATEGORY_BALL; // Collides with ball
+    
+    // custom property to identify type in collision handler
+    body.gameType = isDeath ? 'DEATH' : (isLast ? 'LAST' : 'PLATFORM');
+    body.visualMesh = mesh; // Link for rotation updates? 
+    // Wait, if tower rotates, we need to manually update KINEMATIC bodies every frame.
+    // Or, we can make the tower valid rigid bodies and rotate them?
+    // Swift uses "Child Nodes".
+    // In Cannon, we can't easily parent bodies. We must update their position/rotation manually if the parent rotates.
+    // OR we put the ball in a world that doesn't verify rotation, but here interaction is key.
+    // Easier approach: The TOWER rotates visually. The BODIES must rotate physically.
+    // We will store these segment bodies in an array `towerBodies` and update their quaternions/positions based on tower rotation angle.
+
+    if (!towerGroup.userData.bodies) towerGroup.userData.bodies = [];
+    towerGroup.userData.bodies.push({
+        body: body,
+        initialPos: new THREE.Vector3(Math.sin(rad) * offset, y, Math.cos(rad) * offset),
+        initialRot: rad
+    });
+
+    world.addBody(body);
 }
 
-function onPointerMove(e) {
-    if (!isDragging) return;
-    const deltaX = e.clientX - previousMouseX;
-    tower.rotation.y += deltaX * 0.01;
-    previousMouseX = e.clientX;
+function spawnBall() {
+    // Visual
+    const geometry = new THREE.SphereGeometry(BALL_RADIUS, 16, 16);
+    ballMesh = new THREE.Mesh(geometry, ballMaterial);
+    scene.add(ballMesh);
+
+    // Body
+    const shape = new CANNON.Sphere(BALL_RADIUS);
+    ballBody = new CANNON.Body({
+        mass: 0.6, // Swift: 0.6
+        material: physicsMaterial,
+        linearDamping: 0.4, // Swift: damping = 0.4
+        angularDamping: 0.8, // Swift: 0.8
+        position: new CANNON.Vec3(0, 3, CYLINDER_RADIUS) // Start pos
+    });
+    ballBody.addShape(shape);
+    
+    ballBody.collisionFilterGroup = CATEGORY_BALL;
+    ballBody.collisionFilterMask = CATEGORY_PLATFORM | CATEGORY_DEATH | CATEGORY_LAST_PLATFORM;
+
+    // Swift values
+    // friction 0.5 (set in material contact)
+    // restitution 0.8 (set in material contact)
+    
+    world.addBody(ballBody);
+    
+    // Collision Listener
+    ballBody.addEventListener("collide", (e) => {
+        if (isGameOver) return;
+        
+        // Check what we hit
+        // e.body is the other body
+        const type = e.body.gameType;
+        if (type === 'DEATH') {
+            gameOver(false);
+        } else if (type === 'LAST') {
+            gameOver(true);
+        } else {
+            // Normal bounces logic if needed
+            // Swift: if velocity.y < -1.0 -> velocity.y = 3.5 (handleNormalBounce)
+            // But Physics engine handles bounce. Swift code explicitly sets velocity sometimes?
+            // "if ballBody.velocity.y < -1.0 { ballBody.velocity.y = 3.5 }"
+            // This forces a minimum bounce height!
+            
+            // Cannon:
+            if (ballBody.velocity.y < -1.0) {
+              //  ballBody.velocity.y = 3.5;
+            }
+        }
+    });
 }
 
-function onPointerUp() {
-    isDragging = false;
+function updatePhysics() {
+    if (isGameOver) return;
+    
+    world.step(1 / 60);
+
+    // Sync Ball Visuals
+    ballMesh.position.copy(ballBody.position);
+    ballMesh.quaternion.copy(ballBody.quaternion);
+
+    // Apply Joystick Force
+    // Swift: forceX = dx * 6.5, forceZ = -dy * 6.5
+    // Only if near platform? Swift check: abs(body.velocity.y) < 4
+    if (Math.abs(ballBody.velocity.y) < 4) {
+        ballBody.applyForce(
+            new CANNON.Vec3(joystickVector.x * JOYSTICK_FORCE, 0, -joystickVector.y * JOYSTICK_FORCE),
+            ballBody.position
+        );
+    }
+    
+    // Check Fall off
+    const limitY = -(NUM_FLOORS * LEVEL_HEIGHT) - 10.0;
+    if (ballBody.position.y < limitY) {
+        gameOver(false);
+    }
+    
+    // Update Score
+    // Swift: depth = -ball.y; score = depth / levelHeight
+    const depth = -ballBody.position.y;
+    const newScore = Math.floor(depth / LEVEL_HEIGHT);
+    if (newScore > score) {
+        score = newScore;
+        scoreEl.innerText = score;
+    }
+    
+    // Camera Follow
+    const targetY = ballBody.position.y + 5;
+    camera.position.y += (targetY - camera.position.y) * 0.1;
+    
+    // Update Tower Rotation (Kinematic Bodies)
+    if (towerGroup && towerGroup.userData.bodies) {
+        const rotationY = towerGroup.rotation.y;
+        
+        towerGroup.userData.bodies.forEach(item => {
+            const body = item.body;
+            const initPos = item.initialPos;
+            const initRot = item.initialRot;
+            
+            // Rotate position around Y axis
+            // x' = x cos θ - z sin θ
+            // z' = x sin θ + z cos θ
+            // The tower rotates, so the "box" moves in world space.
+            
+            const cos = Math.cos(rotationY);
+            const sin = Math.sin(rotationY);
+            
+            const x = initPos.x * cos + initPos.z * sin;
+            const z = -initPos.x * sin + initPos.z * cos;
+            
+            body.position.set(x, initPos.y, z);
+            
+            // Update rotation
+            // The box was structurally rotated by `initRot` initially.
+            // Now we add `rotationY`.
+            // Cannon uses quaternions.
+            
+            // New Angle = initRot + rotationY
+            const totalAngle = initRot + rotationY;
+            body.quaternion.setFromAxisAngle(new CANNON.Vec3(0, 1, 0), totalAngle);
+        });
+    }
 }
 
 function animate() {
     requestAnimationFrame(animate);
-
-    if (gameState === 'PLAYING') {
-        updatePhysics();
-        updateCamera();
-    }
-
+    updatePhysics();
     renderer.render(scene, camera);
 }
 
-function updatePhysics() {
-    ballVelocityY += gravity;
-    ball.position.y += ballVelocityY;
-
-    // Check collision with floors
-    const floorY = -currentFloorIdx * FLOOR_HEIGHT;
-    const relativeBallY = ball.position.y - floorY;
-
-    // Detection zone
-    if (ballVelocityY < 0 && relativeBallY < BALL_RADIUS && relativeBallY > -0.5) {
-        checkFloorCollision();
-    }
-
-    // Win condition - reach bottom
-    if (ball.position.y < -(NUM_FLOORS - 1) * FLOOR_HEIGHT) {
-        gameOver(true);
-    }
-}
-
-function checkFloorCollision() {
-    // Determine which segment the ball is over
-    // Ball is at fixed world X, Z. Tower is rotating.
-    // Calculate ball angle relative to tower rotation
-    let angle = Math.atan2(ball.position.x, ball.position.z) - tower.rotation.y;
-    while (angle < 0) angle += Math.PI * 2;
-    while (angle > Math.PI * 2) angle -= Math.PI * 2;
-
-    const segmentIdx = Math.floor((angle / (Math.PI * 2)) * SEGMENTS_PER_FLOOR);
-
-    // Check if the floor has a segment here
-    const currentFloor = tower.children[currentFloorIdx + 1]; // +1 because pillar is index 0
-    let landed = false;
-    let hitDeath = false;
-
-    currentFloor.children.forEach(seg => {
-        // We approximate hit by checking if seg exists near this angle
-        // In this implementation, we just check if it's NOT a gap.
-        landed = true;
-        if (seg.userData && seg.userData.isDeath) {
-            // Simplified check: if hit segment exists and marked death
-            // Actually, we need to know IF hit. 
-        }
-    });
-
-    // Real Gap Logic: If ball is falling and no segments are under it
-    // For simplicity in this Three.js prototype, we use Raycasting or distance checks
-    const raycaster = new THREE.Raycaster(ball.position, new THREE.Vector3(0, -1, 0));
-    const intersects = raycaster.intersectObjects(tower.children, true);
-
-    if (intersects.length > 0 && intersects[0].distance < BALL_RADIUS + 0.1) {
-        const hitObj = intersects[0].object;
-        if (hitObj.userData.isDeath) {
-            gameOver(false);
-        } else {
-            // Bounce
-            ball.position.y = hitObj.parent.position.y + 0.2 + BALL_RADIUS;
-            ballVelocityY = bounceVelocity;
-        }
-    } else {
-        // Falling through gap?
-        // Fall logic is automatic. If depth increases beyond a point, update score.
-        const newFloorIdx = Math.floor(-ball.position.y / FLOOR_HEIGHT);
-        if (newFloorIdx > currentFloorIdx) {
-            currentFloorIdx = newFloorIdx;
-            score = currentFloorIdx;
-            scoreEl.innerText = score;
-        }
-    }
-}
-
-function updateCamera() {
-    const targetY = ball.position.y + 5;
-    camera.position.y += (targetY - camera.position.y) * 0.1;
-}
-
-function resetCamera() {
-    camera.position.set(0, 5, 12);
-}
-
 function gameOver(win) {
-    gameState = 'GAMEOVER';
+    if (isGameOver) return;
+    isGameOver = true;
+    
     finalScoreEl.innerText = score;
     gameOverMenu.classList.remove('hidden');
+    
+    const h2 = gameOverMenu.querySelector('h2');
     if (win) {
-        gameOverMenu.querySelector('h2').innerText = "LEVEL COMPLETE!";
-        gameOverMenu.querySelector('h2').style.color = "#00ff00";
+        h2.innerText = "Congratulations!";
+        h2.style.color = "#00ff00";
     } else {
-        gameOverMenu.querySelector('h2').innerText = "CRASHED!";
-        gameOverMenu.querySelector('h2').style.color = "#ff3333";
+        h2.innerText = "Game Over";
+        h2.style.color = "#ff3333";
     }
 }
 
+// --- Inputs ---
+
+function setupInputs() {
+    // 1. Tower Rotation (Pan)
+    // Desktop: Mouse Drag
+    // Mobile: Touch Drag (if not on joystick)
+    
+    const canvas = document.getElementById('game-ui'); // Listen on container
+    
+    canvas.addEventListener('pointerdown', (e) => {
+        // Ignore if touching joystick
+        if (e.target.closest('#joystick-zone')) return;
+        
+        isDraggingTower = true;
+        previousPointerX = e.clientX;
+    });
+    
+    window.addEventListener('pointermove', (e) => {
+        if (isDraggingTower && !isGameOver) {
+            const deltaX = e.clientX - previousPointerX;
+            // Swift sensitivity: 0.005
+            // JS pixels are large, maybe 0.01
+            towerGroup.rotation.y += deltaX * 0.01;
+            previousPointerX = e.clientX;
+        }
+    });
+    
+    window.addEventListener('pointerup', () => {
+        isDraggingTower = false;
+    });
+    
+    // 2. Joystick
+    const zone = document.getElementById('joystick-zone');
+    
+    zone.addEventListener('pointerdown', (e) => {
+        isJoystickActive = true;
+        const rect = joystickBase.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        
+        // Start tracking
+        updateJoystick(e.clientX, e.clientY, centerX, centerY);
+        
+        function onMove(ev) {
+            updateJoystick(ev.clientX, ev.clientY, centerX, centerY);
+        }
+        
+        function onUp() {
+            isJoystickActive = false;
+            joystickVector = { x: 0, y: 0 };
+            joystickStick.style.transform = `translate(0px, 0px)`;
+            window.removeEventListener('pointermove', onMove);
+            window.removeEventListener('pointerup', onUp);
+        }
+        
+        window.addEventListener('pointermove', onMove);
+        window.addEventListener('pointerup', onUp);
+    });
+    
+    // 3. Swipe Up (Jump)
+    // Simple implementation: Detect quick upward swipe
+    let touchStartY = 0;
+    canvas.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+    }, {passive:true});
+    
+    canvas.addEventListener('touchend', (e) => {
+        const touchEndY = e.changedTouches[0].clientY;
+        if (touchStartY - touchEndY > 50) {
+            // Swipe Up
+            handleSwipeUp();
+        }
+    }, {passive:true});
+}
+
+function updateJoystick(clientX, clientY, centerX, centerY) {
+    let dx = clientX - centerX;
+    let dy = clientY - centerY;
+    
+    const distance = Math.sqrt(dx*dx + dy*dy);
+    const radius = 60; // Max radius
+    
+    if (distance > radius) {
+        const angle = Math.atan2(dy, dx);
+        dx = Math.cos(angle) * radius;
+        dy = Math.sin(angle) * radius;
+    }
+    
+    joystickStick.style.transform = `translate(${dx}px, ${dy}px)`;
+    
+    // Normalize vector (-1 to 1)
+    // In screen coords, Y down is positive. In 3D, Z down (forward) is typically negative or positive depending.
+    // Swift: forceZ = -joystickVector.dy
+    // UI Y down -> +1. We want Forward -> -Z. So +Y input should map to -Z force.
+    
+    joystickVector = {
+        x: dx / radius,
+        y: dy / radius 
+    };
+}
+
+function handleSwipeUp() {
+    if (!canStabilizeBall || isGameOver) return;
+    canStabilizeBall = false;
+    
+    // Swift: ballBody.applyForce(SCNVector3(0, 3.5, 0), asImpulse: true)
+    // Cannon applyImpulse takes world point.
+    // Cancel downward velocity first? Swift: if velocity.y < 0 { velocity.y = 0 }
+    if (ballBody.velocity.y < 0) ballBody.velocity.y = 0;
+    
+    ballBody.applyImpulse(new CANNON.Vec3(0, 3.5, 0), ballBody.position);
+    
+    setTimeout(() => { canStabilizeBall = true; }, stabilizeCooldown);
+}
+
+// Start
 init();
+startBtn.addEventListener('click', startNewGame);
+restartBtn.addEventListener('click', startNewGame);

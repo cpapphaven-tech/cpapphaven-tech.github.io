@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Cannon.js (Physics) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
 </head>
 
 <body>
@@ -37,9 +39,15 @@
                 <p>Final Score: <span id="final-score">0</span></p>
                 <button id="restart-btn">Try Again</button>
             </div>
-        </div>
 
-        <canvas id="game-canvas"></canvas>
+            <div id="joystick-zone">
+                <div id="joystick-base">
+                    <div id="joystick-stick"></div>
+                </div>
+            </div>
+
+            <canvas id="game-canvas"></canvas>
+        </div>
 
         <section class="game-description">
             <h2>About Helix Bounce</h2>
