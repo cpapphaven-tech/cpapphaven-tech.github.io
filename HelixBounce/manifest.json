@@ -1,11 +1,11 @@
 {
-    "name": "Color Match 3D",
-    "short_name": "ColorMatch",
-    "version": "1.0.0",
+    "name": "Helix Bounce",
+    "short_name": "Helix",
+    "description": "Rotate the tower and guide the ball!",
     "start_url": "./index.html",
     "display": "standalone",
-    "background_color": "#050510",
-    "theme_color": "#ff3333",
+    "background_color": "#1a1a33",
+    "theme_color": "#1a1a33",
     "orientation": "portrait",
     "icons": [
         {
