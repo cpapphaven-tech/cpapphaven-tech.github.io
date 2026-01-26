@@ -522,16 +522,27 @@ function gameOver(win) {
     showInterstitialAd();
 }
 
-// Smartlink Interstitial Ad
+// Smartlink Interstitial Ad & Popunder (Every 3rd Game Over)
 function showInterstitialAd() {
     // Check if ads are disabled via cookie
     const adsDisabled = document.cookie.includes("noads=true");
-
-    if (!adsDisabled) {
-        // Open Smartlink ad in new tab
-        window.open("https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66", "_blank");
-    } else {
+    if (adsDisabled) {
         console.log('🚧 Ads disabled via cookie - Interstitial ad skipped');
+        return;
+    }
+
+    // Get game over counter from localStorage
+    let gameOverCount = parseInt(localStorage.getItem('helixGameOverCount') || '0');
+    gameOverCount++;
+    localStorage.setItem('helixGameOverCount', gameOverCount.toString());
+
+    // Show ads only on every 3rd game over (3, 6, 9, 12...)
+    if (gameOverCount % 3 === 0) {
+        // Smartlink Interstitial
+        loadSmartlinkAd();
+        console.log(`📊 Game Over #${gameOverCount} - Ads shown`);
+    } else {
+        console.log(`📊 Game Over #${gameOverCount} - Next ads at #${Math.ceil(gameOverCount / 3) * 3}`);
     }
 }
 
@@ -591,8 +602,10 @@ function handleSwipeUp() {
 }
 
 // Start
-init();
-startBtn.addEventListener('click', startNewGame);
-resumeBtn.addEventListener('click', resumeGame);
-restartBtn.addEventListener('click', startGame);
-nextLevelBtn.addEventListener('click', startGame);
+document.addEventListener('DOMContentLoaded', () => {
+    init();
+    startBtn.addEventListener('click', startNewGame);
+    resumeBtn.addEventListener('click', resumeGame);
+    restartBtn.addEventListener('click', startGame);
+    nextLevelBtn.addEventListener('click', startGame);
+});

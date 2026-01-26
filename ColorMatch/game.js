@@ -200,14 +200,23 @@ function endGame() {
     showInterstitialAd();
 }
 
-// Smartlink Interstitial Ad
+// Smartlink Interstitial Ad & Popunder (Every 3rd Game Over)
 function showInterstitialAd() {
     const adsDisabled = document.cookie.includes("noads=true");
+    if (adsDisabled) {
+        console.log('🚧 Ads disabled via cookie');
+        return;
+    }
 
-    if (!adsDisabled) {
-        window.open("https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66", "_blank");
+    let gameOverCount = parseInt(localStorage.getItem('colorMatchGameOverCount') || '0');
+    gameOverCount++;
+    localStorage.setItem('colorMatchGameOverCount', gameOverCount.toString());
+
+    if (gameOverCount % 3 === 0) {
+        loadSmartlinkAd();
+        console.log(`📊 Game Over #${gameOverCount} - Ads shown`);
     } else {
-        console.log('🚧 Ads disabled via cookie - Interstitial ad skipped');
+        console.log(`📊 Game Over #${gameOverCount} - Next ads at #${Math.ceil(gameOverCount / 3) * 3}`);
     }
 }
 

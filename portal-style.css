@@ -223,8 +223,191 @@ footer {
 }
 
 @media (max-width: 768px) {
+    :root {
+        --header-height: 60px;
+    }
+
+    header {
+        height: var(--header-height);
+        padding: 0 3%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        margin-top: var(--header-height);
+        padding: 60px 5% 40px;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        margin: 0 auto 30px;
+    }
+
+    /* Mobile Game Grid - Optimized */
+    .game-grid {
+        padding: 20px 10px !important;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        padding-left: 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .game-card {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .card-img {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        border-radius: 12px 0 0 12px;
+        font-size: 2.5em;
+    }
+
+    .card-info {
+        padding: 15px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .card-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .card-info p {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+
+    /* Footer Mobile */
+    footer {
+        padding: 30px 5%;
+    }
+
+    .footer-links a {
+        display: block;
+        margin: 10px 0;
+        font-size: 0.8rem;
+    }
+
+    .page-content {
+        margin-top: calc(var(--header-height) + 30px);
+        padding: 0 5% 80px;
+    }
+
+    .page-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .page-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .page-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Game Description Mobile */
+    .game-description {
+        margin: 40px auto;
+        padding: 0 5%;
+    }
+
+    .game-description h2 {
+        font-size: 1.3rem;
+    }
+
+    .game-description p {
+        font-size: 0.9rem;
+    }
+
+    /* Banner Ad Mobile - Full Width */
+    #bottom-banner-ad {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none !important;
+        width: 100%;
+    }
+
+    #bottom-banner-ad iframe {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 50px 3% 30px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.85rem;
+    }
+
+    .game-grid {
+        padding: 15px 5px !important;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .card-img {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+        font-size: 2em;
+    }
+
+    .card-info {
+        padding: 12px;
+    }
+
+    .card-info h3 {
+        font-size: 0.95rem;
+    }
+
+    .card-info p {
+        font-size: 0.7rem;
     }
 
     nav {

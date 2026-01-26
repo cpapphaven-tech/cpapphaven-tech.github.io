@@ -11,6 +11,14 @@
         crossorigin="anonymous"></script>
     <script type="module" src="../analytics.js"></script>
     <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+
+    <!-- Load Ads Using Professional Control System -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+        });
+    </script>
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
     <!-- Three.js -->
@@ -68,6 +76,16 @@
                 the key to solving the Expert levels!</p>
         </section>
     </main>
+
+    <!-- Bottom Banner Ad (Mobile App Style) -->
+    <div id="bottom-banner-ad"
+        style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 1000; background: #000;">
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                loadBannerAd();
+            });
+        </script>
+    </div>
 
     <footer>
         <div class="footer-links">

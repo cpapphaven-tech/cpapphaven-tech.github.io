@@ -11,30 +11,22 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
         crossorigin="anonymous"></script>
     <script type="module" src="./analytics.js"></script>
+    <script src="ads.js"></script>
 
-    <!-- Adsterra Ads - Conditional Loading -->
+    <!-- Load Ads Using Professional Control System -->
     <script>
-        // Check if ads are disabled via cookie
-        // To disable ads in your browser, run in console: document.cookie = "noads=true; path=/";
-        // To enable ads again, run: document.cookie = "noads=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-        const adsDisabled = document.cookie.includes("noads=true");
-
-        // Load ads only if not disabled
-        if (!adsDisabled) {
-            // Social Bar
-            const socialBarScript = document.createElement('script');
-            socialBarScript.src = 'https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js';
-            document.head.appendChild(socialBarScript);
-
-            // Native Banner
-            const nativeBannerScript = document.createElement('script');
-            nativeBannerScript.async = true;
-            nativeBannerScript.setAttribute('data-cfasync', 'false');
-            nativeBannerScript.src = 'https://pl28566919.effectivegatecpm.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js';
-            document.head.appendChild(nativeBannerScript);
-        } else {
-            console.log('🚧 Ads disabled via cookie. To enable: document.cookie = "noads=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";');
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+            
+            // Load native banner ad
+            if (shouldLoadAds()) {
+                const nativeBannerScript = document.createElement('script');
+                nativeBannerScript.async = true;
+                nativeBannerScript.setAttribute('data-cfasync', 'false');
+                nativeBannerScript.src = 'https://pl28566919.effectivegatecpm.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js';
+                document.head.appendChild(nativeBannerScript);
+            }
+        });
     </script>
 </head>
 
@@ -49,6 +41,52 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Featured Games Section - MOVED TO TOP -->
+    <section class="game-grid" style="padding: 30px 20px 50px; margin-top: 80px;">
+        <h2 class="section-title" style="margin-bottom: 30px;">Play Now - Choose Your Game</h2>
+        <div class="grid">
+            <!-- Game 1: Stack 3D -->
+            <a href="Stack3D/index.html" class="game-card">
+                <div class="card-img" style="background: linear-gradient(135deg, #4d79ff, #1a237e); font-size: 3.5em; display: flex; align-items: center; justify-content: center;">📦</div>
+                <div class="card-info">
+                    <h3>Stack 3D</h3>
+                    <p><strong>Build towers to the sky!</strong> Test your timing and precision in this beautiful 3D physics puzzler. Tap to drop blocks and stack them higher without falling!</p>
+                    <span style="display: inline-block; background: #4d79ff; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Reflex Challenge</span>
+                </div>
+            </a>
+
+            <!-- Game 2: Traffic Jam -->
+            <a href="TrafficJam/index.html" class="game-card">
+                <div class="card-img" style="background: linear-gradient(135deg, #ff4d4d, #1b5e20); font-size: 3.5em; display: flex; align-items: center; justify-content: center;">🚗</div>
+                <div class="card-info">
+                    <h3>Traffic Jam</h3>
+                    <p><strong>Solve parking puzzles!</strong> Slide cars and trucks strategically to create a path for the red sports car. Test your logic and planning skills across 10 levels!</p>
+                    <span style="display: inline-block; background: #ff4d4d; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Logic Puzzle</span>
+                </div>
+            </a>
+
+            <!-- Game 3: Color Match 3D -->
+            <a href="ColorMatch/index.html" class="game-card">
+                <div class="card-img" style="background: linear-gradient(135deg, #ffcc00, #ff6600); font-size: 3.5em; display: flex; align-items: center; justify-content: center;">🎨</div>
+                <div class="card-info">
+                    <h3>Color Match 3D</h3>
+                    <p><strong>Fast reaction game!</strong> Tap the 3D cubes that match the target color before time runs out. Simple concept, challenging gameplay!</p>
+                    <span style="display: inline-block; background: #ffcc00; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px; color: #000;">Speed Test</span>
+                </div>
+            </a>
+
+            <!-- Game 4: Helix Bounce -->
+            <a href="HelixBounce/index.html" class="game-card">
+                <div class="card-img" style="background: linear-gradient(135deg, #cc00cc, #6600cc); font-size: 3.5em; display: flex; align-items: center; justify-content: center;">🌀</div>
+                <div class="card-info">
+                    <h3>Helix Bounce</h3>
+                    <p><strong>Navigate rotating platforms!</strong> Rotate the helix tower to guide the ball through gaps. Avoid red zones and descend as deep as possible!</p>
+                    <span style="display: inline-block; background: #cc00cc; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Arcade Action</span>
+                </div>
+            </a>
+        </div>
+    </section>
 
     <section class="hero">
         <h1>Welcome to PlayMix Games</h1>
@@ -89,6 +127,11 @@
         <h2 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;">Latest
             Updates</h2>
         <div class="update-item" style="margin-bottom: 20px;">
+            <p style="color: var(--accent-color); font-size: 0.8rem; text-transform: uppercase;">January 26, 2026</p>
+            <h3 style="font-size: 1.1rem;">All Games Enhanced with Dynamic Ads</h3>
+            <p style="font-size: 0.9rem; color: #aaa;">Every third game completion now rewards ads, plus banner ads at the bottom of every game for a mobile-app-like experience!</p>
+        </div>
+        <div class="update-item" style="margin-bottom: 20px;">
             <p style="color: var(--accent-color); font-size: 0.8rem; text-transform: uppercase;">January 24, 2026</p>
             <h3 style="font-size: 1.1rem;">Color Match 3D Joined the Library!</h3>
             <p style="font-size: 0.9rem; color: #aaa;">We've just launched our newest reaction-based puzzler. Test your
@@ -105,51 +148,6 @@
     <!-- Adsterra Native Banner Ad -->
     <section style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
         <div id="container-63208462c4f9ec6018b4ea2e1903489d"></div>
-    </section>
-
-    <section class="game-grid">
-        <h2 class="section-title">Popular Games</h2>
-        <div class="grid">
-            <!-- Game 1: Stack 3D -->
-            <a href="Stack3D/index.html" class="game-card">
-                <div class="card-img" style="background: linear-gradient(135deg, #4d79ff, #1a237e);">🏗️</div>
-                <div class="card-info">
-                    <h3>Stack 3D</h3>
-                    <p>Test your timing and precision in this beautiful 3D physics puzzler. Build the highest tower by
-                        stacking blocks perfectly!</p>
-                </div>
-            </a>
-
-            <!-- Game 2: Color Match 3D -->
-            <a href="ColorMatch/index.html" class="game-card">
-                <div class="card-img" style="background: linear-gradient(135deg, #ffcc00, #ff6600);">🎯</div>
-                <div class="card-info">
-                    <h3>Color Match 3D</h3>
-                    <p>Test your speed and focus! Tap the cubes that match the target color before time runs out.
-                        Simple, fast, and fun!</p>
-                </div>
-            </a>
-
-            <!-- Game 3: Traffic Jam -->
-            <a href="TrafficJam/index.html" class="game-card">
-                <div class="card-img" style="background: linear-gradient(135deg, #4dff4d, #1b5e20);">🚗</div>
-                <div class="card-info">
-                    <h3>Traffic Jam</h3>
-                    <p>A classic grid-based puzzle where you must slide cars and trucks to clear a path for the escape.
-                        Logic at its best!</p>
-                </div>
-            </a>
-
-            <!-- Game 4: Helix Bounce -->
-            <a href="HelixBounce/index.html" class="game-card">
-                <div class="card-img" style="background: linear-gradient(135deg, #cc00cc, #6600cc);">🌀</div>
-                <div class="card-info">
-                    <h3>Helix Bounce</h3>
-                    <p>Rotate the helix tower to guide the bouncing ball through the gaps.Avoid the red zones and reach
-                        the bottom!</p>
-                </div>
-            </a>
-        </div>
     </section>
 
     <footer>
