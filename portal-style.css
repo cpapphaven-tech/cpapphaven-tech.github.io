@@ -222,33 +222,6 @@ footer {
     color: #444;
 }
 
-/* Banner Ad Styling - Always visible on mobile */
-#bottom-banner-ad {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
-    background: #000;
-    width: 320px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#bottom-banner-ad iframe {
-    width: 320px !important;
-    height: 50px !important;
-    border: none;
-}
-
-/* Add padding to body to account for fixed banner */
-body {
-    padding-bottom: 50px;
-}
-
 /* Social Bar Ad - Prevent overlap with content */
 html {
     scroll-padding-top: 80px;
@@ -390,19 +363,6 @@ html {
 
     .game-description p {
         font-size: 0.9rem;
-    }
-
-    /* Banner Ad Mobile - Full Width */
-    #bottom-banner-ad {
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transform: none !important;
-        width: 100%;
-    }
-
-    #bottom-banner-ad iframe {
-        width: 100% !important;
     }
 }
 
