@@ -1,9 +1,14 @@
 .game-container {
-    padding: 40px 20px;
+    padding: 40px 20px 70px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+}
+
+.game-container > h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #game-ui {
