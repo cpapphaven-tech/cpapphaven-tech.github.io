@@ -308,6 +308,7 @@ function showInterstitialAd() {
 }
 
 function restartGame() {
+    isGameOver = false;
     resetGame();
     gameOverMenu.classList.add('hidden');
     mainMenu.classList.remove('hidden');
