@@ -527,10 +527,30 @@ function checkWin() {
             });
         }
 
-       
+        // Show interstitial ad on level complete
+        showInterstitialAd();
     }
 }
 
+// Smartlink Interstitial Ad & Popunder (Every 3rd Game Over)
+function showInterstitialAd() {
+    const adsDisabled = document.cookie.includes("noads=true");
+    if (adsDisabled) {
+        console.log('🚧 Ads disabled via cookie');
+        return;
+    }
+
+    let gameOverCount = parseInt(localStorage.getItem('trafficJamGameOverCount') || '0');
+    gameOverCount++;
+    localStorage.setItem('trafficJamGameOverCount', gameOverCount.toString());
+
+    if (gameOverCount % 3 === 0) {
+        loadSmartlinkAd();
+        console.log(`📊 Level Complete #${gameOverCount} - Ads shown`);
+    } else {
+        console.log(`📊 Level Complete #${gameOverCount} - Next ads at #${Math.ceil(gameOverCount / 3) * 3}`);
+    }
+}
 
 function onPointerUp() {
     selectedCar = null;

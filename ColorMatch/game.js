@@ -195,6 +195,29 @@ function endGame() {
             score: score
         });
     }
+
+    // Show interstitial ad on game over
+    showInterstitialAd();
+}
+
+// Smartlink Interstitial Ad & Popunder (Every 3rd Game Over)
+function showInterstitialAd() {
+    const adsDisabled = document.cookie.includes("noads=true");
+    if (adsDisabled) {
+        console.log('🚧 Ads disabled via cookie');
+        return;
+    }
+
+    let gameOverCount = parseInt(localStorage.getItem('colorMatchGameOverCount') || '0');
+    gameOverCount++;
+    localStorage.setItem('colorMatchGameOverCount', gameOverCount.toString());
+
+    if (gameOverCount % 3 === 0) {
+        loadSmartlinkAd();
+        console.log(`📊 Game Over #${gameOverCount} - Ads shown`);
+    } else {
+        console.log(`📊 Game Over #${gameOverCount} - Next ads at #${Math.ceil(gameOverCount / 3) * 3}`);
+    }
 }
 
 function animate() {

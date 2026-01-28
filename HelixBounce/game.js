@@ -517,6 +517,33 @@ function gameOver(win) {
         nextLevelBtn.classList.add('hidden');
         // Keep same level - user can retry at same level
     }
+
+    // Show interstitial ad on game over (respects dev mode)
+    showInterstitialAd();
+}
+
+// Smartlink Interstitial Ad & Popunder (Every 3rd Game Over)
+function showInterstitialAd() {
+    // Check if ads are disabled via cookie
+    const adsDisabled = document.cookie.includes("noads=true");
+    if (adsDisabled) {
+        console.log('🚧 Ads disabled via cookie - Interstitial ad skipped');
+        return;
+    }
+
+    // Get game over counter from localStorage
+    let gameOverCount = parseInt(localStorage.getItem('helixGameOverCount') || '0');
+    gameOverCount++;
+    localStorage.setItem('helixGameOverCount', gameOverCount.toString());
+
+    // Show ads only on every 3rd game over (3, 6, 9, 12...)
+    if (gameOverCount % 3 === 0) {
+        // Smartlink Interstitial
+        loadSmartlinkAd();
+        console.log(`📊 Game Over #${gameOverCount} - Ads shown`);
+    } else {
+        console.log(`📊 Game Over #${gameOverCount} - Next ads at #${Math.ceil(gameOverCount / 3) * 3}`);
+    }
 }
 
 // --- Inputs ---

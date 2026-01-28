@@ -11,6 +11,23 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
         crossorigin="anonymous"></script>
     <script type="module" src="./analytics.js"></script>
+    <script src="ads.js"></script>
+
+    <!-- Load Ads Using Professional Control System -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+            
+            // Load native banner ad
+            if (shouldLoadAds()) {
+                const nativeBannerScript = document.createElement('script');
+                nativeBannerScript.async = true;
+                nativeBannerScript.setAttribute('data-cfasync', 'false');
+                nativeBannerScript.src = 'https://pl28566919.effectivegatecpm.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js';
+                document.head.appendChild(nativeBannerScript);
+            }
+        });
+    </script>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
@@ -165,7 +182,12 @@
         </div>
     </section>
 
+    <!-- Adsterra Native Banner Ad -->
+    <section style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        <div id="container-63208462c4f9ec6018b4ea2e1903489d"></div>
+    </section>
 
+    <footer>
         <div class="footer-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
