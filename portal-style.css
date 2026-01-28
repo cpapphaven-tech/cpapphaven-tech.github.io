@@ -39,6 +39,11 @@ header {
     padding: 0 5%;
 }
 
+.page-content {
+    padding: calc(var(--header-height) + 40px) 5% 40px;
+}
+
+
 .logo {
     font-size: 1.5rem;
     font-weight: 900;
