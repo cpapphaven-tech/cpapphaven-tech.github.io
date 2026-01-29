@@ -29,6 +29,16 @@ const restartBtn = document.getElementById('restart-btn');
 
 // --- Initialization ---
 function init() {
+
+    // More Games button
+const homeBtn = document.getElementById("home-btn");
+if (homeBtn) {
+    homeBtn.addEventListener("click", () => {
+        window.location.href = "../index.html"; // your main games page
+    });
+}
+
+
     // 1. Scene
     scene = new THREE.Scene();
 

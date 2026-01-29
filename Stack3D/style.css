@@ -165,3 +165,25 @@ button:active {
         display: none;
     }
 }
+
+/* MORE GAMES BUTTON */
+#home-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 200;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    pointer-events: auto;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#home-btn:active {
+    transform: scale(0.95);
+}
+
