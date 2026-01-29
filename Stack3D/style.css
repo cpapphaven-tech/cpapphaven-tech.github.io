@@ -187,3 +187,8 @@ button:active {
     transform: scale(0.95);
 }
 
+#bonus-btn {
+    margin-top: 12px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+}
