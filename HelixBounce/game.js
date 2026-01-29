@@ -40,6 +40,10 @@ const resumeLevelSpan = document.getElementById('resume-level');
 const restartBtn = document.getElementById('restart-btn');
 const nextLevelBtn = document.getElementById('next-level-btn');
 
+const rewardBtn = document.getElementById("bonus-btn");
+let lastSafeFloorIndex = 0;
+
+
 // Input State
 let isDraggingTower = false;
 let previousPointerX = 0;
@@ -47,6 +51,12 @@ let previousPointerX = 0;
 // Materials
 let ballMaterial, platformMaterial, deathMaterial, lastPlatformMaterial;
 let physicsMaterial; // Cannon material
+
+// 🔧 DEVELOPMENT MODE
+const DEV_MODE = false; // true = no ads, false = live ads
+
+let lastSafeTowerRotation = 0;
+
 
 function init() {
     // Load saved level from localStorage
@@ -112,6 +122,42 @@ function init() {
     // Loop
     requestAnimationFrame(animate);
 }
+
+function openRewardAd() {
+    if (DEV_MODE) {
+        console.log("🛠 DEV MODE: Smartlink blocked");
+        revivePlayer(); // still revive so you can test
+        return;
+    }
+
+    window.open(
+        "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
+        "_blank"
+    );
+
+    revivePlayer();
+}
+
+function revivePlayer() {
+    isGameOver = false;
+    gameOverMenu.classList.add("hidden");
+
+    // Reposition ball at last safe platform
+    const targetY = -lastSafeFloorIndex * LEVEL_HEIGHT + 2.0;
+
+    
+    ballBody.velocity.set(0, 0, 0);
+    ballBody.angularVelocity.set(0, 0, 0);
+
+     // Restore safe rotation
+    towerGroup.rotation.y = lastSafeTowerRotation;
+
+    ballBody.position.set(0, targetY, CYLINDER_RADIUS);
+
+    console.log("🔄 Revived at floor:", lastSafeFloorIndex);
+}
+
+
 
 function startNewGame() {
     currentLevel = 1;
@@ -355,28 +401,25 @@ function spawnBall() {
 
     // Collision Listener
     ballBody.addEventListener("collide", (e) => {
-        if (isGameOver) return;
+    if (isGameOver) return;
 
-        // Check what we hit
-        // e.body is the other body
-        const type = e.body.gameType;
-        if (type === 'DEATH') {
-            gameOver(false);
-        } else if (type === 'LAST') {
-            gameOver(true);
-        } else {
-            // Normal bounces logic if needed
-            // Swift: if velocity.y < -1.0 -> velocity.y = 3.5 (handleNormalBounce)
-            // But Physics engine handles bounce. Swift code explicitly sets velocity sometimes?
-            // "if ballBody.velocity.y < -1.0 { ballBody.velocity.y = 3.5 }"
-            // This forces a minimum bounce height!
+    const type = e.body.gameType;
 
-            // Cannon:
-            if (ballBody.velocity.y < -1.0) {
-                //  ballBody.velocity.y = 3.5;
-            }
+    if (type === 'DEATH') {
+        gameOver(false);
+    } else if (type === 'LAST') {
+        gameOver(true);
+    } else if (type === 'PLATFORM') {
+        // Save last safe floor
+        const platformY = e.body.position.y;
+        const floorIndex = Math.round(-platformY / LEVEL_HEIGHT);
+        if (floorIndex < numFloors) {
+            lastSafeFloorIndex = floorIndex;
+            lastSafeTowerRotation = towerGroup.rotation.y; // 🔒 save safe angle
         }
-    });
+    }
+});
+
 }
 
 function updatePhysics() {
@@ -502,49 +545,24 @@ function gameOver(win) {
 
     const h2 = gameOverMenu.querySelector('h2');
     if (win) {
-        h2.innerText = "Level Complete!";
-        h2.style.color = "#00ff00";
-        // Show next level button, hide restart button
-        restartBtn.classList.add('hidden');
-        nextLevelBtn.classList.remove('hidden');
-        // Increment level for next game
-        currentLevel++;
-    } else {
-        h2.innerText = "Game Over";
-        h2.style.color = "#ff3333";
-        // Show restart button, hide next level button
-        restartBtn.classList.remove('hidden');
-        nextLevelBtn.classList.add('hidden');
-        // Keep same level - user can retry at same level
-    }
-
-    // Show interstitial ad on game over (respects dev mode)
-    showInterstitialAd();
+    h2.innerText = "Level Complete!";
+    h2.style.color = "#00ff00";
+    restartBtn.classList.add('hidden');
+    nextLevelBtn.classList.remove('hidden');
+    rewardBtn.classList.add("hidden"); // ❌ no reward on win
+    currentLevel++;
+} else {
+    h2.innerText = "Game Over";
+    h2.style.color = "#ff3333";
+    restartBtn.classList.remove('hidden');
+    nextLevelBtn.classList.add('hidden');
+    rewardBtn.classList.remove("hidden"); // ✅ only here
 }
 
-// Smartlink Interstitial Ad & Popunder (Every 3rd Game Over)
-function showInterstitialAd() {
-    // Check if ads are disabled via cookie
-    const adsDisabled = document.cookie.includes("noads=true");
-    if (adsDisabled) {
-        console.log('🚧 Ads disabled via cookie - Interstitial ad skipped');
-        return;
-    }
 
-    // Get game over counter from localStorage
-    let gameOverCount = parseInt(localStorage.getItem('helixGameOverCount') || '0');
-    gameOverCount++;
-    localStorage.setItem('helixGameOverCount', gameOverCount.toString());
-
-    // Show ads only on every 3rd game over (3, 6, 9, 12...)
-    if (gameOverCount % 3 === 0) {
-        // Smartlink Interstitial
-        loadSmartlinkAd();
-        console.log(`📊 Game Over #${gameOverCount} - Ads shown`);
-    } else {
-        console.log(`📊 Game Over #${gameOverCount} - Next ads at #${Math.ceil(gameOverCount / 3) * 3}`);
-    }
+   
 }
+
 
 // --- Inputs ---
 
@@ -608,4 +626,6 @@ document.addEventListener('DOMContentLoaded', () => {
     resumeBtn.addEventListener('click', resumeGame);
     restartBtn.addEventListener('click', startGame);
     nextLevelBtn.addEventListener('click', startGame);
+    rewardBtn.addEventListener("click", openRewardAd);
+
 });
