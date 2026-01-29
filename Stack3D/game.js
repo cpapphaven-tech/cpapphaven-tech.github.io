@@ -300,7 +300,7 @@ function showInterstitialAd() {
     localStorage.setItem('stackGameOverCount', gameOverCount.toString());
 
     if (gameOverCount % 3 === 0) {
-        loadSmartlinkAd();
+       // loadSmartlinkAd();
         console.log(`📊 Game Over #${gameOverCount} - Ads shown`);
     } else {
         console.log(`📊 Game Over #${gameOverCount} - Next ads at #${Math.ceil(gameOverCount / 3) * 3}`);

@@ -141,3 +141,27 @@ button:active {
         opacity: 0.5;
     }
 }
+
+#mobile-ad {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 50px;
+    z-index: 50;
+    pointer-events: auto;
+}
+
+/* Make room for the banner so it doesn't overlap */
+#game-wrapper,
+#game-canvas {
+    padding-bottom: 60px;
+}
+
+/* Optional: hide on large screens */
+@media (min-width: 900px) {
+    #mobile-ad {
+        display: none;
+    }
+}
