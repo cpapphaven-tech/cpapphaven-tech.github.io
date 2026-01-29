@@ -67,6 +67,14 @@ function init() {
         resumeBtn.classList.remove('hidden');
     }
 
+      // More Games button
+const homeBtn = document.getElementById("home-btn");
+if (homeBtn) {
+    homeBtn.addEventListener("click", () => {
+        window.location.href = "../index.html"; // your main games page
+    });
+}
+
     // 1. Setup Three.js
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x1a1a33); // UIColor(0.1, 0.1, 0.2)
