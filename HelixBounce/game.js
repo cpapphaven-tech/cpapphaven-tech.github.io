@@ -138,6 +138,12 @@ function openRewardAd() {
         return;
     }
 
+   if (window.trackGameEvent) {
+        trackGameEvent("helix_ad_reward_click", {
+            game: "helix_bounce"
+        });
+    }
+
     window.open(
         "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
         "_blank"
@@ -177,6 +183,12 @@ function resumeGame() {
 }
 
 function startGame() {
+
+    if (window.trackEvent) {
+    trackEvent("helix_game_start", { game: "helix_bounce" });
+}
+
+
     isGameOver = false;
     score = 0;
     scoreEl.innerText = "0";
@@ -210,6 +222,8 @@ function startGame() {
 
     buildTower();
     spawnBall();
+
+    
 }
 
 function buildTower() {

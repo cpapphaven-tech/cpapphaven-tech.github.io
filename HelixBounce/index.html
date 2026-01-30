@@ -19,6 +19,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             loadSocialBarAd();
+
+            if (window.trackAdImpression) {
+            trackAdImpression("helix_socialbar");
+        }
         });
     </script>
     <link rel="manifest" href="manifest.json">
@@ -116,6 +120,11 @@
     };
   </script>
   <script src="https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"></script>
+  <script>
+   if (window.trackAdImpression) {
+      trackAdImpression("helix_banner");
+  }
+    </script>
 </div>
 
 </body>
