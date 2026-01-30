@@ -24,10 +24,14 @@ body > h1 {
 #game-canvas {
     display: block;
     width: 100%;
-    height: 70vh;
+    height: 55vh;      /* slightly smaller */
     background: #000;
     touch-action: none;
+    margin-top: 6vh;  /* gap below score */
+    margin-bottom: 130px; /* BIG gap above ad */
 }
+
+
 
 #ui-container {
     position: relative;
@@ -153,11 +157,6 @@ button:active {
     pointer-events: auto;
 }
 
-/* Make room for the banner so it doesn't overlap */
-#game-wrapper,
-#game-canvas {
-    padding-bottom: 60px;
-}
 
 /* Optional: hide on large screens */
 @media (min-width: 900px) {
@@ -194,3 +193,8 @@ button:active {
     background: linear-gradient(135deg, #ff9800, #ff5722);
     box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
 }
+
+/* Increase gap between SCORE and SOCIAL BAR */
+
+
+
