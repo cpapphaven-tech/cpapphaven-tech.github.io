@@ -166,26 +166,28 @@ button:active {
     }
 }
 
-/* MORE GAMES BUTTON */
-#home-btn {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 200;
-    background: rgba(0, 0, 0, 0.65);
-    color: #fff;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    pointer-events: auto;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+#home-btn{
+  position: fixed;
+  bottom: 60px;      /* sits above 50px banner */
+  left: 10px;
+  z-index: 9999;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
 }
 
-#home-btn:active {
-    transform: scale(0.95);
+/* On tablets / desktop slightly higher */
+@media (min-width: 768px){
+  #home-btn{
+    bottom: 70px;
+  }
 }
+
 
 #bonus-btn {
     margin-top: 12px;
