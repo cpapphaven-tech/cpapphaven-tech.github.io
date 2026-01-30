@@ -20,33 +20,23 @@
  *   document.cookie = "noads=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC";
  */
 
+// 🔧 DEV MODE FLAG
+// 🔧 GLOBAL DEV MODE FLAG
+window.DEV_MODE =
+  location.hostname === "localhost" ||
+  location.hostname === "127.0.0.1" ||
+  new URLSearchParams(location.search).get("dev") === "true" ||
+  document.cookie.includes("noads=true");
+
+
 function shouldLoadAds() {
-    // Disable on localhost/127.0.0.1 (development environment)
-    if (
-        location.hostname === "localhost" ||
-        location.hostname === "127.0.0.1"
-    ) {
-        console.log('🚧 [ADS] Disabled on localhost');
+    if (window.DEV_MODE) {
+        console.log("🚧 [ADS] Dev mode ON — ads blocked");
         return false;
     }
-
-    // Disable if developer cookie exists
-    if (document.cookie.includes("noads=true")) {
-        console.log('🚧 [ADS] Disabled via cookie (noads=true)');
-        return false;
-    }
-
-    // Disable if URL flag exists (?dev=true)
-    const params = new URLSearchParams(location.search);
-    if (params.get("dev") === "true") {
-        console.log('🚧 [ADS] Disabled via URL parameter (?dev=true)');
-        return false;
-    }
-
-    // Ads are enabled
-    console.log('✅ [ADS] Ads enabled - loading ad scripts');
     return true;
 }
+
 
 /**
  * Load Social Bar Ad

@@ -92,8 +92,22 @@ if (homeBtn) {
 
     // Event Listeners
     window.addEventListener('pointerdown', handleInteraction, { passive: false });
-    restartBtn.addEventListener('click', restartGame);
+    restartBtn.addEventListener('click', () => {
+    restartGame();
+    setTimeout(startGame, 100); // auto start in 0.5s
+});
+
     window.addEventListener('resize', onWindowResize);
+
+
+
+    // 🔥 AUTO START after 1.2s
+    setTimeout(() => {
+        if (gameState === "MENU") {
+            startGame();
+        }
+    }, 100);
+
 }
 
 function revivePlayer() {
@@ -105,6 +119,8 @@ function revivePlayer() {
 
 
 function handleInteraction(e) {
+
+    
     if (e.target.tagName === 'BUTTON') return;
 
     // Prevent double-triggering on some mobile browsers
