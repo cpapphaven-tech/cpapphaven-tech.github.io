@@ -79,3 +79,11 @@ window.trackGameEvent = function (eventName, eventParams) {
 };
 
 console.log("Firebase Analytics Initialized");
+
+window.trackAdImpression = function(type) {
+    if (!window.trackGameEvent) return;
+    window.trackGameEvent(`ad_${type}_impression`, {
+        page: location.pathname
+    });
+};
+

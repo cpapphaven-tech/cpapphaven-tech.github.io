@@ -50,6 +50,9 @@ function loadSocialBarAd() {
 
     const socialBarScript = document.createElement('script');
     socialBarScript.src = 'https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js';
+    socialBarScript.onload = () => {
+        if (window.trackAdImpression) trackAdImpression("social");
+    };
     document.head.appendChild(socialBarScript);
     console.log('✅ [ADS] Social Bar ad loaded');
 }
@@ -76,6 +79,9 @@ function loadBannerAd() {
     // Load banner ad script
     const bannerScript = document.createElement('script');
     bannerScript.src = 'https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js';
+    bannerScript.onload = () => {
+        if (window.trackAdImpression) trackAdImpression("banner");
+    };
     document.body.appendChild(bannerScript);
     console.log('✅ [ADS] Banner ad loaded');
 }
@@ -90,6 +96,8 @@ function loadSmartlinkAd() {
         return;
     }
 
+    if (window.trackAdImpression) trackAdImpression("reward");
+    
     window.open(
         "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
         "_blank"
