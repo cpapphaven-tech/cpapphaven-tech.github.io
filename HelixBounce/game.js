@@ -637,3 +637,13 @@ document.addEventListener('DOMContentLoaded', () => {
     rewardBtn.addEventListener("click", openRewardAd);
 
 });
+
+// Auto-start for first time players (Level 1)
+window.addEventListener("load", () => {
+  const saved = localStorage.getItem("helixBounceLevel");
+
+  if (!saved || saved === "1") {
+    mainMenu.classList.add("hidden");
+    startNewGame();   // 🚀 auto start
+  }
+});
