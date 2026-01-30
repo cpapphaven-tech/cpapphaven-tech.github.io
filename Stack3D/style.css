@@ -148,7 +148,7 @@ button:active {
 
 #mobile-ad {
     position: fixed;
-    bottom: 20;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 320px;
