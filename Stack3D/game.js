@@ -94,7 +94,7 @@ if (homeBtn) {
     window.addEventListener('pointerdown', handleInteraction, { passive: false });
     restartBtn.addEventListener('click', () => {
     restartGame();
-    setTimeout(startGame, 100); // auto start in 0.5s
+    setTimeout(startGame, 300); // auto start in 0.5s
 });
 
     window.addEventListener('resize', onWindowResize);
@@ -106,7 +106,7 @@ if (homeBtn) {
         if (gameState === "MENU") {
             startGame();
         }
-    }, 100);
+    }, 300);
 
 }
 
