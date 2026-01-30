@@ -26,7 +26,7 @@ body > h1 {
     height: 55vh;      /* slightly smaller */
     background: #000;
     touch-action: none;
-    margin-top: 6vh;  /* gap below score */
+    margin-top: 3vh;  /* gap below score */
     margin-bottom: 130px; /* BIG gap above ad */
 }
 
@@ -45,7 +45,7 @@ body > h1 {
 }
 
 #score-container {
-    margin-top: 18vh;
+    margin-top: 10vh;
 }
 
 #score {
