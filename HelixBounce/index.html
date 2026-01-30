@@ -11,19 +11,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Cannon.js (Physics) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
-
+   
     <script src="../ads.js"></script>
 
     <!-- Load Ads Using Professional Control System -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            loadSocialBarAd();
+      <script>
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    loadSocialBarAd();
 
-            if (window.trackAdImpression) {
+      if (window.trackAdImpression) {
             trackAdImpression("helix_socialbar");
         }
-        });
-    </script>
+
+  }, 2000);
+});
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'">
+<noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+</noscript>
+
+
+<link rel="preload" href="game.js" as="script">
+
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
 </head>
@@ -98,7 +115,7 @@
         <p class="copyright">&copy; 2026 PlayMixGames.</p>
     </footer>
 
-    <script src="game.js"></script>
+    <script defer src="game.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
