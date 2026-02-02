@@ -20,13 +20,17 @@
     <!-- Load Ads Using Professional Control System -->
       <script>
 document.addEventListener("DOMContentLoaded", () => {
-  
+  setTimeout(() => {
     loadSocialBarAd();
 
       if (window.trackAdImpression) {
             trackAdImpression("helix_socialbar");
-        }
+      }
+      
+  },3000);
 
+
+      
 
 });
 </script>
