@@ -67,13 +67,13 @@ function init() {
         resumeBtn.classList.remove('hidden');
     }
 
-      // More Games button
-const homeBtn = document.getElementById("home-btn");
-if (homeBtn) {
-    homeBtn.addEventListener("click", () => {
-        window.location.href = "../index.html"; // your main games page
-    });
-}
+    // More Games button
+    const homeBtn = document.getElementById("home-btn");
+    if (homeBtn) {
+        homeBtn.addEventListener("click", () => {
+            window.location.href = "../index.html"; // your main games page
+        });
+    }
 
     // 1. Setup Three.js
     scene = new THREE.Scene();
@@ -138,7 +138,7 @@ function openRewardAd() {
         return;
     }
 
-   if (window.trackGameEvent) {
+    if (window.trackGameEvent) {
         trackGameEvent("helix_ad_reward_click", {
             game: "helix_bounce"
         });
@@ -159,11 +159,11 @@ function revivePlayer() {
     // Reposition ball at last safe platform
     const targetY = -lastSafeFloorIndex * LEVEL_HEIGHT + 2.0;
 
-    
+
     ballBody.velocity.set(0, 0, 0);
     ballBody.angularVelocity.set(0, 0, 0);
 
-     // Restore safe rotation
+    // Restore safe rotation
     towerGroup.rotation.y = lastSafeTowerRotation;
 
     ballBody.position.set(0, targetY, CYLINDER_RADIUS);
@@ -185,8 +185,8 @@ function resumeGame() {
 function startGame() {
 
     if (window.trackEvent) {
-    trackEvent("helix_game_start", { game: "helix_bounce" });
-}
+        trackEvent("helix_game_start", { game: "helix_bounce" });
+    }
 
 
     isGameOver = false;
@@ -223,7 +223,7 @@ function startGame() {
     buildTower();
     spawnBall();
 
-    
+
 }
 
 function buildTower() {
@@ -423,24 +423,24 @@ function spawnBall() {
 
     // Collision Listener
     ballBody.addEventListener("collide", (e) => {
-    if (isGameOver) return;
+        if (isGameOver) return;
 
-    const type = e.body.gameType;
+        const type = e.body.gameType;
 
-    if (type === 'DEATH') {
-        gameOver(false);
-    } else if (type === 'LAST') {
-        gameOver(true);
-    } else if (type === 'PLATFORM') {
-        // Save last safe floor
-        const platformY = e.body.position.y;
-        const floorIndex = Math.round(-platformY / LEVEL_HEIGHT);
-        if (floorIndex < numFloors) {
-            lastSafeFloorIndex = floorIndex;
-            lastSafeTowerRotation = towerGroup.rotation.y; // 🔒 save safe angle
+        if (type === 'DEATH') {
+            gameOver(false);
+        } else if (type === 'LAST') {
+            gameOver(true);
+        } else if (type === 'PLATFORM') {
+            // Save last safe floor
+            const platformY = e.body.position.y;
+            const floorIndex = Math.round(-platformY / LEVEL_HEIGHT);
+            if (floorIndex < numFloors) {
+                lastSafeFloorIndex = floorIndex;
+                lastSafeTowerRotation = towerGroup.rotation.y; // 🔒 save safe angle
+            }
         }
-    }
-});
+    });
 
 }
 
@@ -567,22 +567,22 @@ function gameOver(win) {
 
     const h2 = gameOverMenu.querySelector('h2');
     if (win) {
-    h2.innerText = "Level Complete!";
-    h2.style.color = "#00ff00";
-    restartBtn.classList.add('hidden');
-    nextLevelBtn.classList.remove('hidden');
-    rewardBtn.classList.add("hidden"); // ❌ no reward on win
-    currentLevel++;
-} else {
-    h2.innerText = "Game Over";
-    h2.style.color = "#ff3333";
-    restartBtn.classList.remove('hidden');
-    nextLevelBtn.classList.add('hidden');
-    rewardBtn.classList.remove("hidden"); // ✅ only here
-}
+        h2.innerText = "Level Complete!";
+        h2.style.color = "#00ff00";
+        restartBtn.classList.add('hidden');
+        nextLevelBtn.classList.remove('hidden');
+        rewardBtn.classList.add("hidden"); // ❌ no reward on win
+        currentLevel++;
+    } else {
+        h2.innerText = "Game Over";
+        h2.style.color = "#ff3333";
+        restartBtn.classList.remove('hidden');
+        nextLevelBtn.classList.add('hidden');
+        rewardBtn.classList.remove("hidden"); // ✅ only here
+    }
 
 
-   
+
 }
 
 
@@ -595,16 +595,27 @@ function setupInputs() {
 
     const canvas = document.getElementById('game-ui'); // Listen on container
 
+    let previousPointerY = 0;
+
     canvas.addEventListener('pointerdown', (e) => {
         isDraggingTower = true;
         previousPointerX = e.clientX;
+        previousPointerY = e.clientY;
     });
 
     window.addEventListener('pointermove', (e) => {
         if (isDraggingTower && !isGameOver) {
             const deltaX = e.clientX - previousPointerX;
-            towerGroup.rotation.y += deltaX * 0.01;
+            const deltaY = e.clientY - previousPointerY;
+
+            // Only rotate tower if horizontal movement is greater than vertical
+            // This prevents tower rotation during vertical swipes
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                towerGroup.rotation.y += deltaX * 0.01;
+            }
+
             previousPointerX = e.clientX;
+            previousPointerY = e.clientY;
         }
     });
 
@@ -615,16 +626,31 @@ function setupInputs() {
     // 2. Swipe Up (Jump)
     let touchStartY = 0;
     canvas.addEventListener('touchstart', (e) => {
+        if (!isGameOver && mainMenu.classList.contains('hidden')) {
+            // Prevent browser scroll/pull-to-refresh during gameplay
+            e.preventDefault();
+        }
         touchStartY = e.touches[0].clientY;
-    }, { passive: true });
+    }, { passive: false });
+
+    canvas.addEventListener('touchmove', (e) => {
+        if (!isGameOver && mainMenu.classList.contains('hidden')) {
+            // Prevent browser scroll during gameplay
+            e.preventDefault();
+        }
+    }, { passive: false });
 
     canvas.addEventListener('touchend', (e) => {
         const touchEndY = e.changedTouches[0].clientY;
-        if (touchStartY - touchEndY > 50) {
+        const swipeDistance = touchStartY - touchEndY;
+
+        // Only handle swipe up during active gameplay
+        if (swipeDistance > 50 && !isGameOver && mainMenu.classList.contains('hidden')) {
+            e.preventDefault();
             // Swipe Up
             handleSwipeUp();
         }
-    }, { passive: true });
+    }, { passive: false });
 }
 
 function handleSwipeUp() {
@@ -654,10 +680,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Auto-start for first time players (Level 1)
 window.addEventListener("load", () => {
-  const saved = localStorage.getItem("helixBounceLevel");
+    const saved = localStorage.getItem("helixBounceLevel");
 
-  if (!saved || saved === "1") {
-    mainMenu.classList.add("hidden");
-    startNewGame();   // 🚀 auto start
-  }
+    if (!saved || saved === "1") {
+        mainMenu.classList.add("hidden");
+        startNewGame();   // 🚀 auto start
+    }
 });
