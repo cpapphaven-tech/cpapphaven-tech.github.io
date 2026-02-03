@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </header>
 
     <main class="game-container">
-        <div id="home-btn">🎮 More Games</div>
+       
 
         <h1>Helix Bounce</h1>
 
@@ -88,6 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 <button id="next-level-btn" class="hidden">Next Level</button>
+
+                <button id="share-tg-btn" class="share-btn">
+📸 Share on our Telegram community
+</button>
+
             </div>
 
             <canvas id="game-canvas"></canvas>
@@ -130,6 +135,21 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     </script>
+
+<div id="bottom-bar">
+    <a href="https://t.me/+Kst2KhyNIXEwMmE1"
+       id="tg-btn"
+       target="_blank"
+       rel="noopener">
+        <span class="tg-icon">✈️</span>
+        <span class="tg-text">
+            Join our Telegram community<br>
+            Share your high score & make friends
+        </span>
+    </a>
+
+    <a href="../index.html" id="home-btn">🎮 More Games</a>
+</div>
 
     <!-- MOBILE BOTTOM BANNER -->
 <div id="mobile-ad">

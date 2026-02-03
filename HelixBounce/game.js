@@ -86,7 +86,8 @@ function init() {
 
     renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('game-canvas'),
-        antialias: true
+        antialias: true,
+        preserveDrawingBuffer: true
     });
     renderer.setSize(360, 600);
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -558,32 +559,31 @@ function gameOver(win) {
     if (isGameOver) return;
     isGameOver = true;
 
-    // Update score to current depth when game over
     const depth = -ballBody.position.y;
     score = Math.floor(depth / LEVEL_HEIGHT);
     scoreEl.innerText = score;
 
     gameOverMenu.classList.remove('hidden');
-
     const h2 = gameOverMenu.querySelector('h2');
+
     if (win) {
-        h2.innerText = "Level Complete!";
+        h2.innerText = `Level ${currentLevel} Complete!`;
         h2.style.color = "#00ff00";
+
         restartBtn.classList.add('hidden');
         nextLevelBtn.classList.remove('hidden');
-        rewardBtn.classList.add("hidden"); // ❌ no reward on win
+        rewardBtn.classList.add("hidden");
         currentLevel++;
     } else {
         h2.innerText = "Game Over";
         h2.style.color = "#ff3333";
+
         restartBtn.classList.remove('hidden');
         nextLevelBtn.classList.add('hidden');
-        rewardBtn.classList.remove("hidden"); // ✅ only here
+        rewardBtn.classList.remove("hidden");
     }
-
-
-
 }
+
 
 
 // --- Inputs ---
@@ -687,3 +687,74 @@ window.addEventListener("load", () => {
         startNewGame();   // 🚀 auto start
     }
 });
+
+// --- Telegram Share on Game Over ---
+
+function captureTower() {
+    renderer.render(scene, camera);
+    const gameCanvas = document.getElementById("game-canvas");
+
+    // Create a combined canvas
+    const mergedCanvas = document.createElement("canvas");
+    mergedCanvas.width = gameCanvas.width;
+    mergedCanvas.height = gameCanvas.height;
+    const ctx = mergedCanvas.getContext("2d");
+
+    // 1. Draw 3D Game
+    ctx.drawImage(gameCanvas, 0, 0);
+
+    // 2. Draw Score
+    // Restore styling matching #score in CSS
+    const scoreVal = score.toString();
+    // Using roughly 15-20% of screen width for font size to match '6rem' feel
+    const fontSize = Math.floor(mergedCanvas.width * 0.2);
+
+    ctx.font = `900 ${fontSize}px Inter, sans-serif`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+
+    // Shadow
+    ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+    ctx.shadowBlur = 15;
+    ctx.shadowOffsetY = 4;
+
+    ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+
+    // Position: ~14% down from top (matches CSS 14vh margin)
+    const yPos = mergedCanvas.height * 0.14;
+
+    ctx.fillText(scoreVal, mergedCanvas.width / 2, yPos);
+
+    return mergedCanvas.toDataURL("image/png");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const shareBtn = document.getElementById("share-tg-btn");
+
+    if (!shareBtn) return;
+
+    shareBtn.addEventListener("click", async () => {
+        const dataUrl = captureTower();
+        const blob = await (await fetch(dataUrl)).blob();
+        const file = new File([blob], "helix-score.png", { type: "image/png" });
+
+        try {
+            const shareText = `I reached Level ${currentLevel} in Helix Bounce!`;
+
+            if (navigator.share) {
+                await navigator.share({
+                    title: "Helix Bounce",
+                    text: shareText,
+                    files: [file]
+                });
+            } else {
+                const tgLink = `https://t.me/share/url?url=${encodeURIComponent(location.href)}&text=${encodeURIComponent(shareText)}`;
+                window.open(tgLink, "_blank");
+            }
+
+        } catch (e) {
+            console.log("Share cancelled", e);
+        }
+    });
+});
+
