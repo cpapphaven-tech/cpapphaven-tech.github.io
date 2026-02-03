@@ -26,6 +26,7 @@ let towerBody; // Not used as a single body, but logic grouping
 let isGameOver = false;
 let score = 0;
 let currentLevel = 1;
+let lastGameResult = "loss";
 let canStabilizeBall = true;
 let stabilizeCooldown = 400; // ms
 
@@ -72,6 +73,17 @@ function init() {
     if (homeBtn) {
         homeBtn.addEventListener("click", () => {
             window.location.href = "../index.html"; // your main games page
+        });
+    }
+
+    const tgBtn = document.getElementById("tg-btn");
+    if (tgBtn) {
+        tgBtn.addEventListener("click", () => {
+            if (window.trackGameEvent) {
+                trackGameEvent("helix_community_click", {
+                    game: "helix_bounce"
+                });
+            }
         });
     }
 
@@ -228,6 +240,7 @@ function startGame() {
 }
 
 function buildTower() {
+
     towerGroup = new THREE.Group();
     scene.add(towerGroup);
 
@@ -558,6 +571,7 @@ function animate() {
 function gameOver(win) {
     if (isGameOver) return;
     isGameOver = true;
+    lastGameResult = win ? 'win' : 'loss';
 
     const depth = -ballBody.position.y;
     score = Math.floor(depth / LEVEL_HEIGHT);
@@ -740,6 +754,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             const shareText = `I reached Level ${currentLevel} in Helix Bounce!`;
+
+            // Calculate actual level played based on result (since currentLevel++ happens on win)
+            const levelPlayed = lastGameResult === 'win' ? currentLevel - 1 : currentLevel;
+
+            if (window.trackGameEvent) {
+                trackGameEvent("helix_share_click", {
+                    game: "helix_bounce",
+                    status: lastGameResult, // 'win' or 'loss'
+                    level: levelPlayed,
+                    score: score
+                });
+            }
 
             if (navigator.share) {
                 await navigator.share({

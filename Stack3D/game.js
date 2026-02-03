@@ -55,6 +55,17 @@ function init() {
         });
     }
 
+    const tgBtn = document.getElementById("tg-btn");
+    if (tgBtn) {
+        tgBtn.addEventListener("click", () => {
+            if (window.trackGameEvent) {
+                window.trackGameEvent("stack_community_click", {
+                    game: "stack_3d"
+                });
+            }
+        });
+    }
+
 
     // 1. Scene
     scene = new THREE.Scene();
@@ -442,6 +453,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!shareBtn) return;
 
     shareBtn.addEventListener("click", async () => {
+        if (window.trackGameEvent) {
+            window.trackGameEvent("stack_share_click", {
+                game: "stack_3d",
+                score: score
+            });
+        }
+
         const dataUrl = captureTower();
         const blob = await (await fetch(dataUrl)).blob();
         const file = new File([blob], "stack-score.png", { type: "image/png" });
