@@ -68,9 +68,11 @@ if (homeBtn) {
 
     // 3. Renderer
     renderer = new THREE.WebGLRenderer({
-        canvas: document.getElementById('game-canvas'),
-        antialias: true
-    });
+    canvas: document.getElementById('game-canvas'),
+    antialias: true,
+    preserveDrawingBuffer: true   // 👈 REQUIRED
+});
+
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.shadowMap.enabled = true;
