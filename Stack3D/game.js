@@ -400,8 +400,40 @@ function onWindowResize() {
 
 function captureTower() {
     renderer.render(scene, camera);
-    const canvas = document.getElementById("game-canvas");
-    return canvas.toDataURL("image/png");
+    const gameCanvas = document.getElementById("game-canvas");
+
+    // Create a combined canvas
+    const mergedCanvas = document.createElement("canvas");
+    mergedCanvas.width = gameCanvas.width;
+    mergedCanvas.height = gameCanvas.height;
+    const ctx = mergedCanvas.getContext("2d");
+
+    // 1. Draw 3D Game
+    ctx.drawImage(gameCanvas, 0, 0);
+
+    // 2. Draw Score
+    // Restore styling matching #score in CSS
+    const scoreVal = score.toString();
+    // Using roughly 15-20% of screen width for font size to match '6rem' feel
+    const fontSize = Math.floor(mergedCanvas.width * 0.2);
+
+    ctx.font = `900 ${fontSize}px Inter, sans-serif`;
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+
+    // Shadow
+    ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+    ctx.shadowBlur = 15;
+    ctx.shadowOffsetY = 4;
+
+    ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+
+    // Position: ~14% down from top (matches CSS 14vh margin)
+    const yPos = mergedCanvas.height * 0.14;
+
+    ctx.fillText(scoreVal, mergedCanvas.width / 2, yPos);
+
+    return mergedCanvas.toDataURL("image/png");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
