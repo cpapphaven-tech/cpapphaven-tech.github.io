@@ -450,7 +450,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (navigator.share) {
                 await navigator.share({
                     title: "My Stack 3D Score",
-                    text: `I scored ${score || 0}! Can you beat me?`,
+                    text: `I scored ${score || 0}!`,
                     files: [file]
                 });
             } else {

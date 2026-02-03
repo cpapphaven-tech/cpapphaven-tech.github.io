@@ -175,7 +175,7 @@ button:active {
 /* On tablets / desktop slightly higher */
 @media (min-width: 768px){
   #home-btn{
-    bottom: 70px;
+    bottom: 55px;
   }
 }
 
