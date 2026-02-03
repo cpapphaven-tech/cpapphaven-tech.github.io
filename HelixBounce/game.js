@@ -753,16 +753,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const file = new File([blob], "helix-score.png", { type: "image/png" });
 
         try {
-            const shareText = `I reached Level ${levelPlayed} in Helix Bounce! Join here: https://t.me/+Kst2KhyNIXEwMmE1`;
+            const shareText = `I reached Level ${currentLevel} in Helix Bounce!`;
 
             // Calculate actual level played based on result (since currentLevel++ happens on win)
-            const levelPlaying = lastGameResult === 'win' ? currentLevel - 1 : currentLevel;
+            const levelPlayed = lastGameResult === 'win' ? currentLevel - 1 : currentLevel;
 
             if (window.trackGameEvent) {
                 trackGameEvent("helix_share_click", {
                     game: "helix_bounce",
                     status: lastGameResult, // 'win' or 'loss'
-                    level: levelPlaying,
+                    level: levelPlayed,
                     score: score
                 });
             }
@@ -774,8 +774,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     files: [file]
                 });
             } else {
-                // Fallback: Redirect to Telegram Group
-                window.open("https://t.me/+Kst2KhyNIXEwMmE1", "_blank");
+                const tgLink = `https://t.me/share/url?url=${encodeURIComponent(location.href)}&text=${encodeURIComponent(shareText)}`;
+                window.open(tgLink, "_blank");
             }
 
         } catch (e) {

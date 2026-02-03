@@ -468,12 +468,14 @@ document.addEventListener("DOMContentLoaded", () => {
             if (navigator.share) {
                 await navigator.share({
                     title: "My Stack 3D Score",
-                    text: `I scored ${score || 0}! Join here: https://t.me/+GVAnbseE1jFmYmVl`,
+                    text: `I scored ${score || 0}!`,
                     files: [file]
                 });
             } else {
-                // Fallback to Group Link
-                window.open("https://t.me/+GVAnbseE1jFmYmVl", "_blank");
+                const tgLink = `https://t.me/share/url?url=${encodeURIComponent(location.href)}&text=${encodeURIComponent(
+                    `I scored ${score || 0} in Stack 3D! Can you beat me?`
+                )}`;
+                window.open(tgLink, "_blank");
             }
         } catch (e) {
             console.log("Share cancelled", e);
