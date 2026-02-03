@@ -35,25 +35,25 @@ let bonusBtn;
 function init() {
 
     bonusBtn = document.getElementById("bonus-btn");
-if (bonusBtn) {
-    bonusBtn.addEventListener("click", () => {
-        window.open(
-          "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
-          "_blank"
-        );
-        revivePlayer();
-    });
-}
+    if (bonusBtn) {
+        bonusBtn.addEventListener("click", () => {
+            window.open(
+                "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
+                "_blank"
+            );
+            revivePlayer();
+        });
+    }
 
 
 
     // More Games button
-const homeBtn = document.getElementById("home-btn");
-if (homeBtn) {
-    homeBtn.addEventListener("click", () => {
-        window.location.href = "../index.html"; // your main games page
-    });
-}
+    const homeBtn = document.getElementById("home-btn");
+    if (homeBtn) {
+        homeBtn.addEventListener("click", () => {
+            window.location.href = "../index.html"; // your main games page
+        });
+    }
 
 
     // 1. Scene
@@ -68,10 +68,10 @@ if (homeBtn) {
 
     // 3. Renderer
     renderer = new THREE.WebGLRenderer({
-    canvas: document.getElementById('game-canvas'),
-    antialias: true,
-    preserveDrawingBuffer: true   // 👈 REQUIRED
-});
+        canvas: document.getElementById('game-canvas'),
+        antialias: true,
+        preserveDrawingBuffer: true   // 👈 REQUIRED
+    });
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
@@ -95,9 +95,9 @@ if (homeBtn) {
     // Event Listeners
     window.addEventListener('pointerdown', handleInteraction, { passive: false });
     restartBtn.addEventListener('click', () => {
-    restartGame();
-    setTimeout(startGame, 300); // auto start in 0.5s
-});
+        restartGame();
+        setTimeout(startGame, 300); // auto start in 0.5s
+    });
 
     window.addEventListener('resize', onWindowResize);
 
@@ -122,7 +122,7 @@ function revivePlayer() {
 
 function handleInteraction(e) {
 
-    
+
     if (e.target.tagName === 'BUTTON') return;
 
     // Prevent double-triggering on some mobile browsers
@@ -339,7 +339,7 @@ function gameOver() {
         });
     }
 
-    
+
 }
 
 // Smartlink Interstitial Ad & Popunder (Every 3rd Game Over)
@@ -399,6 +399,7 @@ function onWindowResize() {
 // --- Telegram Share on Game Over ---
 
 function captureTower() {
+    renderer.render(scene, camera);
     const canvas = document.getElementById("game-canvas");
     return canvas.toDataURL("image/png");
 }
@@ -417,12 +418,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (navigator.share) {
                 await navigator.share({
                     title: "My Stack 3D Score",
-                    text: `I scored ${window.score || 0}! Can you beat me?`,
+                    text: `I scored ${score || 0}! Can you beat me?`,
                     files: [file]
                 });
             } else {
                 const tgLink = `https://t.me/share/url?url=${encodeURIComponent(location.href)}&text=${encodeURIComponent(
-                    `I scored ${window.score || 0} in Stack 3D! Can you beat me?`
+                    `I scored ${score || 0} in Stack 3D! Can you beat me?`
                 )}`;
                 window.open(tgLink, "_blank");
             }
