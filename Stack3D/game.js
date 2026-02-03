@@ -394,4 +394,41 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
+// --- Telegram Share on Game Over ---
+
+function captureTower() {
+    const canvas = document.getElementById("game-canvas");
+    return canvas.toDataURL("image/png");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const shareBtn = document.getElementById("share-tg-btn");
+
+    if (!shareBtn) return;
+
+    shareBtn.addEventListener("click", async () => {
+        const dataUrl = captureTower();
+        const blob = await (await fetch(dataUrl)).blob();
+        const file = new File([blob], "stack-score.png", { type: "image/png" });
+
+        try {
+            if (navigator.share) {
+                await navigator.share({
+                    title: "My Stack 3D Score",
+                    text: `I scored ${window.score || 0}! Can you beat me?`,
+                    files: [file]
+                });
+            } else {
+                const tgLink = `https://t.me/share/url?url=${encodeURIComponent(location.href)}&text=${encodeURIComponent(
+                    `I scored ${window.score || 0} in Stack 3D! Can you beat me?`
+                )}`;
+                window.open(tgLink, "_blank");
+            }
+        } catch (e) {
+            console.log("Share cancelled", e);
+        }
+    });
+});
+
+
 init();

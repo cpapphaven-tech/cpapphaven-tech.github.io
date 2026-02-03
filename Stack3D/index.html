@@ -45,7 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 <body>
 
-    <div id="home-btn">🎮 More Games</div>
+    
+
+
+
+
 
     <div id="ui-container">
         <div id="score-container">
@@ -64,7 +68,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <button id="bonus-btn">🎁 Watch Ad & Get +1 Life</button>
             <button id="restart-btn">Try Again</button>
+            <button id="share-tg-btn">📸 Share with our Telegram community</button>
+
         </div>
+
+       <div id="bottom-bar">
+    <a href="https://t.me/+GVAnbseE1jFmYmVl"
+       id="tg-btn"
+       target="_blank"
+       rel="noopener">
+        <span class="tg-icon">✈️</span>
+        <span class="tg-text">
+            Join our Telegram<br>
+            Share your high score & make friends
+        </span>
+    </a>
+
+    <a href="../index.html" id="home-btn">🎮 More Games</a>
+</div>
+
 
        <!-- MOBILE BOTTOM ADSTERAA BANNER -->
 <div id="mobile-ad">
@@ -87,6 +109,7 @@ const s = document.createElement("script");
     s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
     document.getElementById("mobile-ad").appendChild(s);
           
+    
           
   },10000);
     
@@ -158,6 +181,9 @@ const s = document.createElement("script");
     </script>
 
     <script defer src="game.js"></script>
+
+    
+
 
 </body>
 
