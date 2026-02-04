@@ -28,6 +28,10 @@ const bestScoreEl = document.getElementById('best-score');
 const restartBtn = document.getElementById('restart-btn');
 
 let bonusBtn;
+let gameStartedFlag = false;
+let gameStartTime = null;
+let durationSent = false;
+
 
 function getOSKey() {
     const ua = navigator.userAgent;
@@ -50,7 +54,7 @@ function getOS() {
 }
 
 
-let gameStartedFlag = false;
+
 
 
 
@@ -199,6 +203,8 @@ function resetGame() {
 function startGame() {
 
     gameStartedFlag = true; // mark started
+     gameStartTime = Date.now();   // ⏱ start timer
+    durationSent = false;
 
     gameState = 'PLAYING';
     mainMenu.classList.add('hidden');
@@ -214,6 +220,9 @@ function startGame() {
 }
 
 window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close");
+
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getOSKey();
         window.trackGameEvent(`exit_before_game_${osKey}`, {
@@ -385,11 +394,17 @@ function gameOver() {
 
     if (window.trackGameEvent) {
         const osKey = getOSKey();
-        window.trackGameEvent(`game_over_${osKey}`, {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+
+        window.trackGameEvent(`game_over_${osKey}_${seconds}`, {
             game_name: "Stack 3D",
-            final_score: score // Changed to final_score as per instruction
+            final_score: score,
+            duration_seconds: seconds
         });
     }
+
+    
 
 
 }
@@ -522,6 +537,29 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Share cancelled", e);
         }
     });
+});
+
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`game_duration_${seconds}_${reason}_${getOS()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        sendDurationOnExit("background");
+    }
 });
 
 
