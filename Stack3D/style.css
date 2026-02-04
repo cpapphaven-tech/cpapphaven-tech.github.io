@@ -215,6 +215,7 @@ button:active {
   font-size: 12px;
   box-shadow: none;      /* no glow */
   animation: none;      /* no pulse */
+   text-decoration: none;   /* removes underline */
 }
 
 #tg-btn:active {
