@@ -58,6 +58,10 @@ const DEV_MODE = false; // true = no ads, false = live ads
 
 let lastSafeTowerRotation = 0;
 
+let gameStartTime = null;
+let durationSent = false;
+let gameStartedFlag = false;
+
 function getOSKey() {
     const ua = navigator.userAgent;
     if (/android/i.test(ua)) return "android";
@@ -79,7 +83,7 @@ function getOS() {
 }
 
 
-let gameStartedFlag = false;
+
 
 function init() {
     // Load saved level from localStorage
@@ -218,6 +222,9 @@ function resumeGame() {
 }
 
 window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close");
+
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getOSKey();
         window.trackGameEvent(`helix_exit_before_game_${osKey}`, {
@@ -231,10 +238,8 @@ function startGame() {
 
     gameStartedFlag = true; // mark started
 
-     window.trackGameEvent(`helix_game_start_${osKey}`, {
-            game_name: "helix_bounce",
-            os: getOS()
-        });
+     gameStartTime = Date.now();   // ⏱ start timer
+    durationSent = false;
 
    
 
@@ -273,6 +278,15 @@ function startGame() {
     buildTower();
     spawnBall();
 
+    if (window.trackGameEvent) {
+         const osKey = getOSKey();
+
+     window.trackGameEvent(`helix_game_start_${osKey}`, {
+            game_name: "helix_bounce",
+            os: getOS()
+        });
+    }
+   
 
 }
 
@@ -633,6 +647,13 @@ function gameOver(win) {
         nextLevelBtn.classList.add('hidden');
         rewardBtn.classList.remove("hidden");
     }
+
+    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    window.trackGameEvent(`game_over_${osKey}_${seconds}`, {
+            game_name: "helix_gameover",
+            level: currentLevel,
+            duration_seconds: seconds
+        });
 }
 
 
@@ -821,3 +842,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`helix_game_duration_${seconds}_${reason}_${getOS()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        sendDurationOnExit("background");
+    }
+});
