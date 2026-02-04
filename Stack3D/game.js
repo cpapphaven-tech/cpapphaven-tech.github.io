@@ -29,6 +29,30 @@ const restartBtn = document.getElementById('restart-btn');
 
 let bonusBtn;
 
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
+}
+
+
+let gameStartedFlag = false;
+
+
 
 
 // --- Initialization ---
@@ -173,16 +197,32 @@ function resetGame() {
 }
 
 function startGame() {
+
+    gameStartedFlag = true; // mark started
+
     gameState = 'PLAYING';
     mainMenu.classList.add('hidden');
     spawnBlock();
 
     if (window.trackGameEvent) {
-        window.trackGameEvent("game_start", {
-            game_name: "Stack 3D"
+        const osKey = getOSKey();
+        window.trackGameEvent(`game_start_${osKey}`, {
+            game_name: "Stack 3D",
+            os: getOS()
         });
     }
 }
+
+window.addEventListener("beforeunload", () => {
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`exit_before_game_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
+
+
 
 function spawnBlock() {
     const prev = stack[stack.length - 1];
