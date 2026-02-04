@@ -384,7 +384,8 @@ function gameOver() {
     gameOverMenu.classList.remove('hidden');
 
     if (window.trackGameEvent) {
-        window.trackGameEvent("game_over", {
+        const osKey = getOSKey();
+        window.trackGameEvent(`game_over_${osKey}`, {
             game_name: "Stack 3D",
             final_score: score // Changed to final_score as per instruction
         });
