@@ -223,10 +223,22 @@ button:hover {
     margin-top: 12px;
     padding: 10px;
     border-radius: 10px;
-    background: #229ED9;
+    background: #444;
     color: #fff;
     font-weight: 700;
     border: none;
+}
+
+.join-tg-btn {
+    margin-top: 8px;
+    background: linear-gradient(135deg, #229ED9, #0088cc);
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    font-weight: 800;
+    box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4);
+    border: none;
+    width: 90%;
 }
 
 

@@ -203,7 +203,7 @@ function resetGame() {
 function startGame() {
 
     gameStartedFlag = true; // mark started
-     gameStartTime = Date.now();   // ⏱ start timer
+    gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
     gameState = 'PLAYING';
@@ -404,7 +404,7 @@ function gameOver() {
         });
     }
 
-    
+
 
 
 }
@@ -537,6 +537,19 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Share cancelled", e);
         }
     });
+
+    const joinTgBtn = document.getElementById("join-tg-btn");
+    if (joinTgBtn) {
+        joinTgBtn.addEventListener("click", () => {
+            if (window.trackGameEvent) {
+                window.trackGameEvent("stack_gameover_join_tg_click", {
+                    game: "stack_3d",
+                    score: score
+                });
+            }
+            window.open("https://t.me/playmixgamesstack3dtower", "_blank");
+        });
+    }
 });
 
 

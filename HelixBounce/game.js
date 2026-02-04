@@ -238,10 +238,10 @@ function startGame() {
 
     gameStartedFlag = true; // mark started
 
-     gameStartTime = Date.now();   // ⏱ start timer
+    gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
-   
+
 
 
     isGameOver = false;
@@ -279,14 +279,14 @@ function startGame() {
     spawnBall();
 
     if (window.trackGameEvent) {
-         const osKey = getOSKey();
+        const osKey = getOSKey();
 
-     window.trackGameEvent(`helix_game_start_${osKey}`, {
+        window.trackGameEvent(`helix_game_start_${osKey}`, {
             game_name: "helix_bounce",
             os: getOS()
         });
     }
-   
+
 
 }
 
@@ -650,10 +650,10 @@ function gameOver(win) {
 
     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
     window.trackGameEvent(`game_over_${osKey}_${seconds}`, {
-            game_name: "helix_gameover",
-            level: currentLevel,
-            duration_seconds: seconds
-        });
+        game_name: "helix_gameover",
+        level: currentLevel,
+        duration_seconds: seconds
+    });
 }
 
 
@@ -747,6 +747,19 @@ document.addEventListener('DOMContentLoaded', () => {
     restartBtn.addEventListener('click', startGame);
     nextLevelBtn.addEventListener('click', startGame);
     rewardBtn.addEventListener("click", openRewardAd);
+
+    const joinTgBtn = document.getElementById("join-tg-btn");
+    if (joinTgBtn) {
+        joinTgBtn.addEventListener("click", () => {
+            if (window.trackGameEvent) {
+                trackGameEvent("helix_gameover_join_tg_click", {
+                    game: "helix_bounce",
+                    level: currentLevel
+                });
+            }
+            window.open("https://t.me/playmixgameshelixballgame", "_blank");
+        });
+    }
 
 });
 
