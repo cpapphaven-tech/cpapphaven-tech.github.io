@@ -58,6 +58,28 @@ const DEV_MODE = false; // true = no ads, false = live ads
 
 let lastSafeTowerRotation = 0;
 
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
+}
+
+
+let gameStartedFlag = false;
 
 function init() {
     // Load saved level from localStorage
@@ -195,11 +217,26 @@ function resumeGame() {
     startGame();
 }
 
+window.addEventListener("beforeunload", () => {
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`helix_exit_before_game_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
+
+
 function startGame() {
 
-    if (window.trackEvent) {
-        trackEvent("helix_game_start", { game: "helix_bounce" });
-    }
+    gameStartedFlag = true; // mark started
+
+     window.trackGameEvent(`helix_game_start_${osKey}`, {
+            game_name: "helix_bounce",
+            os: getOS()
+        });
+
+   
 
 
     isGameOver = false;
