@@ -211,7 +211,7 @@ button:active {
   color: #000;
   font-weight: 800;
   border-radius: 12px;
-  padding: 10px 14px;
+  padding: 3px 6px;
   font-size: 12px;
   box-shadow: none;      /* no glow */
   animation: none;      /* no pulse */
