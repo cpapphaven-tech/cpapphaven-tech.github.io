@@ -207,15 +207,20 @@ button:active {
 
 #home-btn,
 #tg-btn {
-    background: rgba(255,255,255,0.05);
-    border-radius: 8px;
-    padding: 6px 8px;
-    font-size: 10px;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    line-height: 1.2;
+  background: linear-gradient(135deg, #00ff88, #00ccff);
+  color: #000;
+  font-weight: 800;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 12px;
+  box-shadow: none;      /* no glow */
+  animation: none;      /* no pulse */
 }
+
+#tg-btn:active {
+  transform: scale(0.95);
+}
+
 
 .tg-text {
     font-size: 10px;
