@@ -181,23 +181,19 @@ body>h1 {
     }
 }
 
-#mobile-ad {
+#bottom-ad {
     position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 320px;
     height: 50px;
-    z-index: 50;
-    pointer-events: auto;
+    z-index: 9999;
 }
 
-
-/* Optional: hide on large screens */
-@media (min-width: 900px) {
-    #mobile-ad {
-        display: none;
-    }
+/* Show on all screens */
+#bottom-ad {
+    display: block;
 }
 
 /* On tablets / desktop slightly higher */

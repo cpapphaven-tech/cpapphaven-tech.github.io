@@ -3,7 +3,10 @@
 
 <head>
 
-    <script src="https://cdn.jsdelivr.net"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../ads.js"></script>
+    <script type="module" src="../analytics.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
         onerror="console.error('❌ Supabase failed to load')">
         </script>
@@ -23,10 +26,10 @@
     <link rel="apple-touch-icon" href="icons/icon-192x192.png">
 
     <!-- Three.js CDN -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-    <script type="module" src="../analytics.js"></script>
-    <script src="../ads.js"></script>
+
+
+
 
     <!-- Load Ads Using Professional Control System -->
     <script>
@@ -111,48 +114,9 @@
 
         </div>
 
-        <div id="bottom-bar">
-            <a href="https://t.me/playmixgamesstack3dtower" id="tg-btn" target="_blank" rel="noopener">
-                <span class="tg-icon">✈️</span>
-                <span class="tg-text">
-                    Join our Playmix Games Telegram Group<br>
-                    Share score, compete on leaderboard, make friends
-                </span>
-            </a>
-
-            <a href="../index.html" id="home-btn">🎮 More Games</a>
-        </div>
-
-
-        <!-- MOBILE BOTTOM ADSTERAA BANNER -->
-        <div id="mobile-ad">
-
-
-            <script>
-
-                setTimeout(() => {
 
 
 
-                    atOptions = {
-                        'key': 'de617c07128b585ef939154460e6858f',
-                        'format': 'iframe',
-                        'height': 50,
-                        'width': 320,
-                        'params': {}
-                    };
-                    const s = document.createElement("script");
-                    s.type = "text/javascript";
-                    s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                    document.getElementById("mobile-ad").appendChild(s);
-
-
-
-                }, 2000);
-
-            </script>
-
-        </div>
 
     </div>
 
@@ -218,7 +182,52 @@
     </script>
 
 
+    <div id="bottom-bar">
+        <a href="https://t.me/playmixgamesstack3dtower" id="tg-btn" target="_blank" rel="noopener">
+            <span class="tg-icon">✈️</span>
+            <span class="tg-text">
+                Join our Playmix Games Telegram Group<br>
+                Share score, compete on leaderboard, make friends
+            </span>
+        </a>
 
+        <a href="../index.html" id="home-btn">🎮 More Games</a>
+    </div>
+
+
+    <!-- BOTTOM BANNER AD -->
+    <div id="bottom-ad">
+        <script>
+            setTimeout(() => {
+                // Respect central ad control if available
+                if (typeof shouldLoadAds === 'function' && !shouldLoadAds()) {
+                    console.log("🚧 [ADS] Skipping banner ad - disabled by ads.js");
+                    return;
+                }
+
+                window.atOptions = {
+                    'key': 'de617c07128b585ef939154460e6858f',
+                    'format': 'iframe',
+                    'height': 50,
+                    'width': 320,
+                    'params': {}
+                };
+
+                const s = document.createElement("script");
+                s.type = "text/javascript";
+                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+
+                const adContainer = document.getElementById("bottom-ad");
+                if (adContainer) {
+                    adContainer.appendChild(s);
+                }
+
+                if (window.trackAdImpression) {
+                    trackAdImpression("stack3d_banner");
+                }
+            }, 2000);
+        </script>
+    </div>
 
 
 

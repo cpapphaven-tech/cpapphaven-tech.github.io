@@ -53,129 +53,24 @@ function shouldLoadAds() {
  * Tracks both script loading AND actual ad rendering
  */
 function loadSocialBarAd() {
-    if (!shouldLoadAds()) {
-        console.log('🚧 [ADS] Skipping Social Bar ad');
-        return;
-    }
+    if (!shouldLoadAds()) return;
 
+    // Inject ad script (same as <script src=...>)
+    const script = document.createElement("script");
+    script.src = "https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js";
+    document.head.appendChild(script);
 
-    let adRendered = false;
-    let scriptLoaded = false;
-    let renderCheckTimeout = null;
-    let observer = null;
+    // Fire 1 tracking event
+    if (window.trackGameEvent) {
+        const osKey = getOSKey();
 
-    // Function to track ad rendering success
-    function trackAdRendered() {
-        if (adRendered) return; // Prevent duplicate tracking
-        adRendered = true;
-
-        if (window.trackGameEvent) {
-            const osKey = getOSKey();
-
-            window.trackGameEvent(`social_bar_ad_rendered_${osKey}`, {
-                ad_type: "social_bar",
-                page: location.pathname,
-                render_time: Date.now() - startTime
-            });
-        }
-        console.log('✅ [ADS] Social Bar ad RENDERED successfully');
-
-        // Cleanup
-        if (observer) observer.disconnect();
-        if (renderCheckTimeout) clearTimeout(renderCheckTimeout);
-    }
-
-    // Function to track ad rendering failure
-    function trackAdRenderFailed(reason) {
-        if (adRendered) return; // Ad already rendered, ignore
-
-        if (window.trackGameEvent) {
-            const osKey = getOSKey();
-            
-            window.trackGameEvent(`social_bar_ad_render_failed_${osKey}`, {
-                ad_type: "social_bar",
-                page: location.pathname,
-                error_message: reason,
-                script_loaded: scriptLoaded
-            });
-        }
-        console.error('❌ [ADS] Social Bar ad RENDER FAILED:', reason);
-
-        // Cleanup
-        if (observer) observer.disconnect();
-        if (renderCheckTimeout) clearTimeout(renderCheckTimeout);
-    }
-
-    const startTime = Date.now();
-    const socialBarScript = document.createElement('script');
-    socialBarScript.src = 'https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js';
-
-    socialBarScript.onload = () => {
-        scriptLoaded = true;
-        if (window.trackAdImpression) trackAdImpression("social");
-
-        // Track script load (but not rendering yet)
-        if (window.trackGameEvent) {
-            window.trackGameEvent("social_bar_ad_script_loaded", {
-                ad_type: "social_bar",
-                page: location.pathname
-            });
-        }
-        console.log('📥 [ADS] Social Bar ad script loaded (waiting for render...)');
-
-        // Watch for ad elements being added to the DOM
-        observer = new MutationObserver((mutations) => {
-            // Look for common ad container patterns
-            const adSelectors = [
-                'iframe[src*="effectivegatecpm"]',
-                'iframe[src*="adserver"]',
-                'div[id*="ad"]',
-                'div[class*="ad"]',
-                'ins.adsbygoogle',
-                '[data-ad-client]'
-            ];
-
-            for (const selector of adSelectors) {
-                const adElement = document.querySelector(selector);
-                if (adElement && adElement.offsetHeight > 0 && adElement.offsetWidth > 0) {
-                    // Ad element found and visible!
-                    trackAdRendered();
-                    return;
-                }
-            }
+        window.trackGameEvent(`social_bar_requested_${osKey}`, {
+            ad_type: "social_bar",
+            page: location.pathname
         });
-
-        // Start observing DOM changes
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-
-        // Set timeout - if ad doesn't render in 10 seconds, consider it failed
-        renderCheckTimeout = setTimeout(() => {
-            if (!adRendered) {
-                trackAdRenderFailed("Ad did not render within 10 seconds");
-            }
-        }, 10000);
-    };
-
-    socialBarScript.onerror = (error) => {
-        scriptLoaded = false;
-
-        // Track script load failure
-        if (window.trackGameEvent) {
-            window.trackGameEvent("social_bar_ad_script_failed", {
-                ad_type: "social_bar",
-                page: location.pathname,
-                error_message: "Script failed to load"
-            });
-        }
-        console.error('❌ [ADS] Social Bar ad script FAILED to load:', error);
-    };
-
-    document.head.appendChild(socialBarScript);
-    console.log('📊 [ADS] Social Bar ad script injected');
+    }
 }
+
 
 /**
  * Load Banner Ad
@@ -183,30 +78,39 @@ function loadSocialBarAd() {
  */
 function loadBannerAd() {
     if (!shouldLoadAds()) {
-        console.log('🚧 [ADS] Skipping banner ad');
+        console.log("🚧 [ADS] Skipping banner ad");
         return;
     }
 
-
-
-    // Set atOptions configuration
+    // Banner config
     window.atOptions = {
-        'key': 'de617c07128b585ef939154460e6858f',
-        'format': 'iframe',
-        'height': 50,
-        'width': 320,
-        'params': {}
+        key: "de617c07128b585ef939154460e6858f",
+        format: "iframe",
+        height: 50,
+        width: 320,
+        params: {}
     };
 
-    // Load banner ad script
-    const bannerScript = document.createElement('script');
-    bannerScript.src = 'https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js';
-    bannerScript.onload = () => {
-        if (window.trackAdImpression) trackAdImpression("banner");
-    };
+    // Inject banner script
+    const bannerScript = document.createElement("script");
+    bannerScript.src =
+        "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+
     document.body.appendChild(bannerScript);
-    console.log('✅ [ADS] Banner ad loaded');
+
+    console.log("✅ [ADS] Banner ad requested");
+
+    // Track event (same style as social bar)
+    if (window.trackGameEvent) {
+        const osKey = getOSKey();
+
+        window.trackGameEvent(`banner_ad_requested_${osKey}`, {
+            ad_type: "banner",
+            page: location.pathname
+        });
+    }
 }
+
 
 /**
  * Load Smartlink Ad (every 3rd game over)

@@ -149,15 +149,32 @@ function init() {
 
 
     bonusBtn = document.getElementById("bonus-btn");
-    if (bonusBtn) {
-        bonusBtn.addEventListener("click", () => {
-            window.open(
-                "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
-                "_blank"
-            );
-            revivePlayer();
-        });
-    }
+
+if (bonusBtn) {
+    bonusBtn.addEventListener("click", () => {
+
+        // Track click event with OS key
+        if (window.trackGameEvent) {
+            const osKey = getOSKey();
+
+            window.trackGameEvent(`smartlink_ad_click_${osKey}`, {
+                ad_type: "reward",
+                game: "stack_3d",
+                page: location.pathname
+            });
+        }
+
+        // Open ad
+        window.open(
+            "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
+            "_blank"
+        );
+
+        // Revive player
+        revivePlayer();
+    });
+}
+
 
 
 
