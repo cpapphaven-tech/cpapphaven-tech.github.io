@@ -28,6 +28,15 @@ window.DEV_MODE =
     new URLSearchParams(location.search).get("dev") === "true" ||
     document.cookie.includes("noads=true");
 
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
 
 function shouldLoadAds() {
     if (window.DEV_MODE) {
@@ -60,7 +69,9 @@ function loadSocialBarAd() {
         adRendered = true;
 
         if (window.trackGameEvent) {
-            window.trackGameEvent("social_bar_ad_rendered", {
+            const osKey = getOSKey();
+
+            window.trackGameEvent(`social_bar_ad_rendered_${osKey}`, {
                 ad_type: "social_bar",
                 page: location.pathname,
                 render_time: Date.now() - startTime
@@ -78,7 +89,9 @@ function loadSocialBarAd() {
         if (adRendered) return; // Ad already rendered, ignore
 
         if (window.trackGameEvent) {
-            window.trackGameEvent("social_bar_ad_render_failed", {
+            const osKey = getOSKey();
+            
+            window.trackGameEvent(`social_bar_ad_render_failed_${osKey}`, {
                 ad_type: "social_bar",
                 page: location.pathname,
                 error_message: reason,
