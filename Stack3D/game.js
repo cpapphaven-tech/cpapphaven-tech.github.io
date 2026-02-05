@@ -3,6 +3,10 @@
  * Ported from Swift/SceneKit
  */
 
+
+
+let playerName = localStorage.getItem("playerName") || "";
+
 // --- Constants & Config ---
 const BLOCK_HEIGHT = 0.9;
 const INITIAL_BLOCK_SIZE = 5;
@@ -31,6 +35,57 @@ let bonusBtn;
 let gameStartedFlag = false;
 let gameStartTime = null;
 let durationSent = false;
+
+// let supabase = null;
+// Replace with your actual Supabase URL and Anon key
+const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
+const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
+const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+
+
+// Wait for Supabase to load safely
+function initSupabase() {
+    if (!supabaseClient) {
+        console.warn("⏳ Supabase script not loaded yet, retrying...");
+        setTimeout(initSupabase, 500);
+
+        return;
+    }
+
+    const { createClient } = window.supabase;
+    supabaseClient = createClient(
+        "https://bjpgovfzonlmjrruaspp.supabase.co",
+        "sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM"
+    );
+
+    ole.log("✅ Supabase ready");
+}
+
+
+
+
+
+
+async function getCountry() {
+    try {
+        // Direct fetch to ipapi.co which is CORS friendly
+        const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        return data.country_name || data.country || "Unknown";
+    } catch (error) {
+        console.warn("Primary country detection failed, trying fallback...", error);
+        try {
+            // Fallback to Cloudflare's trace which is extremely reliable
+            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+            const cfText = await cfResp.text();
+            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+            return locLine ? locLine.split("=")[1] : "Unknown";
+        } catch (e) {
+            return "Unknown";
+        }
+    }
+}
 
 
 function getOSKey() {
@@ -61,6 +116,30 @@ function getOS() {
 
 // --- Initialization ---
 function init() {
+
+
+
+    const nameDialog = document.getElementById("name-dialog");
+    const startBtn = document.getElementById("start-btn");
+    const nameInput = document.getElementById("player-name");
+
+    // Show dialog if no name saved
+    if (!playerName) {
+        nameDialog.classList.remove("hidden");
+    } else {
+        //nameDialog.classList.add("hidden");
+        //debugger;
+        //startGame(); // auto start for returning players
+
+    }
+
+    startBtn.addEventListener("click", () => {
+        playerName = nameInput.value || "Guest";
+        localStorage.setItem("playerName", playerName);
+        nameDialog.classList.add("hidden");
+        startGame();
+    });
+
 
     bonusBtn = document.getElementById("bonus-btn");
     if (bonusBtn) {
@@ -140,14 +219,15 @@ function init() {
 
     window.addEventListener('resize', onWindowResize);
 
+    initSupabase(); // 🔥 add this line
 
 
     // 🔥 AUTO START after 1.2s
-    setTimeout(() => {
-        if (gameState === "MENU") {
-            startGame();
-        }
-    }, 300);
+    // setTimeout(() => {
+    //     if (gameState === "MENU") {
+    //        startGame();
+    //     }
+    // }, 300);
 
 }
 
@@ -168,21 +248,43 @@ function handleInteraction(e) {
     if (e.pointerType === 'touch') e.preventDefault();
 
     if (gameState === 'MENU') {
-        startGame();
+        if (playerName) {
+            startGame();
+        }
     } else if (gameState === 'PLAYING') {
         placeBlock();
     }
 }
 
 function resetGame() {
-    // Clear old blocks
-
-
-
-    stack.forEach(b => scene.rootNode ? scene.remove(b) : scene.remove(b));
+    // Clear old blocks from stack
+    stack.forEach(mesh => {
+        scene.remove(mesh);
+        if (mesh.geometry) mesh.geometry.dispose();
+        if (mesh.material) mesh.material.dispose();
+    });
     stack = [];
-    if (currentBlock) scene.remove(currentBlock);
+
+    // Clear current moving block
+    if (currentBlock) {
+        scene.remove(currentBlock);
+        if (currentBlock.geometry) currentBlock.geometry.dispose();
+        if (currentBlock.material) currentBlock.material.dispose();
+    }
     currentBlock = null;
+
+    // Clear any loose physics rubble or remaining blocks in the scene
+    const toRemove = [];
+    scene.traverse(obj => {
+        if (obj.isPhysics || obj.isBlock) {
+            toRemove.push(obj);
+        }
+    });
+    toRemove.forEach(obj => {
+        scene.remove(obj);
+        if (obj.geometry) obj.geometry.dispose();
+        if (obj.material) obj.material.dispose();
+    });
 
     score = 0;
     scoreEl.innerText = score;
@@ -198,10 +300,12 @@ function resetGame() {
 
     updateBackground();
     resetCamera();
+
+    const sideLB = document.getElementById("side-leaderboard");
+    if (sideLB) sideLB.style.opacity = "0.25";
 }
 
 function startGame() {
-
     gameStartedFlag = true; // mark started
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
@@ -209,6 +313,18 @@ function startGame() {
     gameState = 'PLAYING';
     mainMenu.classList.add('hidden');
     spawnBlock();
+
+    // Show leaderboard briefly at start, then dim for gameplay
+    const sideLB = document.getElementById("side-leaderboard");
+    if (sideLB) {
+        sideLB.style.opacity = "0.8"; // Highlight briefly
+        loadLeaderboard();
+        setTimeout(() => {
+            if (gameState === 'PLAYING') {
+                sideLB.style.opacity = "0.25"; // Back to background
+            }
+        }, 3000);
+    }
 
     if (window.trackGameEvent) {
         const osKey = getOSKey();
@@ -358,6 +474,7 @@ function createBlock(w, d, y, index) {
     const mesh = new THREE.Mesh(geometry, material);
     mesh.castShadow = true;
     mesh.receiveShadow = true;
+    mesh.isBlock = true;
     return mesh;
 }
 
@@ -392,6 +509,9 @@ function gameOver() {
     bestScoreEl.innerText = bestScore; // Keep original best score display
     gameOverMenu.classList.remove('hidden');
 
+    const sideLB = document.getElementById("side-leaderboard");
+    if (sideLB) sideLB.style.opacity = "0.8";
+
     if (window.trackGameEvent) {
         const osKey = getOSKey();
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
@@ -404,10 +524,29 @@ function gameOver() {
         });
     }
 
-
-
-
+    submitScore(score);
 }
+
+async function submitScore(scoreVal) {
+    if (!supabaseClient) return;
+    const country = await getCountry();
+
+    try {
+        const { error } = await supabaseClient.from("stack3d_scores").insert([
+            {
+                username: playerName || "Guest",
+                score: scoreVal,
+                country: country
+            }
+        ]);
+        if (error) throw error;
+        console.log("🏆 Score submitted!");
+        loadLeaderboard();
+    } catch (err) {
+        console.error("Score submission failed:", err);
+    }
+}
+
 
 // Smartlink Interstitial Ad & Popunder (Every 3rd Game Over)
 
@@ -575,5 +714,83 @@ document.addEventListener("visibilitychange", () => {
     }
 });
 
+async function loadLeaderboard() {
+    const sideList = document.getElementById("side-lb-list");
+    const fullList = document.getElementById("full-lb-list");
 
-init();
+    // Background list (Always Top 5)
+    if (sideList) {
+        try {
+            if (!supabaseClient) initSupabase();
+            const { data, error } = await supabaseClient
+                .from("stack3d_scores")
+                .select("*")
+                .order("score", { ascending: false })
+                .limit(5);
+
+            if (error) throw error;
+
+            sideList.innerHTML = data && data.length > 0 ? data.map((p, i) => `
+                <div class="lb-row">
+                    <span class="lb-rank">${["🥇", "🥈", "🥉", "4", "5"][i] || (i + 1)}</span>
+                    <span class="lb-user">${p.username} <small>(${p.country || '??'})</small></span>
+                    <span class="lb-score">${p.score}</span>
+                </div>
+            `).join('') : "<li>-</li>";
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
+    // Full screen list (Top 20)
+    if (fullList && !document.getElementById("full-leaderboard").classList.contains("hidden")) {
+        fullList.innerHTML = "<li>Loading Global Rankings...</li>";
+        try {
+            const { data, error } = await supabaseClient
+                .from("stack3d_scores")
+                .select("*")
+                .order("score", { ascending: false })
+                .limit(20);
+
+            if (error) throw error;
+
+            fullList.innerHTML = data && data.length > 0 ? data.map((p, i) => `
+                <div class="lb-row">
+                    <span class="lb-rank">${i + 1}</span>
+                    <span class="lb-user">${p.username} <small>at ${p.country || 'Unknown'}</small></span>
+                    <span class="lb-score">${p.score}</span>
+                </div>
+            `).join('') : "<li>No global data yet!</li>";
+        } catch (e) {
+            fullList.innerHTML = "<li>Network Error</li>";
+        }
+    }
+}
+
+window.openFullLeaderboard = function () {
+    document.getElementById("full-leaderboard").classList.remove("hidden");
+    loadLeaderboard();
+};
+
+window.closeFullLeaderboard = function () {
+    document.getElementById("full-leaderboard").classList.add("hidden");
+};
+
+// Initial setup after DOM loaded
+document.addEventListener("DOMContentLoaded", () => {
+    // Show Full Leaderboard when clicking background panel
+    const viewFull = document.getElementById("view-full-lb");
+    if (viewFull) viewFull.addEventListener("click", openFullLeaderboard);
+
+    // Auto-load leaderboard for side panel
+    setTimeout(loadLeaderboard, 1000);
+
+    // Also load on side panel hover
+    const sideLB = document.getElementById("side-leaderboard");
+    if (sideLB) {
+        sideLB.addEventListener("mouseenter", loadLeaderboard);
+    }
+
+    init();
+});
+

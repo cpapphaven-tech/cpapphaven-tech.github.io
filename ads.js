@@ -58,6 +58,8 @@ function loadSocialBarAd() {
         return;
     }
 
+    return;
+
     let adRendered = false;
     let scriptLoaded = false;
     let renderCheckTimeout = null;
@@ -186,6 +188,9 @@ function loadBannerAd() {
         return;
     }
 
+    return;
+
+
     // Set atOptions configuration
     window.atOptions = {
         'key': 'de617c07128b585ef939154460e6858f',
@@ -214,6 +219,8 @@ function loadSmartlinkAd() {
         console.log('🚧 [ADS] Skipping Smartlink ad');
         return;
     }
+
+    return;
 
     if (window.trackAdImpression) trackAdImpression("reward");
 

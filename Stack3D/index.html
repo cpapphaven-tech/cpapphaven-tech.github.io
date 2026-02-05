@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+
+    <script src="https://cdn.jsdelivr.net"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+
+
+    <script defer src="game.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Stack 3D - PWA</title>
@@ -23,7 +32,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
-                loadSocialBarAd();
+                // loadSocialBarAd();
             }, 2000);
         });
     </script>
@@ -37,12 +46,40 @@
     </noscript>
 
 
-    <link rel="preload" href="game.js" as="script">
+
+
 
 </head>
 
 <body>
 
+    <!-- Dedicated Full Leaderboard Screen -->
+    <div id="full-leaderboard" class="overlay hidden">
+        <div class="lb-header">
+            <h2>🏆 Global Leaderboard</h2>
+            <p>Top 20 Players Worldwide</p>
+        </div>
+        <div class="lb-scroll-area">
+            <ul id="full-lb-list"></ul>
+        </div>
+        <button onclick="closeFullLeaderboard()" class="close-btn">Close</button>
+    </div>
+
+    <!-- Side Background Leaderboard (Compact Mini-Box) -->
+    <div id="side-leaderboard" class="visible">
+        <h3>Top 5</h3>
+        <ul id="side-lb-list"></ul>
+        <div id="view-full-lb">🏆 Global Top 20</div>
+    </div>
+
+    <!-- Name Input Dialog -->
+    <div id="name-dialog" class="overlay">
+        <div class="dialog-box">
+            <h2>Enter Your Name</h2>
+            <input id="player-name" placeholder="Your nickname" maxlength="12">
+            <button id="start-btn">Start Game</button>
+        </div>
+    </div>
 
 
 
@@ -54,7 +91,7 @@
             <h1 id="score">0</h1>
         </div>
 
-        <div id="main-menu" class="overlay">
+        <div id="main-menu" class="overlay hidden">
             <h2 id="title">STACK 3D</h2>
             <p id="prompt">👇 Tap to drop blocks</p>
         </div>
@@ -94,17 +131,17 @@
                 setTimeout(() => {
 
 
-                    atOptions = {
-                        'key': 'de617c07128b585ef939154460e6858f',
-                        'format': 'iframe',
-                        'height': 50,
-                        'width': 320,
-                        'params': {}
-                    };
-                    const s = document.createElement("script");
-                    s.type = "text/javascript";
-                    s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                    document.getElementById("mobile-ad").appendChild(s);
+                    // atOptions = {
+                    //     'key': 'de617c07128b585ef939154460e6858f',
+                    //     'format': 'iframe',
+                    //     'height': 50,
+                    //     'width': 320,
+                    //     'params': {}
+                    // };
+                    // const s = document.createElement("script");
+                    // s.type = "text/javascript";
+                    // s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                    // document.getElementById("mobile-ad").appendChild(s);
 
 
 
@@ -177,7 +214,7 @@
         }
     </script>
 
-    <script defer src="game.js"></script>
+
 
 
 
