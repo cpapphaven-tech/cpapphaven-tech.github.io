@@ -126,12 +126,19 @@ function init() {
     // Show dialog if no name saved
     if (!playerName) {
         nameDialog.classList.remove("hidden");
-    } else {
-        //nameDialog.classList.add("hidden");
-        //debugger;
-        //startGame(); // auto start for returning players
-
+        // Focus with delay for mobile keyboard trigger
+        setTimeout(() => {
+            nameInput.focus();
+            nameInput.click(); // Some browsers need a click simulation
+        }, 500);
     }
+
+    // Allow pressing "Enter" to start
+    nameInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            startBtn.click();
+        }
+    });
 
     startBtn.addEventListener("click", () => {
         playerName = nameInput.value || "Guest";
