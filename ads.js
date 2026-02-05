@@ -58,7 +58,6 @@ function loadSocialBarAd() {
         return;
     }
 
-    return;
 
     let adRendered = false;
     let scriptLoaded = false;
@@ -188,7 +187,6 @@ function loadBannerAd() {
         return;
     }
 
-    return;
 
 
     // Set atOptions configuration
@@ -220,7 +218,6 @@ function loadSmartlinkAd() {
         return;
     }
 
-    return;
 
     if (window.trackAdImpression) trackAdImpression("reward");
 
