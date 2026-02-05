@@ -114,33 +114,57 @@ body>h1 {
     animation: pulse 1.5s infinite;
 }
 
+#game-over {
+    background: linear-gradient(135deg, rgba(30, 15, 60, 0.95), rgba(15, 5, 30, 0.95));
+    width: 280px;
+    /* Slimmer */
+    padding: 20px;
+    /* Less padding */
+    border-radius: 20px;
+}
+
 #game-over h2 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    /* Smaller heading */
     color: #ff4d4d;
+    letter-spacing: 2px;
 }
 
 #game-over p {
-    font-size: 1.2rem;
-    margin: 5px 0;
+    font-size: 0.95rem;
+    /* Smaller text */
+    margin: 4px 0;
+    opacity: 0.9;
 }
 
-button {
-    margin-top: 20px;
+#game-over #final-score,
+#game-over #best-score {
+    font-weight: 900;
+    color: #4d79ff;
+}
+
+#game-over button {
+    margin-top: 8px;
+    /* Tighter spacing */
     width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    background: #4d79ff;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    font-size: 1.1rem;
-    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.1s, background 0.2s;
+    transition: all 0.2s ease;
 }
 
-button:active {
-    transform: scale(0.95);
-    background: #3366ff;
+#game-over button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#game-over button:active {
+    transform: scale(0.96);
 }
 
 @keyframes pulse {
@@ -185,9 +209,8 @@ button:active {
 
 
 #bonus-btn {
-    margin-top: 12px;
-    background: linear-gradient(135deg, #ff9800, #ff5722);
-    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+    border-color: rgba(255, 152, 0, 0.5);
+    /* Subtle hint for bonus */
 }
 
 /* Increase gap between SCORE and SOCIAL BAR */
@@ -244,38 +267,76 @@ button:active {
     font-size: 12px;
 }
 
-#share-tg-btn {
-    margin-top: 12px;
-    padding: 10px;
-    border-radius: 10px;
-    background: #444;
-    color: #fff;
-    font-weight: 700;
-    border: none;
+
+/* Name Dialog Specific Styling */
+#name-dialog {
+    background: linear-gradient(135deg, rgba(30, 15, 60, 0.98), rgba(15, 5, 30, 0.98));
+    width: 300px;
+    padding: 30px;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.join-tg-btn {
-    margin-top: 8px;
-    background: linear-gradient(135deg, #229ED9, #0088cc);
-    color: white;
-    padding: 14px;
-    border-radius: 12px;
-    font-weight: 800;
-    box-shadow: 0 4px 15px rgba(34, 158, 217, 0.4);
+#name-dialog .dialog-box {
+    background: transparent;
     border: none;
+    padding: 0;
     width: 100%;
 }
 
-.dialog-box {
-    background: #222;
-    padding: 20px;
-    border-radius: 12px;
+#name-dialog h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+    letter-spacing: 1px;
 }
 
 #name-dialog input {
-    padding: 10px;
-    font-size: 16px;
-    width: 200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#name-dialog input:focus {
+    border-color: #4d79ff;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(77, 121, 255, 0.2);
+}
+
+#name-dialog #start-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #4d79ff, #3366ff);
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 25px rgba(77, 121, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#name-dialog #start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(77, 121, 255, 0.5);
+}
+
+#name-dialog #start-btn:active {
+    transform: scale(0.96);
 }
 
 /* Global Background Leaderboard (Compact Mini-Box) */
