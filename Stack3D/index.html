@@ -200,17 +200,19 @@
         <script>
             (function () {
 
+                const container = document.getElementById("bottom-ad");
+
                 function loadBanner() {
                     if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
-                        console.log("🚧 [ADS] Banner skipped (disabled)");
+                        console.log("🚧 [ADS] Banner skipped");
                         return;
                     }
 
-                    const adContainer = document.getElementById("bottom-ad");
-                    if (!adContainer) return;
+                    if (!container) return;
 
-                    // Clear old banner
-                    adContainer.innerHTML = "";
+                    // Create inner ad wrapper (safe clear)
+                    container.innerHTML = '<div id="banner-slot"></div>';
+                    const slot = document.getElementById("banner-slot");
 
                     window.atOptions = {
                         key: "de617c07128b585ef939154460e6858f",
@@ -222,7 +224,7 @@
 
                     const s = document.createElement("script");
                     s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                    adContainer.appendChild(s);
+                    slot.appendChild(s);
 
                     if (window.trackAdImpression) {
                         trackAdImpression("stack3d_banner");
@@ -231,14 +233,12 @@
                     console.log("🔄 Banner refreshed");
                 }
 
-                // Initial load after 2s
+                // Initial load
                 setTimeout(loadBanner, 2000);
 
-                // Refresh every 45 seconds (only when tab is visible)
+                // Safe refresh every 45s (visible tab only)
                 setInterval(() => {
-                    if (!document.hidden) {
-                        loadBanner();
-                    }
+                    if (!document.hidden) loadBanner();
                 }, 45000);
 
             })();
