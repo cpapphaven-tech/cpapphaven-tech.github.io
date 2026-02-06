@@ -581,7 +581,7 @@ async function submitScore(scoreVal) {
             {
                 username: playerName || "Guest",
                 score: scoreVal,
-                country: country
+                country: country || "NA"
             }
         ]);
         if (error) throw error;

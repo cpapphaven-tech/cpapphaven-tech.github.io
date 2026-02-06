@@ -7,6 +7,7 @@
     <title>Helix Bounce - PlayMixGames</title>
     <link rel="stylesheet" href="../portal-style.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_additions.css">
     <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <!-- Cannon.js (Physics) -->
@@ -14,6 +15,9 @@
     <script type="module" src="../analytics.js"></script>
     <script src="../ads.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
 
@@ -28,10 +32,6 @@
                 }
 
             }, 2000);
-
-
-
-
         });
     </script>
 
@@ -51,6 +51,8 @@
 </head>
 
 <body>
+    <!-- HEADER REMOVED to match Stack 3D Clean Look -->
+    <!--
     <header>
         <a href="../index.html" class="logo">PlayMixGames</a>
         <nav>
@@ -60,6 +62,28 @@
             </ul>
         </nav>
     </header>
+    -->
+
+    <!-- Dedicated Full Leaderboard Screen -->
+    <div id="full-leaderboard" class="overlay hidden">
+        <div class="lb-close-x" onclick="closeFullLeaderboard()">✕</div>
+        <div class="lb-header">
+            <h2>🏆 Global Leaderboard</h2>
+            <p>Top 20 Players Worldwide</p>
+        </div>
+        <div class="lb-scroll-area">
+            <ul id="full-lb-list"></ul>
+        </div>
+        <button onclick="closeFullLeaderboard()" class="close-btn">Close</button>
+    </div>
+
+    <!-- Side Background Leaderboard (Compact Mini-Box) -->
+    <div id="side-leaderboard" class="visible">
+        <h3>Top Leaders</h3>
+        <ul id="side-lb-list"></ul>
+        <div id="view-full-lb">🏆 Global Top 20</div>
+    </div>
+
 
     <main class="game-container">
 
@@ -69,14 +93,35 @@
         <div id="game-ui">
             <div id="level">Level 1</div>
             <div id="score">0</div>
-            <div id="main-menu" class="overlay">
+
+            <div id="main-menu" class="overlay"> <!-- Show menu on load -->
                 <h2>HELIX BOUNCE</h2>
                 <p>Rotate the tower to fall through the gaps!</p>
                 <button id="resume-btn" class="hidden">Resume Level <span id="resume-level">1</span></button>
                 <button id="start-btn">Start New Game</button>
             </div>
+
             <div id="game-over" class="overlay hidden">
                 <h2>CRASHED!</h2>
+
+                <!-- Name Input for Leaderboard -->
+                <div id="gameover-input-area" style="margin: 15px 0; width: 90%;">
+                    <input id="player-name-gameover" placeholder="Enter Name for Leaderboard" maxlength="12" style="
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 8px;
+                        border: 1px solid rgba(255,255,255,0.3);
+                        background: rgba(0,0,0,0.3);
+                        color: white;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    ">
+                    <button id="submit-score-btn"
+                        style="background: linear-gradient(135deg, #4d79ff, #3366ff); border:none; width:100%; padding: 10px;">Submit
+                        & Save Level</button>
+                </div>
+
+
                 <button id="restart-btn">Try Again</button>
 
                 <!-- REWARDED SMARTLINK -->
@@ -138,49 +183,52 @@
         }
     </script>
 
+    <!-- STACK 3D CROSS PROMO AD (Top-Left) -->
+    <div id="stack-ad-banner" class="hidden">
+        <div class="close-ad-x" id="close-stack-ad">×</div>
+        <div class="ad-icon"></div>
+        <div class="ad-content" id="stack-ad-link">
+            <div class="ad-title">STACK 3D</div>
+            <div class="ad-desc">Build high & reach the sky!</div>
+        </div>
+        <button class="play-now-btn" id="stack-ad-btn">Play Now</button>
+    </div>
+
+    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner">
+        <!-- Script will be injected here by game.js after 2s -->
+    </div>
+
+
     <div id="bottom-bar">
         <a href="https://t.me/playmixgameshelixballgame" id="tg-btn" target="_blank" rel="noopener">
             <span class="tg-icon">✈️</span>
             <span class="tg-text">
                 Join our Playmix Games Telegram Group<br>
-                Share score, compete on leaderboard, make friends
+                Share score, compete on leaderboard
             </span>
         </a>
 
         <a href="../index.html" id="home-btn">🎮 More Games</a>
     </div>
 
-    <!-- MOBILE BOTTOM BANNER -->
-    <div id="mobile-ad">
-        <script>
-            setTimeout(() => {
 
-
-                atOptions = {
-                    'key': 'de617c07128b585ef939154460e6858f',
-                    'format': 'iframe',
-                    'height': 50,
-                    'width': 320,
-                    'params': {}
-                };
-                const s = document.createElement("script");
-                s.type = "text/javascript";
-                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                document.getElementById("mobile-ad").appendChild(s);
-
-
-                if (window.trackAdImpression) {
-                    trackAdImpression("helix_banner");
-                }
+  <!-- BOTTOM FIXED AD -->
+    <div id="bottom-ad">
+     <script>
+    atOptions = {
+      'key': 'de617c07128b585ef939154460e6858f',
+      'format': 'iframe',
+      'height': 50,
+      'width': 320,
+      'params': {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"></script>
+</div>
 
 
 
-            }, 2000);
-
-        </script>
-
-
-    </div>
 
 </body>
 

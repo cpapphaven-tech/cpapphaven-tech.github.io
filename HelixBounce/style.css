@@ -7,15 +7,15 @@
     min-height: 100vh;
 }
 
-.game-container > h1 {
+.game-container>h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
 #game-ui {
     position: relative;
-    width: 360px;
-    height: 600px;
+    width: 480px;
+    height: 800px;
     border: 5px solid rgba(255, 255, 255, 0.1);
     border-radius: 30px;
     overflow: hidden;
@@ -27,8 +27,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 360px;
-    height: 600px;
+    width: 480px;
+    height: 800px;
     z-index: 1;
     touch-action: none;
 }
@@ -140,22 +140,22 @@ button:hover {
 
 .bonus-btn {
     margin-top: 12px;
-    background: linear-gradient(135deg,#ffcc00,#ff8800);
+    background: linear-gradient(135deg, #ffcc00, #ff8800);
     border: none;
     padding: 12px;
     border-radius: 8px;
     font-weight: bold;
     color: #000;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(255,180,0,0.7);
+    box-shadow: 0 0 10px rgba(255, 180, 0, 0.7);
 }
 
 
 /* Small screens: move it higher */
 @media (max-height: 700px) {
-  #home-btn {
-    bottom: 90px;
-  }
+    #home-btn {
+        bottom: 90px;
+    }
 }
 
 
@@ -174,39 +174,47 @@ button:hover {
     margin-bottom: 60px;
 }
 
+/* Increase gap between SCORE and SOCIAL BAR */
 #bottom-bar {
     position: fixed;
-    bottom: 55px;      /* above ad */
-    left: 0;
-    right: 0;
-    padding: 0 12px;
+    bottom: 70px;
+    /* Moved up to clear bottom ad */
+    left: 12px;
+    right: auto;
+    /* Don't stretch */
     display: flex;
-    justify-content: space-between; /* push to edges */
-    align-items: center;
+    flex-direction: column;
+    /* Stack vertically */
+    align-items: flex-start;
+    /* Align to left */
+    gap: 4px;
+    /* Reduced space between buttons */
     z-index: 9999;
-    pointer-events: none; /* let game touches pass */
+    pointer-events: none;
 }
 
 #bottom-bar a {
-    pointer-events: auto; /* but buttons still clickable */
+    pointer-events: auto;
+    /* but buttons still clickable */
 }
 
 
 #home-btn,
 #tg-btn {
-  background: linear-gradient(135deg, #00ff88, #00ccff);
-  color: #000;
-  font-weight: 800;
-  border-radius: 12px;
-  padding: 3px 6px;
-  font-size: 12px;
-  box-shadow: none;      /* no glow */
-  animation: none;      /* no pulse */
-   text-decoration: none;   /* removes underline */
+    background: linear-gradient(135deg, #00ff88, #00ccff);
+    color: #000;
+    font-weight: 800;
+    border-radius: 12px;
+    padding: 6px 10px;
+    /* Slightly larger hit area */
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    display: inline-block;
 }
 
 #tg-btn:active {
-  transform: scale(0.95);
+    transform: scale(0.95);
 }
 
 .tg-text {
@@ -241,4 +249,406 @@ button:hover {
     width: 90%;
 }
 
+/* --- NEW STYLES BELOW --- */
 
+/* Stack 3D Cross Promo Banner (Top Left) */
+#stack-ad-banner {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 320px;
+    background: #1a1a2e;
+    /* Dark Blue/Black base */
+    color: white;
+    border-radius: 16px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    z-index: 10000;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#stack-ad-banner:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Icon box */
+#stack-ad-banner .ad-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: url('../stack3d.png') center/cover;
+    flex-shrink: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#stack-ad-banner .ad-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#stack-ad-banner .ad-title {
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    line-height: 1;
+}
+
+#stack-ad-banner .ad-desc {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.2;
+}
+
+#stack-ad-banner .play-now-btn {
+    background: white;
+    color: #1a1a2e;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    border: none;
+    white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    transition: transform 0.2s;
+}
+
+#stack-ad-banner:hover .play-now-btn {
+    transform: scale(1.05);
+}
+
+#stack-ad-banner .close-ad-x {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background: #ff3333;
+    border-radius: 50%;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 2px solid #fff;
+}
+
+#stack-ad-banner .close-ad-x:hover {
+    transform: scale(1.1);
+}
+
+/* Hide on Mobile/Tablet */
+@media (max-width: 1024px) {
+    #stack-ad-banner {
+        display: none !important;
+    }
+}
+
+
+/* Adsterra Banner - Right Side Bottom (Desktop Only) */
+#adsterra-banner {
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    right: 10px;
+    transform: none;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
+    }
+}
+
+
+/* Leaderboard specific styles */
+/* Global Background Leaderboard (Compact Mini-Box) */
+#side-leaderboard {
+    position: fixed;
+    left: 12px;
+    bottom: 170px;
+    /* Raised above bottom buttons */
+    width: 190px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 10px;
+    z-index: 5;
+    opacity: 1;
+    /* Always visible on desktop now */
+    background: rgba(20, 20, 40, 0.6);
+    pointer-events: auto;
+    transition: opacity 0.5s ease, background 0.5s ease;
+}
+
+#side-leaderboard h3 {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+#view-full-lb {
+    margin-top: 8px;
+    font-size: 0.65rem;
+    color: #4d79ff;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 800;
+    padding: 4px;
+    background: rgba(77, 121, 255, 0.1);
+    border-radius: 4px;
+    display: block;
+    transition: all 0.2s;
+}
+
+#view-full-lb:hover {
+    background: rgba(77, 121, 255, 0.3);
+    color: #fff;
+}
+
+/* Dedicated Full Leaderboard Popup */
+/* Dedicated Full Leaderboard Popup */
+#full-leaderboard {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10001;
+    width: 450px;
+    max-width: 95vw;
+    background: rgba(15, 15, 30, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.lb-header {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.lb-header h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #fff, #4d79ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lb-header p {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.lb-scroll-area {
+    max-height: 55vh;
+    overflow-y: auto;
+    padding: 0 15px 15px 15px;
+}
+
+.close-btn {
+    width: calc(100% - 40px);
+    margin: 10px 20px 20px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn:active {
+    transform: scale(0.97);
+}
+
+/* Floating X Close Button */
+.lb-close-x {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.lb-close-x:hover {
+    background: rgba(255, 77, 77, 0.2);
+    border-color: rgba(255, 77, 77, 0.4);
+    transform: rotate(90deg);
+}
+
+.lb-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 4px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.lb-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.lb-rank {
+    font-size: 1.3rem;
+    font-weight: 900;
+    min-width: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.lb-user {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 15px;
+    /* More breathing room */
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+
+    /* Truncate long names */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    /* Force constraint */
+}
+
+.lb-user small {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    /* Slightly brighter */
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+
+    /* Truncate country if needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lb-score {
+    font-weight: 900;
+    color: #4d79ff;
+    font-size: 1.3rem;
+    text-shadow: 0 0 15px rgba(77, 121, 255, 0.3);
+    min-width: 60px;
+    /* Fixed width for alignment */
+    text-align: right;
+}
+
+/* Specific side list micro-tweaks */
+#side-lb-list .lb-row {
+    padding: 4px 6px;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0;
+}
+
+#side-lb-list .lb-rank {
+    font-size: 0.75rem;
+    min-width: 25px;
+    /* Slightly wider */
+}
+
+#side-lb-list .lb-user {
+    font-size: 0.75rem;
+    /* Slightly bigger */
+    padding-left: 8px;
+    max-width: 100px;
+    /* Tighter constraint for side panel */
+}
+
+#side-lb-list .lb-user small {
+    display: inline;
+    font-size: 0.6rem;
+    opacity: 0.6;
+    margin-left: 4px;
+}
+
+#side-lb-list .lb-score {
+    font-size: 0.75rem;
+    color: #fff;
+    min-width: auto;
+    /* Allow shrink on side */
+}
+
+/* Mobile specific styling */
+@media (max-width: 600px) {
+    #side-leaderboard {
+        width: 140px;
+        left: 8px;
+        opacity: 0.4;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    #side-leaderboard:hover {
+        opacity: 0.95;
+    }
+}
+
+#bottom-ad {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 50px;
+    z-index: 9999;
+}

@@ -117,7 +117,7 @@ function init() {
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x1a1a33); // UIColor(0.1, 0.1, 0.2)
 
-    const aspect = 360 / 600; // Fixed aspect ratio for container mostly
+    const aspect = 480 / 800; // Fixed aspect ratio
     camera = new THREE.PerspectiveCamera(60, aspect, 0.1, 1000);
     camera.position.set(0, 5, 12);
     camera.rotation.x = -0.3;
@@ -127,9 +127,10 @@ function init() {
         antialias: true,
         preserveDrawingBuffer: true
     });
-    renderer.setSize(360, 600);
+    renderer.setSize(480, 800);
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.shadowMap.enabled = true;
+    console.log("✅ Renderer initialized:", renderer.domElement.width, "x", renderer.domElement.height);
 
     // Lights
     const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
@@ -511,6 +512,7 @@ function spawnBall() {
 
 function updatePhysics() {
     if (isGameOver) return;
+    if (!ballMesh || !ballBody) return; // Don't update if game hasn't started
 
     world.step(1 / 60);
 
@@ -871,8 +873,362 @@ function sendDurationOnExit(reason) {
 
 
 
-document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-        sendDurationOnExit("background");
+// ---------------------------------------------------------
+// 🚀 SUPABASE LEADERBOARD INTEGRATION (HelixBall Table)
+// ---------------------------------------------------------
+
+const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
+const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
+let supabaseClient = null;
+
+function initSupabase() {
+    if (window.supabase) {
+        const { createClient } = window.supabase;
+        supabaseClient = createClient(supabaseUrl, supabaseKey);
+        console.log("✅ Supabase ready");
+        fetchLeaderboard();
+        setupRealtimeSubscription();
+    } else {
+        console.warn("⏳ Supabase script not loaded yet, retrying...");
+        setTimeout(initSupabase, 500);
     }
+}
+
+// Fetch Top 20 (Ordered by Level DESC as requested)
+async function fetchLeaderboard() {
+    if (!supabaseClient) {
+        console.warn("⚠️ Supabase client not ready, skipping leaderboard fetch");
+        return;
+    }
+
+    console.log("📊 Fetching leaderboard...");
+
+    // "helixball" table, sort by "level" DESC
+    const { data, error } = await supabaseClient
+        .from('helixbounce_scores')
+        .select('username, level, country')
+        .order('level', { ascending: false })
+        .limit(20);
+
+    if (error) {
+        console.error("❌ Error fetching leaderboard:", error);
+    } else {
+        console.log("✅ Leaderboard data fetched:", data?.length || 0, "entries");
+        renderSideLeaderboard(data || []);
+        renderFullLeaderboard(data || []);
+    }
+}
+
+// Realtime Updates
+function setupRealtimeSubscription() {
+    if (!supabaseClient) return;
+    supabaseClient
+        .channel('helixbounce_scores-changes')
+        .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'helixbounce_scores' }, payload => {
+            console.log('New score submitted!', payload);
+            fetchLeaderboard(); // Refresh on new entry
+        })
+        .subscribe();
+}
+
+// Fetch Country (Similar to Stack 3D)
+async function getCountry() {
+    try {
+        // Direct fetch to ipapi.co which is CORS friendly
+        const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        return data.country_name || data.country || "Unknown";
+    } catch (error) {
+        console.warn("Primary country detection failed, trying fallback...", error);
+        try {
+            // Fallback to Cloudflare's trace which is extremely reliable
+            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+            const cfText = await cfResp.text();
+            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+            return locLine ? locLine.split("=")[1] : "Unknown";
+        } catch (e) {
+            return "Unknown";
+        }
+    }
+}
+
+function renderSideLeaderboard(data) {
+    const list = document.getElementById('side-lb-list');
+    if (!list) return;
+    list.innerHTML = "";
+
+    if (!data || data.length === 0) {
+        list.innerHTML = '<li style="text-align:center; opacity:0.5; padding:10px;">No scores yet</li>';
+        return;
+    }
+
+    const isDesktop = window.innerWidth >= 1024; // Simple width check matching CSS
+    const limitVal = isDesktop ? 10 : 5;
+
+    const displayCount = Math.min(data.length, limitVal); // Show Top 5 for side
+
+    for (let i = 0; i < displayCount; i++) {
+        const player = data[i];
+        const li = document.createElement("li");
+        li.className = "lb-row";
+
+        let rankDisplay = `${i + 1}`;
+        let rankClass = "lb-rank";
+
+        if (i === 0) { rankDisplay = "🥇"; }
+        else if (i === 1) { rankDisplay = "🥈"; }
+        else if (i === 2) { rankDisplay = "🥉"; }
+        else { rankClass += " lb-rank-num"; }
+
+        const countryText = player.country ? `(${player.country})` : '';
+        const countryDisplay = player.country ? `<small>${countryText.toUpperCase()}</small>` : '';
+
+        li.innerHTML = `
+            <span class="${rankClass}">${rankDisplay}</span>
+            <div class="lb-user">
+                ${escapeHtml(player.username)}
+                ${countryDisplay}
+            </div>
+            <span class="lb-score">${player.level}</span>
+        `;
+        list.appendChild(li);
+    }
+}
+
+function renderFullLeaderboard(data) {
+    const list = document.getElementById('full-lb-list');
+    if (!list) return;
+    list.innerHTML = "";
+
+    data.forEach((player, index) => {
+        const li = document.createElement("li");
+        li.className = "lb-row";
+
+        let rankContent = `${index + 1}`;
+        let rankClass = "lb-rank";
+
+        const countryText = player.country ? `AT ${player.country}` : '';
+        const countryDisplay = player.country ? `<small>${countryText.toUpperCase()}</small>` : '';
+
+        li.innerHTML = `
+            <span class="${rankClass}">${rankContent}</span>
+            <div class="lb-user">
+                ${escapeHtml(player.username)}
+                ${countryDisplay}
+            </div>
+            <span class="lb-score">${player.level}</span>
+        `;
+        list.appendChild(li);
+    });
+}
+
+// Clean HTML to prevent XSS
+function escapeHtml(text) {
+    if (!text) return "Unknown";
+    return text.replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+// ---------------------------------------------------------
+// 🎮 GAME OVER INPUT & SUBMISSION
+// ---------------------------------------------------------
+
+const submitBtn = document.getElementById('submit-score-btn');
+const nameInput = document.getElementById('player-name-gameover');
+
+if (submitBtn) {
+    submitBtn.addEventListener('click', async () => {
+        let name = nameInput.value.trim();
+        if (!name) {
+            name = "Guest"; // Default name
+        }
+
+        // Save name for next time (if not Guest, or maybe save Guest too?)
+        if (name !== "Guest") {
+            localStorage.setItem('helix_player_name', name);
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Submitting...";
+
+        if (!supabaseClient) {
+            alert("Leaderboard service not connected. Please try again later.");
+            submitBtn.disabled = false;
+            return;
+        }
+
+        // Fetch country before submitting
+        const countryName = await getCountry();
+
+        try {
+            const { error } = await supabaseClient.from("helixbounce_scores").insert([
+                {
+                    username: name || "Guest",
+                    level: currentLevel,
+                    country: countryName || "NA"
+                }
+            ]);
+            if (error) throw error;
+            console.log("🏆 Score submitted!");
+            fetchLeaderboard();
+            submitBtn.innerText = "Saved! ✅";
+        } catch (err) {
+            console.error("Score submission failed:", err);
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Submit & Save Level";
+        }
+
+
+        // Insert into helixball table
+        // const { error } = await supabaseClient
+        //     .from('helixbounce_scores')
+        //     .insert([{
+        //         username: name,
+        //         level: currentLevel,
+        //         country: countryName
+        //     }]);
+
+        // if (error) {
+        //     console.error("Error submitting score:", error);
+        //     alert("Failed to submit score. Try again.");
+        //     submitBtn.disabled = false;
+        //     submitBtn.innerText = "Submit & Save Level";
+        // } else {
+        //     // Success
+        //     submitBtn.innerText = "Saved! ✅";
+        //     setTimeout(() => {
+        //         fetchLeaderboard();
+        //     }, 1000);
+        // }
+    });
+}
+
+
+// ---------------------------------------------------------
+// 📢 STACK 3D CROSS PROMO
+// ---------------------------------------------------------
+
+const stackAd = document.getElementById("stack-ad-banner");
+const closeStackAd = document.getElementById("close-stack-ad");
+
+if (closeStackAd) {
+    closeStackAd.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent opening link
+        stackAd.style.display = "none";
+        sessionStorage.setItem("stack_ad_closed", "true");
+    });
+}
+
+function openStackGame() {
+    // Navigate to Stack 3D game
+    window.location.href = "../Stack3D/index.html";
+}
+
+if (stackAd) {
+    stackAd.addEventListener("click", openStackGame);
+}
+
+// Initialization Logic for new features
+window.addEventListener('load', () => {
+    console.log("🚀 Window loaded, initializing features...");
+
+    // Show Stack Ad Logic
+    if (!sessionStorage.getItem("stack_ad_closed") && document.getElementById("stack-ad-banner")) {
+        const banner = document.getElementById("stack-ad-banner");
+        banner.classList.remove("hidden");
+    }
+
+    // Auto-fill name if exists
+    const savedName = localStorage.getItem('helix_player_name');
+    if (savedName && nameInput) {
+        nameInput.value = savedName;
+    }
+
+    // Init Supabase
+    initSupabase();
+
+    // Load Adsterra
+    console.log("📢 Calling loadAdsterraBanner()...");
+    loadAdsterraBanner();
 });
+
+
+// ---------------------------------------------------------
+// 🖥 DESKTOP ADSTERRA BANNER (160x600)
+// ---------------------------------------------------------
+
+function loadAdsterraBanner() {
+const osKey = getOSKey();
+
+
+// Desktop only
+if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
+    console.log("Adsterra Banner: Skipped (mobile or small screen)");
+    return;
+}
+
+const container = document.getElementById("adsterra-banner");
+if (!container) {
+    console.error("Adsterra Banner: Container not found!");
+    return;
+}
+
+// Prevent double loading
+if (container.dataset.loaded === "true") return;
+container.dataset.loaded = "true";
+
+console.log("Loading Adsterra banner...");
+
+setTimeout(() => {
+
+    // Clear container
+    container.innerHTML = "";
+
+    // 1. Options script
+    const optionsScript = document.createElement("script");
+    optionsScript.type = "text/javascript";
+    optionsScript.text = `
+        atOptions = {
+            key: "34488dc997487ff336bf5de366c86553",
+            format: "iframe",
+            height: 600,
+            width: 160,
+            params: {}
+        };
+    `;
+
+    // 2. Invoke script
+    const invokeScript = document.createElement("script");
+    invokeScript.type = "text/javascript";
+    invokeScript.src =
+        "https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js";
+
+    // Append in correct order
+    container.appendChild(optionsScript);
+    container.appendChild(invokeScript);
+
+    console.log("Adsterra banner injected.");
+
+}, 2000);
+
+
+}
+
+
+
+// Full Leaderboard Toggle
+window.closeFullLeaderboard = function () {
+    document.getElementById('full-leaderboard').classList.add('hidden');
+};
+
+const viewFullLbBtn = document.getElementById('view-full-lb');
+if (viewFullLbBtn) {
+    viewFullLbBtn.addEventListener('click', () => {
+        document.getElementById('full-leaderboard').classList.remove('hidden');
+        fetchLeaderboard(); // refresh
+    });
+}
