@@ -659,3 +659,93 @@ body>h1 {
     border-color: #4d79ff;
     background: rgba(255, 255, 255, 0.15);
 }
+
+/* Helix Ball Game Ad Banner - Compact Version */
+#helix-ad-banner {
+    position: fixed;
+    bottom: 100px;
+    /* Moved up to clear navigation buttons */
+    right: 20px;
+    width: 320px;
+    /* Narrower width */
+    background: #3b5998;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#helix-ad-banner:hover {
+    transform: translateY(-2px);
+}
+
+#helix-ad-banner .ad-icon {
+    width: 50px;
+    /* Smaller icon */
+    height: 50px;
+    border-radius: 10px;
+    background: url('../assets/helixbounce.png') center/cover;
+    flex-shrink: 0;
+}
+
+#helix-ad-banner .ad-content {
+    flex-grow: 1;
+}
+
+#helix-ad-banner .ad-title {
+    font-weight: 800;
+    font-size: 0.9rem;
+    /* Smaller title */
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+#helix-ad-banner .ad-desc {
+    font-size: 0.75rem;
+    /* Smaller description */
+    opacity: 0.85;
+    line-height: 1.2;
+}
+
+#helix-ad-banner .play-now-btn {
+    background: white;
+    color: #3b5998;
+    padding: 6px 12px;
+    /* Tighter padding */
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 0.75rem;
+    /* Smaller font */
+    text-transform: uppercase;
+    border: none;
+    white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#helix-ad-banner .close-ad-x {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0.6;
+    cursor: pointer;
+    line-height: 1;
+}
+
+#helix-ad-banner .close-ad-x:hover {
+    opacity: 1;
+}
+
+/* Hide on Mobile/Tablet - User specifically requested Desktop Only */
+@media (max-width: 1024px) {
+    #helix-ad-banner {
+        display: none !important;
+    }
+}

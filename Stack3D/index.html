@@ -195,6 +195,17 @@
     </div>
 
 
+    <!-- HELIX GAME AD BANNER (Desktop Only) -->
+    <div id="helix-ad-banner" class="hidden">
+        <div class="close-ad-x" id="close-helix-ad">×</div>
+        <div class="ad-icon"></div>
+        <div class="ad-content" id="helix-ad-link">
+            <div class="ad-title">HELIX BALL GAME</div>
+            <div class="ad-desc">Rotate and guide the ball to win.</div>
+        </div>
+        <button class="play-now-btn" id="helix-ad-btn">Play Now</button>
+    </div>
+
     <!-- BOTTOM BANNER AD -->
     <div id="bottom-ad">
         <script>
@@ -236,7 +247,7 @@
                 // Initial load
                 setTimeout(loadBanner, 2000);
 
-                // Safe refresh every 45s (visible tab only)
+                //Safe refresh every 45s (visible tab only)
                 setInterval(() => {
                     if (!document.hidden) loadBanner();
                 }, 45000);

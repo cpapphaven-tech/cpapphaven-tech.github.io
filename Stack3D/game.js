@@ -150,30 +150,30 @@ function init() {
 
     bonusBtn = document.getElementById("bonus-btn");
 
-if (bonusBtn) {
-    bonusBtn.addEventListener("click", () => {
+    if (bonusBtn) {
+        bonusBtn.addEventListener("click", () => {
 
-        // Track click event with OS key
-        if (window.trackGameEvent) {
-            const osKey = getOSKey();
+            // Track click event with OS key
+            if (window.trackGameEvent) {
+                const osKey = getOSKey();
 
-            window.trackGameEvent(`smartlink_ad_click_${osKey}`, {
-                ad_type: "reward",
-                game: "stack_3d",
-                page: location.pathname
-            });
-        }
+                window.trackGameEvent(`smartlink_ad_click_${osKey}`, {
+                    ad_type: "reward",
+                    game: "stack_3d",
+                    page: location.pathname
+                });
+            }
 
-        // Open ad
-        window.open(
-            "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
-            "_blank"
-        );
+            // Open ad
+            window.open(
+                "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
+                "_blank"
+            );
 
-        // Revive player
-        revivePlayer();
-    });
-}
+            // Revive player
+            revivePlayer();
+        });
+    }
 
 
 
@@ -804,7 +804,67 @@ window.closeFullLeaderboard = function () {
 document.addEventListener("DOMContentLoaded", () => {
     // Show Full Leaderboard when clicking background panel
     const viewFull = document.getElementById("view-full-lb");
-    if (viewFull) viewFull.addEventListener("click", openFullLeaderboard);
+    if (viewFull) {
+        viewFull.addEventListener("click", () => {
+            // Track Leaderboard click
+            if (window.trackGameEvent) {
+                window.trackGameEvent("top_20_leaderboard_click", {
+                    game: "stack_3d",
+                    page: location.pathname
+                });
+            }
+            openFullLeaderboard();
+        });
+    }
+
+    // --- Helix Game Ad Logic (Desktop Only) ---
+    const helixAd = document.getElementById("helix-ad-banner");
+    const currentOS = typeof getOSKey === "function" ? getOSKey() : "unknown";
+    const isDesktop = ["windows", "mac", "linux"].includes(currentOS);
+
+    if (helixAd && isDesktop) {
+        // Show ad after 3 seconds
+        setTimeout(() => {
+            helixAd.classList.remove("hidden");
+            if (window.trackGameEvent) {
+                window.trackGameEvent("helix_ad_impression", {
+                    source: "stack_3d_banner"
+                });
+            }
+        }, 3000);
+
+        const handleHelixClick = () => {
+            if (window.trackGameEvent) {
+                window.trackGameEvent("helix_ad_click", {
+                    source: "stack_3d_banner",
+                    destination: "helix_bounce"
+                });
+            }
+            // Add a small delay for tracking to fire
+            setTimeout(() => {
+                window.location.href = "../HelixBounce/index.html";
+            }, 100);
+        };
+
+        document.getElementById("helix-ad-btn")?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            handleHelixClick();
+        });
+
+        document.getElementById("helix-ad-link")?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            handleHelixClick();
+        });
+
+        // Main banner click
+        helixAd.addEventListener("click", handleHelixClick);
+
+        document.getElementById("close-helix-ad")?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            helixAd.style.opacity = "0";
+            setTimeout(() => helixAd.classList.add("hidden"), 300);
+        });
+    }
 
     // Auto-load leaderboard for side panel
     setTimeout(loadLeaderboard, 1000);
@@ -817,4 +877,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     init();
 });
+
 
