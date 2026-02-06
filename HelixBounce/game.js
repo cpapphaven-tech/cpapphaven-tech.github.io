@@ -649,7 +649,7 @@ function gameOver(win) {
     }
 
     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
-    window.trackGameEvent(`game_over_${osKey}_${seconds}`, {
+    window.trackGameEvent(`game_over`, {
         game_name: "helix_gameover",
         level: currentLevel,
         duration_seconds: seconds
