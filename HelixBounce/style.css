@@ -12,26 +12,42 @@
     margin-bottom: 20px;
 }
 
+/* ---------- DEFAULT = DESKTOP ---------- */
 #game-ui {
-    position: relative;
-    width: 480px;
-    height: 800px;
-    border: 5px solid rgba(255, 255, 255, 0.1);
-    border-radius: 30px;
-    overflow: hidden;
-    background: #000;
+  position: relative;
+  width: 480px;
+  height: 800px;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+  background: #000;
 }
 
 #game-canvas {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 480px;
-    height: 800px;
-    z-index: 1;
-    touch-action: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 800px;
+  z-index: 1;
+  touch-action: none;
 }
+
+
+/* ---------- MOBILE (bigger game) ---------- */
+@media (max-width: 768px) {
+  #game-ui {
+    width: 360px;
+    height: 600px;
+  }
+
+  #game-canvas {
+    width: 360px;
+    height: 600px;
+  }
+}
+
 
 #level {
     position: absolute;
