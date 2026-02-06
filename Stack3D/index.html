@@ -198,34 +198,50 @@
     <!-- BOTTOM BANNER AD -->
     <div id="bottom-ad">
         <script>
-            setTimeout(() => {
-                // Respect central ad control if available
-                if (typeof shouldLoadAds === 'function' && !shouldLoadAds()) {
-                    console.log("🚧 [ADS] Skipping banner ad - disabled by ads.js");
-                    return;
-                }
+            (function () {
 
-                window.atOptions = {
-                    'key': 'de617c07128b585ef939154460e6858f',
-                    'format': 'iframe',
-                    'height': 50,
-                    'width': 320,
-                    'params': {}
-                };
+                function loadBanner() {
+                    if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
+                        console.log("🚧 [ADS] Banner skipped (disabled)");
+                        return;
+                    }
 
-                const s = document.createElement("script");
-                s.type = "text/javascript";
-                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                    const adContainer = document.getElementById("bottom-ad");
+                    if (!adContainer) return;
 
-                const adContainer = document.getElementById("bottom-ad");
-                if (adContainer) {
+                    // Clear old banner
+                    adContainer.innerHTML = "";
+
+                    window.atOptions = {
+                        key: "de617c07128b585ef939154460e6858f",
+                        format: "iframe",
+                        height: 50,
+                        width: 320,
+                        params: {}
+                    };
+
+                    const s = document.createElement("script");
+                    s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
                     adContainer.appendChild(s);
+
+                    if (window.trackAdImpression) {
+                        trackAdImpression("stack3d_banner");
+                    }
+
+                    console.log("🔄 Banner refreshed");
                 }
 
-                if (window.trackAdImpression) {
-                    trackAdImpression("stack3d_banner");
-                }
-            }, 2000);
+                // Initial load after 2s
+                setTimeout(loadBanner, 2000);
+
+                // Refresh every 45 seconds (only when tab is visible)
+                setInterval(() => {
+                    if (!document.hidden) {
+                        loadBanner();
+                    }
+                }, 45000);
+
+            })();
         </script>
     </div>
 
