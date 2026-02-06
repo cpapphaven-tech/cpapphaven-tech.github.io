@@ -35,7 +35,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
-                loadSocialBarAd();
+               loadSocialBarAd();
             }, 2000);
         });
     </script>
@@ -76,15 +76,7 @@
         <div id="view-full-lb">🏆 Global Top 20</div>
     </div>
 
-    <!-- Name Input Dialog -->
-    <div id="name-dialog" class="overlay">
-        <div class="dialog-box">
-            <h2>Enter Your Nick Name</h2>
-            <input id="player-name" placeholder="Your nickname" maxlength="12" autofocus inputmode="text"
-                enterkeyhint="go">
-            <button id="start-btn">Start Game</button>
-        </div>
-    </div>
+    <!-- Name Input Dialog REMOVED (Moved to Game Over) -->
 
 
 
@@ -106,21 +98,38 @@
             <p>Score: <span id="final-score">0</span></p>
             <p>Best: <span id="best-score">0</span></p>
 
+            <!-- Name Input for Leaderboard -->
+            <div id="gameover-input-area" style="margin: 15px 0;">
+                <input id="player-name-gameover" placeholder="Enter Name for Leaderboard" maxlength="12" style="
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 8px;
+                    border: 1px solid rgba(255,255,255,0.3);
+                    background: rgba(0,0,0,0.3);
+                    color: white;
+                    text-align: center;
+                    margin-bottom: 5px;
+                ">
+                <button id="submit-score-btn"
+                    style="background: linear-gradient(135deg, #4d79ff, #3366ff); border:none;">Submit & Save
+                    Score</button>
+            </div>
+
             <button id="bonus-btn">🎁 Watch Ad & Get +1 Life</button>
             <button id="restart-btn">Try Again</button>
-            <button id="share-tg-btn">📸
-                Share Your Tower Screenshot</button>
+            <button id="share-tg-btn">📸 Share Your Tower Screenshot</button>
             <button id="join-tg-btn" class="join-tg-btn">🚀 Join Telegram Leaderboard</button>
 
         </div>
 
-
-
-
-
     </div>
 
     <canvas id="game-canvas"></canvas>
+
+    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner">
+        <!-- Script will be injected here by game.js after 2s -->
+    </div>
 
     <section class="game-description">
         <h2 style="color: #fff; margin-bottom: 20px;">Master the Art of Stacking in 3D</h2>
@@ -245,11 +254,11 @@
                 }
 
                 // Initial load
-                setTimeout(loadBanner, 2000);
+               setTimeout(loadBanner, 2000);
 
                 //Safe refresh every 45s (visible tab only)
                 setInterval(() => {
-                    if (!document.hidden) loadBanner();
+                   if (!document.hidden) loadBanner();
                 }, 45000);
 
             })();

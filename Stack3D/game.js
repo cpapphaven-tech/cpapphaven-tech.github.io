@@ -119,33 +119,41 @@ function init() {
 
 
 
-    const nameDialog = document.getElementById("name-dialog");
-    const startBtn = document.getElementById("start-btn");
-    const nameInput = document.getElementById("player-name");
+    // const nameDialog = document.getElementById("name-dialog");
+    // const startBtn = document.getElementById("start-btn");
+    // const nameInput = document.getElementById("player-name");
 
-    // Show dialog if no name saved
-    if (!playerName) {
-        nameDialog.classList.remove("hidden");
-        // Focus with delay for mobile keyboard trigger
-        setTimeout(() => {
-            nameInput.focus();
-            nameInput.click(); // Some browsers need a click simulation
-        }, 500);
+
+    // Setup Game Over Score Submission
+    const submitBtn = document.getElementById("submit-score-btn");
+    const gameoverInput = document.getElementById("player-name-gameover");
+
+    if (submitBtn && gameoverInput) {
+        submitBtn.addEventListener("click", () => {
+            const name = gameoverInput.value.trim();
+            if (!name) {
+                alert("Please enter a name!");
+                return;
+            }
+            playerName = name;
+            localStorage.setItem("playerName", playerName);
+
+            // Submit and update UI
+            submitScore(score);
+            submitBtn.textContent = "✅ Saved!";
+            submitBtn.disabled = true;
+            gameoverInput.disabled = true;
+        });
     }
 
-    // Allow pressing "Enter" to start
-    nameInput.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") {
-            startBtn.click();
+    // Auto-Start Game Logic
+    setTimeout(() => {
+        if (gameState === "MENU") {
+            startGame();
         }
-    });
+    }, 800);
 
-    startBtn.addEventListener("click", () => {
-        playerName = nameInput.value || "Guest";
-        localStorage.setItem("playerName", playerName);
-        nameDialog.classList.add("hidden");
-        startGame();
-    });
+    loadAdsterraBanner();
 
 
     bonusBtn = document.getElementById("bonus-btn");
@@ -548,7 +556,20 @@ function gameOver() {
         });
     }
 
-    submitScore(score);
+    // Prepare Score Submission UI
+    const gameoverInput = document.getElementById("player-name-gameover");
+    const submitBtn = document.getElementById("submit-score-btn");
+
+    if (gameoverInput) {
+        gameoverInput.value = playerName || "";
+        gameoverInput.disabled = false;
+    }
+    if (submitBtn) {
+        submitBtn.textContent = "Submit & Save Score";
+        submitBtn.disabled = false;
+    }
+
+    // Note: detailed submitScore is now manual via button
 }
 
 async function submitScore(scoreVal) {
@@ -624,6 +645,54 @@ function onWindowResize() {
     camera.bottom = -size;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function loadAdsterraBanner() {
+    // Desktop only check (using User Agent and Screen Width for safety)
+    const osKey = getOSKey();
+    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
+        return;
+    }
+
+    const container = document.getElementById("adsterra-banner");
+    if (!container) return;
+
+    setTimeout(() => {
+        console.log("Loading Adsterra Banner...");
+
+        // Create an iframe to safely isolate the ad execution
+        const iframe = document.createElement('iframe');
+        iframe.style.width = "160px";
+        iframe.style.height = "600px";
+        iframe.style.border = "none";
+        iframe.style.overflow = "hidden";
+        iframe.scrolling = "no";
+
+        container.appendChild(iframe);
+
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write(`
+            <html>
+            <body style="margin:0;padding:0;background:transparent;">
+                <script>
+                    atOptions = {
+                        'key' : '34488dc997487ff336bf5de366c86553',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
+            </body>
+            </html>
+        `);
+        doc.close();
+
+
+
+    }, 2000);
 }
 
 // --- Telegram Share on Game Over ---
@@ -742,15 +811,19 @@ async function loadLeaderboard() {
     const sideList = document.getElementById("side-lb-list");
     const fullList = document.getElementById("full-lb-list");
 
-    // Background list (Always Top 5)
+    // Background list (Top 5 Mobile, Top 10 Desktop)
     if (sideList) {
         try {
             if (!supabaseClient) initSupabase();
+
+            const isDesktop = window.innerWidth >= 1024; // Simple width check matching CSS
+            const limitVal = isDesktop ? 10 : 5;
+
             const { data, error } = await supabaseClient
                 .from("stack3d_scores")
                 .select("*")
                 .order("score", { ascending: false })
-                .limit(5);
+                .limit(limitVal);
 
             if (error) throw error;
 

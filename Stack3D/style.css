@@ -210,25 +210,28 @@ body>h1 {
 }
 
 /* Increase gap between SCORE and SOCIAL BAR */
+/* Increase gap between SCORE and SOCIAL BAR */
+/* Increase gap between SCORE and SOCIAL BAR */
 #bottom-bar {
     position: fixed;
-    bottom: 55px;
-    /* above ad */
-    left: 0;
-    right: 0;
-    padding: 0 12px;
+    bottom: 70px;
+    /* Moved up to clear bottom ad */
+    left: 12px;
+    right: auto;
+    /* Don't stretch */
     display: flex;
-    justify-content: space-between;
-    /* push to edges */
-    align-items: center;
+    flex-direction: column;
+    /* Stack vertically */
+    align-items: flex-start;
+    /* Align to left */
+    gap: 4px;
+    /* Reduced space between buttons */
     z-index: 9999;
     pointer-events: none;
-    /* let game touches pass */
 }
 
 #bottom-bar a {
     pointer-events: auto;
-    /* but buttons still clickable */
 }
 
 
@@ -238,108 +241,26 @@ body>h1 {
     color: #000;
     font-weight: 800;
     border-radius: 12px;
-    padding: 3px 6px;
+    padding: 6px 10px;
+    /* Slightly larger hit area */
     font-size: 12px;
-    box-shadow: none;
-    /* no glow */
-    animation: none;
-    /* no pulse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     text-decoration: none;
-    /* removes underline */
+    display: inline-block;
 }
 
 #tg-btn:active {
     transform: scale(0.95);
 }
 
-
-.tg-text {
-    font-size: 10px;
-    line-height: 1.1;
-    font-weight: 600;
-}
-
-.tg-icon {
-    font-size: 12px;
-}
-
-
-/* Name Dialog Specific Styling */
-#name-dialog {
-    background: linear-gradient(135deg, rgba(30, 15, 60, 0.98), rgba(15, 5, 30, 0.98));
-    width: 300px;
-    padding: 30px;
-    border-radius: 28px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#name-dialog .dialog-box {
-    background: transparent;
-    border: none;
-    padding: 0;
-    width: 100%;
-}
-
-#name-dialog h2 {
-    font-size: 1.4rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: #fff;
-    letter-spacing: 1px;
-}
-
-#name-dialog input {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    padding: 14px;
-    font-size: 1rem;
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-#name-dialog input:focus {
-    border-color: #4d79ff;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(77, 121, 255, 0.2);
-}
-
-#name-dialog #start-btn {
-    width: 100%;
-    padding: 14px;
-    font-size: 1.1rem;
-    font-weight: 900;
-    background: linear-gradient(135deg, #4d79ff, #3366ff);
-    color: white;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    box-shadow: 0 8px 25px rgba(77, 121, 255, 0.4);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-#name-dialog #start-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(77, 121, 255, 0.5);
-}
-
-#name-dialog #start-btn:active {
-    transform: scale(0.96);
-}
+/* ... content skipped ... */
 
 /* Global Background Leaderboard (Compact Mini-Box) */
 #side-leaderboard {
     position: fixed;
     left: 12px;
-    bottom: 130px;
+    bottom: 170px;
+    /* Raised higher to avoid overlap with buttons */
     /* Positioned above bottom-bar/telegram button */
     width: 190px;
     background: rgba(0, 0, 0, 0.2);
@@ -355,6 +276,14 @@ body>h1 {
 #side-leaderboard:hover {
     opacity: 1;
     background: rgba(20, 20, 40, 0.7);
+}
+
+/* Always visible on Desktop */
+@media (min-width: 1024px) {
+    #side-leaderboard {
+        opacity: 1;
+        background: rgba(20, 20, 40, 0.6);
+    }
 }
 
 #side-leaderboard h3 {
@@ -663,11 +592,15 @@ body>h1 {
 /* Helix Ball Game Ad Banner - Compact Version */
 #helix-ad-banner {
     position: fixed;
-    bottom: 100px;
-    /* Moved up to clear navigation buttons */
-    right: 20px;
+    top: 20px;
+    /* Moved to Top */
+    left: 20px;
+    /* Moved to Left */
+    bottom: auto;
+    /* Clear bottom */
+    right: auto;
+    /* Clear right */
     width: 320px;
-    /* Narrower width */
     background: #3b5998;
     color: white;
     border-radius: 12px;
@@ -747,5 +680,25 @@ body>h1 {
 @media (max-width: 1024px) {
     #helix-ad-banner {
         display: none !important;
+    }
+}
+
+/* Adsterra Banner - Right Side Center (Desktop Only) */
+/* Adsterra Banner - Right Side Bottom (Desktop Only) */
+#adsterra-banner {
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    right: 10px;
+    transform: none;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
     }
 }
