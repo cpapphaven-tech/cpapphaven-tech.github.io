@@ -28,6 +28,12 @@ window.DEV_MODE =
     new URLSearchParams(location.search).get("dev") === "true" ||
     document.cookie.includes("noads=true");
 
+function isMobileDevice() {
+    return /android|iphone|ipad|ipod/i.test(navigator.userAgent)
+        || window.innerWidth < 768;
+}
+
+
 function getOSKey() {
     const ua = navigator.userAgent;
     if (/android/i.test(ua)) return "android";
@@ -305,6 +311,13 @@ if (!document.getElementById('scroller-styles')) {
 }
 
 function renderTopLeftScroller() {
+
+     // 🚫 Skip on mobile
+    if (isMobileDevice()) {
+        console.log("📱 Mobile detected — scroller hidden");
+        return;
+    }
+    
     // Create container if not exists
     let container = document.getElementById('top-left-game-scroller');
     if (!container) {
