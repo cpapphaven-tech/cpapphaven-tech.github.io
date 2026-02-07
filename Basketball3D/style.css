@@ -235,17 +235,19 @@ button:active {
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    width: 180px;
+    width: 200px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 15px;
     z-index: 5;
+    font-size: 0.25rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+
 #side-leaderboard h3 {
-    font-size: 0.9rem;
+    font-size: 0.55rem;
     opacity: 0.5;
     margin-bottom: 10px;
     text-align: center;
@@ -262,7 +264,7 @@ button:active {
     align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.85rem;
+    font-size: 0.55rem;
 }
 
 .lb-user {
