@@ -214,7 +214,7 @@ body>h1 {
 /* Increase gap between SCORE and SOCIAL BAR */
 #bottom-bar {
     position: fixed;
-    bottom: 70px;
+    bottom: 50px;
     /* Moved up to clear bottom ad */
     left: 12px;
     right: auto;
@@ -259,7 +259,7 @@ body>h1 {
 #side-leaderboard {
     position: fixed;
     left: 12px;
-    bottom: 150px;
+    bottom: 130px;
     /* Raised higher to avoid overlap with buttons */
     /* Positioned above bottom-bar/telegram button */
     width: 190px;
