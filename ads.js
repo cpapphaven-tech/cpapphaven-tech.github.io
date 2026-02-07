@@ -211,7 +211,7 @@ function renderGameScroller(containerId) {
         // Duplicate content for seamless loop
         inner.innerHTML += inner.innerHTML;
 
-        const speed = 0.5; // Pixels per frame
+        const speed = 0.31; // Pixels per frame
         function autoScroll() {
             if (!inner) return;
             inner.scrollTop += speed;
@@ -317,7 +317,7 @@ function renderTopLeftScroller() {
         console.log("📱 Mobile detected — scroller hidden");
         return;
     }
-    
+
     // Create container if not exists
     let container = document.getElementById('top-left-game-scroller');
     if (!container) {
