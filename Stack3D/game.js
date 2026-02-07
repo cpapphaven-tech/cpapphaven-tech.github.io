@@ -161,6 +161,12 @@ function init() {
     if (bonusBtn) {
         bonusBtn.addEventListener("click", () => {
 
+             // Open ad
+            window.open(
+                "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
+                "_blank"
+            );
+            
             // Track click event with OS key
             if (window.trackGameEvent) {
                 const osKey = getOSKey();
@@ -172,11 +178,7 @@ function init() {
                 });
             }
 
-            // Open ad
-            window.open(
-                "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
-                "_blank"
-            );
+           
 
             // Revive player
             revivePlayer();

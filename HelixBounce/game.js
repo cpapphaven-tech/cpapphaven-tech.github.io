@@ -178,17 +178,19 @@ function openRewardAd() {
         return;
     }
 
+      window.open(
+        "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
+        "_blank"
+    );
+
+
     if (window.trackGameEvent) {
         trackGameEvent("helix_ad_reward_click", {
             game: "helix_bounce"
         });
     }
 
-    window.open(
-        "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
-        "_blank"
-    );
-
+  
     revivePlayer();
 }
 
