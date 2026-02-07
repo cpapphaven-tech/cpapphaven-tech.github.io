@@ -211,15 +211,21 @@ function renderGameScroller(containerId) {
         // Duplicate content for seamless loop
         inner.innerHTML += inner.innerHTML;
 
-        const speed = 0.31; // Pixels per frame
-        function autoScroll() {
-            if (!inner) return;
-            inner.scrollTop += speed;
-            if (inner.scrollTop >= inner.scrollHeight / 2) {
-                inner.scrollTop = 0;
-            }
-            requestAnimationFrame(autoScroll);
-        }
+        let frame = 0;
+const speed = 0.31;
+const limit = inner.scrollHeight / 2;
+
+function autoScroll() {
+    frame++;
+
+    if (frame % 3 === 0) { // scroll every 3 frames
+        inner.scrollTop = (inner.scrollTop + speed) % limit;
+    }
+
+     
+   requestAnimationFrame(autoScroll);
+}
+
         setTimeout(() => requestAnimationFrame(autoScroll), 800);
     }
 }
