@@ -30,12 +30,6 @@ body {
     max-height: 80vh;
 }
 
-@media (max-width: 480px) {
-    #game-wrapper {
-        margin: 5px auto;
-        max-height: 85vh;
-    }
-}
 
 #game-canvas {
     display: block;
@@ -71,11 +65,6 @@ body {
     opacity: 0.8;
 }
 
-@media (max-width: 480px) {
-    #score {
-        font-size: 3.5rem;
-    }
-}
 
 #goal-feedback {
     position: absolute;
@@ -467,5 +456,13 @@ button:active {
 @media (min-width: 1024px) {
     #adsterra-banner {
         display: block;
+    }
+}
+
+/* 🔽 Add this right here */
+@media (max-width: 768px) {
+    #game-wrapper {
+        margin: 70px auto 5px auto;
+        max-height: 85vh;
     }
 }
