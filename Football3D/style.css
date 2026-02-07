@@ -432,19 +432,47 @@ input {
 /* Responsive */
 @media (max-width: 1024px) {
     #side-leaderboard {
-        display: none;
+        display: block;
+        /* Show on mobile */
+        width: 130px;
+        left: 8px;
+        top: auto;
+        bottom: 120px;
+        /* Position above bottom ad */
+        transform: none;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+
+    #side-leaderboard:hover {
+        opacity: 1;
+    }
+
+    #side-leaderboard h3 {
+        font-size: 0.7rem;
+    }
+
+    .lb-row {
+        font-size: 0.75rem;
+        padding: 4px 0;
+    }
+
+    #view-full-lb {
+        font-size: 0.65rem;
     }
 }
 
 /* Cross Promotion UI (Slim Banners at Top Left) */
 #cross-promo-container {
     position: fixed;
-    top: 10px;
+    top: 70px;
+    /* Moved down to avoid social bar ad */
     left: 10px;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    z-index: 5000;
+    z-index: 10005;
 }
 
 .promo-banner {

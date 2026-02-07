@@ -190,7 +190,7 @@ function init() {
     startGame();
 
     // Load Ads
-   // loadAdsterraBanner();
+    // loadAdsterraBanner();
 }
 
 function loadAdsterraBanner() {
@@ -435,13 +435,12 @@ function revivePlayer() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-
- const joinTgBtn = document.getElementById("join-tg-btn");
+    const joinTgBtn = document.getElementById("join-tg-btn");
     if (joinTgBtn) {
         joinTgBtn.addEventListener("click", () => {
             if (window.trackGameEvent) {
-                window.trackGameEvent("stack_gameover_join_tg_click", {
-                    game: "stack_3d",
+                window.trackGameEvent("football_gameover_join_tg_click", {
+                    game: "football_3d",
                     score: score
                 });
             }
@@ -648,9 +647,12 @@ async function loadLeaderboard() {
         if (error) throw error;
 
         if (sideList) {
-            sideList.innerHTML = data.slice(0, 5).map((p, i) => `
+            const isDesktop = window.innerWidth >= 1024;
+            const limitVal = isDesktop ? 10 : 5;
+
+            sideList.innerHTML = data.slice(0, limitVal).map((p, i) => `
                 <div class="lb-row">
-                    <span>${i + 1}</span>
+                    <span class="lb-rank">${["🥇", "🥈", "🥉", "4", "5", "6", "7", "8", "9", "10"][i] || (i + 1)}</span>
                     <span class="lb-user">${p.username}</span>
                     <span class="lb-score">${p.score}</span>
                 </div>
@@ -660,7 +662,7 @@ async function loadLeaderboard() {
         if (fullList) {
             fullList.innerHTML = data.map((p, i) => `
                 <div class="lb-row">
-                    <span>${i + 1}</span>
+                    <span class="lb-rank">${i + 1}</span>
                     <span class="lb-user">${p.username}</span>
                     <span class="lb-score">${p.score}</span>
                 </div>

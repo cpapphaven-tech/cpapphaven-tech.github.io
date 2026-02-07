@@ -270,7 +270,8 @@ button:hover {
 /* Cross Promotion Container (Slim Banners at Top Left) */
 #cross-promo-container {
     position: fixed;
-    top: 10px;
+    top: 70px;
+    /* Moved down to avoid social bar ad */
     left: 10px;
     display: flex;
     flex-direction: column;
@@ -386,6 +387,22 @@ button:hover {
     background: rgba(20, 20, 40, 0.6);
     pointer-events: auto;
     transition: opacity 0.5s ease, background 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    #side-leaderboard {
+        display: block;
+        /* Show on mobile */
+        width: 140px;
+        left: 8px;
+        bottom: 120px;
+        opacity: 0.4;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    #side-leaderboard:hover {
+        opacity: 0.95;
+    }
 }
 
 #side-leaderboard h3 {

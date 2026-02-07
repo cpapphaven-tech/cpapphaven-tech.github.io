@@ -397,13 +397,17 @@ body>h1 {
     transform: rotate(90deg);
 }
 
-/* Mobile specific styling for minimal distraction */
+/* Mobile specific styling */
 @media (max-width: 600px) {
     #side-leaderboard {
-        width: 130px;
-        left: 10px;
-        opacity: 0.15;
-        /* Barely visible on mobile unless hovered */
+        display: block;
+        /* Ensure it shows */
+        width: 140px;
+        left: 8px;
+        bottom: 120px;
+        /* Position above bottom ad */
+        opacity: 0.4;
+        background: rgba(0, 0, 0, 0.3);
     }
 
     #side-leaderboard:hover {
@@ -706,12 +710,13 @@ body>h1 {
 /* Cross Promotion UI (Slim Banners at Top Left) */
 #cross-promo-container {
     position: fixed;
-    top: 10px;
+    top: 70px;
+    /* Moved down to avoid social bar ad */
     left: 10px;
     display: flex;
     flex-direction: column;
     gap: 6px;
-    z-index: 5000;
+    z-index: 10005;
 }
 
 .promo-banner {
