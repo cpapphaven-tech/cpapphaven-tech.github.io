@@ -662,7 +662,7 @@ async function loadLeaderboard() {
 
             sideList.innerHTML = data.slice(0, limitVal).map((p, i) => `
                 <div class="lb-row">
-                    <span class="lb-rank">${["🥇", "🥈", "🥉", "4", "5", "6", "7", "8", "9", "10"][i] || (i + 1)}</span>
+                    <span class="lb-rank">${["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"][i] || (i + 1)}</span>
                     <span class="lb-user">${p.username} (${p.country})</span>
                     <span class="lb-score">${p.score}</span>
                 </div>
