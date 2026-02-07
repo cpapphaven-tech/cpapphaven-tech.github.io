@@ -18,17 +18,18 @@ body {
     background-color: #1a1a1a;
     overflow-x: hidden;
     color: white;
-    touch-action: none;
+    touch-action: pan-y;
+    overflow-y: auto;
 }
 
 #game-wrapper {
     position: relative;
     width: 480px;
-    height: 800px;
+    aspect-ratio: 3 / 5;  /* replaces fixed height */
     margin: 20px auto;
     max-width: 95vw;
-    max-height: 80vh;
 }
+
 
 
 #game-canvas {
@@ -39,6 +40,7 @@ body {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     z-index: 1;
     border-radius: 20px;
+    touch-action: none;
 }
 
 #ui-container {
