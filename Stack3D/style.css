@@ -397,6 +397,13 @@ body>h1 {
     transform: rotate(90deg);
 }
 
+.lb-flag {
+    margin-right: 8px;
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Mobile specific styling */
 @media (max-width: 600px) {
     #side-leaderboard {
@@ -772,4 +779,12 @@ body>h1 {
     font-weight: 900;
     text-transform: uppercase;
     flex-shrink: 0;
+}
+
+.game-description {
+    padding: 180px 20px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #111;
+    color: #fff;
 }

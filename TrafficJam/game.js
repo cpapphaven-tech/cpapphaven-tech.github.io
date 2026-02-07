@@ -189,6 +189,12 @@ function init() {
     loadLevel(0);
     animate();
 
+    // Auto-start
+    setTimeout(() => {
+        gameState = 'PLAYING';
+        mainMenu.classList.add('hidden');
+    }, 800);
+
     // Events
     window.addEventListener('pointerdown', onPointerDown);
     window.addEventListener('pointermove', onPointerMove);
@@ -519,6 +525,11 @@ function checkWin() {
     if (c.isPlayer && c.x === 4) {
         gameState = 'GAMEOVER';
         gameOverMenu.classList.remove('hidden');
+
+        // Render Game Scroller
+        if (window.renderGameScroller) {
+            renderGameScroller('game-over-scroller');
+        }
 
         if (window.trackGameEvent) {
             window.trackGameEvent("level_coomplete", {

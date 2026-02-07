@@ -94,7 +94,7 @@
             <div id="level">Level 1</div>
             <div id="score">0</div>
 
-            <div id="main-menu" class="overlay"> <!-- Show menu on load -->
+            <div id="main-menu" class="overlay hidden"> <!-- Hidden by default for auto-start -->
                 <h2>HELIX BOUNCE</h2>
                 <p>Rotate the tower to fall through the gaps!</p>
                 <button id="resume-btn" class="hidden">Resume Level <span id="resume-level">1</span></button>
@@ -121,7 +121,6 @@
                         & Save Level</button>
                 </div>
 
-
                 <button id="restart-btn">Try Again</button>
 
                 <!-- REWARDED SMARTLINK -->
@@ -129,17 +128,14 @@
                     🎁 Watch Ad & Get +1 Life
                 </button>
 
-
                 <button id="next-level-btn" class="hidden">Next Level</button>
-
-                <button id="share-tg-btn" class="share-btn">
-                    📸 Share on our Telegram Leaderboard or Anywhere
-                </button>
 
                 <button id="join-tg-btn" class="join-tg-btn">
                     🚀 Join Telegram Leaderboard
                 </button>
 
+                <!-- Game Scroller Container -->
+                <div id="game-over-scroller"></div>
             </div>
 
             <canvas id="game-canvas"></canvas>
@@ -183,23 +179,7 @@
         }
     </script>
 
-    <!-- Cross-Promotion Banners (Top Left) -->
-    <div id="cross-promo-container">
-        <a href="../Stack3D/index.html" class="promo-banner" id="promo-stack">
-            <div class="promo-icon" style="background-image: url('../assets/stack3d.png');"></div>
-            <div class="promo-info">
-                <div class="promo-title">STACK 3D GAME</div>
-            </div>
-            <div class="promo-btn">Play</div>
-        </a>
-        <a href="../Football3D/index.html" class="promo-banner" id="promo-football">
-            <div class="promo-icon" style="background-image: url('../assets/football3d.png');"></div>
-            <div class="promo-info">
-                <div class="promo-title">FOOTBALL 3D GAME</div>
-            </div>
-            <div class="promo-btn">Play</div>
-        </a>
-    </div>
+    <!-- Cross-Promotion scroller will appear in Game Over -->
 
     <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
     <div id="adsterra-banner">

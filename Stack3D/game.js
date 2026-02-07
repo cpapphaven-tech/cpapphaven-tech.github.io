@@ -155,18 +155,22 @@ function init() {
 
     loadAdsterraBanner();
 
+    if (window.renderTopLeftScroller) {
+        window.renderTopLeftScroller();
+    }
+
 
     bonusBtn = document.getElementById("bonus-btn");
 
     if (bonusBtn) {
         bonusBtn.addEventListener("click", () => {
 
-             // Open ad
+            // Open ad
             window.open(
                 "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
                 "_blank"
             );
-            
+
             // Track click event with OS key
             if (window.trackGameEvent) {
                 const osKey = getOSKey();
@@ -178,7 +182,7 @@ function init() {
                 });
             }
 
-           
+
 
             // Revive player
             revivePlayer();
@@ -571,7 +575,10 @@ function gameOver() {
         submitBtn.disabled = false;
     }
 
-    // Note: detailed submitScore is now manual via button
+    // Render Game Scroller
+    if (window.renderGameScroller) {
+        renderGameScroller('game-over-scroller');
+    }
 }
 
 async function submitScore(scoreVal) {
@@ -809,6 +816,15 @@ document.addEventListener("visibilitychange", () => {
     }
 });
 
+function getFlagEmoji(countryCode) {
+    if (!countryCode || countryCode === "Unknown" || countryCode === "??") return "🌐";
+    const codePoints = countryCode
+        .toUpperCase()
+        .split('')
+        .map(char => 127397 + char.charCodeAt());
+    return String.fromCodePoint(...codePoints);
+}
+
 async function loadLeaderboard() {
     const sideList = document.getElementById("side-lb-list");
     const fullList = document.getElementById("full-lb-list");
@@ -831,8 +847,10 @@ async function loadLeaderboard() {
 
             sideList.innerHTML = data && data.length > 0 ? data.map((p, i) => `
                 <div class="lb-row">
-                    <span class="lb-rank">${["🥇", "🥈", "🥉", "4", "5"][i] || (i + 1)}</span>
-                    <span class="lb-user">${p.username} <small>(${p.country || '??'})</small></span>
+                    <span class="lb-rank">${["🥇", "🥈", "🥉", "4", "5", "6", "7", "8", "9", "10"][i] || (i + 1)}</span>
+                    <span class="lb-user">
+                        ${p.username} (${p.country})
+                    </span>
                     <span class="lb-score">${p.score}</span>
                 </div>
             `).join('') : "<li>-</li>";
@@ -856,7 +874,9 @@ async function loadLeaderboard() {
             fullList.innerHTML = data && data.length > 0 ? data.map((p, i) => `
                 <div class="lb-row">
                     <span class="lb-rank">${i + 1}</span>
-                    <span class="lb-user">${p.username} <small>at ${p.country || 'Unknown'}</small></span>
+                    <span class="lb-user">
+                        ${p.username} (${p.country})
+                    </span>
                     <span class="lb-score">${p.score}</span>
                 </div>
             `).join('') : "<li>No global data yet!</li>";

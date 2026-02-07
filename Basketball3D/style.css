@@ -1,11 +1,12 @@
 :root {
-    --primary-green: #2e7d32;
-    --accent-green: #4caf50;
-    --pitch-lines: rgba(255, 255, 255, 0.8);
+    --primary-orange: #e65100;
+    --accent-orange: #ff9800;
+    --court-lines: rgba(255, 255, 255, 0.8);
     --overlay-bg: rgba(0, 0, 0, 0.85);
     --gold: #ffd700;
 }
 
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -40,13 +41,12 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, #388e3c, #1b5e20);
+    background: radial-gradient(circle at center, #bf360c, #3e2723);
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
     z-index: 1;
     border-radius: 20px;
 }
 
-/* UI Overlay Container */
 #ui-container {
     position: absolute;
     top: 0;
@@ -57,7 +57,6 @@ body {
     z-index: 10;
 }
 
-/* Score Display */
 #score-container {
     position: absolute;
     top: 60px;
@@ -75,7 +74,6 @@ body {
 @media (max-width: 480px) {
     #score {
         font-size: 3.5rem;
-        top: 20px;
     }
 }
 
@@ -91,13 +89,6 @@ body {
     z-index: 100;
     pointer-events: none;
     white-space: nowrap;
-}
-
-@media (max-width: 480px) {
-    #goal-feedback {
-        font-size: 2.5rem;
-        top: 35%;
-    }
 }
 
 .goal-pop {
@@ -124,7 +115,6 @@ body {
 #swipe-guide {
     position: absolute;
     bottom: 12%;
-    /* Moved further down to avoid covering ball area on mobile */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -137,16 +127,6 @@ body {
     transition: opacity 0.5s;
     text-align: center;
     width: 100%;
-}
-
-@media (max-width: 480px) {
-    #swipe-guide {
-        bottom: 8%;
-    }
-
-    #swipe-guide p {
-        font-size: 0.8rem;
-    }
 }
 
 .swipe-hand {
@@ -173,13 +153,12 @@ body {
 }
 
 #swipe-guide.hidden {
+    visibility: hidden;
     opacity: 0;
 }
 
-/* Overlays (Main Menu, Game Over) */
 .overlay {
     z-index: 200;
-    /* Ensure overlay is on top of everything */
     position: absolute;
     top: 0;
     left: 0;
@@ -195,6 +174,7 @@ body {
 }
 
 .overlay.hidden {
+    visibility: hidden;
     opacity: 0;
     pointer-events: none;
 }
@@ -203,24 +183,11 @@ h2 {
     font-size: 2.5rem;
     font-weight: 900;
     margin-bottom: 20px;
-    letter-spacing: -1px;
     background: linear-gradient(to bottom, #fff, #ccc);
-    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 1.8rem;
-    }
-}
-
-#prompt {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    opacity: 0.8;
 }
 
 button {
@@ -229,7 +196,7 @@ button {
     font-weight: 900;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(135deg, var(--accent-green), var(--primary-green));
+    background: linear-gradient(135deg, var(--accent-orange), var(--primary-orange));
     color: white;
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -237,16 +204,6 @@ button {
     margin-bottom: 10px;
     min-width: 200px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-@media (max-width: 480px) {
-    button {
-        padding: 12px 25px;
-        font-size: 0.95rem;
-        min-width: 180px;
-        margin-bottom: 8px;
-    }
 }
 
 button:hover {
@@ -280,37 +237,7 @@ button:active {
     }
 }
 
-/* Input Area in Game Over */
-#gameover-input-area {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
-    color: white;
-    text-align: center;
-    font-size: 1rem;
-}
-
-@media (max-width: 480px) {
-    input {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
-    #prompt {
-        font-size: 1rem;
-        margin-bottom: 25px;
-    }
-}
-
-/* Leaderboard - Side (Compact) */
+/* Leaderboard */
 #side-leaderboard {
     position: fixed;
     top: 50%;
@@ -327,10 +254,10 @@ input {
 
 #side-leaderboard h3 {
     font-size: 0.9rem;
-    text-transform: uppercase;
     opacity: 0.5;
     margin-bottom: 10px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 #side-lb-list {
@@ -354,120 +281,36 @@ input {
     text-overflow: ellipsis;
 }
 
+.lb-flag {
+    margin-right: 6px;
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.lb-score {
+    min-width: 40px;
+    text-align: right;
+    font-weight: 900;
+}
+
+.lb-rank {
+    min-width: 24px;
+    font-weight: 900;
+}
+
 #view-full-lb {
     margin-top: 15px;
     font-size: 0.75rem;
-    color: var(--accent-green);
+    color: var(--accent-orange);
     cursor: pointer;
     text-align: center;
 }
 
-/* Full Leaderboard Overlay */
-#full-leaderboard {
-    z-index: 1000;
-}
-
-.lb-header {
-    margin-bottom: 30px;
-}
-
-.lb-scroll-area {
-    width: 90%;
-    max-width: 400px;
-    max-height: 400px;
-    overflow-y: auto;
-    margin-bottom: 30px;
-}
-
-.lb-close-x {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    opacity: 0.5;
-}
-
-/* Ad Banners */
-#adsterra-banner {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 160px;
-    height: 600px;
-    background: rgba(0, 0, 0, 0.2);
-    display: none;
-}
-
-@media (min-width: 1024px) {
-    #adsterra-banner {
-        display: block;
-    }
-}
-
-/* Semantic Description Styling */
-.game-description {
-    max-width: 600px;
-    margin: 100px auto 40px;
-    /* Increased top margin as requested */
-    padding: 30px;
-    line-height: 1.6;
-    opacity: 0.9;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.game-description h2,
-.game-description h3 {
-    text-align: center;
-    background: none;
-    -webkit-text-fill-color: white;
-    margin-top: 20px;
-}
-
-
-
-/* Responsive */
-@media (max-width: 1024px) {
-    #side-leaderboard {
-        display: block;
-        /* Show on mobile */
-        width: 130px;
-        left: 8px;
-        top: auto;
-        bottom: 120px;
-        /* Position above bottom ad */
-        transform: none;
-        background: rgba(0, 0, 0, 0.3);
-        opacity: 0.5;
-        transition: opacity 0.3s;
-    }
-
-    #side-leaderboard:hover {
-        opacity: 1;
-    }
-
-    #side-leaderboard h3 {
-        font-size: 0.7rem;
-    }
-
-    .lb-row {
-        font-size: 0.75rem;
-        padding: 4px 0;
-    }
-
-    #view-full-lb {
-        font-size: 0.65rem;
-    }
-}
-
-/* Cross Promotion UI (Slim Banners at Top Left) */
+/* Cross Promotion */
 #cross-promo-container {
     position: fixed;
     top: 70px;
-    /* Moved down to avoid social bar ad */
     left: 10px;
     display: flex;
     flex-direction: column;
@@ -487,13 +330,12 @@ input {
     text-decoration: none;
     color: white;
     width: 240px;
-    transition: transform 0.2s, border-color 0.2s;
+    transition: transform 0.2s;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .promo-banner:hover {
     transform: translateX(5px);
-    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .promo-icon {
@@ -501,21 +343,12 @@ input {
     height: 32px;
     border-radius: 6px;
     background-size: cover;
-    background-position: center;
     flex-shrink: 0;
-}
-
-.promo-info {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
 }
 
 .promo-title {
     font-size: 0.75rem;
     font-weight: 900;
-    line-height: 1;
-    letter-spacing: 0.5px;
 }
 
 .promo-btn {
@@ -526,7 +359,29 @@ input {
     font-size: 0.65rem;
     font-weight: 900;
     text-transform: uppercase;
-    flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #side-leaderboard {
+        display: block;
+        width: 130px;
+        left: 8px;
+        top: auto;
+        bottom: 120px;
+        transform: none;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0.5;
+        z-index: 100;
+    }
+
+    #side-leaderboard:hover {
+        opacity: 1;
+    }
+
+    .promo-banner {
+        width: 180px;
+    }
 }
 
 #bottom-ad {
@@ -539,14 +394,78 @@ input {
     z-index: 9999;
 }
 
-/* Show on all screens */
-#bottom-ad {
-    display: block;
+.join-tg-btn {
+    background: #0088cc !important;
+    font-size: 0.9rem !important;
+    padding: 10px !important;
+}
+
+/* Hidden elements */
+.hidden {
+    display: none !important;
 }
 
 .game-description {
     padding: 180px 20px 40px;
+    /* Large top padding to move it below game canvas */
     max-width: 800px;
     margin: 0 auto;
     background: #1a1a1a;
+}
+
+#gameover-input-area {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+    pointer-events: auto;
+}
+
+#player-name-gameover {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#player-name-gameover:focus {
+    border-color: var(--accent-orange);
+}
+
+#game-over button {
+    width: 85%;
+    margin-bottom: 8px;
+}
+
+#submit-score-btn {
+    background: linear-gradient(135deg, #4d79ff, #3366ff);
+    box-shadow: 0 8px 20px rgba(51, 102, 255, 0.3);
+}
+
+/* Adsterra Banner - Right Side Center (Desktop Only) */
+/* Adsterra Banner - Right Side Bottom (Desktop Only) */
+#adsterra-banner {
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    right: 10px;
+    transform: none;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
+    }
 }

@@ -178,7 +178,7 @@ function openRewardAd() {
         return;
     }
 
-      window.open(
+    window.open(
         "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
         "_blank"
     );
@@ -190,7 +190,7 @@ function openRewardAd() {
         });
     }
 
-  
+
     revivePlayer();
 }
 
@@ -658,6 +658,10 @@ function gameOver(win) {
         level: currentLevel,
         duration_seconds: seconds
     });
+
+    if (window.renderGameScroller) {
+        renderGameScroller('game-over-scroller');
+    }
 }
 
 
@@ -746,6 +750,9 @@ function handleSwipeUp() {
 // Start
 document.addEventListener('DOMContentLoaded', () => {
     init();
+    if (window.renderTopLeftScroller) {
+        window.renderTopLeftScroller();
+    }
     startBtn.addEventListener('click', startNewGame);
     resumeBtn.addEventListener('click', resumeGame);
     restartBtn.addEventListener('click', startGame);
@@ -769,12 +776,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Auto-start for first time players (Level 1)
 window.addEventListener("load", () => {
-    const saved = localStorage.getItem("helixBounceLevel");
-
-    if (!saved || saved === "1") {
-        mainMenu.classList.add("hidden");
-        startNewGame();   // 🚀 auto start
-    }
+    mainMenu.classList.add("hidden");
+    startNewGame();   // 🚀 auto start always
 });
 
 // --- Telegram Share on Game Over ---
@@ -1164,36 +1167,36 @@ window.addEventListener('load', () => {
 // ---------------------------------------------------------
 
 function loadAdsterraBanner() {
-const osKey = getOSKey();
+    const osKey = getOSKey();
 
 
-// Desktop only
-if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-    console.log("Adsterra Banner: Skipped (mobile or small screen)");
-    return;
-}
+    // Desktop only
+    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
+        console.log("Adsterra Banner: Skipped (mobile or small screen)");
+        return;
+    }
 
-const container = document.getElementById("adsterra-banner");
-if (!container) {
-    console.error("Adsterra Banner: Container not found!");
-    return;
-}
+    const container = document.getElementById("adsterra-banner");
+    if (!container) {
+        console.error("Adsterra Banner: Container not found!");
+        return;
+    }
 
-// Prevent double loading
-if (container.dataset.loaded === "true") return;
-container.dataset.loaded = "true";
+    // Prevent double loading
+    if (container.dataset.loaded === "true") return;
+    container.dataset.loaded = "true";
 
-console.log("Loading Adsterra banner...");
+    console.log("Loading Adsterra banner...");
 
-setTimeout(() => {
+    setTimeout(() => {
 
-    // Clear container
-    container.innerHTML = "";
+        // Clear container
+        container.innerHTML = "";
 
-    // 1. Options script
-    const optionsScript = document.createElement("script");
-    optionsScript.type = "text/javascript";
-    optionsScript.text = `
+        // 1. Options script
+        const optionsScript = document.createElement("script");
+        optionsScript.type = "text/javascript";
+        optionsScript.text = `
         atOptions = {
             key: "34488dc997487ff336bf5de366c86553",
             format: "iframe",
@@ -1203,19 +1206,19 @@ setTimeout(() => {
         };
     `;
 
-    // 2. Invoke script
-    const invokeScript = document.createElement("script");
-    invokeScript.type = "text/javascript";
-    invokeScript.src =
-        "https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js";
+        // 2. Invoke script
+        const invokeScript = document.createElement("script");
+        invokeScript.type = "text/javascript";
+        invokeScript.src =
+            "https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js";
 
-    // Append in correct order
-    container.appendChild(optionsScript);
-    container.appendChild(invokeScript);
+        // Append in correct order
+        container.appendChild(optionsScript);
+        container.appendChild(invokeScript);
 
-    console.log("Adsterra banner injected.");
+        console.log("Adsterra banner injected.");
 
-}, 2000);
+    }, 2000);
 
 
 }

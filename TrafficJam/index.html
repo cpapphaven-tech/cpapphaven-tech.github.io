@@ -33,7 +33,7 @@
 
         <div id="game-ui">
             <div id="level-indicator">Level 1</div>
-            <div id="main-menu" class="overlay">
+            <div id="main-menu" class="overlay hidden">
                 <h2>PUZZLE TIME</h2>
                 <p>Slide the cars to clear a path for the red sports car!</p>
                 <button id="start-btn">Start Playing</button>
@@ -42,6 +42,9 @@
                 <h2>LEVEL CLEAR!</h2>
                 <p>Great job navigating the rush hour.</p>
                 <button id="next-btn">Next Level</button>
+
+                <!-- Game Scroller Container -->
+                <div id="game-over-scroller"></div>
             </div>
             <canvas id="game-canvas"></canvas>
         </div>

@@ -129,6 +129,10 @@ function init() {
         loadLeaderboard();
     }
 
+    if (window.renderTopLeftScroller) {
+        renderTopLeftScroller();
+    }
+
     // 5. Events
     startBtn.addEventListener('click', startGame);
     restartBtn.addEventListener('click', restartGame);
@@ -190,7 +194,7 @@ function init() {
     startGame();
 
     // Load Ads
-    // loadAdsterraBanner();
+    loadAdsterraBanner();
 }
 
 function loadAdsterraBanner() {
@@ -504,6 +508,12 @@ function gameOver() {
 
     finalScoreEl.innerText = score;
     bestScoreEl.innerText = bestScore;
+
+    // Render Game Scroller
+    if (window.renderGameScroller) {
+        renderGameScroller('game-over-scroller');
+    }
+
     gameOverMenu.classList.remove('hidden');
 }
 
@@ -653,7 +663,7 @@ async function loadLeaderboard() {
             sideList.innerHTML = data.slice(0, limitVal).map((p, i) => `
                 <div class="lb-row">
                     <span class="lb-rank">${["🥇", "🥈", "🥉", "4", "5", "6", "7", "8", "9", "10"][i] || (i + 1)}</span>
-                    <span class="lb-user">${p.username}</span>
+                    <span class="lb-user">${p.username} (${p.country})</span>
                     <span class="lb-score">${p.score}</span>
                 </div>
             `).join('');
@@ -663,7 +673,8 @@ async function loadLeaderboard() {
             fullList.innerHTML = data.map((p, i) => `
                 <div class="lb-row">
                     <span class="lb-rank">${i + 1}</span>
-                    <span class="lb-user">${p.username}</span>
+                    <span class="lb-user">${p.username} (${p.country})</span>
+                
                     <span class="lb-score">${p.score}</span>
                 </div>
             `).join('');

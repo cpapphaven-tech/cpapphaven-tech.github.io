@@ -245,3 +245,6 @@ function onWindowResize() {
 }
 
 init();
+if (window.renderTopLeftScroller) {
+    window.renderTopLeftScroller();
+}

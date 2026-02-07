@@ -35,7 +35,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
-               loadSocialBarAd();
+                loadSocialBarAd();
             }, 2000);
         });
     </script>
@@ -55,23 +55,7 @@
 </head>
 
 <body>
-    <!-- Cross-Promotion Banners (Top Left) -->
-    <div id="cross-promo-container">
-        <a href="../Football3D/index.html" class="promo-banner">
-            <div class="promo-icon" style="background-image: url('../assets/football3d.png');"></div>
-            <div class="promo-info">
-                <div class="promo-title">FOOTBALL 3D GAME</div>
-            </div>
-            <div class="promo-btn">Play</div>
-        </a>
-        <a href="../HelixBounce/index.html" class="promo-banner">
-            <div class="promo-icon" style="background-image: url('../assets/helixbounce.png');"></div>
-            <div class="promo-info">
-                <div class="promo-title">HELIX BOUNCE GAME</div>
-            </div>
-            <div class="promo-btn">Play</div>
-        </a>
-    </div>
+    <!-- Cross-Promotion scroller will appear in Game Over -->
 
     <!-- Dedicated Full Leaderboard Screen -->
     <div id="full-leaderboard" class="overlay hidden">
@@ -134,9 +118,11 @@
 
             <button id="bonus-btn">🎁 Watch Ad & Get +1 Life</button>
             <button id="restart-btn">Try Again</button>
-            <button id="share-tg-btn">📸 Share Your Tower Screenshot</button>
+            <!-- <button id="share-tg-btn">📸 Share Your Tower Screenshot</button> -->
             <button id="join-tg-btn" class="join-tg-btn">🚀 Join Telegram Leaderboard</button>
 
+            <!-- Game Scroller Container -->
+            <div id="game-over-scroller"></div>
         </div>
 
     </div>
@@ -209,14 +195,14 @@
 
 
     <div id="bottom-bar">
-        
+
 
         <a href="../index.html" id="home-btn">🎮 More Games</a>
     </div>
 
 
     <!-- HELIX GAME AD BANNER (Desktop Only) -->
-   
+
 
     <!-- BOTTOM BANNER AD -->
     <div id="bottom-ad">
@@ -257,9 +243,9 @@
                 }
 
                 // Initial load
-               setTimeout(loadBanner, 2000);
+                setTimeout(loadBanner, 2000);
 
-               
+
 
             })();
         </script>
