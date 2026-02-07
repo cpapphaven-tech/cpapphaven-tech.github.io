@@ -318,6 +318,8 @@ if (!document.getElementById('scroller-styles')) {
 
 function renderTopLeftScroller() {
 
+    return; 
+
      // 🚫 Skip on mobile
     if (isMobileDevice()) {
         console.log("📱 Mobile detected — scroller hidden");
