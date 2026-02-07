@@ -552,6 +552,11 @@ function gameOver() {
     }
 
     gameOverMenu.classList.remove('hidden');
+
+     if (submitScoreBtn) {
+        submitScoreBtn.textContent = "Submit & Save Score";
+        submitScoreBtn.disabled = false;
+    }
 }
 
 function revivePlayer() {
