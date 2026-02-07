@@ -17,7 +17,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             loadSocialBarAd();
-            
+
             // Load native banner ad
             if (shouldLoadAds()) {
                 const nativeBannerScript = document.createElement('script');
@@ -29,15 +29,15 @@
         });
     </script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'AW-17908156906');
-</script>
+        gtag('config', 'AW-17908156906');
+    </script>
 
 </head>
 
@@ -60,22 +60,41 @@
             <!-- Game 1: Stack 3D -->
             <a href="Stack3D/index.html" class="game-card">
 
-                               <div class="card-img" style="
+                <div class="card-img" style="
 
     background-image: url('assets/stack3d.png');
     background-size: cover;
     background-position: center;
 ">
-</div>
+                </div>
 
                 <div class="card-info">
                     <h3>Stack 3D</h3>
-                    <p><strong>Build towers to the sky!</strong> Test your timing and precision in this beautiful 3D physics puzzler. Tap to drop blocks and stack them higher without falling!</p>
-                    <span style="display: inline-block; background: #4d79ff; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
+                    <p><strong>Build towers to the sky!</strong> Test your timing and precision in this beautiful 3D
+                        physics puzzler. Tap to drop blocks and stack them higher without falling!</p>
+                    <span
+                        style="display: inline-block; background: #4d79ff; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
                 </div>
             </a>
 
-             <!-- Game 4: Helix Bounce -->
+            <!-- New Game: Football 3D -->
+            <a href="Football3D/index.html" class="game-card">
+                <div class="card-img" style="
+                    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+                    background-image: url('assets/football3d.png');
+                    background-size: cover;
+                    background-position: center;
+                "></div>
+                <div class="card-info">
+                    <h3>Football 3D</h3>
+                    <p><strong>Perfect your strike!</strong> Swipe to kick the ball and beat the moving goalkeeper.
+                        Challenge yourself to score as many goals as you can in this addictive 3D sports game!</p>
+                    <span
+                        style="display: inline-block; background: #4caf50; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
+                </div>
+            </a>
+
+            <!-- Game 4: Helix Bounce -->
             <a href="HelixBounce/index.html" class="game-card">
                 <div class="card-img" style="
 
@@ -85,8 +104,10 @@
 "></div>
                 <div class="card-info">
                     <h3>Helix Bounce</h3>
-                    <p><strong>Navigate rotating platforms!</strong> Rotate the helix tower to guide the ball through gaps. Avoid red zones and descend as deep as possible!</p>
-                    <span style="display: inline-block; background: #cc00cc; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
+                    <p><strong>Navigate rotating platforms!</strong> Rotate the helix tower to guide the ball through
+                        gaps. Avoid red zones and descend as deep as possible!</p>
+                    <span
+                        style="display: inline-block; background: #cc00cc; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
                 </div>
             </a>
 
@@ -98,11 +119,13 @@
     background-size: cover;
     background-position: center;
 ">
-</div>
+                </div>
                 <div class="card-info">
                     <h3>Traffic Jam</h3>
-                    <p><strong>Solve parking puzzles!</strong> Slide cars and trucks strategically to create a path for the red sports car. Test your logic and planning skills across 10 levels!</p>
-                    <span style="display: inline-block; background: #ff4d4d; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
+                    <p><strong>Solve parking puzzles!</strong> Slide cars and trucks strategically to create a path for
+                        the red sports car. Test your logic and planning skills across 10 levels!</p>
+                    <span
+                        style="display: inline-block; background: #ff4d4d; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
                 </div>
             </a>
 
@@ -116,12 +139,14 @@
 "></div>
                 <div class="card-info">
                     <h3>Color Match 3D</h3>
-                    <p><strong>Fast reaction game!</strong> Tap the 3D cubes that match the target color before time runs out. Simple concept, challenging gameplay!</p>
-                    <span style="display: inline-block; background: #ffcc00; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px; color: #000;">Play</span>
+                    <p><strong>Fast reaction game!</strong> Tap the 3D cubes that match the target color before time
+                        runs out. Simple concept, challenging gameplay!</p>
+                    <span
+                        style="display: inline-block; background: #ffcc00; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px; color: #000;">Play</span>
                 </div>
             </a>
 
-           
+
         </div>
     </section>
 
@@ -166,7 +191,8 @@
         <div class="update-item" style="margin-bottom: 20px;">
             <p style="color: var(--accent-color); font-size: 0.8rem; text-transform: uppercase;">January 26, 2026</p>
             <h3 style="font-size: 1.1rem;">All Games Enhanced with Dynamic Ads</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Every third game completion now rewards ads, plus banner ads at the bottom of every game for a mobile-app-like experience!</p>
+            <p style="font-size: 0.9rem; color: #aaa;">Every third game completion now rewards ads, plus banner ads at
+                the bottom of every game for a mobile-app-like experience!</p>
         </div>
         <div class="update-item" style="margin-bottom: 20px;">
             <p style="color: var(--accent-color); font-size: 0.8rem; text-transform: uppercase;">January 24, 2026</p>

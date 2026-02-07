@@ -8,44 +8,44 @@
 }
 
 .game-container>h1 {
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
 /* ---------- DEFAULT = DESKTOP ---------- */
 #game-ui {
-  position: relative;
-  width: 480px;
-  height: 800px;
-  border: 5px solid rgba(255, 255, 255, 0.1);
-  border-radius: 30px;
-  overflow: hidden;
-  background: #000;
+    position: relative;
+    width: 480px;
+    height: 800px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    overflow: hidden;
+    background: #000;
 }
 
 #game-canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 480px;
-  height: 800px;
-  z-index: 1;
-  touch-action: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 800px;
+    z-index: 1;
+    touch-action: none;
 }
 
 
 /* ---------- MOBILE (bigger game) ---------- */
 @media (max-width: 768px) {
-  #game-ui {
-    width: 360px;
-    height: 600px;
-  }
+    #game-ui {
+        width: 360px;
+        height: 600px;
+    }
 
-  #game-canvas {
-    width: 360px;
-    height: 600px;
-  }
+    #game-canvas {
+        width: 360px;
+        height: 600px;
+    }
 }
 
 
@@ -267,105 +267,77 @@ button:hover {
 
 /* --- NEW STYLES BELOW --- */
 
-/* Stack 3D Cross Promo Banner (Top Left) */
-#stack-ad-banner {
+/* Cross Promotion Container (Slim Banners at Top Left) */
+#cross-promo-container {
     position: fixed;
-    top: 20px;
-    left: 20px;
-    width: 320px;
-    background: #1a1a2e;
-    /* Dark Blue/Black base */
-    color: white;
-    border-radius: 16px;
-    padding: 8px 12px;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 10005;
+    pointer-events: none;
+}
+
+.promo-banner {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 6px 10px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-    z-index: 10000;
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    width: 240px;
+    transition: transform 0.2s, border-color 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    pointer-events: auto;
 }
 
-#stack-ad-banner:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+.promo-banner:hover {
+    transform: translateX(5px);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Icon box */
-#stack-ad-banner .ad-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    background: url('../stack3d.png') center/cover;
+.promo-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
     flex-shrink: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-#stack-ad-banner .ad-content {
+.promo-info {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
-#stack-ad-banner .ad-title {
+.promo-title {
+    font-size: 0.75rem;
     font-weight: 900;
-    font-size: 1rem;
-    margin-bottom: 2px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: #fff;
     line-height: 1;
+    letter-spacing: 0.5px;
 }
 
-#stack-ad-banner .ad-desc {
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.2;
-}
-
-#stack-ad-banner .play-now-btn {
+.promo-btn {
     background: white;
-    color: #1a1a2e;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 800;
-    font-size: 0.75rem;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 900;
     text-transform: uppercase;
-    border: none;
-    white-space: nowrap;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    margin: 0;
-    transition: transform 0.2s;
+    flex-shrink: 0;
 }
 
-#stack-ad-banner:hover .play-now-btn {
-    transform: scale(1.05);
-}
-
-#stack-ad-banner .close-ad-x {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    width: 20px;
-    height: 20px;
-    background: #ff3333;
-    border-radius: 50%;
-    color: white;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    border: 2px solid #fff;
-}
-
-#stack-ad-banner .close-ad-x:hover {
-    transform: scale(1.1);
+/* Old banner style - keep for now but we'll hide it in HTML */
+#stack-ad-banner {
+    display: none !important;
+    /* Force hide old banner */
 }
 
 /* Hide on Mobile/Tablet */
