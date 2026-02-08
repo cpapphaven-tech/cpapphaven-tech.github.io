@@ -262,7 +262,7 @@ body>h1 {
     bottom: 130px;
     /* Raised higher to avoid overlap with buttons */
     /* Positioned above bottom-bar/telegram button */
-    width: 190px;
+    width: 250px;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
     border-radius: 12px;
@@ -320,7 +320,13 @@ body>h1 {
     max-width: 95vw;
     background: rgba(15, 15, 30, 0.98);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
+
+#full-leaderboard .close-btn {
+    margin-top: 30px;
+}
+
 
 .lb-header h2 {
     font-size: 2.2rem;
@@ -330,12 +336,20 @@ body>h1 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
+    width: 100%;
 }
 
 .lb-header p {
     font-size: 0.9rem;
     opacity: 0.6;
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.lb-header {
+    text-align: center;
+    width: 100%;
 }
 
 .lb-scroll-area {
@@ -343,6 +357,7 @@ body>h1 {
     overflow-y: auto;
     padding-right: 10px;
 }
+
 
 .close-btn {
     width: 100%;
@@ -465,6 +480,7 @@ body>h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 #leaderboard-list,
