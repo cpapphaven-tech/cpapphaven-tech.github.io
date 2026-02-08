@@ -547,9 +547,12 @@ function gameOver() {
     }
 
     // Render Game Scroller
+    setTimeout(() => {
     if (window.renderGameScroller) {
         renderGameScroller('game-over-scroller');
     }
+    }, 150);
+
 
     gameOverMenu.classList.remove('hidden');
 

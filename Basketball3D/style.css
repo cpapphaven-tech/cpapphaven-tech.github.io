@@ -513,3 +513,39 @@ button:active {
 #full-leaderboard .close-btn {
     margin-top: 20px;
 }
+
+#home-btn {
+    background: linear-gradient(135deg, #00ff88, #00ccff);
+    color: #000;
+    font-weight: 800;
+    border-radius: 12px;
+    padding: 6px 10px;
+    /* Slightly larger hit area */
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    display: inline-block;
+    bottom: 60px;
+}
+
+#bottom-bar {
+    position: fixed;
+    bottom: 60px;
+    /* Moved up to clear bottom ad */
+    left: 12px;
+    right: auto;
+    /* Don't stretch */
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically */
+    align-items: flex-start;
+    /* Align to left */
+    gap: 4px;
+    /* Reduced space between buttons */
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#bottom-bar a {
+    pointer-events: auto;
+}

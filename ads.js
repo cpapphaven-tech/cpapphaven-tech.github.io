@@ -178,7 +178,7 @@ function renderGameScroller(containerId) {
     const games = [
         { name: "Stack 3D", url: "../Stack3D/index.html", img: "../assets/stack3d.png", color: "#4d79ff" },
         { name: "Football 3D", url: "../Football3D/index.html", img: "../assets/football3d.png", color: "#4caf50" },
-        { name: "Basketball 3D", url: "../Basketball3D/index.html", emoji: "🏀", color: "#e65100" },
+        { name: "Basketball 3D", url: "../Basketball3D/index.html", img: "../assets/basketball3d.png", color: "#e65100" },
         { name: "Helix Bounce", url: "../HelixBounce/index.html", img: "../assets/helixbounce.png", color: "#cc00cc" }
     ];
 
