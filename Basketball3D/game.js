@@ -54,6 +54,10 @@ const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
 const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
 let supabaseClient = null;
 
+let gameStartTime = null;
+let durationSent = false;
+let gameStartedFlag = false;
+
 function getOSKey() {
     const ua = navigator.userAgent;
     if (/android/i.test(ua)) return "android";
@@ -61,6 +65,16 @@ function getOSKey() {
     if (/Win/i.test(ua)) return "windows";
     if (/Mac/i.test(ua)) return "mac";
     return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
 }
 
 // --- Initialization ---
@@ -114,7 +128,7 @@ function init() {
         bonusBtn.addEventListener('click', () => {
             window.open("https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66", "_blank");
             if (window.trackGameEvent) {
-                window.trackGameEvent(`smartlink_ad_click_${getOSKey()}`, { ad_type: "reward", game: "basketball_3d" });
+                window.trackGameEvent(`smartlink_ad_click_basketball_${getOSKey()}`, { ad_type: "reward", game: "basketball_3d" });
             }
             revivePlayer();
         });
@@ -560,6 +574,18 @@ function gameOver() {
         submitScoreBtn.textContent = "Submit & Save Score";
         submitScoreBtn.disabled = false;
     }
+
+    if (window.trackGameEvent) {
+        const osKey = getOSKey();
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+
+        window.trackGameEvent(`game_over_basketball_${osKey}_${seconds}`, {
+            game_name: "Basketball 3D",
+            final_score: score,
+            duration_seconds: seconds
+        });
+    }
 }
 
 function revivePlayer() {
@@ -581,6 +607,11 @@ function startGame() {
     backboardBody.position.x = 0;
     mainMenu.classList.add('hidden');
     gameOverMenu.classList.add('hidden');
+
+    gameStartedFlag = true; // mark started
+    gameStartTime = Date.now();   // ⏱ start timer
+    durationSent = false;
+
     resetBall();
     const guide = document.getElementById('swipe-guide');
     if (guide) guide.classList.remove('hidden');
@@ -733,5 +764,38 @@ if (viewFullLb) {
         loadLeaderboard();
     });
 }
+
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`game_duration_basketball_${seconds}_${reason}_${getOS()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        sendDurationOnExit("background_basketball");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close_basketball");
+
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`exit_before_game_basketball_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
 
 init();

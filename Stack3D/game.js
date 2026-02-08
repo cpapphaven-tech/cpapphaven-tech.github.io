@@ -175,7 +175,7 @@ function init() {
             if (window.trackGameEvent) {
                 const osKey = getOSKey();
 
-                window.trackGameEvent(`smartlink_ad_click_${osKey}`, {
+                window.trackGameEvent(`smartlink_ad_click_stack3d_${osKey}`, {
                     ad_type: "reward",
                     game: "stack_3d",
                     page: location.pathname
@@ -366,7 +366,7 @@ function startGame() {
 
     if (window.trackGameEvent) {
         const osKey = getOSKey();
-        window.trackGameEvent(`game_start_${osKey}`, {
+        window.trackGameEvent(`game_start_stack3d__${osKey}`, {
             game_name: "Stack 3D",
             os: getOS()
         });
@@ -375,11 +375,11 @@ function startGame() {
 
 window.addEventListener("beforeunload", () => {
 
-    sendDurationOnExit("tab_close");
+    sendDurationOnExit("tab_close_stack3d");
 
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getOSKey();
-        window.trackGameEvent(`exit_before_game_${osKey}`, {
+        window.trackGameEvent(`exit_before_game_stack3d_${osKey}`, {
             os: getOS()
         });
     }
@@ -555,7 +555,7 @@ function gameOver() {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
 
 
-        window.trackGameEvent(`game_over_${osKey}_${seconds}`, {
+        window.trackGameEvent(`game_over_stack3d_${osKey}_${seconds}`, {
             game_name: "Stack 3D",
             final_score: score,
             duration_seconds: seconds
@@ -787,7 +787,7 @@ function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
 
-        window.trackGameEvent(`game_duration_${seconds}_${reason}_${getOS()}`, {
+        window.trackGameEvent(`game_duration_stack3d_${seconds}_${reason}_${getOS()}`, {
             seconds,
             end_reason: reason,
             os: getOS()
@@ -813,7 +813,7 @@ document.getElementById("join-tg-btn").onclick = function () {
 
 document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
-        sendDurationOnExit("background");
+        sendDurationOnExit("background_stack3d");
     }
 });
 
@@ -904,7 +904,7 @@ document.addEventListener("DOMContentLoaded", () => {
         viewFull.addEventListener("click", () => {
             // Track Leaderboard click
             if (window.trackGameEvent) {
-                window.trackGameEvent("top_20_leaderboard_click", {
+                window.trackGameEvent("top_20_leaderboard_click_stack", {
                     game: "stack_3d",
                     page: location.pathname
                 });

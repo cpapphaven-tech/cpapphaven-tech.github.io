@@ -26,6 +26,10 @@ let touchStart = { x: 0, y: 0 };
 let touchEnd = { x: 0, y: 0 };
 let startTime = 0;
 
+let gameStartTime = null;
+let durationSent = false;
+let gameStartedFlag = false;
+
 function createFootballTexture() {
     const canvas = document.createElement('canvas');
     canvas.width = 512;
@@ -83,6 +87,16 @@ function getOSKey() {
     if (/Mac/i.test(ua)) return "mac";
     if (/Linux/i.test(ua)) return "linux";
     return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
 }
 
 // --- Initialization ---
@@ -149,7 +163,7 @@ function init() {
             // Track click event
             if (window.trackGameEvent) {
                 const osKey = getOSKey();
-                window.trackGameEvent(`smartlink_ad_click_${osKey}`, {
+                window.trackGameEvent(`smartlink_ad_click_football_${osKey}`, {
                     ad_type: "reward",
                     game: "football_3d",
                     page: location.pathname
@@ -466,8 +480,13 @@ function startGame() {
     canRevive = true; // Reset revival for new game
     mainMenu.classList.add('hidden');
     score = 0;
+    gameStartedFlag = true; // mark started
     scoreEl.innerText = score;
     goalkeeperSpeed = 0.5; // Slower start
+
+    gameStartTime = Date.now();   // ⏱ start timer
+    durationSent = false;
+
 
     if (bonusBtn) bonusBtn.classList.add('hidden');
 
@@ -523,6 +542,19 @@ function gameOver() {
     }
 
     gameOverMenu.classList.remove('hidden');
+
+     if (window.trackGameEvent) {
+        const osKey = getOSKey();
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+
+        window.trackGameEvent(`game_over_football_${osKey}_${seconds}`, {
+            game_name: "Football 3D",
+            final_score: score,
+            duration_seconds: seconds
+        });
+    }
+
 }
 
 function showGoalFeedback() {
@@ -703,6 +735,39 @@ if (viewFullLb) {
         loadLeaderboard();
     });
 }
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`game_duration_football_${seconds}_${reason}_${getOS()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+        sendDurationOnExit("background_football");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close_football");
+
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`exit_before_game_football_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
+
 
 // Start
 init();

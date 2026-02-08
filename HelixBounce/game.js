@@ -185,7 +185,7 @@ function openRewardAd() {
 
 
     if (window.trackGameEvent) {
-        trackGameEvent("helix_ad_reward_click", {
+        trackGameEvent("ad_reward_click_helix", {
             game: "helix_bounce"
         });
     }
@@ -230,7 +230,7 @@ window.addEventListener("beforeunload", () => {
 
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getOSKey();
-        window.trackGameEvent(`helix_exit_before_game_${osKey}`, {
+        window.trackGameEvent(`exit_before_game_helix_${osKey}`, {
             os: getOS()
         });
     }
@@ -284,7 +284,7 @@ function startGame() {
     if (window.trackGameEvent) {
         const osKey = getOSKey();
 
-        window.trackGameEvent(`helix_game_start_${osKey}`, {
+        window.trackGameEvent(`game_start_helix_${osKey}`, {
             game_name: "helix_bounce",
             os: getOS()
         });
@@ -653,7 +653,7 @@ function gameOver(win) {
     }
 
     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
-    window.trackGameEvent(`game_over`, {
+    window.trackGameEvent(`game_over_helix`, {
         game_name: "helix_gameover",
         level: currentLevel,
         duration_seconds: seconds
@@ -763,7 +763,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (joinTgBtn) {
         joinTgBtn.addEventListener("click", () => {
             if (window.trackGameEvent) {
-                trackGameEvent("helix_gameover_join_tg_click", {
+                trackGameEvent("gameover_join_tg_click_helix", {
                     game: "helix_bounce",
                     level: currentLevel
                 });
@@ -837,7 +837,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const levelPlayed = lastGameResult === 'win' ? currentLevel - 1 : currentLevel;
 
             if (window.trackGameEvent) {
-                trackGameEvent("helix_share_click", {
+                trackGameEvent("share_click_helix", {
                     game: "helix_bounce",
                     status: lastGameResult, // 'win' or 'loss'
                     level: levelPlayed,
@@ -866,7 +866,7 @@ function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
 
-        window.trackGameEvent(`helix_game_duration_${seconds}_${reason}_${getOS()}`, {
+        window.trackGameEvent(`game_duration_helix_${seconds}_${reason}_${getOS()}`, {
             seconds,
             end_reason: reason,
             os: getOS()
