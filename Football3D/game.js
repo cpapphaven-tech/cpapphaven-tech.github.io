@@ -21,7 +21,7 @@ let bestScore = localStorage.getItem('football_best_score') || 0;
 let isGameOver = false;
 let isGoalScored = false;
 let gameStarted = false;
-let goalkeeperSpeed = 1; // Slower start
+let goalkeeperSpeed = 0.5; // Slower start
 let touchStart = { x: 0, y: 0 };
 let touchEnd = { x: 0, y: 0 };
 let startTime = 0;
@@ -415,11 +415,19 @@ function handleKick() {
 
     // Calculate impulse
     // dy is negative for swipe up
-    const forceY = Math.min(Math.abs(dy) * 0.08, 12);
-    const forceZ = -Math.abs(dy) * 0.35;
-    const forceX = dx * 0.04;
+    const swipePower = Math.min(Math.abs(dy), 250);
+
+const forceY = swipePower * 0.06 + 2;
+const forceZ = -swipePower * 0.45;
+const forceX = dx * 0.03;
+
 
     ballBody.applyImpulse(new CANNON.Vec3(forceX, forceY, forceZ), ballBody.position);
+
+    // Soft aim assist toward center of goal
+const aimAssist = -ballBody.position.x * 0.15;
+ballBody.velocity.x += aimAssist;
+
 
     // Hide swipe guide after first kick
     const guide = document.getElementById('swipe-guide');
@@ -459,7 +467,7 @@ function startGame() {
     mainMenu.classList.add('hidden');
     score = 0;
     scoreEl.innerText = score;
-    goalkeeperSpeed = 1; // Slower start
+    goalkeeperSpeed = 0.5; // Slower start
 
     if (bonusBtn) bonusBtn.classList.add('hidden');
 
@@ -541,7 +549,7 @@ function checkGoal() {
             scoreEl.innerText = score;
             isGoalScored = true;
             showGoalFeedback(); // "Goal it!" effect
-            goalkeeperSpeed += 0.25;
+            goalkeeperSpeed += 0.08;
             setTimeout(resetBall, 1500);
         }
     }
