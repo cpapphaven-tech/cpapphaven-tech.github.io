@@ -964,7 +964,7 @@ function renderSideLeaderboard(data) {
     list.innerHTML = "";
 
     if (!data || data.length === 0) {
-        list.innerHTML = '<li style="text-align:center; opacity:0.5; padding:10px;">No scores yet</li>';
+        list.innerHTML = '<li style="text-align:left; opacity:0.5; padding:10px;">No scores yet</li>';
         return;
     }
 
@@ -981,20 +981,16 @@ function renderSideLeaderboard(data) {
         let rankDisplay = `${i + 1}`;
         let rankClass = "lb-rank";
 
-        if (i === 0) { rankDisplay = "🥇"; }
-        else if (i === 1) { rankDisplay = "🥈"; }
-        else if (i === 2) { rankDisplay = "🥉"; }
+        if (i === 0) { rankDisplay = "1"; }
+        else if (i === 1) { rankDisplay = "2"; }
+        else if (i === 2) { rankDisplay = "3"; }
         else { rankClass += " lb-rank-num"; }
 
         const countryText = player.country ? `(${player.country})` : '';
         const countryDisplay = player.country ? `<small>${countryText.toUpperCase()}</small>` : '';
 
         li.innerHTML = `
-            <span class="${rankClass}">${rankDisplay}</span>
-            <div class="lb-user">
-                ${escapeHtml(player.username)}
-                ${countryDisplay}
-            </div>
+            <span class="${rankClass}">${rankDisplay}&nbsp;&nbsp;&nbsp;&nbsp;${escapeHtml(player.username)} ${countryDisplay}</span>
             <span class="lb-score">${player.level}</span>
         `;
         list.appendChild(li);

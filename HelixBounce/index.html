@@ -66,10 +66,9 @@
 
     <!-- Dedicated Full Leaderboard Screen -->
     <div id="full-leaderboard" class="overlay hidden">
-        <div class="lb-close-x" onclick="closeFullLeaderboard()">✕</div>
         <div class="lb-header">
-            <h2>🏆 Global Leaderboard</h2>
-            <p>Top 20 Players Worldwide</p>
+            <h2>🏆 HELIX CHAMPION 🏆</h2>
+            <p>Top 20 Worldwide</p>
         </div>
         <div class="lb-scroll-area">
             <ul id="full-lb-list"></ul>
@@ -79,7 +78,7 @@
 
     <!-- Side Background Leaderboard (Compact Mini-Box) -->
     <div id="side-leaderboard" class="visible">
-        <h3>Top Leaders</h3>
+        <h3>🏆 HELIX CHAMPION 🏆</h3>
         <ul id="side-lb-list"></ul>
         <div id="view-full-lb">🏆 Global Top 20</div>
     </div>
@@ -188,32 +187,35 @@
 
 
     <div id="bottom-bar">
-        <a href="https://t.me/playmixgameshelixballgame" id="tg-btn" target="_blank" rel="noopener">
-            <span class="tg-icon">✈️</span>
-            <span class="tg-text">
-                Join our Playmix Games Telegram Group<br>
-                Share score, compete on leaderboard
-            </span>
-        </a>
 
         <a href="../index.html" id="home-btn">🎮 More Games</a>
     </div>
 
 
-    <!-- BOTTOM FIXED AD -->
-    <div id="bottom-ad">
-        <script>
-            atOptions = {
-                'key': 'de617c07128b585ef939154460e6858f',
-                'format': 'iframe',
-                'height': 50,
-                'width': 320,
-                'params': {}
-            };
-        </script>
-        <script src="https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"></script>
-    </div>
+    <div id="bottom-ad"></div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("bottom-ad");
+            function loadBanner() {
+                if (typeof shouldLoadAds === "function" && !shouldLoadAds()) return;
+                if (!container) return;
+                container.innerHTML = '<div id="banner-slot"></div>';
+                const slot = document.getElementById("banner-slot");
+                window.atOptions = {
+                    key: "de617c07128b585ef939154460e6858f",
+                    format: "iframe",
+                    height: 50,
+                    width: 320,
+                    params: {}
+                };
+                const s = document.createElement("script");
+                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                slot.appendChild(s);
+            }
+           setTimeout(loadBanner, 2000);
+        });
+    </script>
 
 
 
