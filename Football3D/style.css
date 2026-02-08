@@ -316,7 +316,7 @@ input {
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    width: 180px;
+    width: 300px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -369,6 +369,7 @@ input {
 
 .lb-header {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .lb-scroll-area {

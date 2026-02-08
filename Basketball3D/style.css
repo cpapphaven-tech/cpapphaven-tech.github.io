@@ -235,7 +235,7 @@ button:active {
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    width: 200px;
+    width: 300px;
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -247,7 +247,7 @@ button:active {
 
 
 #side-leaderboard h3 {
-    font-size: 0.55rem;
+    font-size: 0.75rem;
     opacity: 0.5;
     margin-bottom: 10px;
     text-align: center;
@@ -264,7 +264,7 @@ button:active {
     align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 0.55rem;
+    font-size: 0.65rem;
 }
 
 .lb-user {
@@ -470,4 +470,46 @@ button:active {
         margin: 70px auto 5px auto;
         max-height: 85vh;
     }
+}
+
+/* ===== FULL LEADERBOARD FONT FIX ===== */
+
+#full-leaderboard {
+    font-size: 1rem;
+}
+
+#full-leaderboard h2 {
+    font-size: 2rem;
+}
+
+#full-leaderboard p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+#full-lb-list {
+    font-size: 1rem;
+}
+
+#full-lb-list .lb-row {
+    font-size: 0.95rem;
+    padding: 10px 0;
+}
+
+#full-lb-list .lb-user {
+    font-size: 1rem;
+}
+
+#full-lb-list .lb-score {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.lb-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#full-leaderboard .close-btn {
+    margin-top: 20px;
 }
