@@ -779,18 +779,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    const joinTgBtn = document.getElementById("join-tg-btn");
-    if (joinTgBtn) {
-        joinTgBtn.addEventListener("click", () => {
-            if (window.trackGameEvent) {
-                window.trackGameEvent("stack_gameover_join_tg_click", {
-                    game: "stack_3d",
-                    score: score
-                });
-            }
-            window.open("https://t.me/playmixgamesstack3dtower", "_blank");
-        });
-    }
+  
 });
 
 
@@ -807,6 +796,18 @@ function sendDurationOnExit(reason) {
         durationSent = true;
     }
 }
+
+document.getElementById("join-tg-btn").onclick = function () {
+
+     window.open("https://t.me/playmixgamesstack3dtower", "_blank");
+     if (window.trackGameEvent) {
+                window.trackGameEvent("stack_gameover_join_tg_click", {
+                    game: "stack_3d",
+                    score: score
+                });
+            }
+           
+};
 
 
 
