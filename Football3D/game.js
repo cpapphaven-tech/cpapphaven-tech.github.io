@@ -427,7 +427,7 @@ function setupGoalkeeper() {
 }
 
 function resetBall() {
-    ballBody.position.set(0, 0.5, 8); // Closer to net as requested
+    ballBody.position.set(0, 0.5, 6); // Closer to net as requested
     ballBody.velocity.set(0, 0, 0);
     ballBody.angularVelocity.set(0, 0, 0);
     isGoalScored = false;
