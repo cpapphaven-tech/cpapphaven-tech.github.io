@@ -40,7 +40,7 @@ let durationSent = false;
 // Replace with your actual Supabase URL and Anon key
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
 const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
-let supabaseClient = null;
+let supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
 
 
 
