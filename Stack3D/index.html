@@ -27,15 +27,15 @@
 
     <!-- Three.js CDN -->
 
-
-
-
-
     <!-- Load Ads Using Professional Control System -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
+                if (window.DEV_MODE) {
+                    return;
+                }
                 loadSocialBarAd();
+                
             }, 2000);
         });
     </script>
@@ -264,6 +264,9 @@
                     console.log("🔄 Banner refreshed");
                 }
 
+                if (window.DEV_MODE) {
+                    return;
+                }
                 // Initial load
                 setTimeout(loadBanner, 2000);
 

@@ -23,6 +23,7 @@
 // 🔧 DEV MODE FLAG
 // 🔧 GLOBAL DEV MODE FLAG
 window.DEV_MODE =
+    location.protocol === "file:" ||
     location.hostname === "localhost" ||
     location.hostname === "127.0.0.1" ||
     new URLSearchParams(location.search).get("dev") === "true" ||

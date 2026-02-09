@@ -154,7 +154,10 @@ function init() {
         }
     }, 800);
 
-    loadAdsterraBanner();
+    if (!window.DEV_MODE) {
+                  loadAdsterraBanner();
+        }
+   
 
     if (window.renderTopLeftScroller) {
         window.renderTopLeftScroller();
