@@ -30,6 +30,8 @@ let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
 
+
+
 function createFootballTexture() {
     const canvas = document.createElement('canvas');
     canvas.width = 512;
@@ -106,8 +108,9 @@ function init() {
     scene.background = new THREE.Color(0x1a1a1a);
 
     camera = new THREE.PerspectiveCamera(60, CANVAS_WIDTH / CANVAS_HEIGHT, 0.1, 1000);
-    camera.position.set(0, 5, 25);
-    camera.lookAt(0, 1.5, -15);
+    camera.position.set(0, 2.5, 12);
+    camera.lookAt(0, 1.5, -17);
+
 
     renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('game-canvas'),
@@ -364,6 +367,11 @@ function setupBall() {
         linearDamping: 0.1,
         angularDamping: 0.1
     });
+
+    ballBody.ccdSpeedThreshold = 1;
+ballBody.ccdIterations = 10;
+
+
     world.addBody(ballBody);
 
     resetBall();
@@ -378,7 +386,8 @@ function setupBall() {
 
 function setupGoalkeeper() {
     // Visual - Glowing Neon Shield (Outer)
-    const geometry = new THREE.BoxGeometry(1.4, 2.0, 0.2);
+    const geometry = new THREE.BoxGeometry(1.4, GOAL_HEIGHT, 0.2);
+
     const material = new THREE.MeshPhongMaterial({
         color: 0x00ffff,
         emissive: 0x00ffff,
@@ -390,7 +399,12 @@ function setupGoalkeeper() {
     goalkeeperMesh.castShadow = true;
 
     // Core (Inner)
-    const coreGeo = new THREE.BoxGeometry(0.8, 1.4, 0.4);
+    const coreGeo = new THREE.BoxGeometry(
+    0.8,
+    GOAL_HEIGHT * 0.9, // slightly smaller than shield
+    0.4
+);
+
     const coreMat = new THREE.MeshPhongMaterial({ color: 0x0088ff });
     const core = new THREE.Mesh(coreGeo, coreMat);
     goalkeeperMesh.add(core);
@@ -403,7 +417,7 @@ function setupGoalkeeper() {
     scene.add(goalkeeperMesh);
 
     // Physics
-    const shape = new CANNON.Box(new CANNON.Vec3(0.7, 1.0, 0.1));
+    const shape = new CANNON.Box(new CANNON.Vec3(0.7, 1.0, 0.5));
     goalkeeperBody = new CANNON.Body({
         mass: 0,
         shape: shape
@@ -429,10 +443,11 @@ function handleKick() {
 
     // Calculate impulse
     // dy is negative for swipe up
-    const swipePower = Math.min(Math.abs(dy), 250);
+   const swipePower = Math.min(Math.abs(dy), 160); // lower cap
 
-const forceY = swipePower * 0.06 + 2;
-const forceZ = -swipePower * 0.45;
+const forceY = swipePower * 0.035 + 1.2; // less vertical lift
+const forceZ = -swipePower * 0.28; // slower forward speed
+
 const forceX = dx * 0.03;
 
 
@@ -574,38 +589,48 @@ function checkGoal() {
 
     const bPos = ballBody.position;
 
-    // Check if goal scored
+    // --- ✅ Goalkeeper collision detection ---
+    const gPos = goalkeeperBody.position;
+
+    const gHalfWidth = 0.7;
+    const gHalfHeight = GOAL_HEIGHT / 2;
+    const gHalfDepth = 0.5;
+
+    const hitGoalkeeper =
+        Math.abs(bPos.x - gPos.x) < gHalfWidth &&
+        Math.abs(bPos.y - gPos.y) < gHalfHeight &&
+        Math.abs(bPos.z - gPos.z) < gHalfDepth;
+
+    if (hitGoalkeeper) {
+        gameOver();
+        return;
+    }
+
+    // --- Goal scored ---
     if (bPos.z < -PITCH_DEPTH / 2 + 1 && bPos.z > -PITCH_DEPTH / 2 - 1) {
         if (Math.abs(bPos.x) < GOAL_WIDTH / 2 && bPos.y < GOAL_HEIGHT) {
             score++;
             scoreEl.innerText = score;
             isGoalScored = true;
-            showGoalFeedback(); // "Goal it!" effect
+            showGoalFeedback();
             goalkeeperSpeed += 0.08;
             setTimeout(resetBall, 1500);
         }
     }
 
-    // Miss detection - goes past the goal line
+    // --- Miss detection ---
     if (bPos.z < -PITCH_DEPTH / 2 - 2) {
         if (!isGoalScored) {
             gameOver();
         }
     }
 
-    // Miss detection - bounces too far back or stops
-    if (ballBody.velocity.length() < 0.2 && bPos.z > -PITCH_DEPTH / 2 + 2 && bPos.z < 6) {
-        // Only if it was kicked
-        if (Math.abs(ballBody.velocity.z) > 0 || Math.abs(ballBody.velocity.y) > 0) {
-            // This might trigger too early, let's keep it simple for now
-        }
-    }
-
-    // Out of bounds (sides)
+    // --- Out of bounds ---
     if (Math.abs(bPos.x) > PITCH_WIDTH / 2 + 2) {
         gameOver();
     }
 }
+
 
 function updateGoalkeeper() {
     const time = Date.now() * 0.001;
