@@ -57,6 +57,9 @@
 <body>
     <!-- Cross-Promotion scroller will appear in Game Over -->
 
+
+
+
     <!-- Dedicated Full Leaderboard Screen -->
     <div id="full-leaderboard" class="overlay hidden">
         <div class="lb-header">
@@ -87,7 +90,18 @@
   </ul>
 </div>
 
-
+<div id="tutorial-overlay" class="hidden">
+  <div id="tutorial-dialog">
+    <video id="tutorial-video" muted autoplay playsinline preload="auto">
+  <source src="../assets/Stack3dVideo.mp4" type="video/mp4">
+</video>
+<div id="tutorial-text">
+      👇 Tap to drop blocks<br>
+      Stack as high as possible!
+    </div>
+    <button id="skip-tutorial">Skip ▶</button>
+  </div>
+</div>
 
 
 

@@ -40,7 +40,8 @@ let durationSent = false;
 // Replace with your actual Supabase URL and Anon key
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
 const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
-const supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+let supabaseClient = null;
+
 
 
 // Wait for Supabase to load safely
@@ -744,7 +745,44 @@ function captureTower() {
     return mergedCanvas.toDataURL("image/png");
 }
 
+function showTutorial() {
+    const overlay = document.getElementById("tutorial-overlay");
+    const video = document.getElementById("tutorial-video");
+    const skipBtn = document.getElementById("skip-tutorial");
+
+    if (!overlay || !video || !skipBtn) return;
+
+    overlay.classList.remove("hidden");
+
+    video.currentTime = 0;
+
+    video.play().catch(err => {
+        console.log("Autoplay blocked:", err);
+    });
+
+    const endTutorial = () => {
+        overlay.classList.add("hidden");
+        video.pause();
+    };
+
+    const timer = setTimeout(endTutorial, 4000);
+
+    skipBtn.onclick = () => {
+        clearTimeout(timer);
+        endTutorial();
+    };
+
+    video.onended = endTutorial;
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
+   
+
+
     const shareBtn = document.getElementById("share-tg-btn");
 
     if (!shareBtn) return;
@@ -778,6 +816,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log("Share cancelled", e);
         }
     });
+
+    
 
   
 });
@@ -972,6 +1012,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     init();
+
+    showTutorial();
 });
 
 
