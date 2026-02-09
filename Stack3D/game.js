@@ -768,7 +768,7 @@ function showTutorial() {
         video.pause();
     };
 
-    const timer = setTimeout(endTutorial, 4000);
+    const timer = setTimeout(endTutorial, 5000);
 
     skipBtn.onclick = () => {
         clearTimeout(timer);

@@ -853,18 +853,54 @@ body>h1 {
 
 #tutorial-overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  left: 10px;
+  top: 160px;
   z-index: 9999;
+  pointer-events: none; /* game remains playable */
 }
 
 #tutorial-dialog {
-  width: 400px;
-  height: 400px;
+  width: 260px;
+  height: 260px;
+  border-radius: 16px;
+  padding: 3px;
+
+  background: linear-gradient(135deg, #4d79ff, #9c27ff, #00e5ff);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+  overflow: hidden;
+
+  pointer-events: auto; /* allow skip button click */
+}
+
+
+
+#tutorial-dialog {
+  position: fixed;
+
+  /* SAME LEFT as benefit box */
+  left: 10px;
+
+  /* BELOW benefit box */
+  top: 10px;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 18px;
+  padding: 3px;
+
+  background: linear-gradient(135deg, #4d79ff, #9c27ff, #00e5ff);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+
+#tutorial-dialog {
+  width: 300px;
+  height: 300px;
   border-radius: 18px;
   padding: 3px;
 
@@ -888,9 +924,9 @@ body>h1 {
 
 /* Video section (top 65%) */
 #tutorial-video-container {
-  flex: 0 0 65%;
-  overflow: hidden;
+  flex: 0 0 60%;
 }
+
 
 #tutorial-video {
   width: 100%;
@@ -908,14 +944,13 @@ body>h1 {
 }
 
 #tutorial-text h3 {
-  margin: 4px 0;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 #tutorial-text p {
-  margin: 2px 0;
-  font-size: 14px;
+  font-size: 12px;
 }
+
 
 /* Skip button */
 #skip-tutorial {
