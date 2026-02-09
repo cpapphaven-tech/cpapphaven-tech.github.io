@@ -753,9 +753,9 @@ function captureTower() {
 function showTutorial() {
     const overlay = document.getElementById("tutorial-overlay");
     const video = document.getElementById("tutorial-video");
-    const skipBtn = document.getElementById("skip-tutorial");
+    
 
-    if (!overlay || !video || !skipBtn) return;
+    if (!overlay || !video) return;
 
     overlay.classList.remove("hidden");
 
@@ -772,10 +772,7 @@ function showTutorial() {
 
     const timer = setTimeout(endTutorial, 5000);
 
-    skipBtn.onclick = () => {
-        clearTimeout(timer);
-        endTutorial();
-    };
+
 
     video.onended = endTutorial;
 }
