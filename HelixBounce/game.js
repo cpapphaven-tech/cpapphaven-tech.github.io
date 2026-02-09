@@ -1154,7 +1154,10 @@ window.addEventListener('load', () => {
 
     // Load Adsterra
     console.log("📢 Calling loadAdsterraBanner()...");
-    loadAdsterraBanner();
+
+     if (!window.DEV_MODE) {
+         loadAdsterraBanner();
+     }
 });
 
 

@@ -25,6 +25,11 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
+
+                 if (window.DEV_MODE) {
+                    return;
+                }
+
                 loadSocialBarAd();
 
                 if (window.trackAdImpression) {
@@ -223,6 +228,10 @@
                 s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
                 slot.appendChild(s);
             }
+
+             if (window.DEV_MODE) {
+                    return;
+                }
            setTimeout(loadBanner, 2000);
         });
     </script>

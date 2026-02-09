@@ -224,7 +224,9 @@ function init() {
     // Auto-start game as requested
     setTimeout(startGame, 500);
 
-    loadAdsterraBanner();
+    if (!window.DEV_MODE) {
+        loadAdsterraBanner();
+    }
 }
 
 function loadAdsterraBanner() {

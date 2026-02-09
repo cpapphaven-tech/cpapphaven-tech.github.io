@@ -30,6 +30,9 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
+                 if (window.DEV_MODE) {
+                    return;
+                }
                 loadSocialBarAd();
             }, 2000);
         });
@@ -185,7 +188,10 @@
 
                 console.log("✅ Banner loaded");
             }
-
+            
+            if (window.DEV_MODE) {
+                return;
+            }
             setTimeout(loadBanner, 2000);
 
         });

@@ -211,7 +211,9 @@ function init() {
     startGame();
 
     // Load Ads
-    loadAdsterraBanner();
+    if (!window.DEV_MODE) {
+        loadAdsterraBanner();
+    }
 }
 
 function loadAdsterraBanner() {
