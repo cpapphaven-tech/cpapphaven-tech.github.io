@@ -8,7 +8,7 @@ const CANVAS_HEIGHT = 800;
 const BALL_RADIUS = 0.45; // Slightly larger
 const COURT_WIDTH = 12;
 const COURT_DEPTH = 40;
-const HOOP_HEIGHT = 12.0; // Higher as requested
+const HOOP_HEIGHT = 9.0; // Higher as requested
 const RING_RADIUS = 1.0;
 const RING_Z = 0;
 
