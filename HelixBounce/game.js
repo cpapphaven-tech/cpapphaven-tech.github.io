@@ -747,6 +747,31 @@ function handleSwipeUp() {
     setTimeout(() => { canStabilizeBall = true; }, stabilizeCooldown);
 }
 
+function showTutorial() {
+    const overlay = document.getElementById("tutorial-overlay");
+    const video = document.getElementById("tutorial-video");
+
+    if (!overlay || !video) return;
+
+    overlay.classList.remove("hidden");
+
+    video.currentTime = 0;
+
+    video.play().catch(err => {
+        console.log("Autoplay blocked:", err);
+    });
+
+    const endTutorial = () => {
+        overlay.classList.add("hidden");
+        video.pause();
+    };
+
+    const timer = setTimeout(endTutorial, 5000);
+
+    video.onended = endTutorial;
+}
+
+
 // Start
 document.addEventListener('DOMContentLoaded', () => {
     init();
@@ -771,6 +796,8 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open("https://t.me/playmixgameshelixballgame", "_blank");
         });
     }
+
+    showTutorial();
 
 });
 
