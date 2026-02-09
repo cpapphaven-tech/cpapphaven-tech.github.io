@@ -40,27 +40,29 @@ let durationSent = false;
 // Replace with your actual Supabase URL and Anon key
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
 const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
-let supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
+let supabaseClient = null;
+
 
 
 
 // Wait for Supabase to load safely
 function initSupabase() {
-    if (!supabaseClient) {
-        console.warn("⏳ Supabase script not loaded yet, retrying...");
+    if (!window.supabase) {
+        console.warn("⏳ Waiting for Supabase...");
         setTimeout(initSupabase, 500);
-
         return;
     }
 
     const { createClient } = window.supabase;
+
     supabaseClient = createClient(
-        "https://bjpgovfzonlmjrruaspp.supabase.co",
-        "sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM"
+        supabaseUrl,
+        supabaseKey
     );
 
-    ole.log("✅ Supabase ready");
+    console.log("✅ Supabase ready");
 }
+
 
 
 
