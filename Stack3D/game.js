@@ -351,6 +351,19 @@ function resetGame() {
     if (sideLB) sideLB.style.opacity = "0.25";
 }
 
+// Show Challenge Message at Game Start
+function showChallengeMessage() {
+    const challengeMsg = document.getElementById('challenge-message');
+    if (!challengeMsg) return;
+    
+    challengeMsg.classList.remove('hidden');
+    
+    // Fade out and hide after 3.5 seconds
+    setTimeout(() => {
+        challengeMsg.classList.add('hidden');
+    }, 3500);
+}
+
 function startGame() {
     gameStartedFlag = true; // mark started
     gameStartTime = Date.now();   // ⏱ start timer
@@ -358,6 +371,10 @@ function startGame() {
 
     gameState = 'PLAYING';
     mainMenu.classList.add('hidden');
+    
+    // Show challenge message
+    showChallengeMessage();
+    
     spawnBlock();
 
     // Show leaderboard briefly at start, then dim for gameplay
