@@ -34,31 +34,102 @@ let gameStartedFlag = false;
 
 function createFootballTexture() {
     const canvas = document.createElement('canvas');
-    canvas.width = 512;
-    canvas.height = 512;
+    canvas.width = 2048;
+    canvas.height = 2048;
     const ctx = canvas.getContext('2d');
+    
+    // White base (background for hexagons)
     ctx.fillStyle = '#ffffff';
-    ctx.fillRect(0, 0, 512, 512);
-
-    ctx.fillStyle = '#111111';
-    const size = 64;
-    for (let y = 0; y < 8; y++) {
-        for (let x = 0; x < 8; x++) {
-            if ((x + y) % 2 === 0) {
-                const cx = x * size + size / 2;
-                const cy = y * size + size / 2;
-                ctx.beginPath();
-                for (let i = 0; i < 6; i++) {
-                    const angle = (i * Math.PI) / 3;
-                    ctx.lineTo(cx + Math.cos(angle) * (size / 2.2), cy + Math.sin(angle) * (size / 2.2));
-                }
-                ctx.closePath();
-                ctx.fill();
+    ctx.fillRect(0, 0, 2048, 2048);
+    
+    // Draw classic soccer ball pattern (black pentagons + white hexagons)
+    const centerX = 1024;
+    const centerY = 1024;
+    const radius = 950;
+    
+    // Function to draw polygons
+    function drawPolygon(sides, cx, cy, radius, fillColor, strokeColor, strokeWidth) {
+        ctx.fillStyle = fillColor;
+        ctx.strokeStyle = strokeColor;
+        ctx.lineWidth = strokeWidth;
+        
+        ctx.beginPath();
+        for (let i = 0; i < sides; i++) {
+            const angle = (i * 2 * Math.PI) / sides;
+            const x = cx + radius * Math.cos(angle);
+            const y = cy + radius * Math.sin(angle);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.fill();
+        ctx.stroke();
+    }
+    
+    // Create a grid of pentagons and hexagons
+    // This creates the classic soccer ball truncated icosahedron pattern
+    const panelSize = 256;
+    const strokeWidth = 6;
+    
+    // Draw in rows with offset pattern
+    for (let row = 0; row < 8; row++) {
+        for (let col = 0; col < 8; col++) {
+            const x = col * panelSize + panelSize / 2;
+            const y = row * panelSize + panelSize / 2;
+            
+            // Create alternating pentagon and hexagon pattern
+            // Pentagons are black, hexagons are white
+            if ((row + col) % 3 === 0) {
+                // Black pentagon
+                drawPolygon(5, x, y, panelSize * 0.32, '#000000', '#000000', strokeWidth);
+            } else {
+                // White hexagon
+                drawPolygon(6, x, y, panelSize * 0.30, '#ffffff', '#000000', strokeWidth);
             }
         }
     }
+    
+    // Add diagonal offset panels for complete coverage
+    for (let row = 0; row < 7; row++) {
+        for (let col = 0; col < 7; col++) {
+            const x = col * panelSize + panelSize;
+            const y = row * panelSize + panelSize;
+            
+            if ((row + col) % 3 !== 0) {
+                drawPolygon(5, x, y, panelSize * 0.32, '#000000', '#000000', strokeWidth);
+            } else {
+                drawPolygon(6, x, y, panelSize * 0.30, '#ffffff', '#000000', strokeWidth);
+            }
+        }
+    }
+    
+    // Add subtle shading for 3D effect
+    const radialGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius * 1.2);
+    radialGradient.addColorStop(0, 'rgba(255, 255, 255, 0.15)');
+    radialGradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.05)');
+    radialGradient.addColorStop(1, 'rgba(0, 0, 0, 0.1)');
+    
+    ctx.fillStyle = radialGradient;
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Add glossy shine spot
+    const shineGradient = ctx.createRadialGradient(centerX - 300, centerY - 300, 50, centerX - 300, centerY - 300, 400);
+    shineGradient.addColorStop(0, 'rgba(255, 255, 255, 0.6)');
+    shineGradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.15)');
+    shineGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    
+    ctx.fillStyle = shineGradient;
+    ctx.beginPath();
+    ctx.arc(centerX - 300, centerY - 300, 400, 0, Math.PI * 2);
+    ctx.fill();
+    
     const tex = new THREE.CanvasTexture(canvas);
-    tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+    tex.wrapS = tex.wrapT = THREE.ClampToEdgeWrapping;
+    tex.magFilter = THREE.LinearFilter;
+    tex.minFilter = THREE.LinearMipmapLinearFilter;
+    tex.anisotropy = 16;
     return tex;
 }
 
@@ -350,14 +421,20 @@ function setupGoal() {
 }
 
 function setupBall() {
-    // Visual - Football Texture
-    const geometry = new THREE.SphereGeometry(BALL_RADIUS, 32, 32);
+    // Visual - Realistic Football Texture
+    const geometry = new THREE.SphereGeometry(BALL_RADIUS, 64, 64);
     const material = new THREE.MeshPhongMaterial({
         map: createFootballTexture(),
-        shininess: 10
+        shininess: 80,
+        specularMap: null,
+        emissive: 0x222222,
+        emissiveIntensity: 0.2,
+        side: THREE.FrontSide,
+        wireframe: false
     });
     ballMesh = new THREE.Mesh(geometry, material);
     ballMesh.castShadow = true;
+    ballMesh.receiveShadow = true;
     scene.add(ballMesh);
 
     // Physics
@@ -582,6 +659,8 @@ function startGame() {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
+    // Show challenge message
+    showChallengeMessage();
 
     if (bonusBtn) bonusBtn.classList.add('hidden');
 
@@ -589,6 +668,19 @@ function startGame() {
     if (guide) guide.classList.remove('hidden');
 
     resetBall();
+}
+
+// Show Challenge Message at Game Start
+function showChallengeMessage() {
+    const challengeMsg = document.getElementById('challenge-message');
+    if (!challengeMsg) return;
+    
+    challengeMsg.classList.remove('hidden');
+    
+    // Fade out and hide after 3.5 seconds
+    setTimeout(() => {
+        challengeMsg.classList.add('hidden');
+    }, 3500);
 }
 
 function restartGame() {
