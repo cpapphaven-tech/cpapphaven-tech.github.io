@@ -389,22 +389,6 @@ button:hover {
     transition: opacity 0.5s ease, background 0.5s ease;
 }
 
-@media (max-width: 768px) {
-    #side-leaderboard {
-        display: block;
-        /* Show on mobile */
-        width: 140px;
-        left: 8px;
-        bottom: 120px;
-        opacity: 0.4;
-        background: rgba(0, 0, 0, 0.3);
-    }
-
-    #side-leaderboard:hover {
-        opacity: 0.95;
-    }
-}
-
 #side-leaderboard h3 {
     font-size: 0.7rem;
     color: rgba(255, 255, 255, 0.5);
@@ -746,14 +730,13 @@ button:hover {
 }
 
 /* Mobile */
+/* Mobile */
 @media (max-width: 768px) {
-  #benefit-box {
-    left: 8px;
-    bottom: 250px;
-    width: 140px;
-    font-size: 10px;
+  #benefit-box,#side-leaderboard,#tutorial-overlay  {
+    display: none !important;
   }
 }
+
 #tutorial-overlay {
   position: fixed;
   left: 10px;

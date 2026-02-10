@@ -420,45 +420,6 @@ body>h1 {
 }
 
 /* Mobile specific styling */
-@media (max-width: 600px) {
-    #side-leaderboard {
-        display: block;
-        /* Ensure it shows */
-        width: 140px;
-        left: 8px;
-        bottom: 120px;
-        /* Position above bottom ad */
-        opacity: 0.4;
-        background: rgba(0, 0, 0, 0.3);
-    }
-
-    #side-leaderboard:hover {
-        opacity: 0.95;
-    }
-
-    .lb-row {
-        padding: 8px 12px;
-        margin-bottom: 6px;
-    }
-
-    .lb-rank {
-        font-size: 0.8rem;
-        min-width: 20px;
-    }
-
-    .lb-user {
-        font-size: 0.75rem;
-        text-align: left;
-    }
-
-    .lb-user small {
-        font-size: 0.55rem;
-    }
-
-    .lb-score {
-        font-size: 0.8rem;
-    }
-}
 
 #leaderboard-popup {
     z-index: 2000;
@@ -843,11 +804,8 @@ body>h1 {
 
 /* Mobile */
 @media (max-width: 768px) {
-  #benefit-box {
-    left: 8px;
-    bottom: 250px;
-    width: 140px;
-    font-size: 10px;
+  #benefit-box,#side-leaderboard,#tutorial-overlay  {
+    display: none !important;
   }
 }
 
