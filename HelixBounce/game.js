@@ -250,8 +250,8 @@ function startGame() {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
-
-
+    // Show challenge message
+    showChallengeMessage();
 
     isGameOver = false;
     score = 0;
@@ -297,6 +297,19 @@ function startGame() {
     }
 
 
+}
+
+// Show Challenge Message at Game Start
+function showChallengeMessage() {
+    const challengeMsg = document.getElementById('challenge-message');
+    if (!challengeMsg) return;
+    
+    challengeMsg.classList.remove('hidden');
+    
+    // Fade out and hide after 3.5 seconds
+    setTimeout(() => {
+        challengeMsg.classList.add('hidden');
+    }, 3500);
 }
 
 function buildTower() {

@@ -615,9 +615,25 @@ function startGame() {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
+    // Show challenge message
+    showChallengeMessage();
+
     resetBall();
     const guide = document.getElementById('swipe-guide');
     if (guide) guide.classList.remove('hidden');
+}
+
+// Show Challenge Message at Game Start
+function showChallengeMessage() {
+    const challengeMsg = document.getElementById('challenge-message');
+    if (!challengeMsg) return;
+    
+    challengeMsg.classList.remove('hidden');
+    
+    // Fade out and hide after 3.5 seconds
+    setTimeout(() => {
+        challengeMsg.classList.add('hidden');
+    }, 3500);
 }
 
 function restartGame() {
