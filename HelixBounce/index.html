@@ -32,9 +32,6 @@
 
                 loadSocialBarAd();
 
-                if (window.trackAdImpression) {
-                    trackAdImpression("socialbar_helix");
-                }
 
             }, 2000);
         });
@@ -240,7 +237,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("bottom-ad");
             function loadBanner() {
-                if (typeof shouldLoadAds === "function" && !shouldLoadAds()) return;
+               
                 if (!container) return;
                 container.innerHTML = '<div id="banner-slot"></div>';
                 const slot = document.getElementById("banner-slot");
