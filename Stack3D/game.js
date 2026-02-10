@@ -843,13 +843,7 @@ function sendDurationOnExit(reason) {
 
 document.getElementById("join-tg-btn").onclick = function () {
 
-     window.open("https://t.me/playmixgamesstack3dtower", "_blank");
-     if (window.trackGameEvent) {
-                window.trackGameEvent("stack_gameover_join_tg_click", {
-                    game: "stack_3d",
-                    score: score
-                });
-            }
+   openFullLeaderboard();
            
 };
 

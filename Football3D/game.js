@@ -564,13 +564,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const joinTgBtn = document.getElementById("join-tg-btn");
     if (joinTgBtn) {
         joinTgBtn.addEventListener("click", () => {
-            if (window.trackGameEvent) {
-                window.trackGameEvent("football_gameover_join_tg_click", {
-                    game: "football_3d",
-                    score: score
-                });
-            }
-            window.open("https://t.me/playmixgamesstack3dtower", "_blank");
+             document.getElementById("full-leaderboard").classList.remove("hidden");
+            loadLeaderboard();
         });
     }
 });

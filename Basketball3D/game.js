@@ -136,7 +136,8 @@ function init() {
 
     if (joinTgBtn) {
         joinTgBtn.addEventListener("click", () => {
-            window.open("https://t.me/playmixgamesstack3dtower", "_blank");
+            document.getElementById("full-leaderboard").classList.remove("hidden");
+            loadLeaderboard();
         });
     }
 

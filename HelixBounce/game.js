@@ -847,13 +847,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const joinTgBtn = document.getElementById("join-tg-btn");
     if (joinTgBtn) {
         joinTgBtn.addEventListener("click", () => {
-            if (window.trackGameEvent) {
-                trackGameEvent("gameover_join_tg_click_helix", {
-                    game: "helix_bounce",
-                    level: currentLevel
-                });
-            }
-            window.open("https://t.me/playmixgameshelixballgame", "_blank");
+             document.getElementById('full-leaderboard').classList.remove('hidden');
+            fetchLeaderboard(); // refresh
         });
     }
 
