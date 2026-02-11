@@ -374,7 +374,7 @@ button:hover {
 #side-leaderboard {
     position: fixed;
     left: 12px;
-    bottom: 170px;
+    bottom: 150px;
     /* Raised above bottom buttons */
     width: 300px;
     background: rgba(0, 0, 0, 0.2);
