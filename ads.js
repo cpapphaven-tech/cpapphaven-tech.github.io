@@ -50,6 +50,17 @@ function shouldLoadAds() {
         console.log("🚧 [ADS] Dev mode ON — ads blocked");
         return false;
     }
+    
+    // Check cookie consent (GDPR/LGPD compliance)
+    const consent = localStorage.getItem('play-mix-games-cookie-consent');
+    if (consent) {
+        const consentData = JSON.parse(consent);
+        if (consentData.accepted === false) {
+            console.log("🚫 [ADS] User declined cookie consent — ads blocked");
+            return false;
+        }
+    }
+    
     return true;
 }
 
