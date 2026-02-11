@@ -288,7 +288,7 @@ if (!document.getElementById('scroller-styles')) {
             position: fixed;
             top: 15px;
             left: 15px;
-            z-index: 9999;
+            z-index: 8000; /* Place behind tutorial overlay (9999) */
             width: 250px; /* Matching the game-over scroller width */
             background: rgba(0, 0, 0, 0.6);
             border-radius: 15px;
@@ -299,7 +299,7 @@ if (!document.getElementById('scroller-styles')) {
             transform-origin: top left;
         }
         .scroller-fixed-top .scroller-inner {
-            height: 110px; /* Height for exactly 2 games with text */
+            height: 160px; /* Increased height to show at least 2 games */
             overflow: hidden;
         }
         .scroller-fixed-top .scroller-title {
@@ -311,10 +311,7 @@ if (!document.getElementById('scroller-styles')) {
 }
 
 function renderTopLeftScroller() {
-
-    return; 
-
-     // 🚫 Skip on mobile
+    // 🚫 Skip on mobile
     if (isMobileDevice()) {
         console.log("📱 Mobile detected — scroller hidden");
         return;
