@@ -232,8 +232,8 @@ button:active {
 /* Leaderboard */
 #side-leaderboard {
     position: fixed;
-    top: 50%;
-    left: 20px;
+    top: 60%;
+    left: 10px;
     transform: translateY(-50%);
     width: 300px;
     background: rgba(0, 0, 0, 0.4);
