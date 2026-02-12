@@ -172,6 +172,19 @@ function getOS() {
     return "Unknown";
 }
 
+function getBrowser() {
+    const ua = navigator.userAgent;
+
+    if (/Edg/i.test(ua)) return "Edge";
+    if (/OPR|Opera/i.test(ua)) return "Opera";
+    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+    if (/Firefox/i.test(ua)) return "Firefox";
+    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
+
+    return "Unknown";
+}
+
 // --- Initialization ---
 function init() {
     // 1. Three.js Scene
@@ -236,7 +249,7 @@ function init() {
 
             // Track click event
             if (window.trackGameEvent) {
-                const osKey = getOSKey();
+                const osKey = getBrowser();
                 window.trackGameEvent(`smartlink_ad_click_football_${osKey}`, {
                     ad_type: "reward",
                     game: "football_3d",
@@ -731,7 +744,7 @@ function gameOver() {
     gameOverMenu.classList.remove('hidden');
 
      if (window.trackGameEvent) {
-        const osKey = getOSKey();
+        const osKey = getBrowser();
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
 
 
@@ -937,7 +950,7 @@ function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
 
-        window.trackGameEvent(`game_duration_football_${seconds}_${reason}_${getOS()}`, {
+        window.trackGameEvent(`game_duration_football_${seconds}_${reason}_${getBrowser()}`, {
             seconds,
             end_reason: reason,
             os: getOS()
@@ -958,7 +971,7 @@ window.addEventListener("beforeunload", () => {
     sendDurationOnExit("tab_close_football");
 
     if (!gameStartedFlag && window.trackGameEvent) {
-        const osKey = getOSKey();
+        const osKey = getBrowser();
         window.trackGameEvent(`exit_before_game_football_${osKey}`, {
             os: getOS()
         });
