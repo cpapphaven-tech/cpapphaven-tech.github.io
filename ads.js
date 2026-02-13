@@ -50,7 +50,7 @@ function shouldLoadAds() {
         console.log("🚧 [ADS] Dev mode ON — ads blocked");
         return false;
     }
-    
+
     // Check cookie consent (GDPR/LGPD compliance)
     // const consent = localStorage.getItem('play-mix-games-cookie-consent');
     // if (consent) {
@@ -60,7 +60,7 @@ function shouldLoadAds() {
     //         return false;
     //     }
     // }
-    
+
     return true;
 }
 
@@ -76,10 +76,10 @@ function loadSocialBarAd() {
     // Only run on mobile screens (max-width 768px)
     if (window.matchMedia("(max-width: 768px)").matches) {
 
-    // Inject ad script (same as <script src=...>)
-    const script = document.createElement("script");
-    script.src = "https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js";
-    document.head.appendChild(script);
+        // Inject ad script (same as <script src=...>)
+        const script = document.createElement("script");
+        script.src = "https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js";
+        document.head.appendChild(script);
 
     }
 
@@ -128,14 +128,14 @@ function loadSmartlinkAd() {
     }
 
 
-   
+
 
     window.open(
         "https://www.effectivegatecpm.com/gp6cvyi4?key=a90897ce62f2dd15a5aab13ad90b2e66",
         "_blank"
     );
     console.log('✅ [ADS] Smartlink ad opened');
-     
+
 }
 
 /**
@@ -180,7 +180,8 @@ function renderGameScroller(containerId) {
         { name: "Football 3D", url: "../Football3D/index.html", img: "../assets/football3d.png", color: "#4caf50" },
         { name: "Basketball 3D", url: "../Basketball3D/index.html", img: "../assets/basketball3d.png", color: "#e65100" },
         { name: "Helix Bounce", url: "../HelixBounce/index.html", img: "../assets/helixbounce.png", color: "#cc00cc" },
-        { name: "Sushi Match 3D", url: "../SushiMatch/index.html", img: "../assets/sushimatch3d.png", color: "#ff5722" }
+        { name: "Sushi Match 3D", url: "../SushiMatch/index.html", img: "../assets/sushimatch3d.png", color: "#ff5722" },
+        { name: "Burger Stack 3D", url: "../BurgerStack/index.html", img: "../assets/burgerstack.png", color: "#ff6b35" }
     ];
 
     // Filter out current game to avoid self-promotion
@@ -213,19 +214,19 @@ function renderGameScroller(containerId) {
         inner.innerHTML += inner.innerHTML;
 
         let frame = 0;
-const speed = 0.31;
-const limit = inner.scrollHeight / 2;
+        const speed = 0.31;
+        const limit = inner.scrollHeight / 2;
 
-function autoScroll() {
-    frame++;
+        function autoScroll() {
+            frame++;
 
-    if (frame % 3 === 0) { // scroll every 3 frames
-        inner.scrollTop = (inner.scrollTop + speed) % limit;
-    }
+            if (frame % 3 === 0) { // scroll every 3 frames
+                inner.scrollTop = (inner.scrollTop + speed) % limit;
+            }
 
-     
-   requestAnimationFrame(autoScroll);
-}
+
+            requestAnimationFrame(autoScroll);
+        }
 
         setTimeout(() => requestAnimationFrame(autoScroll), 800);
     }
@@ -313,6 +314,63 @@ if (!document.getElementById('scroller-styles')) {
             margin-top: 0;
             font-size: 0.6rem;
         }
+
+        /* Top-Right Version (for in-game display) */
+        .scroller-fixed-top-right {
+            position: fixed;
+            top: 70px; /* Below header */
+            right: 15px;
+            z-index: 35; /* Below HUD (40) but above game canvas */
+            width: 160px; /* Reduced width */
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 12px;
+            padding: 8px; /* Reduced padding */
+            border: 2px solid rgba(255, 107, 53, 0.5);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(0.9); /* Scale down slightly */
+            transform-origin: top right;
+        }
+        .scroller-fixed-top-right .scroller-inner {
+            height: 140px; /* Reduced height */
+            overflow: hidden;
+            gap: 6px; /* Tighter gap */
+        }
+        .scroller-fixed-top-right .scroller-title {
+            margin-top: 0;
+            font-size: 0.55rem; /* Smaller title */
+            color: #ff6b35;
+            margin-bottom: 6px;
+        }
+        .scroller-fixed-top-right .scroller-item {
+            background: rgba(255, 107, 53, 0.1);
+            padding: 6px; /* Smaller item padding */
+            border-radius: 8px;
+            gap: 8px;
+        }
+        .scroller-fixed-top-right .scroller-img {
+            width: 30px; /* Smaller images */
+            height: 30px;
+        }
+        .scroller-fixed-top-right .scroller-name {
+            font-size: 0.7rem; /* Smaller text */
+        }
+        .scroller-fixed-top-right .scroller-play {
+            font-size: 0.55rem;
+        }
+        .scroller-fixed-top-right .scroller-item {
+            background: rgba(255, 107, 53, 0.1);
+        }
+        .scroller-fixed-top-right .scroller-item:hover {
+            background: rgba(255, 107, 53, 0.25);
+        }
+
+        /* Hide on mobile */
+        @media (max-width: 768px) {
+            .scroller-fixed-top-right {
+                display: none;
+            }
+        }
     `;
     document.head.appendChild(styles);
 }
@@ -334,4 +392,23 @@ function renderTopLeftScroller() {
 
     renderGameScroller('top-left-game-scroller');
     container.classList.add('scroller-fixed-top');
+}
+
+function renderTopRightScroller() {
+    // 🚫 Skip on mobile
+    if (isMobileDevice()) {
+        console.log("📱 Mobile detected — top-right scroller hidden");
+        return;
+    }
+
+    // Create container if not exists
+    let container = document.getElementById('top-right-game-scroller');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'top-right-game-scroller';
+        document.body.appendChild(container);
+    }
+
+    renderGameScroller('top-right-game-scroller');
+    container.classList.add('scroller-fixed-top-right');
 }
