@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍔 Burger Stack 3D - Stack the Ultimate Burger! | PlayMixGames</title>
+    <meta name="description"
+        content="Stack the ultimate burger! Tap to drop ingredients and build the tallest burger tower. Addictive 3D stacking game for all ages!">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <!-- Firebase Analytics -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBSQLC1KPvLN_5dFxfVXnqWwkUOEYqGWBs",
+            authDomain: "playmixgames-in.firebaseapp.com",
+            projectId: "playmixgames-in",
+            storageBucket: "playmixgames-in.firebasestorage.app",
+            messagingSenderId: "1085913429829",
+            appId: "1:1085913429829:web:d8e7c8b9a0f1e2c3d4e5f6",
+            measurementId: "G-XXXXXXXXXX"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        window.analytics = getAnalytics(app);
+        window.logAnalyticsEvent = logEvent;
+    </script>
+
+    <!-- Load Ads Script -->
+    <script src="../ads.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+        });
+    </script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">🍔 Burger Stack 3D</h1>
+        <div class="score-display">
+            <span id="score">0</span>
+        </div>
+    </header>
+
+     <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner">
+        <!-- Script will be injected here by game.js after 2s -->
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- Instructions Panel (Left Side) -->
+        <div id="instructions-panel">
+            <div class="panel-content">
+                <h2 class="panel-title">🍔 Burger Stack 3D</h2>
+                <h3 class="panel-subtitle">Build the Ultimate Burger!</h3>
+
+                <div class="instructions-section">
+                    <h4>How to Play</h4>
+                    <div class="instruction-item">
+                        <span class="instruction-icon">👆</span>
+                        <div class="instruction-text">
+                            <strong>Tap to Stack</strong><br>
+                            <small>Click/tap to drop ingredients</small>
+                        </div>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="instruction-icon">🎯</span>
+                        <div class="instruction-text">
+                            <strong>Perfect Alignment</strong><br>
+                            <small>Align perfectly for bonus points</small>
+                        </div>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="instruction-icon">📏</span>
+                        <div class="instruction-text">
+                            <strong>Stay Centered</strong><br>
+                            <small>Overhang gets trimmed off</small>
+                        </div>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="instruction-icon">🏆</span>
+                        <div class="instruction-text">
+                            <strong>Build High</strong><br>
+                            <small>Stack as many as you can!</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h4>Pro Tips</h4>
+                    <p>• Watch the ingredient movement</p>
+                    <p>• Time your taps perfectly</p>
+                    <p>• Perfect stacks = bonus points</p>
+                    <p>• Build the tallest burger!</p>
+                </div>
+
+                <div class="ingredients-section">
+                    <h4>Ingredients</h4>
+                    <div class="ingredient-list">
+                        <span>🍞 Bun</span>
+                        <span>🥩 Patty</span>
+                        <span>🧀 Cheese</span>
+                        <span>🥬 Lettuce</span>
+                        <span>🍅 Tomato</span>
+                        <span>🥓 Bacon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 class="title-main">Game Over!</h1>
+                <h2 class="title-sub">Your Burger Tower Fell!</h2>
+                <div class="final-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Height</span>
+                        <span class="stat-value" id="final-height">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Score</span>
+                        <span class="stat-value" id="final-score">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Perfect Stacks</span>
+                        <span class="stat-value" id="final-perfects">0</span>
+                    </div>
+                </div>
+                <button id="restart-btn" class="game-btn primary-btn">
+                    🍔 Stack Again
+                </button>
+                <button id="home-btn" class="game-btn secondary-btn">
+                    🏠 Home
+                </button>
+            </div>
+        </div>
+
+        <!-- Game HUD -->
+        <div id="game-hud" class="hidden">
+            <div class="hud-top">
+                <div class="hud-item">
+                    <span class="hud-label">Height</span>
+                    <span class="hud-value" id="height">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">Perfect</span>
+                    <span class="hud-value" id="perfect-count">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">Combo</span>
+                    <span class="hud-value" id="combo">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perfect Stack Notification -->
+        <div id="perfect-notification" class="hidden">
+            <span class="perfect-text">PERFECT! 🎯</span>
+            <span class="perfect-bonus">+50</span>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Particle Container -->
+        <div id="particle-container"></div>
+    </div>
+
+    <!-- Banner Ad Container -->
+    <div id="banner-ad-container" style="text-align: center; margin: 20px auto; max-width: 728px;">
+        <div id="banner-ad"></div>
+    </div>
+
+    <!-- Game Script -->
+    <script src="game.js"></script>
+
+    <!-- Bottom Banner Ad -->
+    <div id="bottom-ad"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("bottom-ad");
+
+            function loadBanner() {
+                if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
+                    console.log("🚧 [ADS] Banner skipped");
+                    return;
+                }
+
+                if (!container) {
+                    console.log("❌ bottom-ad container missing");
+                    return;
+                }
+
+                container.innerHTML = '<div id="banner-slot"></div>';
+                const slot = document.getElementById("banner-slot");
+
+                window.atOptions = {
+                    key: "de617c07128b585ef939154460e6858f",
+                    format: "iframe",
+                    height: 50,
+                    width: 320,
+                    params: {}
+                };
+
+                const s = document.createElement("script");
+                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                slot.appendChild(s);
+
+                console.log("✅ Banner loaded");
+            }
+
+            if (window.DEV_MODE) {
+                return;
+            }
+            setTimeout(loadBanner, 2000);
+        });
+    </script>
+</body>
+
+</html>
