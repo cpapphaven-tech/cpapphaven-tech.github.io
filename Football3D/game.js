@@ -307,6 +307,9 @@ function loadAdsterraBanner() {
     const container = document.getElementById("adsterra-banner");
     if (!container) return;
 
+    const container2 = document.getElementById("adsterra-left-banner");
+    if (!container2) return;
+
     if (container.dataset.loaded === "true") return;
     container.dataset.loaded = "true";
 
@@ -329,6 +332,29 @@ function loadAdsterraBanner() {
 
         container.appendChild(optionsScript);
         container.appendChild(invokeScript);
+
+        // 300
+
+        const optionsScript2 = document.createElement("script");
+        optionsScript2.type = "text/javascript";
+        optionsScript2.text = `
+            atOptions = {
+                key: "e2ef471584f829430c335953230fe3ef",
+                format: "iframe",
+                height: 300,
+                width: 160,
+                params: {}
+            };
+        `;
+        const invokeScript2 = document.createElement("script");
+        invokeScript2.type = "text/javascript";
+        invokeScript2.src = "https://offevasionrecruit.com/e2ef471584f829430c335953230fe3ef/invoke.js";
+        container2.appendChild(optionsScript2);
+        container2.appendChild(invokeScript2);
+
+        container2.appendChild(optionsScript);
+        container2.appendChild(invokeScript);
+
     }, 2000);
 }
 
