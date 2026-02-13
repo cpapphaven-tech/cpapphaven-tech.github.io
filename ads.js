@@ -72,10 +72,16 @@ function shouldLoadAds() {
  */
 function loadSocialBarAd() {
 
+
+    // Only run on mobile screens (max-width 768px)
+    if (window.matchMedia("(max-width: 768px)").matches) {
+
     // Inject ad script (same as <script src=...>)
     const script = document.createElement("script");
     script.src = "https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js";
     document.head.appendChild(script);
+    
+    }
 
 }
 
