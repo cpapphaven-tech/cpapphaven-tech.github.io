@@ -80,7 +80,7 @@ function loadSocialBarAd() {
     const script = document.createElement("script");
     script.src = "https://pl28566875.effectivegatecpm.com/50/ce/d8/50ced8d3053d18abbee81fdcf51b4216.js";
     document.head.appendChild(script);
-    
+
     }
 
 }
@@ -179,7 +179,8 @@ function renderGameScroller(containerId) {
         { name: "Stack 3D", url: "../Stack3D/index.html", img: "../assets/stack3d.png", color: "#4d79ff" },
         { name: "Football 3D", url: "../Football3D/index.html", img: "../assets/football3d.png", color: "#4caf50" },
         { name: "Basketball 3D", url: "../Basketball3D/index.html", img: "../assets/basketball3d.png", color: "#e65100" },
-        { name: "Helix Bounce", url: "../HelixBounce/index.html", img: "../assets/helixbounce.png", color: "#cc00cc" }
+        { name: "Helix Bounce", url: "../HelixBounce/index.html", img: "../assets/helixbounce.png", color: "#cc00cc" },
+        { name: "Sushi Match 3D", url: "../SushiMatch/index.html", img: "../assets/sushimatch3d.png", color: "#ff5722" }
     ];
 
     // Filter out current game to avoid self-promotion
