@@ -14,24 +14,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Firebase Analytics -->
-    <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-        import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyBSQLC1KPvLN_5dFxfVXnqWwkUOEYqGWBs",
-            authDomain: "playmixgames-in.firebaseapp.com",
-            projectId: "playmixgames-in",
-            storageBucket: "playmixgames-in.firebasestorage.app",
-            messagingSenderId: "1085913429829",
-            appId: "1:1085913429829:web:d8e7c8b9a0f1e2c3d4e5f6",
-            measurementId: "G-XXXXXXXXXX"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        window.analytics = getAnalytics(app);
-        window.logAnalyticsEvent = logEvent;
-    </script>
+    <script type="module" src="../analytics.js"></script>
 
     <!-- Load Ads Script -->
     <script src="../ads.js"></script>
