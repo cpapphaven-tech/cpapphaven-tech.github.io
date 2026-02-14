@@ -135,8 +135,8 @@ function init() {
     animate();
 
     if (!window.DEV_MODE) {
-                  loadAdsterraBanner();
-        }
+        loadAdsterraBanner();
+    }
 }
 
 function startLevel(levelNum) {
@@ -339,15 +339,22 @@ function createLiquidUnit(colorId, unitIndex) {
 function adjustCamera(rows) {
     const aspect = window.innerWidth / window.innerHeight;
     let targetZ = 14;
+    let targetY = 0;
 
     if (aspect < 1) {
         // Mobile Portrait: Zoom out significantly
         targetZ = 20 + (rows * 5);
+        // Shift bottles down for better mobile view
+        targetY = -3.5;
     } else {
         targetZ = rows > 1 ? 16 : 14;
+        targetY = 0;
     }
 
     gsap.to(camera.position, { z: targetZ, duration: 1 });
+    if (tubesContainer) {
+        gsap.to(tubesContainer.position, { y: targetY, duration: 1 });
+    }
 }
 
 // --- Interaction ---
