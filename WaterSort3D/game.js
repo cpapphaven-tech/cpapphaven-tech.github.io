@@ -168,8 +168,8 @@ function startLevel(levelNum) {
 
 // --- Level Generation ---
 function generateLevel(level) {
-    // Difficulty logic
-    let numColors = Math.min(3 + Math.floor(level / 2), 10); // Start with 3, max 10
+    // Difficulty logic: Harder start
+    let numColors = Math.min(4 + Math.floor(level / 2), 12); // Start with 4, max 12
     let emptyTubes = 2;
     let totalTubes = numColors + emptyTubes;
 
@@ -177,7 +177,6 @@ function generateLevel(level) {
     let tubesData = [];
     for (let c = 0; c < numColors; c++) {
         let colorId = c % CONFIG.COLORS.length;
-        // Full tube of one color
         tubesData.push([colorId, colorId, colorId, colorId]);
     }
     // Add empty tubes
@@ -185,17 +184,27 @@ function generateLevel(level) {
         tubesData.push([]);
     }
 
-    // 2. Shuffle by simulating random valid moves
-    let shuffleMoves = 20 + (level * 2);
+    // 2. Shuffle: Increased moves
+    let shuffleMoves = 40 + (level * 5);
     let currentData = JSON.parse(JSON.stringify(tubesData));
 
+    let lastFrom = -1;
     for (let m = 0; m < shuffleMoves; m++) {
         let from = Math.floor(Math.random() * totalTubes);
         let to = Math.floor(Math.random() * totalTubes);
 
-        if (from !== to && isValidMove(currentData, from, to)) {
+        // SHUFFLE: Allow mixing ANY color (ignore matching rule)
+        // Check only for capacity
+        const fromTube = currentData[from];
+        const toTube = currentData[to];
+
+        if (from !== to && from !== lastFrom && fromTube.length > 0 && toTube.length < CONFIG.MAX_UNITS) {
             let color = currentData[from].pop();
             currentData[to].push(color);
+            lastFrom = to;
+        } else {
+            // Retry more aggressively to ensure good shuffle
+            if (Math.random() > 0.3) m--;
         }
     }
     return currentData;
