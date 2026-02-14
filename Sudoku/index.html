@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🧩 Sudoku - Play Free Online | PlayMixGames</title>
+    <meta name="description"
+        content="Play unlimited free Sudoku puzzles. Clean design, mobile-friendly, and challenging levels. Train your brain with PlayMixGames Sudoku!">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">🧩 Sudoku</h1>
+        <div class="level-display">
+            Easy <span id="difficulty-label">| Level 1</span>
+        </div>
+    </header>
+
+    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner">
+        <!-- Script will be injected here by game.js after 2s -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+            if (typeof renderTopRightScroller === 'function') {
+                renderTopRightScroller();
+            }
+        });
+    </script>
+
+
+    <!-- Game Container -->
+    <div id="game-container">
+
+        <!-- Board -->
+        <div id="sudoku-board"></div>
+
+        <!-- Controls (Undo, Notes, Hint) -->
+        <div id="game-controls">
+            <button id="undo-btn" class="control-btn" title="Undo">
+                <span class="icon">↩️</span>
+                <span class="label">Undo</span>
+            </button>
+            <button id="notes-btn" class="control-btn" title="Toggle Notes">
+                <span class="icon">📝</span>
+                <span class="label">Notes: Off</span>
+            </button>
+            <button id="hint-btn" class="control-btn" title="Get Hint">
+                <span class="icon">💡</span>
+                <span class="label">Hint</span>
+            </button>
+            <button id="restart-btn" class="control-btn" title="New Game">
+                <span class="icon">🔄</span>
+                <span class="label">New</span>
+            </button>
+        </div>
+
+        <!-- Number Pad -->
+        <div id="number-pad">
+            <button class="numpad-btn" data-num="1">1</button>
+            <button class="numpad-btn" data-num="2">2</button>
+            <button class="numpad-btn" data-num="3">3</button>
+            <button class="numpad-btn" data-num="4">4</button>
+            <button class="numpad-btn" data-num="5">5</button>
+            <button class="numpad-btn" data-num="6">6</button>
+            <button class="numpad-btn" data-num="7">7</button>
+            <button class="numpad-btn" data-num="8">8</button>
+            <button class="numpad-btn" data-num="9">9</button>
+            <button class="numpad-btn" id="erase-btn" data-num="0">⌫</button>
+        </div>
+
+        <!-- Win Screen -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 class="title-main">Solved!</h1>
+                <h2 class="title-sub">Brain Power +100 🧠</h2>
+                <button id="next-level-btn" class="game-btn primary-btn">
+                    Next Puzzle
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Banner Ad -->
+    <div id="bottom-ad">
+        <script>
+            (function () {
+
+                const container = document.getElementById("bottom-ad");
+
+                function loadBanner() {
+                    if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
+                        console.log("🚧 [ADS] Banner skipped");
+                        return;
+                    }
+
+                    if (!container) return;
+
+                    // Create inner ad wrapper (safe clear)
+                    container.innerHTML = '<div id="banner-slot"></div>';
+                    const slot = document.getElementById("banner-slot");
+
+                    window.atOptions = {
+                        key: "de617c07128b585ef939154460e6858f",
+                        format: "iframe",
+                        height: 50,
+                        width: 320,
+                        params: {}
+                    };
+
+                    const s = document.createElement("script");
+                    s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                    slot.appendChild(s);
+
+                }
+
+                if (window.DEV_MODE) {
+                    return;
+                }
+                // Initial load
+                setTimeout(loadBanner, 2000);
+
+
+
+            })();
+        </script>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

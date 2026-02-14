@@ -1,0 +1,428 @@
+:root {
+    --bg-color: #0f1020;
+    /* Deep Dark Blue */
+    --panel-bg: rgba(30, 30, 40, 0.95);
+    --primary-color: #4facfe;
+    --accent-color: #00f260;
+    /* Neon Green */
+    --cell-bg: rgba(255, 255, 255, 0.05);
+    --cell-border: rgba(255, 255, 255, 0.15);
+    /* Slightly brighter border */
+    --text-color: #ffffff;
+    --highlight-color: rgba(79, 172, 254, 0.25);
+    --selected-color: rgba(0, 242, 96, 0.2);
+    --error-color: #ff4d4d;
+    /* Brighter Red */
+    --fixed-text: #cccccc;
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+    height: 100vh;
+    height: 100dvh;
+    /* Dynamic Viewport Height for Mobile Browsers */
+    touch-action: manipulation;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(15, 16, 32, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.back-btn {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.game-title {
+    font-size: 1.1rem;
+    /* Smaller for mobile */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.level-display {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ffcc00;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 204, 0, 0.3);
+}
+
+/* Game Container - Main Layout */
+#game-container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Spacing: Header(60) + Board + Controls + Numpad + Ad(60) */
+    /* Start content below header */
+    padding-top: 70px;
+    padding-bottom: 70px;
+    /* Space for Ad */
+    justify-content: flex-start;
+    /* Align top on mobile mainly */
+}
+
+/* Sudoku Board */
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    /* Make the board as large as possible but fit height */
+    width: 92vw;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+    max-height: 55vh;
+    /* Don't take more than 55% height on mobile */
+
+    background: var(--bg-color);
+    /* The main border around the whole grid */
+    border: 3px solid var(--primary-color);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2vh;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Responsive font size based on cell width */
+    font-size: min(1.5rem, 6vw);
+    font-weight: 600;
+    color: var(--text-color);
+    background: var(--cell-bg);
+    border-right: 1px solid var(--cell-border);
+    border-bottom: 1px solid var(--cell-border);
+    cursor: pointer;
+    position: relative;
+    transition: background 0.05s;
+}
+
+/* Remove outer borders of cells (handled by container) */
+.cell:nth-child(9n) {
+    border-right: none;
+}
+
+.cell:nth-child(n+73) {
+    border-bottom: none;
+}
+
+/* Thick Borders for 3x3 Blocks */
+/* Vertical lines after col 3, 6 (indexes 3n) */
+.cell:nth-child(3n) {
+    border-right: 2px solid var(--primary-color);
+}
+
+.cell:nth-child(9n) {
+    border-right: none;
+}
+
+/* Reset right edge */
+/* Horizontal lines after row 3, 6 */
+/* Cells 19-27 (row 3) and 46-54 (row 6) bottom border */
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* States */
+.cell.selected {
+    background: var(--selected-color);
+    border: 2px solid var(--accent-color) !important;
+    z-index: 2;
+    /* Bring border on top */
+}
+
+.cell.highlighted {
+    background: var(--highlight-color);
+}
+
+.cell.fixed {
+    color: var(--fixed-text);
+    font-weight: 700;
+}
+
+.cell.error {
+    color: var(--error-color);
+    background: rgba(255, 77, 77, 0.15);
+}
+
+/* Notes inside cell */
+.cell.notes {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    font-size: min(0.5rem, 2vw);
+    line-height: 1;
+    color: #aaa;
+    gap: 0;
+    padding: 1px;
+}
+
+/* Controls (Undo, etc) */
+#game-controls {
+    display: flex;
+    gap: 15px;
+    /* Tighter gap */
+    width: 92vw;
+    max-width: 500px;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+}
+
+.control-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.9;
+    cursor: pointer;
+    min-width: 50px;
+}
+
+.control-btn .icon {
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.08);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    /* Circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    border: 1px solid var(--glass-border);
+    transition: transform 0.1s;
+}
+
+.control-btn:active .icon {
+    transform: scale(0.9);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.control-btn .label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Number Pad */
+#number-pad {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 cols for 10 buttons */
+    gap: 8px;
+    width: 95vw;
+    max-width: 500px;
+    padding: 0 5px;
+}
+
+.numpad-btn {
+    background: rgba(255, 255, 255, 0.08);
+    /* Dark glass */
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 12px 0;
+    /* Taller touch target */
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.numpad-btn:active {
+    background: var(--primary-color);
+    color: #fff;
+    transform: scale(0.95);
+}
+
+/* Delete button specific */
+#erase-btn {
+    color: #ff6b6b;
+}
+
+/* Overlay Screens */
+.overlay-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 16, 32, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.screen-content {
+    background: linear-gradient(135deg, #1e1e28, #2d2d3d);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    width: 85%;
+    max-width: 350px;
+}
+
+.title-main {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.title-sub {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.game-btn {
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Banner Ad Area */
+#bottom-ad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 900;
+    border-top: 1px solid #333;
+}
+
+/* Mobile Optimizations */
+@media (max-height: 700px) {
+
+    /* Small height screens */
+    #sudoku-board {
+        margin-bottom: 1vh;
+        max-height: 50vh;
+    }
+
+    #game-controls {
+        margin-bottom: 1vh;
+    }
+
+    .control-btn .icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .numpad-btn {
+        padding: 8px 0;
+        font-size: 1.4rem;
+    }
+
+    header {
+        height: 50px;
+    }
+
+    #game-container {
+        padding-top: 55px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    /* Very narrow screens */
+    .game-title {
+        display: none;
+    }
+
+    /* Hide title if too narrow to fit back btn */
+    #number-pad {
+        gap: 4px;
+    }
+}
+
+/* Adsterra Banner - Right Side Bottom (Desktop Only) */
+#adsterra-banner {
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    right: 10px;
+    transform: none;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
+    }
+}
