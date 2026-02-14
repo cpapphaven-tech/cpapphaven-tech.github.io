@@ -1,16 +1,16 @@
 // Game Configuration
 const CONFIG = {
-    TUBE_RADIUS: 0.35, // Reduced for mobile
-    TUBE_HEIGHT: 3.0,  // Reduced height
+    TUBE_RADIUS: 0.45, // Wider
+    TUBE_HEIGHT: 2.6,  // Shorter
     TUBE_SEGMENTS: 32,
-    LIQUID_HEIGHT: 0.7, // Proportional to new height
+    LIQUID_HEIGHT: 0.62, // Adjusted for new height
     MAX_UNITS: 4,
     COLORS: [
         0xFF3333, 0x33FF33, 0x3333FF, 0xFFFF33,
         0xFF33FF, 0x33FFFF, 0xFFA500, 0x800080,
         0xA52A2A, 0xFFC0CB, 0x808080, 0xFFFFFF
     ],
-    TUBE_GAP: 1.2, // Tighter gap
+    TUBE_GAP: 1.4, // Increased gap for wider bottles
     ROW_GAP: 3.8   // Adjusted row gap
 };
 
@@ -92,7 +92,7 @@ function sendDurationOnExit(reason) {
 document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
 
-        
+
         sendDurationOnExit("background_watersort");
     }
 });
@@ -577,7 +577,6 @@ function performPourAnimation(fromIdx, toIdx, count, colorId) {
 
     const fromTube = state.tubes[fromIdx];
     const toTube = state.tubes[toIdx];
-
     const movedLiquids = fromTube.liquids.splice(fromTube.liquids.length - count, count);
 
     tl.add(() => {
