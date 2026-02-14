@@ -1,0 +1,409 @@
+:root {
+    --bg-color: #0f1020;
+    --panel-bg: rgba(30, 30, 40, 0.85);
+    --primary-color: #4facfe;
+    --accent-color: #00f260;
+    --text-color: #ffffff;
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --tube-glass: rgba(255, 255, 255, 0.15);
+    --neon-glow: 0 0 10px rgba(79, 172, 254, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden;
+    height: 100vh;
+    touch-action: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(15, 16, 32, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.back-btn {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9em;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+.back-btn:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.game-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.level-display {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffcc00;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 204, 0, 0.3);
+}
+
+/* Game Container */
+#game-container {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Instructions Panel */
+#instructions-panel {
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    bottom: 100px;
+    width: 280px;
+    background: var(--panel-bg);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+    padding: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.panel-title {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.panel-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.instructions-section h4,
+.tips-section h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+.instruction-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.instruction-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    width: 30px;
+    text-align: center;
+}
+
+.instruction-text strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 2px;
+}
+
+.instruction-text small {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.tips-section {
+    margin-top: auto;
+    background: rgba(79, 172, 254, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(79, 172, 254, 0.2);
+}
+
+.tips-section p {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+/* Canvas */
+#game-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    outline: none;
+}
+
+/* Bottom Controls */
+#game-controls {
+    position: absolute;
+    bottom: 100px;
+    /* Above banner ad */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+
+.control-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* Circle buttons */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.control-btn:active {
+    transform: translateY(1px);
+}
+
+.control-btn .icon {
+    font-size: 1.5rem;
+    margin-bottom: 2px;
+}
+
+.control-btn .label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+/* Premium Button (Add Tube) */
+.premium-btn {
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    width: 70px;
+    /* Slightly larger */
+    height: 70px;
+    margin-top: -10px;
+    /* Pop out effect */
+    box-shadow: 0 0 15px rgba(255, 94, 98, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.premium-btn:hover {
+    background: linear-gradient(135deg, #ff5e62, #ff9966);
+    box-shadow: 0 0 20px rgba(255, 94, 98, 0.6);
+}
+
+/* Bottom Banner Area */
+#bottom-ad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    /* Space for banner */
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* Overlay Screens */
+.overlay-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 16, 32, 0.95);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+
+.overlay-screen.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.screen-content {
+    text-align: center;
+    background: var(--panel-bg);
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.9);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.overlay-screen.visible .screen-content {
+    transform: scale(1);
+}
+
+.title-main {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(79, 172, 254, 0.5);
+}
+
+.title-sub {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #aaa;
+}
+
+.game-btn {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(79, 172, 254, 0.6);
+}
+
+.stars-container {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px gold);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #instructions-panel {
+        display: none;
+        /* Hide for cleanliness on mobile, or make collapsible */
+    }
+
+    .game-title {
+        font-size: 1rem;
+    }
+
+    #game-controls {
+        bottom: 70px;
+        /* Above banner */
+        width: 90%;
+        justify-content: space-around;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .control-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .premium-btn {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Adsterra Banner - Right Side Bottom (Desktop Only) */
+#adsterra-banner {
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    right: 10px;
+    transform: none;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
+    }
+}

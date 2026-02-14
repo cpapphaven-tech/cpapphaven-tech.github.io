@@ -181,7 +181,8 @@ function renderGameScroller(containerId) {
         { name: "Basketball 3D", url: "../Basketball3D/index.html", img: "../assets/basketball3d.png", color: "#e65100" },
         { name: "Helix Bounce", url: "../HelixBounce/index.html", img: "../assets/helixbounce.png", color: "#cc00cc" },
         { name: "Sushi Match 3D", url: "../SushiMatch/index.html", img: "../assets/sushimatch3d.png", color: "#ff5722" },
-        { name: "Burger Stack 3D", url: "../BurgerStack/index.html", img: "../assets/burgerstack.png", color: "#ff6b35" }
+        { name: "Burger Stack 3D", url: "../BurgerStack/index.html", img: "../assets/burgerstack.png", color: "#ff6b35" },
+        { name: "Water Sort 3D", url: "../WaterSort3D/index.html", img: "../assets/watersort3d.png", color: "#4facfe" }
     ];
 
     // Filter out current game to avoid self-promotion
@@ -319,9 +320,9 @@ if (!document.getElementById('scroller-styles')) {
         .scroller-fixed-top-right {
             position: fixed;
             top: 70px; /* Below header */
-            right: 15px;
+            right: 180px;
             z-index: 35; /* Below HUD (40) but above game canvas */
-            width: 160px; /* Reduced width */
+            width: 200px; /* Reduced width */
             background: rgba(0, 0, 0, 0.85);
             border-radius: 12px;
             padding: 8px; /* Reduced padding */
