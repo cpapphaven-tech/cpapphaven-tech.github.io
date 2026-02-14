@@ -77,6 +77,19 @@ function getOS() {
     return "Unknown";
 }
 
+function getBrowser() {
+    const ua = navigator.userAgent;
+
+    if (/Edg/i.test(ua)) return "Edge";
+    if (/OPR|Opera/i.test(ua)) return "Opera";
+    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+    if (/Firefox/i.test(ua)) return "Firefox";
+    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
+
+    return "Unknown";
+}
+
 // --- Initialization ---
 function init() {
     scene = new THREE.Scene();
@@ -789,7 +802,7 @@ function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
 
-        window.trackGameEvent(`game_duration_basketball_${seconds}_${reason}_${getOS()}`, {
+        window.trackGameEvent(`game_duration_basketball_${seconds}_${reason}_${getBrowser()}`, {
             seconds,
             end_reason: reason,
             os: getOS()
