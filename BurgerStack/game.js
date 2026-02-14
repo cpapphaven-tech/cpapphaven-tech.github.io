@@ -33,6 +33,63 @@ let gameState = {
 let scene, camera, renderer, raycaster, mouse;
 let stackGroup, movingGroup;
 
+let gameStartTime = null;
+let durationSent = false;
+
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
+}
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`game_duration_burgerstack_${seconds}_${reason}_${getOS()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+
+        
+        sendDurationOnExit("background_burgerstack");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close_burgerstack");
+
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`exit_before_game_burgerstack_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
+
 function initThreeJS() {
     // Scene
     scene = new THREE.Scene();
@@ -101,6 +158,9 @@ function initThreeJS() {
 
     // Start animation loop
     animate();
+
+    gameStartTime = Date.now();   // ⏱ start timer
+    durationSent = false;
 }
 
 // ===== Base Platform =====
