@@ -10,6 +10,7 @@ const state = {
     diceValue: 0,
     waitingForMove: false,
     rolling: false,
+    animating: false,
     gameMode: 2,
     gameOver: false
 };
@@ -176,11 +177,11 @@ function init() {
     UI.diceBtn.addEventListener('click', rollDice);
     document.getElementById('restart-btn').addEventListener('click', () => location.reload());
 
-     if (!window.DEV_MODE) {
-                //   loadAdsterraBanner();
-        }
+    if (!window.DEV_MODE) {
+        //   loadAdsterraBanner();
+    }
 
-            gameStartTime = Date.now();   // ⏱ start timer
+    gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 }
 
@@ -327,7 +328,7 @@ function getCoordinates(player, step, tokenIndex) {
 // --- Interaction ---
 
 function rollDice() {
-    if (state.rolling || state.waitingForMove) return;
+    if (state.rolling || state.waitingForMove || state.animating) return;
     const p = state.players[state.turnIndex];
 
     state.rolling = true;
@@ -377,19 +378,38 @@ function handleTokenClick(pIdx, tIdx) {
     }
 }
 
-function moveToken(p, tIndex) {
+async function moveToken(p, tIndex) {
     state.waitingForMove = false;
+    state.animating = true;
     document.querySelectorAll('.can-move').forEach(el => el.classList.remove('can-move'));
 
-    const startStep = p.tokens[tIndex];
-    const targetStep = (startStep === -1) ? 0 : startStep + state.diceValue;
+    let currentStep = p.tokens[tIndex];
+    const diceVal = state.diceValue;
+    const stepsToMove = (currentStep === -1) ? 1 : diceVal;
 
-    // Jump to Target
-    p.tokens[tIndex] = targetStep;
-    if (targetStep === 56) p.tokens[tIndex] = 99; // Finished
+    // Step-by-Step Animation
+    for (let i = 0; i < stepsToMove; i++) {
+        if (p.tokens[tIndex] === -1) {
+            p.tokens[tIndex] = 0;
+        } else {
+            p.tokens[tIndex]++;
+        }
 
-    // Collision
-    if (targetStep < 51 && targetStep !== 0) {
+        drawTokens();
+        // Wait for a short duration between steps for animation effect
+        await new Promise(resolve => setTimeout(resolve, 250));
+
+        // If reached exact home goal
+        if (p.tokens[tIndex] === 56) {
+            p.tokens[tIndex] = 99;
+            break;
+        }
+    }
+
+    const targetStep = p.tokens[tIndex];
+
+    // Collision Check (After full move)
+    if (targetStep < 51 && targetStep !== -1 && targetStep !== 99 && targetStep !== 0) {
         const globalPos = (p.startIdx + targetStep) % 52;
         // Check if globalPos is a safe spot Star
         const isSafeStar = SAFE_SPOTS.some(s => {
@@ -403,6 +423,7 @@ function moveToken(p, tIndex) {
     }
 
     drawTokens();
+    state.animating = false;
 
     if (state.diceValue === 6 || targetStep === 99) {
         updateMessage("Bonus Roll", 800, () => {
@@ -446,7 +467,19 @@ function startTurn(idx) {
     UI.turnDisplay.textContent = `TURN: ${p.color.toUpperCase()}`;
     UI.turnDisplay.style.color = `var(--ludo-${p.color})`;
     UI.diceBtn.textContent = '🎲';
-    updateMessage(p.type === 'human' ? "Roll Dice" : "CPU Thinking...");
+
+    // Add color class to dice
+    UI.diceBtn.classList.remove('red-turn', 'green-turn', 'yellow-turn', 'blue-turn');
+    UI.diceBtn.classList.add(`${p.color}-turn`);
+
+    // Change message based on player type
+    const message = p.type === 'human' ? "Roll Dice" : `${p.color.toUpperCase()} Turn`;
+    
+    updateMessage(message);
+
+     // ✅ Force message color to white
+    UI.message.style.color = "#ffffff";
+    
     if (p.type === 'cpu') setTimeout(rollDice, 1000);
 }
 
