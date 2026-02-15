@@ -17,7 +17,8 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: var(--bg-color);
+    background: linear-gradient(135deg, #0f111a 0%, #1a1d2e 100%);
+    background-attachment: fixed;
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -28,7 +29,7 @@ header {
     height: var(--header-height);
     background: rgba(15, 17, 26, 0.8);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: fixed;
     top: 0;
     width: 100%;
@@ -118,13 +119,13 @@ nav ul li a:hover {
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .game-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     border-color: var(--accent-color);
 }
 
@@ -163,7 +164,7 @@ nav ul li a:hover {
 footer {
     padding: 50px 5%;
     background: #080a11;
-    border-top: 1px solid rgba(255,255,255,0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
 }
 
