@@ -584,7 +584,7 @@ input {
     position: fixed;
     bottom: 90px;
     /* Moved up to clear bottom ad */
-    left: 200px;
+    left: 20px;
     right: auto;
     /* Don't stretch */
     display: flex;
