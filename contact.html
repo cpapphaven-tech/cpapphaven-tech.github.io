@@ -9,6 +9,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
     crossorigin="anonymous"></script>
   <script type="module" src="./analytics.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 
 <body>
@@ -22,14 +23,26 @@
   </header>
 
   <main class="page-content">
-    <h1>Support & Contact</h1>
-    <p>Your feedback is vital to the evolution of PlayMixGames. Whether you've encountered a technical glitch, have a
-      suggestion for a new game feature, or simply want to share your high score, our team is ready to listen.</p>
+  <h1>Support & Contact</h1>
+  <p>Your feedback is vital to the evolution of PlayMixGames. Whether you've encountered a technical glitch, have a
+    suggestion for a new game feature, or simply want to share your high score, our team is ready to listen.</p>
 
-   
+  <form id="support-form" class="contact-form">
+    <label>
+      Title
+      <input type="text" id="title" required />
+    </label>
 
-  
-  </main>
+    <label>
+      Description
+      <textarea id="description" rows="5" required></textarea>
+    </label>
+
+    <button type="submit">Submit</button>
+
+    <p id="form-message" style="margin-top:10px;"></p>
+  </form>
+</main>
 
   <footer>
     <div class="footer-links">
@@ -42,6 +55,41 @@
     <p class="copyright">&copy; 2026 PlayMixGames. All rights reserved. <span id="app-version"
         style="opacity: 0.5; font-size: 0.7em;"></span></p>
   </footer>
+
+  <script>
+
+  const supabaseUrl = "https://bjpgovfzonlmjrruaspp.supabase.co";
+  const supabaseKey = "sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM";
+
+  const { createClient } = supabase;
+  const db = createClient(supabaseUrl, supabaseKey);
+
+  const form = document.getElementById("support-form");
+  const message = document.getElementById("form-message");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const title = document.getElementById("title").value;
+    const description = document.getElementById("description").value;
+
+    message.textContent = "Submitting...";
+
+    const { error } = await db
+      .from("support_messages")
+      .insert([{ title, description }]);
+
+    if (error) {
+      message.textContent = "Error submitting form.";
+      message.style.color = "red";
+    } else {
+      message.textContent = "Message sent successfully!";
+      message.style.color = "green";
+      form.reset();
+    }
+  });
+</script>
+
 </body>
 
 </html>
