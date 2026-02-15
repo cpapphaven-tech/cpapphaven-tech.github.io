@@ -101,14 +101,16 @@ header {
     position: fixed;
     left: 0;
     top: 60px;
-    bottom: 0;
-    width: 320px;
+    height: calc(100vh - 60px); /* fixed to screen */
+    width: 265px;
+
     background: linear-gradient(135deg, rgba(200, 16, 46, 0.15), rgba(139, 0, 0, 0.15));
     backdrop-filter: blur(20px);
     border-right: 2px solid var(--japanese-red);
     z-index: 40;
-    overflow-y: auto;
-    animation: slideInLeft 0.5s ease;
+
+    overflow-y: auto;  /* internal scroll */
+    overflow-x: hidden;
 }
 
 .panel-content {
