@@ -29,8 +29,8 @@
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    overflow: hidden;
-    height: 100vh;
+    overflow-y: auto;
+    min-height: 100vh;
     height: 100dvh;
     /* Dynamic Viewport Height for Mobile Browsers */
     touch-action: manipulation;

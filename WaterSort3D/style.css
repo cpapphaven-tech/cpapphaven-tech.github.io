@@ -21,8 +21,8 @@
 body {
     background: var(--bg-color);
     color: var(--text-color);
-    overflow: hidden;
-    height: 100vh;
+    overflow-y: auto;
+    min-height: 100vh;
     touch-action: none;
     display: flex;
     flex-direction: column;

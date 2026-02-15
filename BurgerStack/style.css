@@ -26,8 +26,8 @@ body {
     font-family: 'Arial Black', 'Arial Bold', 'Helvetica', sans-serif;
     background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
     color: var(--text-color);
-    overflow: hidden;
-    height: 100vh;
+    overflow-y: auto;
+    min-height: 100vh;
     position: relative;
 }
 
