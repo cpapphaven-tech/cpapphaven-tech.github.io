@@ -411,3 +411,22 @@ header {
     cursor: pointer;
     text-transform: uppercase;
 }
+
+/* Adsterra Banner - Right Side Bottom (Desktop Only) */
+#adsterra-banner {
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    right: 10px;
+    transform: none;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
+    }
+}

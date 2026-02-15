@@ -47,6 +47,125 @@ const homeRuns = {
     blue: [{ r: 13, c: 7 }, { r: 12, c: 7 }, { r: 11, c: 7 }, { r: 10, c: 7 }, { r: 9, c: 7 }]
 };
 
+let gameStartTime = null;
+let durationSent = false;
+
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
+}
+
+function getBrowser() {
+    const ua = navigator.userAgent;
+
+    if (/Edg/i.test(ua)) return "Edge";
+    if (/OPR|Opera/i.test(ua)) return "Opera";
+    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+    if (/Firefox/i.test(ua)) return "Firefox";
+    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
+
+    return "Unknown";
+}
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`game_duration_ludo_${seconds}_${reason}_${getBrowser()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+
+
+        sendDurationOnExit("background_ludo");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close_ludo");
+
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`exit_before_game_ludo_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
+
+// --- Game Control ---
+function loadAdsterraBanner() {
+    // Desktop only check (using User Agent and Screen Width for safety)
+    const osKey = getOSKey();
+    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
+        return;
+    }
+
+    const container = document.getElementById("adsterra-banner");
+    if (!container) return;
+
+    setTimeout(() => {
+        console.log("Loading Adsterra Banner...");
+
+        // Create an iframe to safely isolate the ad execution
+        const iframe = document.createElement('iframe');
+        iframe.style.width = "160px";
+        iframe.style.height = "600px";
+        iframe.style.border = "none";
+        iframe.style.overflow = "hidden";
+        iframe.scrolling = "no";
+
+        container.appendChild(iframe);
+
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write(`
+            <html>
+            <body style="margin:0;padding:0;background:transparent;">
+                <script>
+                    atOptions = {
+                        'key' : '34488dc997487ff336bf5de366c86553',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
+            </body>
+            </html>
+        `);
+        doc.close();
+
+
+
+    }, 2000);
+}
+
 // --- Initialization ---
 
 function init() {
@@ -56,6 +175,13 @@ function init() {
     document.getElementById('mode-4p').addEventListener('click', () => startGame(4));
     UI.diceBtn.addEventListener('click', rollDice);
     document.getElementById('restart-btn').addEventListener('click', () => location.reload());
+
+     if (!window.DEV_MODE) {
+                //   loadAdsterraBanner();
+        }
+
+            gameStartTime = Date.now();   // ⏱ start timer
+    durationSent = false;
 }
 
 function startGame(mode) {
