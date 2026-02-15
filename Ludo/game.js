@@ -357,6 +357,10 @@ function checkMoves() {
 
     if (moves.length === 0) {
         updateMessage("No Moves!", 1000, nextTurn);
+    } else if (moves.length === 1) {
+        // Auto-move if only one option exists (Speed up)
+        state.waitingForMove = true; // Briefly block other inputs
+        setTimeout(() => moveToken(p, moves[0]), 500);
     } else {
         state.waitingForMove = true;
         updateMessage("Move Token");
@@ -387,7 +391,7 @@ async function moveToken(p, tIndex) {
     const diceVal = state.diceValue;
     const stepsToMove = (currentStep === -1) ? 1 : diceVal;
 
-    // Step-by-Step Animation
+    // Step-by-Step Animation: Move token one cell at a time with smooth animation
     for (let i = 0; i < stepsToMove; i++) {
         if (p.tokens[tIndex] === -1) {
             p.tokens[tIndex] = 0;
@@ -396,7 +400,8 @@ async function moveToken(p, tIndex) {
         }
 
         drawTokens();
-        // Wait for a short duration between steps for animation effect
+        // Wait for animation to complete (matches CSS transition time)
+        // Increased from 250ms to 600ms to show smooth gliding animation
         await new Promise(resolve => setTimeout(resolve, 250));
 
         // If reached exact home goal
@@ -474,12 +479,12 @@ function startTurn(idx) {
 
     // Change message based on player type
     const message = p.type === 'human' ? "Roll Dice" : `${p.color.toUpperCase()} Turn`;
-    
+
     updateMessage(message);
 
-     // ✅ Force message color to white
+    // ✅ Force message color to white
     UI.message.style.color = "#ffffff";
-    
+
     if (p.type === 'cpu') setTimeout(rollDice, 1000);
 }
 
