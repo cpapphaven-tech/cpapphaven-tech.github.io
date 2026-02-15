@@ -178,7 +178,7 @@ function init() {
     document.getElementById('restart-btn').addEventListener('click', () => location.reload());
 
     if (!window.DEV_MODE) {
-        //   loadAdsterraBanner();
+          loadAdsterraBanner();
     }
 
     gameStartTime = Date.now();   // ⏱ start timer
