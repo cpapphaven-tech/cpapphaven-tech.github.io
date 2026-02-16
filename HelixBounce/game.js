@@ -1324,7 +1324,7 @@ function loadAdsterraBanner() {
 
         console.log("Adsterra banner injected.");
 
-    }, 2000);
+    }, 100);
 
 
 }
