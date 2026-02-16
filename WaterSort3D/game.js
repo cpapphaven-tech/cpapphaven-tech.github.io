@@ -154,7 +154,7 @@ function loadAdsterraBanner() {
 
 
 
-    }, 2000);
+    }, 100);
 }
 
 // --- Initialization ---
