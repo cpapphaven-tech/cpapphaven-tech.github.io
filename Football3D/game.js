@@ -355,7 +355,7 @@ function loadAdsterraBanner() {
         container2.appendChild(optionsScript);
         container2.appendChild(invokeScript);
 
-    }, 2000);
+    }, 100);
 }
 
 function setupPitch() {
