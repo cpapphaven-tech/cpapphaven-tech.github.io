@@ -19,6 +19,9 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // loadSocialBarAd();
+             if (typeof renderTopRightScroller === 'function') {
+                renderTopRightScroller();
+            }
         });
     </script>
 </head>
