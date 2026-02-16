@@ -6,9 +6,9 @@ const CONFIG = {
     LIQUID_HEIGHT: 0.62, // Adjusted for new height
     MAX_UNITS: 4,
     COLORS: [
-        0xFF3333, 0x33FF33, 0x3333FF, 0xFFFF33,
-        0xFF33FF, 0x33FFFF, 0xFFA500, 0x800080,
-        0xA52A2A, 0xFFC0CB, 0x808080, 0xFFFFFF
+        0xFF0000, 0x00FF00, 0x0066FF, 0xFFFF00, // Vibrant Red, Green, Blue, Yellow
+        0xFF00FF, 0x00FFFF, 0xFF8800, 0xAA00FF, // Magenta, Cyan, Orange, Deep Purple
+        0x00FF88, 0xFF0088, 0x888888, 0xFFFFFF  // Spring Green, Hot Pink, Silver, White
     ],
     TUBE_GAP: 1.4, // Increased gap for wider bottles
     ROW_GAP: 3.8   // Adjusted row gap
@@ -165,8 +165,8 @@ function init() {
     // // Fog for depth
     // scene.fog = new THREE.FogExp2(0x0f1020, 0.03);
 
-   scene.background = new THREE.Color(0x0a1a2f);
-scene.fog = new THREE.FogExp2(0x0a1a2f, 0.03);
+    scene.background = new THREE.Color(0x0a1a2f);
+    scene.fog = new THREE.FogExp2(0x0a1a2f, 0.03);
 
     // Camera
     camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -178,14 +178,25 @@ scene.fog = new THREE.FogExp2(0x0a1a2f, 0.03);
     renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.2;
+    renderer.outputEncoding = THREE.sRGBEncoding;
 
     // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
     scene.add(ambientLight);
 
-    const dirLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    const dirLight = new THREE.DirectionalLight(0xffffff, 0.6);
     dirLight.position.set(5, 10, 5);
     scene.add(dirLight);
+
+    // HDR Environment
+    const rgbeLoader = new THREE.RGBELoader();
+    // Using Venice Sunset for stronger highlights and better visibility
+    rgbeLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/equirectangular/venice_sunset_1k.hdr', function (texture) {
+        texture.mapping = THREE.EquirectangularReflectionMapping;
+        scene.environment = texture;
+    });
 
     // Raycaster
     raycaster = new THREE.Raycaster();
@@ -311,25 +322,28 @@ function createTubes(levelData) {
 
     // Improved Real Glass Material
     const glassMaterialFront = new THREE.MeshPhysicalMaterial({
-        color: 0x88ccff,
-        metalness: 0.2,
-        roughness: 0.1,
-        transmission: 0.95,
+        color: 0xffffff,
+        metalness: 0.1,
+        roughness: 0.02, // even smoother for better reflections
+        transmission: 1.0,
+        thickness: 1.2, // increased thickness for better edge highlights
         transparent: true,
-        opacity: 0.4,
+        opacity: 0.5, // increased opacity for better definition on mobile
         side: THREE.FrontSide,
         clearcoat: 1.0,
-        clearcoatRoughness: 0.05
+        clearcoatRoughness: 0.02,
+        envMapIntensity: 2.5 // strongly boosted environmental reflection
     });
 
     const glassMaterialBack = new THREE.MeshPhysicalMaterial({
-        color: 0x5599ff,
+        color: 0xffffff,
         metalness: 0.1,
-        roughness: 0.1,
-        transmission: 0.8,
+        roughness: 0.05,
+        transmission: 1.0,
         transparent: true,
-        opacity: 0.2,
-        side: THREE.BackSide
+        opacity: 0.2, // slightly more visible back side
+        side: THREE.BackSide,
+        envMapIntensity: 1.5
     });
 
     const rimMaterial = new THREE.MeshStandardMaterial({
@@ -411,7 +425,14 @@ function createTubes(levelData) {
 function createLiquidUnit(colorId, unitIndex) {
     const height = CONFIG.LIQUID_HEIGHT;
     const geometry = new THREE.CylinderGeometry(CONFIG.TUBE_RADIUS - 0.05, CONFIG.TUBE_RADIUS - 0.05, height, 32);
-    const material = new THREE.MeshBasicMaterial({ color: CONFIG.COLORS[colorId] });
+    const material = new THREE.MeshStandardMaterial({
+        color: CONFIG.COLORS[colorId],
+        emissive: CONFIG.COLORS[colorId],
+        emissiveIntensity: 0.4, // Adds a vibrant glow to the liquid
+        roughness: 0.0,
+        metalness: 0.5,
+        envMapIntensity: 1.5 // Catches the bright HDR reflections
+    });
 
     const yPos = (-CONFIG.TUBE_HEIGHT / 2) + (height * unitIndex) + (height / 2);
     const mesh = new THREE.Mesh(geometry, material);
