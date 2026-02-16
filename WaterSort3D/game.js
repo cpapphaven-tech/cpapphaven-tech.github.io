@@ -31,6 +31,7 @@ let tubesContainer;
 
 let gameStartTime = null;
 let durationSent = false;
+let gameStartedFlag = false;
 
 // UI Elements
 const ui = {
@@ -159,6 +160,9 @@ function loadAdsterraBanner() {
 
 // --- Initialization ---
 function init() {
+
+    gameStartedFlag = true;
+    
     // Scene Setup
     scene = new THREE.Scene();
     // scene.background = new THREE.Color(0x0f1020);

@@ -35,6 +35,7 @@ let stackGroup, movingGroup;
 
 let gameStartTime = null;
 let durationSent = false;
+let gameStartedFlag = false;
 
 function getOSKey() {
     const ua = navigator.userAgent;
@@ -105,6 +106,9 @@ window.addEventListener("beforeunload", () => {
 });
 
 function initThreeJS() {
+
+    gameStartedFlag = true;
+    
     // Scene
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x1a0f0a);

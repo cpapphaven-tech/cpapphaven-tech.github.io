@@ -83,6 +83,11 @@
         <h1>Bubble Shooter 3D</h1>
     </header>
 
+    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner">
+        <!-- Script will be injected here by game.js after 2s -->
+    </div>
+    
     <div id="game-wrapper">
         <canvas id="game-canvas"></canvas>
         <!-- UI Overlay -->
@@ -167,7 +172,7 @@
             if (window.DEV_MODE) {
                 return;
             }
-            // setTimeout(loadBanner, 2000);
+            setTimeout(loadBanner, 100);
         });
     </script>
 </body>

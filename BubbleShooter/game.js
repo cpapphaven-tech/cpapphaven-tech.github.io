@@ -50,8 +50,133 @@ const nextLevelBtn = document.getElementById('next-level-btn');
 const completedLevelEl = document.getElementById('completed-level');
 const levelScoreEl = document.getElementById('level-score');
 
+let gameStartTime = null;
+let durationSent = false;
+let gameStartedFlag = false;
+
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
+}
+
+function getBrowser() {
+    const ua = navigator.userAgent;
+
+    if (/Edg/i.test(ua)) return "Edge";
+    if (/OPR|Opera/i.test(ua)) return "Opera";
+    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+    if (/Firefox/i.test(ua)) return "Firefox";
+    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
+
+    return "Unknown";
+}
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`game_duration_bubble_shooter_${seconds}_${reason}_${getBrowser()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+
+
+        sendDurationOnExit("background_bubble_shooter");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close_bubble_shooter");
+
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`exit_before_game_bubble_shooter_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
+
+
+
+function loadAdsterraBanner() {
+    // Desktop only check (using User Agent and Screen Width for safety)
+    const osKey = getOSKey();
+    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
+        return;
+    }
+
+    const container = document.getElementById("adsterra-banner");
+    if (!container) return;
+
+    setTimeout(() => {
+        console.log("Loading Adsterra Banner...");
+
+        // Create an iframe to safely isolate the ad execution
+        const iframe = document.createElement('iframe');
+        iframe.style.width = "160px";
+        iframe.style.height = "600px";
+        iframe.style.border = "none";
+        iframe.style.overflow = "hidden";
+        iframe.scrolling = "no";
+
+        container.appendChild(iframe);
+
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write(`
+            <html>
+            <body style="margin:0;padding:0;background:transparent;">
+                <script>
+                    atOptions = {
+                        'key' : '34488dc997487ff336bf5de366c86553',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
+            </body>
+            </html>
+        `);
+        doc.close();
+
+
+
+    }, 100);
+}
+
+
 // --- Initialization ---
 function init() {
+
+    gameStartedFlag = true;
+    
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x0a1a2a);
 
@@ -96,7 +221,14 @@ function init() {
     animate();
 
     // Auto-start
-    setTimeout(startGame, 500);
+    setTimeout(startGame, 100);
+
+     if (!window.DEV_MODE) {
+        loadAdsterraBanner();
+    }
+
+    gameStartTime = Date.now();   // ⏱ start timer
+    durationSent = false;
 }
 
 function updateSize() {
