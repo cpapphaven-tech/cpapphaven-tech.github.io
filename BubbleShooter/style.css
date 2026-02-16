@@ -17,7 +17,9 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #mobile-header h1 {
@@ -29,6 +31,26 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.header-back-btn {
+    position: absolute;
+    left: 15px;
+    background: linear-gradient(135deg, #00ff88, #00ccff);
+    color: #000 !important;
+    font-weight: 800;
+    padding: 6px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    -webkit-text-fill-color: initial !important;
+    /* Override the gradient text if inherited */
+}
+
+.header-back-btn:hover {
+    transform: scale(1.05);
 }
 
 /* Base Styles */
@@ -203,23 +225,7 @@ button:active {
     transform: translateY(2px) scale(0.98);
 }
 
-#bottom-bar {
-    position: fixed;
-    bottom: 70px;
-    left: 20px;
-    z-index: 1000;
-}
 
-#home-btn {
-    background: linear-gradient(135deg, #00ff88, #00ccff);
-    color: #000;
-    font-weight: 800;
-    padding: 8px 15px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-size: 14px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
 
 #bottom-ad {
     position: fixed;
@@ -252,6 +258,18 @@ button:active {
     #game-wrapper {
         margin: 60px auto 10px auto;
         height: calc(100vh - 70px);
+    }
+
+    #mobile-header h1 {
+        font-size: 0.9rem;
+        /* Shrunk font for mobile */
+        margin-left: 0;
+        /* Centered */
+    }
+
+    .header-back-btn {
+        padding: 4px 8px;
+        font-size: 10px;
     }
 }
 
