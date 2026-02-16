@@ -176,7 +176,7 @@ function loadAdsterraBanner() {
 function init() {
 
     gameStartedFlag = true;
-    
+
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x0a1a2a);
 
@@ -223,12 +223,21 @@ function init() {
     // Auto-start
     setTimeout(startGame, 100);
 
-     if (!window.DEV_MODE) {
+    if (!window.DEV_MODE) {
         loadAdsterraBanner();
     }
 
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
+
+    // Welcome Message Removal
+    setTimeout(() => {
+        const welcomeMsg = document.getElementById('welcome-overlay');
+        if (welcomeMsg) {
+            welcomeMsg.classList.add('fade-out');
+            setTimeout(() => welcomeMsg.remove(), 1000);
+        }
+    }, 2000);
 }
 
 function updateSize() {
