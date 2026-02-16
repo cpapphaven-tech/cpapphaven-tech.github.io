@@ -92,8 +92,8 @@
             </div>
 
             <div id="level-container">
-                <p>Level: <span id="level">1</span></p>
-                <p>Time: <span id="timer">60</span>s</p>
+                <div id="level-display">Level: <span id="level">1</span></div>
+                <div id="timer-display"><span id="timer">60</span>s</div>
             </div>
 
             <div id="main-menu" class="overlay">
@@ -107,13 +107,7 @@
                 <p>Points: <span id="final-score">0</span></p>
                 <p>Best: <span id="best-score">0</span></p>
 
-                <div id="gameover-input-area">
-                    <input id="player-name-gameover" placeholder="Enter Name" maxlength="12">
-                    <button id="submit-score-btn">Submit Score</button>
-                </div>
-
                 <button id="restart-btn">Try Again</button>
-                <button id="join-tg-btn" class="join-tg-btn">🏆 View Leaderboard</button>
 
                 <!-- Game Scroller Container -->
                 <div id="game-over-scroller"></div>

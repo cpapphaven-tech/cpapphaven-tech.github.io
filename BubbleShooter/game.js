@@ -1,5 +1,6 @@
 /**
  * Bubble Shooter 3D - Mobile Optimized & Timer Version
+ * Simplified: Removed Leaderboard functionality
  */
 
 // --- Constants ---
@@ -22,7 +23,7 @@ let bubbles = []; // 2D array [row][col]
 let shotBubble = null;
 let nextBubble = null;
 let score = 0;
-let level = 1;
+let level = parseInt(localStorage.getItem('bubble_shooter_current_level')) || 1;
 let timeLeft = 60;
 let timerInterval = null;
 let gamesPlayed = 0;
@@ -44,17 +45,10 @@ const finalScoreEl = document.getElementById('final-score');
 const bestScoreEl = document.getElementById('best-score');
 const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
-const submitScoreBtn = document.getElementById('submit-score-btn');
-const nameInput = document.getElementById('player-name-gameover');
 const levelCompleteMenu = document.getElementById('level-complete');
 const nextLevelBtn = document.getElementById('next-level-btn');
 const completedLevelEl = document.getElementById('completed-level');
 const levelScoreEl = document.getElementById('level-score');
-
-// --- Supabase Config ---
-const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
-const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
-let supabaseClient = null;
 
 // --- Initialization ---
 function init() {
@@ -87,17 +81,11 @@ function init() {
     dirLight.position.set(5, 5, 10);
     scene.add(dirLight);
 
-    if (window.supabase) {
-        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-        loadLeaderboard();
-    }
-
     if (window.renderTopRightScroller) renderTopRightScroller();
 
     // Events
     startBtn.addEventListener('click', startGame);
     restartBtn.addEventListener('click', restartGame);
-    submitScoreBtn.addEventListener('click', submitScore);
     if (nextLevelBtn) nextLevelBtn.addEventListener('click', nextLevel);
 
     window.addEventListener('resize', updateSize);
@@ -116,7 +104,6 @@ function updateSize() {
     const height = window.innerHeight;
 
     // Maintain aspect ratio logic for game-wrapper
-    const wrapper = document.getElementById('game-wrapper');
     const actualWidth = Math.min(width, 480);
     const actualHeight = Math.min(height, 800);
 
@@ -187,7 +174,7 @@ function createBubble(color, r, c) {
 function getGridPosition(r, c) {
     const offset = (r % 2 === 1) ? BUBBLE_RADIUS : 0;
     const x = (c - (GRID_COLS - 1) / 2) * BUBBLE_RADIUS * 2 + offset;
-    const y = 14 - r * ROW_HEIGHT;
+    const y = 12 - r * ROW_HEIGHT; // Optimized alignment (shifted to 12)
     return { x, y };
 }
 
@@ -252,7 +239,7 @@ function animate() {
 function checkCollision() {
     if (!shotBubble) return;
 
-    if (shotBubble.position.y > 14.5) {
+    if (shotBubble.position.y > 12.5) { // Threshold adjusted for Y=12
         snapToGrid(shotBubble);
         return;
     }
@@ -379,6 +366,7 @@ function checkWin() {
 function nextLevel() {
     levelCompleteMenu.classList.add('hidden');
     level++;
+    localStorage.setItem('bubble_shooter_current_level', level);
     levelEl.innerText = level;
     gameStarted = true;
     canShoot = true;
@@ -393,6 +381,11 @@ function startTimer() {
         if (!gameStarted || isGameOver) return;
         timeLeft--;
         timerEl.innerText = timeLeft;
+        if (timeLeft <= 10) {
+            timerEl.classList.add('timer-low');
+        } else {
+            timerEl.classList.remove('timer-low');
+        }
         if (timeLeft <= 0) {
             gameOver("TIME'S UP!");
         }
@@ -401,7 +394,6 @@ function startTimer() {
 
 function startGame() {
     score = 0;
-    level = 1;
     scoreEl.innerText = score;
     levelEl.innerText = level;
     isGameOver = false;
@@ -409,6 +401,8 @@ function startGame() {
     canShoot = true;
     mainMenu.classList.add('hidden');
     gameOverMenu.classList.add('hidden');
+    levelCompleteMenu.classList.add('hidden');
+    timerEl.classList.remove('timer-low');
     createGrid();
     startTimer();
     if (!nextBubble) prepareNextBubble();
@@ -433,31 +427,6 @@ function gameOver(title) {
 
 function restartGame() {
     startGame();
-}
-
-async function submitScore() {
-    const name = nameInput.value.trim() || "Guest";
-    submitScoreBtn.disabled = true;
-    submitScoreBtn.innerText = 'Saving...';
-    if (supabaseClient) {
-        try {
-            await supabaseClient.from('bubble_shooter_scores').insert([{ username: name, score: score, country: "NA" }]);
-        } catch (e) { console.error(e); }
-    }
-    submitScoreBtn.innerText = 'Saved!';
-    loadLeaderboard();
-}
-
-async function loadLeaderboard() {
-    if (!supabaseClient) return;
-    const sideList = document.getElementById("side-lb-list"), fullList = document.getElementById("full-lb-list");
-    try {
-        const { data, error } = await supabaseClient.from("bubble_shooter_scores").select("*").order("score", { ascending: false }).limit(20);
-        if (error) throw error;
-        const html = data.map((p, i) => `<div class="lb-row"><span>${i + 1}. ${p.username}</span><span>${p.score}</span></div>`).join('');
-        if (sideList) sideList.innerHTML = html;
-        if (fullList) fullList.innerHTML = html;
-    } catch (e) { console.error(e); }
 }
 
 init();
