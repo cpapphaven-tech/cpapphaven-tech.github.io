@@ -182,7 +182,8 @@ function renderGameScroller(containerId) {
         { name: "Helix Bounce", url: "../HelixBounce/index.html", img: "../assets/helixbounce.png", color: "#cc00cc" },
         { name: "Sushi Match 3D", url: "../SushiMatch/index.html", img: "../assets/sushimatch3d.png", color: "#ff5722" },
         { name: "Burger Stack 3D", url: "../BurgerStack/index.html", img: "../assets/burgerstack.png", color: "#ff6b35" },
-        { name: "Water Sort 3D", url: "../WaterSort3D/index.html", img: "../assets/watersort3d.png", color: "#4facfe" }
+        { name: "Water Sort 3D", url: "../WaterSort3D/index.html", img: "../assets/watersort3d.png", color: "#4facfe" },
+        { name: "Bubble Shooter 3D", url: "../BubbleShooter/index.html", img: "../assets/bubble_shooter.png", color: "#2196f3" }
     ];
 
     // Filter out current game to avoid self-promotion
