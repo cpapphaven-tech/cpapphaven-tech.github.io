@@ -11,7 +11,7 @@ const CONFIG = {
         0x00FF88, 0xFF0088, 0x888888, 0xFFFFFF  // Spring Green, Hot Pink, Silver, White
     ],
     TUBE_GAP: 1.4, // Increased gap for wider bottles
-    ROW_GAP: 3.8   // Adjusted row gap
+    ROW_GAP: 3.4   // Slightly reduced from 3.8 for better screen fit on mobile
 };
 
 // State
@@ -162,7 +162,7 @@ function loadAdsterraBanner() {
 function init() {
 
     gameStartedFlag = true;
-    
+
     // Scene Setup
     scene = new THREE.Scene();
     // scene.background = new THREE.Color(0x0f1020);
@@ -454,11 +454,12 @@ function adjustCamera(rows) {
     if (aspect < 1) {
         // Mobile Portrait: Zoom out significantly
         targetZ = 20 + (rows * 5);
-        // Shift bottles down for better mobile view
-        targetY = -3.5;
+        // Shift bottles down even more for better mobile view and headroom
+        targetY = -4.5; // Increased from -3.5
     } else {
         targetZ = rows > 1 ? 16 : 14;
-        targetY = 0;
+        // Shift bottles down slightly on desktop for headroom
+        targetY = -1.5;
     }
 
     gsap.to(camera.position, { z: targetZ, duration: 1 });
@@ -589,8 +590,8 @@ function performPourAnimation(fromIdx, toIdx, count, colorId) {
     const toGroup = state.tubes[toIdx].group;
 
     const targetPos = toGroup.position.clone();
-    targetPos.y += 2.5;
-    targetPos.x -= 1.2;
+    targetPos.y += 2.0; // Reduced from 2.5
+    targetPos.x -= 0.8; // Reduced from 1.2
 
     const tl = gsap.timeline({
         onComplete: () => {
