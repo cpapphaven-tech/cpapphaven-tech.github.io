@@ -26,22 +26,6 @@
 </head>
 
 <body>
-    <div id="welcome-overlay" class="welcome-overlay">
-        <div class="welcome-content">
-            <span class="welcome-icon">🎮</span>
-            <span class="welcome-text">Get Ready for Fun! 🔵 Starting your game...</span>
-        </div>
-    </div>
-
-    <script>
-        setTimeout(() => {
-            const welcomeMsg = document.getElementById('welcome-overlay');
-            if (welcomeMsg) {
-                welcomeMsg.classList.add('fade-out');
-                setTimeout(() => welcomeMsg.remove(), 1000);
-            }
-        }, 2000);
-    </script>
     <!-- Header -->
     <header>
         <a href="../index.html" class="back-btn">← PlayMixGames</a>

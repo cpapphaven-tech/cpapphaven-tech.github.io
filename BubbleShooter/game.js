@@ -230,14 +230,6 @@ function init() {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
-    // Welcome Message Removal
-    setTimeout(() => {
-        const welcomeMsg = document.getElementById('welcome-overlay');
-        if (welcomeMsg) {
-            welcomeMsg.classList.add('fade-out');
-            setTimeout(() => welcomeMsg.remove(), 1000);
-        }
-    }, 2000);
 }
 
 function updateSize() {
