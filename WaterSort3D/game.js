@@ -197,7 +197,7 @@ function init() {
     // HDR Environment
     const rgbeLoader = new THREE.RGBELoader();
     // Using Venice Sunset for stronger highlights and better visibility
-    rgbeLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/equirectangular/venice_sunset_1k.hdr', function (texture) {
+    rgbeLoader.load('../assets/venice_sunset_1k.hdr', function (texture) {
         texture.mapping = THREE.EquirectangularReflectionMapping;
         scene.environment = texture;
     });

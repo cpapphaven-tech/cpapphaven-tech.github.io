@@ -193,7 +193,7 @@ function init() {
 
     // HDR / EnvMap
     const rgbeLoader = new THREE.RGBELoader();
-    rgbeLoader.load('https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/equirectangular/royal_esplanade_1k.hdr', function (texture) {
+    rgbeLoader.load('../assets/royal_esplanade_1k.hdr', function (texture) {
         texture.mapping = THREE.EquirectangularReflectionMapping;
         scene.environment = texture;
     });
