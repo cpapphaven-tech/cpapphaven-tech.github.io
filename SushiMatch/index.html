@@ -30,6 +30,22 @@
 </head>
 
 <body>
+    <div id="welcome-overlay" class="welcome-overlay">
+        <div class="welcome-content">
+            <span class="welcome-icon">🎮</span>
+            <span class="welcome-text">Get Ready for Fun! 🔵 Starting your game...</span>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const welcomeMsg = document.getElementById('welcome-overlay');
+            if (welcomeMsg) {
+                welcomeMsg.classList.add('fade-out');
+                setTimeout(() => welcomeMsg.remove(), 1000);
+            }
+        }, 2000);
+    </script>
     <!-- Header -->
     <header>
         <a href="../index.html" class="back-btn">← PlayMixGames</a>
@@ -213,13 +229,15 @@
         <div style="max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px;">🍣 About Sushi Match 3D</h2>
             <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 30px;">
-                Sushi Match 3D is an addictive memory matching game where you click on pairs of matching sushi to clear the board. 
-                Test your memory and speed in beautiful 3D environments inspired by traditional Japanese cuisine. 
+                Sushi Match 3D is an addictive memory matching game where you click on pairs of matching sushi to clear
+                the board.
+                Test your memory and speed in beautiful 3D environments inspired by traditional Japanese cuisine.
                 Perfect for players of all ages looking for a relaxing yet challenging puzzle experience.
             </p>
-            
+
             <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
-            <ul style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+            <ul
+                style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
                 <li>✅ Click on sushi items to flip and find matching pairs</li>
                 <li>✅ Match all pairs before the timer runs out</li>
                 <li>✅ Complete levels to unlock new sushi varieties</li>

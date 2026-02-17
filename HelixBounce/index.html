@@ -26,7 +26,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
 
-                 if (window.DEV_MODE) {
+                if (window.DEV_MODE) {
                     return;
                 }
 
@@ -47,7 +47,7 @@
 
     <!-- Cookie Consent Script -->
     <script>
-        (function() {
+        (function () {
             const CONSENT_KEY = 'play-mix-games-cookie-consent';
             function getCookieConsent() {
                 const stored = localStorage.getItem(CONSENT_KEY);
@@ -61,20 +61,20 @@
                 }
             }
             function acceptCookies() {
-                const consent = {accepted: true, timestamp: new Date().toISOString()};
+                const consent = { accepted: true, timestamp: new Date().toISOString() };
                 localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
                 document.getElementById('cookie-consent')?.classList.add('hidden');
                 window.cookieConsent = true;
                 console.log('✅ Cookie consent accepted');
             }
             function declineCookies() {
-                const consent = {accepted: false, timestamp: new Date().toISOString()};
+                const consent = { accepted: false, timestamp: new Date().toISOString() };
                 localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
                 document.getElementById('cookie-consent')?.classList.add('hidden');
                 window.cookieConsent = false;
                 console.log('❌ Cookie consent declined');
             }
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
                 document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
                 setTimeout(showCookieBanner, 500);
@@ -90,6 +90,22 @@
 </head>
 
 <body>
+    <div id="welcome-overlay" class="welcome-overlay">
+        <div class="welcome-content">
+            <span class="welcome-icon">🎮</span>
+            <span class="welcome-text">Get Ready for Fun! 🔵 Starting your game...</span>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const welcomeMsg = document.getElementById('welcome-overlay');
+            if (welcomeMsg) {
+                welcomeMsg.classList.add('fade-out');
+                setTimeout(() => welcomeMsg.remove(), 1000);
+            }
+        }, 2000);
+    </script>
     <!-- HEADER REMOVED to match Stack 3D Clean Look -->
     <!--
     <header>
@@ -122,34 +138,34 @@
         <div id="view-full-lb">🏆 Global Top 20</div>
     </div>
 
-    
-
-<div id="tutorial-overlay" class="hidden">
-  <div id="tutorial-dialog">
-
-    <div id="tutorial-inner">
-
-      <div id="tutorial-video-container">
-        <video id="tutorial-video" muted autoplay playsinline preload="auto">
-          <source src="../assets/helixvideo.mp4" type="video/mp4">
-        </video>
-      </div>
-
-      <div id="tutorial-text">
-        <h3>🎮 How to Play</h3>
-        <p>👇 Swipe left/right to turn</p>
-        <p>⬇ Guide the ball down</p>
-      </div>
 
 
+    <div id="tutorial-overlay" class="hidden">
+        <div id="tutorial-dialog">
+
+            <div id="tutorial-inner">
+
+                <div id="tutorial-video-container">
+                    <video id="tutorial-video" muted autoplay playsinline preload="auto">
+                        <source src="../assets/helixvideo.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div id="tutorial-text">
+                    <h3>🎮 How to Play</h3>
+                    <p>👇 Swipe left/right to turn</p>
+                    <p>⬇ Guide the ball down</p>
+                </div>
+
+
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<div id="party-welcome" class="hidden">
-  <div id="party-text">🎉 Welcome!</div>
-  <canvas id="confetti-canvas"></canvas>
-</div>
+    <div id="party-welcome" class="hidden">
+        <div id="party-text">🎉 Welcome!</div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
 
 
     <main class="game-container">
@@ -260,7 +276,8 @@
         <div class="cookie-content">
             <div class="cookie-text">
                 <span class="cookie-icon">🍪</span>
-                <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank" style="color: #cc00cc; text-decoration: underline;">Learn more</a></span>
+                <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank"
+                        style="color: #cc00cc; text-decoration: underline;">Learn more</a></span>
             </div>
             <div class="cookie-buttons">
                 <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
@@ -275,10 +292,7 @@
     </div>
 
 
-    <div id="bottom-bar">
 
-        <a href="../index.html" id="home-btn">🎮 More Games</a>
-    </div>
 
 
     <div id="bottom-ad"></div>
@@ -287,7 +301,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             const container = document.getElementById("bottom-ad");
             function loadBanner() {
-               
+
                 if (!container) return;
                 container.innerHTML = '<div id="banner-slot"></div>';
                 const slot = document.getElementById("banner-slot");
@@ -303,10 +317,10 @@
                 slot.appendChild(s);
             }
 
-             if (window.DEV_MODE) {
-                    return;
-                }
-           setTimeout(loadBanner, 100);
+            if (window.DEV_MODE) {
+                return;
+            }
+            setTimeout(loadBanner, 100);
         });
     </script>
 

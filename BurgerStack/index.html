@@ -30,6 +30,22 @@
 </head>
 
 <body>
+    <div id="welcome-overlay" class="welcome-overlay">
+        <div class="welcome-content">
+            <span class="welcome-icon">🎮</span>
+            <span class="welcome-text">Get Ready for Fun! 🔵 Starting your game...</span>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const welcomeMsg = document.getElementById('welcome-overlay');
+            if (welcomeMsg) {
+                welcomeMsg.classList.add('fade-out');
+                setTimeout(() => welcomeMsg.remove(), 1000);
+            }
+        }, 2000);
+    </script>
     <!-- Header -->
     <header>
         <a href="../index.html" class="back-btn">← PlayMixGames</a>
@@ -220,13 +236,16 @@
         <div style="max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px;">🍔 About Burger Stack 3D</h2>
             <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 30px;">
-                Burger Stack 3D is an exciting stacking puzzle game where you carefully place burger ingredients to build the perfect tower. 
-                Balance, strategy, and precision are key as you stack burgers higher and higher. Challenge yourself to reach new heights and 
+                Burger Stack 3D is an exciting stacking puzzle game where you carefully place burger ingredients to
+                build the perfect tower.
+                Balance, strategy, and precision are key as you stack burgers higher and higher. Challenge yourself to
+                reach new heights and
                 unlock delicious rewards in this fun and engaging 3D gameplay experience.
             </p>
-            
+
             <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
-            <ul style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+            <ul
+                style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
                 <li>✅ Tap and drag to position burger ingredients</li>
                 <li>✅ Stack ingredients carefully to keep the tower balanced</li>
                 <li>✅ Complete each level by stacking all ingredients</li>

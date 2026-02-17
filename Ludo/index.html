@@ -19,7 +19,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // loadSocialBarAd();
-             if (typeof renderTopRightScroller === 'function') {
+            if (typeof renderTopRightScroller === 'function') {
                 renderTopRightScroller();
             }
         });
@@ -27,6 +27,22 @@
 </head>
 
 <body>
+    <div id="welcome-overlay" class="welcome-overlay">
+        <div class="welcome-content">
+            <span class="welcome-icon">🎮</span>
+            <span class="welcome-text">Get Ready for Fun! 🔵 Starting your game...</span>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            const welcomeMsg = document.getElementById('welcome-overlay');
+            if (welcomeMsg) {
+                welcomeMsg.classList.add('fade-out');
+                setTimeout(() => welcomeMsg.remove(), 1000);
+            }
+        }, 2000);
+    </script>
     <!-- Header -->
     <header>
         <a href="../index.html" class="back-btn">← PlayMixGames</a>
@@ -142,13 +158,16 @@
         <div style="max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px;">🎲 About Ludo Master</h2>
             <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 30px;">
-                Ludo Master is the digital version of the classic Indian board game Ludo. Race your tokens around the board to reach home first 
-                while strategically moving, blocking, and eliminating your opponents. Play against AI players with varying difficulty levels 
+                Ludo Master is the digital version of the classic Indian board game Ludo. Race your tokens around the
+                board to reach home first
+                while strategically moving, blocking, and eliminating your opponents. Play against AI players with
+                varying difficulty levels
                 or challenge friends in this timeless game of strategy, luck, and tactical skill.
             </p>
-            
+
             <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
-            <ul style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+            <ul
+                style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
                 <li>✅ Roll the dice to move your tokens</li>
                 <li>✅ Roll a 6 to bring a token out of home</li>
                 <li>✅ Move your tokens around the board path</li>
