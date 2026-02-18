@@ -373,6 +373,62 @@ if (!document.getElementById('scroller-styles')) {
                 display: none;
             }
         }
+
+        /* 10+ Games Pill Button */
+        .more-games-pill {
+            position: fixed;
+            bottom: 56px;
+            left: 10px;
+            z-index: 9999;
+            padding: 5px 12px;
+            background: linear-gradient(to bottom, #FFB700 0%, #FF8800 50%, #FF7700 100%);
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.5);
+            border: 1.5px solid rgba(255,255,255,0.3);
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            overflow: hidden;
+            animation: pill-pulse 2s infinite ease-in-out;
+        }
+        .more-games-pill:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5), inset 0 2px 1px rgba(255,255,255,0.6);
+            background: linear-gradient(to bottom, #FFC700 0%, #FF9900 50%, #FF8800 100%);
+        }
+        .more-games-pill:active {
+            transform: scale(0.95);
+        }
+        .more-games-pill .text {
+            color: white;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-weight: 900;
+            font-size: 11px;
+            letter-spacing: 0.3px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .more-games-pill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 50%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+            border-radius: 50px 50px 0 0;
+            z-index: 1;
+        }
+        @keyframes pill-pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
     `;
     document.head.appendChild(styles);
 }
@@ -413,4 +469,43 @@ function renderTopRightScroller() {
 
     renderGameScroller('top-right-game-scroller');
     container.classList.add('scroller-fixed-top-right');
+}
+
+/**
+ * Render floating "10+ Games" Pill Button
+ */
+function renderMoreGamesPill() {
+    // 🚫 Don't show on the main landing page
+    const path = location.pathname;
+    if (path === "/" || path.endsWith("/index.html") || path === "") {
+        // If it's the root index.html, we check if it's actually a sub-game or the portal
+        // Most games are in subfolders like /Stack3D/index.html
+        const parts = path.split('/').filter(p => p !== "");
+        if (parts.length === 0 || (parts.length === 1 && parts[0] === "index.html")) {
+            return;
+        }
+    }
+
+    // Create container
+    let btn = document.getElementById('more-games-floating-btn');
+    if (!btn) {
+        btn = document.createElement('a');
+        btn.id = 'more-games-floating-btn';
+        btn.href = "../index.html";
+        btn.innerHTML = '<span class="text">10+ GAMES</span>';
+        document.body.appendChild(btn);
+    }
+
+    btn.className = 'more-games-pill';
+
+    // Remove any existing legacy more games elements if present
+    const legacy = document.querySelectorAll('.bottom-right-more-games, #more-games-btn-old, .more-games-btn-bottom');
+    legacy.forEach(el => el.remove());
+}
+
+// Auto-initialize when script loads
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', renderMoreGamesPill);
+} else {
+    renderMoreGamesPill();
 }
