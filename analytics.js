@@ -18,6 +18,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+window.FIREBASE_INITIALIZED = true;
+
 console.log("Firebase Analytics Initialized");
 
 // Set User Property
@@ -80,7 +82,7 @@ window.trackGameEvent = function (eventName, eventParams) {
 
 console.log("Firebase Analytics Initialized");
 
-window.trackAdImpression = function(type) {
+window.trackAdImpression = function (type) {
     if (!window.trackGameEvent) return;
     window.trackGameEvent(`ad_${type}_impression`, {
         page: location.pathname
