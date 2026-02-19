@@ -5,6 +5,7 @@
     <!-- Early Tracking Script -->
     <script>
         (function () {
+            const startTime = Date.now();
             const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZzonlmcmruasppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
             const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
 
@@ -24,6 +25,11 @@
             const sendHit = (stage) => {
                 hitData.loadStage = stage;
                 hitData.timestamp = new Date().toISOString();
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
                 fetch(endpoint, {
                     method: "POST",
                     headers: {

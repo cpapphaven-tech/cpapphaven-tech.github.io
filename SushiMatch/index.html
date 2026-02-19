@@ -5,8 +5,9 @@
     <!-- Early Tracking Script -->
     <script>
         (function () {
+            const startTime = Date.now();
             const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
-            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect?apikey=" + anonKey;
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
 
             const urlParams = new URLSearchParams(window.location.search);
             const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
@@ -21,15 +22,31 @@
                 placement_id: placementId
             };
 
-            const blob = new Blob([JSON.stringify(hitData)], { type: 'text/plain' });
-            navigator.sendBeacon(endpoint, blob);
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date().toISOString();
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
 
             window.addEventListener("pagehide", function () {
                 if (!window.FIREBASE_INITIALIZED) {
-                    hitData.loadStage = "early-exit";
-                    hitData.timestamp = new Date().toISOString();
-                    const exitBlob = new Blob([JSON.stringify(hitData)], { type: 'text/plain' });
-                    navigator.sendBeacon(endpoint, exitBlob);
+                    sendHit("early-exit");
                 }
             });
         })();
