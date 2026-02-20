@@ -30,6 +30,10 @@
                     hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
                 }
 
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
                 fetch(endpoint, {
                     method: "POST",
                     headers: {
@@ -47,6 +51,8 @@
             window.addEventListener("pagehide", function () {
                 if (!window.FIREBASE_INITIALIZED) {
                     sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
                 }
             });
         })();
