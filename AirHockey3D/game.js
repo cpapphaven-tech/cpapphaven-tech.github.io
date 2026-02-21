@@ -14,6 +14,78 @@ let gameState = 'start'; // 'start', 'playing', 'goal', 'gameover'
 
 // Web Audio API for Sound Effects
 let audioCtx;
+
+let gameStartTime = null;
+let durationSent = false;
+let gameStartedFlag = false;
+
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
+}
+
+function getBrowser() {
+    const ua = navigator.userAgent;
+
+    if (/Edg/i.test(ua)) return "Edge";
+    if (/OPR|Opera/i.test(ua)) return "Opera";
+    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+    if (/Firefox/i.test(ua)) return "Firefox";
+    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
+
+    return "Unknown";
+}
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`game_duration_airhockey_${seconds}_${reason}_${getBrowser()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+
+
+        sendDurationOnExit("background_airhockey");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close_airhockey");
+
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`exit_before_game_airhockey_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
+
 function initAudio() {
     if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -62,17 +134,24 @@ function playSound(type) {
 // Scene Setup
 const container = document.getElementById('game-container');
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x000000); // Pure black for neon glow
-scene.fog = new THREE.FogExp2(0x000000, 0.015);
+// Use very dark grey instead of pure black. Pure black (0x000000) causes intense OLED smearing (motion blur ghosting) on mobile devices for fast-moving bright objects.
+scene.background = new THREE.Color(0x0a0a10);
+scene.fog = new THREE.FogExp2(0x0a0a10, 0.015);
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
 // Top down angled view
 camera.position.set(0, 22, 28);
 camera.lookAt(0, 0, 4);
 
-const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('game-canvas'), antialias: true });
+const isMobile = window.innerWidth <= 768;
+
+const renderer = new THREE.WebGLRenderer({
+    canvas: document.getElementById('game-canvas'),
+    antialias: !isMobile,
+    powerPreference: "high-performance"
+});
 renderer.setSize(window.innerWidth, window.innerHeight - 110); // Minus header and banner ad
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setPixelRatio(isMobile ? Math.min(window.devicePixelRatio, 1.5) : Math.min(window.devicePixelRatio, 2));
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.shadowMap.enabled = true;
@@ -93,8 +172,8 @@ scene.add(ambientLight);
 const dirLight = new THREE.DirectionalLight(0xffffff, 1);
 dirLight.position.set(5, 20, 10);
 dirLight.castShadow = true;
-dirLight.shadow.mapSize.width = 1024;
-dirLight.shadow.mapSize.height = 1024;
+dirLight.shadow.mapSize.width = isMobile ? 512 : 1024;
+dirLight.shadow.mapSize.height = isMobile ? 512 : 1024;
 dirLight.shadow.camera.near = 0.5;
 dirLight.shadow.camera.far = 50;
 dirLight.shadow.camera.left = -15;
@@ -122,11 +201,11 @@ scene.add(spotLight);
 // Materials - Using Physical Material for Hyper-Realistic Glossy Look
 const neonCyan = new THREE.MeshPhysicalMaterial({
     color: 0x00f2fe, emissive: 0x004488, emissiveIntensity: 0.4,
-    roughness: 0.1, metalness: 0.1, clearcoat: 1.0, clearcoatRoughness: 0.1, transmission: 0.4, ior: 1.5
+    roughness: 0.1, metalness: 0.1, clearcoat: 1.0, clearcoatRoughness: 0.1
 });
 const neonMagenta = new THREE.MeshPhysicalMaterial({
     color: 0xff3366, emissive: 0x880022, emissiveIntensity: 0.4,
-    roughness: 0.1, metalness: 0.1, clearcoat: 1.0, clearcoatRoughness: 0.1, transmission: 0.4, ior: 1.5
+    roughness: 0.1, metalness: 0.1, clearcoat: 1.0, clearcoatRoughness: 0.1
 });
 const neonYellow = new THREE.MeshPhysicalMaterial({
     color: 0xccff00, emissive: 0x448800, emissiveIntensity: 0.4,
@@ -538,6 +617,55 @@ function endGame(playerWon) {
     }
 }
 
+// --- Game Control ---
+function loadAdsterraBanner() {
+    // Desktop only check (using User Agent and Screen Width for safety)
+    const osKey = getOSKey();
+    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
+        return;
+    }
+
+    const container = document.getElementById("adsterra-banner");
+    if (!container) return;
+
+    setTimeout(() => {
+        console.log("Loading Adsterra Banner...");
+
+        // Create an iframe to safely isolate the ad execution
+        const iframe = document.createElement('iframe');
+        iframe.style.width = "160px";
+        iframe.style.height = "600px";
+        iframe.style.border = "none";
+        iframe.style.overflow = "hidden";
+        iframe.scrolling = "no";
+
+        container.appendChild(iframe);
+
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write(`
+            <html>
+            <body style="margin:0;padding:0;background:transparent;">
+                <script>
+                    atOptions = {
+                        'key' : '34488dc997487ff336bf5de366c86553',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
+            </body>
+            </html>
+        `);
+        doc.close();
+
+
+
+    }, 100);
+}
+
 // UI Buttons
 startBtn.onclick = () => {
     initAudio(); // MUST be triggered on user action
@@ -547,6 +675,14 @@ startBtn.onclick = () => {
     aiScore = 0;
     updateScoreUI();
     gameState = 'playing';
+
+    if (!window.DEV_MODE) {
+        loadAdsterraBanner();
+    }
+
+    gameStartTime = Date.now();   // ⏱ start timer
+    durationSent = false;
+    gameStartedFlag = true; // mark started
 };
 
 restartBtn.onclick = () => {

@@ -30,6 +30,7 @@ const UI = {
 
 let gameStartTime = null;
 let durationSent = false;
+let gameStartedFlag = false;
 
 function getOSKey() {
     const ua = navigator.userAgent;
