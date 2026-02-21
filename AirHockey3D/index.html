@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZzonlmcmruasppIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date().toISOString(),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date().toISOString();
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // loadSocialBarAd();
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Air Hockey 3D - Play with AI | PlayMixGames</title>
+    <meta name="description"
+        content="Play Air Hockey 3D online. Challenge smart AI in this fast-paced neon sports game!">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">AIR HOCKEY 3D</h1>
+        <div class="level-display" id="score-display">
+            <span style="color: cyan;">👤 0</span> : <span style="color: magenta;">🤖 0</span>
+        </div>
+    </header>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- 3D Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-screen" style="z-index: 2500;">
+            <div class="screen-content">
+                <h1 style="color: cyan; font-size: 2.2rem; margin-bottom: 10px; text-shadow: 0 0 10px cyan;">AIR HOCKEY
+                    3D</h1>
+                <p style="color: #ccc; margin-bottom: 20px;">First to 7 Wins!</p>
+
+                <button id="start-btn" class="game-btn"
+                    style="background: linear-gradient(135deg, #00f2fe, #4facfe); width: 100%; color: white; text-shadow: 0 1px 2px rgba(0,0,0,0.5);">
+                    Play vs AI
+                </button>
+            </div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 id="winner-text" style="color: #4facfe; font-size: 2.2rem; margin-bottom: 10px;">YOU WON!</h1>
+                <div style="font-size: 4rem; margin-bottom: 20px;">🏆</div>
+                <button id="restart-btn" class="game-btn"
+                    style="background: linear-gradient(135deg, #00f2fe, #4facfe); color: white;">
+                    Play Again
+                </button>
+            </div>
+        </div>
+
+        <div id="goal-message" class="hidden">GOAL!</div>
+    </div>
+
+    <!-- Bottom Banner Ad -->
+    <div id="bottom-ad">
+        <script>
+            (function () {
+                const container = document.getElementById("bottom-ad");
+                function loadBanner() {
+                    if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
+                        console.log("🚧 [ADS] Banner skipped");
+                        return;
+                    }
+                    if (!container) return;
+                    container.innerHTML = '<div id="banner-slot"></div>';
+                    const slot = document.getElementById("banner-slot");
+                    window.atOptions = {
+                        key: "de617c07128b585ef939154460e6858f",
+                        format: "iframe",
+                        height: 50,
+                        width: 320,
+                        params: {}
+                    };
+                    const s = document.createElement("script");
+                    s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                    slot.appendChild(s);
+                }
+                if (window.DEV_MODE) { return; }
+                // setTimeout(loadBanner, 2000);
+            })();
+        </script>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
