@@ -213,11 +213,13 @@ const neonYellow = new THREE.MeshPhysicalMaterial({
 });
 
 // Board surface - hyper-glossy ice/acrylic feel
-// Fix for WebGL artifacting/blur on mobile web view: Reverting to StandardMaterial which is highly cross-platform compatible.
+// Fix for WebGL artifacting/blur on mobile web view: The HDR outdoor reflection looks like blocky pixels on the floor. 
+// Disabling envMap reflection entirely for the floor and relying on pure specular light glares instead.
 const boardMat = new THREE.MeshStandardMaterial({
     color: 0x050510,
-    roughness: 0.1,
-    metalness: 0.4,
+    roughness: 0.2, // Smooth enough for clean light glares
+    metalness: 0.2, // Low metalness so it acts like dark plastic/acrylic instead of mirror
+    envMapIntensity: 0.0 // Do not reflect the HDRI, fixes the blurry surface!
 });
 // Walls - metallic chrome/brushed metal
 const wallMat = new THREE.MeshStandardMaterial({
