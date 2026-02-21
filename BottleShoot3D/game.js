@@ -17,6 +17,129 @@ const roundText = document.getElementById('round-text');
 const winnerText = document.getElementById('winner-text');
 const scoreText = document.getElementById('score-text');
 
+let gameStartTime = null;
+let durationSent = false;
+let gameStartedFlag = false;
+
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
+}
+
+function getBrowser() {
+    const ua = navigator.userAgent;
+
+    if (/Edg/i.test(ua)) return "Edge";
+    if (/OPR|Opera/i.test(ua)) return "Opera";
+    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+    if (/Firefox/i.test(ua)) return "Firefox";
+    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
+
+    return "Unknown";
+}
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+        window.trackGameEvent(`game_duration_bottleshoot_${seconds}_${reason}_${getBrowser()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS()
+        });
+
+        durationSent = true;
+    }
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+
+
+        sendDurationOnExit("background_bottleshoot");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close_bottleshoot");
+
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        window.trackGameEvent(`exit_before_game_bottleshoot_${osKey}`, {
+            os: getOS()
+        });
+    }
+});
+
+
+
+// --- Game Control ---
+function loadAdsterraBanner() {
+    // Desktop only check (using User Agent and Screen Width for safety)
+    const osKey = getOSKey();
+    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
+        return;
+    }
+
+    const container = document.getElementById("adsterra-banner");
+    if (!container) return;
+
+    setTimeout(() => {
+        console.log("Loading Adsterra Banner...");
+
+        // Create an iframe to safely isolate the ad execution
+        const iframe = document.createElement('iframe');
+        iframe.style.width = "160px";
+        iframe.style.height = "600px";
+        iframe.style.border = "none";
+        iframe.style.overflow = "hidden";
+        iframe.scrolling = "no";
+
+        container.appendChild(iframe);
+
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write(`
+            <html>
+            <body style="margin:0;padding:0;background:transparent;">
+                <script>
+                    atOptions = {
+                        'key' : '34488dc997487ff336bf5de366c86553',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
+            </body>
+            </html>
+        `);
+        doc.close();
+
+
+
+    }, 10);
+}
+
+
 // Simple Sound Effects
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 function playTone(freq, type, duration, vol) {
@@ -554,16 +677,16 @@ function endTurn() {
         winnerText.textContent = "LEVEL CLEAR!";
         winnerText.style.color = "#00f2fe";
         scoreText.textContent = `Completed Level ${round}!`;
+        // Level Clear: show only Next Level button
+        restartBtn.style.display = 'block';
         restartBtn.textContent = "Next Level";
+        bonusBtn.style.display = 'none';
+        restartLevel1Btn.style.display = 'none';
         gameState = 'gameover'; // Uses gameover state to wait for button click
 
         // Prep the next level info and save
         round++;
         localStorage.setItem(SAVED_LEVEL_KEY, round);
-
-        // On level clear, hide the ad/level-1 buttons
-        bonusBtn.style.display = 'none';
-        restartLevel1Btn.style.display = 'none';
     } else {
         if (lives <= 0) {
             endGame();
@@ -585,18 +708,14 @@ function endGame() {
     winnerText.textContent = "GAME OVER";
     winnerText.style.color = "#ff3366";
     scoreText.textContent = `You reached Level ${round}!`;
-    restartBtn.textContent = "Try Again";
 
-    // Show the ad bonus + level 1 restart buttons
+    // Game Over: show only Watch Ad + Level 1 buttons, hide Next Level
+    restartBtn.style.display = 'none';
     bonusBtn.style.display = 'block';
     restartLevel1Btn.style.display = 'block';
 
-    // Store the level we died on before resetting,
-    // so revive can continue from it
+    // Store the level we died on so revive can continue from it
     window._diedOnRound = round;
-
-    // Don't reset round yet — revive needs to know which round we were on
-    // Round gets reset only if the player clicks "Try Again" or "Level 1"
     localStorage.removeItem(SAVED_LEVEL_KEY);
 }
 
@@ -618,22 +737,20 @@ startBtn.onclick = () => {
     spawnLevel();
     spawnBall();
     gameState = 'playing';
+
+    if (!window.DEV_MODE) {
+        loadAdsterraBanner();
+    }
 };
 
 restartBtn.onclick = () => {
     winScreen.classList.add('hidden');
-    bonusBtn.style.display = 'none';
-    restartLevel1Btn.style.display = 'none';
+    restartBtn.style.display = 'none';
 
-    // If it was a game over "Try Again", reset to level 1
-    if (restartBtn.textContent === 'Try Again') {
-        round = 1;
-        localStorage.removeItem(SAVED_LEVEL_KEY);
-    }
-
-    // Start button logic will now pick up the current round (Next Level) or level 1 (Try Again)
+    // restartBtn is only shown on level clear — continue to next round
     startBtn.onclick();
 };
+
 
 // Watch Ad → revive with +1 life
 bonusBtn.onclick = () => {
@@ -645,7 +762,7 @@ bonusBtn.onclick = () => {
 
     // Revive! Restore the round we died on and give 1 life
     round = window._diedOnRound || round;
-    lives = 1;
+    lives = 3;
     winScreen.classList.add('hidden');
     bonusBtn.style.display = 'none';
     restartLevel1Btn.style.display = 'none';
