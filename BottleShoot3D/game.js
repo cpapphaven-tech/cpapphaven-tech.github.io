@@ -166,10 +166,9 @@ scene.background = new THREE.Color(0x87CEEB); // Sky Blue
 scene.fog = new THREE.FogExp2(0x87CEEB, 0.015);
 
 const isMobile = window.innerWidth <= 768;
-// Base camera to capture the wide left-to-right setup even on portrait
-const camera = new THREE.PerspectiveCamera(50, window.innerWidth / (window.innerHeight - 110), 0.1, 100);
-// Camera looks from a strong diagonal angle to provide perfect 3D depth perception
-camera.position.set(-15, 12, isMobile ? 38 : 30);
+// Stronger camera pull-back and angle for mobile to see the full scene
+const camera = new THREE.PerspectiveCamera(isMobile ? 60 : 50, window.innerWidth / (window.innerHeight - 110), 0.1, 200);
+camera.position.set(-15, 12, isMobile ? 50 : 30);
 camera.lookAt(5, 3, 0);
 
 const renderer = new THREE.WebGLRenderer({
@@ -387,14 +386,14 @@ function createBottle(x, y, z) {
     const col = bottleColors[Math.floor(Math.random() * bottleColors.length)];
     const mat = makeBottleMat(col);
 
-    // Simple procedural bottle shape
+    // Bottle shape - height 2.8
     const points = [];
     points.push(new THREE.Vector2(0, 0));
-    points.push(new THREE.Vector2(0.4, 0));
-    points.push(new THREE.Vector2(0.4, 1.2));
-    points.push(new THREE.Vector2(0.15, 1.6));
-    points.push(new THREE.Vector2(0.15, 2.0));
-    points.push(new THREE.Vector2(0, 2.0));
+    points.push(new THREE.Vector2(0.42, 0));
+    points.push(new THREE.Vector2(0.42, 1.7));
+    points.push(new THREE.Vector2(0.16, 2.2));
+    points.push(new THREE.Vector2(0.16, 2.8));
+    points.push(new THREE.Vector2(0, 2.8));
     const geo = new THREE.LatheGeometry(points, 16);
 
     const mesh = new THREE.Mesh(geo, mat);
@@ -402,18 +401,16 @@ function createBottle(x, y, z) {
     mesh.receiveShadow = true;
     scene.add(mesh);
 
-    // Physics cylinder approximation
-    const shape = new CANNON.Cylinder(0.4, 0.4, 2, 8);
-    // LatheGeometry builds around origin at 0, Cylinder in Cannon is centered at its halfway point.
+    // Physics cylinder height = 2.8, half = 1.4
+    const shape = new CANNON.Cylinder(0.40, 0.40, 2.8, 8);
     const body = new CANNON.Body({
         mass: 0.5,
-        position: new CANNON.Vec3(x, y + 1, z) // Offset by half height
+        position: new CANNON.Vec3(x, y + 1.4, z) // half of 2.8
     });
 
     // Rotate cylinder to stand up
     const q = new CANNON.Quaternion();
     q.setFromAxisAngle(new CANNON.Vec3(1, 0, 0), -Math.PI / 2);
-    // Add shape specifically offset because Three lathe origin is bottom, Cannon cylinder origin is middle
     body.addShape(shape, new CANNON.Vec3(0, 0, 0), q);
 
     body.linearDamping = 0.5;
@@ -424,16 +421,17 @@ function createBottle(x, y, z) {
     meshes.push(mesh);
     bodies.push(body);
 
-    const b = { mesh, body, initialY: y + 1, felled: false };
+    const b = { mesh, body, initialY: y + 1.4, felled: false };
     bottles.push(b);
 }
 
 function spawnPyramid(baseX, baseY, rows) {
-    // Exact mathematical packing to prevent bottles falling or exploring on spawn
-    const spread = 0.85; // Cylinder radius is 0.4. Diameter is 0.8. They must be close enough for the top bottle to comfortably rest on both edges.
+    // Bottle height = 2.0. Horizontal spread just wider than bottle diameter (0.76).
+    const BOTTLE_H = 2.8;  // must match physics cylinder above
+    const spread = 0.90;   // center-to-center horizontal gap
     for (let r = 0; r < rows; r++) {
-        // Vertical height step depends on exact geometric nesting. 2.0 height cylinder standing upright on two upright cylinders:
-        const y = baseY + r * 2.01;
+        // Each row sits on top of the previous. Step = exactly BOTTLE_H + tiny gap
+        const y = baseY + r * (BOTTLE_H + 0.05);
         const bottlesInRow = rows - r;
         const rowWidth = (bottlesInRow - 1) * spread;
         const startX = baseX - rowWidth / 2;
@@ -732,28 +730,34 @@ function endGame() {
     localStorage.removeItem(SAVED_LEVEL_KEY);
 }
 
-// Start Game Flow
-startBtn.onclick = () => {
-    // Requires physical user interaction to start Audio context
-    if (audioCtx.state === 'suspended') audioCtx.resume();
+// ---- AUTO START (no dialog needed) ----
+function startGame() {
+    // Resume audio context on first user interaction
+    document.addEventListener('pointerdown', () => {
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+    }, { once: true });
 
-    startScreen.classList.add('hidden');
-    // Don't reset round to 1 here, let it use the saved initial loaded value
     lives = 3;
     livesDisplay.textContent = '3';
     roundText.textContent = round;
-    statusMessage.textContent = "Pull to Shoot!";
-    statusMessage.classList.remove('hidden');
-
-    setTimeout(() => { statusMessage.classList.add('hidden'); }, 1500);
+    gameState = 'playing';
 
     spawnLevel();
     spawnBall();
-    gameState = 'playing';
+
+    // Show pull-to-shoot hint briefly
+    statusMessage.textContent = "✊ Pull the ball to shoot!";
+    statusMessage.classList.remove('hidden');
+    setTimeout(() => { statusMessage.classList.add('hidden'); }, 3000);
 
     if (!window.DEV_MODE) {
         loadAdsterraBanner();
     }
+}
+
+// Also keep startBtn for the restartBtn flow (level clear uses it)
+startBtn.onclick = () => {
+    startGame();
 };
 
 restartBtn.onclick = () => {
@@ -823,7 +827,7 @@ function animate() {
 
                 // Adjust position manually along its up vector for the half-height offset
                 const up = new THREE.Vector3(0, -1, 0).applyQuaternion(meshes[i].quaternion);
-                meshes[i].position.add(up.multiplyScalar(1.0));
+                meshes[i].position.add(up.multiplyScalar(1.4)); // half of bottle height 2.8
 
             } else {
                 meshes[i].position.copy(bodies[i].position);
@@ -835,6 +839,9 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+// Auto-start the game immediately on load
+startGame();
 
 // Resize handling
 window.addEventListener('resize', () => {
