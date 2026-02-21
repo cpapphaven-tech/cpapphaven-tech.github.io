@@ -251,7 +251,8 @@ const groundBody = new CANNON.Body({
 world.addBody(groundBody);
 
 // Slingshot visuals (Not physical, just visual)
-const woodMat = new THREE.MeshStandardMaterial({ color: 0x5c4033, roughness: 0.9 });
+// Use MeshPhongMaterial for wood so it looks correctly brown even without HDR
+const woodMat = new THREE.MeshPhongMaterial({ color: 0x8B5E3C, shininess: 20 });
 const slingGroup = new THREE.Group();
 slingGroup.position.set(-10, 0, 0);
 
@@ -360,19 +361,20 @@ let currentBallMesh = null;
 let currentBallBody = null;
 
 // Materials for Bottles
-const bottleColors = [0xff0000, 0x00ff00, 0x0000ff, 0xff00ff, 0xffff00];
-const glassMat = new THREE.MeshStandardMaterial({
-    roughness: 0.1,
-    metalness: 0.8,
-    envMapIntensity: 2.0,
-    transparent: true,
-    opacity: 0.8
-});
+// Use bright solid colors with Phong shading — looks great with or without HDR
+const bottleColors = [0xe74c3c, 0x2ecc71, 0x3498db, 0x9b59b6, 0xf1c40f, 0xe67e22, 0x1abc9c];
+
+function makeBottleMat(color) {
+    return new THREE.MeshPhongMaterial({
+        color: color,
+        shininess: 80,
+        specular: 0xffffff,
+    });
+}
 
 function createBottle(x, y, z) {
     const col = bottleColors[Math.floor(Math.random() * bottleColors.length)];
-    const mat = glassMat.clone();
-    mat.color.setHex(col);
+    const mat = makeBottleMat(col);
 
     // Simple procedural bottle shape
     const points = [];
