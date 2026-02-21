@@ -221,11 +221,12 @@ const boardMat = new THREE.MeshStandardMaterial({
     metalness: 0.2, // Low metalness so it acts like dark plastic/acrylic instead of mirror
     envMapIntensity: 0.0 // Do not reflect the HDRI, fixes the blurry surface!
 });
-// Walls - metallic chrome/brushed metal
+// Walls - sleek dark matte border
 const wallMat = new THREE.MeshStandardMaterial({
-    color: 0x11111a,
-    metalness: 0.9,
-    roughness: 0.4
+    color: 0x0a0a14, // Darker color
+    roughness: 0.5,  // Matte finish
+    metalness: 0.2,  // Reduced metalness so it looks clean without reflections
+    envMapIntensity: 0.0 // Do not reflect the HDRI, fixes blurry borders!
 });
 
 // Game Objects
