@@ -213,9 +213,14 @@ const neonYellow = new THREE.MeshPhysicalMaterial({
 });
 
 // Board surface - hyper-glossy ice/acrylic feel
+// Fix for OLED smearing on mobile: making the floor noticeably lighter gray so pixels don't turn completely off
 const boardMat = new THREE.MeshPhysicalMaterial({
-    color: 0x05050a, roughness: 0.1, metalness: 0.1,
-    clearcoat: 1.0, clearcoatRoughness: 0.05, envMapIntensity: 2.0
+    color: isMobile ? 0x22222a : 0x05050a,
+    roughness: 0.1,
+    metalness: 0.1,
+    clearcoat: 1.0,
+    clearcoatRoughness: 0.05,
+    envMapIntensity: 2.0
 });
 // Walls - metallic chrome/brushed metal
 const wallMat = new THREE.MeshPhysicalMaterial({
