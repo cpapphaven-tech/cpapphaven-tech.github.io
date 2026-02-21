@@ -151,7 +151,7 @@ const renderer = new THREE.WebGLRenderer({
     powerPreference: "high-performance"
 });
 renderer.setSize(window.innerWidth, window.innerHeight - 110); // Minus header and banner ad
-renderer.setPixelRatio(isMobile ? Math.min(window.devicePixelRatio, 1.5) : Math.min(window.devicePixelRatio, 2));
+renderer.setPixelRatio(window.devicePixelRatio); // Let the device dictate full resolution for sharpness
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.shadowMap.enabled = true;
@@ -213,19 +213,17 @@ const neonYellow = new THREE.MeshPhysicalMaterial({
 });
 
 // Board surface - hyper-glossy ice/acrylic feel
-// Fix for OLED smearing on mobile: making the floor noticeably lighter gray so pixels don't turn completely off
-const boardMat = new THREE.MeshPhysicalMaterial({
-    color: isMobile ? 0x22222a : 0x05050a,
+// Fix for WebGL artifacting/blur on mobile web view: Reverting to StandardMaterial which is highly cross-platform compatible.
+const boardMat = new THREE.MeshStandardMaterial({
+    color: 0x050510,
     roughness: 0.1,
-    metalness: 0.1,
-    clearcoat: 1.0,
-    clearcoatRoughness: 0.05,
-    envMapIntensity: 2.0
+    metalness: 0.4,
 });
 // Walls - metallic chrome/brushed metal
-const wallMat = new THREE.MeshPhysicalMaterial({
-    color: 0x11111a, metalness: 0.9, roughness: 0.4,
-    clearcoat: 0.3, envMapIntensity: 1.5
+const wallMat = new THREE.MeshStandardMaterial({
+    color: 0x11111a,
+    metalness: 0.9,
+    roughness: 0.4
 });
 
 // Game Objects
