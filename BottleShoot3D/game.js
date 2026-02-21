@@ -193,10 +193,11 @@ rgbeLoader.load('../assets/royal_esplanade_1k.hdr', function (texture) {
 });
 
 // --- Lights ---
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+// Lower ambient so Phong colors stay saturated (not bleached white)
+const ambientLight = new THREE.AmbientLight(0xffd9a0, 0.25); // Warm, soft fill light
 scene.add(ambientLight);
 
-const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+const dirLight = new THREE.DirectionalLight(0xfff5e0, 1.4); // Warm sun
 dirLight.position.set(10, 20, 10);
 dirLight.castShadow = true;
 dirLight.shadow.mapSize.width = isMobile ? 512 : 1024;
@@ -252,7 +253,7 @@ world.addBody(groundBody);
 
 // Slingshot visuals (Not physical, just visual)
 // Use MeshPhongMaterial for wood so it looks correctly brown even without HDR
-const woodMat = new THREE.MeshPhongMaterial({ color: 0x8B5E3C, shininess: 20 });
+const woodMat = new THREE.MeshPhongMaterial({ color: 0x7B4A1E, shininess: 10, specular: 0x331100 });
 const slingGroup = new THREE.Group();
 slingGroup.position.set(-10, 0, 0);
 
@@ -361,13 +362,23 @@ let currentBallMesh = null;
 let currentBallBody = null;
 
 // Materials for Bottles
-// Use bright solid colors with Phong shading — looks great with or without HDR
-const bottleColors = [0xe74c3c, 0x2ecc71, 0x3498db, 0x9b59b6, 0xf1c40f, 0xe67e22, 0x1abc9c];
+// Deep, fully saturated bottle colors—look great without HDR
+const bottleColors = [
+    0xd62728, // Deep Red
+    0x2ca02c, // Deep Green
+    0x1f77b4, // Deep Blue
+    0x8B00CC, // Deep Violet
+    0xFFAA00, // Deep Amber / Yellow
+    0xFF5500, // Deep Orange
+    0x00879E, // Deep Teal
+];
 
 function makeBottleMat(color) {
     return new THREE.MeshPhongMaterial({
         color: color,
-        shininess: 80,
+        emissive: color,        // Use own color as emissive so dark areas stay colorful
+        emissiveIntensity: 0.15, // Subtle — doesn't glow, just prevents black shadows
+        shininess: 120,
         specular: 0xffffff,
     });
 }
