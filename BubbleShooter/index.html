@@ -13,7 +13,7 @@
             const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
 
             const hitData = {
-                timestamp: new Date().toISOString(),
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
                 url: location.href,
                 referrer: document.referrer,
                 userAgent: navigator.userAgent,
@@ -24,7 +24,7 @@
 
             const sendHit = (stage) => {
                 hitData.loadStage = stage;
-                hitData.timestamp = new Date().toISOString();
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
 
                 if (stage === "early-exit") {
                     hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
@@ -88,14 +88,14 @@
                 }
             }
             function acceptCookies() {
-                const consent = { accepted: true, timestamp: new Date().toISOString() };
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
                 localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
                 document.getElementById('cookie-consent')?.classList.add('hidden');
                 window.cookieConsent = true;
                 console.log('✅ Cookie consent accepted');
             }
             function declineCookies() {
-                const consent = { accepted: false, timestamp: new Date().toISOString() };
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
                 localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
                 document.getElementById('cookie-consent')?.classList.add('hidden');
                 window.cookieConsent = false;
