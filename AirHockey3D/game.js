@@ -425,9 +425,9 @@ window.addEventListener('touchend', onUp);
 let gamesPlayed = parseInt(localStorage.getItem('airHockeyGamesPlayed')) || 0;
 
 // Physics & Game Loop Variables
-let maxSpeed = 1.0 + Math.min(gamesPlayed, 15) * 0.05; // Slightly faster base speed
+let maxSpeed = 0.8 + Math.min(gamesPlayed, 15) * 0.04; // Slightly faster base speed
 const friction = 0.995;
-let aiSpeed = 0.15 + Math.min(gamesPlayed, 15) * 0.015; // Increased base AI speed so it can actually hit
+let aiSpeed = 0.08 + Math.min(gamesPlayed, 15) * 0.012; // Increased base AI speed so it can actually hit
 
 function updatePhysics() {
     if (gameState !== 'playing') return;
