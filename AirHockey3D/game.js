@@ -425,9 +425,9 @@ window.addEventListener('touchend', onUp);
 let gamesPlayed = parseInt(localStorage.getItem('airHockeyGamesPlayed')) || 0;
 
 // Physics & Game Loop Variables
-let maxSpeed = 0.8 + Math.min(gamesPlayed, 15) * 0.04; // Starts slow, caps around 1.4
+let maxSpeed = 1.0 + Math.min(gamesPlayed, 15) * 0.05; // Slightly faster base speed
 const friction = 0.995;
-let aiSpeed = 0.05 + Math.min(gamesPlayed, 15) * 0.01; // Starts clumsy, gets faster
+let aiSpeed = 0.15 + Math.min(gamesPlayed, 15) * 0.015; // Increased base AI speed so it can actually hit
 
 function updatePhysics() {
     if (gameState !== 'playing') return;
@@ -443,19 +443,23 @@ function updatePhysics() {
     let aiTargetZ = -BOARD_L / 4; // Default resting position
 
     if (puck.position.z < 0) {
-        // Attack/Defend
-        aiTargetZ = Math.min(-MALLET_R, Math.max(-BOARD_L / 2 + MALLET_R, puck.position.z - 1.5));
-
-        // Prevent own goals if puck is behind AI
-        if (puck.position.z < ai.position.z) {
-            aiTargetX = puck.position.x > 0 ? puck.position.x - 2 : puck.position.x + 2;
+        // Puck is in AI's half
+        if (puck.position.z < ai.position.z - PUCK_R) {
+            // Puck is behind the AI. AI needs to go around it to prevent an own-goal
+            aiTargetX = puck.position.x > 0 ? puck.position.x - 2.5 : puck.position.x + 2.5;
+            aiTargetZ = puck.position.z - 2.0;
+        } else {
+            // Strike the puck! Aim *through* the puck towards the human player
+            aiTargetX = puck.position.x;
+            aiTargetZ = puck.position.z + 2.0; // Aim past the puck to generate forward hitting velocity
         }
     }
 
     // Constrain AI target to its half
     aiTargetX = Math.max(-BOARD_W / 2 + MALLET_R, Math.min(BOARD_W / 2 - MALLET_R, aiTargetX));
+    aiTargetZ = Math.max(-BOARD_L / 2 + MALLET_R, Math.min(-MALLET_R, aiTargetZ)); // AI cannot cross center line
 
-    // Move AI smoothly
+    // Move AI smoothly towards target
     ai.position.x += (aiTargetX - ai.position.x) * aiSpeed;
     ai.position.z += (aiTargetZ - ai.position.z) * aiSpeed;
 
