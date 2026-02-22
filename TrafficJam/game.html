@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Traffic Jam 3D - Puzzle Challenge | PlayMixGames</title>
+    <meta name="description"
+        content="Play Traffic Jam 3D online. master the art of clearing traffic, solve challenging puzzles, and become the ultimate traffic controller!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+            renderTopRightScroller();
+        });
+    </script>
+
+    <!-- Cookie Consent Script -->
+    <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+                console.log('✅ Cookie consent accepted');
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+                console.log('❌ Cookie consent declined');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">🚗 Traffic Jam 3D</h1>
+        <div class="level-display">
+            Level <span id="current-level">1</span>
+        </div>
+    </header>
+
+    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner">
+        <!-- Script will be injected here by game.js after 2s -->
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- 3D Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Swipe Guide (Visible at start or on hint) -->
+        <div id="swipe-guide" class="visible">
+            <div class="swipe-hand">👆</div>
+            <p>SWIPE CARS TO CLEAR!</p>
+        </div>
+
+        <!-- Level Complete Screen -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 style="color: #4facfe; font-size: 2.2rem; margin-bottom: 10px;">TRAFFIC CLEARED!</h1>
+                <p style="color: #ccc; margin-bottom: 25px;">Level 1 Complete</p>
+                <div style="font-size: 4rem; margin-bottom: 25px;">🚗💨</div>
+                <button id="next-level-btn" class="game-btn"
+                    style="background: linear-gradient(135deg, #00f2fe, #4facfe); color: white;">
+                    Next Challenge
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-icon">🍪</span>
+                <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank"
+                        style="color: #4facfe; text-decoration: underline;">Learn more</a></span>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Banner Ad -->
+    <div id="bottom-ad">
+        <script>
+            (function () {
+                const container = document.getElementById("bottom-ad");
+                function loadBanner() {
+                    if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
+                        console.log("🚧 [ADS] Banner skipped");
+                        return;
+                    }
+                    if (!container) return;
+                    container.innerHTML = '<div id="banner-slot"></div>';
+                    const slot = document.getElementById("banner-slot");
+                    window.atOptions = {
+                        key: "de617c07128b585ef939154460e6858f",
+                        format: "iframe",
+                        height: 50,
+                        width: 320,
+                        params: {}
+                    };
+                    const s = document.createElement("script");
+                    s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                    slot.appendChild(s);
+                }
+                if (window.DEV_MODE) { return; }
+                setTimeout(loadBanner, 2000);
+            })();
+        </script>
+    </div>
+
+    <!-- SEO: About Game & How to Play Section -->
+    <section id="game-info" style="background: #f8f9fa; padding: 40px 20px; margin-top: 40px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px;">🚗 About Traffic Jam 3D</h2>
+            <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 30px;">
+                Traffic Jam 3D is a challenging puzzle game that tests your spatial awareness and problem-solving
+                skills.
+                Navigate a series of complex grid-based traffic jams by strategically moving cars out of the way. With
+                vibrant 3D graphics, intuitive swipe controls, and increasingly difficult levels, this game offers an
+                engaging and satisfying experience for players of all ages.
+            </p>
+
+            <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
+            <ul
+                style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+                <li>✅ Swipe horizontal cars horizontally and vertical cars vertically</li>
+                <li>✅ Clear a path for all vehicles to exit the grid</li>
+                <li>✅ Plan your moves carefully to avoid getting stuck</li>
+                <li>✅ Complete levels with minimum moves for higher scores</li>
+                <li>✅ Use the "Hint" if you find a puzzle particularly tricky</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

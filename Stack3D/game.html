@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack 3D - Build Your Tower | PlayMixGames</title>
+    <meta name="description"
+        content="Play Stack 3D online. master the art of perfect stacking, reach new heights, and compete on the global leaderboard!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../analytics.js"></script>
+
+    <!-- Project Scripts -->
+    <script src="../ads.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+            renderTopRightScroller();
+        });
+    </script>
+
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
+
+    <!-- Cookie Consent Script -->
+    <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+                console.log('✅ Cookie consent accepted');
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+                console.log('❌ Cookie consent declined');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <!-- Full Leaderboard -->
+    <div id="full-leaderboard" class="overlay hidden">
+        <div class="lb-header">
+            <h2>🏆 STACK CHAMPION 🏆</h2>
+            <p>Top 20 Worldwide</p>
+        </div>
+        <div class="lb-scroll-area">
+            <ul id="full-lb-list"></ul>
+        </div>
+        <button onclick="closeFullLeaderboard()" class="close-btn">Close</button>
+    </div>
+
+    <!-- Side Leaderboard -->
+    <div id="side-leaderboard" class="visible">
+        <h3>🏆 STACK CHAMPION 🏆</h3>
+        <ul id="side-lb-list"></ul>
+        <div id="view-full-lb">🏆 Global Top 20</div>
+    </div>
+
+
+
+    <div id="tutorial-overlay" class="hidden">
+        <div id="tutorial-dialog">
+
+            <div id="tutorial-inner">
+
+                <div id="tutorial-video-container">
+                    <video id="tutorial-video" muted autoplay playsinline preload="auto">
+                        <source src="../assets/stackvid.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div id="tutorial-text">
+                    <h3>🎮 How to Play</h3>
+                    <p>👇 Tap to stack the blocks</p>
+                    <p>🎯 Aim for perfect alignment!</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="party-welcome" class="hidden">
+        <div id="party-text">🎉 Welcome!</div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+
+    <div id="game-wrapper">
+        <canvas id="game-canvas"></canvas>
+        <!-- UI Overlay -->
+        <div id="ui-container">
+            <div id="score-container">
+                <h1 id="score">0</h1>
+            </div>
+
+            <!-- Challenge Message -->
+            <div id="challenge-message" class="hidden">
+                <div class="challenge-emoji">🏔️</div>
+                <div class="challenge-text">Can you stack<br>up to 20 blocks?</div>
+                <div class="challenge-subtext">Tap to start! 🎯</div>
+            </div>
+
+            <div id="main-menu" class="overlay hidden"> <!-- Hidden by default for auto-start -->
+                <h2 id="title">STACK 3D</h2>
+                <p id="prompt">Tap to drop the block!</p>
+                <button id="start-btn">TAP TO START</button>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <h2>CRASHED!</h2>
+                <p>Score: <span id="final-score">0</span></p>
+                <p>Best: <span id="best-score">0</span></p>
+
+                <div id="gameover-input-area">
+                    <input id="player-name-gameover" placeholder="Enter Name for Leaderboard" maxlength="12">
+                    <button id="submit-score-btn">Submit Score</button>
+                </div>
+
+                <div class="gameover-btns">
+                    <button id="restart-btn" class="primary-gv-btn">Try Again</button>
+                    <!-- REWARDED SMARTLINK -->
+                    <button id="bonus-btn" class="bonus-btn hidden">
+                        🎁 Watch Ad & Get +1 Life
+                    </button>
+                    <button id="join-tg-btn" class="join-tg-btn">🏆 Top 20 Leaderboard</button>
+                </div>
+
+                <!-- Game Scroller Container -->
+                <div id="game-over-scroller"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-icon">🍪</span>
+                <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank"
+                        style="color: #4facfe; text-decoration: underline;">Learn more</a></span>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner"></div>
+
+    <div id="bottom-ad"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("bottom-ad");
+            function loadBanner() {
+                if (typeof shouldLoadAds === "function" && !shouldLoadAds()) return;
+                if (!container) return;
+                container.innerHTML = '<div id="banner-slot"></div>';
+                const slot = document.getElementById("banner-slot");
+                window.atOptions = {
+                    key: "de617c07128b585ef939154460e6858f",
+                    format: "iframe",
+                    height: 50,
+                    width: 320,
+                    params: {}
+                };
+                const s = document.createElement("script");
+                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                slot.appendChild(s);
+            }
+            if (window.DEV_MODE) {
+                return;
+            }
+            setTimeout(loadBanner, 100);
+        });
+    </script>
+
+
+    <!-- SEO Section -->
+    <section class="game-info-seo" style="background:#111; padding:40px 20px; color:#999; text-align:center;">
+        <div style="max-width:800px; margin: 0 auto;">
+            <h2 style="color:#fff;">Master Your Timing</h2>
+            <p>Stack 3D is a minimalist game that tests your precision and reflexes. Build a tower as high as you can by
+                perfectly timing your taps. Simple to learn, yet addictive and challenging to master.</p>
+            <h3 style="color:#fff; margin-top:20px;">How to Stack Higher</h3>
+            <p>Wait for the block to align with the tower and tap. Any parts that overhang will be cut off, making the
+                next stack harder. Achieve multiple "Perfect" placements in a row to expand the stacking area and score
+                bonus points!</p>
+        </div>
+    </section>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

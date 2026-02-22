@@ -37,22 +37,22 @@ function createFootballTexture() {
     canvas.width = 2048;
     canvas.height = 2048;
     const ctx = canvas.getContext('2d');
-    
+
     // White base (background for hexagons)
     ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, 2048, 2048);
-    
+
     // Draw classic soccer ball pattern (black pentagons + white hexagons)
     const centerX = 1024;
     const centerY = 1024;
     const radius = 950;
-    
+
     // Function to draw polygons
     function drawPolygon(sides, cx, cy, radius, fillColor, strokeColor, strokeWidth) {
         ctx.fillStyle = fillColor;
         ctx.strokeStyle = strokeColor;
         ctx.lineWidth = strokeWidth;
-        
+
         ctx.beginPath();
         for (let i = 0; i < sides; i++) {
             const angle = (i * 2 * Math.PI) / sides;
@@ -65,18 +65,18 @@ function createFootballTexture() {
         ctx.fill();
         ctx.stroke();
     }
-    
+
     // Create a grid of pentagons and hexagons
     // This creates the classic soccer ball truncated icosahedron pattern
     const panelSize = 256;
     const strokeWidth = 6;
-    
+
     // Draw in rows with offset pattern
     for (let row = 0; row < 8; row++) {
         for (let col = 0; col < 8; col++) {
             const x = col * panelSize + panelSize / 2;
             const y = row * panelSize + panelSize / 2;
-            
+
             // Create alternating pentagon and hexagon pattern
             // Pentagons are black, hexagons are white
             if ((row + col) % 3 === 0) {
@@ -88,13 +88,13 @@ function createFootballTexture() {
             }
         }
     }
-    
+
     // Add diagonal offset panels for complete coverage
     for (let row = 0; row < 7; row++) {
         for (let col = 0; col < 7; col++) {
             const x = col * panelSize + panelSize;
             const y = row * panelSize + panelSize;
-            
+
             if ((row + col) % 3 !== 0) {
                 drawPolygon(5, x, y, panelSize * 0.32, '#000000', '#000000', strokeWidth);
             } else {
@@ -102,29 +102,29 @@ function createFootballTexture() {
             }
         }
     }
-    
+
     // Add subtle shading for 3D effect
     const radialGradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, radius * 1.2);
     radialGradient.addColorStop(0, 'rgba(255, 255, 255, 0.15)');
     radialGradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.05)');
     radialGradient.addColorStop(1, 'rgba(0, 0, 0, 0.1)');
-    
+
     ctx.fillStyle = radialGradient;
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
     ctx.fill();
-    
+
     // Add glossy shine spot
     const shineGradient = ctx.createRadialGradient(centerX - 300, centerY - 300, 50, centerX - 300, centerY - 300, 400);
     shineGradient.addColorStop(0, 'rgba(255, 255, 255, 0.6)');
     shineGradient.addColorStop(0.5, 'rgba(255, 255, 255, 0.15)');
     shineGradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
-    
+
     ctx.fillStyle = shineGradient;
     ctx.beginPath();
     ctx.arc(centerX - 300, centerY - 300, 400, 0, Math.PI * 2);
     ctx.fill();
-    
+
     const tex = new THREE.CanvasTexture(canvas);
     tex.wrapS = tex.wrapT = THREE.ClampToEdgeWrapping;
     tex.magFilter = THREE.LinearFilter;
@@ -487,7 +487,7 @@ function setupBall() {
     });
 
     ballBody.ccdSpeedThreshold = 1;
-ballBody.ccdIterations = 10;
+    ballBody.ccdIterations = 10;
 
 
     world.addBody(ballBody);
@@ -518,10 +518,10 @@ function setupGoalkeeper() {
 
     // Core (Inner)
     const coreGeo = new THREE.BoxGeometry(
-    0.8,
-    GOAL_HEIGHT * 0.9, // slightly smaller than shield
-    0.4
-);
+        0.8,
+        GOAL_HEIGHT * 0.9, // slightly smaller than shield
+        0.4
+    );
 
     const coreMat = new THREE.MeshPhongMaterial({ color: 0x0088ff });
     const core = new THREE.Mesh(coreGeo, coreMat);
@@ -561,19 +561,19 @@ function handleKick() {
 
     // Calculate impulse
     // dy is negative for swipe up
-   const swipePower = Math.min(Math.abs(dy), 160); // lower cap
+    const swipePower = Math.min(Math.abs(dy), 160); // lower cap
 
-const forceY = swipePower * 0.035 + 1.2; // less vertical lift
-const forceZ = -swipePower * 0.28; // slower forward speed
+    const forceY = swipePower * 0.035 + 1.2; // less vertical lift
+    const forceZ = -swipePower * 0.28; // slower forward speed
 
-const forceX = dx * 0.03;
+    const forceX = dx * 0.03;
 
 
     ballBody.applyImpulse(new CANNON.Vec3(forceX, forceY, forceZ), ballBody.position);
 
     // Soft aim assist toward center of goal
-const aimAssist = -ballBody.position.x * 0.15;
-ballBody.velocity.x += aimAssist;
+    const aimAssist = -ballBody.position.x * 0.15;
+    ballBody.velocity.x += aimAssist;
 
 
     // Hide swipe guide after first kick
@@ -594,59 +594,59 @@ function revivePlayer() {
 }
 
 function showPartyWelcome() {
-  const container = document.getElementById("party-welcome");
-  const canvas = document.getElementById("confetti-canvas");
+    const container = document.getElementById("party-welcome");
+    const canvas = document.getElementById("confetti-canvas");
 
-  if (!container || !canvas) return;
+    if (!container || !canvas) return;
 
-  container.classList.remove("hidden");
+    container.classList.remove("hidden");
 
-  const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-  const confetti = [];
+    const confetti = [];
 
-  for (let i = 0; i < 120; i++) {
-    confetti.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height - canvas.height,
-      r: Math.random() * 6 + 2,
-      d: Math.random() * 40,
-      color: `hsl(${Math.random() * 360}, 80%, 60%)`,
-      tilt: Math.random() * 10 - 10
-    });
-  }
+    for (let i = 0; i < 120; i++) {
+        confetti.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height - canvas.height,
+            r: Math.random() * 6 + 2,
+            d: Math.random() * 40,
+            color: `hsl(${Math.random() * 360}, 80%, 60%)`,
+            tilt: Math.random() * 10 - 10
+        });
+    }
 
-  let frame = 0;
+    let frame = 0;
 
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    confetti.forEach(c => {
-      ctx.beginPath();
-      ctx.fillStyle = c.color;
-      ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
-      ctx.fill();
+        confetti.forEach(c => {
+            ctx.beginPath();
+            ctx.fillStyle = c.color;
+            ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+            ctx.fill();
 
-      c.y += Math.cos(frame + c.d) + 2;
-      c.x += Math.sin(frame) * 1.5;
+            c.y += Math.cos(frame + c.d) + 2;
+            c.x += Math.sin(frame) * 1.5;
 
-      if (c.y > canvas.height) {
-        c.y = -10;
-      }
-    });
+            if (c.y > canvas.height) {
+                c.y = -10;
+            }
+        });
 
-    frame += 0.05;
-  }
+        frame += 0.05;
+    }
 
-  const interval = setInterval(draw, 16);
+    const interval = setInterval(draw, 16);
 
-  setTimeout(() => {
-    clearInterval(interval);
-    container.classList.add("hidden");
-    container.style.display = "none"; // force hide
-  }, 3000);
+    setTimeout(() => {
+        clearInterval(interval);
+        container.classList.add("hidden");
+        container.style.display = "none"; // force hide
+    }, 3000);
 }
 
 
@@ -680,7 +680,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const joinTgBtn = document.getElementById("join-tg-btn");
     if (joinTgBtn) {
         joinTgBtn.addEventListener("click", () => {
-             document.getElementById("full-leaderboard").classList.remove("hidden");
+            document.getElementById("full-leaderboard").classList.remove("hidden");
             loadLeaderboard();
         });
     }
@@ -711,11 +711,13 @@ function startGame() {
 
 // Show Challenge Message at Game Start
 function showChallengeMessage() {
+    if (window.challengeShown) return;
     const challengeMsg = document.getElementById('challenge-message');
     if (!challengeMsg) return;
-    
+
     challengeMsg.classList.remove('hidden');
-    
+    window.challengeShown = true;
+
     // Fade out and hide after 3.5 seconds
     setTimeout(() => {
         challengeMsg.classList.add('hidden');
@@ -769,7 +771,7 @@ function gameOver() {
 
     gameOverMenu.classList.remove('hidden');
 
-     if (window.trackGameEvent) {
+    if (window.trackGameEvent) {
         const osKey = getBrowser();
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
 

@@ -2,304 +2,152 @@
 <html lang="en">
 
 <head>
-    <!-- Early Tracking Script -->
-    <script>
-        (function () {
-            const startTime = Date.now();
-            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
-            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
-
-            const hitData = {
-                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
-                url: location.href,
-                referrer: document.referrer,
-                userAgent: navigator.userAgent,
-                screen: { width: screen.width, height: screen.height },
-                loadStage: "pre-init",
-                placement_id: placementId
-            };
-
-            const sendHit = (stage) => {
-                hitData.loadStage = stage;
-                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
-
-                if (stage === "early-exit") {
-                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
-                }
-
-                fetch(endpoint, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "apikey": anonKey,
-                        "Authorization": "Bearer " + anonKey
-                    },
-                    body: JSON.stringify(hitData),
-                    keepalive: true
-                });
-            };
-
-            sendHit("pre-init");
-
-            window.addEventListener("pagehide", function () {
-                if (!window.FIREBASE_INITIALIZED) {
-                    sendHit("early-exit");
-                }
-            });
-        })();
-    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Basketball 3D - PlayMixGames</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
 
-    <!-- Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
 
-    <!-- Project Scripts -->
-    <script src="../ads.js"></script>
-    <script type="module" src="../analytics.js"></script>
-    <script defer src="game.js"></script>
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-    <!-- Cookie Consent Script -->
-    <script>
-        (function () {
-            const CONSENT_KEY = 'play-mix-games-cookie-consent';
-            function getCookieConsent() {
-                const stored = localStorage.getItem(CONSENT_KEY);
-                return stored ? JSON.parse(stored) : null;
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #4facfe;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(79, 172, 254, 0.1);
+            border-top-color: #4facfe;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to {
+                transform: rotate(360deg);
             }
-            function showCookieBanner() {
-                const consent = getCookieConsent();
-                if (!consent) {
-                    const banner = document.getElementById('cookie-consent');
-                    if (banner) banner.classList.remove('hidden');
-                }
-            }
-            function acceptCookies() {
-                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
-                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
-                document.getElementById('cookie-consent')?.classList.add('hidden');
-                window.cookieConsent = true;
-                console.log('✅ Cookie consent accepted');
-            }
-            function declineCookies() {
-                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
-                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
-                document.getElementById('cookie-consent')?.classList.add('hidden');
-                window.cookieConsent = false;
-                console.log('❌ Cookie consent declined');
-            }
-            document.addEventListener('DOMContentLoaded', function () {
-                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
-                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
-                setTimeout(showCookieBanner, 500);
-            });
-            window.cookieConsent = getCookieConsent()?.accepted ?? null;
-        })();
-    </script>
+        }
 
-    <!-- Styling -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#e65100">
-    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+        @keyframes pmgPulse {
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(() => {
-                if (window.DEV_MODE) {
-                    return;
-                }
-                loadSocialBarAd();
-            }, 100);
-        });
-    </script>
+            50% {
+                opacity: 0.7;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes pmgFill {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 95%;
+            }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Full Leaderboard -->
-    <div id="full-leaderboard" class="overlay hidden">
-        <div class="lb-header">
-            <h2>🏆 Basketball Champion 🏆 </h2>
-            <p>Top 20 Worldwide</p>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
         </div>
-        <div class="lb-scroll-area">
-            <ul id="full-lb-list"></ul>
-        </div>
-        <button onclick="closeFullLeaderboard()" class="close-btn">Close</button>
+        <p class="pmg-tip">Loading...</p>
     </div>
-
-    <!-- Side Leaderboard -->
-    <div id="side-leaderboard" class="visible">
-        <h3>🏆 BasketBall Champion 🏆</h3>
-        <ul id="side-lb-list"></ul>
-        <div id="view-full-lb">🏆 Global Top 20</div>
-    </div>
-
-
-
-    <div id="tutorial-overlay" class="hidden">
-        <div id="tutorial-dialog">
-
-            <div id="tutorial-inner">
-
-                <div id="tutorial-video-container">
-                    <video id="tutorial-video" muted autoplay playsinline preload="auto">
-                        <source src="../assets/basketball.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <div id="tutorial-text">
-                    <h3>🎮 How to Play</h3>
-                    <p>👇 Pick up the ball to shoot</p>
-                    <p>🎯 Aim for the hoop!</p>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
-
-    <div id="party-welcome" class="hidden">
-        <div id="party-text">🎉 Welcome!</div>
-        <canvas id="confetti-canvas"></canvas>
-    </div>
-
-
-    <div id="game-wrapper">
-        <canvas id="game-canvas"></canvas>
-        <!-- UI Overlay -->
-        <div id="ui-container">
-            <div id="score-container">
-                <h1 id="score">0</h1>
-            </div>
-
-            <div id="goal-feedback" class="hidden">BASKET!</div>
-
-            <!-- Challenge Message -->
-            <div id="challenge-message" class="hidden">
-                <div class="challenge-emoji">🏀</div>
-                <div class="challenge-text">Can you strike the ball<br>in hoop at least 5 times?</div>
-                <div class="challenge-subtext">Let's shoot! 🎯</div>
-            </div>
-
-            <div id="swipe-guide" class="visible">
-                <div class="swipe-hand">👆</div>
-                <p>SWIPE UP TO SHOOT!</p>
-            </div>
-
-            <div id="main-menu" class="overlay hidden">
-                <h2 id="title">BASKETBALL 3D</h2>
-                <p id="prompt">🏀 Swipe up to shoot for the hoop!</p>
-                <button id="start-btn">PLAY BALL</button>
-            </div>
-
-            <div id="game-over" class="overlay hidden">
-                <h2>GAME OVER!</h2>
-                <p>Points: <span id="final-score">0</span></p>
-                <p>Best: <span id="best-score">0</span></p>
-
-                <div id="gameover-input-area">
-                    <input id="player-name-gameover" placeholder="Enter Name for Leaderboard" maxlength="12">
-                    <button id="submit-score-btn">Submit Score</button>
-                </div>
-
-                <button id="bonus-btn" class="hidden">🎁 Watch Ad & Get +1 Life</button>
-                <button id="restart-btn">Try Again</button>
-                <button id="join-tg-btn" class="join-tg-btn">🏆 Top 20 Leaderboard</button>
-
-                <!-- Game Scroller Container -->
-                <div id="game-over-scroller"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- COOKIE CONSENT BANNER -->
-    <div id="cookie-consent" class="cookie-banner hidden">
-        <div class="cookie-content">
-            <div class="cookie-text">
-                <span class="cookie-icon">🍪</span>
-                <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank"
-                        style="color: #ff9800; text-decoration: underline;">Learn more</a></span>
-            </div>
-            <div class="cookie-buttons">
-                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
-                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
-    <div id="adsterra-banner"></div>
-
-    <!-- SEMANTIC DESCRIPTION FOR SEO -->
-    <section class="game-description" style="margin-top: 300px;">
-        <h2 style="color: #fff; margin-bottom: 20px;">Master the Perfect Shot</h2>
-        <p>Basketball 3D brings the excitement of the court to your browser. Use your timing and aim to sink as many
-            baskets as you can. As your score increases, the challenge grows with moving targets and increased
-            distances.</p>
-
-        <h3 style="color: #fff; margin: 30px 0 15px;">How to Play</h3>
-        <ul style="list-style-position: inside; margin-bottom: 30px;">
-            <li><strong>Shoot:</strong> Swipe up or click and drag upward to throw the ball.</li>
-            <li><strong>Arc:</strong> The speed and length of your swipe determine the power and arc of your shot.</li>
-            <li><strong>Challenge:</strong> Rack up points and compete on the global leaderboard!</li>
-        </ul>
-
-        <div style="text-align: center; margin-top: 50px;">
-            <a href="../index.html" style="color: #ff9800; text-decoration: none; font-weight: bold;">← Back to
-                Portal</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-links" style="text-align:center; padding: 40px;">
-            <a href="../privacy.html" style="color: #666; text-decoration: none; margin: 0 10px;">Privacy</a>
-            <a href="../terms.html" style="color: #666; text-decoration: none; margin: 0 10px;">Terms</a>
-        </div>
-    </footer>
-
-
-
-    <!-- BOTTOM BANNER AD -->
-    <div id="bottom-ad"></div>
-
+    <iframe id="game-frame" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById("bottom-ad");
-            function loadBanner() {
-                if (typeof shouldLoadAds === "function" && !shouldLoadAds()) return;
-                if (!container) return;
-                container.innerHTML = '<div id="banner-slot"></div>';
-                const slot = document.getElementById("banner-slot");
-                window.atOptions = {
-                    key: "de617c07128b585ef939154460e6858f",
-                    format: "iframe",
-                    height: 50,
-                    width: 320,
-                    params: {}
-                };
-                const s = document.createElement("script");
-                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                slot.appendChild(s);
-            }
-            if (window.DEV_MODE) {
-                return;
-            }
-            setTimeout(loadBanner, 100);
-        });
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
     </script>
-
 </body>
 
 </html>

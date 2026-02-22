@@ -3,155 +3,150 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traffic Jam - PlayMixGames</title>
-    <link rel="stylesheet" href="../portal-style.css">
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
-        crossorigin="anonymous"></script>
-    <script type="module" src="../analytics.js"></script>
-    <script type="module" src="../analytics.js"></script>
-    <script src="../ads.js"></script>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Traffic Jam 3D - Puzzle Challenge | PlayMixGames</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
 
-    <!-- Cookie Consent Script -->
-    <script>
-        (function () {
-            const CONSENT_KEY = 'play-mix-games-cookie-consent';
-            function getCookieConsent() {
-                const stored = localStorage.getItem(CONSENT_KEY);
-                return stored ? JSON.parse(stored) : null;
-            }
-            function showCookieBanner() {
-                const consent = getCookieConsent();
-                if (!consent) {
-                    const banner = document.getElementById('cookie-consent');
-                    if (banner) banner.classList.remove('hidden');
-                }
-            }
-            function acceptCookies() {
-                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
-                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
-                document.getElementById('cookie-consent')?.classList.add('hidden');
-                window.cookieConsent = true;
-                console.log('✅ Cookie consent accepted');
-            }
-            function declineCookies() {
-                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
-                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
-                document.getElementById('cookie-consent')?.classList.add('hidden');
-                window.cookieConsent = false;
-                console.log('❌ Cookie consent declined');
-            }
-            document.addEventListener('DOMContentLoaded', function () {
-                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
-                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
-                setTimeout(showCookieBanner, 500);
-            });
-            window.cookieConsent = getCookieConsent()?.accepted ?? null;
-        })();
-    </script>
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
 
-    <!-- Load Ads Using Professional Control System -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            loadSocialBarAd();
-        });
-    </script>
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
-    <!-- Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #4facfe;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(79, 172, 254, 0.1);
+            border-top-color: #4facfe;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pmgPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes pmgFill {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 95%;
+            }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
-
-
-    <main class="game-container">
-        <h1>Traffic Jam</h1>
-
-        <div id="game-ui">
-            <div id="level-indicator">Level 1</div>
-            <div id="main-menu" class="overlay hidden">
-                <h2>PUZZLE TIME</h2>
-                <p>Slide the cars to clear a path for the red sports car!</p>
-                <button id="start-btn">Start Playing</button>
-            </div>
-            <div id="game-over" class="overlay hidden">
-                <h2>LEVEL CLEAR!</h2>
-                <p>Great job navigating the rush hour.</p>
-                <button id="next-btn">Next Level</button>
-
-                <!-- Game Scroller Container -->
-                <div id="game-over-scroller"></div>
-            </div>
-            <canvas id="game-canvas"></canvas>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
         </div>
-
-        <!-- COOKIE CONSENT BANNER -->
-        <div id="cookie-consent" class="cookie-banner hidden">
-            <div class="cookie-content">
-                <div class="cookie-text">
-                    <span class="cookie-icon">🍪</span>
-                    <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank"
-                            style="color: #4d79ff; text-decoration: underline;">Learn more</a></span>
-                </div>
-                <div class="cookie-buttons">
-                    <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
-                    <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
-                </div>
-            </div>
-        </div>
-
-        <section class="game-description">
-            <h2>About Traffic Jam</h2>
-            <p>Traffic Jam is a classic spatial reasoning puzzle where you take the role of a traffic controller in a
-                congested city parking lot. Your goal is simple but challenging: get the red car to the exit gate on the
-                right side of the grid. However, the path is blocked by various trucks and cars that can only move along
-                their own axis.</p>
-
-            <p>With dozens of levels ranging from "Beginner" to "Expert", Traffic Jam will test your ability to plan
-                several moves ahead. Each car you move affects the board's state, creating a domino effect of
-                possibilities. It's a perfect blend of strategy and logic, rendered in high-fidelity 3D with smooth
-                isometric camera angles.</p>
-
-            <h3>Rules of the Road</h3>
-            <ul>
-                <li><strong>Horizontal Cars:</strong> Can only slide left and right.</li>
-                <li><strong>Vertical Cars:</strong> Can only slide up and down.</li>
-                <li><strong>The Exit:</strong> Slide the Red Car all the way to the green gate on the right to win.</li>
-            </ul>
-
-            <h3>Scoring and Logic</h3>
-            <p>Each level is cleared once the red sports car exits the grid. Your logic is tested by how few moves you
-                can use to clear the path, though the primary goal is simply to solve the puzzle and advance to the next
-                challenge.</p>
-
-            <h3>Puzzle Tips</h3>
-            <p>Before moving any car, try to look at the 'Main Obstacle'—the car directly blocking the red one. Work
-                backwards: what needs to move to get that obstacle out of the way? This reverse-engineering strategy is
-                the key to solving the Expert levels!</p>
-        </section>
-    </main>
-
-
-    <footer>
-        <div class="footer-links">
-            <a href="../index.html">Home</a>
-            <a href="../privacy.html">Privacy Policy</a>
-            <a href="../terms.html">Terms of Service</a>
-            <a href="../contact.html">Contact</a>
-        </div>
-        <p class="copyright">&copy; 2026 PlayMixGames. <span id="app-version"
-                style="opacity: 0.5; font-size: 0.7em;"></span></p>
-    </footer>
-
-    <script src="game.js"></script>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <iframe id="game-frame" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js');
-            });
-        }
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
     </script>
 </body>
 

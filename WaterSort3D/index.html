@@ -2,261 +2,152 @@
 <html lang="en">
 
 <head>
-    <!-- Early Tracking Script -->
-    <script>
-        (function () {
-            const startTime = Date.now();
-            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
-            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
-
-            const hitData = {
-                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
-                url: location.href,
-                referrer: document.referrer,
-                userAgent: navigator.userAgent,
-                screen: { width: screen.width, height: screen.height },
-                loadStage: "pre-init",
-                placement_id: placementId
-            };
-
-            const sendHit = (stage) => {
-                hitData.loadStage = stage;
-                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
-
-                if (stage === "early-exit") {
-                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
-                }
-
-                fetch(endpoint, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "apikey": anonKey,
-                        "Authorization": "Bearer " + anonKey
-                    },
-                    body: JSON.stringify(hitData),
-                    keepalive: true
-                });
-            };
-
-            sendHit("pre-init");
-
-            window.addEventListener("pagehide", function () {
-                if (!window.FIREBASE_INITIALIZED) {
-                    sendHit("early-exit");
-                }
-            });
-        })();
-    </script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>🧪 Water Sort Puzzle 3D - Addictive Color Sorting Game | PlayMixGames</title>
-    <meta name="description"
-        content="Sort the colored water in the tubes until all colors are in the same tube. A relaxing and challenging 3D puzzle game for your brain!">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
-        crossorigin="anonymous"></script>
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
 
-    <script type="module" src="../analytics.js"></script>
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-    <!-- Load Ads Script -->
-    <script src="../ads.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // loadSocialBarAd();
-            if (typeof renderTopRightScroller === 'function') {
-                renderTopRightScroller();
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #4facfe;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(79, 172, 254, 0.1);
+            border-top-color: #4facfe;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to {
+                transform: rotate(360deg);
             }
-        });
-    </script>
+        }
 
-    <!-- Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
-    <!-- GSAP for animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        @keyframes pmgPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes pmgFill {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 95%;
+            }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <a href="../index.html" class="back-btn">← PlayMixGames</a>
-        <h1 class="game-title">🧪 Water Sort 3D</h1>
-        <div class="level-display">
-            LEVEL <span id="current-level">1</span>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
         </div>
-    </header>
-
-    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
-    <div id="adsterra-banner">
-        <!-- Script will be injected here by game.js after 2s -->
+        <p class="pmg-tip">Loading...</p>
     </div>
-
-    <!-- Game Container -->
-    <div id="game-container">
-
-        <!-- Instructions Panel (Left Side) -->
-        <div id="instructions-panel">
-            <div class="panel-content">
-                <h2 class="panel-title">💧 Water Sort 3D</h2>
-                <h3 class="panel-subtitle">Color Sorting Puzzle</h3>
-
-                <div class="instructions-section">
-                    <h4>How to Play</h4>
-                    <div class="instruction-item">
-                        <span class="instruction-icon">👆</span>
-                        <div class="instruction-text">
-                            <strong>Tap a Tube</strong><br>
-                            <small>Select to pour water</small>
-                        </div>
-                    </div>
-                    <div class="instruction-item">
-                        <span class="instruction-icon">🧪</span>
-                        <div class="instruction-text">
-                            <strong>Match Colors</strong><br>
-                            <small>Pour same color on top</small>
-                        </div>
-                    </div>
-                    <div class="instruction-item">
-                        <span class="instruction-icon">✨</span>
-                        <div class="instruction-text">
-                            <strong>Sort It All</strong><br>
-                            <small>One color per tube to win!</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tips-section">
-                    <h4>Pro Tips</h4>
-                    <p>• Plan your moves ahead</p>
-                    <p>• Use empty tubes wisely</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Game Area (Canvas) -->
-        <canvas id="game-canvas"></canvas>
-
-        <!-- Bottom Controls -->
-        <div id="game-controls">
-            <button id="restart-btn" class="control-btn" title="Restart Level">
-                <span class="icon">🔄</span>
-                <span class="label">Restart</span>
-            </button>
-            <button id="undo-btn" class="control-btn" title="Undo Move">
-                <span class="icon">↩️</span>
-                <span class="label">Undo</span>
-            </button>
-        </div>
-
-        <!-- Undo Confirmation Modal -->
-        <div id="undo-modal" class="overlay-screen hidden" style="z-index: 2000;">
-            <div class="screen-content" style="max-width: 320px;">
-                <h2 class="title-main" style="font-size: 1.8rem;">Undo Move?</h2>
-                <p style="margin-bottom: 20px; color: #ccc;">Watch a short ad to undo your last move.</p>
-                <div class="button-group" style="display: flex; gap: 10px; justify-content: center;">
-                    <button id="cancel-undo-btn" class="game-btn"
-                        style="background: #444; font-size: 0.9rem; padding: 10px 20px;">Cancel</button>
-                    <button id="confirm-undo-btn" class="game-btn primary-btn"
-                        style="font-size: 0.9rem; padding: 10px 20px;">
-                        Watch 📺
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Level Complete Screen -->
-        <div id="level-complete-screen" class="overlay-screen hidden">
-            <div class="screen-content">
-                <h1 class="title-main">Level Complete!</h1>
-                <h2 class="title-sub">Outstanding Sorting! 🧪</h2>
-                <div class="stars-container">
-                    <span>⭐</span><span>⭐</span><span>⭐</span>
-                </div>
-                <button id="next-level-btn" class="game-btn primary-btn">
-                    Next Level
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Bottom Banner Ad -->
-    <div id="bottom-ad">
-        <script>
-            (function () {
-
-                const container = document.getElementById("bottom-ad");
-
-                function loadBanner() {
-                    if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
-                        console.log("🚧 [ADS] Banner skipped");
-                        return;
-                    }
-
-                    if (!container) return;
-
-                    // Create inner ad wrapper (safe clear)
-                    container.innerHTML = '<div id="banner-slot"></div>';
-                    const slot = document.getElementById("banner-slot");
-
-                    window.atOptions = {
-                        key: "de617c07128b585ef939154460e6858f",
-                        format: "iframe",
-                        height: 50,
-                        width: 320,
-                        params: {}
-                    };
-
-                    const s = document.createElement("script");
-                    s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                    slot.appendChild(s);
-
-                }
-
-                if (window.DEV_MODE) {
-                    return;
-                }
-                // Initial load
-                setTimeout(loadBanner, 100);
-
-
-
-            })();
-        </script>
-    </div>
-
-    <!-- SEO: About Game & How to Play Section -->
-    <section id="game-info" style="background: #f8f9fa; padding: 40px 20px; margin-top: 40px; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto;">
-            <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px;">💧 About Water Sort 3D</h2>
-            <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 30px;">
-                Water Sort 3D is a relaxing color-sorting puzzle game inspired by the viral Water Sort Puzzle. Pour
-                water between tubes
-                to organize colors and complete challenging levels. With hundreds of levels and increasingly complex
-                puzzles,
-                this game offers endless brain-teasing fun for all ages. Perfect for unwinding while exercising your
-                logic skills.
-            </p>
-
-            <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
-            <ul
-                style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
-                <li>✅ Tap tubes to pour water between containers</li>
-                <li>✅ Sort colors so each tube contains only one color</li>
-                <li>✅ Use empty tubes to help organize and separate colors</li>
-                <li>✅ Avoid mixing colors incorrectly or use undo moves</li>
-                <li>✅ Complete all levels to master the water sorting challenge</li>
-            </ul>
-        </div>
-    </section>
-
-    <script src="game.js"></script>
+    <iframe id="game-frame" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
 </body>
 
 </html>

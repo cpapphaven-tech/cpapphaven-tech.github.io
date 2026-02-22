@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寿司マッチ3D - Sushi Match 3D | PlayMixGames</title>
+    <meta name="description"
+        content="Match delicious sushi in this addictive 3D puzzle game! Test your memory and speed in a beautiful Japanese-themed matching challenge.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <!-- Firebase Analytics -->
+    <script type="module" src="../analytics.js"></script>
+
+    <!-- Load Ads Script -->
+    <script src="../ads.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+            renderTopRightScroller();
+        });
+    </script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">寿司マッチ3D</h1>
+        <div class="score-display">
+            <span id="score">0</span>
+        </div>
+    </header>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- Instructions Panel (Left Side) -->
+        <div id="instructions-panel">
+            <div class="panel-content">
+                <h2 class="panel-title">🍣 寿司マッチ3D</h2>
+                <h3 class="panel-subtitle">Sushi Match 3D</h3>
+
+                <div class="instructions-section">
+                    <h4>遊び方 (How to Play)</h4>
+                    <div class="instruction-item">
+                        <span class="instruction-icon">🍱</span>
+                        <div class="instruction-text">
+                            <strong>マッチング</strong><br>
+                            <small>Click matching sushi pairs</small>
+                        </div>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="instruction-icon">⏱️</span>
+                        <div class="instruction-text">
+                            <strong>時間制限</strong><br>
+                            <small>Beat the timer to advance</small>
+                        </div>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="instruction-icon">🎯</span>
+                        <div class="instruction-text">
+                            <strong>全てクリア</strong><br>
+                            <small>Clear all sushi to win</small>
+                        </div>
+                    </div>
+                    <div class="instruction-item">
+                        <span class="instruction-icon">⭐</span>
+                        <div class="instruction-text">
+                            <strong>ボーナス</strong><br>
+                            <small>Time bonus for fast clears</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tips-section">
+                    <h4>ヒント (Tips)</h4>
+                    <p>• Remember sushi positions</p>
+                    <p>• Work quickly for bonus points</p>
+                    <p>• Match from top to bottom</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 class="title-japanese">ゲームオーバー</h1>
+                <h2 class="title-english">Game Over</h2>
+                <div class="final-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">レベル (Level)</span>
+                        <span class="stat-value" id="final-level">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">スコア (Score)</span>
+                        <span class="stat-value" id="final-score">0</span>
+                    </div>
+                </div>
+                <button id="restart-btn" class="game-btn primary-btn">
+                    もう一度 (Play Again)
+                </button>
+                <button id="home-btn" class="game-btn secondary-btn">
+                    ホーム (Home)
+                </button>
+            </div>
+        </div>
+
+        <!-- Level Complete Screen -->
+        <div id="levelcomplete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 class="title-japanese">素晴らしい！</h1>
+                <h2 class="title-english">Level Complete!</h2>
+                <div class="level-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">ボーナス (Bonus)</span>
+                        <span class="stat-value" id="time-bonus">+0</span>
+                    </div>
+                </div>
+                <button id="next-level-btn" class="game-btn primary-btn">
+                    次のレベル (Next Level)
+                </button>
+            </div>
+        </div>
+
+        <!-- Game HUD -->
+        <div id="game-hud" class="hidden">
+            <div class="hud-top">
+                <div class="hud-item">
+                    <span class="hud-label">レベル</span>
+                    <span class="hud-value" id="level">1</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">時間</span>
+                    <span class="hud-value" id="timer">60</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">残り</span>
+                    <span class="hud-value" id="remaining">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Cherry Blossom Particles -->
+        <div id="sakura-container"></div>
+    </div>
+
+    <!-- Banner Ad Container -->
+    <div id="banner-ad-container" style="text-align: center; margin: 20px auto; max-width: 728px;">
+        <!-- Adsterra Banner Ad -->
+        <div id="banner-ad"></div>
+    </div>
+
+    <!-- Game Script -->
+    <script src="game.js"></script>
+
+    <!-- BOTTOM BANNER AD -->
+    <div id="bottom-ad"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const container = document.getElementById("bottom-ad");
+
+            function loadBanner() {
+                if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
+                    console.log("🚧 [ADS] Banner skipped");
+                    return;
+                }
+
+                if (!container) {
+                    console.log("❌ bottom-ad container missing");
+                    return;
+                }
+
+                container.innerHTML = '<div id="banner-slot"></div>';
+                const slot = document.getElementById("banner-slot");
+
+                window.atOptions = {
+                    key: "de617c07128b585ef939154460e6858f",
+                    format: "iframe",
+                    height: 50,
+                    width: 320,
+                    params: {}
+                };
+
+                const s = document.createElement("script");
+                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                slot.appendChild(s);
+
+                console.log("✅ Banner loaded");
+            }
+
+            if (window.DEV_MODE) {
+                return;
+            }
+            setTimeout(loadBanner, 2000);
+
+        });
+    </script>
+
+    <!-- SEO: About Game & How to Play Section -->
+    <section id="game-info" style="background: #f8f9fa; padding: 40px 20px; margin-top: 40px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px;">🍣 About Sushi Match 3D</h2>
+            <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 30px;">
+                Sushi Match 3D is an addictive memory matching game where you click on pairs of matching sushi to clear
+                the board.
+                Test your memory and speed in beautiful 3D environments inspired by traditional Japanese cuisine.
+                Perfect for players of all ages looking for a relaxing yet challenging puzzle experience.
+            </p>
+
+            <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
+            <ul
+                style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+                <li>✅ Click on sushi items to flip and find matching pairs</li>
+                <li>✅ Match all pairs before the timer runs out</li>
+                <li>✅ Complete levels to unlock new sushi varieties</li>
+                <li>✅ Earn bonus points for fast clears</li>
+                <li>✅ Challenge yourself with increasing difficulty levels</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

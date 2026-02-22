@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bottle Shoot 3D - PlayMixGames</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <!-- Three.js + Cannon-ES for physics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+
+    <!-- Adsterra Setup -->
+    <script type='text/javascript' src='//delicatecatheter.com/f0/67/60/f06760fa6f06fd364ccfb043e0617ad7.js'></script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <header>
+        <a href="../" class="back-btn">← PlayMixGames</a>
+        <div class="game-title">Bottle Shoot 3D</div>
+        <div class="level-display" id="level-ui">Level <span id="round-text">1</span></div>
+    </header>
+
+    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner">
+        <!-- Script will be injected here by game.js after 2s -->
+    </div>
+
+    <div id="game-container">
+        <!-- Main Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <div id="score-display">
+            ❤️: <span id="lives-display">3</span>
+        </div>
+
+        <div id="status-message" class="hidden">Level Clear!</div>
+
+        <!-- Hidden dummy startBtn — game auto-starts, this is only used internally by JS -->
+        <button id="start-btn" style="display:none;"></button>
+
+        <!-- Win/Lose Screen -->
+        <div id="win-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 id="winner-text" style="font-size: 3rem; margin-bottom: 10px; text-shadow: 0 0 10px white;">GAME
+                    OVER
+                </h1>
+                <p id="score-text" style="font-size: 1.5rem; margin-bottom: 20px;">Reached Level: 1</p>
+
+                <!-- Watch Ad +1 Life (game over only) -->
+                <button id="bonus-btn" class="game-btn"
+                    style="background: linear-gradient(45deg, #ff9a00, #f7630c); color: white; display:none;">
+                    🎁 Watch Ad to Restart Level
+                </button>
+
+                <!-- Next Level button (level clear only) -->
+                <button id="restart-btn" class="game-btn"
+                    style="background: linear-gradient(45deg, #4facfe, #00f2fe); color: white; display:none;">Next
+                    Level</button>
+
+                <!-- Start from Level 1 (game over only) -->
+                <button id="restart-level1-btn" class="game-btn"
+                    style="background: rgba(255,255,255,0.12); color: #ccc; border: 1px solid rgba(255,255,255,0.2); display:none;">
+                    🔄 Start from Level 1
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Bottom Banner Ad -->
+    <div id="bottom-ad">
+        <script>
+            (function () {
+                const container = document.getElementById("bottom-ad");
+                function loadBanner() {
+                    if (typeof shouldLoadAds === "function" && !shouldLoadAds()) {
+                        console.log("🚧 [ADS] Banner skipped");
+                        return;
+                    }
+                    if (!container) return;
+                    container.innerHTML = '<div id="banner-slot"></div>';
+                    const slot = document.getElementById("banner-slot");
+                    window.atOptions = {
+                        key: "de617c07128b585ef939154460e6858f",
+                        format: "iframe",
+                        height: 50,
+                        width: 320,
+                        params: {}
+                    };
+                    const s = document.createElement("script");
+                    s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                    slot.appendChild(s);
+                }
+                if (window.DEV_MODE) { return; }
+                setTimeout(loadBanner, 100);
+            })();
+        </script>
+    </div>
+
+    <!-- Main Game Logic -->
+    <script src="game.js"></script>
+    <script>
+        (function () {
+            var loader = document.getElementById('pmg-loader');
+            function hideLoader() {
+                if (loader && !loader.classList.contains('hidden')) {
+                    var fill = loader.querySelector('.pmg-bar-fill');
+                    if (fill) fill.style.width = '100%';
+                    setTimeout(function () {
+                        loader.classList.add('hidden');
+                    }, 300);
+                }
+            }
+
+            // Normal load event
+            window.addEventListener('load', hideLoader);
+
+            // Fail-safe: hide loader after 6 seconds regardless
+            setTimeout(hideLoader, 6000);
+        })();
+    </script>
+</body>
+
+</html>

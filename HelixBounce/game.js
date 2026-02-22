@@ -261,8 +261,10 @@ function startGame() {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
-    // Show challenge message
-    showChallengeMessage();
+    // Show challenge message only on first level
+    if (currentLevel === 1) {
+        showChallengeMessage();
+    }
 
     isGameOver = false;
     score = 0;
@@ -314,9 +316,9 @@ function startGame() {
 function showChallengeMessage() {
     const challengeMsg = document.getElementById('challenge-message');
     if (!challengeMsg) return;
-    
+
     challengeMsg.classList.remove('hidden');
-    
+
     // Fade out and hide after 3.5 seconds
     setTimeout(() => {
         challengeMsg.classList.add('hidden');
@@ -802,58 +804,58 @@ function showTutorial() {
 }
 
 function showPartyWelcome() {
-  const container = document.getElementById("party-welcome");
-  const canvas = document.getElementById("confetti-canvas");
+    const container = document.getElementById("party-welcome");
+    const canvas = document.getElementById("confetti-canvas");
 
-  if (!container || !canvas) return;
+    if (!container || !canvas) return;
 
-  container.classList.remove("hidden");
+    container.classList.remove("hidden");
 
-  const ctx = canvas.getContext("2d");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-  const confetti = [];
+    const confetti = [];
 
-  for (let i = 0; i < 120; i++) {
-    confetti.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height - canvas.height,
-      r: Math.random() * 6 + 2,
-      d: Math.random() * 40,
-      color: `hsl(${Math.random() * 360}, 80%, 60%)`,
-      tilt: Math.random() * 10 - 10
-    });
-  }
+    for (let i = 0; i < 120; i++) {
+        confetti.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height - canvas.height,
+            r: Math.random() * 6 + 2,
+            d: Math.random() * 40,
+            color: `hsl(${Math.random() * 360}, 80%, 60%)`,
+            tilt: Math.random() * 10 - 10
+        });
+    }
 
-  let frame = 0;
+    let frame = 0;
 
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    confetti.forEach(c => {
-      ctx.beginPath();
-      ctx.fillStyle = c.color;
-      ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
-      ctx.fill();
+        confetti.forEach(c => {
+            ctx.beginPath();
+            ctx.fillStyle = c.color;
+            ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+            ctx.fill();
 
-      c.y += Math.cos(frame + c.d) + 2;
-      c.x += Math.sin(frame) * 1.5;
+            c.y += Math.cos(frame + c.d) + 2;
+            c.x += Math.sin(frame) * 1.5;
 
-      if (c.y > canvas.height) {
-        c.y = -10;
-      }
-    });
+            if (c.y > canvas.height) {
+                c.y = -10;
+            }
+        });
 
-    frame += 0.05;
-  }
+        frame += 0.05;
+    }
 
-  const interval = setInterval(draw, 16);
+    const interval = setInterval(draw, 16);
 
-  setTimeout(() => {
-    clearInterval(interval);
-    container.classList.add("hidden");
-  }, 3000);
+    setTimeout(() => {
+        clearInterval(interval);
+        container.classList.add("hidden");
+    }, 3000);
 }
 
 // Start
@@ -871,7 +873,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const joinTgBtn = document.getElementById("join-tg-btn");
     if (joinTgBtn) {
         joinTgBtn.addEventListener("click", () => {
-             document.getElementById('full-leaderboard').classList.remove('hidden');
+            document.getElementById('full-leaderboard').classList.remove('hidden');
             fetchLeaderboard(); // refresh
         });
     }
@@ -1262,9 +1264,9 @@ window.addEventListener('load', () => {
     // Load Adsterra
     console.log("📢 Calling loadAdsterraBanner()...");
 
-     if (!window.DEV_MODE) {
-         loadAdsterraBanner();
-     }
+    if (!window.DEV_MODE) {
+        loadAdsterraBanner();
+    }
 });
 
 

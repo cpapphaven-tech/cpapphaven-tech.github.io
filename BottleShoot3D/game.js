@@ -5,7 +5,6 @@ let lives = 3;
 let gameState = 'start'; // 'start', 'playing', 'animating', 'gameover'
 
 // UI Elements
-const startScreen = document.getElementById('start-screen');
 const winScreen = document.getElementById('win-screen');
 const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
@@ -92,51 +91,56 @@ window.addEventListener("beforeunload", () => {
 
 // --- Game Control ---
 function loadAdsterraBanner() {
-    // Desktop only check (using User Agent and Screen Width for safety)
-    const osKey = getOSKey();
-    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-        return;
+    try {
+        // Desktop only check (using User Agent and Screen Width for safety)
+        const osKey = getOSKey();
+        if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
+            return;
+        }
+
+        const container = document.getElementById("adsterra-banner");
+        if (!container) return;
+
+        setTimeout(() => {
+            try {
+                console.log("Loading Adsterra Banner...");
+
+                // Create an iframe to safely isolate the ad execution
+                const iframe = document.createElement('iframe');
+                iframe.style.width = "160px";
+                iframe.style.height = "600px";
+                iframe.style.border = "none";
+                iframe.style.overflow = "hidden";
+                iframe.scrolling = "no";
+
+                container.appendChild(iframe);
+
+                const doc = iframe.contentWindow.document;
+                doc.open();
+                doc.write(`
+                    <html>
+                    <body style="margin:0;padding:0;background:transparent;">
+                        <script>
+                            atOptions = {
+                                'key' : '34488dc997487ff336bf5de366c86553',
+                                'format' : 'iframe',
+                                'height' : 600,
+                                'width' : 160,
+                                'params' : {}
+                            };
+                        </script>
+                        <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
+                    </body>
+                    </html>
+                `);
+                doc.close();
+            } catch (e) {
+                console.warn("Banner init failed:", e);
+            }
+        }, 1000); // 1s delay for stability
+    } catch (e) {
+        console.warn("loadAdsterraBanner crashed:", e);
     }
-
-    const container = document.getElementById("adsterra-banner");
-    if (!container) return;
-
-    setTimeout(() => {
-        console.log("Loading Adsterra Banner...");
-
-        // Create an iframe to safely isolate the ad execution
-        const iframe = document.createElement('iframe');
-        iframe.style.width = "160px";
-        iframe.style.height = "600px";
-        iframe.style.border = "none";
-        iframe.style.overflow = "hidden";
-        iframe.scrolling = "no";
-
-        container.appendChild(iframe);
-
-        const doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
-            <html>
-            <body style="margin:0;padding:0;background:transparent;">
-                <script>
-                    atOptions = {
-                        'key' : '34488dc997487ff336bf5de366c86553',
-                        'format' : 'iframe',
-                        'height' : 600,
-                        'width' : 160,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-            </body>
-            </html>
-        `);
-        doc.close();
-
-
-
-    }, 10);
 }
 
 
@@ -168,7 +172,7 @@ scene.fog = new THREE.FogExp2(0x87CEEB, 0.015);
 const isMobile = window.innerWidth <= 768;
 // Stronger camera pull-back and angle for mobile to see the full scene
 const camera = new THREE.PerspectiveCamera(isMobile ? 60 : 50, window.innerWidth / (window.innerHeight - 110), 0.1, 200);
-camera.position.set(-15, 12, isMobile ? 50 : 30);
+camera.position.set(-15, 12, isMobile ? 35 : 22);
 camera.lookAt(5, 3, 0);
 
 const renderer = new THREE.WebGLRenderer({
@@ -183,13 +187,18 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-// --- Load HDR (Like Bubble Sort 3D) ---
-const rgbeLoader = new THREE.RGBELoader();
-rgbeLoader.load('../assets/royal_esplanade_1k.hdr', function (texture) {
-    texture.mapping = THREE.EquirectangularReflectionMapping;
-    scene.environment = texture;
-    // Keep skyblue background, but objects reflect the HDR perfectly
-});
+// --- Load HDR ---
+if (THREE.RGBELoader) {
+    const rgbeLoader = new THREE.RGBELoader();
+    rgbeLoader.load('../assets/royal_esplanade_1k.hdr', function (texture) {
+        texture.mapping = THREE.EquirectangularReflectionMapping;
+        scene.environment = texture;
+    }, undefined, function (err) {
+        console.warn("HDR Load failed, using fallback lighting:", err);
+    });
+} else {
+    console.warn("RGBELoader not found, using fallback lighting.");
+}
 
 // --- Lights ---
 // Lower ambient so Phong colors stay saturated (not bleached white)
@@ -840,8 +849,14 @@ function animate() {
 }
 animate();
 
-// Auto-start the game immediately on load
-startGame();
+// Auto-start the game immediately on load with safety delay
+setTimeout(() => {
+    try {
+        startGame();
+    } catch (e) {
+        console.error("Critical: startGame failed", e);
+    }
+}, 100);
 
 // Resize handling
 window.addEventListener('resize', () => {

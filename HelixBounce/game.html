@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helix Bounce - PlayMixGames</title>
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_additions.css">
+    <link rel="stylesheet" href="../loader.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Cannon.js (Physics) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <!-- Load Ads Using Professional Control System -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+
+                if (window.DEV_MODE) {
+                    return;
+                }
+
+                loadSocialBarAd();
+
+
+            }, 100);
+        });
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Cookie Consent Script -->
+    <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+                console.log('✅ Cookie consent accepted');
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+                console.log('❌ Cookie consent declined');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script>
+
+    <link rel="preload" href="game.js" as="script">
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <!-- HEADER REMOVED to match Stack 3D Clean Look -->
+    <!--
+    <header>
+        <a href="../index.html" class="logo">PlayMixGames</a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    -->
+
+    <!-- Dedicated Full Leaderboard Screen -->
+    <div id="full-leaderboard" class="overlay hidden">
+        <div class="lb-header">
+            <h2>🏆 HELIX CHAMPION 🏆</h2>
+            <p>Top 20 Worldwide</p>
+        </div>
+        <div class="lb-scroll-area">
+            <ul id="full-lb-list"></ul>
+        </div>
+        <button onclick="closeFullLeaderboard()" class="close-btn">Close</button>
+    </div>
+
+    <!-- Side Background Leaderboard (Compact Mini-Box) -->
+    <div id="side-leaderboard" class="visible">
+        <h3>🏆 HELIX CHAMPION 🏆</h3>
+        <ul id="side-lb-list"></ul>
+        <div id="view-full-lb">🏆 Global Top 20</div>
+    </div>
+
+
+
+    <div id="tutorial-overlay" class="hidden">
+        <div id="tutorial-dialog">
+
+            <div id="tutorial-inner">
+
+                <div id="tutorial-video-container">
+                    <video id="tutorial-video" muted autoplay playsinline preload="auto">
+                        <source src="../assets/helixvideo.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div id="tutorial-text">
+                    <h3>🎮 How to Play</h3>
+                    <p>👇 Swipe left/right to turn</p>
+                    <p>⬇ Guide the ball down</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div id="party-welcome" class="hidden">
+        <div id="party-text">🎉 Welcome!</div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+
+    <main class="game-container">
+
+
+        <h1>Helix Bounce</h1>
+
+        <div id="game-ui">
+            <div id="level">Level 1</div>
+            <div id="score">0</div>
+
+            <!-- Challenge Message -->
+            <div id="challenge-message" class="hidden">
+                <div class="challenge-emoji">🏔️</div>
+                <div class="challenge-text">Can you complete<br>5 levels?</div>
+                <div class="challenge-subtext">Show your skills! 💪</div>
+            </div>
+
+            <div id="main-menu" class="overlay hidden"> <!-- Hidden by default for auto-start -->
+                <h2>HELIX BOUNCE</h2>
+                <p>Rotate the tower to fall through the gaps!</p>
+                <button id="resume-btn" class="hidden">Resume Level <span id="resume-level">1</span></button>
+                <button id="start-btn">Start New Game</button>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <h2>CRASHED!</h2>
+
+                <!-- Name Input for Leaderboard -->
+                <div id="gameover-input-area" style="margin: 15px 0; width: 90%;">
+                    <input id="player-name-gameover" placeholder="Enter Name for Leaderboard" maxlength="12" style="
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 8px;
+                        border: 1px solid rgba(255,255,255,0.3);
+                        background: rgba(0,0,0,0.3);
+                        color: white;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    ">
+                    <button id="submit-score-btn"
+                        style="background: linear-gradient(135deg, #4d79ff, #3366ff); border:none; width:100%; padding: 10px;">Submit
+                        & Save Level</button>
+                </div>
+
+                <button id="restart-btn">Try Again</button>
+
+                <!-- REWARDED SMARTLINK -->
+                <button id="bonus-btn" class="bonus-btn">
+                    🎁 Watch Ad & Get +1 Life
+                </button>
+
+                <button id="next-level-btn" class="hidden">Next Level</button>
+
+                <button id="join-tg-btn" class="join-tg-btn">
+                    🏆 Top 20 Leaderboard
+                </button>
+
+                <!-- Game Scroller Container -->
+                <div id="game-over-scroller"></div>
+            </div>
+
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <section class="game-description">
+            <h2>About Helix Bounce</h2>
+            <p>Helix Bounce is a thrilling arcade experience where precision and reflexes are your best allies. Navigate
+                a bouncing ball through a series of rotating platforms, aiming for the gaps to descend deeper into the
+                tower. But be warned: touching the colored "death zones" will end your run instantly!</p>
+
+            <p>Designed with smooth 3D physics and vibrant visuals, Helix Bounce offers an addictive "just one more go"
+                gameplay loop. As you progress, the speed increases and the gaps become narrower, testing even the most
+                seasoned arcade players. How deep can you go?</p>
+
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Rotate Tower:</strong> Click and drag (Desktop) or swipe (Mobile) horizontally to rotate the
+                    helix tower.</li>
+                <li><strong>Avoid Red Zones:</strong> Landing on a red segment will result in a game over.</li>
+                <li><strong>Score Points:</strong> Each floor you pass through increases your score. Clear multiple
+                    levels in a single jump for a combo bonus!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <script defer src="game.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+
+    <!-- Cross-Promotion scroller will appear in Game Over -->
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-icon">🍪</span>
+                <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank"
+                        style="color: #cc00cc; text-decoration: underline;">Learn more</a></span>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
+    <div id="adsterra-banner">
+        <!-- Script will be injected here by game.js after 2s -->
+    </div>
+
+
+
+
+
+    <div id="bottom-ad"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("bottom-ad");
+            function loadBanner() {
+
+                if (!container) return;
+                container.innerHTML = '<div id="banner-slot"></div>';
+                const slot = document.getElementById("banner-slot");
+                window.atOptions = {
+                    key: "de617c07128b585ef939154460e6858f",
+                    format: "iframe",
+                    height: 50,
+                    width: 320,
+                    params: {}
+                };
+                const s = document.createElement("script");
+                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+                slot.appendChild(s);
+            }
+
+            if (window.DEV_MODE) {
+                return;
+            }
+            setTimeout(loadBanner, 100);
+        });
+    </script>
+
+
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

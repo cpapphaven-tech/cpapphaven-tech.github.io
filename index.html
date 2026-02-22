@@ -59,6 +59,7 @@
         content="Discover premium, high-fidelity 3D web games. Instant play, no downloads required. Play Stack 3D and more at PlayMixGames.">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="loader.css">
     <script type="module" src="./analytics.js"></script>
     <script src="ads.js"></script>
 
@@ -91,6 +92,16 @@
 </head>
 
 <body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Finding the best games for you…</p>
+    </div>
+    <!-- ========================================= -->
     <header>
         <a href="index.html" class="logo">PlayMixGames</a>
         <nav>
@@ -461,6 +472,16 @@
             sessionStorage.setItem('hard-reloaded', 'true');
             setTimeout(() => window.location.reload(true), 1000);
         }
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
     </script>
 </body>
 

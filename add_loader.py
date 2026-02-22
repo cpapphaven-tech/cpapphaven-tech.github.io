@@ -1,0 +1,117 @@
+#!/usr/bin/env python3
+"""
+PlayMixGames - Fast-Boot Shell Generator
+Transforms game index.html files into a Shell Architecture:
+1. Renames original index.html to game.html
+2. Creates a tiny index.html (Shell) that shows the loader INSTANTLY.
+3. The Shell loads the actual game in the background via an iframe.
+"""
+
+import os
+import re
+
+BASE = "/Users/gauravpurohit/Documents/GP/PlayMixGames"
+
+# All game subdirectories
+GAMES = [
+    "AirHockey3D",
+    "Basketball3D",
+    "BottleShoot3D",
+    "BubbleShooter",
+    "BurgerStack",
+    "ColorMatch",
+    "Football3D",
+    "HelixBounce",
+    "Ludo",
+    "Stack3D",
+    "Sudoku",
+    "SushiMatch",
+    "TrafficJam",
+    "WaterSort3D",
+    "WordSearch",
+]
+
+# Minimal shell styles (Inlined for 0-latency render)
+SHELL_CSS = """
+    body, html { margin:0; padding:0; width:100%; height:100%; overflow:hidden; background:#0a0a1a; font-family: sans-serif; }
+    #pmg-loader { position:fixed; inset:0; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0a0a1a; transition:opacity 0.5s ease; }
+    #pmg-loader.hidden { opacity:0; pointer-events:none; }
+    .pmg-brand { font-size:1.5rem; font-weight:900; color:#4facfe; text-transform:uppercase; margin-bottom:30px; letter-spacing:2px; animation: pmgPulse 2s infinite; }
+    .pmg-spinner { width:50px; height:50px; border:5px solid rgba(79, 172, 254, 0.1); border-top-color:#4facfe; border-radius:50%; animation: pmgSpin 0.8s linear infinite; margin-bottom:20px; }
+    .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:99px; overflow:hidden; }
+    .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg, #4facfe, #00f2fe); animation: pmgFill 4s forwards; }
+    .pmg-tip { font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:15px; }
+    @keyframes pmgSpin { to { transform: rotate(360deg); } }
+    @keyframes pmgPulse { 0%,100% { opacity:1; } 50% { opacity:0.6; } }
+    @keyframes pmgFill { 0% { width:0%; } 100% { width:92%; } }
+    #game-frame { width:100%; height:100%; border:none; position:absolute; top:0; left:0; opacity:0; transition:opacity 0.5s ease; }
+    #game-frame.visible { opacity:1; }
+"""
+
+SHELL_TEMPLATE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>{{TITLE}}</title>
+    <style>{{CSS}}</style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <iframe id="game-frame" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+    <script>
+        const frame = document.getElementById('game-frame');
+        const loader = document.getElementById('pmg-loader');
+        const start = Date.now();
+        frame.onload = () => {
+            const elapsed = Date.now() - start;
+            const wait = Math.max(800 - elapsed, 100);
+            setTimeout(() => {
+                frame.classList.add('visible');
+                loader.classList.add('hidden');
+            }, wait);
+        };
+    </script>
+</body>
+</html>"""
+
+def transform_to_shell(game_dir):
+    game_path = os.path.join(BASE, game_dir)
+    index_file = os.path.join(game_path, "index.html")
+    game_file = os.path.join(game_path, "game.html")
+
+    if not os.path.exists(index_file):
+        print(f"  SKIP (No index.html): {game_dir}")
+        return
+
+    if os.path.exists(game_file) and "game-frame" in open(index_file).read():
+        print(f"  SKIP (Already shell): {game_dir}")
+        return
+
+    # 1. Read target meta
+    with open(index_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    title_match = re.search(r'<title>(.*?)</title>', content)
+    title = title_match.group(1) if title_match else "PlayMixGames"
+
+    # 2. Move original to game.html
+    os.rename(index_file, game_file)
+    print(f"  MOVED index.html -> game.html for {game_dir}")
+
+    # 3. Write new shell index.html
+    final_shell = SHELL_TEMPLATE.replace('{{TITLE}}', title).replace('{{CSS}}', SHELL_CSS)
+    with open(index_file, 'w', encoding='utf-8') as f:
+        f.write(final_shell)
+    
+    print(f"  CREATED Shell index.html for {game_dir}")
+
+print("=== PlayMixGames Shell Transformation ===")
+for game in GAMES:
+    transform_to_shell(game)
+print("\nTransformation Complete!")
