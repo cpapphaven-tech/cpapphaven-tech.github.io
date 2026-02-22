@@ -185,21 +185,71 @@ canvas {
     }
 }
 
-/* Adsterra Banner - Right Side Bottom (Desktop Only) */
-#adsterra-banner {
-    position: fixed;
-    top: auto;
-    bottom: 5px;
-    right: 10px;
-    transform: none;
-    z-index: 9000;
-    display: none;
-    width: 160px;
-    height: 600px;
+/* --- Orientation Forcing (Advanced Mobile Landscape) --- */
+@media screen and (orientation: portrait) and (max-width: 900px) {
+    #game-container {
+        position: fixed;
+        width: 100vh;
+        height: 100vw;
+        top: 0;
+        left: 100vw;
+        transform: rotate(90deg);
+        transform-origin: top left;
+        padding-top: 0;
+        z-index: 1001;
+        /* Above header */
+    }
+
+    /* Hide header in forced landscape portrait to save space */
+    header {
+        display: none !important;
+    }
+
+    /* Rotate status and score to match virtual orientation */
+    #score-display,
+    #status-message {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    /* Ensure overlays fill the virtual landscape */
+    .overlay-screen {
+        width: 100vh !important;
+        height: 100vw !important;
+    }
+
+    /* Rotate the content inside overlays so text isn't sideways */
+    .screen-content {
+        transform: rotate(0deg);
+    }
+
+    /* Adjust ad position for virtual landscape if needed */
+    #bottom-ad {
+        display: none !important;
+    }
 }
 
-@media (min-width: 1024px) {
-    #adsterra-banner {
+/* Ensure canvas is always full size in its container */
+#game-canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Orientation Hint (Optional: subtle hint) */
+#landscape-hint {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    z-index: 2005;
+    pointer-events: none;
+    display: none;
+}
+
+@media screen and (orientation: portrait) and (max-width: 900px) {
+    #landscape-hint {
         display: block;
     }
 }

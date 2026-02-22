@@ -175,17 +175,36 @@ const camera = new THREE.PerspectiveCamera(isMobile ? 60 : 50, window.innerWidth
 camera.position.set(-15, 12, isMobile ? 35 : 22);
 camera.lookAt(5, 3, 0);
 
+function setInitialView() {
+    const isPortrait = window.innerHeight > window.innerWidth && window.innerWidth < 900;
+    let width, height;
+
+    if (isPortrait) {
+        width = window.innerHeight;
+        height = window.innerWidth;
+    } else {
+        width = window.innerWidth;
+        height = window.innerHeight - 110;
+    }
+
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+}
+
 const renderer = new THREE.WebGLRenderer({
     canvas: document.getElementById('game-canvas'),
     antialias: !isMobile,
     powerPreference: "high-performance"
 });
-renderer.setSize(window.innerWidth, window.innerHeight - 110);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+// Set correct orientation size immediately
+setInitialView();
 
 // --- Load HDR ---
 if (THREE.RGBELoader) {
@@ -567,8 +586,15 @@ function onDown(e) {
     }
 
     isDragging = true;
-    dragStartPos.set(clientX, clientY);
-    dragCurrentPos.set(clientX, clientY);
+
+    const isPortrait = window.innerHeight > window.innerWidth && window.innerWidth < 900;
+    if (isPortrait) {
+        // Swap/Flip for virtual landscape
+        dragStartPos.set(clientY, window.innerWidth - clientX);
+    } else {
+        dragStartPos.set(clientX, clientY);
+    }
+    dragCurrentPos.copy(dragStartPos);
 }
 
 function onMove(e) {
@@ -583,11 +609,20 @@ function onMove(e) {
         clientY = e.clientY;
     }
 
-    dragCurrentPos.set(clientX, clientY);
+    const isPortrait = window.innerHeight > window.innerWidth && window.innerWidth < 900;
 
-    // Calculate generic drag pixel distance (adjust sensitivity for web/mobile)
+    if (isPortrait) {
+        // In virtual landscape:
+        // Physical touch Y becomes virtual X
+        // Physical touch X becomes virtual Y (flipped)
+        dragCurrentPos.set(clientY, window.innerWidth - clientX);
+    } else {
+        dragCurrentPos.set(clientX, clientY);
+    }
+
+    // Calculate generic drag pixel distance
     let dx = (dragCurrentPos.x - dragStartPos.x) * 0.05;
-    let dy = -(dragCurrentPos.y - dragStartPos.y) * 0.05; // Screen Y is flipped
+    let dy = -(dragCurrentPos.y - dragStartPos.y) * 0.05;
 
     // Limit pulling back max distance
     const distSq = dx * dx + dy * dy;
@@ -860,7 +895,19 @@ setTimeout(() => {
 
 // Resize handling
 window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / (window.innerHeight - 110);
+    const isPortrait = window.innerHeight > window.innerWidth && window.innerWidth < 900;
+
+    let width, height;
+    if (isPortrait) {
+        // Swapped dimensions for virtual landscape
+        width = window.innerHeight;
+        height = window.innerWidth;
+    } else {
+        width = window.innerWidth;
+        height = window.innerHeight - 110;
+    }
+
+    camera.aspect = width / height;
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight - 110);
+    renderer.setSize(width, height);
 });
