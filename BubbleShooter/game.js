@@ -189,6 +189,7 @@ function init() {
         antialias: true,
         preserveDrawingBuffer: true
     });
+    // Removed sRGB and ACES mapping to match live version's high-contrast look
     updateSize();
 
     // HDR / EnvMap
@@ -320,7 +321,7 @@ function prepareNextBubble() {
 
     const color = colors[Math.floor(Math.random() * colors.length)];
     const geo = new THREE.SphereGeometry(BUBBLE_RADIUS, 32, 32);
-    const mat = new THREE.MeshStandardMaterial({ color: color, metalness: 0.2, roughness: 0.1 });
+    const mat = new THREE.MeshStandardMaterial({ color: color, metalness: 0.2, roughness: 0.1, envMapIntensity: 1.0 });
     nextBubble = new THREE.Mesh(geo, mat);
     nextBubble.color = color;
     nextBubble.position.copy(shooterPos);
@@ -340,10 +341,17 @@ function onPointerDown(e) {
     const dist = -camera.position.z / dir.z;
     const pos = camera.position.clone().add(dir.multiplyScalar(dist));
 
-    const shootDir = pos.sub(shooterPos).normalize();
+    const shootDir = pos.sub(shooterPos);
     shootDir.z = 0;
+    shootDir.normalize();
 
-    velocity.copy(shootDir).multiplyScalar(0.9); // Faster shots
+    // Safety: Ensure it always shoots at least slightly upwards
+    if (shootDir.y < 0.1) {
+        shootDir.y = 0.1;
+        shootDir.normalize();
+    }
+
+    velocity.copy(shootDir).multiplyScalar(1.2); // Faster, more responsive shots
     shotBubble = nextBubble;
     nextBubble = null;
     canShoot = false;
