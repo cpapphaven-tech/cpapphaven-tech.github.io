@@ -185,6 +185,21 @@ canvas {
     }
 }
 
+/* If the pill is on body, hide it in mobile forced landscape to maximize space */
+@media screen and (orientation: portrait) and (max-width: 900px) {
+    #more-games-floating-btn.more-games-pill {
+        display: none !important;
+    }
+}
+
+/* Also hide in physical mobile landscape */
+@media screen and (orientation: landscape) and (max-width: 950px) {
+    #more-games-floating-btn.more-games-pill {
+        display: none !important;
+    }
+
+}
+
 /* --- Orientation Forcing (Advanced Mobile Landscape) --- */
 @media screen and (orientation: portrait) and (max-width: 900px) {
     #game-container {
@@ -236,15 +251,6 @@ canvas {
 
 /* Orientation Hint (Optional: subtle hint) */
 #landscape-hint {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.7rem;
-    z-index: 2005;
-    pointer-events: none;
     display: none;
 }
 
