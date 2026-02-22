@@ -1,20 +1,24 @@
-// --- Game State & Variables ---
 const SAVED_LEVEL_KEY = 'bottleShoot3D_level';
-let round = parseInt(localStorage.getItem(SAVED_LEVEL_KEY)) || 1;
 let lives = 3;
 let gameState = 'start'; // 'start', 'playing', 'animating', 'gameover'
 
 // UI Elements
 const winScreen = document.getElementById('win-screen');
+const resumeScreen = document.getElementById('resume-screen');
 const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
 const bonusBtn = document.getElementById('bonus-btn');
 const restartLevel1Btn = document.getElementById('restart-level1-btn');
+const resumeContinueBtn = document.getElementById('resume-continue-btn');
+const resumeRestartBtn = document.getElementById('resume-restart-btn');
 const statusMessage = document.getElementById('status-message');
 const livesDisplay = document.getElementById('lives-display');
 const roundText = document.getElementById('round-text');
 const winnerText = document.getElementById('winner-text');
 const scoreText = document.getElementById('score-text');
+
+let round = parseInt(localStorage.getItem(SAVED_LEVEL_KEY)) || 1;
+const savedRound = round; // Store original saved level for the prompt
 
 let gameStartTime = null;
 let durationSent = false;
@@ -470,6 +474,7 @@ function spawnPyramid(baseX, baseY, rows) {
 }
 
 function spawnLevel() {
+    let tablesCount = 0;
     // Reset old bottles
     bottles.forEach(b => {
         world.removeBody(b.body);
@@ -489,24 +494,28 @@ function spawnLevel() {
     if (round === 1) {
         createPlatform(10, 6, 3);
         spawnPyramid(10, 3.25, 3);
+        tablesCount = 1;
     } else if (round === 2) {
         createPlatform(8, 4, 3);
         spawnPyramid(8, 3.25, 2);
 
         createPlatform(16, 5, 3);
         spawnPyramid(16, 3.25, 3);
+        tablesCount = 2;
     } else if (round === 3) {
         createPlatform(6, 4, 2);
         spawnPyramid(6, 2.25, 2);
 
         createPlatform(14, 5, 4);
         spawnPyramid(14, 4.25, 4);
+        tablesCount = 2;
     } else if (round === 4) {
         createPlatform(10, 6, 4);
         spawnPyramid(10, 4.25, 3);
 
         createPlatform(22, 6, 3);
         spawnPyramid(22, 3.25, 4);
+        tablesCount = 2;
     } else if (round === 5) {
         createPlatform(6, 4, 3);
         spawnPyramid(6, 3.25, 1);
@@ -516,6 +525,7 @@ function spawnLevel() {
 
         createPlatform(25, 5, 5);
         spawnPyramid(25, 5.25, 2);
+        tablesCount = 3;
     } else {
         // Endless mode randomly adds more tables and unpredictable pyramids scaling with round!
         const numTables = Math.min(3 + Math.floor(round / 4), 6);
@@ -528,7 +538,9 @@ function spawnLevel() {
             createPlatform(rx, rWidth, rHeight);
             spawnPyramid(rx, rHeight + 0.25, rows);
         }
+        tablesCount = numTables;
     }
+    return tablesCount;
 }
 
 function spawnBall() {
@@ -781,12 +793,12 @@ function startGame() {
         if (audioCtx.state === 'suspended') audioCtx.resume();
     }, { once: true });
 
-    lives = 3;
-    livesDisplay.textContent = '3';
+    const tablesCount = spawnLevel();
+    lives = tablesCount + 1;
+    livesDisplay.textContent = lives;
     roundText.textContent = round;
     gameState = 'playing';
 
-    spawnLevel();
     spawnBall();
 
     // Show pull-to-shoot hint briefly
@@ -821,32 +833,46 @@ bonusBtn.onclick = () => {
         '_blank'
     );
 
-    // Revive! Restore the round we died on and give 1 life
+    // Revive! Restore the round we died on and give lives based on table count
     round = window._diedOnRound || round;
-    lives = 3;
+    const tablesCount = spawnLevel();
+    lives = tablesCount + 1;
     winScreen.classList.add('hidden');
     bonusBtn.style.display = 'none';
     restartLevel1Btn.style.display = 'none';
     livesDisplay.textContent = lives;
     roundText.textContent = round;
 
-    statusMessage.textContent = '❤️ You got 1 life!';
+    statusMessage.textContent = `❤️ Lives set to ${lives}!`;
     statusMessage.classList.remove('hidden');
     setTimeout(() => { statusMessage.classList.add('hidden'); }, 1500);
 
-    spawnLevel();
     spawnBall();
     gameState = 'playing';
 };
 
-// Start from Level 1 button
+// Start from Level 1 button (from gameOver)
 restartLevel1Btn.onclick = () => {
     winScreen.classList.add('hidden');
     bonusBtn.style.display = 'none';
     restartLevel1Btn.style.display = 'none';
     round = 1;
     localStorage.removeItem(SAVED_LEVEL_KEY);
-    startBtn.onclick();
+    startGame();
+};
+
+// Resume Screen Buttons
+resumeContinueBtn.onclick = () => {
+    resumeScreen.classList.add('hidden');
+    // round is already set to savedRound
+    startGame();
+};
+
+resumeRestartBtn.onclick = () => {
+    resumeScreen.classList.add('hidden');
+    round = 1;
+    localStorage.removeItem(SAVED_LEVEL_KEY);
+    startGame();
 };
 
 // --- Main Loop ---
@@ -884,10 +910,20 @@ function animate() {
 }
 animate();
 
-// Auto-start the game immediately on load with safety delay
+// Auto-start or Resume Check
 setTimeout(() => {
     try {
-        startGame();
+        if (savedRound > 1) {
+            // Show resume prompt
+            resumeScreen.classList.remove('hidden');
+            resumeContinueBtn.textContent = `Continue Level ${savedRound}`;
+            // Pre-spawn the level in the background for a nice look
+            spawnLevel();
+            spawnBall();
+        } else {
+            // New game
+            startGame();
+        }
     } catch (e) {
         console.error("Critical: startGame failed", e);
     }
