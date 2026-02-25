@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCast Weather - Premium Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons for clean look -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Search Bar -->
+        <header>
+            <div class="search-container">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="city-input" placeholder="Search city..." autocomplete="off">
+                <div id="city-suggestions" class="city-suggestions"></div>
+                <button id="add-city-btn"><i data-lucide="plus"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Current Weather Hero Section -->
+            <section id="current-weather" class="glass-panel main-weather">
+                <div class="location-header">
+                    <h1 id="location-name">Detecting...</h1>
+                    <p id="current-date"></p>
+                </div>
+
+                <div class="weather-main-info">
+                    <div id="weather-icon-large" class="weather-icon">
+                        <!-- Icon injected by JS -->
+                    </div>
+                    <div class="temp-container">
+                        <span id="current-temp" class="temp-value">--</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                    <p id="weather-description" class="weather-desc">--</p>
+                </div>
+
+                <div class="weather-details-grid">
+                    <div class="detail-item">
+                        <i data-lucide="wind"></i>
+                        <div class="detail-text">
+                            <span class="label">Wind</span>
+                            <span id="wind-speed" class="value">-- km/h</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i data-lucide="droplets"></i>
+                        <div class="detail-text">
+                            <span class="label">Humidity</span>
+                            <span id="humidity" class="value">--%</span>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i data-lucide="cloud-rain"></i>
+                        <div class="detail-text">
+                            <span class="label">Rain Prob.</span>
+                            <span id="rain-prob" class="value">--%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hourly Forecast -->
+            <section class="forecast-section">
+                <h2>Hourly Forecast</h2>
+                <div id="hourly-list" class="hourly-scroll">
+                    <!-- Hourly items injected by JS -->
+                </div>
+            </section>
+
+            <!-- 7-Day Forecast -->
+            <section class="forecast-section">
+                <h2>7-Day Forecast</h2>
+                <div id="daily-list" class="daily-forecast">
+                    <!-- Daily items injected by JS -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar / Saved Cities -->
+        <aside id="saved-cities-panel" class="glass-panel">
+            <h3>Saved Locations</h3>
+            <div id="saved-cities-list">
+                <!-- Saved cities injected by JS -->
+            </div>
+        </aside>
+
+        <!-- Footer / Ad Space -->
+        <footer>
+            <div id="ad-banner" class="ad-placeholder">
+                <!-- Ad space -->
+                <span>Sponsored Ad</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
