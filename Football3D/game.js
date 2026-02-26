@@ -138,6 +138,18 @@ const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
 const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
 let supabaseClient = null;
 
+// --- Session Tracking ---
+let sessionId = null;
+let sessionRowId = null;
+
+function generateSessionId() {
+    // Simple random string for session (could use uuid lib for more robust)
+    return (
+        Date.now().toString(36) +
+        Math.random().toString(36).substr(2, 8)
+    );
+}
+
 // --- DOM Elements ---
 const scoreEl = document.getElementById('score');
 const mainMenu = document.getElementById('main-menu');
@@ -228,6 +240,8 @@ function init() {
     if (window.supabase) {
         supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
         loadLeaderboard();
+        // Start session tracking
+        startGameSession();
     }
 
     if (window.renderTopLeftScroller) {
@@ -698,6 +712,9 @@ function startGame() {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
+    // Mark session as started
+    markSessionStarted();
+
     // Show challenge message
     showChallengeMessage();
 
@@ -974,18 +991,86 @@ if (viewFullLb) {
     });
 }
 
+function getPlacementId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('utm_content') || 
+           urlParams.get('placementid') || 
+           "unknown";
+}
+
 function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
-
+        const placementId = getPlacementId();
         window.trackGameEvent(`game_duration_football_${seconds}_${reason}_${getBrowser()}`, {
             seconds,
             end_reason: reason,
-            os: getOS()
+            os: getOS(),
+            placement_id: placementId
         });
-
+        // Update session in Supabase
+        updateGameSession({
+            duration_seconds: seconds,
+            bounced: !gameStartedFlag,
+            placement_id: placementId,
+            end_reason: reason
+        });
         durationSent = true;
     }
+}
+// --- Session Tracking Functions ---
+async function startGameSession() {
+    if (!supabaseClient) return;
+    sessionId = generateSessionId();
+    const placementId = getPlacementId();
+    const os = getOS();
+    const browser = getBrowser();
+    const userAgent = navigator.userAgent;
+    const gameSlug = "football3d";
+    const country = await getCountry();
+    try {
+        const { data, error } = await supabaseClient
+            .from('game_sessions')
+            .insert([
+                {
+                    session_id: sessionId,
+                    game_slug: gameSlug,
+                    placement_id: placementId,
+                    user_agent: userAgent,
+                    os: os,
+                    browser: browser,
+                    country: country,
+                    started_game: false,
+                    bounced: false
+                }
+            ])
+            .select('id');
+        if (!error && data && data.length > 0) {
+            sessionRowId = data[0].id;
+        }
+    } catch (e) {
+        // Ignore errors for now
+    }
+}
+
+async function markSessionStarted() {
+    if (!supabaseClient || !sessionId) return;
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .update({ started_game: true })
+            .eq('session_id', sessionId);
+    } catch (e) {}
+}
+
+async function updateGameSession(fields) {
+    if (!supabaseClient || !sessionId) return;
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .update(fields)
+            .eq('session_id', sessionId);
+    } catch (e) {}
 }
 
 document.addEventListener("visibilitychange", () => {
@@ -1000,8 +1085,10 @@ window.addEventListener("beforeunload", () => {
 
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getBrowser();
+        const placementId = getPlacementId();
         window.trackGameEvent(`exit_before_game_football_${osKey}`, {
-            os: getOS()
+            os: getOS(),
+            placement_id: placementId
         });
     }
 });

@@ -44,10 +44,88 @@ const nextLevelBtn = document.getElementById('next-level-btn');
 const rewardBtn = document.getElementById("bonus-btn");
 let lastSafeFloorIndex = 0;
 
+// --- Supabase Config ---
+const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
+const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
+let supabaseClient = null;
+
+// --- Session Tracking ---
+let sessionId = null;
+let sessionRowId = null;
+
+function generateSessionId() {
+    return (
+        Date.now().toString(36) +
+        Math.random().toString(36).substr(2, 8)
+    );
+}
+
 
 // Input State
 let isDraggingTower = false;
 let previousPointerX = 0;
+
+function getPlacementId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('utm_content') || 
+           urlParams.get('placementid') || 
+           "unknown";
+}
+// --- Supabase Session Tracking Functions ---
+async function startGameSession() {
+    if (!window.supabase) return;
+    if (!supabaseClient) {
+        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+    }
+    sessionId = generateSessionId();
+    const placementId = getPlacementId();
+    const os = getOS();
+    const browser = getBrowser();
+    const userAgent = navigator.userAgent;
+    const gameSlug = "helixbounce";
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .insert([
+                {
+                    session_id: sessionId,
+                    game_slug: gameSlug,
+                    placement_id: placementId,
+                    user_agent: userAgent,
+                    os: os,
+                    browser: browser,
+                    started_game: false,
+                    bounced: false
+                }
+            ]);
+    } catch (e) {}
+}
+
+async function markSessionStarted() {
+    if (!supabaseClient || !sessionId) return;
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .update({ started_game: true })
+            .eq('session_id', sessionId);
+    } catch (e) {}
+}
+
+async function updateGameSession(fields) {
+    if (!supabaseClient || !sessionId) return;
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .update(fields)
+            .eq('session_id', sessionId);
+    } catch (e) {}
+}
+
+// Start session on load
+if (window.supabase) {
+    supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+    startGameSession();
+}
 
 // Materials
 let ballMaterial, platformMaterial, deathMaterial, lastPlatformMaterial;

@@ -19,6 +19,22 @@ let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
 
+// --- Supabase Config ---
+const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
+const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
+let supabaseClient = null;
+
+// --- Session Tracking ---
+let sessionId = null;
+let sessionRowId = null;
+
+function generateSessionId() {
+    return (
+        Date.now().toString(36) +
+        Math.random().toString(36).substr(2, 8)
+    );
+}
+
 function getOSKey() {
     const ua = navigator.userAgent;
     if (/android/i.test(ua)) return "android";
@@ -52,16 +68,31 @@ function getBrowser() {
     return "Unknown";
 }
 
+
+function getPlacementId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('utm_content') || 
+           urlParams.get('placementid') || 
+           "unknown";
+}
+
 function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
-
+        const placementId = getPlacementId();
         window.trackGameEvent(`game_duration_airhockey_${seconds}_${reason}_${getBrowser()}`, {
             seconds,
             end_reason: reason,
-            os: getOS()
+            os: getOS(),
+            placement_id: placementId
         });
-
+        // Update session in Supabase
+        updateGameSession({
+            duration_seconds: seconds,
+            bounced: !gameStartedFlag,
+            placement_id: placementId,
+            end_reason: reason
+        });
         durationSent = true;
     }
 }
@@ -80,8 +111,16 @@ window.addEventListener("beforeunload", () => {
 
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getOSKey();
+        const placementId = getPlacementId();
         window.trackGameEvent(`exit_before_game_airhockey_${osKey}`, {
-            os: getOS()
+            os: getOS(),
+            placement_id: placementId
+        });
+        // Update session as bounced
+        updateGameSession({
+            bounced: true,
+            placement_id: placementId,
+            end_reason: "exit_before_game"
         });
     }
 });
@@ -693,6 +732,7 @@ startBtn.onclick = () => {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
     gameStartedFlag = true; // mark started
+    markSessionStarted();
 };
 
 restartBtn.onclick = () => {
@@ -712,6 +752,63 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+// --- Supabase Session Tracking Functions ---
+async function startGameSession() {
+    if (!window.supabase) return;
+    if (!supabaseClient) {
+        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+    }
+    sessionId = generateSessionId();
+    const placementId = getPlacementId();
+    const os = getOS();
+    const browser = getBrowser();
+    const userAgent = navigator.userAgent;
+    const gameSlug = "airhockey3d";
+    // Country detection can be added if needed
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .insert([
+                {
+                    session_id: sessionId,
+                    game_slug: gameSlug,
+                    placement_id: placementId,
+                    user_agent: userAgent,
+                    os: os,
+                    browser: browser,
+                    started_game: false,
+                    bounced: false
+                }
+            ]);
+    } catch (e) {}
+}
+
+async function markSessionStarted() {
+    if (!supabaseClient || !sessionId) return;
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .update({ started_game: true })
+            .eq('session_id', sessionId);
+    } catch (e) {}
+}
+
+async function updateGameSession(fields) {
+    if (!supabaseClient || !sessionId) return;
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .update(fields)
+            .eq('session_id', sessionId);
+    } catch (e) {}
+}
+
+// Start session on load
+if (window.supabase) {
+    supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+    startGameSession();
+}
 
 // Resize handling
 window.addEventListener('resize', () => {
