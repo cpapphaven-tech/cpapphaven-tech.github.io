@@ -1069,10 +1069,6 @@ function sendDurationOnExit(reason) {
 // 🚀 SUPABASE LEADERBOARD INTEGRATION (HelixBall Table)
 // ---------------------------------------------------------
 
-const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
-const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
-let supabaseClient = null;
-
 function initSupabase() {
     if (window.supabase) {
         const { createClient } = window.supabase;
