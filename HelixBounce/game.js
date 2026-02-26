@@ -73,16 +73,16 @@ function getPlacementId() {
 }
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
-    if (!window.supabase) return;
-    if (!supabaseClient) {
-        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    }
+    if (!supabaseClient) return;
+    
     sessionId = generateSessionId();
     const placementId = getPlacementId();
     const os = getOS();
     const browser = getBrowser();
     const userAgent = navigator.userAgent;
     const gameSlug = "helixbounce";
+    const country = await getCountry();
+
     try {
         await supabaseClient
             .from('game_sessions')
@@ -94,6 +94,7 @@ async function startGameSession() {
                     user_agent: userAgent,
                     os: os,
                     browser: browser,
+                    country: country,
                     started_game: false,
                     bounced: false
                 }
@@ -121,11 +122,6 @@ async function updateGameSession(fields) {
     } catch (e) {}
 }
 
-// Start session on load
-if (window.supabase) {
-    supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    startGameSession();
-}
 
 // Materials
 let ballMaterial, platformMaterial, deathMaterial, lastPlatformMaterial;
@@ -329,6 +325,7 @@ window.addEventListener("beforeunload", () => {
             os: getOS()
         });
     }
+
 });
 
 
@@ -387,6 +384,9 @@ function startGame() {
         });
     }
 
+    if (supabaseClient && sessionId) {
+        markSessionStarted();
+    }
 
 }
 
@@ -1052,11 +1052,20 @@ document.addEventListener("DOMContentLoaded", () => {
 function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+        const placementId = getPlacementId();
 
         window.trackGameEvent(`game_duration_helix_${seconds}_${reason}_${getBrowser()}`, {
             seconds,
             end_reason: reason,
             os: getOS()
+        });
+
+         // Update session in Supabase
+        updateGameSession({
+            duration_seconds: seconds,
+            bounced: !gameStartedFlag,
+            placement_id: placementId,
+            end_reason: reason
         });
 
         durationSent = true;
@@ -1070,16 +1079,20 @@ function sendDurationOnExit(reason) {
 // ---------------------------------------------------------
 
 function initSupabase() {
-    if (window.supabase) {
+    if (!window.supabase) {
+        setTimeout(initSupabase, 500);
+        return;
+    }
+
+    if (!supabaseClient) {
         const { createClient } = window.supabase;
         supabaseClient = createClient(supabaseUrl, supabaseKey);
         console.log("✅ Supabase ready");
-        fetchLeaderboard();
-        setupRealtimeSubscription();
-    } else {
-        console.warn("⏳ Supabase script not loaded yet, retrying...");
-        setTimeout(initSupabase, 500);
     }
+
+    startGameSession();      // ✅ move here
+    fetchLeaderboard();
+    setupRealtimeSubscription();
 }
 
 // Fetch Top 20 (Ordered by Level DESC as requested)
