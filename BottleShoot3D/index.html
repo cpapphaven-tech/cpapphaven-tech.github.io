@@ -183,10 +183,15 @@
         </div>
         <p class="pmg-tip">Loading...</p>
     </div>
-    <iframe id="game-frame" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+    <iframe id="game-frame" allow="autoplay; fullscreen; gamepad"></iframe>
     <script>
         (function () {
             const frame = document.getElementById('game-frame');
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
             const loader = document.getElementById('pmg-loader');
             const start = Date.now();
             
