@@ -52,13 +52,6 @@ function generateSessionId() {
     );
 }
 
-// let supabase = null;
-// Replace with your actual Supabase URL and Anon key
-const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
-const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
-let supabaseClient = null;
-
-
 
 
 // Wait for Supabase to load safely
