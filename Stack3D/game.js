@@ -62,14 +62,13 @@ function initSupabase() {
         return;
     }
 
-    const { createClient } = window.supabase;
+     if (!supabaseClient) {
+        const { createClient } = window.supabase;
+        supabaseClient = createClient(supabaseUrl, supabaseKey);
+        console.log("✅ Supabase ready");
+    }
 
-    supabaseClient = createClient(
-        supabaseUrl,
-        supabaseKey
-    );
-
-    console.log("✅ Supabase ready");
+    startGameSession();
 }
 
 
@@ -141,16 +140,16 @@ function getPlacementId() {
 }
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
-    if (!window.supabase) return;
-    if (!supabaseClient) {
-        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    }
+    if (!supabaseClient) return;
+
     sessionId = generateSessionId();
     const placementId = getPlacementId();
     const os = getOS();
     const browser = getBrowser();
     const userAgent = navigator.userAgent;
     const gameSlug = "stack3d";
+    const country = await getCountry();
+
     try {
         await supabaseClient
             .from('game_sessions')
@@ -162,11 +161,19 @@ async function startGameSession() {
                     user_agent: userAgent,
                     os: os,
                     browser: browser,
+                    country: country,
                     started_game: false,
                     bounced: false
                 }
             ]);
-    } catch (e) {}
+
+            //  if (error) {
+            //     console.error("❌ Supabase INSERT error:", error);
+            // } else {
+            //     console.log("✅ Session inserted:", data);
+            // }
+
+    } catch (e) { console.error("🔥 Unexpected INSERT crash:", e); }
 }
 
 async function markSessionStarted() {
@@ -190,10 +197,10 @@ async function updateGameSession(fields) {
 }
 
 // Start session on load
-if (window.supabase) {
-    supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    startGameSession();
-}
+// if (window.supabase) {
+//     supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+//     startGameSession();
+// }
 
 
 
@@ -486,6 +493,7 @@ function startGame() {
 window.addEventListener("beforeunload", () => {
 
     sendDurationOnExit("tab_close_stack3d");
+ 
 
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getOSKey();
@@ -493,6 +501,8 @@ window.addEventListener("beforeunload", () => {
             os: getOS()
         });
     }
+
+     
 });
 
 
@@ -932,11 +942,20 @@ document.addEventListener("DOMContentLoaded", () => {
 function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+        const placementId = getPlacementId();
 
         window.trackGameEvent(`game_duration_stack3d_${seconds}_${reason}_${getBrowser()}`, {
             seconds,
             end_reason: reason,
             os: getOS()
+        });
+
+        // Update session in Supabase
+        updateGameSession({
+            duration_seconds: seconds,
+            bounced: !gameStartedFlag,
+            placement_id: placementId,
+            end_reason: reason
         });
 
         durationSent = true;
@@ -975,7 +994,7 @@ async function loadLeaderboard() {
     // Background list (Top 5 Mobile, Top 10 Desktop)
     if (sideList) {
         try {
-            if (!supabaseClient) initSupabase();
+            if (!supabaseClient) return;
 
             const isDesktop = window.innerWidth >= 1024; // Simple width check matching CSS
             const limitVal = isDesktop ? 10 : 5;
