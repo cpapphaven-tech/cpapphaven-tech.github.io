@@ -42,6 +42,23 @@ let supabaseClient = null;
 let sessionId = null;
 let sessionRowId = null;
 
+// Wait for Supabase to load safely
+function initSupabase() {
+    if (!window.supabase) {
+        console.warn("⏳ Waiting for Supabase...");
+        setTimeout(initSupabase, 500);
+        return;
+    }
+
+     if (!supabaseClient) {
+        const { createClient } = window.supabase;
+        supabaseClient = createClient(supabaseUrl, supabaseKey);
+        console.log("✅ Supabase ready");
+    }
+   
+    startGameSession();
+}
+
 function generateSessionId() {
     return (
         Date.now().toString(36) +
@@ -98,18 +115,40 @@ function getPlacementId() {
            urlParams.get('placementid') || 
            "unknown";
 }
+
+async function getCountry() {
+    try {
+        // Direct fetch to ipapi.co which is CORS friendly
+        const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        return data.country_name || data.country || "Unknown";
+    } catch (error) {
+        console.warn("Primary country detection failed, trying fallback...", error);
+        try {
+            // Fallback to Cloudflare's trace which is extremely reliable
+            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+            const cfText = await cfResp.text();
+            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+            return locLine ? locLine.split("=")[1] : "Unknown";
+        } catch (e) {
+            return "Unknown";
+        }
+    }
+}
+
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
     if (!window.supabase) return;
-    if (!supabaseClient) {
-        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    }
+   
     sessionId = generateSessionId();
     const placementId = getPlacementId();
     const os = getOS();
     const browser = getBrowser();
     const userAgent = navigator.userAgent;
     const gameSlug = "watersort3d";
+    const country = await getCountry();
+
     try {
         await supabaseClient
             .from('game_sessions')
@@ -121,6 +160,7 @@ async function startGameSession() {
                     user_agent: userAgent,
                     os: os,
                     browser: browser,
+                    country: country,
                     started_game: false,
                     bounced: false
                 }
@@ -148,20 +188,24 @@ async function updateGameSession(fields) {
     } catch (e) {}
 }
 
-// Start session on load
-if (window.supabase) {
-    supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    startGameSession();
-}
 
 function sendDurationOnExit(reason) {
     if (gameStartTime && !durationSent && window.trackGameEvent) {
         const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+        const placementId = getPlacementId();
 
         window.trackGameEvent(`game_duration_watersort_${seconds}_${reason}_${getBrowser()}`, {
             seconds,
             end_reason: reason,
             os: getOS()
+        });
+
+         // Update session in Supabase
+        updateGameSession({
+            duration_seconds: seconds,
+            bounced: !gameStartedFlag,
+            placement_id: placementId,
+            end_reason: reason
         });
 
         durationSent = true;
@@ -240,6 +284,7 @@ function loadAdsterraBanner() {
 function init() {
 
     gameStartedFlag = true;
+   
 
     // Scene Setup
     scene = new THREE.Scene();
@@ -299,6 +344,8 @@ function init() {
     // Start Game
     startLevel(1);
     animate();
+
+     initSupabase();
 
     if (!window.DEV_MODE) {
         loadAdsterraBanner();
