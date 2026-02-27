@@ -1,3 +1,4 @@
+
 const SAVED_LEVEL_KEY = 'bottleShoot3D_level';
 let lives = 3;
 let gameState = 'start'; // 'start', 'playing', 'animating', 'gameover'
@@ -126,18 +127,42 @@ window.addEventListener("beforeunload", () => {
         });
     }
 });
+
+// Fetch Country (Similar to Stack 3D)
+async function getCountry() {
+    try {
+        // Direct fetch to ipapi.co which is CORS friendly
+        const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        return data.country_name || data.country || "Unknown";
+    } catch (error) {
+        console.warn("Primary country detection failed, trying fallback...", error);
+        try {
+            // Fallback to Cloudflare's trace which is extremely reliable
+            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+            const cfText = await cfResp.text();
+            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+            return locLine ? locLine.split("=")[1] : "Unknown";
+        } catch (e) {
+            return "Unknown";
+        }
+    }
+}
+
+
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
     if (!window.supabase) return;
-    if (!supabaseClient) {
-        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    }
+    
     sessionId = generateSessionId();
     const placementId = getPlacementId();
     const os = getOS();
     const browser = getBrowser();
     const userAgent = navigator.userAgent;
     const gameSlug = "bottleshoot3d";
+    const country = await getCountry();
+
     try {
         await supabaseClient
             .from('game_sessions')
@@ -150,6 +175,7 @@ async function startGameSession() {
                     os: os,
                     browser: browser,
                     started_game: false,
+                    country,
                     bounced: false
                 }
             ]);
@@ -176,11 +202,23 @@ async function updateGameSession(fields) {
     } catch (e) {}
 }
 
-// Start session on load
-if (window.supabase) {
-    supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    startGameSession();
+function initSupabase() {
+    if (!window.supabase) {
+        setTimeout(initSupabase, 500);
+        return;
+    }
+
+    if (!supabaseClient) {
+        const { createClient } = window.supabase;
+        supabaseClient = createClient(supabaseUrl, supabaseKey);
+        console.log("✅ Supabase ready");
+    }
+
+ startGameSession();
+     markSessionStarted();
+    
 }
+
 
 
 
@@ -877,9 +915,13 @@ function endGame() {
     localStorage.removeItem(SAVED_LEVEL_KEY);
 }
 
+
 // ---- AUTO START (no dialog needed) ----
 function startGame() {
     // Resume audio context on first user interaction
+
+    initSupabase(); // Not awaited, but function is now async
+
     document.addEventListener('pointerdown', () => {
         if (audioCtx.state === 'suspended') audioCtx.resume();
     }, { once: true });

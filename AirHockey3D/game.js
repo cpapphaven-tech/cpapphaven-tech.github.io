@@ -28,6 +28,24 @@ let supabaseClient = null;
 let sessionId = null;
 let sessionRowId = null;
 
+// Start session on load
+async function initSupabase() {
+    if (!window.supabase) {
+        setTimeout(initSupabase, 500);
+        return;
+    }
+
+    if (!supabaseClient) {
+        const { createClient } = window.supabase;
+        supabaseClient = createClient(supabaseUrl, supabaseKey);
+        console.log("✅ Supabase ready");
+    }
+   
+
+     await startGameSession();
+     await markSessionStarted();
+}
+
 function generateSessionId() {
     return (
         Date.now().toString(36) +
@@ -717,6 +735,12 @@ function loadAdsterraBanner() {
 
 // UI Buttons
 startBtn.onclick = () => {
+
+    // 🔥 Initialize Supabase only now
+    if (!supabaseClient) {
+         initSupabase();
+    }
+
     initAudio(); // MUST be triggered on user action
     startScreen.classList.add('hidden');
     resetPositions();
@@ -732,7 +756,9 @@ startBtn.onclick = () => {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
     gameStartedFlag = true; // mark started
-    markSessionStarted();
+
+      
+    
 };
 
 restartBtn.onclick = () => {
@@ -753,18 +779,37 @@ function animate() {
 }
 animate();
 
+async function getCountry() {
+    try {
+        // Direct fetch to ipapi.co which is CORS friendly
+        const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        return data.country_name || data.country || "Unknown";
+    } catch (error) {
+        console.warn("Primary country detection failed, trying fallback...", error);
+        try {
+            // Fallback to Cloudflare's trace which is extremely reliable
+            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+            const cfText = await cfResp.text();
+            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+            return locLine ? locLine.split("=")[1] : "Unknown";
+        } catch (e) {
+            return "Unknown";
+        }
+    }
+}
+
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
-    if (!window.supabase) return;
-    if (!supabaseClient) {
-        supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    }
+    if (!supabaseClient) return;
     sessionId = generateSessionId();
     const placementId = getPlacementId();
     const os = getOS();
     const browser = getBrowser();
     const userAgent = navigator.userAgent;
     const gameSlug = "airhockey3d";
+    const country = await getCountry();
     // Country detection can be added if needed
     try {
         await supabaseClient
@@ -777,6 +822,7 @@ async function startGameSession() {
                     user_agent: userAgent,
                     os: os,
                     browser: browser,
+                    country: country,
                     started_game: false,
                     bounced: false
                 }
@@ -802,12 +848,6 @@ async function updateGameSession(fields) {
             .update(fields)
             .eq('session_id', sessionId);
     } catch (e) {}
-}
-
-// Start session on load
-if (window.supabase) {
-    supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
-    startGameSession();
 }
 
 // Resize handling
