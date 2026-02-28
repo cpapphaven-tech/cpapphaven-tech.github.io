@@ -84,6 +84,7 @@ const ROW_EMISSIVE = [
     const startBtn = document.getElementById('start-btn');
     const restartBtn = document.getElementById('restart-btn');
     const bonusBtn = document.getElementById('bonus-btn');
+    const tapOverlay = document.getElementById('tap-overlay');
 
     let gameStartTime = null;
 let durationSent = false;
@@ -412,8 +413,8 @@ async function updateGameSession(fields) {
         // Wall edge lines
         const edgeMat = new THREE.LineBasicMaterial({ color: 0x4422aa });
         [
-            [[0, 0, 0.1], [0, GH, 0.1]],
-            [[GW, 0, 0.1], [GW, GH, 0.1]],
+            [[0, -2, 0.1], [0, GH, 0.1]],
+            [[GW, -2, 0.1], [GW, GH, 0.1]],
             [[0, GH, 0.1], [GW, GH, 0.1]],
         ].forEach(([a, b]) => {
             const pts = [new THREE.Vector3(...a), new THREE.Vector3(...b)];
@@ -421,11 +422,11 @@ async function updateGameSession(fields) {
         });
 
         // Glow floor strip
-        const floorGeo = new THREE.PlaneGeometry(GW, 1.2);
-        const floorMat = new THREE.MeshBasicMaterial({ color: 0x6600ff, transparent: true, opacity: 0.1 });
-        const floor = new THREE.Mesh(floorGeo, floorMat);
-        floor.position.set(GW / 2, 0.2, -0.5);
-        scene.add(floor);
+        // const floorGeo = new THREE.PlaneGeometry(GW, 1.2);
+        // const floorMat = new THREE.MeshBasicMaterial({ color: 0x6600ff, transparent: true, opacity: 0.1 });
+        // const floor = new THREE.Mesh(floorGeo, floorMat);
+        // floor.position.set(GW / 2, 0.2, -0.5);
+       // scene.add(floor);
     }
 
     function buildPaddleMesh() {
@@ -592,6 +593,9 @@ const line = new THREE.LineSegments(
 
     // ========== GAME LOGIC ==========
     function startGame() {
+
+        tapOverlay.classList.remove('hidden');
+
         score = 0; lives = 3; level = 1;
         state = 'playing';
         launched = false;
@@ -624,6 +628,9 @@ const line = new THREE.LineSegments(
 
     function launchBall() {
         if (launched || state !== 'playing') return;
+
+        tapOverlay.classList.add('hidden');
+        
         getAudio();
         launched = true;
         sfx.launch();
