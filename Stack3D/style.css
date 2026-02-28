@@ -47,7 +47,12 @@ body>h1 {
 }
 
 #score-container {
-    margin-top: 18vh;
+    position: fixed;
+    top: 20px;           /* distance from top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    pointer-events: none;
 }
 
 #score {
