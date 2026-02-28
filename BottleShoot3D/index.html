@@ -51,7 +51,7 @@
             });
         })();
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -62,8 +62,9 @@
             margin: 0;
             padding: 0;
             width: 100%;
-            height: 100%;
-            overflow: hidden;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
             background: #0a0a1a;
             font-family: 'Segoe UI', system-ui, sans-serif;
         }
@@ -159,11 +160,9 @@
 
         #game-frame {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
+            display: block;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
@@ -183,6 +182,9 @@
         </div>
         <p class="pmg-tip">Loading...</p>
     </div>
+
+
+
     <iframe id="game-frame" allow="autoplay; fullscreen; gamepad"></iframe>
     <script>
         (function () {
@@ -194,7 +196,7 @@
 
             const loader = document.getElementById('pmg-loader');
             const start = Date.now();
-            
+
             function hideShellLoader() {
                 if (loader && !loader.classList.contains('hidden')) {
                     const delay = Math.max(1000 - (Date.now() - start), 200);
@@ -211,6 +213,30 @@
             setTimeout(hideShellLoader, 8000);
         })();
     </script>
+
+    <!-- SEO: About Game & How to Play Section -->
+    <section id="game-info" style="background: #f8f9fa; padding: 40px 20px; margin-top: 40px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px;">🔫 About Bottle Shoot 3D</h2>
+            <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 30px;">
+                Bottle Shoot 3D is a thrilling target-shooting game where your accuracy and timing are put to the
+                ultimate test. Enjoy satisfying 3D physics as you shatter bottles in varying challenging environments.
+                The game offers dynamic levels that demand quick reflexes and precision. Are you ready to become a
+                sharpshooting master?
+            </p>
+
+            <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
+            <ul
+                style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+                <li>✅ Aim your crosshair at the targets</li>
+                <li>✅ Tap or click to shoot the bottles</li>
+                <li>✅ Break a specific amount of bottles before time runs out</li>
+                <li>✅ Avoid missing to keep your combo and score high</li>
+                <li>✅ Progress through beautifully crafted 3D levels</li>
+            </ul>
+        </div>
+    </section>
+
 </body>
 
 </html>
