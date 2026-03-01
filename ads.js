@@ -492,7 +492,7 @@ function renderMoreGamesPill() {
         btn = document.createElement('a');
         btn.id = 'more-games-floating-btn';
         btn.href = "../index.html";
-        btn.innerHTML = '<span class="text">10+ GAMES</span>';
+        btn.innerHTML = '<span class="text">Play 15+ GAMES</span>';
         document.body.appendChild(btn);
     }
 
