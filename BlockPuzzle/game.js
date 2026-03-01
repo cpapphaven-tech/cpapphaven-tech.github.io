@@ -349,6 +349,8 @@ async function updateGameSession(fields) {
     function init() {
         resize();
 
+        gameStartTime = Date.now();   // ⏱ start timer
+
         showTutorial();
 
         initSupabase();

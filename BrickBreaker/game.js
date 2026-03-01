@@ -973,6 +973,9 @@ const line = new THREE.LineSegments(
 
     // ========== INIT ==========
     window.addEventListener('load', function () {
+
+         gameStartTime = Date.now();   // ⏱ start timer
+         
         initScene();
        // updateHUD();
         // Animate the background while on main menu

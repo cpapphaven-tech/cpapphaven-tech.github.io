@@ -709,6 +709,8 @@ async function updateGameSession(fields) {
 
         showMergeDemo();
 
+         gameStartTime = Date.now();   // ⏱ start timer
+         
         resize();
         
         const mergeDemo = document.getElementById("merge-demo");
