@@ -384,3 +384,43 @@ footer {
     height: 50px;
     z-index: 9999;
 }
+
+/* Tutorial Popup */
+.tutorial-popup {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 40;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.tutorial-popup.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+.tutorial-box {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 16px 20px;
+    max-width: 320px;
+    text-align: center;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.6),
+        0 0 30px rgba(99,102,241,0.3);
+}
+
+.tutorial-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.tutorial-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}

@@ -72,6 +72,7 @@ let supabaseClient = null;
 let sessionId = null;
 let sessionRowId = null;
 
+let tutorialShown = false;
 
 // Start session on load
 async function initSupabase() {
@@ -329,9 +330,26 @@ async function updateGameSession(fields) {
         gameover: () => playSfx(110, 'sawtooth', 0.5, 0.1)
     };
 
+    function showTutorial() {
+    if (tutorialShown) return;
+
+    const el = document.getElementById('tutorial-popup');
+    if (!el) return;
+
+    el.classList.remove('hidden');
+
+    setTimeout(() => {
+        el.classList.add('hidden');
+    }, 3000);
+
+    tutorialShown = true;
+}
+
     // --- INITIALIZATION ---
     function init() {
         resize();
+
+        showTutorial();
 
         initSupabase();
 
