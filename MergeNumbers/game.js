@@ -32,7 +32,7 @@
     //     return 850 + (lvl - 10) * 200; // 1050, 1250, 1450 ... unlimited
     // }
     function getTarget(lvl) {
-    return 100 + (lvl - 1) * 20;
+    return 100 + (lvl - 1) * 40;
 }
 
     // ===== STATE =====
