@@ -154,6 +154,8 @@ async function getCountry() {
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
     if (!window.supabase) return;
+
+    gameStartTime = Date.now();   // ⏱ start timer
     
     sessionId = generateSessionId();
     const placementId = getPlacementId();
@@ -180,6 +182,8 @@ async function startGameSession() {
                 }
             ]);
     } catch (e) {}
+
+
 }
 
 async function markSessionStarted() {
