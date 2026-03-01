@@ -26,11 +26,14 @@
 
     // Target score per level — MEDIUM difficulty
     // ~15–20 merges possible in 60s; target requires consistent chaining
+    // function getTarget(lvl) {
+    //     const targets = [0, 100, 150, 200, 260, 320, 400, 500, 600, 720, 850];
+    //     if (lvl <= 10) return targets[lvl];
+    //     return 850 + (lvl - 10) * 200; // 1050, 1250, 1450 ... unlimited
+    // }
     function getTarget(lvl) {
-        const targets = [0, 100, 150, 200, 260, 320, 400, 500, 600, 720, 850];
-        if (lvl <= 10) return targets[lvl];
-        return 850 + (lvl - 10) * 200; // 1050, 1250, 1450 ... unlimited
-    }
+    return 100 + (lvl - 1) * 20;
+}
 
     // ===== STATE =====
     let grid = [], selected = [], selVal = 0;
@@ -62,6 +65,8 @@
     const lcNext = document.getElementById('lc-next');
     const restBtn = document.getElementById('restart-btn');
     const bonusBtn = document.getElementById('bonus-btn');
+    const mergeDemo = document.getElementById("merge-demo");
+
 
     // ===== CANVAS SIZING =====
     let W, H, cellSize, gx, gy, dpr;
@@ -691,10 +696,25 @@ async function updateGameSession(fields) {
     }
     
 
+    function showMergeDemo() {
+    mergeDemo.classList.remove("hidden");
+
+    setTimeout(() => {
+        mergeDemo.classList.add("hidden");
+    }, 3000);
+}
+
     // ===== AUTO-START =====
     window.addEventListener('load', () => {
+
+        showMergeDemo();
+
         resize();
         
+        const mergeDemo = document.getElementById("merge-demo");
+
+
+
         initSupabase();
 
 
