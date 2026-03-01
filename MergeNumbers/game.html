@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge Numbers 2248 - PlayMixGames</title>
+    <meta name="description"
+        content="Play Merge Numbers 2248 on PlayMixGames! Race against the clock — connect and merge same number blocks to reach the target score each level!">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <!-- <script>
+        (function () { const K = 'play-mix-games-cookie-consent'; function g() { const s = localStorage.getItem(K); return s ? JSON.parse(s) : null; } function show() { if (!g()) document.getElementById('cookie-consent')?.classList.remove('hidden'); } function acc() { localStorage.setItem(K, JSON.stringify({ accepted: true })); document.getElementById('cookie-consent')?.classList.add('hidden'); window.cookieConsent = true; } function dec() { localStorage.setItem(K, JSON.stringify({ accepted: false })); document.getElementById('cookie-consent')?.classList.add('hidden'); window.cookieConsent = false; } document.addEventListener('DOMContentLoaded', function () { document.getElementById('cookie-accept')?.addEventListener('click', acc); document.getElementById('cookie-decline')?.addEventListener('click', dec); setTimeout(show, 800); }); window.cookieConsent = g()?.accepted ?? null; })();
+    </script> -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Merge Numbers...</p>
+    </div>
+
+    <main class="game-container">
+        <h1>Merge Numbers</h1>
+        <div id="game-ui">
+
+            <!-- HUD: Level | Timer | Score/Target -->
+            <div id="hud">
+                <div class="hud-cell">
+                    <div id="level-num" class="hud-big">1</div>
+                    <div class="hud-label">LEVEL</div>
+                </div>
+                <div class="hud-cell hud-timer-wrap">
+                    <div id="timer-num" class="hud-big timer-ok">60</div>
+                    <div class="hud-label">SECS</div>
+                    <div id="timer-bar-bg">
+                        <div id="timer-bar"></div>
+                    </div>
+                </div>
+                <div class="hud-cell">
+                    <div id="score-display" class="hud-big">0</div>
+                    <div id="target-label" class="hud-label">TARGET: 20</div>
+                    <div id="score-bar-bg">
+                        <div id="score-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level Complete Overlay -->
+            <div id="level-complete" class="overlay hidden">
+                <div class="overlay-inner lc-inner">
+                    <div class="lc-stars">⭐⭐⭐</div>
+                    <h2 id="lc-title">LEVEL 1<br>COMPLETE!</h2>
+                    <div id="lc-score" class="lc-score-line">Score: 80</div>
+                    <div id="lc-next" class="lc-next-badge">LEVEL 2 →</div>
+                </div>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div id="game-over" class="overlay hidden">
+                <div class="overlay-inner">
+                    <h2 id="result-title">TIME'S UP!</h2>
+                    <div id="result-level" class="go-lvl">Reached Level <span id="go-level-num">1</span></div>
+                    <div class="go-score-wrap">
+                        <div id="result-score" class="go-score">0</div>
+                        <div id="result-best" class="go-best">BEST: 0</div>
+                    </div>
+                    <button id="restart-btn" class="primary-btn">🔄 Play Again</button>
+                    <button id="bonus-btn" class="bonus-btn">🎁 Watch Ad &amp; +30 Secs</button>
+                    <div id="game-over-scroller"></div>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <section class="game-description">
+            <h2>About Merge Numbers 2248</h2>
+            <p>Race against the clock! Each level gives you 60 seconds to reach a target score. Connect same-number
+                tiles in any of 8 directions and merge them — release to combine them into a tile with double the value.
+            </p>
+            <p>Unlimited levels — first 10 levels are easy to get you started. As levels increase, so does the target
+                score. How far can you reach?</p>
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Connect:</strong> Touch &amp; drag through adjacent same-value tiles (8 directions).</li>
+                <li><strong>Merge:</strong> Release to merge into one tile (value ×2).</li>
+                <li><strong>Chain Bonus:</strong> Longer chains = more points!</li>
+                <li><strong>Level Up:</strong> Hit the target score before 60 seconds run out.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links"><a href="../index.html">Home</a><a href="../privacy.html">Privacy Policy</a></div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <div id="bottom-ad"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () { 
+            if (window.DEV_MODE) return; 
+            setTimeout(function () { 
+            const c = document.getElementById("bottom-ad"); if (!c) return; c.innerHTML = '<div id="banner-slot"></div>'; window.atOptions = { key: "de617c07128b585ef939154460e6858f", format: "iframe", height: 50, width: 320, params: {} }; const s = document.createElement("script"); s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"; document.getElementById("banner-slot").appendChild(s); }, 100); });
+    </script>
+    <div id="adsterra-banner"></div>
+
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text"><span class="cookie-icon">🍪</span><span>We use cookies &amp; tracking for ads. <a
+                        href="../privacy.html" target="_blank" style="color:#f59e0b;text-decoration:underline;">Learn
+                        more</a></span></div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () { var l = document.getElementById('pmg-loader'); if (l) { var f = l.querySelector('.pmg-bar-fill'); if (f) f.style.width = '100%'; setTimeout(function () { l.classList.add('hidden'); }, 400); } });
+    </script>
+</body>
+
+</html>
