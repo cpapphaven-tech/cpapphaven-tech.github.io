@@ -22,11 +22,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"
         media="print" onload="this.media='all'">
     <link rel="manifest" href="manifest.json">
+    <script src="../sidebar.js"></script>
     <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
-    onerror="console.error('❌ Supabase failed to load')">
-    </script>
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
 
 </head>
 
@@ -41,17 +42,17 @@
     </div>
 
     <div id="tutorial-popup" class="tutorial-popup hidden">
-    <div class="tutorial-box">
-        <div class="tutorial-icon">🧩</div>
-        <div class="tutorial-text">
-            Drag blocks onto the grid.<br>
-            Fill rows or columns to clear them.<br>
-            Reach the target before moves run out!
+        <div class="tutorial-box">
+            <div class="tutorial-icon">🧩</div>
+            <div class="tutorial-text">
+                Drag blocks onto the grid.<br>
+                Fill rows or columns to clear them.<br>
+                Reach the target before moves run out!
+            </div>
         </div>
     </div>
-</div>
 
-       <div id="adsterra-banner"></div>
+    <div id="adsterra-banner"></div>
 
     <main class="game-container">
         <h1>Block Puzzle Dash</h1>
@@ -128,9 +129,10 @@
 
     <div id="bottom-ad"></div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () { 
-           if (window.DEV_MODE) return; 
-            setTimeout(function () { const c = document.getElementById("bottom-ad"); if (!c) return; c.innerHTML = '<div id="banner-slot"></div>'; window.atOptions = { key: "de617c07128b585ef939154460e6858f", format: "iframe", height: 50, width: 320, params: {} }; const s = document.createElement("script"); s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"; document.getElementById("banner-slot").appendChild(s); }, 100); });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.DEV_MODE) return;
+            setTimeout(function () { const c = document.getElementById("bottom-ad"); if (!c) return; c.innerHTML = '<div id="banner-slot"></div>'; window.atOptions = { key: "de617c07128b585ef939154460e6858f", format: "iframe", height: 50, width: 320, params: {} }; const s = document.createElement("script"); s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"; document.getElementById("banner-slot").appendChild(s); }, 100);
+        });
     </script>
 
     <script defer src="game.js"></script>

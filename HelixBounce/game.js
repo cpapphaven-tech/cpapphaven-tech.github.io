@@ -939,9 +939,9 @@ function showPartyWelcome() {
 // Start
 document.addEventListener('DOMContentLoaded', () => {
     init();
-    if (window.renderTopLeftScroller) {
-        window.renderTopLeftScroller();
-    }
+    // if (window.renderTopLeftScroller) {
+    //     window.renderTopLeftScroller();
+    // }
     startBtn.addEventListener('click', startNewGame);
     resumeBtn.addEventListener('click', resumeGame);
     restartBtn.addEventListener('click', startGame);

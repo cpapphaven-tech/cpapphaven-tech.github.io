@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -59,6 +59,8 @@
     <!-- Styling -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../loader.css">
+    <script src="../sidebar.js"></script>
+
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2196f3">
     <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
@@ -79,10 +81,10 @@
         });
     </script>
 
-      <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
         onerror="console.error('❌ Supabase failed to load')">
         </script>
-        
+
 </head>
 
 <body>
@@ -98,7 +100,6 @@
     <!-- ========================================= -->
 
     <header id="mobile-header">
-        <a href="../index.html" class="header-back-btn">🎮 More Games</a>
         <h1>Bubble Shooter 3D</h1>
     </header>
 
@@ -133,8 +134,8 @@
 
                 <button id="restart-btn">Try Again</button>
 
-                <!-- Game Scroller Container -->
-                <div id="game-over-scroller"></div>
+                <!-- Scroller Retired -->
+
             </div>
 
             <div id="level-complete" class="overlay hidden">

@@ -58,6 +58,8 @@
         content="Match delicious sushi in this addictive 3D puzzle game! Test your memory and speed in a beautiful Japanese-themed matching challenge.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../loader.css">
+    <script src="../sidebar.js"></script>
+
 
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
@@ -71,7 +73,6 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             loadSocialBarAd();
-            renderTopRightScroller();
         });
     </script>
 
@@ -101,52 +102,8 @@
 
     <!-- Game Container -->
     <div id="game-container">
-        <!-- Instructions Panel (Left Side) -->
-        <div id="instructions-panel">
-            <div class="panel-content">
-                <h2 class="panel-title">🍣 寿司マッチ3D</h2>
-                <h3 class="panel-subtitle">Sushi Match 3D</h3>
+        <!-- Instructions Retired -->
 
-                <div class="instructions-section">
-                    <h4>遊び方 (How to Play)</h4>
-                    <div class="instruction-item">
-                        <span class="instruction-icon">🍱</span>
-                        <div class="instruction-text">
-                            <strong>マッチング</strong><br>
-                            <small>Click matching sushi pairs</small>
-                        </div>
-                    </div>
-                    <div class="instruction-item">
-                        <span class="instruction-icon">⏱️</span>
-                        <div class="instruction-text">
-                            <strong>時間制限</strong><br>
-                            <small>Beat the timer to advance</small>
-                        </div>
-                    </div>
-                    <div class="instruction-item">
-                        <span class="instruction-icon">🎯</span>
-                        <div class="instruction-text">
-                            <strong>全てクリア</strong><br>
-                            <small>Clear all sushi to win</small>
-                        </div>
-                    </div>
-                    <div class="instruction-item">
-                        <span class="instruction-icon">⭐</span>
-                        <div class="instruction-text">
-                            <strong>ボーナス</strong><br>
-                            <small>Time bonus for fast clears</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tips-section">
-                    <h4>ヒント (Tips)</h4>
-                    <p>• Remember sushi positions</p>
-                    <p>• Work quickly for bonus points</p>
-                    <p>• Match from top to bottom</p>
-                </div>
-            </div>
-        </div>
 
         <!-- Game Over Screen -->
         <div id="gameover-screen" class="overlay-screen hidden">

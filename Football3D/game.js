@@ -244,9 +244,9 @@ function init() {
         startGameSession();
     }
 
-    if (window.renderTopLeftScroller) {
-        renderTopLeftScroller();
-    }
+    // if (window.renderTopLeftScroller) {
+    //     renderTopLeftScroller();
+    // }
 
     // 5. Events
     startBtn.addEventListener('click', startGame);

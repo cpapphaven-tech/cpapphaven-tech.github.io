@@ -487,16 +487,16 @@ function renderMoreGamesPill() {
     }
 
     // Create container
-    let btn = document.getElementById('more-games-floating-btn');
-    if (!btn) {
-        btn = document.createElement('a');
-        btn.id = 'more-games-floating-btn';
-        btn.href = "../index.html";
-        btn.innerHTML = '<span class="text">Play 15+ GAMES</span>';
-        document.body.appendChild(btn);
-    }
+    // let btn = document.getElementById('more-games-floating-btn');
+    // if (!btn) {
+    //     btn = document.createElement('a');
+    //     btn.id = 'more-games-floating-btn';
+    //     btn.href = "../index.html";
+    //     btn.innerHTML = '<span class="text">Play 15+ GAMES</span>';
+    //     document.body.appendChild(btn);
+    // }
 
-    btn.className = 'more-games-pill';
+    // btn.className = 'more-games-pill';
 
     // Remove any existing legacy more games elements if present
     const legacy = document.querySelectorAll('.bottom-right-more-games, #more-games-btn-old, .more-games-btn-bottom');

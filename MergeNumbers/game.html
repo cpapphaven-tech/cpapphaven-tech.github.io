@@ -14,7 +14,7 @@
     <script src="../ads.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
-   
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"
@@ -23,6 +23,7 @@
         (function () { const K = 'play-mix-games-cookie-consent'; function g() { const s = localStorage.getItem(K); return s ? JSON.parse(s) : null; } function show() { if (!g()) document.getElementById('cookie-consent')?.classList.remove('hidden'); } function acc() { localStorage.setItem(K, JSON.stringify({ accepted: true })); document.getElementById('cookie-consent')?.classList.add('hidden'); window.cookieConsent = true; } function dec() { localStorage.setItem(K, JSON.stringify({ accepted: false })); document.getElementById('cookie-consent')?.classList.add('hidden'); window.cookieConsent = false; } document.addEventListener('DOMContentLoaded', function () { document.getElementById('cookie-accept')?.addEventListener('click', acc); document.getElementById('cookie-decline')?.addEventListener('click', dec); setTimeout(show, 800); }); window.cookieConsent = g()?.accepted ?? null; })();
     </script> -->
     <link rel="manifest" href="manifest.json">
+    <script src="../sidebar.js"></script>
     <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
@@ -46,17 +47,17 @@
         <div id="game-ui">
 
             <div id="merge-demo" class="merge-demo hidden">
-    <div class="demo-box">
-        <div class="demo-tiles">
-            <div class="tile">2</div>
-            <div class="arrow">→</div>
-            <div class="tile">2</div>
-            <div class="arrow">=</div>
-            <div class="tile result">4</div>
-        </div>
-        <p>Drag same numbers to merge</p>
-    </div>
-</div>
+                <div class="demo-box">
+                    <div class="demo-tiles">
+                        <div class="tile">2</div>
+                        <div class="arrow">→</div>
+                        <div class="tile">2</div>
+                        <div class="arrow">=</div>
+                        <div class="tile result">4</div>
+                    </div>
+                    <p>Drag same numbers to merge</p>
+                </div>
+            </div>
 
             <!-- HUD: Level | Timer | Score/Target -->
             <div id="hud">
@@ -133,10 +134,12 @@
 
     <div id="bottom-ad"></div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () { 
-            if (window.DEV_MODE) return; 
-            setTimeout(function () { 
-            const c = document.getElementById("bottom-ad"); if (!c) return; c.innerHTML = '<div id="banner-slot"></div>'; window.atOptions = { key: "de617c07128b585ef939154460e6858f", format: "iframe", height: 50, width: 320, params: {} }; const s = document.createElement("script"); s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"; document.getElementById("banner-slot").appendChild(s); }, 100); });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.DEV_MODE) return;
+            setTimeout(function () {
+                const c = document.getElementById("bottom-ad"); if (!c) return; c.innerHTML = '<div id="banner-slot"></div>'; window.atOptions = { key: "de617c07128b585ef939154460e6858f", format: "iframe", height: 50, width: 320, params: {} }; const s = document.createElement("script"); s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"; document.getElementById("banner-slot").appendChild(s);
+            }, 100);
+        });
     </script>
     <div id="adsterra-banner"></div>
 

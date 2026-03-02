@@ -61,6 +61,8 @@
     <link rel="stylesheet" href="../portal-style.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../loader.css">
+    <script src="../sidebar.js"></script>
+
 
     <!-- Three.js r128 (Global Build — works on file:// protocol) -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
@@ -83,7 +85,7 @@
         document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 if (window.DEV_MODE) return;
-               // loadSocialBarAd();
+                // loadSocialBarAd();
             }, 100);
         });
     </script>
@@ -116,7 +118,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
 
-       <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
         onerror="console.error('❌ Supabase failed to load')">
         </script>
 
@@ -136,8 +138,8 @@
 
     <main class="game-container">
         <div id="tap-overlay">
-    TAP TO START
-</div>
+            TAP TO START
+        </div>
 
         <h1>Brick Breaker</h1>
 
@@ -183,7 +185,8 @@
                     </div>
                     <button id="restart-btn" class="primary-btn">🔄 Play Again</button>
                     <button id="bonus-btn" class="bonus-btn">🎁 Watch Ad &amp; +1 Life</button>
-                    <div id="game-over-scroller"></div>
+                    <!-- Scroller Removed -->
+
                 </div>
             </div>
 

@@ -129,10 +129,6 @@ function init() {
         loadLeaderboard();
     }
 
-    if (window.renderTopLeftScroller) {
-        renderTopLeftScroller();
-    }
-
     // Events
     startBtn.addEventListener('click', startGame);
     restartBtn.addEventListener('click', restartGame);

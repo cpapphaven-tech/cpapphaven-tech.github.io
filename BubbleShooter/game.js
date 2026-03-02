@@ -332,7 +332,7 @@ function init() {
     dirLight.position.set(5, 5, 10);
     scene.add(dirLight);
 
-    if (window.renderTopRightScroller) renderTopRightScroller();
+    // if (window.renderTopRightScroller) renderTopRightScroller();
 
     // Events
     startBtn.addEventListener('click', startGame);
