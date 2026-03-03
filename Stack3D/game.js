@@ -962,11 +962,6 @@ function sendDurationOnExit(reason) {
     }
 }
 
-document.getElementById("join-tg-btn").onclick = function () {
-
-    openFullLeaderboard();
-
-};
 
 
 
