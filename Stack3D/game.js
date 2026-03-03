@@ -45,6 +45,29 @@ let supabaseClient = null;
 let sessionId = null;
 let sessionRowId = null;
 
+// --- SOUND SYSTEM ---
+let placeSound = new Audio("../assets/stack_place.wav");
+let failSound = new Audio("../assets/stack_fail.wav");
+
+// Optimize
+[placeSound, failSound].forEach(sound => {
+    sound.preload = "auto";
+    sound.volume = 0.6;
+});
+
+// Required for mobile autoplay unlock
+let audioUnlocked = false;
+function unlockAudio() {
+    if (audioUnlocked) return;
+
+    placeSound.play().then(() => {
+        placeSound.pause();
+        placeSound.currentTime = 0;
+        audioUnlocked = true;
+    }).catch(() => {});
+}
+
+
 function generateSessionId() {
     return (
         Date.now().toString(36) +
@@ -347,6 +370,7 @@ function init() {
     // Event Listeners
     window.addEventListener('pointerdown', handleInteraction, { passive: false });
     restartBtn.addEventListener('click', () => {
+        
         restartGame();
         setTimeout(startGame, 300); // auto start in 0.5s
     });
@@ -376,7 +400,7 @@ function revivePlayer() {
 function handleInteraction(e) {
 
 
-
+    unlockAudio(); // 🔥 ADD THIS LINE FIRST
 
     if (e.target.tagName === 'BUTTON') return;
 
@@ -585,6 +609,10 @@ function placeBlock() {
     // 3. Create Rubble (Simplified)
     createRubble(diff, width, depth, currentPos, prevPos);
 
+    // PERFECT OR NORMAL PLACE
+placeSound.currentTime = 0;
+placeSound.play();
+
     score++;
     scoreEl.innerText = score;
     moveSpeed += 0.05;
@@ -595,6 +623,7 @@ function placeBlock() {
 
 function createRubble(diff, width, depth, currentPos, prevPos) {
     if (Math.abs(diff) < 0.2) return; // No rubble for perfect hits
+
 
     let rWidth = width;
     let rDepth = depth;
@@ -655,6 +684,10 @@ let isGameOver = false; // Global variable to track game over state
 
 function gameOver() {
     if (isGameOver) return;
+
+    failSound.currentTime = 0;
+failSound.play();
+
     isGameOver = true;
 
     gameState = 'GAMEOVER'; // Keep original game state update
