@@ -763,11 +763,14 @@ function gameOver(win) {
     }
 
     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+
+    if (typeof window.trackGameEvent === "function") {
     window.trackGameEvent(`game_over_helix`, {
         game_name: "helix_gameover",
         level: currentLevel,
         duration_seconds: seconds
     });
+}
 
     if (window.renderGameScroller) {
         renderGameScroller('game-over-scroller');
