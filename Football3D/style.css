@@ -79,6 +79,37 @@ body {
     }
 }
 
+/* Sound Toggle */
+#sound-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 1000;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#sound-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+#sound-toggle:active {
+    transform: scale(0.9);
+}
+
 #goal-feedback {
     position: absolute;
     top: 50%;
@@ -285,7 +316,23 @@ button:active {
 #gameover-input-area {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
     gap: 10px;
+}
+
+.gameover-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#game-over button {
+    width: 85%;
+    max-width: 280px;
+    margin-bottom: 10px;
 }
 
 input {

@@ -30,6 +30,44 @@ let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
 
+// --- Audio ---
+const SOUNDS = {
+    kick: '../assets/ball_kick.mp3',
+    goal: '../assets/stadium_crowd.mp3',
+    fail: '../assets/audience_fail.mp3'
+};
+
+const audioCache = {};
+let isMuted = localStorage.getItem('pmg_football_muted') === 'true';
+
+function initAudio() {
+    Object.keys(SOUNDS).forEach(key => {
+        const audio = new Audio(SOUNDS[key]);
+        audio.preload = 'auto';
+        audioCache[key] = audio;
+    });
+
+    const soundBtn = document.getElementById('sound-toggle');
+    if (soundBtn) {
+        soundBtn.innerText = isMuted ? '🔇' : '🔊';
+        soundBtn.onclick = toggleMute;
+    }
+}
+
+function playSound(name, volume = 0.1) {
+    if (isMuted || !audioCache[name]) return;
+    const s = audioCache[name].cloneNode();
+    s.volume = volume;
+    s.play().catch(() => { });
+}
+
+function toggleMute() {
+    isMuted = !isMuted;
+    localStorage.setItem('pmg_football_muted', isMuted);
+    const soundBtn = document.getElementById('sound-toggle');
+    if (soundBtn) soundBtn.innerText = isMuted ? '🔇' : '🔊';
+}
+
 
 
 function createFootballTexture() {
@@ -249,6 +287,7 @@ function init() {
     // }
 
     // 5. Events
+    initAudio();
     startBtn.addEventListener('click', startGame);
     restartBtn.addEventListener('click', restartGame);
     submitScoreBtn.addEventListener('click', submitScore);
@@ -584,6 +623,7 @@ function handleKick() {
 
 
     ballBody.applyImpulse(new CANNON.Vec3(forceX, forceY, forceZ), ballBody.position);
+    playSound('kick', 0.4); // Specific lower volume for kick
 
     // Soft aim assist toward center of goal
     const aimAssist = -ballBody.position.x * 0.15;
@@ -720,7 +760,6 @@ function startGame() {
 
     if (bonusBtn) bonusBtn.classList.add('hidden');
 
-    const guide = document.getElementById('swipe-guide');
     if (guide) guide.classList.remove('hidden');
 
     resetBall();
@@ -787,6 +826,7 @@ function gameOver() {
     }
 
     gameOverMenu.classList.remove('hidden');
+    playSound('fail', 0.3); // Reduced from 0.6
 
     if (window.trackGameEvent) {
         const osKey = getBrowser();
@@ -843,6 +883,7 @@ function checkGoal() {
             scoreEl.innerText = score;
             isGoalScored = true;
             showGoalFeedback();
+            playSound('goal', 0.5); // Specific balanced volume for goal cheer
             goalkeeperSpeed += 0.08;
             setTimeout(resetBall, 1500);
         }
@@ -993,9 +1034,9 @@ if (viewFullLb) {
 
 function getPlacementId() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
+    return urlParams.get('utm_content') ||
+        urlParams.get('placementid') ||
+        "unknown";
 }
 
 function sendDurationOnExit(reason) {
@@ -1060,7 +1101,7 @@ async function markSessionStarted() {
             .from('game_sessions')
             .update({ started_game: true })
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function updateGameSession(fields) {
@@ -1070,7 +1111,7 @@ async function updateGameSession(fields) {
             .from('game_sessions')
             .update(fields)
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 document.addEventListener("visibilitychange", () => {
