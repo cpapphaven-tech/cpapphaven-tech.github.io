@@ -259,3 +259,19 @@ canvas {
         display: block;
     }
 }
+
+#adsterra-banner {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width:1024px) {
+    #adsterra-banner {
+        display: block;
+    }
+}
