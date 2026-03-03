@@ -598,9 +598,25 @@ function setupGoalkeeper() {
 }
 
 function resetBall() {
-    ballBody.position.set(0, 0.5, 6); // Closer to net as requested
+    // Randomize position with increased distance for side angles
+    const rangeX = 5.5;
+    const startX = (Math.random() - 0.5) * 2 * rangeX;
+
+    // Maintain a better distance: base 18-30 units + extra for side angles
+    const distToBaseline = 18 + Math.random() * 12 + (Math.abs(startX) * 1.2);
+    const startZ = -22 + distToBaseline;
+
+    ballBody.position.set(startX, 0.5, startZ);
     ballBody.velocity.set(0, 0, 0);
     ballBody.angularVelocity.set(0, 0, 0);
+
+    // Smoothly adjust camera to follow ball position
+    if (camera) {
+        camera.position.x = startX;
+        camera.position.z = startZ + 6; // Maintain relative Z offset
+        camera.lookAt(0, 1.5, -PITCH_DEPTH / 2); // Always look towards goal center
+    }
+
     isGoalScored = false;
 }
 
@@ -760,6 +776,7 @@ function startGame() {
 
     if (bonusBtn) bonusBtn.classList.add('hidden');
 
+    const guide = document.getElementById('swipe-guide');
     if (guide) guide.classList.remove('hidden');
 
     resetBall();
