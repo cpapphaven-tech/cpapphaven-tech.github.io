@@ -60,7 +60,12 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Bubble Shooter 3D - PlayMixGames</title>
+    <title>Bubble Shooter Online Free - Play Bubble Puzzles | PlayMix Games</title>
+    <meta name="description"
+        content="Play free Bubble Shooter online format. No download required. Match colors to pop bubbles.">
+    <meta name="keywords" content="bubble shooter online free, play bubble shooter, bubble game">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/BubbleShooter/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/BubbleShooter/index.html" />
     <style>
         body,
         html {
@@ -68,7 +73,8 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             background: #0a0a1a;
             font-family: 'Segoe UI', system-ui, sans-serif;
         }
@@ -164,11 +170,9 @@
 
         #game-frame {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
+            display: block;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
@@ -190,6 +194,8 @@
     </div>
 
 
+    <iframe id="game-frame" allow="autoplay; fullscreen; gamepad"></iframe>
+
     <!-- SEO: About Game & How to Play Section -->
     <section id="game-info" style="background: #f8f9fa; padding: 40px 20px; margin-top: 40px; text-align: center;">
         <div style="max-width: 900px; margin: 0 auto;">
@@ -201,19 +207,9 @@
                 carefully, use bounce mechanics, and clear massive clusters of bubbles for maximum points!
             </p>
 
-            <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
-            <ul
-                style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
-                <li>✅ Aim your bubble shooter by swiping or moving your mouse</li>
-                <li>✅ Match 3 or more bubbles of the same color to pop them</li>
-                <li>✅ Use wall bounces to reach difficult spots</li>
-                <li>✅ Pop bubbles to increase your score and clear the level</li>
-                <li>✅ Don't let the bubbles reach the bottom line</li>
-            </ul>
+            
         </div>
     </section>
-    
-    <iframe id="game-frame" allow="autoplay; fullscreen; gamepad"></iframe>
     <script>
         (function () {
             const frame = document.getElementById('game-frame');

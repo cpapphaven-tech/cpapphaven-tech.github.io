@@ -57,11 +57,16 @@
             });
         })();
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>🧩 Sudoku - Play Free Online | PlayMixGames</title>
+    <title>Sudoku Online Free - Play Sudoku No Download | PlayMix Games</title>
+    <meta name="description"
+        content="Play free Sudoku online — no download, no install. Unlimited puzzles, easy to expert levels. Works on mobile and desktop instantly.">
+    <meta name="keywords" content="sudoku online free, play sudoku, sudoku no download, sudoku browser game">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/Sudoku/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/Sudoku/index.html" />
     <style>
         body,
         html {
@@ -69,7 +74,8 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             background: #0a0a1a;
             font-family: 'Segoe UI', system-ui, sans-serif;
         }
@@ -165,11 +171,9 @@
 
         #game-frame {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
+            display: block;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
@@ -190,6 +194,29 @@
         <p class="pmg-tip">Loading...</p>
     </div>
     <iframe id="game-frame" allow="autoplay; fullscreen; gamepad"></iframe>
+
+    <section class="seo-content"
+        style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #4facfe;">Tips for Beginners</h2>
+        <ul style="padding-left: 20px;">
+            <li>Start with rows/columns that already have the most numbers filled in</li>
+            <li>Use pencil marks to track possible numbers per cell</li>
+            <li>Look for "naked singles" — cells where only one number fits</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Why Play Sudoku on PlayMix Games?</h2>
+        <ul style="padding-left: 20px;">
+            <li>Completely free, no account needed</li>
+            <li>Works on mobile, tablet, and desktop</li>
+            <li>Unlimited puzzles — never the same game twice</li>
+            <li>Fast loading with no downloads or installs</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Frequently Asked Questions</h2>
+        <p><strong>Is this Sudoku free?</strong> Yes, 100% free, forever.</p>
+        <p><strong>Does it work on mobile?</strong> Yes, fully touch-optimized.</p>
+        <p><strong>Do I need to create an account?</strong> No account needed.</p>
+    </section>
     <script>
         (function () {
             const frame = document.getElementById('game-frame');

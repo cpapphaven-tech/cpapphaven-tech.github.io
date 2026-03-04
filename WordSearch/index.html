@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Word Search Explorer - PlayMixGames</title>
-    <meta name="description" content="Find hidden words in this addictive Word Search puzzle.">
+    <title>Word Search Online Free - Play Word Puzzle Games | PlayMix Games</title>
+    <meta name="description"
+        content="Play free Word Search online with themes like Animals, Space and Sports. No download needed. Works on any device.">
+    <meta name="keywords" content="word search online free, play word search, word puzzles browser game">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/WordSearch/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/WordSearch/index.html" />
     <style>
         /* CRITICAL: Minimal Shell Styles for Instant Render */
         body,
@@ -14,7 +18,8 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             background: #0a0a1a;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
@@ -110,11 +115,9 @@
 
         #game-frame {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
+            display: block;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
@@ -139,6 +142,32 @@
 
     <!-- The actual game is requested in background -->
     <iframe id="game-frame" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+
+    <section class="seo-content"
+        style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #4facfe;">Features of Word Search Explorer</h2>
+        <ul style="padding-left: 20px;">
+            <li>Multiple fun themes and categories</li>
+            <li>Increasing difficulty levels</li>
+            <li>Train your brain and improve vocabulary</li>
+            <li>Works perfectly on mobile and desktop</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Why Play on PlayMix Games?</h2>
+        <ul style="padding-left: 20px;">
+            <li>Zero cost, 100% free puzzles</li>
+            <li>No installation or download required</li>
+            <li>Smooth performance in any browser</li>
+            <li>Modern, clean game design</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Frequently Asked Questions</h2>
+        <p><strong>Are there different levels?</strong> Yes, the game features various challenges with different grid
+            sizes.</p>
+        <p><strong>Is Word Search free?</strong> Yes, play as much as you want without paying anything.</p>
+        <p><strong>Can I play offline?</strong> You need an internet connection to load the game initially, but it runs
+            smoothly in your browser once loaded.</p>
+    </section>
 
     <script>
         (function () {

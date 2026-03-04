@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-     <!-- Early Tracking Script -->
+    <!-- Early Tracking Script -->
     <script>
         (function () {
             const startTime = Date.now();
@@ -51,11 +51,16 @@
             });
         })();
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Ludo Master - Classic Board Game | PlayMixGames</title>
+    <title>Ludo Online - Play Ludo vs AI Free Browser Game | PlayMix Games</title>
+    <meta name="description"
+        content="Play Ludo online free against smart AI. 2 or 4 player mode. No download required — instant play in your browser.">
+    <meta name="keywords" content="ludo online play free, ludo free game, play ludo browser">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/Ludo/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/Ludo/index.html" />
     <style>
         body,
         html {
@@ -63,7 +68,8 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             background: #0a0a1a;
             font-family: 'Segoe UI', system-ui, sans-serif;
         }
@@ -159,11 +165,9 @@
 
         #game-frame {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
+            display: block;
             opacity: 0;
             transition: opacity 0.5s ease;
         }
@@ -184,6 +188,30 @@
         <p class="pmg-tip">Loading...</p>
     </div>
     <iframe id="game-frame" allow="autoplay; fullscreen; gamepad"></iframe>
+
+    <section class="seo-content"
+        style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #4facfe;">Ludo Game Features</h2>
+        <ul style="padding-left: 20px;">
+            <li>Play 2-player or 4-player modes</li>
+            <li>Smooth and responsive dice rolls</li>
+            <li>Smart AI to practice your strategies against</li>
+            <li>Beautiful classic board design</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Why Play on PlayMix Games?</h2>
+        <ul style="padding-left: 20px;">
+            <li>100% free with no hidden charges</li>
+            <li>Play instantly in your browser — no download required</li>
+            <li>Works perfectly on mobile phones, tablets, and desktop</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Frequently Asked Questions</h2>
+        <p><strong>Do I need to download an app?</strong> No, Ludo runs directly in your web browser instantly.</p>
+        <p><strong>Is Ludo free to play?</strong> Yes, you can play unlimited matches for free.</p>
+        <p><strong>Can I play on my phone?</strong> Yes, the game is fully optimized for touch devices and mobile
+            screens.</p>
+    </section>
     <script>
         (function () {
             const frame = document.getElementById('game-frame');
