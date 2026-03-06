@@ -30,11 +30,22 @@ let score2 = 0;
 let gameState = "MENU"; // MENU, PLAY, GOAL, OVER
 const MAX_SCORE = 5;
 
+// Difficulty scaling
+let matchCount = parseInt(localStorage.getItem('headfootball_matches') || '0');
+let difficulty = 0.5; // Default multiplier
+
+function updateDifficulty() {
+    // 0.5 for match 0, up to 1.0 at match 5+
+    difficulty = Math.min(1.0, 0.5 + (matchCount * 0.12));
+    console.log(`Current Match: ${matchCount}, AI Difficulty: ${difficulty}`);
+}
+updateDifficulty();
+
 // Physics Config
-const GRAVITY = 0.5;
-const FRICTION = 0.98;
-const AIR_FRICTION = 0.99;
-const BOUNCE = 0.7;
+const GRAVITY = 0.45;
+const FRICTION = 0.992; // Less ground friction
+const AIR_FRICTION = 0.997; // Better glide
+const BOUNCE = 0.85; // Higher bounce
 
 // Input
 const keys = { Left: false, Right: false, Jump: false, Kick: false };
@@ -65,10 +76,10 @@ async function initSupabase() {
         supabaseClient = createClient(supabaseUrl, supabaseKey);
         console.log("✅ Supabase ready");
     }
-   
 
-     await startGameSession();
-     await markSessionStarted();
+
+    await startGameSession();
+    await markSessionStarted();
 }
 
 
@@ -117,9 +128,9 @@ function getBrowser() {
 
 function getPlacementId() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
+    return urlParams.get('utm_content') ||
+        urlParams.get('placementid') ||
+        "unknown";
 }
 
 function sendDurationOnExit(reason) {
@@ -153,7 +164,7 @@ document.addEventListener("visibilitychange", () => {
 
 window.addEventListener("beforeunload", () => {
 
-    sendDurationOnExit("tab_close_mergenumbers");
+    sendDurationOnExit("tab_close_headfootball");
 
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getOSKey();
@@ -196,7 +207,7 @@ async function getCountry() {
 async function startGameSession() {
     if (!supabaseClient) return;
 
-     console.log("✅ startGameSession");
+    console.log("✅ startGameSession");
 
     sessionId = generateSessionId();
     const placementId = getPlacementId();
@@ -222,7 +233,7 @@ async function startGameSession() {
                     bounced: false
                 }
             ]);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function markSessionStarted() {
@@ -232,7 +243,7 @@ async function markSessionStarted() {
             .from('game_sessions')
             .update({ started_game: true })
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function updateGameSession(fields) {
@@ -242,7 +253,7 @@ async function updateGameSession(fields) {
             .from('game_sessions')
             .update(fields)
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 
@@ -261,17 +272,41 @@ window.addEventListener("keyup", e => {
     if (e.code === "Space") keys.Kick = false;
 });
 
-// Mobile Controls
+// Mobile Controls - Improved with full touch handling
 function setupTouch(id, key) {
     const btn = document.getElementById(id);
     if (!btn) return;
-    btn.addEventListener("touchstart", (e) => { e.preventDefault(); keys[key] = true; });
-    btn.addEventListener("touchend", (e) => { e.preventDefault(); keys[key] = false; });
+
+    // Use both touch and mouse for testing but prevent default to avoid ghost clicks
+    const onStart = (e) => {
+        e.preventDefault();
+        keys[key] = true;
+        if (navigator.vibrate) navigator.vibrate(10); // Subtle haptic feedback
+    };
+
+    const onEnd = (e) => {
+        e.preventDefault();
+        keys[key] = false;
+    };
+
+    btn.addEventListener("touchstart", onStart, { passive: false });
+    btn.addEventListener("touchend", onEnd, { passive: false });
+    btn.addEventListener("touchcancel", onEnd, { passive: false });
+
+    // Fallback for mouse if needed (though on mobile touch takes precedence)
+    btn.addEventListener("mousedown", onStart);
+    btn.addEventListener("mouseup", onEnd);
+    btn.addEventListener("mouseleave", onEnd);
 }
 setupTouch("btn-left", "Left");
 setupTouch("btn-right", "Right");
 setupTouch("btn-jump", "Jump");
 setupTouch("btn-kick", "Kick");
+
+// Orientation Support
+window.addEventListener("orientationchange", () => {
+    setTimeout(resize, 200);
+});
 
 // --- GAME OBJECTS ---
 
@@ -302,7 +337,14 @@ class Ball {
         const groundY = CH - CH * 0.15;
         if (this.y + this.r > groundY) {
             this.y = groundY - this.r;
-            this.vy *= -BOUNCE;
+
+            // If it hits hard enough, bounce. If very slow, keep a tiny jitter/roll
+            if (Math.abs(this.vy) > 2) {
+                this.vy *= -BOUNCE;
+            } else {
+                // Minimum bounce to keep it moving/bouncy instead of flat-freezing
+                this.vy = -Math.abs(this.vy) * BOUNCE - (Math.random() * 0.5);
+            }
             this.vx *= FRICTION;
         }
 
@@ -426,33 +468,40 @@ class Player {
         const bx = ball.x;
         const by = ball.y;
 
+        // Difficulty-based speed and reaction
+        const aiSpeed = this.speed * 0.8 * difficulty;
+        const jumpProb = 0.08 * difficulty;
+        const kickProb = 0.15 * difficulty;
+
+        // Attack threshold (harder AI is more aggressive)
+        const attackLine = CW * (1 - 0.8 * difficulty);
+
         // Very basic AI that follows the ball
-        if (bx > CW * 0.3) { // Only attack if in bounds
+        if (bx > attackLine) { // Only attack if in bounds
             let targetX = bx + 20; // Try to stay slightly behind to hit it left
 
-            if (this.x < targetX) this.vx = this.speed * 0.8;
-            else if (this.x > targetX + 50) this.vx = -this.speed * 0.8;
+            if (this.x < targetX) this.vx = aiSpeed;
+            else if (this.x > targetX + 50) this.vx = -aiSpeed;
             else this.vx *= 0.8;
 
             // Jump if ball is high
-            // AI doesn't jump flawlessly to make it fair
             if (by < this.y - 50 && ball.vy > 0 && Math.abs(this.x - bx) < 100) {
-                if (this.y >= CH - CH * 0.15 - this.r - 2 && Math.random() < 0.1) {
+                if (this.y >= CH - CH * 0.15 - this.r - 2 && Math.random() < jumpProb) {
                     this.vy = this.jumpPower;
                 }
             }
 
             // Kick if close
             if (Math.abs(this.x - bx) < 80 && Math.abs(this.y - by) < 80) {
-                if (this.kickTimer <= 0 && Math.random() < 0.2) {
+                if (this.kickTimer <= 0 && Math.random() < kickProb) {
                     this.kickTimer = 20;
                 }
             }
         } else {
             // Defend goal
-            let defX = CW * 0.85;
-            if (this.x < defX) this.vx = this.speed * 0.5;
-            else if (this.x > defX + 20) this.vx = -this.speed * 0.5;
+            let defX = CW * (0.95 - (0.1 * difficulty));
+            if (this.x < defX) this.vx = aiSpeed * 0.6;
+            else if (this.x > defX + 20) this.vx = -aiSpeed * 0.6;
             else this.vx *= 0.8;
         }
     }
@@ -528,7 +577,7 @@ function checkCollisions() {
                 // Add shoe hit boost if kicking and hitting correct side of body
                 if (p.kickTimer > 0) {
                     if ((p.isRightSide && dx < 0) || (!p.isRightSide && dx > 0)) {
-                        impulse += 8; // KICK BOOST!
+                        impulse += 12; // INCREASED KICK BOOST!
                     }
                 }
 
@@ -582,6 +631,8 @@ function handleGoal(scorer) {
     matchMsg.innerText = "GOAL!";
     matchMsg.classList.remove("hidden");
 
+    if (navigator.vibrate) navigator.vibrate([50, 30, 50]); // Enthusiastic goal vibration
+
     if (score1 >= MAX_SCORE || score2 >= MAX_SCORE) {
         setTimeout(() => {
             endMatch(score1 >= MAX_SCORE ? 1 : 2);
@@ -598,13 +649,18 @@ function endMatch(winner) {
     winnerText.innerText = winner === 1 ? "YOU WON!" : "AI WON!";
     finalScore.innerText = `${score1} - ${score2}`;
     gameOverScreen.classList.remove("hidden");
+
+    // Increment Match Count for difficulty scaling
+    matchCount++;
+    localStorage.setItem('headfootball_matches', matchCount);
+    updateDifficulty();
 }
 
 function resetMatch() {
 
-         console.log("✅ resetMatch");
+    console.log("✅ resetMatch");
 
-        initSupabase();
+    initSupabase();
 
     score1 = 0;
     score2 = 0;
@@ -702,13 +758,13 @@ function drawCourt() {
     }
 }
 
- 
+
 
 // MAIN LOOP
 function gameLoop() {
     requestAnimationFrame(gameLoop);
 
- 
+
     // Clear Screen
     // Gradient Sky
     let grad = ctx.createLinearGradient(0, 0, 0, CH);
