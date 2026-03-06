@@ -59,209 +59,209 @@
         '#7f1d1d'  // Deep Red
     ];
 
-     let gameStartTime = null;
-let durationSent = false;
-let gameStartedFlag = false;
+    let gameStartTime = null;
+    let durationSent = false;
+    let gameStartedFlag = false;
 
-// --- Supabase Config ---
-const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
-const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
-let supabaseClient = null;
+    // --- Supabase Config ---
+    const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
+    const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
+    let supabaseClient = null;
 
-// --- Session Tracking ---
-let sessionId = null;
-let sessionRowId = null;
+    // --- Session Tracking ---
+    let sessionId = null;
+    let sessionRowId = null;
 
-let tutorialShown = false;
+    let tutorialShown = false;
 
-// Start session on load
-async function initSupabase() {
-    if (!window.supabase) {
-        setTimeout(initSupabase, 500);
-        return;
+    // Start session on load
+    async function initSupabase() {
+        if (!window.supabase) {
+            setTimeout(initSupabase, 500);
+            return;
+        }
+
+        if (!supabaseClient) {
+            const { createClient } = window.supabase;
+            supabaseClient = createClient(supabaseUrl, supabaseKey);
+            console.log("✅ Supabase ready");
+        }
+
+
+        await startGameSession();
+        await markSessionStarted();
     }
 
-    if (!supabaseClient) {
-        const { createClient } = window.supabase;
-        supabaseClient = createClient(supabaseUrl, supabaseKey);
-        console.log("✅ Supabase ready");
+
+
+
+    function generateSessionId() {
+        return (
+            Date.now().toString(36) +
+            Math.random().toString(36).substr(2, 8)
+        );
     }
-   
 
-     await startGameSession();
-     await markSessionStarted();
-}
-
-
-
-
-function generateSessionId() {
-    return (
-        Date.now().toString(36) +
-        Math.random().toString(36).substr(2, 8)
-    );
-}
-
-function getOSKey() {
-    const ua = navigator.userAgent;
-    if (/android/i.test(ua)) return "android";
-    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
-    if (/Win/i.test(ua)) return "windows";
-    if (/Mac/i.test(ua)) return "mac";
-    if (/Linux/i.test(ua)) return "linux";
-    return "unknown";
-}
-
-function getOS() {
-    const ua = navigator.userAgent;
-    if (/android/i.test(ua)) return "Android";
-    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
-    if (/Win/i.test(ua)) return "Windows";
-    if (/Mac/i.test(ua)) return "Mac";
-    if (/Linux/i.test(ua)) return "Linux";
-    return "Unknown";
-}
-
-function getBrowser() {
-    const ua = navigator.userAgent;
-
-    if (/Edg/i.test(ua)) return "Edge";
-    if (/OPR|Opera/i.test(ua)) return "Opera";
-    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
-    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
-    if (/Firefox/i.test(ua)) return "Firefox";
-    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
-
-    return "Unknown";
-}
-
-
-function getPlacementId() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
-}
-
-function sendDurationOnExit(reason) {
-    if (gameStartTime && !durationSent && window.trackGameEvent) {
-        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
-        const placementId = getPlacementId();
-        window.trackGameEvent(`game_duration_blockpuzzle_${seconds}_${reason}_${getBrowser()}`, {
-            seconds,
-            end_reason: reason,
-            os: getOS(),
-            placement_id: placementId
-        });
-        // Update session in Supabase
-        updateGameSession({
-            duration_seconds: seconds,
-            bounced: !gameStartedFlag,
-            placement_id: placementId,
-            end_reason: reason
-        });
-        durationSent = true;
+    function getOSKey() {
+        const ua = navigator.userAgent;
+        if (/android/i.test(ua)) return "android";
+        if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+        if (/Win/i.test(ua)) return "windows";
+        if (/Mac/i.test(ua)) return "mac";
+        if (/Linux/i.test(ua)) return "linux";
+        return "unknown";
     }
-}
 
-document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-
-
-        sendDurationOnExit("background_blockpuzzle");
+    function getOS() {
+        const ua = navigator.userAgent;
+        if (/android/i.test(ua)) return "Android";
+        if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+        if (/Win/i.test(ua)) return "Windows";
+        if (/Mac/i.test(ua)) return "Mac";
+        if (/Linux/i.test(ua)) return "Linux";
+        return "Unknown";
     }
-});
 
-window.addEventListener("beforeunload", () => {
+    function getBrowser() {
+        const ua = navigator.userAgent;
 
-    sendDurationOnExit("tab_close_blockpuzzle");
+        if (/Edg/i.test(ua)) return "Edge";
+        if (/OPR|Opera/i.test(ua)) return "Opera";
+        if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+        if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+        if (/Firefox/i.test(ua)) return "Firefox";
+        if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
 
-    if (!gameStartedFlag && window.trackGameEvent) {
-        const osKey = getOSKey();
-        const placementId = getPlacementId();
-        window.trackGameEvent(`exit_before_game_blockpuzzle_${osKey}`, {
-            os: getOS(),
-            placement_id: placementId
-        });
-        // Update session as bounced
-        updateGameSession({
-            bounced: true,
-            placement_id: placementId,
-            end_reason: "exit_before_game"
-        });
+        return "Unknown";
     }
-});
 
-async function getCountry() {
-    try {
-        // Direct fetch to ipapi.co which is CORS friendly
-        const response = await fetch("https://ipapi.co/json/");
-        if (!response.ok) throw new Error("Network response was not ok");
-        const data = await response.json();
-        return data.country_name || data.country || "Unknown";
-    } catch (error) {
-        console.warn("Primary country detection failed, trying fallback...", error);
-        try {
-            // Fallback to Cloudflare's trace which is extremely reliable
-            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
-            const cfText = await cfResp.text();
-            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
-            return locLine ? locLine.split("=")[1] : "Unknown";
-        } catch (e) {
-            return "Unknown";
+
+    function getPlacementId() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('utm_content') ||
+            urlParams.get('placementid') ||
+            "unknown";
+    }
+
+    function sendDurationOnExit(reason) {
+        if (gameStartTime && !durationSent && window.trackGameEvent) {
+            const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+            const placementId = getPlacementId();
+            window.trackGameEvent(`game_duration_blockpuzzle_${seconds}_${reason}_${getBrowser()}`, {
+                seconds,
+                end_reason: reason,
+                os: getOS(),
+                placement_id: placementId
+            });
+            // Update session in Supabase
+            updateGameSession({
+                duration_seconds: seconds,
+                bounced: !gameStartedFlag,
+                placement_id: placementId,
+                end_reason: reason
+            });
+            durationSent = true;
         }
     }
-}
 
-// --- Supabase Session Tracking Functions ---
-async function startGameSession() {
-    if (!supabaseClient) return;
-    sessionId = generateSessionId();
-    const placementId = getPlacementId();
-    const os = getOS();
-    const browser = getBrowser();
-    const userAgent = navigator.userAgent;
-    const gameSlug = "blockpuzzle";
-    const country = await getCountry();
-    // Country detection can be added if needed
-    try {
-        await supabaseClient
-            .from('game_sessions')
-            .insert([
-                {
-                    session_id: sessionId,
-                    game_slug: gameSlug,
-                    placement_id: placementId,
-                    user_agent: userAgent,
-                    os: os,
-                    browser: browser,
-                    country: country,
-                    started_game: false,
-                    bounced: false
-                }
-            ]);
-    } catch (e) {}
-}
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
 
-async function markSessionStarted() {
-    if (!supabaseClient || !sessionId) return;
-    try {
-        await supabaseClient
-            .from('game_sessions')
-            .update({ started_game: true })
-            .eq('session_id', sessionId);
-    } catch (e) {}
-}
 
-async function updateGameSession(fields) {
-    if (!supabaseClient || !sessionId) return;
-    try {
-        await supabaseClient
-            .from('game_sessions')
-            .update(fields)
-            .eq('session_id', sessionId);
-    } catch (e) {}
-}
+            sendDurationOnExit("background_blockpuzzle");
+        }
+    });
+
+    window.addEventListener("beforeunload", () => {
+
+        sendDurationOnExit("tab_close_blockpuzzle");
+
+        if (!gameStartedFlag && window.trackGameEvent) {
+            const osKey = getOSKey();
+            const placementId = getPlacementId();
+            window.trackGameEvent(`exit_before_game_blockpuzzle_${osKey}`, {
+                os: getOS(),
+                placement_id: placementId
+            });
+            // Update session as bounced
+            updateGameSession({
+                bounced: true,
+                placement_id: placementId,
+                end_reason: "exit_before_game"
+            });
+        }
+    });
+
+    async function getCountry() {
+        try {
+            // Direct fetch to ipapi.co which is CORS friendly
+            const response = await fetch("https://ipapi.co/json/");
+            if (!response.ok) throw new Error("Network response was not ok");
+            const data = await response.json();
+            return data.country_name || data.country || "Unknown";
+        } catch (error) {
+            console.warn("Primary country detection failed, trying fallback...", error);
+            try {
+                // Fallback to Cloudflare's trace which is extremely reliable
+                const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+                const cfText = await cfResp.text();
+                const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+                return locLine ? locLine.split("=")[1] : "Unknown";
+            } catch (e) {
+                return "Unknown";
+            }
+        }
+    }
+
+    // --- Supabase Session Tracking Functions ---
+    async function startGameSession() {
+        if (!supabaseClient) return;
+        sessionId = generateSessionId();
+        const placementId = getPlacementId();
+        const os = getOS();
+        const browser = getBrowser();
+        const userAgent = navigator.userAgent;
+        const gameSlug = "blockpuzzle";
+        const country = await getCountry();
+        // Country detection can be added if needed
+        try {
+            await supabaseClient
+                .from('game_sessions')
+                .insert([
+                    {
+                        session_id: sessionId,
+                        game_slug: gameSlug,
+                        placement_id: placementId,
+                        user_agent: userAgent,
+                        os: os,
+                        browser: browser,
+                        country: country,
+                        started_game: false,
+                        bounced: false
+                    }
+                ]);
+        } catch (e) { }
+    }
+
+    async function markSessionStarted() {
+        if (!supabaseClient || !sessionId) return;
+        try {
+            await supabaseClient
+                .from('game_sessions')
+                .update({ started_game: true })
+                .eq('session_id', sessionId);
+        } catch (e) { }
+    }
+
+    async function updateGameSession(fields) {
+        if (!supabaseClient || !sessionId) return;
+        try {
+            await supabaseClient
+                .from('game_sessions')
+                .update(fields)
+                .eq('session_id', sessionId);
+        } catch (e) { }
+    }
 
 
     // --- STATE ---
@@ -331,19 +331,19 @@ async function updateGameSession(fields) {
     };
 
     function showTutorial() {
-    if (tutorialShown) return;
+        if (tutorialShown) return;
 
-    const el = document.getElementById('tutorial-popup');
-    if (!el) return;
+        const el = document.getElementById('tutorial-popup');
+        if (!el) return;
 
-    el.classList.remove('hidden');
+        el.classList.remove('hidden');
 
-    setTimeout(() => {
-        el.classList.add('hidden');
-    }, 3000);
+        setTimeout(() => {
+            el.classList.add('hidden');
+        }, 3000);
 
-    tutorialShown = true;
-}
+        tutorialShown = true;
+    }
 
     // --- INITIALIZATION ---
     function init() {
@@ -361,54 +361,7 @@ async function updateGameSession(fields) {
 
     }
 
-     function loadAdsterraBanner() {
-        // Desktop only check (using User Agent and Screen Width for safety)
-        const osKey = getOSKey();
-        if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-            return;
-        }
 
-        const container = document.getElementById("adsterra-banner");
-        if (!container) return;
-
-        setTimeout(() => {
-            console.log("Loading Adsterra Banner...");
-
-            // Create an iframe to safely isolate the ad execution
-            const iframe = document.createElement('iframe');
-            iframe.style.width = "160px";
-            iframe.style.height = "600px";
-            iframe.style.border = "none";
-            iframe.style.overflow = "hidden";
-            iframe.scrolling = "no";
-
-            container.appendChild(iframe);
-
-            const doc = iframe.contentWindow.document;
-            doc.open();
-            doc.write(`
-                <html>
-                <body style="margin:0;padding:0;background:transparent;">
-                    <script>
-                        atOptions = {
-                            'key' : '34488dc997487ff336bf5de366c86553',
-                            'format' : 'iframe',
-                            'height' : 600,
-                            'width' : 160,
-                            'params' : {}
-                        };
-                    </script>
-                    <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-                </body>
-                </html>
-            `);
-            doc.close();
-
-
-
-        }, 100);
-
-    }
 
 
     function startGame() {
@@ -423,9 +376,7 @@ async function updateGameSession(fields) {
         ui.goOverlay.classList.add('hidden');
         buildPromoScroller();
 
-         if (!window.DEV_MODE) {
-            loadAdsterraBanner();
-        }
+
 
     }
 
@@ -707,12 +658,12 @@ async function updateGameSession(fields) {
     function draw() {
         gctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
 
-// Background gradient
-const gradient = gctx.createLinearGradient(0, 0, 0, gameCanvas.height);
-gradient.addColorStop(0, '#0f172a');   // Dark slate
-gradient.addColorStop(1, '#020617');   // Deep night
-gctx.fillStyle = gradient;
-gctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+        // Background gradient
+        const gradient = gctx.createLinearGradient(0, 0, 0, gameCanvas.height);
+        gradient.addColorStop(0, '#0f172a');   // Dark slate
+        gradient.addColorStop(1, '#020617');   // Deep night
+        gctx.fillStyle = gradient;
+        gctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
 
         pctx.clearRect(0, 0, pieceCanvas.width, pieceCanvas.height);
 
@@ -731,14 +682,14 @@ gctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
                 const y = r * cs;
 
                 // Base cell
-               // Glass-style cell
-gctx.fillStyle = 'rgba(255,255,255,0.05)';
-gctx.strokeStyle = 'rgba(255,255,255,0.08)';
-gctx.lineWidth = 1;
+                // Glass-style cell
+                gctx.fillStyle = 'rgba(255,255,255,0.05)';
+                gctx.strokeStyle = 'rgba(255,255,255,0.08)';
+                gctx.lineWidth = 1;
 
-drawRoundedRect(gctx, x + padding, y + padding, cs - padding * 2, cs - padding * 2, 6);
-gctx.fill();
-gctx.stroke();
+                drawRoundedRect(gctx, x + padding, y + padding, cs - padding * 2, cs - padding * 2, 6);
+                gctx.fill();
+                gctx.stroke();
 
                 if (grid[r][c]) {
                     drawBlock(gctx, x, y, cs, grid[r][c]);
@@ -761,7 +712,7 @@ gctx.stroke();
                 // gctx.globalAlpha = 0.3;
                 // gctx.fillStyle = isValid ? '#fff' : '#ef4444';
                 gctx.globalAlpha = 0.35;
-gctx.fillStyle = isValid ? 'rgba(34,197,94,0.9)' : 'rgba(239,68,68,0.9)';
+                gctx.fillStyle = isValid ? 'rgba(34,197,94,0.9)' : 'rgba(239,68,68,0.9)';
 
                 for (let r = 0; r < draggingPiece.shape.length; r++) {
                     for (let c = 0; c < draggingPiece.shape[0].length; c++) {
@@ -778,19 +729,19 @@ gctx.fillStyle = isValid ? 'rgba(34,197,94,0.9)' : 'rgba(239,68,68,0.9)';
     function drawPieceSelector() {
 
         // Piece panel background
-pctx.fillStyle = 'rgba(255,255,255,0.04)';
-pctx.fillRect(0, 0, pieceCanvas.width, pieceCanvas.height);
+        pctx.fillStyle = 'rgba(255,255,255,0.04)';
+        pctx.fillRect(0, 0, pieceCanvas.width, pieceCanvas.height);
 
-const slotWidth = pieceCanvas.width / 3;
-pctx.strokeStyle = 'rgba(255,255,255,0.08)';
-pctx.lineWidth = 1;
+        const slotWidth = pieceCanvas.width / 3;
+        pctx.strokeStyle = 'rgba(255,255,255,0.08)';
+        pctx.lineWidth = 1;
 
-for (let i = 1; i < 3; i++) {
-    pctx.beginPath();
-    pctx.moveTo(i * slotWidth, 10);
-    pctx.lineTo(i * slotWidth, pieceCanvas.height - 10);
-    pctx.stroke();
-}
+        for (let i = 1; i < 3; i++) {
+            pctx.beginPath();
+            pctx.moveTo(i * slotWidth, 10);
+            pctx.lineTo(i * slotWidth, pieceCanvas.height - 10);
+            pctx.stroke();
+        }
 
 
         const rect = pieceCanvas.getBoundingClientRect();
@@ -838,43 +789,43 @@ for (let i = 1; i < 3; i++) {
     }
 
     function drawBlock(ctx, x, y, size, color) {
-    const padding = 3;
-    const r = 8;
+        const padding = 3;
+        const r = 8;
 
-    const innerX = x + padding;
-    const innerY = y + padding;
-    const innerSize = size - padding * 2;
+        const innerX = x + padding;
+        const innerY = y + padding;
+        const innerSize = size - padding * 2;
 
-    ctx.save();
+        ctx.save();
 
-    // Soft shadow for depth
-    ctx.shadowColor = 'rgba(0,0,0,0.5)';
-    ctx.shadowBlur = 12;
-    ctx.shadowOffsetY = 4;
+        // Soft shadow for depth
+        ctx.shadowColor = 'rgba(0,0,0,0.5)';
+        ctx.shadowBlur = 12;
+        ctx.shadowOffsetY = 4;
 
-    // Base block
-    ctx.fillStyle = color;
-    drawRoundedRect(ctx, innerX, innerY, innerSize, innerSize, r);
-    ctx.fill();
+        // Base block
+        ctx.fillStyle = color;
+        drawRoundedRect(ctx, innerX, innerY, innerSize, innerSize, r);
+        ctx.fill();
 
-    ctx.restore();
+        ctx.restore();
 
-    // Gloss highlight
-    const grad = ctx.createLinearGradient(innerX, innerY, innerX, innerY + innerSize);
-    grad.addColorStop(0, 'rgba(255,255,255,0.5)');
-    grad.addColorStop(0.3, 'rgba(255,255,255,0.15)');
-    grad.addColorStop(1, 'rgba(0,0,0,0.2)');
+        // Gloss highlight
+        const grad = ctx.createLinearGradient(innerX, innerY, innerX, innerY + innerSize);
+        grad.addColorStop(0, 'rgba(255,255,255,0.5)');
+        grad.addColorStop(0.3, 'rgba(255,255,255,0.15)');
+        grad.addColorStop(1, 'rgba(0,0,0,0.2)');
 
-    ctx.fillStyle = grad;
-    drawRoundedRect(ctx, innerX, innerY, innerSize, innerSize, r);
-    ctx.fill();
+        ctx.fillStyle = grad;
+        drawRoundedRect(ctx, innerX, innerY, innerSize, innerSize, r);
+        ctx.fill();
 
-    // Subtle inner glow
-    ctx.strokeStyle = 'rgba(255,255,255,0.25)';
-    ctx.lineWidth = 1.5;
-    drawRoundedRect(ctx, innerX + 1, innerY + 1, innerSize - 2, innerSize - 2, r - 1);
-    ctx.stroke();
-}
+        // Subtle inner glow
+        ctx.strokeStyle = 'rgba(255,255,255,0.25)';
+        ctx.lineWidth = 1.5;
+        drawRoundedRect(ctx, innerX + 1, innerY + 1, innerSize - 2, innerSize - 2, r - 1);
+        ctx.stroke();
+    }
 
     function drawRoundedRect(ctx, x, y, width, height, radius) {
         ctx.beginPath();

@@ -116,6 +116,89 @@ function loadBannerAd() {
 
 }
 
+/**
+ * Initialize Bottom and Side Ads (Universal)
+ * This function handles ad container injection and script loading.
+ * To switch vendors (e.g., from Adsterra to AdSense), simply update the logic below.
+ */
+function initBottomAndSideAds() {
+    if (!shouldLoadAds()) return;
+
+    // 1. Create containers if missing (using legacy IDs for compatibility)
+    if (!document.getElementById('adsterra-banner')) {
+        const sideBanner = document.createElement('div');
+        sideBanner.id = 'adsterra-banner';
+        sideBanner.className = 'pmg-side-ad';
+        document.body.appendChild(sideBanner);
+    }
+
+    if (!document.getElementById('bottom-ad')) {
+        const bottomAd = document.createElement('div');
+        bottomAd.id = 'bottom-ad';
+        bottomAd.className = 'pmg-bottom-ad';
+        document.body.appendChild(bottomAd);
+    }
+
+    /* --- VENDOR BLOCK: ADSTERRA --- */
+    // A. Bottom Native Banner (320x50)
+    const bottomContainer = document.getElementById("bottom-ad");
+    if (bottomContainer && !bottomContainer.dataset.loaded) {
+        bottomContainer.dataset.loaded = "true";
+        bottomContainer.innerHTML = '<div id="banner-slot"></div>';
+        const slot = document.getElementById("banner-slot");
+
+        window.atOptions = {
+            key: "de617c07128b585ef939154460e6858f",
+            format: "iframe",
+            height: 50,
+            width: 320,
+            params: {}
+        };
+
+        const s = document.createElement("script");
+        s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
+        slot.appendChild(s);
+    }
+
+    // B. Side Banner (160x600 - Desktop Only)
+    const sideContainer = document.getElementById("adsterra-banner");
+    if (sideContainer && window.innerWidth >= 1024 && !sideContainer.dataset.loaded) {
+        sideContainer.dataset.loaded = "true";
+
+        // Create an iframe to safely isolate the ad execution
+        const iframe = document.createElement('iframe');
+        iframe.style.width = "160px";
+        iframe.style.height = "600px";
+        iframe.style.border = "none";
+        iframe.style.overflow = "hidden";
+        iframe.scrolling = "no";
+        sideContainer.appendChild(iframe);
+
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write(`
+            <html>
+            <body style="margin:0;padding:0;background:transparent;">
+                <script>
+                    atOptions = {
+                        'key' : '34488dc997487ff336bf5de366c86553',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
+            </body>
+            </html>
+        `);
+        doc.close();
+    }
+}
+
+
+
+
 
 /**
  * Load Smartlink Ad (every 3rd game over)

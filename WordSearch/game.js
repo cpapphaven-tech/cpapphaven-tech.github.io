@@ -104,53 +104,7 @@ window.addEventListener("beforeunload", () => {
     }
 });
 
-function loadAdsterraBanner() {
-    // Desktop only check (using User Agent and Screen Width for safety)
-    const osKey = getOSKey();
-    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-        return;
-    }
 
-    const container = document.getElementById("adsterra-banner");
-    if (!container) return;
-
-    setTimeout(() => {
-        console.log("Loading Adsterra Banner...");
-
-        // Create an iframe to safely isolate the ad execution
-        const iframe = document.createElement('iframe');
-        iframe.style.width = "160px";
-        iframe.style.height = "600px";
-        iframe.style.border = "none";
-        iframe.style.overflow = "hidden";
-        iframe.scrolling = "no";
-
-        container.appendChild(iframe);
-
-        const doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
-            <html>
-            <body style="margin:0;padding:0;background:transparent;">
-                <script>
-                    atOptions = {
-                        'key' : '34488dc997487ff336bf5de366c86553',
-                        'format' : 'iframe',
-                        'height' : 600,
-                        'width' : 160,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-            </body>
-            </html>
-        `);
-        doc.close();
-
-
-
-    }, 2000);
-}
 
 // --- Game Logic ---
 
@@ -164,9 +118,7 @@ function init() {
         drawHighlights();
     });
 
-    if (!window.DEV_MODE) {
-        loadAdsterraBanner();
-    }
+
 
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;

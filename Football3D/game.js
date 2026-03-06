@@ -377,68 +377,10 @@ function init() {
     startGame();
 
     // Load Ads
-    if (!window.DEV_MODE) {
-        loadAdsterraBanner();
-    }
+
 }
 
-function loadAdsterraBanner() {
-    const osKey = getOSKey();
-    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) return;
 
-    const container = document.getElementById("adsterra-banner");
-    if (!container) return;
-
-    const container2 = document.getElementById("adsterra-left-banner");
-    if (!container2) return;
-
-    if (container.dataset.loaded === "true") return;
-    container.dataset.loaded = "true";
-
-    setTimeout(() => {
-        container.innerHTML = "";
-        const optionsScript = document.createElement("script");
-        optionsScript.type = "text/javascript";
-        optionsScript.text = `
-            atOptions = {
-                key: "34488dc997487ff336bf5de366c86553",
-                format: "iframe",
-                height: 600,
-                width: 160,
-                params: {}
-            };
-        `;
-        const invokeScript = document.createElement("script");
-        invokeScript.type = "text/javascript";
-        invokeScript.src = "https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js";
-
-        container.appendChild(optionsScript);
-        container.appendChild(invokeScript);
-
-        // 300
-
-        const optionsScript2 = document.createElement("script");
-        optionsScript2.type = "text/javascript";
-        optionsScript2.text = `
-            atOptions = {
-                key: "e2ef471584f829430c335953230fe3ef",
-                format: "iframe",
-                height: 300,
-                width: 160,
-                params: {}
-            };
-        `;
-        const invokeScript2 = document.createElement("script");
-        invokeScript2.type = "text/javascript";
-        invokeScript2.src = "https://offevasionrecruit.com/e2ef471584f829430c335953230fe3ef/invoke.js";
-        container2.appendChild(optionsScript2);
-        container2.appendChild(invokeScript2);
-
-        container2.appendChild(optionsScript);
-        container2.appendChild(invokeScript);
-
-    }, 100);
-}
 
 function setupPitch() {
     // Visual - Darker grass

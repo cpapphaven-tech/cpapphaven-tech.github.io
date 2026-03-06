@@ -76,9 +76,9 @@ function getBrowser() {
 
 function getPlacementId() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
+    return urlParams.get('utm_content') ||
+        urlParams.get('placementid') ||
+        "unknown";
 }
 
 function sendDurationOnExit(reason) {
@@ -156,7 +156,7 @@ async function startGameSession() {
     if (!window.supabase) return;
 
     gameStartTime = Date.now();   // ⏱ start timer
-    
+
     sessionId = generateSessionId();
     const placementId = getPlacementId();
     const os = getOS();
@@ -181,7 +181,7 @@ async function startGameSession() {
                     bounced: false
                 }
             ]);
-    } catch (e) {}
+    } catch (e) { }
 
 
 }
@@ -193,7 +193,7 @@ async function markSessionStarted() {
             .from('game_sessions')
             .update({ started_game: true })
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function updateGameSession(fields) {
@@ -203,7 +203,7 @@ async function updateGameSession(fields) {
             .from('game_sessions')
             .update(fields)
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 function initSupabase() {
@@ -218,67 +218,16 @@ function initSupabase() {
         console.log("✅ Supabase ready");
     }
 
- startGameSession();
-     markSessionStarted();
-    
+    startGameSession();
+    markSessionStarted();
+
 }
 
 
 
 
 // --- Game Control ---
-function loadAdsterraBanner() {
-    try {
-        // Desktop only check (using User Agent and Screen Width for safety)
-        const osKey = getOSKey();
-        if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-            return;
-        }
 
-        const container = document.getElementById("adsterra-banner");
-        if (!container) return;
-
-        setTimeout(() => {
-            try {
-                console.log("Loading Adsterra Banner...");
-
-                // Create an iframe to safely isolate the ad execution
-                const iframe = document.createElement('iframe');
-                iframe.style.width = "160px";
-                iframe.style.height = "600px";
-                iframe.style.border = "none";
-                iframe.style.overflow = "hidden";
-                iframe.scrolling = "no";
-
-                container.appendChild(iframe);
-
-                const doc = iframe.contentWindow.document;
-                doc.open();
-                doc.write(`
-                    <html>
-                    <body style="margin:0;padding:0;background:transparent;">
-                        <script>
-                            atOptions = {
-                                'key' : '34488dc997487ff336bf5de366c86553',
-                                'format' : 'iframe',
-                                'height' : 600,
-                                'width' : 160,
-                                'params' : {}
-                            };
-                        </script>
-                        <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-                    </body>
-                    </html>
-                `);
-                doc.close();
-            } catch (e) {
-                console.warn("Banner init failed:", e);
-            }
-        }, 1000); // 1s delay for stability
-    } catch (e) {
-        console.warn("loadAdsterraBanner crashed:", e);
-    }
-}
 
 
 // Simple Sound Effects
@@ -944,7 +893,7 @@ function startGame() {
     setTimeout(() => { statusMessage.classList.add('hidden'); }, 3000);
 
     if (!window.DEV_MODE) {
-        loadAdsterraBanner();
+
     }
 }
 

@@ -56,7 +56,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brick Breaker Online Free - Smash Arcade Game | PlayMix Games</title>
-    <meta name="description" content="Play Brick Breaker free online. Smash all bricks to win in this classic 2D physics arcade action!">
+    <meta name="description"
+        content="Play Brick Breaker free online. Smash all bricks to win in this classic 2D physics arcade action!">
     <link rel="alternate" hreflang="en" href="https://playmixgames.in/BrickBreaker/game.html" />
     <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/BrickBreaker/game.html" />
     <meta name="description"
@@ -127,7 +128,8 @@
 
 
     <meta property="og:title" content="Brick Breaker Online Free - Smash Arcade Game">
-    <meta property="og:description" content="Play Brick Breaker free online. Smash all bricks to win in this classic 2D physics arcade action!">
+    <meta property="og:description"
+        content="Play Brick Breaker free online. Smash all bricks to win in this classic 2D physics arcade action!">
     <meta property="og:url" content="https://playmixgames.in/BrickBreaker/game.html">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://playmixgames.in/BrickBreaker/game.html" />
@@ -243,25 +245,16 @@
         <p class="copyright">&copy; 2026 PlayMixGames.</p>
     </footer>
 
-    <div id="bottom-ad"></div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById("bottom-ad");
-            function loadBanner() {
-                if (!container) return;
-                container.innerHTML = '<div id="banner-slot"></div>';
-                const slot = document.getElementById("banner-slot");
-                window.atOptions = { key: "de617c07128b585ef939154460e6858f", format: "iframe", height: 50, width: 320, params: {} };
-                const s = document.createElement("script");
-                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                slot.appendChild(s);
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
             }
-            if (window.DEV_MODE) return;
-            setTimeout(loadBanner, 100);
         });
     </script>
 
-    <div id="adsterra-banner"></div>
+
 
     <!-- COOKIE CONSENT BANNER -->
     <div id="cookie-consent" class="cookie-banner hidden">

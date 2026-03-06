@@ -35,7 +35,8 @@
 
 
     <meta property="og:title" content="2248 Game Online Free - Play Merge Numbers Puzzle | PlayMix Games">
-    <meta property="og:description" content="Play the popular 2248 game online for free. Connect and merge same number blocks to reach the target score. No download required.">
+    <meta property="og:description"
+        content="Play the popular 2248 game online for free. Connect and merge same number blocks to reach the target score. No download required.">
     <meta property="og:url" content="https://playmixgames.in/MergeNumbers/game.html">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://playmixgames.in/MergeNumbers/game.html" />
@@ -156,16 +157,15 @@
         <p class="copyright">&copy; 2026 PlayMixGames.</p>
     </footer>
 
-    <div id="bottom-ad"></div>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            if (window.DEV_MODE) return;
-            setTimeout(function () {
-                const c = document.getElementById("bottom-ad"); if (!c) return; c.innerHTML = '<div id="banner-slot"></div>'; window.atOptions = { key: "de617c07128b585ef939154460e6858f", format: "iframe", height: 50, width: 320, params: {} }; const s = document.createElement("script"); s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"; document.getElementById("banner-slot").appendChild(s);
-            }, 100);
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
+            }
         });
     </script>
-    <div id="adsterra-banner"></div>
+
 
     <div id="cookie-consent" class="cookie-banner hidden">
         <div class="cookie-content">

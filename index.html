@@ -69,15 +69,8 @@
     <!-- Load Ads Using Professional Control System -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // loadSocialBarAd();
-
-            // Load native banner ad
-            if (shouldLoadAds()) {
-                const nativeBannerScript = document.createElement('script');
-                nativeBannerScript.async = true;
-                nativeBannerScript.setAttribute('data-cfasync', 'false');
-                nativeBannerScript.src = 'https://pl28566919.effectivegatecpm.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js';
-                document.head.appendChild(nativeBannerScript);
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
             }
         });
     </script>
@@ -114,7 +107,7 @@
     </script>
 </head>
 
-<body class="portal-index">
+<body class="portal-index ignore-pmg-sidebar">
     <!-- ===== PlayMixGames Universal Loader ===== -->
     <div id="pmg-loader">
         <div class="pmg-brand">PlayMixGames</div>
@@ -137,7 +130,7 @@
     </header>
 
     <!-- Featured Games Section - MOVED TO TOP -->
-    <section class="game-grid" style="padding: 30px 20px 50px; margin-top: 80px;">
+    <section class="game-grid">
         <h2 class="section-title" style="margin-bottom: 30px;">Play Now - Choose Your Popular Game</h2>
         <div class="grid">
 

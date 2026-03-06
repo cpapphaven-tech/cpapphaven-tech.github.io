@@ -110,47 +110,47 @@ function initSupabase() {
         return;
     }
 
-     if (!supabaseClient) {
+    if (!supabaseClient) {
         const { createClient } = window.supabase;
         supabaseClient = createClient(supabaseUrl, supabaseKey);
         console.log("✅ Supabase ready");
     }
-   
+
     startGameSession();
 }
 
 function getPlacementId() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
+    return urlParams.get('utm_content') ||
+        urlParams.get('placementid') ||
+        "unknown";
 
-           async function getCountry() {
-    try {
-        // Direct fetch to ipapi.co which is CORS friendly
-        const response = await fetch("https://ipapi.co/json/");
-        if (!response.ok) throw new Error("Network response was not ok");
-        const data = await response.json();
-        return data.country_name || data.country || "Unknown";
-    } catch (error) {
-        console.warn("Primary country detection failed, trying fallback...", error);
+    async function getCountry() {
         try {
-            // Fallback to Cloudflare's trace which is extremely reliable
-            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
-            const cfText = await cfResp.text();
-            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
-            return locLine ? locLine.split("=")[1] : "Unknown";
-        } catch (e) {
-            return "Unknown";
+            // Direct fetch to ipapi.co which is CORS friendly
+            const response = await fetch("https://ipapi.co/json/");
+            if (!response.ok) throw new Error("Network response was not ok");
+            const data = await response.json();
+            return data.country_name || data.country || "Unknown";
+        } catch (error) {
+            console.warn("Primary country detection failed, trying fallback...", error);
+            try {
+                // Fallback to Cloudflare's trace which is extremely reliable
+                const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+                const cfText = await cfResp.text();
+                const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+                return locLine ? locLine.split("=")[1] : "Unknown";
+            } catch (e) {
+                return "Unknown";
+            }
         }
     }
-}
 
 }
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
     if (!window.supabase) return;
-  
+
     sessionId = generateSessionId();
     const placementId = getPlacementId();
     const os = getOS();
@@ -176,7 +176,7 @@ async function startGameSession() {
                     bounced: false
                 }
             ]);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function markSessionStarted() {
@@ -186,7 +186,7 @@ async function markSessionStarted() {
             .from('game_sessions')
             .update({ started_game: true })
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function updateGameSession(fields) {
@@ -196,7 +196,7 @@ async function updateGameSession(fields) {
             .from('game_sessions')
             .update(fields)
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 
@@ -210,7 +210,7 @@ function sendDurationOnExit(reason) {
             os: getOS()
         });
 
-          // Update session in Supabase
+        // Update session in Supabase
         updateGameSession({
             duration_seconds: seconds,
             bounced: !gameStartedFlag,
@@ -243,53 +243,7 @@ window.addEventListener("beforeunload", () => {
 });
 
 // --- Game Control ---
-function loadAdsterraBanner() {
-    // Desktop only check (using User Agent and Screen Width for safety)
-    const osKey = getOSKey();
-    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-        return;
-    }
 
-    const container = document.getElementById("adsterra-banner");
-    if (!container) return;
-
-    setTimeout(() => {
-        console.log("Loading Adsterra Banner...");
-
-        // Create an iframe to safely isolate the ad execution
-        const iframe = document.createElement('iframe');
-        iframe.style.width = "160px";
-        iframe.style.height = "600px";
-        iframe.style.border = "none";
-        iframe.style.overflow = "hidden";
-        iframe.scrolling = "no";
-
-        container.appendChild(iframe);
-
-        const doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
-            <html>
-            <body style="margin:0;padding:0;background:transparent;">
-                <script>
-                    atOptions = {
-                        'key' : '34488dc997487ff336bf5de366c86553',
-                        'format' : 'iframe',
-                        'height' : 600,
-                        'width' : 160,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-            </body>
-            </html>
-        `);
-        doc.close();
-
-
-
-    }, 100);
-}
 
 function init() {
     setupEventListeners();
@@ -297,11 +251,9 @@ function init() {
     initSupabase();
 
 
-     if (!window.DEV_MODE) {
-                  loadAdsterraBanner();
-        }
 
-            gameStartTime = Date.now();   // ⏱ start timer
+
+    gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 }
 

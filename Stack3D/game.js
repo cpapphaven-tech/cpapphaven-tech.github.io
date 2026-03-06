@@ -64,7 +64,7 @@ function unlockAudio() {
         placeSound.pause();
         placeSound.currentTime = 0;
         audioUnlocked = true;
-    }).catch(() => {});
+    }).catch(() => { });
 }
 
 
@@ -85,7 +85,7 @@ function initSupabase() {
         return;
     }
 
-     if (!supabaseClient) {
+    if (!supabaseClient) {
         const { createClient } = window.supabase;
         supabaseClient = createClient(supabaseUrl, supabaseKey);
         console.log("✅ Supabase ready");
@@ -157,9 +157,9 @@ function getBrowser() {
 
 function getPlacementId() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
+    return urlParams.get('utm_content') ||
+        urlParams.get('placementid') ||
+        "unknown";
 }
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
@@ -190,11 +190,11 @@ async function startGameSession() {
                 }
             ]);
 
-            //  if (error) {
-            //     console.error("❌ Supabase INSERT error:", error);
-            // } else {
-            //     console.log("✅ Session inserted:", data);
-            // }
+        //  if (error) {
+        //     console.error("❌ Supabase INSERT error:", error);
+        // } else {
+        //     console.log("✅ Session inserted:", data);
+        // }
 
     } catch (e) { console.error("🔥 Unexpected INSERT crash:", e); }
 }
@@ -206,7 +206,7 @@ async function markSessionStarted() {
             .from('game_sessions')
             .update({ started_game: true })
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function updateGameSession(fields) {
@@ -216,7 +216,7 @@ async function updateGameSession(fields) {
             .from('game_sessions')
             .update(fields)
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 // Start session on load
@@ -270,7 +270,7 @@ function init() {
     }, 800);
 
     if (!window.DEV_MODE) {
-        loadAdsterraBanner();
+
     }
 
 
@@ -370,7 +370,7 @@ function init() {
     // Event Listeners
     window.addEventListener('pointerdown', handleInteraction, { passive: false });
     restartBtn.addEventListener('click', () => {
-        
+
         restartGame();
         setTimeout(startGame, 300); // auto start in 0.5s
     });
@@ -517,7 +517,7 @@ function startGame() {
 window.addEventListener("beforeunload", () => {
 
     sendDurationOnExit("tab_close_stack3d");
- 
+
 
     if (!gameStartedFlag && window.trackGameEvent) {
         const osKey = getOSKey();
@@ -526,7 +526,7 @@ window.addEventListener("beforeunload", () => {
         });
     }
 
-     
+
 });
 
 
@@ -610,8 +610,8 @@ function placeBlock() {
     createRubble(diff, width, depth, currentPos, prevPos);
 
     // PERFECT OR NORMAL PLACE
-placeSound.currentTime = 0;
-placeSound.play();
+    placeSound.currentTime = 0;
+    placeSound.play();
 
     score++;
     scoreEl.innerText = score;
@@ -686,7 +686,7 @@ function gameOver() {
     if (isGameOver) return;
 
     failSound.currentTime = 0;
-failSound.play();
+    failSound.play();
 
     isGameOver = true;
 
@@ -809,53 +809,7 @@ function onWindowResize() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
-function loadAdsterraBanner() {
-    // Desktop only check (using User Agent and Screen Width for safety)
-    const osKey = getOSKey();
-    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-        return;
-    }
 
-    const container = document.getElementById("adsterra-banner");
-    if (!container) return;
-
-    setTimeout(() => {
-        console.log("Loading Adsterra Banner...");
-
-        // Create an iframe to safely isolate the ad execution
-        const iframe = document.createElement('iframe');
-        iframe.style.width = "160px";
-        iframe.style.height = "600px";
-        iframe.style.border = "none";
-        iframe.style.overflow = "hidden";
-        iframe.scrolling = "no";
-
-        container.appendChild(iframe);
-
-        const doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
-            <html>
-            <body style="margin:0;padding:0;background:transparent;">
-                <script>
-                    atOptions = {
-                        'key' : '34488dc997487ff336bf5de366c86553',
-                        'format' : 'iframe',
-                        'height' : 600,
-                        'width' : 160,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-            </body>
-            </html>
-        `);
-        doc.close();
-
-
-
-    }, 100);
-}
 
 // --- Telegram Share on Game Over ---
 

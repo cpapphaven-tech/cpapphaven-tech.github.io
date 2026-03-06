@@ -51,8 +51,7 @@
         <div id="turn-display" style="font-weight: 900; font-size: 0.9rem;">TURN: RED</div>
     </header>
 
-    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
-    <div id="adsterra-banner"></div>
+
 
     <!-- Game Container -->
     <div id="game-container">
@@ -93,31 +92,14 @@
         </div>
     </div>
 
-    <!-- Bottom Banner Ad -->
-    <div id="bottom-ad"></div>
+
 
     <script>
-        (function () {
-            const container = document.getElementById("bottom-ad");
-            function loadBanner() {
-                if (typeof shouldLoadAds === "function" && !shouldLoadAds()) return;
-                if (!container) return;
-                container.innerHTML = '<div id="banner-slot"></div>';
-                const slot = document.getElementById("banner-slot");
-                window.atOptions = {
-                    key: "de617c07128b585ef939154460e6858f",
-                    format: "iframe",
-                    height: 50,
-                    width: 320,
-                    params: {}
-                };
-                const s = document.createElement("script");
-                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                slot.appendChild(s);
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
             }
-            if (window.DEV_MODE) { return; }
-            setTimeout(loadBanner, 2000);
-        })();
+        });
     </script>
 
     <!-- SEO: About Game & How to Play Section -->

@@ -32,7 +32,7 @@
                     return;
                 }
 
-              //  loadSocialBarAd();
+                //  loadSocialBarAd();
 
 
             }, 100);
@@ -145,7 +145,7 @@
                 <div class="challenge-text">Can you complete<br>5 levels?</div>
                 <div class="challenge-subtext">Show your skills! 💪</div>
             </div>
-              
+
 
 
             <div id="main-menu" class="overlay hidden"> <!-- Hidden by default for auto-start -->
@@ -173,7 +173,7 @@
                     <button id="submit-score-btn"
                         style="background: linear-gradient(135deg, #4d79ff, #3366ff); border:none; width:100%; padding: 10px;">Submit
                         & Save Level</button>
-                        
+
                 </div>
 
                 <button id="next-level-btn" class="hidden">Next Level</button>
@@ -250,41 +250,19 @@
         </div>
     </div> -->
 
-    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
-    <div id="adsterra-banner">
-        <!-- Script will be injected here by game.js after 2s -->
-    </div>
 
 
 
 
 
-    <div id="bottom-ad"></div>
+
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById("bottom-ad");
-            function loadBanner() {
-
-                if (!container) return;
-                container.innerHTML = '<div id="banner-slot"></div>';
-                const slot = document.getElementById("banner-slot");
-                window.atOptions = {
-                    key: "de617c07128b585ef939154460e6858f",
-                    format: "iframe",
-                    height: 50,
-                    width: 320,
-                    params: {}
-                };
-                const s = document.createElement("script");
-                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                slot.appendChild(s);
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
             }
-
-            if (window.DEV_MODE) {
-                return;
-            }
-            setTimeout(loadBanner, 100);
         });
     </script>
 

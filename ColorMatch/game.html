@@ -103,10 +103,11 @@
         })();
     </script>
 
-    <!-- Load Ads Using Professional Control System -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            loadSocialBarAd();
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
+            }
         });
     </script>
     <link rel="manifest" href="manifest.json">

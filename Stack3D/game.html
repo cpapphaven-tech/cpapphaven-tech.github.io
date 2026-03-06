@@ -177,34 +177,11 @@
         </div>
     </div>
 
-    <!-- RIGHT SIDE ADSTERRA BANNER (Desktop Only) -->
-    <div id="adsterra-banner"></div>
-
-    <div id="bottom-ad"></div>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const container = document.getElementById("bottom-ad");
-            function loadBanner() {
-                if (typeof shouldLoadAds === "function" && !shouldLoadAds()) return;
-                if (!container) return;
-                container.innerHTML = '<div id="banner-slot"></div>';
-                const slot = document.getElementById("banner-slot");
-                window.atOptions = {
-                    key: "de617c07128b585ef939154460e6858f",
-                    format: "iframe",
-                    height: 50,
-                    width: 320,
-                    params: {}
-                };
-                const s = document.createElement("script");
-                s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-                slot.appendChild(s);
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
             }
-            if (window.DEV_MODE) {
-                return;
-            }
-            setTimeout(loadBanner, 100);
         });
     </script>
 

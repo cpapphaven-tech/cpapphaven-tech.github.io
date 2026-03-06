@@ -40,10 +40,10 @@ async function initSupabase() {
         supabaseClient = createClient(supabaseUrl, supabaseKey);
         console.log("✅ Supabase ready");
     }
-   
 
-     await startGameSession();
-     await markSessionStarted();
+
+    await startGameSession();
+    await markSessionStarted();
 }
 
 function generateSessionId() {
@@ -89,9 +89,9 @@ function getBrowser() {
 
 function getPlacementId() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
+    return urlParams.get('utm_content') ||
+        urlParams.get('placementid') ||
+        "unknown";
 }
 
 function sendDurationOnExit(reason) {
@@ -685,60 +685,14 @@ function endGame(playerWon) {
 }
 
 // --- Game Control ---
-function loadAdsterraBanner() {
-    // Desktop only check (using User Agent and Screen Width for safety)
-    const osKey = getOSKey();
-    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-        return;
-    }
 
-    const container = document.getElementById("adsterra-banner");
-    if (!container) return;
-
-    setTimeout(() => {
-        console.log("Loading Adsterra Banner...");
-
-        // Create an iframe to safely isolate the ad execution
-        const iframe = document.createElement('iframe');
-        iframe.style.width = "160px";
-        iframe.style.height = "600px";
-        iframe.style.border = "none";
-        iframe.style.overflow = "hidden";
-        iframe.scrolling = "no";
-
-        container.appendChild(iframe);
-
-        const doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
-            <html>
-            <body style="margin:0;padding:0;background:transparent;">
-                <script>
-                    atOptions = {
-                        'key' : '34488dc997487ff336bf5de366c86553',
-                        'format' : 'iframe',
-                        'height' : 600,
-                        'width' : 160,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-            </body>
-            </html>
-        `);
-        doc.close();
-
-
-
-    }, 100);
-}
 
 // UI Buttons
 startBtn.onclick = () => {
 
     // 🔥 Initialize Supabase only now
     if (!supabaseClient) {
-         initSupabase();
+        initSupabase();
     }
 
     initAudio(); // MUST be triggered on user action
@@ -749,16 +703,14 @@ startBtn.onclick = () => {
     updateScoreUI();
     gameState = 'playing';
 
-    if (!window.DEV_MODE) {
-        loadAdsterraBanner();
-    }
+
 
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
     gameStartedFlag = true; // mark started
 
-      
-    
+
+
 };
 
 restartBtn.onclick = () => {
@@ -827,7 +779,7 @@ async function startGameSession() {
                     bounced: false
                 }
             ]);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function markSessionStarted() {
@@ -837,7 +789,7 @@ async function markSessionStarted() {
             .from('game_sessions')
             .update({ started_game: true })
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function updateGameSession(fields) {
@@ -847,7 +799,7 @@ async function updateGameSession(fields) {
             .from('game_sessions')
             .update(fields)
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 // Resize handling

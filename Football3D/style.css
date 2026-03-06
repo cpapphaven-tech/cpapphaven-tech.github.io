@@ -436,22 +436,7 @@ input {
     opacity: 0.5;
 }
 
-/* Ad Banners */
-#adsterra-banner {
-    position: fixed;
-    right: 0px;
-    bottom: 0%;
-    width: 160px;
-    height: 600px;
-    background: rgba(0, 0, 0, 0.2);
-    display: none;
-}
 
-@media (min-width: 1024px) {
-    #adsterra-banner {
-        display: block;
-    }
-}
 
 #adsterra-left-banner {
     position: fixed;
@@ -591,20 +576,7 @@ input {
     flex-shrink: 0;
 }
 
-#bottom-ad {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 320px;
-    height: 50px;
-    z-index: 9999;
-}
 
-/* Show on all screens */
-#bottom-ad {
-    display: block;
-}
 
 .game-description {
     margin-top: 100vh;

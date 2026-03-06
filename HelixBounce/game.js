@@ -67,14 +67,14 @@ let previousPointerX = 0;
 
 function getPlacementId() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
+    return urlParams.get('utm_content') ||
+        urlParams.get('placementid') ||
+        "unknown";
 }
 // --- Supabase Session Tracking Functions ---
 async function startGameSession() {
     if (!supabaseClient) return;
-    
+
     sessionId = generateSessionId();
     const placementId = getPlacementId();
     const os = getOS();
@@ -99,7 +99,7 @@ async function startGameSession() {
                     bounced: false
                 }
             ]);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function markSessionStarted() {
@@ -109,7 +109,7 @@ async function markSessionStarted() {
             .from('game_sessions')
             .update({ started_game: true })
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 async function updateGameSession(fields) {
@@ -119,7 +119,7 @@ async function updateGameSession(fields) {
             .from('game_sessions')
             .update(fields)
             .eq('session_id', sessionId);
-    } catch (e) {}
+    } catch (e) { }
 }
 
 
@@ -765,12 +765,12 @@ function gameOver(win) {
     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
 
     if (typeof window.trackGameEvent === "function") {
-    window.trackGameEvent(`game_over_helix`, {
-        game_name: "helix_gameover",
-        level: currentLevel,
-        duration_seconds: seconds
-    });
-}
+        window.trackGameEvent(`game_over_helix`, {
+            game_name: "helix_gameover",
+            level: currentLevel,
+            duration_seconds: seconds
+        });
+    }
 
     if (window.renderGameScroller) {
         renderGameScroller('game-over-scroller');
@@ -1063,7 +1063,7 @@ function sendDurationOnExit(reason) {
             os: getOS()
         });
 
-         // Update session in Supabase
+        // Update session in Supabase
         updateGameSession({
             duration_seconds: seconds,
             bounced: !gameStartedFlag,
@@ -1351,12 +1351,9 @@ window.addEventListener('load', () => {
     // Init Supabase
     initSupabase();
 
-    // Load Adsterra
-    console.log("📢 Calling loadAdsterraBanner()...");
 
-    if (!window.DEV_MODE) {
-        loadAdsterraBanner();
-    }
+
+
 });
 
 
@@ -1364,62 +1361,7 @@ window.addEventListener('load', () => {
 // 🖥 DESKTOP ADSTERRA BANNER (160x600)
 // ---------------------------------------------------------
 
-function loadAdsterraBanner() {
-    const osKey = getOSKey();
 
-
-    // Desktop only
-    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-        console.log("Adsterra Banner: Skipped (mobile or small screen)");
-        return;
-    }
-
-    const container = document.getElementById("adsterra-banner");
-    if (!container) {
-        console.error("Adsterra Banner: Container not found!");
-        return;
-    }
-
-    // Prevent double loading
-    if (container.dataset.loaded === "true") return;
-    container.dataset.loaded = "true";
-
-    console.log("Loading Adsterra banner...");
-
-    setTimeout(() => {
-
-        // Clear container
-        container.innerHTML = "";
-
-        // 1. Options script
-        const optionsScript = document.createElement("script");
-        optionsScript.type = "text/javascript";
-        optionsScript.text = `
-        atOptions = {
-            key: "34488dc997487ff336bf5de366c86553",
-            format: "iframe",
-            height: 600,
-            width: 160,
-            params: {}
-        };
-    `;
-
-        // 2. Invoke script
-        const invokeScript = document.createElement("script");
-        invokeScript.type = "text/javascript";
-        invokeScript.src =
-            "https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js";
-
-        // Append in correct order
-        container.appendChild(optionsScript);
-        container.appendChild(invokeScript);
-
-        console.log("Adsterra banner injected.");
-
-    }, 100);
-
-
-}
 
 
 

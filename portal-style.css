@@ -220,7 +220,9 @@
     /* We shift only the highest level containers to avoid "double-shifting" internal UI */
     body.pmg-sidebar-open #game-wrapper,
     body.pmg-sidebar-open .game-container,
-    body.pmg-sidebar-open #game-root {
+    body.pmg-sidebar-open #game-container,
+    body.pmg-sidebar-open #game-root,
+    body.pmg-sidebar-open header {
         transform: translateX(140px);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -230,7 +232,8 @@
     body.pmg-sidebar-open #benefit-box,
     body.pmg-sidebar-open #tutorial-overlay,
     body.pmg-sidebar-open #cross-promo-container,
-    body.pmg-sidebar-open #bottom-bar {
+    body.pmg-sidebar-open #bottom-bar,
+    body.pmg-sidebar-open .back-btn {
         left: 290px !important;
         transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -299,6 +302,7 @@ body.portal-index {
 
 .portal-index .game-grid {
     padding: 40px 5%;
+    margin-top: 80px;
 }
 
 .portal-index .grid {
@@ -349,4 +353,43 @@ body.portal-index {
     .portal-index .hero h1 {
         font-size: 2.5rem;
     }
+}
+
+/* --- COMMON AD BANNERS --- */
+.pmg-side-ad,
+#adsterra-banner {
+    position: fixed;
+    right: 0px;
+    bottom: 0%;
+    width: 160px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 9999;
+}
+
+@media (min-width: 1024px) {
+
+    .pmg-side-ad,
+    #adsterra-banner {
+        display: block;
+    }
+}
+
+.pmg-bottom-ad,
+#bottom-ad {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 50px;
+    z-index: 9999;
+    display: block;
+}
+
+
+#banner-slot {
+    width: 320px;
+    height: 50px;
 }

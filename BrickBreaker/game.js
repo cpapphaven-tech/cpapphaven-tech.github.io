@@ -17,22 +17,22 @@
     // const ROW_EMISSIVE = [0x881122, 0x884400, 0x886600, 0x557700, 0x006644, 0x005588];
 
     const ROW_COLORS = [
-    0x7a0018, // dark red
-    0x8c2f00, // burnt orange
-    0x9a8400, // mustard
-    0x006644, // dark green
-    0x005577, // deep cyan
-    0x3d0077  // dark purple
-];
+        0x7a0018, // dark red
+        0x8c2f00, // burnt orange
+        0x9a8400, // mustard
+        0x006644, // dark green
+        0x005577, // deep cyan
+        0x3d0077  // dark purple
+    ];
 
-const ROW_EMISSIVE = [
-    0x330008,
-    0x402000,
-    0x444000,
-    0x003322,
-    0x002233,
-    0x220044
-];
+    const ROW_EMISSIVE = [
+        0x330008,
+        0x402000,
+        0x444000,
+        0x003322,
+        0x002233,
+        0x220044
+    ];
 
     const PADDLE_W_BASE = 2.8;
     const PADDLE_H = 0.22;
@@ -87,207 +87,207 @@ const ROW_EMISSIVE = [
     const tapOverlay = document.getElementById('tap-overlay');
 
     let gameStartTime = null;
-let durationSent = false;
-let gameStartedFlag = false;
+    let durationSent = false;
+    let gameStartedFlag = false;
 
-// --- Supabase Config ---
-const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
-const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
-let supabaseClient = null;
+    // --- Supabase Config ---
+    const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
+    const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
+    let supabaseClient = null;
 
-// --- Session Tracking ---
-let sessionId = null;
-let sessionRowId = null;
+    // --- Session Tracking ---
+    let sessionId = null;
+    let sessionRowId = null;
 
 
-// Start session on load
-async function initSupabase() {
-    if (!window.supabase) {
-        setTimeout(initSupabase, 500);
-        return;
+    // Start session on load
+    async function initSupabase() {
+        if (!window.supabase) {
+            setTimeout(initSupabase, 500);
+            return;
+        }
+
+        if (!supabaseClient) {
+            const { createClient } = window.supabase;
+            supabaseClient = createClient(supabaseUrl, supabaseKey);
+            console.log("✅ Supabase ready");
+        }
+
+
+        await startGameSession();
+        await markSessionStarted();
     }
 
-    if (!supabaseClient) {
-        const { createClient } = window.supabase;
-        supabaseClient = createClient(supabaseUrl, supabaseKey);
-        console.log("✅ Supabase ready");
+
+
+
+    function generateSessionId() {
+        return (
+            Date.now().toString(36) +
+            Math.random().toString(36).substr(2, 8)
+        );
     }
-   
 
-     await startGameSession();
-     await markSessionStarted();
-}
-
-
-
-
-function generateSessionId() {
-    return (
-        Date.now().toString(36) +
-        Math.random().toString(36).substr(2, 8)
-    );
-}
-
-function getOSKey() {
-    const ua = navigator.userAgent;
-    if (/android/i.test(ua)) return "android";
-    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
-    if (/Win/i.test(ua)) return "windows";
-    if (/Mac/i.test(ua)) return "mac";
-    if (/Linux/i.test(ua)) return "linux";
-    return "unknown";
-}
-
-function getOS() {
-    const ua = navigator.userAgent;
-    if (/android/i.test(ua)) return "Android";
-    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
-    if (/Win/i.test(ua)) return "Windows";
-    if (/Mac/i.test(ua)) return "Mac";
-    if (/Linux/i.test(ua)) return "Linux";
-    return "Unknown";
-}
-
-function getBrowser() {
-    const ua = navigator.userAgent;
-
-    if (/Edg/i.test(ua)) return "Edge";
-    if (/OPR|Opera/i.test(ua)) return "Opera";
-    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
-    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
-    if (/Firefox/i.test(ua)) return "Firefox";
-    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
-
-    return "Unknown";
-}
-
-
-function getPlacementId() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('utm_content') || 
-           urlParams.get('placementid') || 
-           "unknown";
-}
-
-function sendDurationOnExit(reason) {
-    if (gameStartTime && !durationSent && window.trackGameEvent) {
-        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
-        const placementId = getPlacementId();
-        window.trackGameEvent(`game_duration_brickbreaker_${seconds}_${reason}_${getBrowser()}`, {
-            seconds,
-            end_reason: reason,
-            os: getOS(),
-            placement_id: placementId
-        });
-        // Update session in Supabase
-        updateGameSession({
-            duration_seconds: seconds,
-            bounced: !gameStartedFlag,
-            placement_id: placementId,
-            end_reason: reason
-        });
-        durationSent = true;
+    function getOSKey() {
+        const ua = navigator.userAgent;
+        if (/android/i.test(ua)) return "android";
+        if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+        if (/Win/i.test(ua)) return "windows";
+        if (/Mac/i.test(ua)) return "mac";
+        if (/Linux/i.test(ua)) return "linux";
+        return "unknown";
     }
-}
 
-document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-
-
-        sendDurationOnExit("background_brickbreaker");
+    function getOS() {
+        const ua = navigator.userAgent;
+        if (/android/i.test(ua)) return "Android";
+        if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+        if (/Win/i.test(ua)) return "Windows";
+        if (/Mac/i.test(ua)) return "Mac";
+        if (/Linux/i.test(ua)) return "Linux";
+        return "Unknown";
     }
-});
 
-window.addEventListener("beforeunload", () => {
+    function getBrowser() {
+        const ua = navigator.userAgent;
 
-    sendDurationOnExit("tab_close_brickbreaker");
+        if (/Edg/i.test(ua)) return "Edge";
+        if (/OPR|Opera/i.test(ua)) return "Opera";
+        if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+        if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+        if (/Firefox/i.test(ua)) return "Firefox";
+        if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
 
-    if (!gameStartedFlag && window.trackGameEvent) {
-        const osKey = getOSKey();
-        const placementId = getPlacementId();
-        window.trackGameEvent(`exit_before_game_brickbreaker_${osKey}`, {
-            os: getOS(),
-            placement_id: placementId
-        });
-        // Update session as bounced
-        updateGameSession({
-            bounced: true,
-            placement_id: placementId,
-            end_reason: "exit_before_game"
-        });
+        return "Unknown";
     }
-});
 
-async function getCountry() {
-    try {
-        // Direct fetch to ipapi.co which is CORS friendly
-        const response = await fetch("https://ipapi.co/json/");
-        if (!response.ok) throw new Error("Network response was not ok");
-        const data = await response.json();
-        return data.country_name || data.country || "Unknown";
-    } catch (error) {
-        console.warn("Primary country detection failed, trying fallback...", error);
-        try {
-            // Fallback to Cloudflare's trace which is extremely reliable
-            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
-            const cfText = await cfResp.text();
-            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
-            return locLine ? locLine.split("=")[1] : "Unknown";
-        } catch (e) {
-            return "Unknown";
+
+    function getPlacementId() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('utm_content') ||
+            urlParams.get('placementid') ||
+            "unknown";
+    }
+
+    function sendDurationOnExit(reason) {
+        if (gameStartTime && !durationSent && window.trackGameEvent) {
+            const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+            const placementId = getPlacementId();
+            window.trackGameEvent(`game_duration_brickbreaker_${seconds}_${reason}_${getBrowser()}`, {
+                seconds,
+                end_reason: reason,
+                os: getOS(),
+                placement_id: placementId
+            });
+            // Update session in Supabase
+            updateGameSession({
+                duration_seconds: seconds,
+                bounced: !gameStartedFlag,
+                placement_id: placementId,
+                end_reason: reason
+            });
+            durationSent = true;
         }
     }
-}
 
-// --- Supabase Session Tracking Functions ---
-async function startGameSession() {
-    if (!supabaseClient) return;
-    sessionId = generateSessionId();
-    const placementId = getPlacementId();
-    const os = getOS();
-    const browser = getBrowser();
-    const userAgent = navigator.userAgent;
-    const gameSlug = "brickbreaker";
-    const country = await getCountry();
-    // Country detection can be added if needed
-    try {
-        await supabaseClient
-            .from('game_sessions')
-            .insert([
-                {
-                    session_id: sessionId,
-                    game_slug: gameSlug,
-                    placement_id: placementId,
-                    user_agent: userAgent,
-                    os: os,
-                    browser: browser,
-                    country: country,
-                    started_game: false,
-                    bounced: false
-                }
-            ]);
-    } catch (e) {}
-}
+    document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
 
-async function markSessionStarted() {
-    if (!supabaseClient || !sessionId) return;
-    try {
-        await supabaseClient
-            .from('game_sessions')
-            .update({ started_game: true })
-            .eq('session_id', sessionId);
-    } catch (e) {}
-}
 
-async function updateGameSession(fields) {
-    if (!supabaseClient || !sessionId) return;
-    try {
-        await supabaseClient
-            .from('game_sessions')
-            .update(fields)
-            .eq('session_id', sessionId);
-    } catch (e) {}
-}
+            sendDurationOnExit("background_brickbreaker");
+        }
+    });
+
+    window.addEventListener("beforeunload", () => {
+
+        sendDurationOnExit("tab_close_brickbreaker");
+
+        if (!gameStartedFlag && window.trackGameEvent) {
+            const osKey = getOSKey();
+            const placementId = getPlacementId();
+            window.trackGameEvent(`exit_before_game_brickbreaker_${osKey}`, {
+                os: getOS(),
+                placement_id: placementId
+            });
+            // Update session as bounced
+            updateGameSession({
+                bounced: true,
+                placement_id: placementId,
+                end_reason: "exit_before_game"
+            });
+        }
+    });
+
+    async function getCountry() {
+        try {
+            // Direct fetch to ipapi.co which is CORS friendly
+            const response = await fetch("https://ipapi.co/json/");
+            if (!response.ok) throw new Error("Network response was not ok");
+            const data = await response.json();
+            return data.country_name || data.country || "Unknown";
+        } catch (error) {
+            console.warn("Primary country detection failed, trying fallback...", error);
+            try {
+                // Fallback to Cloudflare's trace which is extremely reliable
+                const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+                const cfText = await cfResp.text();
+                const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+                return locLine ? locLine.split("=")[1] : "Unknown";
+            } catch (e) {
+                return "Unknown";
+            }
+        }
+    }
+
+    // --- Supabase Session Tracking Functions ---
+    async function startGameSession() {
+        if (!supabaseClient) return;
+        sessionId = generateSessionId();
+        const placementId = getPlacementId();
+        const os = getOS();
+        const browser = getBrowser();
+        const userAgent = navigator.userAgent;
+        const gameSlug = "brickbreaker";
+        const country = await getCountry();
+        // Country detection can be added if needed
+        try {
+            await supabaseClient
+                .from('game_sessions')
+                .insert([
+                    {
+                        session_id: sessionId,
+                        game_slug: gameSlug,
+                        placement_id: placementId,
+                        user_agent: userAgent,
+                        os: os,
+                        browser: browser,
+                        country: country,
+                        started_game: false,
+                        bounced: false
+                    }
+                ]);
+        } catch (e) { }
+    }
+
+    async function markSessionStarted() {
+        if (!supabaseClient || !sessionId) return;
+        try {
+            await supabaseClient
+                .from('game_sessions')
+                .update({ started_game: true })
+                .eq('session_id', sessionId);
+        } catch (e) { }
+    }
+
+    async function updateGameSession(fields) {
+        if (!supabaseClient || !sessionId) return;
+        try {
+            await supabaseClient
+                .from('game_sessions')
+                .update(fields)
+                .eq('session_id', sessionId);
+        } catch (e) { }
+    }
 
     // ========== AUDIO ==========
     let audioCtx;
@@ -426,7 +426,7 @@ async function updateGameSession(fields) {
         // const floorMat = new THREE.MeshBasicMaterial({ color: 0x6600ff, transparent: true, opacity: 0.1 });
         // const floor = new THREE.Mesh(floorGeo, floorMat);
         // floor.position.set(GW / 2, 0.2, -0.5);
-       // scene.add(floor);
+        // scene.add(floor);
     }
 
     function buildPaddleMesh() {
@@ -439,17 +439,17 @@ async function updateGameSession(fields) {
         //     metalness: 0.88,
         //     roughness: 0.12,
         // });
-     const mat = new THREE.MeshPhysicalMaterial({
-color: 0x7a00ff,
-emissive: 0x330099,
-    emissiveIntensity: 1.4,
+        const mat = new THREE.MeshPhysicalMaterial({
+            color: 0x7a00ff,
+            emissive: 0x330099,
+            emissiveIntensity: 1.4,
 
-    metalness: 0.3,
-    roughness: 0.2,
+            metalness: 0.3,
+            roughness: 0.2,
 
-    clearcoat: 1,
-    clearcoatRoughness: 0.08
-});
+            clearcoat: 1,
+            clearcoatRoughness: 0.08
+        });
 
         paddleMesh = new THREE.Mesh(new THREE.BoxGeometry(w, PADDLE_H, PADDLE_D), mat);
         // paddleMesh = new THREE.CapsuleGeometry(paddle.w / 2, PADDLE_H / 2, 8, 16);
@@ -505,52 +505,52 @@ emissive: 0x330099,
                 //     roughness: 0.55,
                 // });
 
-//                 const base = new THREE.Color(ROW_COLORS[ci]);
-// base.offsetHSL(0, 0, -0.05 * r); 
+                //                 const base = new THREE.Color(ROW_COLORS[ci]);
+                // base.offsetHSL(0, 0, -0.05 * r); 
 
 
-//                 const mat = new THREE.MeshPhysicalMaterial({
-//     color: base,
-//     emissive: new THREE.Color(ROW_COLORS[ci]),
-//     emissiveIntensity: 0.9,
+                //                 const mat = new THREE.MeshPhysicalMaterial({
+                //     color: base,
+                //     emissive: new THREE.Color(ROW_COLORS[ci]),
+                //     emissiveIntensity: 0.9,
 
-//     metalness: 0.25,
-//     roughness: 0.18,
+                //     metalness: 0.25,
+                //     roughness: 0.18,
 
-//     clearcoat: 1,
-//     clearcoatRoughness: 0.05,
+                //     clearcoat: 1,
+                //     clearcoatRoughness: 0.05,
 
-//     reflectivity: 0.8
-// });
-const mat = new THREE.MeshPhysicalMaterial({
-    color: new THREE.Color(ROW_COLORS[ci]),
-    emissive: new THREE.Color(ROW_EMISSIVE[ci]),
-    emissiveIntensity: 0.6,   // lower glow for dark theme
+                //     reflectivity: 0.8
+                // });
+                const mat = new THREE.MeshPhysicalMaterial({
+                    color: new THREE.Color(ROW_COLORS[ci]),
+                    emissive: new THREE.Color(ROW_EMISSIVE[ci]),
+                    emissiveIntensity: 0.6,   // lower glow for dark theme
 
-    metalness: 0.35,
-    roughness: 0.35,
-    clearcoat: 0.6,
-    clearcoatRoughness: 0.2
-});
+                    metalness: 0.35,
+                    roughness: 0.35,
+                    clearcoat: 0.6,
+                    clearcoatRoughness: 0.2
+                });
 
                 const mesh = new THREE.Mesh(new THREE.BoxGeometry(bw, BRICK_H, BRICK_D), mat);
 
-                
+
                 const x = startX + c * (bw + 0.1) + bw / 2;
                 const y = GH - 4.0 - r * (BRICK_H + 0.1);
                 mesh.position.set(x, y, 0);
                 mesh.userData.bw = bw;
 
                 // ⭐ ADD EDGE OUTLINE HERE
-const edges = new THREE.EdgesGeometry(mesh.geometry);
-const line = new THREE.LineSegments(
-    edges,
-    new THREE.LineBasicMaterial({
-        color: 0xffffff,
-        transparent: true,
-        opacity: 0.15
-    })
-);
+                const edges = new THREE.EdgesGeometry(mesh.geometry);
+                const line = new THREE.LineSegments(
+                    edges,
+                    new THREE.LineBasicMaterial({
+                        color: 0xffffff,
+                        transparent: true,
+                        opacity: 0.15
+                    })
+                );
 
                 scene.add(mesh);
                 brickMeshes.push(mesh);
@@ -591,53 +591,7 @@ const line = new THREE.LineSegments(
         }
     }
 
-    function loadAdsterraBanner() {
-    // Desktop only check (using User Agent and Screen Width for safety)
-    const osKey = getOSKey();
-    if (osKey === "android" || osKey === "ios" || window.innerWidth < 1024) {
-        return;
-    }
 
-    const container = document.getElementById("adsterra-banner");
-    if (!container) return;
-
-    setTimeout(() => {
-        console.log("Loading Adsterra Banner...");
-
-        // Create an iframe to safely isolate the ad execution
-        const iframe = document.createElement('iframe');
-        iframe.style.width = "160px";
-        iframe.style.height = "600px";
-        iframe.style.border = "none";
-        iframe.style.overflow = "hidden";
-        iframe.scrolling = "no";
-
-        container.appendChild(iframe);
-
-        const doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
-            <html>
-            <body style="margin:0;padding:0;background:transparent;">
-                <script>
-                    atOptions = {
-                        'key' : '34488dc997487ff336bf5de366c86553',
-                        'format' : 'iframe',
-                        'height' : 600,
-                        'width' : 160,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-            </body>
-            </html>
-        `);
-        doc.close();
-
-
-
-    }, 100);
-}
 
     // ========== GAME LOGIC ==========
     function startGame() {
@@ -652,9 +606,7 @@ const line = new THREE.LineSegments(
         mainMenuEl.classList.add('hidden');
         gameOverEl.classList.add('hidden');
 
-         if (!window.DEV_MODE) {
-        loadAdsterraBanner();
-    }
+
 
         buildPaddleMesh();
         buildBricks();
@@ -974,16 +926,16 @@ const line = new THREE.LineSegments(
     // ========== INIT ==========
     window.addEventListener('load', function () {
 
-         gameStartTime = Date.now();   // ⏱ start timer
-         
+        gameStartTime = Date.now();   // ⏱ start timer
+
         initScene();
-       // updateHUD();
+        // updateHUD();
         // Animate the background while on main menu
         //animate();
 
-         if (!supabaseClient) {
-         initSupabase();
-    }
+        if (!supabaseClient) {
+            initSupabase();
+        }
 
         startGame();   // 👈 auto start
     });
