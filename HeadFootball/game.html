@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Head Football - PlayMixGames</title>
+
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+
+     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+</head>
+
+<body>
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Court...</p>
+    </div>
+
+    <a href="../index.html" class="back-btn"
+        style="position: absolute; top: 15px; left: 15px; z-index: 10000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">←
+        Back</a>
+
+    <div class="score-board"
+        style="position: absolute; top: 15px; left: 50%; transform: translateX(-50%); z-index: 10000;">
+        <span class="score-p1" id="score-p1">0</span>
+        <span style="color: white; opacity: 0.5;">:</span>
+        <span class="score-p2" id="score-p2">0</span>
+    </div>
+
+    <!-- Canvas -->
+    <canvas id="game-canvas"></canvas>
+
+    <!-- Overlay Messages -->
+    <div id="match-message" class="hidden">GOAL!</div>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls">
+        <div class="d-pad">
+            <div class="ctrl-btn" id="btn-left">◀</div>
+            <div class="ctrl-btn" id="btn-right">▶</div>
+        </div>
+        <div class="action-pad">
+            <div class="ctrl-btn" id="btn-kick">⚽</div>
+            <div class="ctrl-btn" id="btn-jump">▲</div>
+        </div>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="start-screen" class="overlay-screen">
+        <div class="screen-content">
+            <h1 style="color: #4facfe; font-size: 2.5rem; margin-top: 0; margin-bottom: 20px;">Head Football</h1>
+            <p style="color: #ccc; margin-bottom: 30px;">
+                First to 5 Goals Wins!<br>
+                <span style="font-size: 0.9rem; opacity: 0.7;">Desktop: Arrows to move, Up to jump, Space to
+                    kick<br>Mobile: Use on-screen buttons</span>
+            </p>
+
+            <button id="start-btn" class="game-btn">
+                ▶ PLAY MATCH
+            </button>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="overlay-screen hidden">
+        <div class="screen-content">
+            <h1 id="winner-text" style="color: #4facfe; font-size: 2.2rem; margin-bottom: 10px;">MATCH OVER</h1>
+            <div id="final-score" style="font-size: 3rem; margin-bottom: 20px; font-weight: bold; color: white;">0 - 0
+            </div>
+
+            <button id="restart-btn" class="game-btn">
+                🔄 PLAY AGAIN
+            </button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+
+     <div id="adsterra-banner"></div>
+         <div id="bottom-ad"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (window.DEV_MODE) return;
+            setTimeout(function () {
+                const c = document.getElementById("bottom-ad"); if (!c) return; c.innerHTML = '<div id="banner-slot"></div>'; window.atOptions = { key: "de617c07128b585ef939154460e6858f", format: "iframe", height: 50, width: 320, params: {} }; const s = document.createElement("script"); s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"; document.getElementById("banner-slot").appendChild(s);
+            }, 100);
+        });
+    </script>
+</body>
+
+</html>
