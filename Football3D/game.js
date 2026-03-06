@@ -627,8 +627,8 @@ function setupGoalkeeper() {
 }
 
 function setupTrajectory() {
-    const dotGeo = new THREE.SphereGeometry(0.15, 8, 8);
-    const dotMat = new THREE.MeshBasicMaterial({ color: 0xffdd00, transparent: true, opacity: 0.8 });
+    const dotGeo = new THREE.SphereGeometry(0.12, 8, 8);
+    const dotMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.9 });
     for (let i = 0; i < NUM_DOTS; i++) {
         const dot = new THREE.Mesh(dotGeo, dotMat);
         dot.visible = false;
