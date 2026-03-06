@@ -131,8 +131,35 @@
 
     <!-- Featured Games Section - MOVED TO TOP -->
     <section class="game-grid">
-        <h2 class="section-title" style="margin-bottom: 30px;">Play Now - Choose Your Popular Game</h2>
-        <div class="grid">
+        <div class="grid-header"
+            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 20px;">
+            <h2 class="section-title" style="margin-bottom: 0;">Play Now - Choose Your Popular Game</h2>
+
+            <div class="search-container"
+                style="display: flex; align-items: center; gap: 15px; flex-grow: 1; justify-content: flex-end;">
+                <div class="game-count"
+                    style="font-size: 0.9rem; color: var(--pmg-secondary); font-weight: 600; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                    <span id="total-games-count">0</span> Games Available
+                </div>
+                <div style="position: relative; width: 300px; max-width: 100%;">
+                    <input type="text" id="game-search" placeholder="Search games..." style="
+                        width: 100%;
+                        background: rgba(255, 255, 255, 0.08);
+                        border: 1px solid rgba(255, 255, 255, 0.15);
+                        padding: 10px 15px 10px 40px;
+                        border-radius: 12px;
+                        color: white;
+                        font-size: 0.95rem;
+                        outline: none;
+                        transition: all 0.3s;
+                    " onfocus="this.style.borderColor='var(--pmg-accent)'; this.style.boxShadow='0 0 15px rgba(77, 121, 255, 0.3)';"
+                        onblur="this.style.borderColor='rgba(255, 255, 255, 0.15)'; this.style.boxShadow='none';">
+                    <span
+                        style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); opacity: 0.5;">🔍</span>
+                </div>
+            </div>
+        </div>
+        <div class="grid" id="main-game-grid">
             <!-- Stick Duel Battle -->
             <a href="StickDuel/index.html" class="game-card">
                 <div class="card-img" style="
@@ -575,6 +602,60 @@
             sessionStorage.setItem('hard-reloaded', 'true');
             setTimeout(() => window.location.reload(true), 1000);
         }
+    </script>
+    <script>
+        // Game Search and Count Implementation
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('game-search');
+            const gameGrid = document.getElementById('main-game-grid');
+            const countDisplay = document.getElementById('total-games-count');
+            const gameCards = gameGrid.querySelectorAll('.game-card');
+
+            // Initial Count
+            countDisplay.innerText = gameCards.length;
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                gameCards.forEach(card => {
+                    const title = card.querySelector('h3').innerText.toLowerCase();
+                    const desc = card.querySelector('p').innerText.toLowerCase();
+
+                    if (title.includes(query) || desc.includes(query)) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                countDisplay.innerText = visibleCount;
+
+                // Show "No Results" message if needed
+                let emptyMsg = document.getElementById('search-empty-msg');
+                if (visibleCount === 0) {
+                    if (!emptyMsg) {
+                        emptyMsg = document.createElement('div');
+                        emptyMsg.id = 'search-empty-msg';
+                        emptyMsg.style.gridColumn = '1 / -1';
+                        emptyMsg.style.textAlign = 'center';
+                        emptyMsg.style.padding = '100px 20px';
+                        emptyMsg.style.color = 'var(--pmg-secondary)';
+                        emptyMsg.innerHTML = `
+                            <div style="font-size: 3rem; margin-bottom: 20px;">🔍</div>
+                            <h3>No games found for "${query}"</h3>
+                            <p>Try searching for something else!</p>
+                        `;
+                        gameGrid.appendChild(emptyMsg);
+                    } else {
+                        emptyMsg.querySelector('h3').innerText = `No games found for "${query}"`;
+                    }
+                } else if (emptyMsg) {
+                    emptyMsg.remove();
+                }
+            });
+        });
     </script>
     <script>
         window.addEventListener('load', function () {
