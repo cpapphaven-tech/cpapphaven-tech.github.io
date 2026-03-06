@@ -24,7 +24,11 @@ let gameStarted = false;
 let goalkeeperSpeed = 0.5; // Slower start
 let touchStart = { x: 0, y: 0 };
 let touchEnd = { x: 0, y: 0 };
+let touchCurrent = { x: 0, y: 0 };
+let isDragging = false;
 let startTime = 0;
+let trajectoryDots = [];
+const NUM_DOTS = 18;
 
 let gameStartTime = null;
 let durationSent = false;
@@ -273,6 +277,7 @@ function init() {
     setupGoal();
     setupBall();
     setupGoalkeeper();
+    setupTrajectory();
 
     // 4. Supabase
     if (window.supabase) {
@@ -319,10 +324,22 @@ function init() {
     canvas.addEventListener('touchstart', (e) => {
         touchStart.x = e.touches[0].clientX;
         touchStart.y = e.touches[0].clientY;
+        touchCurrent.x = touchStart.x;
+        touchCurrent.y = touchStart.y;
+        isDragging = true;
         startTime = Date.now();
     });
 
+    canvas.addEventListener('touchmove', (e) => {
+        if (!isDragging || !gameStarted || isGoalScored || isGameOver) return;
+        touchCurrent.x = e.touches[0].clientX;
+        touchCurrent.y = e.touches[0].clientY;
+        updateTrajectory();
+    });
+
     canvas.addEventListener('touchend', (e) => {
+        isDragging = false;
+        hideTrajectory();
         touchEnd.x = e.changedTouches[0].clientX;
         touchEnd.y = e.changedTouches[0].clientY;
         if (gameStarted && !isGoalScored && !isGameOver) {
@@ -333,10 +350,22 @@ function init() {
     canvas.addEventListener('mousedown', (e) => {
         touchStart.x = e.clientX;
         touchStart.y = e.clientY;
+        touchCurrent.x = touchStart.x;
+        touchCurrent.y = touchStart.y;
+        isDragging = true;
         startTime = Date.now();
     });
 
+    canvas.addEventListener('mousemove', (e) => {
+        if (!isDragging || !gameStarted || isGoalScored || isGameOver) return;
+        touchCurrent.x = e.clientX;
+        touchCurrent.y = e.clientY;
+        updateTrajectory();
+    });
+
     canvas.addEventListener('mouseup', (e) => {
+        isDragging = false;
+        hideTrajectory();
         touchEnd.x = e.clientX;
         touchEnd.y = e.clientY;
         if (gameStarted && !isGoalScored && !isGameOver) {
@@ -595,6 +624,72 @@ function setupGoalkeeper() {
     });
     goalkeeperBody.position.set(0, 1.0, -PITCH_DEPTH / 2 + 3);
     world.addBody(goalkeeperBody);
+}
+
+function setupTrajectory() {
+    const dotGeo = new THREE.SphereGeometry(0.15, 8, 8);
+    const dotMat = new THREE.MeshBasicMaterial({ color: 0xffdd00, transparent: true, opacity: 0.8 });
+    for (let i = 0; i < NUM_DOTS; i++) {
+        const dot = new THREE.Mesh(dotGeo, dotMat);
+        dot.visible = false;
+        scene.add(dot);
+        trajectoryDots.push(dot);
+    }
+}
+
+function updateTrajectory() {
+    const dx = touchCurrent.x - touchStart.x;
+    const dy = touchCurrent.y - touchStart.y;
+
+    if (dy >= -10) {
+        hideTrajectory();
+        return;
+    }
+
+    const swipePower = Math.min(Math.abs(dy), 160);
+    const forceY = swipePower * 0.035 + 1.2;
+    const forceZ = -swipePower * 0.28;
+    const forceX = dx * 0.03;
+
+    const aimAssist = -ballBody.position.x * 0.15;
+    const finalForceX = forceX + aimAssist;
+
+    const v0x = finalForceX;
+    const v0y = forceY;
+    const v0z = forceZ;
+    const gravity = -9.82;
+
+    for (let i = 0; i < NUM_DOTS; i++) {
+        const dot = trajectoryDots[i];
+
+        // Compute predicted position (0.04s per step)
+        const t = (i + 1) * 0.04;
+
+        // Apply a small drag compensation factor to match cannon.js realistic trajectory 
+        const dragFactor = (1 - (0.05 * t));
+
+        const px = ballBody.position.x + (v0x * t * dragFactor);
+        const py = ballBody.position.y + (v0y * t + 0.5 * gravity * t * t);
+        const pz = ballBody.position.z + (v0z * t * dragFactor);
+
+        // Ground collision for trajectory dots (so they don't go heavily under ground)
+        if (py < 0) {
+            dot.visible = false;
+        } else {
+            dot.position.set(px, py, pz);
+            dot.visible = true;
+        }
+
+        // Scale down the dots as they get further
+        const scale = 1 - (i / NUM_DOTS) * 0.5;
+        dot.scale.set(scale, scale, scale);
+    }
+}
+
+function hideTrajectory() {
+    for (let i = 0; i < NUM_DOTS; i++) {
+        if (trajectoryDots[i]) trajectoryDots[i].visible = false;
+    }
 }
 
 function resetBall() {
