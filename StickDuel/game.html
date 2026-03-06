@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Stickman: Neon Warriors - PlayMixGames</title>
+
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Battlefield...</p>
+    </div>
+
+    <a href="../index.html" class="back-btn">← Back</a>
+
+    <div id="game-wrapper">
+        <!-- HUD -->
+        <div id="hud">
+            <div class="hud-left">
+                <div class="hp-bar-container">
+                    <div id="hp-p1" class="hp-fill"></div>
+                    <div class="hp-label">P1</div>
+                </div>
+                <div class="ammo-info">
+                    <span class="icon">🔫</span> <span id="ammo-p1">13</span>
+                </div>
+            </div>
+
+            <div class="hud-center">
+                <div id="match-timer">00:00</div>
+                <div class="level-badge">LEVEL <span id="current-level-display">1</span></div>
+            </div>
+
+            <div class="hud-right">
+                <div class="hp-bar-container">
+                    <div id="hp-p2" class="hp-fill"></div>
+                    <div class="hp-label">AI</div>
+                </div>
+                <div class="ammo-info">
+                    <span id="ammo-p2">∞</span> <span class="icon">🤖</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Overlay Messages -->
+        <div id="match-message" class="hidden">KNOCKOUT!</div>
+
+        <!-- Mobile Controls -->
+        <div id="mobile-controls">
+            <div class="d-pad">
+                <div class="ctrl-btn" id="btn-left">◀</div>
+                <div class="ctrl-btn" id="btn-right">▶</div>
+            </div>
+            <div class="action-pad">
+                <div class="ctrl-btn" id="btn-fire">🔥</div>
+                <div class="ctrl-btn" id="btn-jump">▲</div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-content">
+                <h1 class="neon-text">NEON WARRIORS</h1>
+                <p class="neon-subtitle">STRIKE FROM THE SHADOWS</p>
+
+                <div class="instructions">
+                    <p>Desktop: Arrows to move, Up to jump, F or Shift to fire</p>
+                    <p>Mobile: Touch buttons to fight</p>
+                </div>
+
+                <button id="start-btn" class="game-btn">▶ INITIATE DUEL</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 id="winner-text">VICTORY</h1>
+                <div id="final-stats">
+                    <p>Level <span id="stat-level">1</span> Completed!</p>
+                </div>
+
+                <div class="button-group" style="display: flex; gap: 15px; flex-direction: column;">
+                    <button id="next-level-btn" class="game-btn">🚀 NEXT SECTOR</button>
+                    <button id="restart-btn" class="game-btn"
+                        style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">🔄 REBOOT
+                        MATCH</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orientation Hint -->
+        <div id="orientation-hint" class="hidden">
+            <div class="hint-content">
+                <div class="rotate-icon">📱</div>
+                <p>Rotate for Battle Mode</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background HDR Canvas (Subtle glow/particles) -->
+    <canvas id="hdr-canvas" style="position:fixed; inset:0; z-index:-1; pointer-events:none;"></canvas>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
+            }
+        });
+    </script>
+</body>
+
+</html>

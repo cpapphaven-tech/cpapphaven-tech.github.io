@@ -662,6 +662,10 @@ function resetMatch() {
 
     initSupabase();
 
+      if (gameStartTime == null) {
+        gameStartTime = Date.now();   // ⏱ start timer
+    }
+
     score1 = 0;
     score2 = 0;
     p1ScoreEl.innerText = score1;

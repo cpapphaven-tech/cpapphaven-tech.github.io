@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Stickman Neon Warriors - Online Zero-G Fighting Game | PlayMix Games</title>
+    <meta name="description"
+        content="Play Stickman Neon Warriors online for free. Epic Zero-G flight combat with neon-glowing warriors and futuristic weapons. Defeat the Elite AI in this cyber-pyramid duel.">
+    <meta name="keywords"
+        content="stickman neon warriors, stickman fighting, online duel game, 1v1 combat, zero-g game">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/StickDuel/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/StickDuel/index.html" />
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #050510;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #050510;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #a855f7;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(168, 85, 247, 0.1);
+            border-top-color: #a855f7;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pmgPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes pmgFill {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 95%;
+            }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+    </style>
+
+    <meta property="og:title" content="Stickman Neon Warriors - Online Fighting Game | PlayMix Games">
+    <meta property="og:description"
+        content="Play Stickman Neon Warriors online for free. Epic Zero-G combat with futuristic stickmen.">
+    <meta property="og:url" content="https://playmixgames.in/StickDuel/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/StickDuel/index.html" />
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Battlefield...</p>
+    </div>
+
+
+    <iframe id="game-frame" allow="autoplay; fullscreen; gamepad"></iframe>
+
+    <section class="seo-content"
+        style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #a855f7;">Features of Stickman Neon Warriors</h2>
+        <ul style="padding-left: 20px;">
+            <li>Physics-based stickman combat</li>
+            <li>Advanced AI for challenging 1v1 duels</li>
+            <li>Neon-drenched cyber-pyramid atmosphere</li>
+            <li>Hoverboards and multiple platform layouts</li>
+            <li>Optimized for both desktop and mobile touch</li>
+        </ul>
+
+        <h2 style="color: #a855f7;">How to Play</h2>
+        <p>Control your stickman warrior and aim for the opponent's weak spots. Use the platforms to your advantage and
+            avoid the lava at all costs!</p>
+        <ul style="padding-left: 20px;">
+            <li><strong>Desktop:</strong> Arrows to move, Up to jump, F or Shift to shoot.</li>
+            <li><strong>Mobile:</strong> Use on-screen D-pad and action buttons.</li>
+        </ul>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>
