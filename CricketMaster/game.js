@@ -48,6 +48,213 @@ let particles = [];
 let ballTrail = [];
 
 // --- Classes ---
+let gameStartTime = null;
+let durationSent = false;
+let gameStartedFlag = false;
+
+// --- Supabase Config ---
+const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
+const supabaseKey = 'sb_publishable_XeggJuFyPHVixAsnuI6Udw_rv2Wa4KM';
+let supabaseClient = null;
+
+// --- Session Tracking ---
+let sessionId = null;
+let sessionRowId = null;
+
+
+// Start session on load
+async function initSupabase() {
+    if (!window.supabase) {
+        setTimeout(initSupabase, 500);
+        return;
+    }
+
+    if (!supabaseClient) {
+        const { createClient } = window.supabase;
+        supabaseClient = createClient(supabaseUrl, supabaseKey);
+        console.log("✅ Supabase ready");
+    }
+
+
+    await startGameSession();
+    await markSessionStarted();
+}
+
+
+
+
+function generateSessionId() {
+    return (
+        Date.now().toString(36) +
+        Math.random().toString(36).substr(2, 8)
+    );
+}
+
+function getOSKey() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "ios";
+    if (/Win/i.test(ua)) return "windows";
+    if (/Mac/i.test(ua)) return "mac";
+    if (/Linux/i.test(ua)) return "linux";
+    return "unknown";
+}
+
+function getOS() {
+    const ua = navigator.userAgent;
+    if (/android/i.test(ua)) return "Android";
+    if (/iPhone|iPad|iPod/i.test(ua)) return "iOS";
+    if (/Win/i.test(ua)) return "Windows";
+    if (/Mac/i.test(ua)) return "Mac";
+    if (/Linux/i.test(ua)) return "Linux";
+    return "Unknown";
+}
+
+function getBrowser() {
+    const ua = navigator.userAgent;
+
+    if (/Edg/i.test(ua)) return "Edge";
+    if (/OPR|Opera/i.test(ua)) return "Opera";
+    if (/Chrome/i.test(ua) && !/Edg|OPR/i.test(ua)) return "Chrome";
+    if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) return "Safari";
+    if (/Firefox/i.test(ua)) return "Firefox";
+    if (/MSIE|Trident/i.test(ua)) return "Internet Explorer";
+
+    return "Unknown";
+}
+
+
+function getPlacementId() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('utm_content') ||
+        urlParams.get('placementid') ||
+        "unknown";
+}
+
+function sendDurationOnExit(reason) {
+    if (gameStartTime && !durationSent && window.trackGameEvent) {
+        const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+        const placementId = getPlacementId();
+        window.trackGameEvent(`game_duration_cricketmaster_${seconds}_${reason}_${getBrowser()}`, {
+            seconds,
+            end_reason: reason,
+            os: getOS(),
+            placement_id: placementId
+        });
+        // Update session in Supabase
+        updateGameSession({
+            duration_seconds: seconds,
+            bounced: !gameStartedFlag,
+            placement_id: placementId,
+            end_reason: reason
+        });
+        durationSent = true;
+    }
+}
+
+document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+
+
+        sendDurationOnExit("background_cricketmaster");
+    }
+});
+
+window.addEventListener("beforeunload", () => {
+
+    sendDurationOnExit("tab_close_headfootball");
+
+    if (!gameStartedFlag && window.trackGameEvent) {
+        const osKey = getOSKey();
+        const placementId = getPlacementId();
+        window.trackGameEvent(`exit_before_game_cricketmaster_${osKey}`, {
+            os: getOS(),
+            placement_id: placementId
+        });
+        // Update session as bounced
+        updateGameSession({
+            bounced: true,
+            placement_id: placementId,
+            end_reason: "exit_before_game"
+        });
+    }
+});
+
+async function getCountry() {
+    try {
+        // Direct fetch to ipapi.co which is CORS friendly
+        const response = await fetch("https://ipapi.co/json/");
+        if (!response.ok) throw new Error("Network response was not ok");
+        const data = await response.json();
+        return data.country_name || data.country || "Unknown";
+    } catch (error) {
+        console.warn("Primary country detection failed, trying fallback...", error);
+        try {
+            // Fallback to Cloudflare's trace which is extremely reliable
+            const cfResp = await fetch("https://www.cloudflare.com/cdn-cgi/trace");
+            const cfText = await cfResp.text();
+            const locLine = cfText.split("\n").find(line => line.startsWith("loc="));
+            return locLine ? locLine.split("=")[1] : "Unknown";
+        } catch (e) {
+            return "Unknown";
+        }
+    }
+}
+
+// --- Supabase Session Tracking Functions ---
+async function startGameSession() {
+    if (!supabaseClient) return;
+
+    console.log("✅ startGameSession");
+
+    sessionId = generateSessionId();
+    const placementId = getPlacementId();
+    const os = getOS();
+    const browser = getBrowser();
+    const userAgent = navigator.userAgent;
+    const gameSlug = "cricketmaster";
+    const country = await getCountry();
+    // Country detection can be added if needed
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .insert([
+                {
+                    session_id: sessionId,
+                    game_slug: gameSlug,
+                    placement_id: placementId,
+                    user_agent: userAgent,
+                    os: os,
+                    browser: browser,
+                    country: country,
+                    started_game: false,
+                    bounced: false
+                }
+            ]);
+    } catch (e) { }
+}
+
+async function markSessionStarted() {
+    if (!supabaseClient || !sessionId) return;
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .update({ started_game: true })
+            .eq('session_id', sessionId);
+    } catch (e) { }
+}
+
+async function updateGameSession(fields) {
+    if (!supabaseClient || !sessionId) return;
+    try {
+        await supabaseClient
+            .from('game_sessions')
+            .update(fields)
+            .eq('session_id', sessionId);
+    } catch (e) { }
+}
+
+
 
 class Ball {
     constructor(x, y, vx, vy) {
@@ -483,6 +690,13 @@ function createSparks(x, y, color) {
 }
 
 function startGame() {
+
+     initSupabase();
+
+      if (gameStartTime == null) {
+        gameStartTime = Date.now();   // ⏱ start timer
+    }
+    
     score = 0; wickets = 0; ballsFaced = 0;
     gameState = "PLAY";
     if (startScreen) startScreen.classList.add("hidden");
@@ -499,6 +713,7 @@ if (nextMatchBtn) nextMatchBtn.onclick = () => { currentLevel++; initLevel(); st
 
 window.addEventListener("resize", resize);
 resize();
+startGame();
 gameLoop();
 
 function gameLoop() {
