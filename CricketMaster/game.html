@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Cricket Master - Batting Challenge</title>
+    <title>Cricket Master - Online World Cup Game | PlayMix Games</title>
+    <meta name="description"
+        content="Play Cricket Master online for free. Experience the thrill of the World Cup in this 2D physics-based batting challenge. Master your timing and hit sixes!">
+    <meta name="keywords" content="cricket master, online cricket game, cricket world cup, batting game, 2d cricket">
 
     <!-- Loaders & Analytics -->
     <script type="module" src="../analytics.js"></script>
@@ -17,6 +20,8 @@
     <link rel="stylesheet" href="../loader.css">
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- SEO visibility managed by style.css -->
 </head>
 
 <body class="pmg-sidebar-start-closed">
@@ -111,25 +116,40 @@
                 </div>
             </div>
         </div>
-    </div>
+        <!-- SEO Hidden Content -->
+        <section class="seo-content" style="display: none;">
+            <h2>About Cricket Master</h2>
+            <p>Step onto the pitch and face elite bowlers in Cricket Master! This fast-paced batting simulator
+                challenges your timing and shot selection. Can you hit the target and lead your team to victory in the
+                World Cup finale?</p>
 
-    <script src="game.js"></script>
-    <script>
-        window.addEventListener('load', function () {
-            var loader = document.getElementById('pmg-loader');
-            if (loader) {
-                var fill = loader.querySelector('.pmg-bar-fill');
-                if (fill) fill.style.width = '100%';
-                setTimeout(function () { loader.classList.add('hidden'); }, 300);
-            }
-        });
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Observation</strong>: Watch the bowler closely as they release the ball.</li>
+                <li><strong>Timing</strong>: Click or tap when the ball is in your hitting zone.</li>
+                <li><strong>Placement</strong>: Different shot timings will direct the ball to different parts of the
+                    field.</li>
+                <li><strong>Scoring</strong>: Aim for the high-run zones to chase down the target quickly.</li>
+            </ul>
+        </section>
 
-        document.addEventListener("DOMContentLoaded", function () {
-            if (typeof initBottomAndSideAds === "function") {
-                initBottomAndSideAds();
-            }
-        });
-    </script>
+        <script src="game.js"></script>
+        <script>
+            window.addEventListener('load', function () {
+                var loader = document.getElementById('pmg-loader');
+                if (loader) {
+                    var fill = loader.querySelector('.pmg-bar-fill');
+                    if (fill) fill.style.width = '100%';
+                    setTimeout(function () { loader.classList.add('hidden'); }, 300);
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                if (typeof initBottomAndSideAds === "function") {
+                    initBottomAndSideAds();
+                }
+            });
+        </script>
 </body>
 
 </html>

@@ -12,17 +12,17 @@ html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     background: #000;
     font-family: 'Outfit', sans-serif;
-    touch-action: none;
 }
 
 #game-wrapper {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -360,4 +360,48 @@ html {
     background: rgba(0, 0, 0, 0.5);
     padding: 5px 15px;
     border-radius: 5px;
+}
+
+/* SEO Content Area Styling */
+.seo-content {
+    background: #0f111a;
+    color: #a0a0c0;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.seo-content h2,
+.seo-content h3 {
+    color: #fff;
+    font-family: 'Orbitron';
+    margin-top: 40px;
+    border-left: 4px solid var(--pmg-accent);
+    padding-left: 20px;
+}
+
+.seo-content p {
+    margin-bottom: 20px;
+}
+
+.seo-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.seo-content li {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 2px solid rgba(77, 121, 255, 0.3);
+}
+
+.seo-content li strong {
+    color: var(--pmg-accent);
+    display: block;
+    font-family: 'Orbitron';
+    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
