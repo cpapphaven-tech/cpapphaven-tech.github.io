@@ -150,7 +150,7 @@
     width: 64px;
     height: 64px;
     border-radius: 12px;
-    object-fit: cover;
+    object-fit: contain;
     background: var(--pmg-card);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
@@ -336,8 +336,9 @@ body.portal-index {
 .portal-index .card-img {
     aspect-ratio: 1/1;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .portal-index .card-info {

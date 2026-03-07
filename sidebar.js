@@ -21,6 +21,8 @@
     }
 
     const games = [
+        { name: "⚽ Football 3D", path: "Football3D/index.html", icon: "img/football200.png", tip: "Sports" },
+        { name: "🧬 Helix Bounce", path: "HelixBounce/index.html", icon: "img/helix200.png", tip: "Arcade" },
         { name: "🏓 Table Tennis", path: "TableTennis/index.html", icon: "assets/table_tennis_icon.png", tip: "Sports" },
         { name: "⚔️ Stickman Warriors", path: "StickDuel/index.html", icon: "assets/stckduels.png", tip: "Action" },
         { name: "🏏 Cricket Master", path: "CricketMaster/game.html", icon: "assets/cricket_master_icon.png", tip: "Sports" },
@@ -29,9 +31,7 @@
         { name: "🧱 Brick Breaker", path: "BrickBreaker/game.html", icon: "img/brickbreaker200.png", tip: "Classic" },
         { name: "🔢 Merge Numbers", path: "MergeNumbers/game.html", icon: "img/mergenumber200.png", tip: "2248" },
         { name: "🧩 Block Puzzle Dash", path: "BlockPuzzle/game.html", icon: "img/blockpuzzle200.png", tip: "Puzzle" },
-        { name: "⚽ Football 3D", path: "Football3D/index.html", icon: "img/football200.png", tip: "Sports" },
         { name: "🏀 Basketball 3D", path: "Basketball3D/index.html", icon: "assets/basketball3d.png", tip: "Sports" },
-        { name: "🧬 Helix Bounce", path: "HelixBounce/index.html", icon: "img/helix200.png", tip: "Arcade" },
         { name: "🎨 Color Match 3D", path: "ColorMatch/index.html", icon: "assets/colormatch.png", tip: "Reaction" },
         { name: "🍣 Sushi Match 3D", path: "SushiMatch/index.html", icon: "assets/sushimatch3d.png", tip: "Memory" },
         { name: "🍔 Burger Stack 3D", path: "BurgerStack/index.html", icon: "assets/burgerstack.png", tip: "Physics" },
