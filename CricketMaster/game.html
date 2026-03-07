@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Cricket Master - Batting Challenge</title>
+
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Entering the Stadium...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <div id="game-wrapper">
+        <header id="game-header">
+
+
+            <div class="hud-top-controls">
+                <button class="icon-btn pause-btn">⏸</button>
+                <button class="icon-btn sound-btn">🔊</button>
+            </div>
+        </header>
+
+        <!-- Stadium Canvas -->
+        <div id="stadium-container" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+            <canvas id="game-canvas"></canvas>
+            <canvas id="hdr-canvas"
+                style="position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: 0.4;"></canvas>
+
+            <div class="broadcast-banner">
+                <div class="team-banner">
+                    <div class="team-name">CRICKET</div>
+                    <div class="vs-tag">MASTER</div>
+                    <div class="team-name">WORLD CUP</div>
+                </div>
+                <div class="live-scoreboard">
+                    <div class="live-score">SCORE: <span id="current-score-live">0/0</span></div>
+                    <div class="live-balls">BALLS: <span id="balls-left-live">30</span></div>
+                    <div class="live-target">TARGET: <span id="target-live">10</span></div>
+                </div>
+            </div>
+
+            <!-- Controls (Transparent overlays) -->
+            <div id="action-controls"
+                style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40%; z-index: 20; display: flex; pointer-events: none;">
+                <div id="btn-left" style="flex: 1; pointer-events: auto; cursor: pointer;"></div>
+                <div id="btn-right" style="flex: 1; pointer-events: auto; cursor: pointer;"></div>
+            </div>
+        </div>
+
+        <!-- Feedback Messages -->
+        <div id="match-message" class="hidden">OUT!</div>
+
+        <!-- Orientation Hint -->
+        <div id="orientation-hint" class="hidden">
+            <div class="hint-content">
+                <div class="rotate-icon">📱</div>
+                <p>Rotate for Better View</p>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn">← Back</a>
+
+        <!-- Start Overlay -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-content">
+                <h1 class="neon-text">CRICKET MASTER</h1>
+                <p class="neon-subtitle">PROFESSIONAL WORLD CUP DUEL</p>
+                <div class="instructions">
+                    <p>🎯 Watch the ball and choose your side.</p>
+                    <p>◀ Use LEFT button for balls targeting your body.</p>
+                    <p>▶ Use RIGHT button for balls away from your body.</p>
+                </div>
+                <button id="start-btn" class="game-btn">▶ INITIATE MATCH</button>
+            </div>
+        </div>
+
+        <!-- Level/Game Over Screen -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 id="winner-text">VICTORY</h1>
+                <div id="final-stats">
+                    <p>Final Score: <span id="stat-score">0/0</span></p>
+                    <p id="stat-result"></p>
+                </div>
+                <div class="button-group" style="display: flex; gap: 15px; flex-direction: column;">
+                    <button id="next-match-btn" class="game-btn">🚀 NEXT MATCH</button>
+                    <button id="restart-btn" class="game-btn"
+                        style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">🔄 REBOOT
+                        MATCH</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
+            }
+        });
+    </script>
+</body>
+
+</html>

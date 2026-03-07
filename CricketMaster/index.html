@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Cricket Master - Online World Cup Game | PlayMix Games</title>
+    <meta name="description"
+        content="Play Cricket Master online for free. Experience the thrill of the World Cup in this 2D physics-based batting challenge. Master your timing and hit sixes!">
+    <meta name="keywords" content="cricket master, online cricket game, cricket world cup, batting game, 2d cricket">
+
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+        .seo-content {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .seo-content {
+                display: block;
+                max-width: 800px;
+                margin: 40px auto;
+                padding: 20px;
+                color: #ccc;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Entering the Stadium...</p>
+    </div>
+
+    <!-- Navigation Header -->
+    <header
+        style="position: fixed; top: 0; width: 100%; height: 80px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 0 5%; background: rgba(15, 17, 26, 0.85); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+        <a href="../index.html"
+            style="font-size: 1.6rem; font-weight: 900; letter-spacing: 2px; color: #4d79ff; text-decoration: none;">PlayMixGames</a>
+        <nav>
+            <ul style="display: flex; list-style: none;">
+                <li><a href="../index.html"
+                        style="color: #a0a0c0; text-decoration: none; font-weight: 600; margin-left: 30px;">More
+                        Games</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="game-page"
+        style="padding-top: 100px; display: flex; flex-direction: column; align-items: center; min-height: 100vh;">
+        <div class="game-container"
+            style="position: relative; width: 90%; max-width: 1000px; aspect-ratio: 16/9; background: #1a1d2e; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.1); overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);">
+            <div class="game-poster"
+                style="position: absolute; inset: 0; background: linear-gradient(135deg, #1e3c72, #2a5298); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white;">
+                <div style="font-size: 6rem; margin-bottom: 20px;">🏏</div>
+                <h1
+                    style="font-size: 3rem; font-weight: 950; margin-bottom: 10px; letter-spacing: -1px; text-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                    CRICKET MASTER</h1>
+                <p style="font-size: 1.2rem; color: #a0a0c0; margin-bottom: 40px;">Professional Batting Challenge</p>
+                <a href="game.html" class="play-btn"
+                    style="padding: 18px 60px; background: #4d79ff; color: white; text-decoration: none; border-radius: 40px; font-weight: 900; font-size: 1.5rem; box-shadow: 0 10px 30px rgba(77, 121, 255, 0.4); transition: transform 0.2s;">PLAY
+                    NOW</a>
+            </div>
+        </div>
+
+        <section class="seo-content">
+            <h2 style="color: #4d79ff;">About Cricket Master</h2>
+            <p>Step onto the pitch and face elite bowlers in Cricket Master! This fast-paced batting simulator
+                challenges your timing and shot selection. Can you hit the target and lead your team to victory in the
+                World Cup finale?</p>
+
+            <h3 style="color: #4d79ff; margin-top: 30px;">How to Play</h3>
+            <ul>
+                <li><strong>Observation</strong>: Watch the bowler closely as they release the ball.</li>
+                <li><strong>Timing</strong>: Click or tap when the ball is in your hitting zone.</li>
+                <li><strong>Placement</strong>: Different shot timings will direct the ball to different parts of the
+                    field.</li>
+                <li><strong>Scoring</strong>: Aim for the 4x and 6x zones to chase down the target quickly.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof initBottomAndSideAds === "function") {
+                initBottomAndSideAds();
+            }
+        });
+    </script>
+</body>
+
+</html>
