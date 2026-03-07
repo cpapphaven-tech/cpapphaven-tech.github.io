@@ -201,6 +201,12 @@
         display: none !important;
     }
 
+    /* Force visibility if 'pmg-sidebar-mobile-enable' exists on body */
+    body.pmg-sidebar-mobile-enable .sidebar-container,
+    body.pmg-sidebar-mobile-enable .sidebar-toggle {
+        display: flex !important;
+    }
+
     /* Reset Body Shifts on Mobile */
     body.pmg-sidebar-open {
         padding-left: 0 !important;

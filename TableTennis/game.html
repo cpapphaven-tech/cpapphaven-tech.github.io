@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Table Tennis World Tour</title>
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Setting Up The Table...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <div id="game-wrapper">
+        <!-- HUD -->
+        <div id="game-hud">
+            <div id="hud-left">
+                <div class="player-label">🙋 YOU</div>
+                <div id="score-player" class="score-display">0</div>
+                <div id="set-player" class="set-display">Sets: 0</div>
+            </div>
+            <div id="hud-center">
+                <div id="set-label">SET 1</div>
+                <div id="match-status">SERVE TO START</div>
+            </div>
+            <div id="hud-right">
+                <div class="player-label">🤖 AI</div>
+                <div id="score-ai" class="score-display">0</div>
+                <div id="set-ai" class="set-display">Sets: 0</div>
+            </div>
+        </div>
+
+        <!-- Main Canvas -->
+        <canvas id="game-canvas"></canvas>
+        <!-- HDR Layer Canvas -->
+        <canvas id="hdr-canvas" style="position:absolute;inset:0;pointer-events:none;z-index:5;"></canvas>
+
+        <!-- Control Buttons (Mobile) -->
+        <div id="mobile-controls">
+            <div id="ctrl-area">Drag paddle here</div>
+        </div>
+
+        <!-- Match Message Overlay -->
+        <div id="match-msg" class="hidden"></div>
+
+        <!-- Start / Game Over Overlay -->
+        <div id="start-screen" class="overlay">
+            <div class="overlay-box">
+                <div class="overlay-icon">🏓</div>
+                <h1 class="overlay-title">TABLE TENNIS<br>WORLD TOUR</h1>
+                <p class="overlay-sub">Challenge the AI to a best-of-5 sets match!</p>
+                <div class="instructions">
+                    <p>🖱️ <strong>Desktop:</strong> Move mouse to control paddle</p>
+                    <p>👆 <strong>Mobile:</strong> Drag finger on lower half of screen</p>
+                    <p>🏓 First to 11 pts wins a set. Win 3 sets to win!</p>
+                </div>
+                <button id="start-btn" class="pmg-btn">▶ SERVE &amp; PLAY</button>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon" id="result-icon">🏆</div>
+                <h1 class="overlay-title" id="result-title">VICTORY!</h1>
+                <p class="overlay-sub" id="result-sub">You won the match!</p>
+                <div id="final-score-display"></div>
+                <button id="restart-btn" class="pmg-btn" style="margin-top:15px;">🔄 PLAY AGAIN</button>
+                <a href="../index.html" class="pmg-btn-outline"
+                    style="margin-top:10px;display:block;text-align:center;text-decoration:none;">🏠 More Games</a>
+            </div>
+        </div>
+
+        <a href="../index.html" class="back-btn">← Back</a>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof initBottomAndSideAds === "function") initBottomAndSideAds();
+        });
+    </script>
+</body>
+
+</html>

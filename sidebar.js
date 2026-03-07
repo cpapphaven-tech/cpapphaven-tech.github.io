@@ -21,6 +21,7 @@
     }
 
     const games = [
+        { name: "🏓 Table Tennis", path: "TableTennis/index.html", icon: "assets/table_tennis_icon.png", tip: "Sports" },
         { name: "⚔️ Stickman Warriors", path: "StickDuel/index.html", icon: "assets/stckduels.png", tip: "Action" },
         { name: "🏏 Cricket Master", path: "CricketMaster/game.html", icon: "assets/cricket_master_icon.png", tip: "Sports" },
         { name: "⚽ Head Football", path: "HeadFootball/index.html", icon: "assets/head_football_icon.png", tip: "Sports" },
@@ -98,14 +99,21 @@
         document.body.appendChild(container);
         document.body.appendChild(toggleBtn);
 
-        // Desktop Open by Default
+        // Open by Default Logic
         const isDesktop = window.innerWidth > 760;
+        const startOpen = document.body && document.body.classList.contains('pmg-sidebar-start-open');
         const startClosed = document.body && document.body.classList.contains('pmg-sidebar-start-closed');
-        if (isDesktop && !startClosed) {
+
+        if (startOpen || (isDesktop && !startClosed)) {
             container.classList.add('open');
             document.body.classList.add('pmg-sidebar-open');
             toggleBtn.style.left = '280px';
             toggleBtn.innerHTML = '←';
+
+            // If we are starting open on mobile, ensure CSS doesn't hide us
+            if (!isDesktop && startOpen) {
+                document.body.classList.add('pmg-sidebar-mobile-enable');
+            }
         }
 
         renderGames(games);
