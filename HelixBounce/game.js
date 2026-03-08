@@ -333,6 +333,11 @@ function startGame() {
 
     gameStartedFlag = true; // mark started
 
+    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+    }
+
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 

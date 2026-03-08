@@ -364,10 +364,9 @@ function startMatch() {
 
      initSupabase();
 
-      if (gameStartTime == null) {
-        gameStartTime = Date.now();   // ⏱ start timer
-    }
-    
+    gameStartTime = Date.now();   // ⏱ start timer
+
+
     scorePlayer = 0; scoreAi = 0;
     setsPlayer = 0; setsAi = 0;
     currentSet = 1;
@@ -893,6 +892,12 @@ function tick() {
 startBtn.addEventListener('click', startMatch);
 restartBtn.addEventListener('click', () => {
     gameOverScreen.classList.add('hidden');
+
+    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+    }
+
     startMatch();
 });
 

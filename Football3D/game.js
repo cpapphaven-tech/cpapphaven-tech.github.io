@@ -835,6 +835,12 @@ function showChallengeMessage() {
 }
 
 function restartGame() {
+
+    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+    }
+
     isGameOver = false;
     gameOverMenu.classList.add('hidden');
 

@@ -714,6 +714,12 @@ startBtn.onclick = () => {
 };
 
 restartBtn.onclick = () => {
+
+    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+    }
+
     initAudio();
     winScreen.classList.add('hidden');
     resetPositions();
