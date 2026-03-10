@@ -305,10 +305,6 @@ function init() {
 
     initSupabase();
 
-
-
-
-    gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 
 }
@@ -585,6 +581,13 @@ function checkWin() {
 }
 
 function nextLevel() {
+
+     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+         gameStartTime = Date.now();   // ⏱ start timer
+    }
+    
     levelCompleteMenu.classList.add('hidden');
     level++;
     localStorage.setItem('bubble_shooter_current_level', level);
@@ -614,6 +617,9 @@ function startTimer() {
 }
 
 function startGame() {
+
+ gameStartTime = Date.now();   // ⏱ start timer
+    
     score = 0;
     scoreEl.innerText = score;
     levelEl.innerText = level;
