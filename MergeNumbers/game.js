@@ -406,6 +406,12 @@
 
     // ===== LEVEL COMPLETE =====
     function levelComplete() {
+
+      const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+    }
+        
         gameState = 'levelup';
         sfx.levelUp();
         const prevLevel = level;
@@ -447,6 +453,9 @@
 
     // ===== START NEW GAME =====
     function startGame() {
+
+         gameStartTime = Date.now();   // ⏱ start timer
+        
         score = 0; levelScore = 0;
         level = 1; timeLeft = LEVEL_TIME;
         selected = []; selVal = 0; flashCell = null; adUsed = false;
@@ -660,7 +669,7 @@
 
         showMergeDemo();
 
-        gameStartTime = Date.now();   // ⏱ start timer
+        
 
         resize();
 
