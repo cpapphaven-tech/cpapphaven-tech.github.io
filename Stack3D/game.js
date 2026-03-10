@@ -760,6 +760,12 @@ async function submitScore(scoreVal) {
 
 function restartGame() {
     isGameOver = false;
+
+    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+    }
+    
     resetGame();
     gameOverMenu.classList.add('hidden');
     mainMenu.classList.remove('hidden');
