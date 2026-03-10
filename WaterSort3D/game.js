@@ -300,11 +300,7 @@ function init() {
     animate();
 
     initSupabase();
-
-    if (!window.DEV_MODE) {
-
-    }
-
+    
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
 }
@@ -792,10 +788,22 @@ function levelComplete() {
 }
 
 function nextLevel() {
+
+    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+    }
+    
     startLevel(state.level + 1);
 }
 
 function restartLevel() {
+
+     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+    }
+    
     startLevel(state.level);
 }
 
