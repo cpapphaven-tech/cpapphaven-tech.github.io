@@ -73,6 +73,7 @@ let aiWiggle = 0;
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 // --- Supabase Config ---
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -365,7 +366,7 @@ function startMatch() {
      initSupabase();
 
     gameStartTime = Date.now();   // ⏱ start timer
-
+    gameRecordTime = Date.now(); 
 
     scorePlayer = 0; scoreAi = 0;
     setsPlayer = 0; setsAi = 0;
@@ -893,9 +894,10 @@ startBtn.addEventListener('click', startMatch);
 restartBtn.addEventListener('click', () => {
     gameOverScreen.classList.add('hidden');
 
-    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
     if (seconds > 60) {
         initBottomAndSideAds();
+        gameRecordTime = Date.now(); 
     }
 
     startMatch();
