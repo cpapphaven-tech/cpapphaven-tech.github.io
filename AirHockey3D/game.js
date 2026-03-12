@@ -18,6 +18,7 @@ let audioCtx;
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 // --- Supabase Config ---
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -708,16 +709,17 @@ startBtn.onclick = () => {
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
     gameStartedFlag = true; // mark started
-
+    gameRecordTime = Date.now(); 
 
 
 };
 
 restartBtn.onclick = () => {
 
-    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
     if (seconds > 60) {
         initBottomAndSideAds();
+        gameRecordTime = Date.now(); 
     }
 
     initAudio();
