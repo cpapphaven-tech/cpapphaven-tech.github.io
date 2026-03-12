@@ -33,6 +33,7 @@ const NUM_DOTS = 18;
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 // --- Audio ---
 const SOUNDS = {
@@ -803,6 +804,7 @@ function startGame() {
     goalkeeperSpeed = 0.5; // Slower start
 
     gameStartTime = Date.now();   // ⏱ start timer
+    gameRecordTime = Date.now();
     durationSent = false;
 
     // Mark session as started
@@ -836,9 +838,10 @@ function showChallengeMessage() {
 
 function restartGame() {
 
-    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
     if (seconds > 60) {
         initBottomAndSideAds();
+        gameRecordTime = Date.now(); 
     }
 
     isGameOver = false;
