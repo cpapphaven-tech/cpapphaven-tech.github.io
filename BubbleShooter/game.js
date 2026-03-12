@@ -53,6 +53,7 @@ const levelScoreEl = document.getElementById('level-score');
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 // --- Supabase Config ---
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -582,10 +583,10 @@ function checkWin() {
 
 function nextLevel() {
 
-     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+     const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
     if (seconds > 60) {
         initBottomAndSideAds();
-         gameStartTime = Date.now();   // ⏱ start timer
+         gameRecordTime = Date.now();   // ⏱ start timer
     }
     
     levelCompleteMenu.classList.add('hidden');
@@ -619,6 +620,7 @@ function startTimer() {
 function startGame() {
 
  gameStartTime = Date.now();   // ⏱ start timer
+ gameRecordTime = Date.now(); 
     
     score = 0;
     scoreEl.innerText = score;
