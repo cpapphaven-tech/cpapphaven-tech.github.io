@@ -135,6 +135,7 @@ let lastSafeTowerRotation = 0;
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 function getOSKey() {
     const ua = navigator.userAgent;
@@ -333,12 +334,9 @@ function startGame() {
 
     gameStartedFlag = true; // mark started
 
-    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
-    if (seconds > 60) {
-        initBottomAndSideAds();
-    }
-
     gameStartTime = Date.now();   // ⏱ start timer
+    gameRecordTime = Date.now(); 
+    
     durationSent = false;
 
     // Show challenge message only on first level
@@ -767,7 +765,11 @@ function gameOver(win) {
         rewardBtn.classList.remove("hidden");
     }
 
-    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
+    if (seconds > 60) {
+        initBottomAndSideAds();
+        gameRecordTime = Date.now(); 
+    }
 
     if (typeof window.trackGameEvent === "function") {
         window.trackGameEvent(`game_over_helix`, {
