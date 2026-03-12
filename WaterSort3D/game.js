@@ -32,6 +32,7 @@ let tubesContainer;
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 // --- Supabase Config ---
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -302,6 +303,8 @@ function init() {
     initSupabase();
     
     gameStartTime = Date.now();   // ⏱ start timer
+    gameRecordTime = Date.now(); 
+    
     durationSent = false;
 }
 
@@ -789,9 +792,10 @@ function levelComplete() {
 
 function nextLevel() {
 
-    const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+    const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
     if (seconds > 60) {
         initBottomAndSideAds();
+        gameRecordTime = Date.now(); 
     }
     
     startLevel(state.level + 1);
@@ -799,9 +803,10 @@ function nextLevel() {
 
 function restartLevel() {
 
-     const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+     const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
     if (seconds > 60) {
         initBottomAndSideAds();
+        gameRecordTime = Date.now(); 
     }
     
     startLevel(state.level);
