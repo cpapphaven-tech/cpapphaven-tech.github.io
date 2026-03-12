@@ -74,6 +74,7 @@
     let gameStartTime = null;
     let durationSent = false;
     let gameStartedFlag = false;
+    let gameRecordTime = null;
 
     // --- Supabase Config ---
     const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -407,9 +408,10 @@
     // ===== LEVEL COMPLETE =====
     function levelComplete() {
 
-      const seconds = Math.round((Date.now() - gameStartTime) / 1000);
+      const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
     if (seconds > 60) {
         initBottomAndSideAds();
+        gameRecordTime = Date.now(); 
     }
         
         gameState = 'levelup';
@@ -454,7 +456,8 @@
     // ===== START NEW GAME =====
     function startGame() {
 
-         gameStartTime = Date.now();   // ⏱ start timer
+        gameStartTime = Date.now();   // ⏱ start timer
+        gameRecordTime = Date.now(); 
         
         score = 0; levelScore = 0;
         level = 1; timeLeft = LEVEL_TIME;
