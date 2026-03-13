@@ -24,6 +24,7 @@ const savedRound = round; // Store original saved level for the prompt
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 // --- Supabase Config ---
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -156,6 +157,7 @@ async function startGameSession() {
     if (!window.supabase) return;
 
     gameStartTime = Date.now();   // ⏱ start timer
+    gameRecordTime = Date.now();
 
     sessionId = generateSessionId();
     const placementId = getPlacementId();
@@ -836,6 +838,14 @@ function endTurn() {
         // Prep the next level info and save
         round++;
         localStorage.setItem(SAVED_LEVEL_KEY, round);
+
+        const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
+        if (seconds > 60) {
+            initBottomAndSideAds();
+            gameRecordTime = Date.now(); 
+        }
+
+
     } else {
         if (lives <= 0) {
             endGame();
