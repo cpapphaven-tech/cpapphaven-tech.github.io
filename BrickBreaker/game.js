@@ -89,6 +89,7 @@
     let gameStartTime = null;
     let durationSent = false;
     let gameStartedFlag = false;
+    let gameRecordTime = null;
 
     // --- Supabase Config ---
     const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -772,6 +773,12 @@
         buildBricks();
         resetBallOnPaddle();
         setTimeout(function () { levelTransition = false; }, 600);
+
+        const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
+        if (seconds > 60) {
+            initBottomAndSideAds();
+            gameRecordTime = Date.now(); 
+        }
     }
 
     function showLevelBanner(text) {
@@ -927,6 +934,7 @@
     window.addEventListener('load', function () {
 
         gameStartTime = Date.now();   // ⏱ start timer
+        gameRecordTime = Date.now();
 
         initScene();
         // updateHUD();

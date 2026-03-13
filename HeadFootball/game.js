@@ -53,6 +53,7 @@ const keys = { Left: false, Right: false, Jump: false, Kick: false };
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 // --- Supabase Config ---
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -654,6 +655,12 @@ function endMatch(winner) {
     matchCount++;
     localStorage.setItem('headfootball_matches', matchCount);
     updateDifficulty();
+
+    const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
+    if (seconds > 60) {
+            initBottomAndSideAds();
+            gameRecordTime = Date.now(); 
+    }
 }
 
 function resetMatch() {
@@ -662,9 +669,10 @@ function resetMatch() {
 
     initSupabase();
 
-      if (gameStartTime == null) {
-        gameStartTime = Date.now();   // ⏱ start timer
-    }
+    
+    gameStartTime = Date.now();   // ⏱ start timer
+    gameRecordTime = Date.now();
+    
 
     score1 = 0;
     score2 = 0;

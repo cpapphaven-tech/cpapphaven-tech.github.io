@@ -62,6 +62,7 @@
     let gameStartTime = null;
     let durationSent = false;
     let gameStartedFlag = false;
+    let gameRecordTime = null;
 
     // --- Supabase Config ---
     const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -350,6 +351,7 @@
         resize();
 
         gameStartTime = Date.now();   // ⏱ start timer
+        gameRecordTime = Date.now();
 
         showTutorial();
 
@@ -390,6 +392,13 @@
         updateUI();
         ui.lcOverlay.classList.add('hidden');
         sfx.levelup();
+
+        const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
+        if (seconds > 60) {
+            initBottomAndSideAds();
+            gameRecordTime = Date.now(); 
+        }
+
     }
 
     function generatePieces() {
