@@ -50,6 +50,7 @@ const homeRuns = {
 
 let gameStartTime = null;
 let durationSent = false;
+let gameRecordTime = null;
 
 // --- Supabase Config ---
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -260,6 +261,7 @@ function init() {
 
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
+    gameRecordTime = Date.now();
 }
 
 function startGame(mode) {
@@ -446,6 +448,12 @@ function checkMoves() {
             if (moves.includes(i)) el.classList.add('can-move');
         });
         if (p.type === 'cpu') setTimeout(() => aiDecide(moves), 800);
+    }
+
+    const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
+    if (seconds > 60) {
+            initBottomAndSideAds();
+            gameRecordTime = Date.now(); 
     }
 }
 

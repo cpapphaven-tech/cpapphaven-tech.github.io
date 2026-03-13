@@ -31,6 +31,7 @@ const UI = {
 let gameStartTime = null;
 let durationSent = false;
 let gameStartedFlag = false;
+let gameRecordTime = null;
 
 // --- Supabase Config ---
 const supabaseUrl = 'https://bjpgovfzonlmjrruaspp.supabase.co';
@@ -255,6 +256,7 @@ function init() {
 
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
+    gameRecordTime = Date.now();
 }
 
 function startNewGame(level = 1) {
@@ -461,6 +463,12 @@ function inputNumber(num) {
         }
     }
     renderBoard();
+
+    const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
+    if (seconds > 60) {
+            initBottomAndSideAds();
+            gameRecordTime = Date.now(); 
+    }
 }
 
 function checkWin() {
