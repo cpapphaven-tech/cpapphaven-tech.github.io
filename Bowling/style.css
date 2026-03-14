@@ -248,7 +248,7 @@ body {
 
 .turn-indicator {
     position: absolute;
-    top: 130px; /* Moved down to accommodate larger scoreboard */
+    top: 150px; /* Moved down to accommodate larger scoreboard */
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 229, 255, 0.2);

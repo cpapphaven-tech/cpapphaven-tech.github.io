@@ -919,6 +919,9 @@ function throwBall(dx, dy) {
     gameState = 'ROLL';
     sounds.roll();
     
+    // Hide turn indicator when rolling to avoid overlap
+    uiObj.turnIndicator.classList.add('hidden');
+    
     // Sync physics
     ballBody.position.copy(ballMesh.position);
     world.addBody(ballBody);
@@ -957,6 +960,10 @@ function playAITurn() {
     
     sounds.roll();
     gameState = 'ROLL';
+    
+    // Hide turn indicator when AI rolls
+    uiObj.turnIndicator.classList.add('hidden');
+    
     ballBody.velocity.set(hook, 0, -power);
     rollTimer = 0;
 }
