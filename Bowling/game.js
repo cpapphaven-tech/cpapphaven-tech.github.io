@@ -389,12 +389,15 @@ function initThree() {
 
     const rgbeLoader = new THREE.RGBELoader();
     // Assuming relative path from other games
-    rgbeLoader.load('../assets/royal_esplanade_1k.hdr', (texture) => {
-        texture.mapping = THREE.EquirectangularReflectionMapping;
-        scene.environment = texture;
-    }, undefined, (err) => {
-        console.warn('HDR not loaded, using default lighting.', err);
-    });
+    // rgbeLoader.load('../assets/royal_esplanade_1k.hdr', (texture) => {
+    //     texture.mapping = THREE.EquirectangularReflectionMapping;
+    //     scene.environment = texture;
+    // }, undefined, (err) => {
+    //     console.warn('HDR not loaded, using default lighting.', err);
+    // });
+    scene.environment = null;
+scene.background = new THREE.Color(0x0a0a1a);
+
 
     const ambient = new THREE.AmbientLight(0xffffff, 0.4);
     scene.add(ambient);
