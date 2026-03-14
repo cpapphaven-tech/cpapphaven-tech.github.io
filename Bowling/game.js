@@ -461,8 +461,8 @@ function buildLane() {
     const laneGeo = new THREE.BoxGeometry(6, 0.5, 60);
     const laneMat = new THREE.MeshStandardMaterial({ 
         color: 0xe6b381, 
-        roughness: 0.6, 
-        metalness: 0 
+        roughness: 0.2, 
+        metalness: 0.1 
     });
     const laneMesh = new THREE.Mesh(laneGeo, laneMat);
     laneMesh.position.set(0, -0.25, -15);
