@@ -24,6 +24,46 @@ const resultIcon = document.getElementById('result-icon');
 const finalScoreDiv = document.getElementById('final-score-display');
 const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
+const backBtn = document.querySelector('.back-btn');
+
+// --- Audio System ---
+const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+function playSound(freq, type, duration, vol = 0.1) {
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+    gain.gain.setValueAtTime(vol, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + duration);
+    osc.start();
+    osc.stop(audioCtx.currentTime + duration);
+}
+
+const sounds = {
+    serve: () => playSound(440, 'sine', 0.2),
+    hit: (isPower = false) => playSound(isPower ? 880 : 660, 'triangle', 0.1, isPower ? 0.15 : 0.1),
+    wall: () => playSound(330, 'sine', 0.1, 0.05),
+    aiHit: () => playSound(550, 'triangle', 0.1, 0.08),
+    score: () => {
+        playSound(523.25, 'sine', 0.1); // C5
+        setTimeout(() => playSound(659.25, 'sine', 0.15), 100); // E5
+    },
+    losePoint: () => {
+        playSound(392, 'sawtooth', 0.2, 0.05); // G4
+        setTimeout(() => playSound(311.13, 'sawtooth', 0.3, 0.05), 150); // Eb4
+    },
+    winMatch: () => {
+        const notes = [523.25, 659.25, 783.99, 1046.50];
+        notes.forEach((f, i) => setTimeout(() => playSound(f, 'sine', 0.4), i * 150));
+    },
+    loseMatch: () => {
+        const notes = [311.13, 261.63, 196.00];
+        notes.forEach((f, i) => setTimeout(() => playSound(f, 'sawtooth', 0.6, 0.05), i * 200));
+    }
+};
 
 // ============================================================
 // GAME CONFIG
@@ -401,6 +441,7 @@ function serveBall(server) {
         ball.vx = speed * Math.sin(angle);
         matchStatusUI.textContent = '↓ AI SERVE — Get ready!';
     }
+    sounds.serve();
 }
 
 function updateBall() {
@@ -419,6 +460,7 @@ function updateBall() {
         ball.x = table.x + table.w - ball.r;
         ball.vx = -Math.abs(ball.vx);
         createSparks(ball.x, ball.y, '#ffffff', 5);
+        sounds.wall();
     }
 
     // --- Player paddle collision (bottom) ---
@@ -445,6 +487,7 @@ function updateBall() {
 
         createSparks(ball.x, ball.y, swingBoost > 1.5 ? '#fbbf24' : '#4facfe', swingBoost > 1.5 ? 20 : 12);
         matchStatusUI.textContent = swingBoost > 1.5 ? '⚡ POWER SHOT!' : '↑ Nice hit!';
+        sounds.hit(swingBoost > 1.5);
     }
 
     // --- AI paddle collision (top) ---
@@ -466,6 +509,7 @@ function updateBall() {
         ball.vy = ball.vy / spd2 * BALL_SPEED;
         createSparks(ball.x, ball.y, '#f43f5e', 12);
         matchStatusUI.textContent = '↓ AI returns!';
+        sounds.aiHit();
     }
 
     // --- Ball goes past PLAYER (AI scores) ---
@@ -475,6 +519,7 @@ function updateBall() {
         showMsg('AI SCORES ❌', 1200);
         createSparks(ball.x, ball.y, '#f43f5e', 20);
         updateHUD();
+        sounds.losePoint();
         setTimeout(() => checkSetWin('ai'), 1300);
     }
 
@@ -485,6 +530,7 @@ function updateBall() {
         showMsg('YOUR POINT ✅', 1200);
         createSparks(ball.x, ball.y, '#22c55e', 20);
         updateHUD();
+        sounds.score();
         setTimeout(() => checkSetWin('player'), 1300);
     }
 }
@@ -560,6 +606,8 @@ function endMatch() {
     resultSub.textContent = won ? 'You won the match!' : 'AI took the match!';
     finalScoreDiv.textContent = `${setsPlayer} – ${setsAi} sets`;
     gameOverScreen.classList.remove('hidden');
+    if (won) sounds.winMatch();
+    else sounds.loseMatch();
 }
 
 function updateHUD() {
