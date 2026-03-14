@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>3D Bowling Clash | PlayMixGames</title>
+    <meta name="description"
+        content="Play 3D Bowling Clash online. Master the perfect curve throw and get strikes against the AI in this immersive 3D sports game!">
+    
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Waxing The Lanes...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <div id="game-wrapper">
+        <!-- Main Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Score HUD -->
+        <div id="ui-overlay">
+            <div class="detailed-scoreboard" id="scoreboard-container">
+                <div class="score-header">
+                    <div class="player-name">Player</div>
+                    <div class="frames-container" id="player-frames">
+                        <!-- JS will inject 10 frames here -->
+                    </div>
+                    <div class="total-score" id="player-total">0</div>
+                </div>
+                <div class="score-header ai">
+                    <div class="player-name">AI</div>
+                    <div class="frames-container" id="ai-frames">
+                        <!-- JS will inject 10 frames here -->
+                    </div>
+                    <div class="total-score" id="ai-total">0</div>
+                </div>
+            </div>
+            
+            <div id="pin-status-display" class="pin-status-wrapper">
+                <div class="pin-triangle" id="pin-triangle">
+                    <!-- JS will inject 10 pin icons here matching physical state -->
+                </div>
+            </div>
+            
+            <div id="turn-indicator" class="turn-indicator hidden">YOUR TURN</div>
+            <div id="status-text" class="status-msg hidden">STRIKE!</div>
+        </div>
+
+        <!-- Start / Game Over Overlay -->
+        <div id="start-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon">🎳</div>
+                <h1 class="overlay-title">3D BOWLING<br>CLASH</h1>
+                <p class="overlay-sub">Bowl 10 Rounds against the AI Opponent!</p>
+                <div class="instructions">
+                    <p>👆 <strong>Drag horizontally</strong> to position your ball.</p>
+                    <p>⬆️ <strong>Swipe UP fast</strong> to bowl!</p>
+                    <p>🎳 Highest score after 10 rounds wins.</p>
+                </div>
+                <button id="start-btn" class="pmg-btn">▶ BOWL NOW</button>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon" id="result-icon">🏆</div>
+                <h1 class="overlay-title" id="result-title">VICTORY!</h1>
+                <p class="overlay-sub" id="result-sub">You won the match!</p>
+                <div id="final-score-display" style="font-size: 1.5rem; color: #ffdf00; margin-bottom: 20px; font-weight: bold;"></div>
+                <button id="restart-btn" class="pmg-btn" style="margin-top:15px;">🔄 PLAY AGAIN</button>
+                <a href="../index.html" class="pmg-btn-outline"
+                    style="margin-top:10px;display:block;text-align:center;text-decoration:none;">🏠 More Games</a>
+            </div>
+        </div>
+        </div>
+    </div> <!-- End game-wrapper -->
+
+    <!-- SEO Section -->
+    <section class="game-description" style="background:#111; padding:40px 20px; color:#999; text-align:center;">
+        <div style="max-width:800px; margin: 0 auto;">
+            <h2 style="color:#fff;">Master Your Throw</h2>
+            <p>3D Bowling Clash is an immersive 3D bowling game where you can master the perfect curve ball. Experience
+                realistic physics, vibrant 3D graphics, and intuitive swipe controls to beat the AI in a complete 10-frame game.</p>
+            <h3 style="color:#fff; margin-top:20px;">How to Play</h3>
+            <p>Drag left or right before swiping up to position your ball. Then, swipe UP fast to throw it down the lane! The height of your swipe controls your power, and the left/right angle of your swipe curves the ball!</p>
+            <h3 style="color:#fff; margin-top:20px;">FAQ</h3>
+            <p><strong>Is this game completely free?</strong> Yes! You can play all 10 frames against the AI immediately directly in your browser.</p>
+        </div>
+    </section>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof initBottomAndSideAds === "function") initBottomAndSideAds();
+        });
+    </script>
+</body>
+
+</html>
