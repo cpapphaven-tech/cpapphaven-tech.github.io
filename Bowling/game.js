@@ -385,6 +385,7 @@ function initThree() {
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Softer, better shadows
 
     const rgbeLoader = new THREE.RGBELoader();
     // Assuming relative path from other games
@@ -401,8 +402,18 @@ function initThree() {
     const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
     dirLight.position.set(0, 20, -10);
     dirLight.castShadow = true;
-    dirLight.shadow.mapSize.width = 1024;
-    dirLight.shadow.mapSize.height = 1024;
+    dirLight.shadow.mapSize.width = 2048; // Increased for better detail
+    dirLight.shadow.mapSize.height = 2048;
+    dirLight.shadow.bias = -0.0005; // Fix shadow acne (white splotches/noise)
+    
+    // Narrow the shadow camera to focus on the lane area for max resolution
+    dirLight.shadow.camera.left = -10;
+    dirLight.shadow.camera.right = 10;
+    dirLight.shadow.camera.top = 10;
+    dirLight.shadow.camera.bottom = -10;
+    dirLight.shadow.camera.near = 0.5;
+    dirLight.shadow.camera.far = 100;
+
     scene.add(dirLight);
 
     // Spotlight on pins
