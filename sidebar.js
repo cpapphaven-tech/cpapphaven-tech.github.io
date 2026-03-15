@@ -42,6 +42,7 @@
         { name: "🔢 Sudoku", path: "Sudoku/index.html", icon: "img/sudoku200.png", tip: "Logic" },
         { name: "🔡 Word Search", path: "WordSearch/index.html", icon: "img/wordsrarch200.png", tip: "Word" },
         { name: "🔵 Bubble Shooter", path: "BubbleShooter/index.html", icon: "assets/bubble_shooter.png", tip: "Arcade" },
+        { name: "⛳ Pocket Golf", path: "PocketGolf/index.html", icon: "assets/pocket_golf_icon.png", tip: "Sports" },
     ];
 
     function createSidebar() {

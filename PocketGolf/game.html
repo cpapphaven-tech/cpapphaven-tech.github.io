@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Pocket Golf vs AI | PlayMixGames</title>
+    <meta name="description"
+        content="Play Pocket Golf vs AI online. Master your shots, bounce off walls, and beat the AI opponent in this addictive physics-based golf challenge!">
+    
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Mowing the Green...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <div id="game-wrapper">
+        <!-- GOLF BRANDING -->
+        <div id="golf-brand">GOLF</div>
+
+        <!-- DETAILED SCOREBOARD (BOWLING STYLE) -->
+        <div id="game-hud-new">
+            <div class="detailed-scoreboard">
+                <!-- PLAYER ROW -->
+                <div class="score-row player">
+                    <div class="p-label">YOU</div>
+                    <div class="frames" id="frames-p">
+                        <!-- 15 holes -->
+                        <span>-</span><span>-</span><span>-</span><span>-</span><span>-</span>
+                        <span>-</span><span>-</span><span>-</span><span>-</span><span>-</span>
+                        <span>-</span><span>-</span><span>-</span><span>-</span><span>-</span>
+                    </div>
+                    <div class="match-total" id="score-p">0</div>
+                </div>
+                <!-- INFO CENTER -->
+                <div class="hud-center">
+                    <div id="level-label">HOLE 1/15</div>
+                    <div id="set-label">SET 1</div>
+                    <div id="turn-indicator">YOUR TURN</div>
+                </div>
+                <!-- AI ROW -->
+                <div class="score-row ai">
+                    <div class="p-label">AI</div>
+                    <div class="frames" id="frames-a">
+                        <span>-</span><span>-</span><span>-</span><span>-</span><span>-</span>
+                        <span>-</span><span>-</span><span>-</span><span>-</span><span>-</span>
+                        <span>-</span><span>-</span><span>-</span><span>-</span><span>-</span>
+                    </div>
+                    <div class="match-total" id="score-a">0</div>
+                </div>
+            </div>
+            
+            <div id="strokes-info">SHOTS: <span id="strokes-count">0/3</span></div>
+        </div>
+
+        <!-- Ball Tooltips Overlay -->
+        <div id="ball-labels">
+            <div id="label-player" class="ball-tip">YOU</div>
+            <div id="label-ai" class="ball-tip">AI</div>
+        </div>
+
+        <div id="power-meter"><div id="power-fill"></div></div>
+
+        <!-- Tutorial Hint -->
+        <div id="tutorial-overlay" class="hidden">
+            <div class="tutorial-content">
+                <div class="drag-icon">👆</div>
+                <p>PULL BACK BALL TO AIM & SHOOT</p>
+            </div>
+        </div>
+
+        <!-- Main Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Match Message Overlay -->
+        <div id="match-msg" class="hidden"></div>
+
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon" id="result-icon">🏆</div>
+                <h1 class="overlay-title" id="result-title">VICTORY!</h1>
+                <p class="overlay-sub" id="result-sub">You outplayed the AI!</p>
+                <div id="final-score-display"></div>
+                <button id="restart-btn" class="pmg-btn" style="margin-top:15px;">🔄 PLAY AGAIN</button>
+                <a href="../index.html" class="pmg-btn-outline"
+                    style="margin-top:10px;display:block;text-align:center;text-decoration:none;">🏠 More Games</a>
+            </div>
+        </div>
+
+        <a href="../index.html" class="back-btn">← Back</a>
+    </div>
+
+    <!-- About / FAQ Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>About Pocket Golf vs AI</h2>
+                <p>Pocket Golf vs AI is a precision-based mini-golf puzzle game. Navigate through challenging levels filled with obstacles, narrow corridors, and dangerous spikes. Compete head-to-head against a smart AI opponent where strategy and precision are key to victory.</p>
+            </div>
+            <div class="info-card">
+                <h2>Game Rules</h2>
+                <ul>
+                    <li><strong>Objective:</strong> Sink the ball in the hole with fewer strokes than the AI.</li>
+                    <li><strong>Turn System:</strong> Players alternate turns. You shoot, then the AI shoots.</li>
+                    <li><strong>Shot Limit:</strong> You have a maximum of 3 strokes per hole. Failing to sink the ball in 3 results in a penalty.</li>
+                    <li><strong>Scoring:</strong> Hole in 1 = 3pts, Hole in 2 = 2pts, Hole in 3 = 1pt.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h4>How do I aim?</h4>
+                    <p>Touch the golf ball and drag in the opposite direction you want to shoot. A power line will show you the strength and direction.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What happens if I hit spikes?</h4>
+                    <p>Hitting spikes will reset the ball to its previous position and add a penalty stroke.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is the game mobile-friendly?</h4>
+                    <p>Yes! Pocket Golf is designed to work perfectly on all mobile devices and tablets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof initBottomAndSideAds === "function") initBottomAndSideAds();
+        });
+    </script>
+</body>
+
+</html>
