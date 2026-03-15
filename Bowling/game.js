@@ -784,9 +784,17 @@ function setupInput() {
     window.addEventListener('mousemove', onMove);
     window.addEventListener('mouseup', onUp);
 
-    cvs.addEventListener('touchstart', (e) => onDown(e.touches[0]), {passive: false});
-    window.addEventListener('touchmove', (e) => onMove(e.touches[0]), {passive: false});
-    window.addEventListener('touchend', onUp);
+    cvs.addEventListener('touchstart', (e) => {
+        if (e.cancelable) e.preventDefault();
+        onDown(e.touches[0]);
+    }, {passive: false});
+    window.addEventListener('touchmove', (e) => {
+        if (e.cancelable) e.preventDefault();
+        onMove(e.touches[0]);
+    }, {passive: false});
+    window.addEventListener('touchend', (e) => {
+        onUp();
+    });
 }
 
 function onDown(e) {
