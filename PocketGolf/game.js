@@ -675,6 +675,9 @@ this.mouse.y = -((y - rect.top) / rect.height) * 2 + 1;
 
     const canvas = this.renderer.domElement;
     const rect = canvas.getBoundingClientRect();
+    const wrapper = document.getElementById('game-wrapper');
+    if (!wrapper) return;
+    const wrapperRect = wrapper.getBoundingClientRect();
 
     balls.forEach(b => {
         const label = document.getElementById(b.labelId);
@@ -691,8 +694,9 @@ this.mouse.y = -((y - rect.top) / rect.height) * 2 + 1;
         pos.y += 2.0;   // height above ball
         pos.project(this.camera);
 
-        const x = (pos.x * 0.5 + 0.5) * rect.width + rect.left;
-        const y = (pos.y * -0.5 + 0.5) * rect.height + rect.top;
+        // Correct for container offset (important when sidebar is open)
+        const x = (pos.x * 0.5 + 0.5) * rect.width + (rect.left - wrapperRect.left);
+        const y = (pos.y * -0.5 + 0.5) * rect.height + (rect.top - wrapperRect.top);
 
         label.style.left = `${x}px`;
         label.style.top = `${y}px`;
