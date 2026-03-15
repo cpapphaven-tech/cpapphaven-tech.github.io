@@ -45,9 +45,18 @@
     ];
 
     function createSidebar() {
+        // Detect mobile screen
+        const isMobile = window.innerWidth <= 760;
+
         // Safety check: Page can explicitly skip the sidebar
         if (document.body && document.body.classList.contains('ignore-pmg-sidebar')) {
             console.log('🚫 PMG Sidebar: Suppressed by page class.');
+            return;
+        }
+
+        if (isMobile) {
+            console.log('📱 PMG Sidebar: Hidden for mobile.');
+            addMobileHomeButton();
             return;
         }
 
