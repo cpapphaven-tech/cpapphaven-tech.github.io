@@ -22,7 +22,8 @@ let state = {
     selectedTube: null, // Currently selected tube index
     isAnimating: false,
     history: [], // For Undo
-    score: 0
+    score: 0,
+    sounds: {}
 };
 
 // Three.js Globals
@@ -301,11 +302,29 @@ function init() {
     animate();
 
     initSupabase();
+    initSounds();
     
     gameStartTime = Date.now();   // ⏱ start timer
     gameRecordTime = Date.now(); 
     
     durationSent = false;
+}
+
+function initSounds() {
+    state.sounds = {
+        click: new Audio('../assets/stack_place.wav')
+    };
+    // Set default volumes
+    Object.values(state.sounds).forEach(s => s.volume = 0.5);
+}
+
+function playSound(name) {
+    const s = state.sounds[name];
+    if (s) {
+        const soundClone = s.cloneNode();
+        soundClone.volume = s.volume;
+        soundClone.play().catch(e => console.warn("Sound play failed", e));
+    }
 }
 
 function startLevel(levelNum) {
@@ -588,6 +607,7 @@ function handleTubeClick(index) {
 
 function selectTube(index) {
     state.selectedTube = index;
+    playSound('click');
     const group = state.tubes[index].group;
     // Lift animation relative to original Y
     const liftHeight = 0.5;
@@ -596,6 +616,7 @@ function selectTube(index) {
 
 function deselectTube() {
     if (state.selectedTube !== null) {
+        playSound('click');
         const index = state.selectedTube;
         const group = state.tubes[index].group;
 
