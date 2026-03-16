@@ -400,3 +400,120 @@ body.portal-index {
     width: 320px;
     height: 50px;
 }
+
+/* --- PLAY ON MOBILE HINT (Desktop Only) --- */
+#pmg-mobile-hint {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    width: 250px;
+    background: rgba(15, 17, 26, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 15px;
+    z-index: 25000;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: pmgSlideIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (min-width: 1025px) {
+    #pmg-mobile-hint {
+        display: flex;
+    }
+}
+
+body.pmg-sidebar-open #pmg-mobile-hint {
+    left: 300px;
+}
+
+.pmg-mobile-hint-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pmg-mobile-hint-header h4 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 950;
+    color: var(--pmg-accent);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.pmg-mobile-close {
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 1.1rem;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.pmg-mobile-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.pmg-mobile-hint-body {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pmg-mobile-qr-placeholder {
+    width: 68px;
+    height: 68px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pmg-mobile-qr-placeholder:hover {
+    transform: scale(1.1);
+}
+
+.pmg-mobile-qr-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pmg-mobile-text {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #a0a0c0;
+    flex: 1;
+}
+
+.pmg-mobile-text strong {
+    color: white;
+    display: block;
+    margin-bottom: 2px;
+}
+
+@keyframes pmgSlideIn {
+    from { transform: translateY(100px) scale(0.9); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}

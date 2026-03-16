@@ -159,10 +159,50 @@
         `).join('');
     }
 
+    function createMobileHint() {
+        if (window.innerWidth <= 1024) return;
+        if (sessionStorage.getItem('pmg_mobile_hint_closed')) return;
+        if (document.getElementById('pmg-mobile-hint')) return;
+
+        // Dynamic QR code for current game
+        const currentUrl = encodeURIComponent(window.location.href);
+        const qrApi = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${currentUrl}`;
+
+        const hint = document.createElement('div');
+        hint.id = 'pmg-mobile-hint';
+        hint.innerHTML = `
+            <div class="pmg-mobile-hint-header">
+                <h4>Switch to Mobile</h4>
+                <button class="pmg-mobile-close" title="Dismiss">&times;</button>
+            </div>
+            <div class="pmg-mobile-hint-body">
+                <div class="pmg-mobile-qr-placeholder" title="Scan to play on mobile">
+                    <img src="${qrApi}" alt="QR Code">
+                </div>
+                <div class="pmg-mobile-text">
+                    <strong>Play on the Go!</strong>
+                    Scan to continue this game on your phone.
+                </div>
+            </div>
+        `;
+        document.body.appendChild(hint);
+
+        hint.querySelector('.pmg-mobile-close').onclick = () => {
+            hint.style.transform = 'translateY(100px)';
+            hint.style.opacity = '0';
+            sessionStorage.setItem('pmg_mobile_hint_closed', 'true');
+            setTimeout(() => hint.remove(), 300);
+        };
+    }
+
     // Initialize when DOM ready
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
         createSidebar();
+        createMobileHint();
     } else {
-        window.addEventListener('load', createSidebar);
+        window.addEventListener('load', () => {
+            createSidebar();
+            createMobileHint();
+        });
     }
 })();
