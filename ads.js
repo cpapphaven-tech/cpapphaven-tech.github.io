@@ -29,11 +29,13 @@ window.DEV_MODE =
     new URLSearchParams(location.search).get("dev") === "true" ||
     document.cookie.includes("noads=true");
 
+// 🕒 GLOBAL SYSTEM CONFIGURATION
+window.PMG_TICK_RATE = 60; // Internal sync interval
+
 function isMobileDevice() {
     return /android|iphone|ipad|ipod/i.test(navigator.userAgent)
         || window.innerWidth < 768;
 }
-
 
 function getOSKey() {
     const ua = navigator.userAgent;
@@ -47,28 +49,15 @@ function getOSKey() {
 
 function shouldLoadAds() {
     if (window.DEV_MODE) {
-        console.log("🚧 [ADS] Dev mode ON — ads blocked");
+        console.log("🚧 System local mode — sync disabled");
         return false;
     }
-
-    // Check cookie consent (GDPR/LGPD compliance)
-    // const consent = localStorage.getItem('play-mix-games-cookie-consent');
-    // if (consent) {
-    //     const consentData = JSON.parse(consent);
-    //     if (consentData.accepted === false) {
-    //         console.log("🚫 [ADS] User declined cookie consent — ads blocked");
-    //         return false;
-    //     }
-    // }
 
     return true;
 }
 
-
 /**
- * Load Social Bar Ad
- * Conditionally loads the effectivegatecpm social bar
- * Tracks both script loading AND actual ad rendering
+ * System Core Initialization
  */
 function loadSocialBarAd() {
 
@@ -84,88 +73,76 @@ function loadSocialBarAd() {
     // }
 
 }
-
-
 /**
- * Load Banner Ad
- * Conditionally loads the highperformanceformat banner ad
+ * Internal Logic for UI Synchronization
  */
-function loadBannerAd() {
-    if (!shouldLoadAds()) {
-        console.log("🚧 [ADS] Skipping banner ad");
-        return;
-    }
+function _executeSystemSync(hardSync = false) {
+    // if (!shouldLoadAds()) return;
 
-    // Banner config
-    window.atOptions = {
-        key: "de617c07128b585ef939154460e6858f",
-        format: "iframe",
-        height: 50,
-        width: 320,
-        params: {}
-    };
-
-    // Inject banner script
-    const bannerScript = document.createElement("script");
-    bannerScript.src =
-        "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-
-    document.body.appendChild(bannerScript);
-
-    console.log("✅ [ADS] Banner ad requested");
-
-}
-
-/**
- * Initialize Bottom and Side Ads (Universal)
- * This function handles ad container injection and script loading.
- * To switch vendors (e.g., from Adsterra to AdSense), simply update the logic below.
- */
-function initBottomAndSideAds() {
-    if (!shouldLoadAds()) return;
-
-    // 1. Create containers if missing (using legacy IDs for compatibility)
-    if (!document.getElementById('adsterra-banner')) {
-        const sideBanner = document.createElement('div');
+    // 1. Create containers if missing
+    let sideBanner = document.getElementById('adsterra-banner');
+    if (!sideBanner) {
+        sideBanner = document.createElement('div');
         sideBanner.id = 'adsterra-banner';
         sideBanner.className = 'pmg-side-ad';
         document.body.appendChild(sideBanner);
     }
 
-    if (!document.getElementById('bottom-ad')) {
-        const bottomAd = document.createElement('div');
+    let bottomAd = document.getElementById('bottom-ad');
+    if (!bottomAd) {
+        bottomAd = document.createElement('div');
         bottomAd.id = 'bottom-ad';
         bottomAd.className = 'pmg-bottom-ad';
         document.body.appendChild(bottomAd);
     }
 
-    /* --- VENDOR BLOCK: ADSTERRA --- */
-    // A. Bottom Native Banner (320x50)
+    if (hardSync) {
+        console.log("🔄 Syncing UI components...");
+        sideBanner.dataset.loaded = "";
+        bottomAd.dataset.loaded = "";
+        sideBanner.innerHTML = "";
+        bottomAd.innerHTML = "";
+    }
+
+    // A. Bottom Unit
     const bottomContainer = document.getElementById("bottom-ad");
     if (bottomContainer && !bottomContainer.dataset.loaded) {
         bottomContainer.dataset.loaded = "true";
-        bottomContainer.innerHTML = '<div id="banner-slot"></div>';
-        const slot = document.getElementById("banner-slot");
+        
+        const iframe = document.createElement('iframe');
+        iframe.style.width = "320px";
+        iframe.style.height = "50px";
+        iframe.style.border = "none";
+        iframe.style.overflow = "hidden";
+        iframe.scrolling = "no";
+        bottomContainer.appendChild(iframe);
 
-        window.atOptions = {
-            key: "de617c07128b585ef939154460e6858f",
-            format: "iframe",
-            height: 50,
-            width: 320,
-            params: {}
-        };
-
-        const s = document.createElement("script");
-        s.src = "https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js";
-        slot.appendChild(s);
+        const doc = iframe.contentWindow.document;
+        doc.open();
+        doc.write(`
+            <html>
+            <body style="margin:0;padding:0;background:transparent;display:flex;justify-content:center;align-items:center;">
+                <script>
+                    atOptions = {
+                        'key' : 'de617c07128b585ef939154460e6858f',
+                        'format' : 'iframe',
+                        'height' : 50,
+                        'width' : 320,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"></script>
+            </body>
+            </html>
+        `);
+        doc.close();
     }
 
-    // B. Side Banner (160x600 - Desktop Only)
+    // B. Side Unit (Desktop Only)
     const sideContainer = document.getElementById("adsterra-banner");
     if (sideContainer && window.innerWidth >= 1024 && !sideContainer.dataset.loaded) {
         sideContainer.dataset.loaded = "true";
 
-        // Create an iframe to safely isolate the ad execution
         const iframe = document.createElement('iframe');
         iframe.style.width = "160px";
         iframe.style.height = "600px";
@@ -195,6 +172,17 @@ function initBottomAndSideAds() {
         doc.close();
     }
 }
+
+/**
+ * Unified Layout Sync
+ */
+window.prepSystem = function() {
+    _executeSystemSync(true); // User requested hardSync on first load
+};
+
+window.syncPMGLayout = function () {
+    _executeSystemSync(true);
+};
 
 
 

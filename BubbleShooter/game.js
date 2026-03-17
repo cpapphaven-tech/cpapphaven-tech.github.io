@@ -584,8 +584,8 @@ function checkWin() {
 function nextLevel() {
 
      const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
-    if (seconds > 60) {
-        initBottomAndSideAds();
+    if (seconds > (window.PMG_TICK_RATE || 60)) {
+        syncPMGLayout();
          gameRecordTime = Date.now();   // ⏱ start timer
     }
     

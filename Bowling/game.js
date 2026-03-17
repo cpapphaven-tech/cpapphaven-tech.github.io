@@ -948,8 +948,8 @@ function throwBall(dx, dy) {
     rollTimer = 0;
 
     const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
-    if (seconds > 90) {
-            initBottomAndSideAds();
+    if (seconds > (window.PMG_TICK_RATE || 60)) {
+            prepSystem();
             gameRecordTime = Date.now(); 
     }
 }

@@ -617,11 +617,11 @@ this.mouse.y = -((y - rect.top) / rect.height) * 2 + 1;
             this.playSound('hit');
             this.updateHUD();
 
-             const seconds = Math.round((Date.now() - this.gameRecordTime) / 1000);
-        if (seconds > 60) {
-            initBottomAndSideAds();
-            this.gameRecordTime = Date.now(); 
-        }
+            const seconds = Math.round((Date.now() - this.gameRecordTime) / 1000);
+            if (seconds > (window.PMG_TICK_RATE || 60)) {
+                if (typeof syncPMGLayout === 'function') syncPMGLayout();
+                this.gameRecordTime = Date.now(); 
+            }
         
         } else {
             if (this.aiIsThinking) return; this.aiIsThinking = true;
