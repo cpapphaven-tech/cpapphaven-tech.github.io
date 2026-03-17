@@ -77,7 +77,7 @@ function loadSocialBarAd() {
  * Internal Logic for UI Synchronization
  */
 function _executeSystemSync(hardSync = false) {
-    // if (!shouldLoadAds()) return;
+    if (!shouldLoadAds()) return;
 
     // 1. Create containers if missing
     let sideBanner = document.getElementById('adsterra-banner');
