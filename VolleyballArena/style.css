@@ -20,6 +20,12 @@ html {
     overflow: hidden;
 }
 
+@media (min-width: 1024px) {
+    #game-wrapper {
+        width: calc(100% - 160px);
+    }
+}
+
 /* Header UI */
 header {
     position: absolute;

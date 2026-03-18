@@ -4,8 +4,9 @@ const ctx = canvas.getContext("2d");
 // Responsive Canvas
 let CW, CH;
 function resize() {
-    CW = window.innerWidth;
-    CH = window.innerHeight;
+    const wrapper = document.getElementById("game-wrapper");
+    CW = wrapper ? wrapper.clientWidth : window.innerWidth;
+    CH = wrapper ? wrapper.clientHeight : window.innerHeight;
     canvas.width = CW;
     canvas.height = CH;
 }
