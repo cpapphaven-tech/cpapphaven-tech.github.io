@@ -34,31 +34,32 @@ let aiPoints = Array(10).fill(null);
 let gameState = "MENU"; // MENU, PLAY, POINT, OVER
 
 function updateScoreboard() {
-    const pFrames = document.getElementById("player-frames");
-    const aFrames = document.getElementById("ai-frames");
-    if (!pFrames || !aFrames) return;
+    const rFrames = document.getElementById("round-frames");
+    if (!rFrames) return;
     
-    let pHTML = '';
-    let aHTML = '';
+    let rHTML = '';
     
     for (let i = 0; i < 10; i++) {
-        pHTML += `<div class="frame-box ${i === currentRound ? 'active-frame' : ''}">
+        let content = '';
+        let color = '#fff';
+        if (playerPoints[i] === 1) {
+            content = 'P';
+            color = '#00e5ff';
+        } else if (aiPoints[i] === 1) {
+            content = 'AI';
+            color = '#f43f5e';
+        }
+
+        rHTML += `<div class="frame-box ${i === currentRound ? 'active-frame' : ''}">
             <div class="frame-number">${i+1}</div>
-            <div class="frame-bottom">${playerPoints[i] !== null ? playerPoints[i] : ''}</div>
-        </div>`;
-        aHTML += `<div class="frame-box ${i === currentRound ? 'active-frame' : ''}">
-            <div class="frame-number">${i+1}</div>
-            <div class="frame-bottom">${aiPoints[i] !== null ? aiPoints[i] : ''}</div>
+            <div class="frame-bottom" style="color: ${color}; text-shadow: 0 0 5px rgba(0,0,0,0.5);">${content}</div>
         </div>`;
     }
     
-    pFrames.innerHTML = pHTML;
-    aFrames.innerHTML = aHTML;
+    rFrames.innerHTML = rHTML;
     
-    const pTot = document.getElementById("player-total");
-    const aTot = document.getElementById("ai-total");
-    if(pTot) pTot.innerText = score1;
-    if(aTot) aTot.innerText = score2;
+    const mTot = document.getElementById("match-score");
+    if(mTot) mTot.innerHTML = `<span style="color:#00e5ff">${score1}</span>-<span style="color:#f43f5e">${score2}</span>`;
 }
 
 // Difficulty scaling

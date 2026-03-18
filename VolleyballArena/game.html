@@ -37,28 +37,19 @@
         Back</a>
 
     <div id="game-wrapper">
-        <!-- Game Title & Sides -->
-        <div style="position: absolute; top: 10px; width: 100%; text-align: center; z-index: 10000; pointer-events: none;">
-            <div style="font-size: 1.5rem; font-weight: 900; color: #ffeb3b; text-shadow: 0 2px 5px rgba(0,0,0,0.8); text-transform: uppercase;">Volleyball Arena</div>
-        </div>
-
-        <div style="position: absolute; top: 120px; width: 100%; display: flex; justify-content: space-between; padding: 0 15%; box-sizing: border-box; z-index: 50; pointer-events: none; font-size: 1.5rem; font-weight: 900; color: rgba(255,255,255,0.4); text-transform: uppercase;">
+        <!-- Game Sides -->
+        <div style="position: absolute; top: 80px; width: 100%; display: flex; justify-content: space-between; padding: 0 15%; box-sizing: border-box; z-index: 50; pointer-events: none; font-size: 1.5rem; font-weight: 900; color: rgba(255,255,255,0.4); text-transform: uppercase;">
             <span>Player (You)</span>
             <span>AI</span>
         </div>
 
         <!-- 10 Round Bowling-style Scoreboard -->
-        <div id="ui-overlay" style="position: absolute; top: 40px; left: 0; width: 100%; z-index: 10000; display: flex; justify-content: center; pointer-events: none;">
+        <div id="ui-overlay" style="position: absolute; top: 10px; left: 0; width: 100%; z-index: 10000; display: flex; justify-content: center; pointer-events: none;">
             <div class="detailed-scoreboard" id="scoreboard-container" style="pointer-events: auto;">
                 <div class="score-header">
-                    <div class="player-name" style="color: #00e5ff;">Player</div>
-                    <div class="frames-container" id="player-frames"></div>
-                    <div class="total-score" id="player-total">0</div>
-                </div>
-                <div class="score-header ai">
-                    <div class="player-name" style="color: #f43f5e;">AI</div>
-                    <div class="frames-container" id="ai-frames"></div>
-                    <div class="total-score" id="ai-total">0</div>
+                    <div class="player-name" style="color: #fff; width: 50px;">Rounds</div>
+                    <div class="frames-container" id="round-frames"></div>
+                    <div class="total-score" id="match-score" style="width: 70px;">0-0</div>
                 </div>
             </div>
         </div>

@@ -72,10 +72,10 @@ header {
     border-bottom: 2px solid rgba(255, 152, 0, 0.4);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    padding: 10px 5px;
+    padding: 5px 5px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
 }
 
 .score-header {
@@ -93,11 +93,11 @@ header {
 }
 
 .player-name {
-    width: 60px;
+    width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 800;
     color: #00e5ff;
     background: rgba(0, 0, 0, 0.4);
@@ -125,12 +125,12 @@ header {
 
 .frame-number {
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.7);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(0, 0, 0, 0.3);
-    padding: 2px 0;
+    padding: 0;
 }
 
 .frame-bottom {
@@ -138,18 +138,18 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 800;
     color: white;
-    min-height: 25px;
+    min-height: 18px;
 }
 
 .total-score {
-    width: 50px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 900;
     color: #ffb74d;
     background: rgba(0, 0, 0, 0.4);
