@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Volleyball Arena - PlayMixGames</title>
+
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Court...</p>
+    </div>
+
+    <a href="../index.html" class="back-btn"
+        style="position: absolute; top: 15px; left: 15px; z-index: 10000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">←
+        Back</a>
+
+    <div id="game-wrapper">
+        <!-- Game Title & Sides -->
+        <div style="position: absolute; top: 10px; width: 100%; text-align: center; z-index: 10000; pointer-events: none;">
+            <div style="font-size: 1.5rem; font-weight: 900; color: #ffeb3b; text-shadow: 0 2px 5px rgba(0,0,0,0.8); text-transform: uppercase;">Volleyball Arena</div>
+        </div>
+
+        <div style="position: absolute; top: 120px; width: 100%; display: flex; justify-content: space-between; padding: 0 15%; box-sizing: border-box; z-index: 50; pointer-events: none; font-size: 1.5rem; font-weight: 900; color: rgba(255,255,255,0.4); text-transform: uppercase;">
+            <span>Player (You)</span>
+            <span>AI</span>
+        </div>
+
+        <!-- 10 Round Bowling-style Scoreboard -->
+        <div id="ui-overlay" style="position: absolute; top: 40px; left: 0; width: 100%; z-index: 10000; display: flex; justify-content: center; pointer-events: none;">
+            <div class="detailed-scoreboard" id="scoreboard-container" style="pointer-events: auto;">
+                <div class="score-header">
+                    <div class="player-name" style="color: #00e5ff;">Player</div>
+                    <div class="frames-container" id="player-frames"></div>
+                    <div class="total-score" id="player-total">0</div>
+                </div>
+                <div class="score-header ai">
+                    <div class="player-name" style="color: #f43f5e;">AI</div>
+                    <div class="frames-container" id="ai-frames"></div>
+                    <div class="total-score" id="ai-total">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Overlay Messages -->
+        <div id="match-message" class="hidden" style="z-index: 20000;">POINT!</div>
+
+        <!-- Mobile Controls (Hidden due to touch tracking) -->
+        <div id="mobile-controls" style="display: none !important;">
+            <div class="d-pad">
+                <div class="ctrl-btn" id="btn-left">◀</div>
+                <div class="ctrl-btn" id="btn-right">▶</div>
+            </div>
+            <div class="action-pad">
+                <div class="ctrl-btn" id="btn-hit">✋</div>
+                <div class="ctrl-btn" id="btn-jump">▲</div>
+            </div>
+        </div>
+
+        <!-- Start Screen (Skipped) -->
+        <div id="start-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 style="color: #ff9800; font-size: 2.5rem; margin-top: 0; margin-bottom: 20px;">Volleyball Arena</h1>
+                <p style="color: #ccc; margin-bottom: 30px;">
+                    First to 5 Points Wins!<br>
+                    <span style="font-size: 0.9rem; opacity: 0.7;">Desktop/Mobile: Use touch or mouse to drag player into ball and jump</span>
+                </p>
+
+                <button id="start-btn" class="game-btn">
+                    ▶ PLAY MATCH
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 id="winner-text" style="color: #ff9800; font-size: 2.2rem; margin-bottom: 10px;">MATCH OVER</h1>
+                <div id="final-score" style="font-size: 3rem; margin-bottom: 20px; font-weight: bold; color: white;">0 -
+                    0
+                </div>
+
+                <button id="restart-btn" class="game-btn">
+                    🔄 PLAY AGAIN
+                </button>
+            </div>
+        </div>
+
+        <!-- Orientation Hint -->
+        <div id="orientation-hint" class="hidden">
+            <div class="hint-content">
+                <div class="rotate-icon">📱</div>
+                <p>Please rotate your device for the best experience!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+</body>
+
+</html>
