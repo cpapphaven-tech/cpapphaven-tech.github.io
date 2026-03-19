@@ -3,20 +3,51 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Number Balloon Shooter | PlayMixGames</title>
+    <!-- Fixed: removed user-scalable=no and maximum-scale=1.0 (Accessibility violation) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Number Balloon Shooter – Pop Balloons &amp; Score! | PlayMixGames</title>
 
-    <script type="module" src="../analytics.js"></script>
-    <script src="../ads.js"></script>
-    <script src="../sidebar.js"></script>
+    <!-- Fixed: added meta description (was missing, causing SEO:83) -->
+    <meta name="description" content="Play Number Balloon Shooter online free! Pop falling balloons with numeric values to reach your target score before the timer runs out. Unlimited levels!">
 
+    <!-- OG Tags for social sharing -->
+    <meta property="og:title" content="Number Balloon Shooter | PlayMixGames">
+    <meta property="og:description" content="Pop mathematical balloons falling from the sky! Reach your target score before time runs out. Free browser game, no download needed.">
+    <meta property="og:url" content="https://playmixgames.in/NumberBalloonShooter/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/NumberBalloonShooter/index.html">
+
+    <!-- Preconnect to CDN origins to reduce latency for Three.js & Supabase -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Critical CSS loaded synchronously (small files) -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../portal-style.css">
     <link rel="stylesheet" href="../loader.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Three.js: must load before game.js, but we can use defer on game.js instead -->
+    <!-- Supabase deferred since analytics is non-critical -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- All non-critical scripts deferred -->
+    <script defer src="../analytics.js" type="module"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Number Balloon Shooter",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Pop mathematical balloons falling from the sky to reach your target score before the timer runs out. Unlimited levels!"
+    }
+    </script>
 </head>
 
 <body class="pmg-sidebar-start-open">
@@ -26,14 +57,13 @@
         </div>
     </div>
 
-
-
-    <div id="game-wrapper">
-        <canvas id="game-canvas"></canvas>
+    <!-- Fixed: wrapped in <main> landmark for accessibility -->
+    <main id="game-wrapper" aria-label="Number Balloon Shooter Game">
+        <canvas id="game-canvas" aria-label="Game canvas"></canvas>
 
         <!-- UI OVERLAY -->
         <div id="ui-overlay">
-            <div id="score-board">
+            <div id="score-board" role="status" aria-live="polite" aria-label="Game scores">
                 <span class="hud-item highlight-pill yellow">Target: <span id="target-score">100</span></span>
                 <span class="hud-item highlight-pill blue">Score: <span id="current-score">0</span></span>
                 <span class="hud-item highlight-pill red" id="timer-container">Time: <span id="time-left">60</span>s</span>
@@ -41,9 +71,10 @@
             </div>
         </div>
 
-        <div id="start-screen" class="overlay">
+        <!-- Fixed: h2 used here so page h1 is only in the SEO section (correct hierarchy) -->
+        <div id="start-screen" class="overlay" role="dialog" aria-labelledby="game-title">
             <div class="overlay-box">
-                <h1 style="color: #00e5ff; font-size: 2.5rem; margin-top: 0;">Number Balloon Shooter</h1>
+                <h2 id="game-title" style="color: #00e5ff; font-size: 2.5rem; margin-top: 0;">Number Balloon Shooter</h2>
                 <p style="margin-bottom: 20px; font-size: 1.1rem;">
                     Shoot balloons to reach the target score!<br>
                     <strong>Values: +1 to +50</strong><br>
@@ -53,9 +84,9 @@
             </div>
         </div>
 
-        <div id="game-over-screen" class="overlay hidden">
+        <div id="game-over-screen" class="overlay hidden" role="dialog" aria-labelledby="result-title">
             <div class="overlay-box">
-                <h1 id="result-title">TIME'S UP!</h1>
+                <h2 id="result-title">TIME'S UP!</h2>
                 <p id="result-desc" style="margin-bottom: 20px;">You didn't reach the target.</p>
                 <button id="restart-btn" class="pmg-btn">PLAY AGAIN</button>
                 <button id="next-level-btn" class="pmg-btn hidden">NEXT LEVEL</button>
@@ -63,29 +94,31 @@
                     style="margin-top: 15px; display: block; text-align: center;">More Games</a>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- SEO & FAQ Section -->
+    <!-- SEO & FAQ Section: h1 here is the real page heading for crawlers -->
     <section class="game-description" style="background:#111; padding:40px 20px; color:#999; text-align:center;">
         <div style="max-width:800px; margin: 0 auto;">
-            <h2 style="color:#fff;">Number Balloon Shooter</h2>
-            <p>Pop the mathematical balloons dropping from the sky to reach your target score before time runs out!</p>
-            <h3 style="color:#fff; margin-top:20px;">How to Play</h3>
+            <!-- Fixed: h1 here for correct heading hierarchy (only one h1 per page) -->
+            <h1 style="color:#fff; font-size: 1.8rem;">Number Balloon Shooter – Free Online Balloon Pop Game</h1>
+            <p>Pop the mathematical balloons dropping from the sky to reach your target score before time runs out! Play free in your browser, no download needed.</p>
+            <h2 style="color:#fff; margin-top:20px;">How to Play</h2>
             <p>Tap or click on the balloons to pop them and accumulate their values! Each balloon adds its score to your total point haul. Watch out—some balloons carry negative values and will drain your active score if you pop them!</p>
-            <h3 style="color:#fff; margin-top:20px;">FAQ</h3>
+            <h2 style="color:#fff; margin-top:20px;">FAQ</h2>
             <p><strong>Are bigger numbers better?</strong> Yes! High numbers give you more score rapidly but exist in smaller quantities and fall faster.</p>
         </div>
     </section>
 
-     <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             if (typeof prepSystem === "function") {
                 prepSystem();
             }
         });
     </script>
-    
-    <script src="game.js"></script>
+
+    <!-- game.js deferred so it doesn't block initial render -->
+    <script defer src="game.js"></script>
     <script>
         window.addEventListener('load', function () {
             var loader = document.getElementById('pmg-loader');
