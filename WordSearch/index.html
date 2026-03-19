@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Word Search Online Free - Play Word Puzzle Games | PlayMix Games</title>
     <meta name="description"
         content="Play free Word Search online with themes like Animals, Space and Sports. No download needed. Works on any device.">
@@ -126,7 +126,9 @@
             opacity: 1;
         }
     </style>
-    <script src="../sidebar.js"></script>
+    <script defer src="../sidebar.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
     <meta property="og:title" content="Word Search Online Free - Play Word Puzzle Games | PlayMix Games">
     <meta property="og:description" content="Play free Word Search online with themes like Animals, Space and Sports. No download needed. Works on any device.">
@@ -162,7 +164,9 @@
     </div>
 
     <!-- The actual game is requested in background -->
-    <iframe id="game-frame" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+    <main>
+        <iframe id="game-frame" title="Word Search Game" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
 
     <section class="seo-content"
         style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">

@@ -54,15 +54,16 @@
     </script>
     
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>3D Bowling Clash | PlayMixGames</title>
     <meta name="description"
         content="Play 3D Bowling Clash online. Master the perfect curve throw and get strikes against the AI in this immersive 3D sports game!">
     
-    <script type="module" src="../analytics.js"></script>
-    <script src="../ads.js"></script>
-    <script src="../sidebar.js"></script>
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../portal-style.css">
@@ -86,7 +87,7 @@
     </div>
 
     <!-- Game Wrapper -->
-    <div id="game-wrapper">
+    <main id="game-wrapper">
         <!-- Main Canvas -->
         <canvas id="game-canvas"></canvas>
 
@@ -145,8 +146,7 @@
                     style="margin-top:10px;display:block;text-align:center;text-decoration:none;">🏠 More Games</a>
             </div>
         </div>
-        </div>
-    </div> <!-- End game-wrapper -->
+    </main>
 
     <!-- SEO Section -->
     <section class="game-description" style="background:#111; padding:40px 20px; color:#999; text-align:center;">
@@ -161,7 +161,7 @@
         </div>
     </section>
 
-    <script src="game.js"></script>
+    <script defer src="game.js"></script>
     <script>
         window.addEventListener('load', function () {
             var loader = document.getElementById('pmg-loader');
