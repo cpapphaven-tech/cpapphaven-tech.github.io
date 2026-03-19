@@ -59,6 +59,7 @@ function initSupabase() {
     }
 
     startGameSession();
+    markSessionStarted();
 }
 
 function generateSessionId() {
