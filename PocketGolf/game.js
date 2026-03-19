@@ -106,6 +106,7 @@ class GolfGame3D {
         }
 
         await this.startGameSession();
+        await this.markSessionStarted();
     }
 
     // =====================================
@@ -169,6 +170,16 @@ class GolfGame3D {
             console.warn("Session start failed", e);
         }
     }
+
+    async markSessionStarted() {
+    if (!this.supabaseClient || !this.sessionId) return;
+    try {
+        await this.supabaseClient
+            .from('game_sessions')
+            .update({ started_game: true })
+            .eq('session_id', this.sessionId);
+    } catch (e) { }
+}
 
     async updateGameSession(fields) {
 
