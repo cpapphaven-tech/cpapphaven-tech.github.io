@@ -505,41 +505,13 @@ if (!document.getElementById('scroller-styles')) {
 }
 
 function renderTopLeftScroller() {
-    // 🚫 Skip on mobile
-    if (isMobileDevice()) {
-        console.log("📱 Mobile detected — scroller hidden");
-        return;
-    }
-
-    // Create container if not exists
-    let container = document.getElementById('top-left-game-scroller');
-    if (!container) {
-        container = document.createElement('div');
-        container.id = 'top-left-game-scroller';
-        document.body.appendChild(container);
-    }
-
-    renderGameScroller('top-left-game-scroller');
-    container.classList.add('scroller-fixed-top');
+    // Disabled as requested for performance
+    console.log("🚫 Top-left scroller disabled");
 }
 
 function renderTopRightScroller() {
-    // 🚫 Skip on mobile
-    if (isMobileDevice()) {
-        console.log("📱 Mobile detected — top-right scroller hidden");
-        return;
-    }
-
-    // Create container if not exists
-    let container = document.getElementById('top-right-game-scroller');
-    if (!container) {
-        container = document.createElement('div');
-        container.id = 'top-right-game-scroller';
-        document.body.appendChild(container);
-    }
-
-    renderGameScroller('top-right-game-scroller');
-    container.classList.add('scroller-fixed-top-right');
+    // Disabled as requested for performance
+    console.log("🚫 Top-right scroller disabled");
 }
 
 /**

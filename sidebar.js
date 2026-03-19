@@ -55,6 +55,12 @@
             return;
         }
 
+        // Safety check: Don't load sidebar inside iframes (prevents duplicates)
+        if (window.self !== window.top) {
+            console.log('🖼️ PMG Sidebar: Suppressed inside iframe.');
+            return;
+        }
+
         if (isMobile) {
             console.log('📱 PMG Sidebar: Hidden for mobile.');
             addMobileHomeButton();
@@ -151,7 +157,7 @@
         if (!list) return;
         list.innerHTML = gameArray.map(g => `
             <a href="${prefix}${g.path}" class="mini-game-card">
-                <img src="${prefix}${g.icon}" onerror="this.src='${prefix}assets/fallback.png'">
+                <img src="${prefix}${g.icon}" alt="${g.name}" loading="lazy" onerror="this.src='${prefix}assets/fallback.png'">
                 <div class="info">
                     <h4>${g.name.split(' ').slice(1).join(' ') || g.name}</h4>
                 </div>
@@ -177,7 +183,7 @@
             </div>
             <div class="pmg-mobile-hint-body">
                 <div class="pmg-mobile-qr-placeholder" title="Scan to play on mobile">
-                    <img src="${qrApi}" alt="QR Code">
+                    <img src="${qrApi}" alt="Scan QR Code to play on mobile" loading="lazy">
                 </div>
                 <div class="pmg-mobile-text">
                     <strong>Play on the Go!</strong>

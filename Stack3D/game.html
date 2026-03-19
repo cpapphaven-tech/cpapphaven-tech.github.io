@@ -10,29 +10,19 @@
         content="Play Stack 3D online. master the art of perfect stacking, reach new heights, and compete on the global leaderboard!">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../loader.css">
-
-
-    <!-- Three.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
-        crossorigin="anonymous"></script>
-
-    <script type="module" src="../analytics.js"></script>
-
-    <!-- Project Scripts -->
-    <script src="../sidebar.js"></script>
-    <script src="../ads.js"></script>
-
-
-    <!-- Supabase SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
+
+    <!-- Deferred Scripts -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer src="../sidebar.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../analytics.js" type="module"></script>
 
 
     <!-- Cookie Consent Script -->
@@ -89,27 +79,7 @@
 
 
 
-    <div id="tutorial-overlay" class="hidden">
-        <div id="tutorial-dialog">
 
-            <div id="tutorial-inner">
-
-                <div id="tutorial-video-container">
-                    <video id="tutorial-video" muted autoplay playsinline preload="auto">
-                        <source src="../assets/stackvid.mp4" type="video/mp4">
-                    </video>
-                </div>
-
-                <div id="tutorial-text">
-                    <h3>🎮 How to Play</h3>
-                    <p>👇 Tap to stack the blocks</p>
-                    <p>🎯 Aim for perfect alignment!</p>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
 
     <div id="party-welcome" class="hidden">
         <div id="party-text">🎉 Welcome!</div>

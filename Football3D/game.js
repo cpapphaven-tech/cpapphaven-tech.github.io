@@ -758,30 +758,7 @@ function showPartyWelcome() {
 }
 
 
-function showTutorial() {
-    const overlay = document.getElementById("tutorial-overlay");
-    const video = document.getElementById("tutorial-video");
 
-    if (!overlay || !video) return;
-
-    overlay.classList.remove("hidden");
-
-    video.currentTime = 0;
-
-    video.play().catch(err => {
-        console.log("Autoplay blocked:", err);
-    });
-
-    const endTutorial = () => {
-        overlay.classList.add("hidden");
-        video.pause();
-        overlay.style.display = "none"; // force hide
-    };
-
-    const timer = setTimeout(endTutorial, 8000);
-
-    video.onended = endTutorial;
-}
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -1201,6 +1178,6 @@ window.addEventListener("beforeunload", () => {
 // Start
 init();
 
-showTutorial();
+
 
 showPartyWelcome();
