@@ -74,6 +74,7 @@ const ui = {
     target: document.getElementById('target-score'),
     time: document.getElementById('time-left'),
     level: document.getElementById('level-display'),
+    timerContainer: document.getElementById('timer-container'),
     startScreen: document.getElementById('start-screen'),
     gameOverScreen: document.getElementById('game-over-screen'),
     resultTitle: document.getElementById('result-title'),
@@ -422,6 +423,14 @@ function updateHUD() {
     ui.target.innerText = targetScore;
     ui.time.innerText = Math.max(0, Math.ceil(timeLeft));
     ui.level.innerText = level;
+
+    // Highlight timer when low
+    if (timeLeft <= 10) {
+        ui.timerContainer.classList.add('urgent');
+    } else {
+        ui.timerContainer.classList.add('red'); // Base color
+        ui.timerContainer.classList.remove('urgent');
+    }
 }
 
 function startGame() {

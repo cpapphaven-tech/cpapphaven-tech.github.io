@@ -19,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 
-<body class="pmg-sidebar-start-closed">
+<body class="pmg-sidebar-start-open">
     <div id="pmg-loader">
         <div class="pmg-bar-track">
             <div class="pmg-bar-fill"></div>
@@ -34,10 +34,10 @@
         <!-- UI OVERLAY -->
         <div id="ui-overlay">
             <div id="score-board">
-                <span class="hud-item">Target: <span id="target-score" style="color: #ffeb3b;">100</span></span>
-                <span class="hud-item">Score: <span id="current-score" style="color: #00e5ff;">0</span></span>
-                <span class="hud-item">Time: <span id="time-left" style="color: #ff3366;">60</span>s</span>
-                <span class="hud-item">Level: <span id="level-display">1</span></span>
+                <span class="hud-item highlight-pill yellow">Target: <span id="target-score">100</span></span>
+                <span class="hud-item highlight-pill blue">Score: <span id="current-score">0</span></span>
+                <span class="hud-item highlight-pill red" id="timer-container">Time: <span id="time-left">60</span>s</span>
+                <span class="hud-item highlight-pill green">Level: <span id="level-display">1</span></span>
             </div>
         </div>
 
