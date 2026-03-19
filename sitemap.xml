@@ -116,4 +116,12 @@
     <loc>https://playmixgames.in/PocketGolf/index.html</loc>
     <priority>0.9</priority>
   </url>
+    <url>
+    <loc>https://playmixgames.in/VolleyballArena/index.html</loc>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/NumberBalloonShooter/index.html</loc>
+    <priority>0.9</priority>
+  </url>
 </urlset>

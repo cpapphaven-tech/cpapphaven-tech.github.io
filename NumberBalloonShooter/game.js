@@ -52,6 +52,7 @@ window.addEventListener("beforeunload", () => {
 let scene, camera, renderer;
 let raycaster, mouse;
 let balloons = [];
+let CW, CH; // Global dimensions
 
 // ===================================
 // GAME STATE
@@ -90,14 +91,14 @@ function init() {
     ui.startScreen.style.display = 'none';
 
     const wrapper = document.getElementById('game-wrapper');
-    let cw = wrapper ? wrapper.clientWidth : window.innerWidth;
-    let ch = wrapper ? wrapper.clientHeight : window.innerHeight;
+    CW = wrapper ? wrapper.clientWidth : window.innerWidth;
+    CH = wrapper ? wrapper.clientHeight : window.innerHeight;
 
-    camera = new THREE.PerspectiveCamera(60, cw / ch, 0.1, 1000);
+    camera = new THREE.PerspectiveCamera(60, CW / CH, 0.1, 1000);
     camera.position.set(0, 0, 15);
 
     renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('game-canvas'), antialias: true });
-    renderer.setSize(cw, ch);
+    renderer.setSize(CW, CH);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     // Lights
@@ -149,11 +150,11 @@ function createStarfield() {
 function onResize() {
     const wrapper = document.getElementById('game-wrapper');
     if (!wrapper) return;
-    let cw = wrapper.clientWidth;
-    let ch = wrapper.clientHeight;
-    camera.aspect = cw / ch;
+    CW = wrapper.clientWidth;
+    CH = wrapper.clientHeight;
+    camera.aspect = CW / CH;
     camera.updateProjectionMatrix();
-    renderer.setSize(cw, ch);
+    renderer.setSize(CW, CH);
 }
 
 // ===================================
@@ -207,7 +208,7 @@ function spawnBalloon() {
     }
 
     let color = colorList[(Math.abs(val) - 1) % 10]; // Colors match absolute values to disguise minuses
-    let radius = 1.3; 
+    let radius = CW < 768 ? 0.9 : 1.3; 
     
     // Base speed slightly increased, scales softly with absolute numerical payload
     let speedY = 0.03 + (Math.abs(val) * 0.003) + Math.random() * 0.02; 
@@ -236,7 +237,9 @@ function spawnBalloon() {
     const swaySpeed = 1 + Math.random() * 2;
     const swayAmount = 0.05 + Math.random() * 0.1;
 
-    mesh.position.x = (Math.random() - 0.5) * 14;
+    const aspect = CW / CH;
+    const xRange = Math.max(5, 12 * aspect); // Dynamically scale range based on aspect ratio
+    mesh.position.x = (Math.random() - 0.5) * xRange;
     mesh.position.y = 12 + Math.random() * 2; 
     mesh.position.z = (Math.random() - 0.5) * 4; 
     
@@ -321,11 +324,11 @@ function createBurstParticles(pos, colorStr, value) {
     
     const wrapper = document.getElementById('game-wrapper');
     if(!wrapper) return;
-    const cw = wrapper.clientWidth;
-    const ch = wrapper.clientHeight;
+    CW = wrapper.clientWidth;
+    CH = wrapper.clientHeight;
     // Map WebGL -1,1 normalizations space identically to pixel ratios
-    const px = (vector.x * .5 + .5) * cw;
-    const py = (-(vector.y * .5) + .5) * ch;
+    const px = (vector.x * .5 + .5) * CW;
+    const py = (-(vector.y * .5) + .5) * CH;
     
     const floater = document.createElement('div');
     floater.innerText = value > 0 ? `+${value}` : `${value}`;
