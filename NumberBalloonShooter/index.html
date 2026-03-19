@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Number Balloon Shooter | PlayMixGames</title>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <div id="pmg-loader">
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="../index.html" class="back-btn"
+        style="position: absolute; top: 15px; left: 15px; z-index: 10000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">←
+        Back</a>
+
+    <div id="game-wrapper">
+        <canvas id="game-canvas"></canvas>
+
+        <!-- UI OVERLAY -->
+        <div id="ui-overlay">
+            <div id="score-board">
+                <span class="hud-item">Target: <span id="target-score" style="color: #ffeb3b;">100</span></span>
+                <span class="hud-item">Score: <span id="current-score" style="color: #00e5ff;">0</span></span>
+                <span class="hud-item">Time: <span id="time-left" style="color: #ff3366;">60</span>s</span>
+                <span class="hud-item">Level: <span id="level-display">1</span></span>
+            </div>
+        </div>
+
+        <div id="start-screen" class="overlay">
+            <div class="overlay-box">
+                <h1 style="color: #00e5ff; font-size: 2.5rem; margin-top: 0;">Number Balloon Shooter</h1>
+                <p style="margin-bottom: 20px; font-size: 1.1rem;">
+                    Shoot balloons to reach the target score!<br>
+                    <strong>Values: +1 to +50</strong><br>
+                    <span style="font-size: 0.95rem; color: #f43f5e; font-weight: bold;">Check the numbers! Watch out for minus balloons!</span>
+                </p>
+                <button id="start-btn" class="pmg-btn">PLAY MATCH</button>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <h1 id="result-title">TIME'S UP!</h1>
+                <p id="result-desc" style="margin-bottom: 20px;">You didn't reach the target.</p>
+                <button id="restart-btn" class="pmg-btn">PLAY AGAIN</button>
+                <button id="next-level-btn" class="pmg-btn hidden">NEXT LEVEL</button>
+                <a href="../index.html" class="pmg-btn-outline"
+                    style="margin-top: 15px; display: block; text-align: center;">More Games</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEO & FAQ Section -->
+    <section class="game-description" style="background:#111; padding:40px 20px; color:#999; text-align:center;">
+        <div style="max-width:800px; margin: 0 auto;">
+            <h2 style="color:#fff;">Number Balloon Shooter</h2>
+            <p>Pop the mathematical balloons dropping from the sky to reach your target score before time runs out!</p>
+            <h3 style="color:#fff; margin-top:20px;">How to Play</h3>
+            <p>Tap or click on the balloons to pop them and accumulate their values! Each balloon adds its score to your total point haul. Watch out—some balloons carry negative values and will drain your active score if you pop them!</p>
+            <h3 style="color:#fff; margin-top:20px;">FAQ</h3>
+            <p><strong>Are bigger numbers better?</strong> Yes! High numbers give you more score rapidly but exist in smaller quantities and fall faster.</p>
+        </div>
+    </section>
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+    
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>
