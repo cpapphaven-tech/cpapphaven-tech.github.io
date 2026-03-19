@@ -957,3 +957,6 @@ restartBtn.addEventListener('click', () => {
 resize();
 updateHUD();
 tick();
+
+// Auto-start game to skip "Serve & Play" screen
+setTimeout(startMatch, 100);
