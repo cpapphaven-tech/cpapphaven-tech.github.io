@@ -54,17 +54,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayMixGames - Premium 3D Web Games</title>
-    <link rel="stylesheet" href="portal-style.css">
-    <meta name="description"
-        content="Discover premium, high-fidelity 3D web games. Instant play, no downloads required. Play Stack 3D and more at PlayMixGames.">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="loader.css">
-    <link rel="alternate" hreflang="en" href="https://playmixgames.in/" />
-    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/" />
 
-    <script type="module" src="./analytics.js"></script>
-    <script src="ads.js"></script>
+    <!-- Preconnect to critical origins BEFORE any blocking requests -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- Fonts with display=swap to prevent FOIT -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap"></noscript>
+
+    <link rel="stylesheet" href="portal-style.css">
+    <link rel="stylesheet" href="loader.css">
+
+    <meta name="description" content="Discover premium, high-fidelity 3D web games. Instant play, no downloads required. Play Stack 3D and more at PlayMixGames.">
+
+    <!-- AdSense: async + low priority so it never blocks LCP -->
+    <script async fetchpriority="low" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
+
+    <!-- Analytics and ads deferred so they never block parse -->
+    <script defer src="./analytics.js" type="module"></script>
+    <script defer src="ads.js"></script>
 
     <!-- Load Ads Using Professional Control System -->
     <!-- <script>
@@ -75,23 +86,24 @@
         });
     </script> -->
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
+    <!-- Google tag (gtag.js) - deferred to avoid blocking -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'AW-17908156906');
     </script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
 
+
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/" />
+    <link rel="canonical" href="https://playmixgames.in/" />
 
     <meta property="og:title" content="PlayMixGames - Premium 3D Web Games">
-    <meta property="og:description"
-        content="Discover premium, high-fidelity 3D web games. Instant play, no downloads required. Play Stack 3D and more at PlayMixGames.">
+    <meta property="og:description" content="Discover premium, high-fidelity 3D web games. Instant play, no downloads required. Play Stack 3D and more at PlayMixGames.">
     <meta property="og:url" content="https://playmixgames.in/">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://playmixgames.in/" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -234,12 +246,9 @@
 
             <!-- Stick Duel Battle -->
             <a href="StickDuel/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/stckduels.png');
-    background-size: contain;
-    background-position: center;
-"></div>
- 
+                <div class="card-img">
+                    <img src="assets/stckduels.png" alt="Stickman Neon Warriors" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
 
 
                 <div class="card-info">
@@ -253,12 +262,9 @@
 
             <!-- Table Tennis World Tour -->
             <a href="TableTennis/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/table_tennis_icon.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-"></div>
+                <div class="card-img">
+                    <img src="assets/table_tennis_icon.png" alt="Table Tennis World Tour" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🏓 Table Tennis World Tour</h3>
                     <p><strong>Realistic Ping Pong!</strong> Challenge smart AI in this 3D perspective table tennis
@@ -270,11 +276,9 @@
 
             <!-- Cricket Master -->
             <a href="CricketMaster/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/cricket_master_icon.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/cricket_master_icon.png" alt="Cricket Master World Cup" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🏏 Cricket Master: World Cup</h3>
                     <p><strong>Professional Batting Duel!</strong> Step onto the pitch and hit huge sixes in this
@@ -286,11 +290,9 @@
 
             <!-- Head Football -->
             <a href="HeadFootball/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/head_football_icon.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/head_football_icon.png" alt="Head Football" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>⚽ Head Football</h3>
                     <p><strong>1v1 Football Action!</strong> Face off against smart AI in this fast-paced head football
@@ -302,12 +304,8 @@
 
             <!-- Stack 3D -->
             <a href="Stack3D/index.html" class="game-card">
-
-                <div class="card-img" style="
-                       background-image: url('assets/stack3d.png');
-    background-size: contain;
-    background-position: center;
-">
+                <div class="card-img">
+                    <img src="assets/stack3d.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
                 </div>
 
                 <div class="card-info">
@@ -322,11 +320,9 @@
 
             <!-- Brick Breaker -->
             <a href="BrickBreaker/game.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/brickbreaker200.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/brickbreaker200.png" alt="Brick Breaker" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🧱 Brick Breaker</h3>
                     <p><strong>Smash every brick!</strong> Control the paddle, bounce the ball and destroy all the
@@ -338,11 +334,9 @@
 
             <!-- Merge Numbers 2248 -->
             <a href="MergeNumbers/game.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/mergenumber200.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/mergenumber200.png" alt="Merge Numbers 2248" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🔢 Merge Numbers 2248</h3>
                     <p><strong>Connect &amp; merge!</strong> Drag through same-number blocks in any of 8 directions to
@@ -356,11 +350,9 @@
 
             <!-- Block Puzzle Dash -->
             <a href="BlockPuzzle/game.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/block_puzzle_thumbnail_1772348265891.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/block_puzzle_thumbnail_1772348265891.png" alt="Block Puzzle Dash" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🧩 Block Puzzle Dash</h3>
                     <p><strong>Train your brain!</strong> Clear rows and columns to score. Reach the target in 60
@@ -372,11 +364,9 @@
 
             <!-- New Game: Football 3D -->
             <a href="Football3D/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/football3d.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/football3d.png" alt="Football 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>Football 3D</h3>
                     <p><strong>Perfect your strike!</strong> Swipe to kick the ball and beat the moving goalkeeper.
@@ -388,11 +378,9 @@
 
             <!-- New Game: Basketball 3D -->
             <a href="Basketball3D/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/basketball3d.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/basketball3d.png" alt="Basketball 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>Basketball 3D</h3>
                     <p><strong>Master the perfect shot!</strong> Swipe to shoot hoops and aim for the global
@@ -422,12 +410,9 @@
 
             <!-- Game 3: Color Match 3D -->
             <a href="ColorMatch/index.html" class="game-card">
-                <div class="card-img" style="
-
-    background-image: url('assets/colormatch.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/colormatch.png" alt="Color Match 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>Color Match 3D</h3>
                     <p><strong>Fast reaction game!</strong> Tap the 3D cubes that match the target color before time
@@ -439,11 +424,9 @@
 
             <!-- Game 6: Sushi Match 3D -->
             <a href="SushiMatch/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/sushimatch3d.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/sushimatch3d.png" alt="Sushi Match 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>寿司マッチ3D - Sushi Match</h3>
                     <p><strong>Match delicious sushi!</strong> Test your memory in this addictive Japanese-themed 3D
@@ -473,11 +456,9 @@
 
             <!-- Game 8: Water Sort 3D -->
             <a href="WaterSort3D/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/watersort3d.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/watersort3d.png" alt="Water Sort 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🧪 Water Sort 3D</h3>
                     <p><strong>Sort the colors!</strong> Addictive puzzle game. Pour colored water into tubes until each
@@ -489,11 +470,9 @@
 
             <!-- Game 9: Bottle Shoot 3D -->
             <a href="BottleShoot3D/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/bottle200.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/bottle200.png" alt="Bottle Shoot 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🍾 Bottle Shoot 3D</h3>
                     <p><strong>Slingshot physics!</strong> Pull back the rubber band and knock down the glass bottles.
@@ -506,11 +485,9 @@
 
             <!-- Game: Pocket Golf vs AI -->
             <a href="PocketGolf/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/pocket_golf_icon.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/pocket_golf_icon.png" alt="Pocket Golf vs AI" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>⛳ Pocket Golf vs AI</h3>
                     <p><strong>Precision Golf Duel!</strong> Aim, set power, and sink the ball with fewer strokes than the smart AI. Navigate through walls and avoid dangerous spikes!</p>
@@ -521,11 +498,9 @@
 
             <!-- Game 9: Air Hockey 3D -->
             <a href="AirHockey3D/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/airhockey200.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/airhockey200.png" alt="Air Hockey 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🏑 Air Hockey 3D</h3>
                     <p><strong>Fast-paced neon sports!</strong> Challenge smart AI in this classic arcade game
@@ -538,11 +513,9 @@
 
             <!-- Game 9: Sudoku -->
             <a href="Sudoku/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/sudoku200.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/sudoku200.png" alt="Sudoku" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🧩 Sudoku</h3>
                     <p><strong>Classic Logic Puzzle!</strong> Unlimited levels of brain-teasing Sudoku. Fill the 9x9
@@ -554,11 +527,9 @@
 
             <!-- Game 10: Word Search Explorer -->
             <a href="WordSearch/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/wordsrarch200.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/wordsrarch200.png" alt="Word Search" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🔍 Word Search</h3>
                     <p><strong>Find hidden words!</strong> Explore themes like Animals, Space, and Sports in this
@@ -570,11 +541,9 @@
 
             <!-- Game 11: Ludo Master -->
             <a href="Ludo/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/ludo200.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/ludo200.png" alt="Ludo Master" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>🎲 Ludo Master</h3>
                     <p><strong>Classic Board Game!</strong> Play Ludo against smart AI opponents. Roll the dice,
@@ -586,11 +555,9 @@
 
             <!-- Game 12: Bubble Shooter 3D -->
             <a href="BubbleShooter/index.html" class="game-card">
-                <div class="card-img" style="
-                       background-image: url('assets/bubble_shooter.png');
-    background-size: contain;
-    background-position: center;
-"></div>
+                <div class="card-img">
+                    <img src="assets/bubble_shooter.png" alt="Bubble Shooter 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
+                </div>
                 <div class="card-info">
                     <h3>Bubble Shooter 3D</h3>
                     <p><strong>Classic Arcade Fun!</strong> Aim and shoot bubbles to match 3 or more of the same color.
@@ -698,11 +665,8 @@
             });
         }
 
-        // Hard reload if coming from an old session
-        if (!sessionStorage.getItem('hard-reloaded')) {
-            sessionStorage.setItem('hard-reloaded', 'true');
-            setTimeout(() => window.location.reload(true), 1000);
-        }
+        // NOTE: Removed hard-reload sessionStorage hack - it was hurting performance
+        // by forcing an extra full page reload on every fresh visit.
     </script>
     <script>
         // Game Search and Count Implementation

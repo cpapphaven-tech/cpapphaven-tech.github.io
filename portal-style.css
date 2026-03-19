@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
+/* Google Fonts loaded async by HTML - this @import removed to prevent render-blocking */
 
 :root {
     --pmg-accent: #4d79ff;
@@ -249,8 +249,7 @@
 
 body.portal-index {
     font-family: 'Outfit', sans-serif;
-    background: linear-gradient(135deg, #0f111a 0%, #1a1d2e 100%);
-    background-attachment: fixed;
+    background: #0f111a; /* Removed background-attachment:fixed — kills compositing on mobile */
     color: var(--pmg-text);
     margin: 0;
     padding: 0;
@@ -315,6 +314,8 @@ body.portal-index {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 15px;
+    content-visibility: auto; /* Defer off-screen card rendering */
+    contain-intrinsic-size: 0 800px;
 }
 
 .portal-index .game-card {
@@ -324,13 +325,16 @@ body.portal-index {
     text-decoration: none;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease;
+    /* Use translate instead of transform to stay composited (no layout thrash) */
+    transition: translate 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
+    will-change: translate;
+    contain: layout style;
 }
 
 .portal-index .game-card:hover {
-    transform: translateY(-8px);
+    translate: 0 -8px; /* GPU-composited, avoids layout recalc */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     border-color: var(--pmg-accent);
 }
@@ -360,6 +364,7 @@ body.portal-index {
     line-height: 1.3;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2; /* standard property for future compat */
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 5px;
