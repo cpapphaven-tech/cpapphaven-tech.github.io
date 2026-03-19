@@ -239,6 +239,7 @@
     body.pmg-sidebar-open #tutorial-overlay,
     body.pmg-sidebar-open #cross-promo-container,
     body.pmg-sidebar-open #bottom-bar,
+    body.pmg-sidebar-open #bottom-ad,
     body.pmg-sidebar-open .back-btn {
         left: 290px !important;
         transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
