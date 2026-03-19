@@ -140,6 +140,33 @@
     text-align: center;
 }
 
+.sidebar-ad-row {
+    grid-column: 1 / -1;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    margin: 5px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar-ad-row::before {
+    content: "SPONSORED";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
+
 .mini-game-card:hover {
     background: rgba(255, 255, 255, 0.12);
     border-color: var(--pmg-accent);
@@ -239,11 +266,16 @@
     body.pmg-sidebar-open #tutorial-overlay,
     body.pmg-sidebar-open #cross-promo-container,
     body.pmg-sidebar-open #bottom-bar,
-    body.pmg-sidebar-open #bottom-ad,
     body.pmg-sidebar-open .back-btn {
         left: 290px !important;
         transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    body.pmg-sidebar-open #bottom-ad {
+        left: calc(50% + 140px) !important;
+        transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
 }
 
 /* --- PORTAL HOME ONLY STYLES (Scoped to .portal-index) --- */
