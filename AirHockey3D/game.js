@@ -689,14 +689,13 @@ function endGame(playerWon) {
 
 
 // UI Buttons
-startBtn.onclick = () => {
-
-    // 🔥 Initialize Supabase only now
+function startGame() {
+    // 🔥 Initialize Supabase
     if (!supabaseClient) {
         initSupabase();
     }
 
-    initAudio(); // MUST be triggered on user action
+    initAudio(); 
     startScreen.classList.add('hidden');
     resetPositions();
     playerScore = 0;
@@ -704,14 +703,15 @@ startBtn.onclick = () => {
     updateScoreUI();
     gameState = 'playing';
 
-
-
     gameStartTime = Date.now();   // ⏱ start timer
     durationSent = false;
     gameStartedFlag = true; // mark started
     gameRecordTime = Date.now(); 
+}
 
-
+// UI Buttons
+startBtn.onclick = () => {
+    startGame();
 };
 
 restartBtn.onclick = () => {
@@ -738,6 +738,9 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+// Auto-start game after short delay to ensure assets/scene are ready
+setTimeout(startGame, 1000);
 
 async function getCountry() {
     try {
