@@ -80,13 +80,13 @@ function _executeSystemSync(hardSync = false) {
     if (!shouldLoadAds()) return;
 
     // 1. Create containers if missing
-    /*let sideBanner = document.getElementById('adsterra-banner');
+    let sideBanner = document.getElementById('adsterra-banner');
     if (!sideBanner) {
         sideBanner = document.createElement('div');
         sideBanner.id = 'adsterra-banner';
         sideBanner.className = 'pmg-side-ad';
         document.body.appendChild(sideBanner);
-    }*/
+    }
 
     let bottomAd = document.getElementById('bottom-ad');
     if (!bottomAd) {
