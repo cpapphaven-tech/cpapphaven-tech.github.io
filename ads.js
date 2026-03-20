@@ -139,7 +139,7 @@ function _executeSystemSync(hardSync = false) {
     }
 
     // B. Side Unit (Desktop Only)
-    const sideContainer = document.getElementById("adsterra-banner");
+   /* const sideContainer = document.getElementById("adsterra-banner");
     if (sideContainer && window.innerWidth >= 1024 && !sideContainer.dataset.loaded) {
         sideContainer.dataset.loaded = "true";
 
@@ -170,7 +170,7 @@ function _executeSystemSync(hardSync = false) {
             </html>
         `);
         doc.close();
-    }
+    }*/
 }
 
 /**
