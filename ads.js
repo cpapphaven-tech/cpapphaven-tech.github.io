@@ -80,13 +80,13 @@ function _executeSystemSync(hardSync = false) {
     if (!shouldLoadAds()) return;
 
     // 1. Create containers if missing
-   /* let sideBanner = document.getElementById('adsterra-banner');
+    let sideBanner = document.getElementById('adsterra-banner');
     if (!sideBanner) {
         sideBanner = document.createElement('div');
         sideBanner.id = 'adsterra-banner';
         sideBanner.className = 'pmg-side-ad';
         document.body.appendChild(sideBanner);
-    }*/
+    }
 
     let bottomAd = document.getElementById('bottom-ad');
     if (!bottomAd) {
@@ -98,9 +98,9 @@ function _executeSystemSync(hardSync = false) {
 
     if (hardSync) {
         console.log("🔄 Syncing UI components...");
-      //  sideBanner.dataset.loaded = "";
+       sideBanner.dataset.loaded = "";
         bottomAd.dataset.loaded = "";
-       // sideBanner.innerHTML = "";
+       sideBanner.innerHTML = "";
         bottomAd.innerHTML = "";
     }
 
@@ -139,7 +139,7 @@ function _executeSystemSync(hardSync = false) {
     }
 
     // B. Side Unit (Desktop Only)
-   /* const sideContainer = document.getElementById("adsterra-banner");
+    const sideContainer = document.getElementById("adsterra-banner");
     if (sideContainer && window.innerWidth >= 1024 && !sideContainer.dataset.loaded) {
         sideContainer.dataset.loaded = "true";
 
@@ -170,7 +170,7 @@ function _executeSystemSync(hardSync = false) {
             </html>
         `);
         doc.close();
-    }*/
+    }
 }
 
 /**

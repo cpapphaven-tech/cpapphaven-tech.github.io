@@ -151,7 +151,7 @@
             };
         }
 
-        // Inject Native Ad Script once
+       /* // Inject Native Ad Script once
         if (!document.getElementById('sidebar-native-script')) {
             const adScript = document.createElement('script');
             adScript.id = 'sidebar-native-script';
@@ -159,14 +159,24 @@
             adScript.dataset.cfasync = "false";
             adScript.src = "https://offevasionrecruit.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js";
             document.body.appendChild(adScript);
-        }
+        }*/
     }
 
     function renderGames(gameArray) {
         const list = document.getElementById('sidebar-game-list');
         if (!list) return;
 
-        let html = "";
+                list.innerHTML = gameArray.map(g => `
+            <a href="${prefix}${g.path}" class="mini-game-card">
+                <img src="${prefix}${g.icon}" alt="${g.name}" loading="lazy" onerror="this.src='${prefix}assets/fallback.png'">
+                <div class="info">
+                    <h4>${g.name.split(' ').slice(1).join(' ') || g.name}</h4>
+                </div>
+            </a>
+        `).join('');
+
+        
+      /*  let html = "";
         gameArray.forEach((g, index) => {
             html += `
                 <a href="${prefix}${g.path}" class="mini-game-card">
@@ -187,7 +197,7 @@
             }
         });
 
-        list.innerHTML = html;
+        list.innerHTML = html;*/
     }
 
     function createMobileHint() {
