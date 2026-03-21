@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Snake - Free Arcade Game Online | PlayMixGames</title>
+    <meta name="description" content="Play free online Neon Snake game. Guide your snake using your mouse or finger, collect glowing food to hit the target score before the clock runs out! Level up and become the snake champion.">
+    <link rel="canonical" href="https://playmix.games/NeonSnake/">
+    
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../sidebar.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <main class="game-main">
+        <div id="game-wrapper">
+            
+            <a href="../index.html" class="back-btn" style="position: absolute; top: 15px; left: 15px; z-index: 1000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">← Back</a>
+
+            <div id="ui-overlay">
+                <div id="score-board" role="status" aria-live="polite" aria-label="Game scores">
+                    <span class="hud-item highlight-pill green">Lvl: <span id="level-display">1</span></span>
+                    <span class="hud-item highlight-pill yellow">Target: <span id="target-score">5</span></span>
+                    <span class="hud-item highlight-pill blue">Score: <span id="current-score">0</span></span>
+                    <span class="hud-item highlight-pill red" id="timer-container">Time: <span id="time-left">60</span>s</span>
+                </div>
+            </div>
+
+            <!-- The Canvas Board -->
+            <canvas id="play-board"></canvas>
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="overlay hidden" style="display:none;" role="dialog">
+                <div class="overlay-box">
+                    <h2 id="game-title" style="color: #4ade80; font-size: 2.5rem; margin-top: 0;">Neon Snake</h2>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.6;">
+                        Collect glowing dots before time runs out!<br>
+                        <strong>Desktop:</strong> Move mouse to guide the snake.<br>
+                        <strong>Mobile:</strong> Swipe to turn.
+                    </p>
+                    <button id="start-btn" class="pmg-btn">PLAY NOW</button>
+                </div>
+            </div>
+
+            <!-- Game Over / Level Complete Screen -->
+            <div id="game-over-screen" class="overlay hidden" role="dialog">
+                <div class="overlay-box">
+                    <h2 id="result-title" style="color: #f43f5e; font-size: 2.5rem; margin-top: 0;">Game Over</h2>
+                    <p id="result-desc" style="margin-bottom: 20px; font-size: 1.1rem;">You hit the wall or time ran out!</p>
+                    <button id="restart-btn" class="pmg-btn">PLAY AGAIN</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- How to Play Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Navigate the neon grid with your snake:</p>
+                    <ul>
+                        <li><strong>Controls (Desktop):</strong> The snake automatically turns toward your hovering mouse cursor. No clicking required!</li>
+                        <li><strong>Controls (Mobile):</strong> Swipe anywhere on the screen (Up, Down, Left, Right) to direct the snake.</li>
+                        <li><strong>Rules:</strong> Collect glowing orbs to gain points. You must reach the Target Score before the countdown timer hits zero to advance to the next level.</li>
+                        <li><strong>Beware:</strong> If you crash into the arena borders or bite your own glowing tail, it's game over!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>About Neon Snake</h2>
+                <div class="info-content">
+                    <p>Play free online Neon Snake game. An enhanced, level-based adaptation of the classic Snake arcade game featuring dynamic mouse-hover controls, swipe support for mobile, and a thrilling countdown element.</p>
+                    <p><em>Based on original open-source Snake mechanics by Talha Bin Yousaf (MIT License). Re-imagined with modern Neon aesthetics, precision tracking, and progressive level design exclusively for Playmix Games.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generic script hooks -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+    <script defer src="game.js"></script>
+</body>
+</html>
