@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Fruit Splash - Free Puzzle Game Online | PlayMixGames</title>
+    <meta name="description" content="Play Fruit Splash online free! A modern take on the classic swipe-to-match gameplay. Match fruits and clear the board before time runs out.">
+
+    <!-- OG Tags for social sharing -->
+    <meta property="og:title" content="Fruit Splash | PlayMixGames">
+    <meta property="og:description" content="Match colorful fruits to reach your target score before time runs out. Free browser game.">
+    <meta property="og:url" content="https://playmixgames.in/FruitSplash/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/FruitSplash/index.html">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <!-- Supabase deferred -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Project Scripts -->
+    <script defer src="../analytics.js" type="module"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fruit Splash",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Play Fruit Splash game online. Match identical fruits to blast them and reach your target score!"
+    }
+    </script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <div id="pmg-loader">
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+    </div>
+
+    <!-- MAIN APP WRAPPER -->
+    <main id="game-wrapper" aria-label="Fruit Splash Game">
+        
+        <a href="../index.html" class="back-btn" style="position: absolute; top: 15px; left: 15px; z-index: 100; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 20px; backdrop-filter: blur(5px);">← Back</a>
+
+        <!-- UI OVERLAY -->
+        <div id="ui-overlay">
+            <div id="score-board" role="status" aria-live="polite" aria-label="Game scores">
+                <span class="hud-item highlight-pill green">Level: <span id="level-display">1</span></span>
+                <span class="hud-item highlight-pill yellow">Target: <span id="target-score">100</span></span>
+                <span class="hud-item highlight-pill blue">Score: <span id="current-score">0</span></span>
+                <span class="hud-item highlight-pill red" id="timer-container">Time: <span id="time-left">90</span>s</span>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div id="game-grid"></div>
+        </div>
+
+        <div id="start-screen" class="overlay hidden" style="display:none;" role="dialog" aria-labelledby="game-title">
+            <div class="overlay-box">
+                <h2 id="game-title" style="color: #4facfe; font-size: 2.5rem; margin-top: 0;">Fruit Splash</h2>
+                <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.6;">
+                    Match 3 or more identical fruits to clear them!<br>
+                    <strong>Reach the target score before time runs out.</strong>
+                </p>
+                <button id="start-btn" class="pmg-btn">PLAY NOW</button>
+                <p style="font-size: 0.8rem; margin-top: 20px; color: #888;">Based on game by Talha Bin Yousaf (MIT License)</p>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden" role="dialog" aria-labelledby="result-title">
+            <div class="overlay-box">
+                <h2 id="result-title">TIME'S UP!</h2>
+                <p id="result-desc" style="margin-bottom: 20px;">You didn't reach the target.</p>
+                <button id="restart-btn" class="pmg-btn">PLAY AGAIN</button>
+                <a href="../index.html" class="pmg-btn-outline" style="margin-top: 15px; display: block; text-align: center; color: white; border: 1px solid white; border-radius: 30px; padding: 10px; text-decoration: none; transition: 0.3s;">More Games</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEO & FAQ Section -->
+    <section class="game-description" style="background:#0a0a1a; padding:40px 20px; color:#999; text-align:center;">
+        <div style="max-width:800px; margin: 0 auto;">
+            <h1 style="color:#fff; font-size: 1.8rem;">Fruit Splash – Free Online Puzzle Game</h1>
+            <p>Play free online Fruit Splash game. Swap adjacent fruits to form vertical or horizontal lines of three or more matching fruits. Every match boosts your score and drops new fruits from above! Challenge yourself to reach higher levels and face bigger targets.</p>
+            
+            <h2 style="color:#fff; margin-top:20px;">How to Play</h2>
+            <p>Tap and drag a fruit towards an adjacent fruit to swap them. If the swap creates a match of 3 or more identical fruits, they will pop, and you'll earn points. If the swap doesn't result in a match, the fruits will return to their original positions.</p>
+            
+            <h2 style="color:#fff; margin-top:20px;">Credits</h2>
+            <p style="font-size: 0.9em; color: #777;">
+                This game is an adaptation. The core mechanics are based on the open-source "Candy Crush Game" by Talha Bin Yousaf under the <a href="https://opensource.org/license/mit" style="color:#4facfe;" target="_blank">MIT License</a>. Modified and styled by PlayMix Games to feature a responsive, mobile-optimized experience with a completely new visual theme.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 20px; background: #050510; color: #666; font-size: 0.9rem;">
+        &copy; 2026 PlayMix Games. All rights reserved. <a href="../privacy.html" style="color: #4facfe;">Privacy</a> | <a href="../terms.html" style="color: #4facfe;">Terms</a>
+    </footer>
+
+    <script defer src="game.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+            
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+</html>
