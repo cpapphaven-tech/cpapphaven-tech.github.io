@@ -271,7 +271,7 @@ const handleWin = () => {
     targetScore = targetScore + 5; 
     timeLeft = 120;
     
-    resultTitle.innerText = "Level Cleared!";
+    resultTitle.innerText = "Congratulations!";
     resultTitle.style.color = "#4ade80";
     resultDesc.innerHTML = `Great maneuvering! Next target: ${targetScore}`;
     restartBtn.innerText = "NEXT LEVEL";
