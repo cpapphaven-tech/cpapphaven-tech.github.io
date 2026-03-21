@@ -197,18 +197,26 @@ let masterTimer;
 let snake = [];
 let snakeLength = 10;   // In segments
 let currentAngle = 0;   // Radians
-let baseSpeed = 140;    // Pixels per second (Slowed down for easier control)
+let baseSpeed = 100;    // Pixels per second (Slowed down for easier control)
 let snakeRadius = 15;
 const SEGMENT_SPACING = 12; 
 
+// AI Snake properties
+let aiSnake = [];
+let aiSnakeLength = 10;
+let aiCurrentAngle = 0;
+let aiTargetX = GAME_SIZE / 2;
+let aiTargetY = GAME_SIZE / 2;
+
 // Food properties
-let foodX, foodY;
+let foods = [];
 let foodRadius = 22;
 let foodPulse = 0;
+let floaters = [];
 
 // Cursor Interaction
 let cursorX = GAME_SIZE / 2;
-let cursorY = GAME_SIZE / 2;
+let cursorY = GAME_SIZE / 2 - 200;
 
 // Update Cursor tracking robustly mapping screen -> canvas
 const updateCursorSync = (clientX, clientY) => {
@@ -231,11 +239,19 @@ playBoard.addEventListener('touchmove', (e) => {
     }
 }, {passive: false});
 
-const updateFoodPosition = () => {
+const spawnFood = () => {
     const margin = foodRadius * 2;
-    foodX = margin + Math.random() * (GAME_SIZE - margin * 2);
-    foodY = margin + Math.random() * (GAME_SIZE - margin * 2);
-}
+    foods.push({
+        x: margin + Math.random() * (GAME_SIZE - margin * 2),
+        y: margin + Math.random() * (GAME_SIZE - margin * 2),
+        type: ["🍉","🍎","🍓","🍌"][Math.floor(Math.random()*4)]
+    });
+};
+
+const initFoods = () => {
+    foods = [];
+    for(let i=0; i<5; i++) spawnFood(); // Keep 5 fruits active on map
+};
 
 const triggerAdRefresh = () => {
     const seconds = Math.round((Date.now() - gameRecordTime) / 1000);
@@ -316,7 +332,7 @@ const gameLoop = (timestamp) => {
     }
     
     // Speed progression
-    const activeSpeed = Math.min(350, baseSpeed + (level * 15));
+    const activeSpeed = Math.min(250, baseSpeed + (level * 10));
     
     // Move Head
     let newHx = snake[0].x + Math.cos(currentAngle) * activeSpeed * deltaTime;
@@ -331,33 +347,102 @@ const gameLoop = (timestamp) => {
         return;
     }
     
-    // Collision: Food (Fruit)
-    let distToFood = Math.hypot(foodX - newHx, foodY - newHy);
-    if (distToFood < snakeRadius + foodRadius) {
-        playSound('eat');
-        updateFoodPosition();
-        snakeLength += 3; // Grow!
-        snakeRadius = Math.min(30, snakeRadius + 0.2); // Slowly scale up physical snake size!
-        score++;
-        scoreDisplay.innerText = score;
-        
-        if (score >= targetScore) {
-            handleWin();
+    // ==================
+    // AI RIVAL SNAKE LOGIC
+    // ==================
+    // AI Steer towards closest food
+    if (foods.length > 0) {
+        let closest = foods[0];
+        let minDist = Infinity;
+        for(let f of foods) {
+            let d = Math.hypot(f.x - aiSnake[0].x, f.y - aiSnake[0].y);
+            if (d < minDist) { minDist = d; closest = f; }
+        }
+        aiTargetX = closest.x;
+        aiTargetY = closest.y;
+    } else {
+        aiTargetX = GAME_SIZE / 2;
+        aiTargetY = GAME_SIZE / 2;
+    }
+    
+    let aiDx = aiTargetX - aiSnake[0].x;
+    let aiDy = aiTargetY - aiSnake[0].y;
+    let aiTargetAngle = Math.atan2(aiDy, aiDx);
+    let aiAngleDiff = aiTargetAngle - aiCurrentAngle;
+    
+    while(aiAngleDiff < -Math.PI) aiAngleDiff += Math.PI * 2;
+    while(aiAngleDiff > Math.PI) aiAngleDiff -= Math.PI * 2;
+    
+    const aiTurnSpeed = 2.5; // Steers slightly slower linearly
+    const aiMaxTurn = aiTurnSpeed * deltaTime; 
+    aiCurrentAngle += (aiAngleDiff > 0 ? aiMaxTurn : -aiMaxTurn);
+    
+    let aiActiveSpeed = activeSpeed * 0.7; // Moves moderately slower than player
+    let aiNewHx = aiSnake[0].x + Math.cos(aiCurrentAngle) * Math.max(80, aiActiveSpeed) * deltaTime;
+    let aiNewHy = aiSnake[0].y + Math.sin(aiCurrentAngle) * Math.max(80, aiActiveSpeed) * deltaTime;
+    
+    // Clamp AI so it doesn't leave bounds if pushed
+    aiNewHx = Math.max(snakeRadius, Math.min(GAME_SIZE - snakeRadius, aiNewHx));
+    aiNewHy = Math.max(snakeRadius, Math.min(GAME_SIZE - snakeRadius, aiNewHy));
+    
+    aiSnake.unshift({ x: aiNewHx, y: aiNewHy });
+    
+    while(aiSnake.length > Math.max(4, aiSnakeLength * (SEGMENT_SPACING / (aiActiveSpeed * 0.01)))) {
+        aiSnake.pop(); 
+    }
+    
+    // AI Collision with Food
+    for (let i = 0; i < foods.length; i++) {
+        if (Math.hypot(foods[i].x - aiNewHx, foods[i].y - aiNewHy) < snakeRadius + foodRadius) {
+            foods.splice(i, 1); // AI stole the food!
+            spawnFood();
+            aiSnakeLength += 1; // AI grows
+            break;
+        }
+    }
+    
+    // Player Collision with AI Snake (Game Over if player hits AI)
+    for (let i = 0; i < aiSnake.length; i += 3) {
+        let dist = Math.hypot(aiSnake[i].x - newHx, aiSnake[i].y - newHy);
+        if (dist < snakeRadius * 1.5) {
+            handleGameOver();
             return;
+        }
+    }
+    
+    // Collision: Food (Fruit)
+    for (let i = 0; i < foods.length; i++) {
+        let distToFood = Math.hypot(foods[i].x - newHx, foods[i].y - newHy);
+        if (distToFood < snakeRadius + foodRadius) {
+            playSound('eat');
+            floaters.push({ x: newHx, y: newHy - 30, age: 0 }); // float positive interaction mapping
+            foods.splice(i, 1);
+            spawnFood();
+            
+            snakeLength += 1.5; // Grow small amount
+            snakeRadius = Math.min(30, snakeRadius + 0.1); 
+            score++;
+            scoreDisplay.innerText = score;
+            
+            if (score >= targetScore) {
+                handleWin();
+                return;
+            }
+            break; // one food per frame
         }
     }
     
     // Prune tail
     while (snake.length > snakeLength * (SEGMENT_SPACING / (activeSpeed * 0.01))) {
-        snake.pop(); // Not strictly length, based on history array padding!
+        snake.pop(); 
     }
     
     // Collision: Self
-    // Check nodes further back in history array
-    const ignoreHeadFrames = Math.floor(2.5 * (snakeRadius / (activeSpeed * deltaTime)));
+    // Relaxed hit detection preventing early tight-corner false positives
+    const ignoreHeadFrames = Math.floor(4.0 * (snakeRadius / (activeSpeed * deltaTime)));
     for (let i = ignoreHeadFrames; i < snake.length; i += 5) {
         let dist = Math.hypot(snake[i].x - newHx, snake[i].y - newHy);
-        if (dist < snakeRadius * 1.5) {
+        if (dist < snakeRadius * 0.9) {
             handleGameOver();
             return;
         }
@@ -366,6 +451,61 @@ const gameLoop = (timestamp) => {
     // Rendering
     ctx.clearRect(0, 0, GAME_SIZE, GAME_SIZE);
     
+    // Draw Tracking Laser Guide with a "blinking" twist (oscillating alpha) to avoid making it too easy
+    // Math.sin creates a heartbeat wave. Capped at 0 so it stays fully invisible 50% of the time!
+    const blinkAlpha = Math.max(0, Math.sin(timestamp / 400) * 0.4); 
+    
+    ctx.beginPath();
+    ctx.moveTo(snake[0].x, snake[0].y);
+    ctx.lineTo(cursorX, cursorY);
+    ctx.strokeStyle = `rgba(6, 182, 212, ${blinkAlpha})`; 
+    ctx.lineWidth = 2;
+    ctx.setLineDash([10, 15]); 
+    ctx.stroke();
+    ctx.setLineDash([]); 
+    
+    // Draw Cursor Target Reticle with a similar rhythmic fade
+    const reticleAlpha = Math.max(0.15, Math.sin(timestamp / 400) * 0.7);
+    ctx.beginPath();
+    ctx.arc(cursorX, cursorY, 10, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(6, 182, 212, ${reticleAlpha})`;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(cursorX, cursorY, 4, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(74, 222, 128, ${reticleAlpha + 0.2})`;
+    ctx.fill();
+    
+    // Draw AI Snake
+    for (let i = aiSnake.length - 1; i >= 0; i--) {
+        if (i % 4 !== 0 && i !== 0) continue; 
+        ctx.beginPath();
+        let scale = Math.max(0.1, 1.0 - (i / aiSnake.length) * 0.3);
+        ctx.arc(aiSnake[i].x, aiSnake[i].y, snakeRadius * scale, 0, Math.PI * 2);
+        
+        if (i === 0) {
+            // AI Head
+            ctx.fillStyle = '#f43f5e';
+            ctx.shadowColor = '#f43f5e';
+            ctx.shadowBlur = 15;
+            ctx.fill();
+            
+            // AI Eyes
+            ctx.shadowBlur = 0;
+            ctx.fillStyle = "#fff";
+            const eyeDist = snakeRadius * 0.5;
+            // Draw relative to current canvas loop to ensure precision syncing rather than static var referencing
+            ctx.beginPath(); ctx.arc(aiSnake[0].x + Math.cos(aiCurrentAngle - 0.7) * eyeDist, aiSnake[0].y + Math.sin(aiCurrentAngle - 0.7) * eyeDist, snakeRadius * 0.3, 0, Math.PI * 2); ctx.fill();
+            ctx.beginPath(); ctx.arc(aiSnake[0].x + Math.cos(aiCurrentAngle + 0.7) * eyeDist, aiSnake[0].y + Math.sin(aiCurrentAngle + 0.7) * eyeDist, snakeRadius * 0.3, 0, Math.PI * 2); ctx.fill();
+        } else {
+            ctx.fillStyle = '#fb923c';
+            ctx.shadowColor = '#fb923c';
+            ctx.shadowBlur = 5;
+            ctx.fill();
+        }
+    }
+    ctx.shadowBlur = 0;
+
     // Draw trail / body
     for (let i = snake.length - 1; i >= 0; i--) {
         // Sample every few frames for a smooth but distinct segmented look
@@ -409,13 +549,31 @@ const gameLoop = (timestamp) => {
     }
     ctx.shadowBlur = 0;
     
-    // Draw Food (Fruit 🍉)
+    // Draw Food
     foodPulse += deltaTime * 5;
     const pulseScale = 1.0 + Math.sin(foodPulse) * 0.1;
     ctx.font = `${foodRadius * pulseScale * 2}px Arial`;
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.fillText("🍉", foodX, foodY);
+    foods.forEach(f => {
+        ctx.fillText(f.type, f.x, f.y);
+    });
+
+    // Draw +1 Floaters directly cleanly onto context!
+    for (let i = floaters.length - 1; i >= 0; i--) {
+        let f = floaters[i];
+        f.age += deltaTime * 1.5;
+        f.y -= deltaTime * 80;
+        if (f.age > 1) { floaters.splice(i, 1); continue; }
+        ctx.globalAlpha = 1 - f.age;
+        ctx.fillStyle = '#4ade80';
+        ctx.font = 'bold 50px Arial';
+        ctx.shadowColor = 'rgba(0,0,0,0.8)';
+        ctx.shadowBlur = 10;
+        ctx.fillText('+1', f.x, f.y);
+        ctx.globalAlpha = 1.0;
+        ctx.shadowBlur = 0;
+    }
     
     requestAnimationFrame(gameLoop);
 }
@@ -449,8 +607,17 @@ function startGame() {
     currentAngle = -Math.PI / 2;
     snake = [{ x: GAME_SIZE / 2, y: GAME_SIZE / 2 }];
     
+    // AI Init
+    aiSnakeLength = 10;
+    aiCurrentAngle = Math.PI / 2;
+    aiSnake = [{ x: GAME_SIZE / 2, y: GAME_SIZE - 200 }];
+    
+    cursorX = GAME_SIZE / 2;
+    cursorY = GAME_SIZE / 2 - 200; // Force default vector to point straight ahead to avoid snap-neck bounds kills
+    floaters = [];
+    
     updateUI();
-    updateFoodPosition();
+    initFoods();
     
     clearInterval(masterTimer);
     lastTime = 0;
