@@ -209,7 +209,7 @@ const renderer = new THREE.WebGLRenderer({
     powerPreference: "high-performance"
 });
 renderer.setSize(window.innerWidth, window.innerHeight - 110); // Minus header and banner ad
-renderer.setPixelRatio(window.devicePixelRatio); // Let the device dictate full resolution for sharpness
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5)); // Cap resolution for performance
 renderer.outputEncoding = THREE.sRGBEncoding;
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.shadowMap.enabled = true;
@@ -732,15 +732,28 @@ restartBtn.onclick = () => {
 };
 
 // Main Loop
+let isAnimating = false;
+let hasRenderedFirstFrame = false;
+
 function animate() {
+    if (!isAnimating) return;
     requestAnimationFrame(animate);
     updatePhysics();
     renderer.render(scene, camera);
 }
-animate();
 
 // Auto-start game after short delay to ensure assets/scene are ready
-setTimeout(startGame, 1000);
+setTimeout(() => {
+    if (!hasRenderedFirstFrame) {
+        renderer.render(scene, camera); // Render the initial scene layout
+        hasRenderedFirstFrame = true;
+    }
+    startGame();
+    if (!isAnimating) {
+        isAnimating = true;
+        animate();
+    }
+}, 1000);
 
 async function getCountry() {
     try {

@@ -231,17 +231,26 @@
 
             const urlParams = new URLSearchParams(window.location.search);
             const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
-            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
 
             const loader = document.getElementById('pmg-loader');
-            const start = Date.now();
+            let start = Date.now();
+
             frame.onload = function () {
-                const delay = Math.max(1000 - (Date.now() - start), 200);
+                if (!frame.src || frame.src === "" || frame.src === window.location.href) return;
+                const delay = Math.max(800 - (Date.now() - start), 100);
                 setTimeout(() => {
                     frame.classList.add('visible');
                     loader.classList.add('hidden');
                 }, delay);
             };
+
+            // Defer loading the iframe to allow the main thread to become interactive first
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    start = Date.now();
+                    frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+                }, 50);
+            });
         })();
     </script>
 
