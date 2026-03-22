@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Chess Master – Free Online Chess Game | PlayMixGames</title>
+    <meta name="description" content="Play Chess Master free online! Challenge the AI or play against a friend. Neon-styled 3D chess with full rules: castling, en passant, pawn promotion. Mobile friendly!">
+    <meta property="og:title" content="Chess Master | PlayMixGames">
+    <meta property="og:description" content="Play chess online free — challenge an AI or a friend! Full rules, neon 3D board, mobile touch-friendly.">
+    <meta property="og:url" content="https://playmixgames.in/Chess/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/Chess/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Chess Master",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free online chess with AI opponent and 2-player mode. Full chess rules, neon board, mobile friendly."
+    }
+    </script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- Ad slots -->
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <!-- Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+    </div>
+
+    <a href="../index.html" class="back-btn" style="position:fixed;top:15px;left:15px;z-index:10000;color:white;text-decoration:none;font-size:1.1rem;font-weight:700;background:rgba(0,0,0,0.55);padding:7px 14px;border-radius:20px;backdrop-filter:blur(5px);">← Back</a>
+
+    <main id="game-wrapper" aria-label="Chess Master">
+
+        <!-- MODE SELECTION SCREEN -->
+        <div id="modeScreen" class="mode-screen">
+            <div class="mode-box">
+                <div class="chess-logo">♟</div>
+                <h1>Chess Master</h1>
+                <p class="mode-sub">Choose your battle</p>
+                <div class="mode-buttons">
+                    <button type="button" id="vsAiBtn" class="mode-btn mode-btn-primary">
+                        <span class="mode-icon">🤖</span>
+                        <span>
+                            <strong>Play vs AI</strong>
+                            <small>Challenge the computer</small>
+                        </span>
+                    </button>
+                    <button type="button" id="vsFriendBtn" class="mode-btn">
+                        <span class="mode-icon">👥</span>
+                        <span>
+                            <strong>Play vs Friend</strong>
+                            <small>2 players, same device</small>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- GAME SCREEN -->
+        <div id="gameScreen" class="game-screen hidden">
+
+            <!-- Top HUD -->
+            <div class="chess-hud">
+                <div class="hud-left">
+                    <span class="chess-title">♟ Chess Master</span>
+                    <span class="mode-badge" id="modeBadge">Vs AI</span>
+                </div>
+                <div class="hud-right">
+                    <div id="turnLabel" class="turn-label">⬜ White to move</div>
+                    <button type="button" id="newGameBtn" class="chess-btn">New Game</button>
+                    <button type="button" id="changeModeBtn" class="chess-btn chess-btn-ghost">Modes</button>
+                </div>
+            </div>
+
+            <!-- Difficulty row (shown only vs AI) -->
+            <div id="diffRow" class="diff-row" style="display:none;">
+                <span class="diff-label-text">AI Difficulty:</span>
+                <button class="diff-btn" data-depth="1">🟢 Easy</button>
+                <button class="diff-btn" data-depth="2">🟡 Medium</button>
+                <button class="diff-btn" data-depth="3">🔴 Hard</button>
+                <span id="diffLabel" class="diff-current">🟢 Easy</span>
+            </div>
+
+            <!-- Captured pieces display -->
+            <div class="captured-row">
+                <div class="captured-side" id="capturedByWhite">
+                    <span class="cap-label">White took:</span>
+                    <span class="cap-pieces" id="capWhitePieces"></span>
+                </div>
+                <div class="captured-side" id="capturedByBlack">
+                    <span class="cap-label">Black took:</span>
+                    <span class="cap-pieces" id="capBlackPieces"></span>
+                </div>
+            </div>
+
+            <!-- Board -->
+            <div class="board-wrap">
+                <!-- Column labels -->
+                <div class="board-labels-top">
+                    <span></span>
+                    <span>a</span><span>b</span><span>c</span><span>d</span>
+                    <span>e</span><span>f</span><span>g</span><span>h</span>
+                </div>
+                <div class="board-with-ranks">
+                    <div class="ranks-left" id="ranksLeft"></div>
+                    <div class="board-outer">
+                        <div id="board" class="board" role="grid" aria-label="Chess board"></div>
+                        <!-- Promotion overlay -->
+                        <div class="promotion-overlay hidden" id="promotionOverlay">
+                            <p>Promote pawn:</p>
+                            <div class="promotion-pieces" id="promotionPieces"></div>
+                        </div>
+                    </div>
+                    <div class="ranks-right" id="ranksRight"></div>
+                </div>
+            </div>
+
+            <!-- Move history -->
+            <div class="move-history-wrap">
+                <div class="move-history-label">Move History</div>
+                <div id="moveHistory" class="move-history"></div>
+            </div>
+        </div>
+
+        <!-- GAME OVER OVERLAY -->
+        <div id="gameOverOverlay" class="game-over-overlay hidden">
+            <div class="game-over-box">
+                <div class="game-over-icon" id="gameOverIcon">♛</div>
+                <h2 id="gameOverTitle">Checkmate!</h2>
+                <p id="gameOverMessage">Black wins</p>
+                <button type="button" id="playAgainBtn" class="chess-btn chess-btn-large">Play Again</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Info Sections -->
+    <section class="game-info" style="margin-top:70px;">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Classic chess rules with a modern neon twist:</p>
+                    <ul>
+                        <li><strong>Select:</strong> Tap or click a piece to select it. Valid moves will highlight in green.</li>
+                        <li><strong>Move:</strong> Tap a highlighted square to move your piece there.</li>
+                        <li><strong>Special Moves:</strong> Castling, en passant, and pawn promotion are all fully supported!</li>
+                        <li><strong>Check:</strong> Your king glows red when in check. You must resolve it immediately.</li>
+                        <li><strong>Win:</strong> Checkmate the opponent's king to win the game!</li>
+                        <li><strong>AI Mode:</strong> The AI thinks 2 moves ahead using minimax + alpha-beta pruning.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-card">
+                <h2>About Chess Master</h2>
+                <div class="info-content">
+                    <p>Play free online Chess Master — a beautifully redesigned chess experience built for PlayMix. Features a neon dark-themed board, piece capture tracking, move history, full chess rules, and a smart AI opponent.</p>
+                    <p>Works perfectly on mobile with large tap targets and a responsive board layout.</p>
+                    <p style="font-size:0.85rem;color:#555;margin-top:12px;">
+                        <em>Chess engine adapted from open-source Chess Game by Talha (he-is-talha, MIT License). Redesigned with Playmix neon UI, captured pieces display, move history, rank/file labels, and Playmix platform integration.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align:center;padding:20px;background:#050510;color:#555;font-size:0.85rem;">
+        &copy; 2026 PlayMix Games · Chess engine by <a href="https://github.com/he-is-talha" style="color:#4d79ff;" target="_blank" rel="noopener">Talha</a> (MIT License)
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 350);
+            }
+        });
+    </script>
+    <script defer src="game.js"></script>
+</body>
+</html>
