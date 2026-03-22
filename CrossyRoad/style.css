@@ -1,0 +1,288 @@
+/* Base and Container Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB; /* Daylight sky blue */
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+    touch-action: none;
+}
+
+#game-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #87CEEB; /* Daylight */
+}
+
+@media (min-width: 1024px) {
+    #game-wrapper {
+        width: calc(100% - 160px); /* Leaves space for right sidebar/ad */
+    }
+}
+
+@media (max-width: 1023px) {
+    #game-wrapper {
+        height: calc(100vh - 60px); /* Leaves space for mobile bottom ad */
+    }
+}
+
+#canvas-container {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* UI Overlay (Top Scoreboard) */
+#ui-overlay {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#score-board {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.75); /* Lighter bg for daylight */
+    padding: 8px 15px;
+    border-radius: 40px;
+    color: #333;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 2px solid rgba(0,0,0,0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    max-width: 95vw;
+}
+
+@media (min-width: 768px) {
+    #score-board {
+        gap: 20px;
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
+
+.hud-item { white-space: nowrap; }
+
+.highlight-pill {
+    padding: 2px 8px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 768px) {
+    .highlight-pill {
+        padding: 4px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+.yellow span, .blue span, .green span { font-size: 1.1rem; font-weight: 800; }
+.yellow span { color: #f59e0b; }
+.blue span { color: #0284c7; }
+.red span { color: #ef4444; font-size: 1.6rem; font-weight: 950; }
+.green span { color: #16a34a; }
+
+.highlight-pill.red {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.4);
+}
+
+#timer-container.urgent {
+    background: rgba(239, 68, 68, 0.4);
+    border-color: #ef4444;
+    animation: pmg-pulse-red 0.5s infinite alternate;
+}
+
+@keyframes pmg-pulse-red {
+    from { transform: scale(1); box-shadow: 0 0 5px #ef4444; }
+    to { transform: scale(1.05); box-shadow: 0 0 15px #ef4444; }
+}
+
+/* Mobile buttons overlay */
+#controlls {
+    position: absolute;
+    bottom: 80px; /* robust clearance for bottom ad limits */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#controlls div {
+    display: grid;
+    grid-template-columns: 60px 60px 60px;
+    grid-template-rows: auto auto;
+    grid-gap: 12px;
+}
+#controlls button {
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.15s ease-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+#controlls button:active {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0.92);
+    box-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+#forward { grid-column: 2 / 3; grid-row: 1; }
+#left { grid-column: 1 / 2; grid-row: 2; }
+#backward { grid-column: 2 / 3; grid-row: 2; }
+#right { grid-column: 3 / 4; grid-row: 2; }
+
+/* SVG Colors Day */
+#controlls svg path { fill: #333; }
+#controlls svg { filter: drop-shadow(0px 2px 2px rgba(255,255,255,0.5)); }
+
+/* Overlay Screens */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    transition: opacity 0.3s;
+}
+
+.overlay-box {
+    background: linear-gradient(135deg, #1e3a8a, #0f172a);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    color: white;
+    max-width: 90%;
+    width: 400px;
+}
+
+.pmg-btn {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, #00e5ff, #0088cc);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    width: 100%;
+}
+.pmg-btn:active { transform: scale(0.95); }
+.pmg-btn:hover { box-shadow: 0 5px 15px rgba(0, 229, 255, 0.4); }
+
+.hidden { display: none !important; opacity: 0; pointer-events: none; }
+
+.game-info {
+    position: relative;
+    z-index: 5;
+    background: #050510;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .game-info {
+        width: calc(100% - 160px); /* Leave space for right sidebar/ad */
+    }
+}
+
+.info-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background: #0f172a;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.info-card h2 {
+    color: #4facfe;
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.info-content p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.info-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-content li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: #cbd5e1;
+}
+
+.info-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #4facfe;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    footer {
+        width: calc(100% - 160px);
+    }
+}

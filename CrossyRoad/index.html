@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Crossy Road Math – Collect Balloons! | PlayMixGames</title>
+    <meta name="description" content="Cross the road to collect number balloons and reach your target score before the timer runs out. Watch out for negative numbers and traffic!">
+    
+    <meta property="og:title" content="Crossy Road Math | PlayMixGames">
+    <meta property="og:description" content="Cross the road, collect balloons, beat the clock, and dodge the traffic in this fun math-based arcade hopper.">
+    <meta property="og:url" content="https://playmixgames.in/CrossyRoad/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/CrossyRoad/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Crossy Road Math",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Fun online math game where you cross the road, collect balloons and hit targets. Mobile friendly arcade hopper."
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
+
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <div id="pmg-loader">
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+    </div>
+
+    <a href="../index.html" class="back-btn" style="position:fixed;top:15px;left:15px;z-index:10000;color:white;text-decoration:none;font-size:1.1rem;font-weight:700;background:rgba(0,0,0,0.55);padding:7px 14px;border-radius:20px;backdrop-filter:blur(5px);">← Back</a>
+
+    <main id="game-wrapper" aria-label="Crossy Road Math">
+        <div id="gameScreen">
+            <div id="canvas-container"></div>
+
+            <!-- UI OVERLAY -->
+            <div id="ui-overlay">
+                <div id="score-board" role="status" aria-live="polite">
+                    <span class="hud-item highlight-pill yellow">Target: <span id="target-score">100</span></span>
+                    <span class="hud-item highlight-pill blue">Score: <span id="current-score">0</span></span>
+                    <span class="hud-item highlight-pill red" id="timer-container">Time: <span id="time-left">60</span>s</span>
+                    <span class="hud-item highlight-pill green">Level: <span id="level-display">1</span></span>
+                </div>
+            </div>
+
+            <div id="controlls">
+                <div>
+                    <button id="forward" aria-label="Move Forward">
+                        <svg width="30" height="30" viewBox="0 0 10 10"><g transform="rotate(0, 5,5)"><path d="M5,4 L7,6 L3,6 L5,4" fill="white"/></g></svg>
+                    </button>
+                    <button id="left" aria-label="Move Left">
+                        <svg width="30" height="30" viewBox="0 0 10 10"><g transform="rotate(-90, 5,5)"><path d="M5,4 L7,6 L3,6 L5,4" fill="white"/></g></svg>
+                    </button>
+                    <button id="backward" aria-label="Move Backward">
+                        <svg width="30" height="30" viewBox="0 0 10 10"><g transform="rotate(180, 5,5)"><path d="M5,4 L7,6 L3,6 L5,4" fill="white"/></g></svg>
+                    </button>
+                    <button id="right" aria-label="Move Right">
+                        <svg width="30" height="30" viewBox="0 0 10 10"><g transform="rotate(90, 5,5)"><path d="M5,4 L7,6 L3,6 L5,4" fill="white"/></g></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Start Screen (removed 'hidden' by game.js on auto-start failure or manual restart) -->
+            <div id="start-screen" class="overlay hidden" role="dialog">
+                <div class="overlay-box">
+                    <h2 style="color: #00e5ff; font-size: 2.5rem; margin-top: 0;">Crossy Math!</h2>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem;">
+                        Cross the road and collect balloons to reach the target score!<br>
+                        <strong>Values: +1 to +50</strong><br>
+                        <span style="font-size: 0.95rem; color: #f43f5e; font-weight: bold;">Watch out for minus balloons AND traffic!</span>
+                    </p>
+                    <button id="start-btn" class="pmg-btn">PLAY MATCH</button>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="overlay hidden" role="dialog">
+                <div class="overlay-box">
+                    <h2 id="result-title">SQUASHED!</h2>
+                    <p id="result-desc" style="margin-bottom: 20px;">You didn't reach the target.</p>
+                    <button id="restart-btn" class="pmg-btn">PLAY AGAIN</button>
+                    <button id="next-level-btn" class="pmg-btn hidden">NEXT LEVEL</button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <section class="game-info" style="margin-top:70px;">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Navigate the sunny roads and collect number balloons:</p>
+                    <ul>
+                        <li><strong>Controls:</strong> Swipe to move, tap the on-screen buttons, or use Arrow keys.</li>
+                        <li><strong>Score:</strong> Step on a floating balloon to collect it. Watch out—some are negative!</li>
+                        <li><strong>Goal:</strong> Reach the Target Score before the time runs out.</li>
+                        <li><strong>Danger:</strong> Avoid the cars and trucks. One hit and it's Game Over!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-card">
+                <h2>About Crossy Road Math</h2>
+                <div class="info-content">
+                    <p>Play free online Crossy Road Math—a beautifully redesigned 3D arcade experience built for PlayMix. Features a vibrant daylight-themed road, collectible number balloons, real-time proximity detection, and a smart scaling score system.</p>
+                    <p>Works perfectly on mobile with large tap targets and a responsive board layout.</p>
+                    <p style="font-size:0.85rem;color:#555;margin-top:12px;">
+                        <em>Game adapted from open-source Crossy Road by Talha (he-is-talha, MIT License). Redesigned with Playmix daylight UI, balloon collection mechanics, floating scores, and Playmix platform integration.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align:center;padding:20px;background:#050510;color:#555;font-size:0.85rem;">
+        &copy; 2026 PlayMix Games · Game engine by <a href="https://github.com/he-is-talha" style="color:#4facfe;" target="_blank" rel="noopener">Talha</a> (MIT License)
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 350);
+            }
+        });
+    </script>
+    <!-- We removed standard font to use Playmix Outfit -->
+    <script src="game.js"></script>
+</body>
+</html>
