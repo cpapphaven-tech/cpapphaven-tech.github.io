@@ -1,5 +1,5 @@
 /**
- * Neon Slicer 3D
+ * Balloon Ninja
  * Inspired by classic ninja slicing mechanics, rebuilt natively in Three.js for Playmix.
  */
 
@@ -17,14 +17,14 @@ async function initSupabase() {
     if (!window.supabase) { setTimeout(initSupabase,600); return; }
     const {createClient}=window.supabase; _sb=createClient(SUPA_URL,SUPA_KEY);
     _sessionId=Date.now().toString(36)+Math.random().toString(36).substr(2,8);
-    try { await _sb.from('game_sessions').insert([{ session_id:_sessionId, game_slug:'neon_slicer_3d', placement_id:_placement(), user_agent:navigator.userAgent, os:_getOS(), browser:_getBrowser(), country:await _country(), started_game:false, bounced:false }]); } catch(e){}
+    try { await _sb.from('game_sessions').insert([{ session_id:_sessionId, game_slug:'balloon_ninja', placement_id:_placement(), user_agent:navigator.userAgent, os:_getOS(), browser:_getBrowser(), country:await _country(), started_game:false, bounced:false }]); } catch(e){}
 }
 async function _markStarted() { if(!_sb||!_sessionId)return; try{await _sb.from('game_sessions').update({started_game:true}).eq('session_id',_sessionId);}catch(e){} }
 async function _updateSess(f) { if(!_sb||!_sessionId)return; try{await _sb.from('game_sessions').update(f).eq('session_id',_sessionId);}catch(e){} }
 function _sendDuration(reason) {
     if(_gameStartTime&&!_durationSent&&window.trackGameEvent){
         const s=Math.round((Date.now()-_gameStartTime)/1000);
-        window.trackGameEvent(`game_duration_neon_slicer_${s}_${reason}`,{seconds:s,os:_getOS(),placement_id:_placement()});
+        window.trackGameEvent(`game_duration_balloon_ninja_${s}_${reason}`,{seconds:s,os:_getOS(),placement_id:_placement()});
         _updateSess({duration_seconds:s,bounced:!_sessionStarted,end_reason:reason}); _durationSent=true;
     }
 }
