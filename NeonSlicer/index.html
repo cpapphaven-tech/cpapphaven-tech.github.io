@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Neon Slicer 3D – Free Online Slicing Game | PlayMixGames</title>
+    <meta name="description" content="Play Neon Slicer 3D free online! Swipe to slash glowing geometric gems, dodge the bombs, and set explosive high scores. A gorgeous mobile-friendly arcade hit.">
+    
+    <meta property="og:title" content="Neon Slicer 3D | PlayMixGames">
+    <meta property="og:description" content="Slash glowing geometric gems in mid-air in this highly addictive fast-paced 3D arcade game.">
+    <meta property="og:url" content="https://playmixgames.in/NeonSlicer/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/NeonSlicer/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Neon Slicer 3D",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "An addictive 3D arcade action game where players swipe to slash flying numbered balloons. Slicing negative values hurts your score!"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <div id="pmg-loader">
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+    </div>
+
+
+    <main id="game-wrapper" aria-label="Neon Slicer 3D">
+        <div id="gameScreen">
+            <div id="canvas-container"></div>
+            
+            <canvas id="trailCanvas"></canvas>
+
+            <!-- UI OVERLAY -->
+            <div id="ui-overlay">
+                <div id="score-board" role="status" aria-live="polite" aria-label="Game scores">
+                    <span class="hud-item highlight-pill yellow">Target: <span id="target-display">100</span></span>
+                    <span class="hud-item highlight-pill blue">Score: <span id="score-display">0</span></span>
+                    <span class="hud-item highlight-pill red" id="timer-container">Time: <span id="time-display">60</span>s</span>
+                    <span class="hud-item highlight-pill green">Level: <span id="level-display">1</span></span>
+                    <button id="info-btn-hud" class="hud-item highlight-pill" style="pointer-events: auto; cursor: pointer; color: #00e5ff; background: rgba(0, e5, ff, 0.1); border: 1px solid #00e5ff; padding: 2px 10px;">?</button>
+                </div>
+                <!-- Independent Combo Text -->
+                <div id="combo-display" class="combo-text">Combo x2!</div>
+            </div>
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="overlay" role="dialog">
+                <div class="overlay-box">
+                    <h2 class="neon-title">Neon Slicer</h2>
+                    <p class="neon-desc">
+                        Swipe to slash the flying numbered balloons.<br>
+                        <strong>Slice positive numbers to reach the target!</strong><br>
+                        <strong>Avoid slicing negative numbers!</strong>
+                    </p>
+                    <button id="start-btn" class="pmg-btn">PLAY GAME</button>
+                    <button id="start-info-btn" class="pmg-btn-outline" style="margin-top: 15px;">HOW TO PLAY</button>
+                </div>
+            </div>
+
+            <!-- Level Complete Screen -->
+            <div id="level-complete-screen" class="overlay hidden" role="dialog">
+                <div class="overlay-box">
+                    <h2 style="color:#10b981;font-size:2.5rem;text-shadow:0 0 15px rgba(16,185,129,0.5);margin:0 0 10px;">LEVEL CLEARED!</h2>
+                    <p style="margin-bottom: 20px;">Target Reached!</p>
+                    <button id="next-level-btn" class="pmg-btn">NEXT LEVEL</button>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="overlay hidden" role="dialog">
+                <div class="overlay-box">
+                    <h2 id="result-title">GAME OVER!</h2>
+                    <p id="result-desc" style="margin-bottom: 20px;">Score: <span id="final-score" style="color:#00e5ff; font-weight:bold; font-size:1.5em;">0</span></p>
+                    <button id="restart-btn" class="pmg-btn">PLAY AGAIN</button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+            <!-- Info Modal Popup -->
+            <div id="info-modal" class="overlay hidden" style="z-index: 200;">
+                <div class="overlay-box" style="max-width: 500px; max-height: 80vh; overflow-y: auto; text-align: left; padding: 30px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h2 style="margin: 0; color: #00e5ff;">Game Information</h2>
+                        <button id="close-info" style="background: none; border: none; color: white; font-size: 2rem; cursor: pointer; padding: 0;">&times;</button>
+                    </div>
+                    
+                    <div style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+                        <h1 style="color:#fff; font-size: 1.4rem; margin-bottom: 15px;">Neon Slicer 3D</h1>
+                        <p>Slice the mathematical balloons flying up from the ground to reach your target score before time runs out! Pop positive numbers but avoid negative values.</p>
+                        
+                        <h3 style="color:#fff; margin-top:20px;">How to Play</h3>
+                        <p>Swipe or click across the balloons to pop them! Positive values add to your score, while negative values deduct points. Reach the target score for each level within 60 seconds.</p>
+                        
+                        <h3 style="color:#fff; margin-top:20px;">Scoring</h3>
+                        <ul>
+                            <li><strong>Positive:</strong> +1 to +50 points</li>
+                            <li><strong>Negative:</strong> Deducts the face value</li>
+                            <li><strong>Combos:</strong> Slice multiple balloons in one swipe for bonus points!</li>
+                        </ul>
+                        
+                        <h3 style="color:#fff; margin-top:20px;">FAQ</h3>
+                        <p><strong>Are bigger numbers better?</strong> Yes! High numbers give you more score rapidly but exist in smaller quantities.</p>
+                        
+                        <div style="margin-top: 30px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.82rem; color: #555; font-style: italic;">
+                            Game engine by <a href="https://github.com/kunjgit" style="color:#00e5ff;" target="_blank" rel="noopener">kunjgit</a> (Apache-2.0 License). Redesigned with PlayMix UI, 3D balloon slicing mechanics, and platform integration.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <footer style="text-align:center;padding:20px;background:#050510;color:#555;font-size:0.85rem;">
+        &copy; 2026 PlayMix Games · Game engine by <a href="https://github.com/kunjgit" style="color:#00e5ff;" target="_blank" rel="noopener">kunjgit</a> (Apache-2.0 License)
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+
+            // Lock ad to top regardless of sidebar state (overrides portal-style.css transforms)
+            function lockAdToTop() {
+                var ad = document.getElementById('bottom-ad');
+                if (ad) {
+                    ad.style.setProperty('position', 'fixed', 'important');
+                    ad.style.setProperty('top', '0px', 'important');
+                    ad.style.setProperty('bottom', 'auto', 'important');
+                    ad.style.setProperty('left', '0px', 'important');
+                    ad.style.setProperty('width', '100vw', 'important');
+                    ad.style.setProperty('transform', 'none', 'important');
+                    ad.style.setProperty('z-index', '9999', 'important');
+                }
+            }
+            lockAdToTop();
+            // Re-apply after sidebar toggle animation (~300ms)
+            var observer = new MutationObserver(function() { setTimeout(lockAdToTop, 350); });
+            observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+        });
+
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 350);
+            }
+        });
+    </script>
+    <script src="game.js"></script>
+</body>
+</html>

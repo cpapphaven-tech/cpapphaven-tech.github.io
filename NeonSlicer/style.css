@@ -1,0 +1,325 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #0b0f19;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    touch-action: none;
+}
+
+#game-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (max-width: 1023px) {
+    #game-wrapper {
+        height: calc(100vh - 65px);
+        margin-top: 65px;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    #game-wrapper { width: calc(100vw - 160px); }
+}
+
+/* Override portal-style: prevent ad from shifting when sidebar opens */
+body.pmg-sidebar-open #bottom-ad {
+    left: 0 !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+
+#canvas-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#trailCanvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none; /* Let touches pass through to document listener */
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 72px; /* Desktop: game-wrapper has no margin-top, so we clear 65px ad ourselves */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Mobile: game-wrapper already has margin-top:65px, so top:8px puts scoreboard
+   at 65+8=73px from viewport = just below the ad */
+@media (max-width: 768px) {
+    #ui-overlay {
+        top: 8px;
+    }
+}
+
+#score-board {
+    display: flex;
+    flex-wrap: nowrap; /* Forced 1 row */
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Tighter gap for mobile */
+    background: rgba(0,0,0,0.6);
+    padding: 8px 15px; /* Compact padding */
+    border-radius: 40px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 2px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    max-width: 95vw;
+}
+
+@media (min-width: 768px) {
+    #score-board {
+        gap: 20px;
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
+
+.hud-item {
+    white-space: nowrap;
+}
+
+.highlight-pill {
+    padding: 2px 8px; /* Tighter padding for mobile */
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem; /* Smaller font on mobile base */
+}
+
+@media (min-width: 768px) {
+    .highlight-pill {
+        padding: 4px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+.yellow span, .blue span, .green span { font-size: 1.1rem; font-weight: 800; }
+.yellow span { color: #ffeb3b; }
+.blue span { color: #00e5ff; }
+.red span { color: #ff3366; font-size: 1.6rem; font-weight: 950; }
+.green span { color: #4ade80; }
+
+.highlight-pill.red {
+    background: rgba(255, 51, 102, 0.1);
+    border-color: rgba(255, 51, 102, 0.4);
+}
+
+.combo-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 20px #f59e0b, 0 0 40px #f59e0b;
+    opacity: 0;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+    pointer-events: none;
+}
+.combo-text.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Overlays */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 15, 25, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+    transition: opacity 0.3s;
+}
+
+.overlay-box {
+    background: linear-gradient(135deg, rgba(30,58,138,0.9), rgba(15,23,42,0.9));
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8), inset 0 0 20px rgba(0, 229, 255, 0.1);
+    color: white;
+    max-width: 90%;
+    width: 400px;
+    pointer-events: auto;
+}
+
+.neon-title {
+    color: #00e5ff;
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+}
+
+.neon-desc {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+.neon-desc strong {
+    color: #f43f5e;
+    text-shadow: 0 0 10px rgba(244, 63, 94, 0.4);
+}
+
+.pmg-btn {
+    padding: 16px 30px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(135deg, #00e5ff, #0088cc);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(0, 229, 255, 0.3);
+}
+
+.pmg-btn:active { transform: scale(0.95); }
+.pmg-btn:hover { box-shadow: 0 8px 25px rgba(0, 229, 255, 0.5); }
+
+.hidden { display: none !important; opacity: 0; pointer-events: none; }
+
+/* Info Section Content styling */
+.game-info {
+    position: relative;
+    z-index: 5;
+    background: #050510;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .game-info {
+        width: calc(100% - 160px);
+    }
+}
+
+.info-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background: #0f172a;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(0, 229, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.info-card h2 {
+    color: #4facfe;
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.info-content p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.info-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-content li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: #cbd5e1;
+}
+
+.info-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #4facfe;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: #050510;
+    color: #555;
+    font-size: 0.85rem;
+    box-sizing: border-box;
+}
+
+/* Ad strip for this game - always full width, always at top */
+#bottom-ad.pmg-bottom-ad {
+    position: fixed !important;
+    top: 0 !important;
+    bottom: auto !important;
+    left: 0 !important;
+    width: 100vw !important; /* Always full viewport width, unaffected by sidebar */
+    height: 65px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: transparent; /* No dark strip */
+    box-shadow: none;
+    transform: none !important;
+    z-index: 200;
+}
+
+/* Remove the ADVERTISEMENT label */
+#bottom-ad.pmg-bottom-ad::before {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    footer, .game-info { display: none !important; }
+}
+
+@media (min-width: 1024px) {
+    footer { width: calc(100% - 160px); }
+}
