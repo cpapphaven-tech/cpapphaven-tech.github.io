@@ -271,15 +271,16 @@
 
 body.portal-index {
     font-family: 'Outfit', sans-serif;
-    background: #0f111a; /* Removed background-attachment:fixed — kills compositing on mobile */
+    background: #0f111a; 
     color: var(--pmg-text);
     margin: 0;
     padding: 0;
+    padding-bottom: 70px !important; /* Clearance for 320x50 bottom-ad */
     overflow-x: hidden;
 }
 
 .portal-index header {
-    height: 80px;
+    height: 70px;
     background: rgba(15, 17, 26, 0.85);
     backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -317,7 +318,7 @@ body.portal-index {
 }
 
 .portal-index .hero {
-    padding: 100px 5% 40px;
+    padding: 60px 4% 40px;
     text-align: center;
 }
 
@@ -328,14 +329,14 @@ body.portal-index {
 }
 
 .portal-index .game-grid {
-    padding: 20px 5%;
+    padding: 20px 4%;
     margin-top: 70px;
 }
 
 .portal-index .grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px;
     content-visibility: auto; /* Defer off-screen card rendering */
     contain-intrinsic-size: 0 800px;
 }
@@ -370,12 +371,12 @@ body.portal-index {
 }
 
 .portal-index .card-info {
-    padding: 12px;
+    padding: 8px;
 }
 
 .portal-index .card-info h3 {
-    font-size: 0.95rem;
-    margin-bottom: 5px;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -393,36 +394,48 @@ body.portal-index {
     color: var(--pmg-secondary);
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1700px) {
+    .portal-index .grid {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+
+@media (max-width: 1500px) {
+    .portal-index .grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 1300px) {
     .portal-index .grid {
         grid-template-columns: repeat(5, 1fr);
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
     .portal-index .grid {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 850px) {
     .portal-index .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .portal-index .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 8px;
     }
 
     .portal-index .hero h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
     }
     
     .portal-index .card-info h3 {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
     }
 }
 
@@ -444,6 +457,14 @@ body.portal-index {
     .pmg-side-ad,
     #adsterra-banner {
         display: block;
+    }
+
+    /* Force clearance for Side Ad (160px wide) on Portal Index */
+    .portal-index header,
+    .portal-index .hero,
+    .portal-index .game-grid,
+    .portal-index footer {
+        padding-right: calc(5% + 160px) !important;
     }
 }
 
