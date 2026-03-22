@@ -29,7 +29,7 @@ async function initSupabase() {
     if (!window.supabase) { setTimeout(initSupabase,600); return; }
     const {createClient}=window.supabase; _sb=createClient(SUPA_URL,SUPA_KEY);
     _sessionId=Date.now().toString(36)+Math.random().toString(36).substr(2,8);
-    try { await _sb.from('game_sessions').insert([{ session_id:_sessionId, game_slug:'crossy_road_neon', placement_id:_placement(), user_agent:navigator.userAgent, os:_getOS(), browser:_getBrowser(), country:await _country(), started_game:false, bounced:false }]); } catch(e){}
+    try { await _sb.from('game_sessions').insert([{ session_id:_sessionId, game_slug:'cross_road_with_balloon', placement_id:_placement(), user_agent:navigator.userAgent, os:_getOS(), browser:_getBrowser(), country:await _country(), started_game:false, bounced:false }]); } catch(e){}
 }
 async function _markStarted() { if(!_sb||!_sessionId)return; try{await _sb.from('game_sessions').update({started_game:true}).eq('session_id',_sessionId);}catch(e){} }
 async function _updateSess(f) { if(!_sb||!_sessionId)return; try{await _sb.from('game_sessions').update(f).eq('session_id',_sessionId);}catch(e){} }
