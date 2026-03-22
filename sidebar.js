@@ -21,28 +21,36 @@
     }
 
     const games = [
-        { name: "🏑 Air Hockey 3D", path: "AirHockey3D/index.html", icon: "img/airhockey200.png", tip: "Sports" },
         { name: "🧊 Stack 3D", path: "Stack3D/index.html", icon: "img/stack200.png", tip: "Physics" },
-        { name: "⚽ Football 3D", path: "Football3D/index.html", icon: "img/football200.png", tip: "Sports" },
-        { name: "🧬 Helix Bounce", path: "HelixBounce/index.html", icon: "img/helix200.png", tip: "Arcade" },
-        { name: "🏓 Table Tennis", path: "TableTennis/index.html", icon: "assets/table_tennis_icon.png", tip: "Sports" },
-        { name: "⚔️ Stickman Warriors", path: "StickDuel/index.html", icon: "assets/stckduels.png", tip: "Action" },
-        { name: "🏏 Cricket Master", path: "CricketMaster/game.html", icon: "assets/cricket_master_icon.png", tip: "Sports" },
-        { name: "⚽ Head Football", path: "HeadFootball/index.html", icon: "assets/head_football_icon.png", tip: "Sports" },
-        { name: "🧱 Brick Breaker", path: "BrickBreaker/game.html", icon: "img/brickbreaker200.png", tip: "Classic" },
-        { name: "🔢 Merge Numbers", path: "MergeNumbers/game.html", icon: "img/mergenumber200.png", tip: "2248" },
-        { name: "🎲 Ludo Master", path: "Ludo/index.html", icon: "img/ludo200.png", tip: "Board" },
-        { name: "🍾 Bottle Shoot 3D", path: "BottleShoot3D/index.html", icon: "img/bottle200.png", tip: "Sports" },
+        { name: "🐍 Neon Snake", path: "NeonSnake/index.html", icon: "assets/snake200.png", tip: "Arcade" },
+        { name: "👾 Alien Highway", path: "GalaxyAssault/index.html", icon: "assets/aleign200.png", tip: "Action" },
+        { name: "🍉 Fruit Splash", path: "FruitSplash/index.html", icon: "assets/fruits200.png", tip: "Puzzle" },
+        { name: "🔢 Merge Numbers", path: "MergeNumbers/game.html", icon: "img/mergenumber200.png", tip: "Puzzle" },
         { name: "🧩 Block Puzzle Dash", path: "BlockPuzzle/game.html", icon: "img/blockpuzzle200.png", tip: "Puzzle" },
-        { name: "🏀 Basketball 3D", path: "Basketball3D/index.html", icon: "assets/basketball3d.png", tip: "Sports" },
+        { name: "⚽ Football 3D", path: "Football3D/index.html", icon: "img/football200.png", tip: "Sports" },
+        { name: "🏐 Volleyball Arena", path: "VolleyballArena/index.html", icon: "assets/volley200.png", tip: "Sports" },
+        { name: "🧬 Helix Bounce", path: "HelixBounce/index.html", icon: "img/helix200.png", tip: "Arcade" },
+         { name: "🎈 Balloon Shooter", path: "NumberBalloonShooter/index.html", icon: "assets/numberballoon200.png", tip: "Action" },
+         { name: "🧱 Brick Breaker", path: "BrickBreaker/game.html", icon: "img/brickbreaker200.png", tip: "Classic" },
+        { name: "🎾 Tennis Master", path: "Tennis/game.html", icon: "assets/Tennis200.png", tip: "Sports" },
+        { name: "🎳 Bowling Master", path: "Bowling/game.html", icon: "assets/Bowling200.png", tip: "Sports" },
+        { name: "🧪 Water Sort 3D", path: "WaterSort3D/index.html", icon: "assets/watersort3d.png", tip: "Puzzle" },
+        { name: "🍾 Bottle Shoot 3D", path: "BottleShoot3D/index.html", icon: "img/bottle200.png", tip: "Sports" },
+         { name: "⚽ Head Football", path: "HeadFootball/index.html", icon: "assets/head_football_icon.png", tip: "Sports" },
+        { name: "⛳ Pocket Golf", path: "PocketGolf/index.html", icon: "assets/pocket_golf_icon.png", tip: "Sports" },
+         { name: "🏏 Cricket Master", path: "CricketMaster/index.html", icon: "assets/cricket_master_icon.png", tip: "Sports" },
+        { name: "🏑 Air Hockey 3D", path: "AirHockey3D/index.html", icon: "img/airhockey200.png", tip: "Sports" },
+        { name: "🔢 Sudoku", path: "Sudoku/index.html", icon: "img/sudoku200.png", tip: "Logic" },
+         { name: "🏀 Basketball 3D", path: "Basketball3D/index.html", icon: "assets/basketball3d.png", tip: "Sports" },
+        { name: "🎲 Ludo Master", path: "Ludo/index.html", icon: "img/ludo200.png", tip: "Board" },
+        { name: "🔵 Bubble Shooter", path: "BubbleShooter/index.html", icon: "assets/bubble_shooter.png", tip: "Arcade" },
+        { name: "♟ Chess Master", path: "Chess/index.html", icon: "assets/chess100.png", tip: "Board" },
+        { name: "⚔️ Stickman Warriors", path: "StickDuel/index.html", icon: "assets/stckduels.png", tip: "Action" },
+        { name: "🏓 Table Tennis", path: "TableTennis/index.html", icon: "assets/tabletennis320.png", tip: "Sports" },
         { name: "🎨 Color Match 3D", path: "ColorMatch/index.html", icon: "assets/colormatch.png", tip: "Reaction" },
         { name: "🍣 Sushi Match 3D", path: "SushiMatch/index.html", icon: "assets/sushimatch3d.png", tip: "Memory" },
         { name: "🍔 Burger Stack 3D", path: "BurgerStack/index.html", icon: "assets/burgerstack.png", tip: "Physics" },
-        { name: "🧪 Water Sort 3D", path: "WaterSort3D/index.html", icon: "assets/watersort3d.png", tip: "Puzzle" },
-        { name: "🔢 Sudoku", path: "Sudoku/index.html", icon: "img/sudoku200.png", tip: "Logic" },
         { name: "🔡 Word Search", path: "WordSearch/index.html", icon: "img/wordsrarch200.png", tip: "Word" },
-        { name: "🔵 Bubble Shooter", path: "BubbleShooter/index.html", icon: "assets/bubble_shooter.png", tip: "Arcade" },
-        { name: "⛳ Pocket Golf", path: "PocketGolf/index.html", icon: "assets/pocket_golf_icon.png", tip: "Sports" },
     ];
 
     function createSidebar() {
@@ -151,15 +159,6 @@
             };
         }
 
-       /* // Inject Native Ad Script once
-        if (!document.getElementById('sidebar-native-script')) {
-            const adScript = document.createElement('script');
-            adScript.id = 'sidebar-native-script';
-            adScript.async = true;
-            adScript.dataset.cfasync = "false";
-            adScript.src = "https://offevasionrecruit.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js";
-            document.body.appendChild(adScript);
-        }*/
     }
 
     function renderGames(gameArray) {
@@ -175,29 +174,6 @@
             </a>
         `).join('');
 
-        
-      /*  let html = "";
-        gameArray.forEach((g, index) => {
-            html += `
-                <a href="${prefix}${g.path}" class="mini-game-card">
-                    <img src="${prefix}${g.icon}" alt="${g.name}" loading="lazy" onerror="this.src='${prefix}assets/fallback.png'">
-                    <div class="info">
-                        <h4>${g.name.split(' ').slice(1).join(' ') || g.name}</h4>
-                    </div>
-                </a>
-            `;
-
-            // Insert Ad after 3 rows (6 games)
-            if (index === 5) {
-                html += `
-                    <div class="sidebar-ad-row">
-                        <div id="container-63208462c4f9ec6018b4ea2e1903489d"></div>
-                    </div>
-                `;
-            }
-        });
-
-        list.innerHTML = html;*/
     }
 
     function createMobileHint() {

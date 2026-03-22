@@ -471,7 +471,9 @@
 
     function updateMoveHistory() {
         moveHistoryEl.innerHTML="";
-        moveHistory.forEach((m, i) => {
+        // Show last move at top
+        [...moveHistory].reverse().forEach((m, idx) => {
+            const i = moveHistory.length - 1 - idx; // Original index
             const card = document.createElement("div");
             card.className = "mh-card " + (m.color==="w" ? "mh-card-w" : "mh-card-b");
 
@@ -492,7 +494,6 @@
             card.appendChild(text);
             moveHistoryEl.appendChild(card);
         });
-        moveHistoryEl.scrollTop = moveHistoryEl.scrollHeight;
     }
 
     // ─── PROMOTION ───────────────────────────────────────────────────
