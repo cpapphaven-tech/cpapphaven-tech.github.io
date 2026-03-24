@@ -31,6 +31,8 @@ window.DEV_MODE =
 
 // 🕒 GLOBAL SYSTEM CONFIGURATION
 window.PMG_TICK_RATE = 60; // Internal sync interval
+// Allow testing via URL parameter: ?adType=native or ?adType=vertical
+window.PMG_SIDE_AD_TYPE = 'native'; 
 
 function isMobileDevice() {
     return /android|iphone|ipad|ipod/i.test(navigator.userAgent)
@@ -142,34 +144,61 @@ function _executeSystemSync(hardSync = false) {
     const sideContainer = document.getElementById("adsterra-banner");
     if (sideContainer && window.innerWidth >= 1024 && !sideContainer.dataset.loaded) {
         sideContainer.dataset.loaded = "true";
+        sideContainer.innerHTML = ""; // Clear any existing content
 
-        const iframe = document.createElement('iframe');
-        iframe.style.width = "160px";
-        iframe.style.height = "600px";
-        iframe.style.border = "none";
-        iframe.style.overflow = "hidden";
-        iframe.scrolling = "no";
-        sideContainer.appendChild(iframe);
+        if (window.PMG_SIDE_AD_TYPE === 'native') {
+            console.log("🎨 Loading Native Vertical Ad...");
+            
+            // Native Ad Container
+            const nativeDiv = document.createElement('div');
+            nativeDiv.id = "container-63208462c4f9ec6018b4ea2e1903489d";
+            sideContainer.appendChild(nativeDiv);
 
-        const doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
-            <html>
-            <body style="margin:0;padding:0;background:transparent;">
-                <script>
-                    atOptions = {
-                        'key' : '34488dc997487ff336bf5de366c86553',
-                        'format' : 'iframe',
-                        'height' : 600,
-                        'width' : 160,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
-            </body>
-            </html>
-        `);
-        doc.close();
+            // Native Ad Script
+            const script = document.createElement('script');
+            script.async = true;
+            script.dataset.cfasync = "false";
+            script.src = "https://offevasionrecruit.com/63208462c4f9ec6018b4ea2e1903489d/invoke.js";
+            sideContainer.appendChild(script);
+
+            // Adjust container for native content
+            sideContainer.style.height = "auto";
+            sideContainer.style.minHeight = "600px";
+            sideContainer.style.background = "transparent";
+        } else {
+            console.log("📏 Loading 160x600 Vertical Ad...");
+            const iframe = document.createElement('iframe');
+            iframe.style.width = "160px";
+            iframe.style.height = "600px";
+            iframe.style.border = "none";
+            iframe.style.overflow = "hidden";
+            iframe.scrolling = "no";
+            sideContainer.appendChild(iframe);
+
+            const doc = iframe.contentWindow.document;
+            doc.open();
+            doc.write(`
+                <html>
+                <body style="margin:0;padding:0;background:transparent;">
+                    <script>
+                        atOptions = {
+                            'key' : '34488dc997487ff336bf5de366c86553',
+                            'format' : 'iframe',
+                            'height' : 600,
+                            'width' : 160,
+                            'params' : {}
+                        };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/34488dc997487ff336bf5de366c86553/invoke.js"></script>
+                </body>
+                </html>
+            `);
+            doc.close();
+            
+            // Restore default container styles
+            sideContainer.style.height = "600px";
+            sideContainer.style.background = "rgba(0, 0, 0, 0.2)";
+        }
     }
 }
 
@@ -218,7 +247,8 @@ function displayAdInfo() {
         localhost: location.hostname === "localhost" || location.hostname === "127.0.0.1",
         cookieDisabled: document.cookie.includes("noads=true"),
         urlDevFlag: new URLSearchParams(location.search).get("dev") === "true",
-        adsEnabled: shouldLoadAds()
+        adsEnabled: shouldLoadAds(),
+        sideAdType: window.PMG_SIDE_AD_TYPE
     };
 
     console.group('📊 Ad Control Status');
@@ -226,6 +256,7 @@ function displayAdInfo() {
     console.log('Cookie Disabled (noads=true):', info.cookieDisabled);
     console.log('URL Dev Flag (?dev=true):', info.urlDevFlag);
     console.log('Ads Enabled:', info.adsEnabled);
+    console.log('Side Ad Type:', info.sideAdType, '(use ?adType=native to switch)');
     console.log('');
     console.log('To disable ads:');
     console.log('  1. Cookie: document.cookie = "noads=true; path=/";');
