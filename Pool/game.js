@@ -365,10 +365,12 @@ function handleMouseMove(evt) {
     if(evt.touches && evt.touches.length > 0) {
         clientX = evt.touches[0].clientX;
         clientY = evt.touches[0].clientY;
-        evt.preventDefault();
+        // Only prevent default on move to allow clicking HTML buttons
+        if (evt.type === 'touchmove') evt.preventDefault();
     } else if(evt.changedTouches && evt.changedTouches.length > 0) {
         clientX = evt.changedTouches[0].clientX;
         clientY = evt.changedTouches[0].clientY;
+        if (evt.type === 'touchmove') evt.preventDefault();
     }
 
     if(clientX === undefined) return;
