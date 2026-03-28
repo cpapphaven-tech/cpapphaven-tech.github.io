@@ -385,6 +385,15 @@ function handleMouseMove(evt) {
 }
 
 function handleMouseDown(evt) {
+    // PMG Layout Sync (Ad Refresh on user action)
+    if (typeof syncPMGLayout === "function") {
+        const seconds = Math.round((Date.now() - (window.gameRecordTime || Date.now())) / 1000);
+        if (seconds > (window.PMG_TICK_RATE || 60)) {
+            syncPMGLayout();
+            window.gameRecordTime = Date.now(); 
+        }
+    }
+
     handleMouseMove(evt);
 
     if (evt.type === 'touchstart' || evt.which === 1) {
@@ -2266,6 +2275,7 @@ Game_Singleton.prototype.mainLoop = function () {
 };
 
 var Game = new Game_Singleton();
+window.gameRecordTime = Date.now();
 
 
 "use strict";
