@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pool Master – Free Online 8-Ball Game | PlayMixGames</title>
+    <meta name="description" content="Play Pool Master free online! Challenge the AI or play against a friend. Classic 8-Ball pool rules, modern graphics, fully mouse and mobile touch-friendly!">
+    <meta property="og:title" content="Pool Master | PlayMixGames">
+    <meta property="og:description" content="Play 8-Ball Pool online free — challenge the computer or a friend! Realistic physics, mouse drag controls, mobile friendly.">
+    <meta property="og:url" content="https://playmixgames.in/Pool/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/Pool/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Pool Master",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free online 8-Ball pool with AI opponent and 2-player mode. Realistic physics, mobile friendly."
+    }
+    </script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- Ad slots -->
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <!-- Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+    </div>
+
+
+    <main id="game-wrapper" aria-label="Pool Master">
+        <!-- MODE SELECTION SCREEN -->
+        <div id="modeScreen" style="position: absolute; top:0; left:0; right:0; bottom:0; z-index:10; background: radial-gradient(ellipse at 50% 30%, #0f163a 0%, #080b18 70%); display: none; align-items: center; justify-content: center;">
+            <div class="mode-box" style="text-align: center; padding: 40px 28px; max-width: 380px; width: 100%;">
+                <div style="font-size: 5rem; margin-bottom: 12px; filter: drop-shadow(0 0 20px rgba(16,185,129,0.6));">🎱</div>
+                <h1 style="font-size: 2.4rem; font-weight: 900; background: linear-gradient(135deg, #10b981, #34d399); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px;">Pool Master</h1>
+                <p style="color: #64748b; margin-bottom: 32px; font-size: 1rem;">Choose your battle</p>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                    <button type="button" id="vsAiBtn" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.4);border-radius:16px;color:#f1f5f9;cursor:pointer;width:100%;text-align:left;font-family:Outfit,sans-serif;">
+                        <span style="font-size:2rem;">🤖</span>
+                        <span>
+                            <strong style="display:block;font-size:1.05rem;">Play vs AI</strong>
+                            <small style="color:#64748b;">Challenge the computer</small>
+                        </span>
+                    </button>
+                    <button type="button" id="vsFriendBtn" style="display:flex;align-items:center;gap:16px;padding:16px 20px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;color:#f1f5f9;cursor:pointer;width:100%;text-align:left;font-family:Outfit,sans-serif;">
+                        <span style="font-size:2rem;">👥</span>
+                        <span>
+                            <strong style="display:block;font-size:1.05rem;">Play vs Friend</strong>
+                            <small style="color:#64748b;">Local multiplayer</small>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 🎮 GAME ARENA 🎮 (HUD + TABLE) -->
+        <div id="arena" style="display:flex; flex-direction:column; align-items:center;">
+            
+            <!-- COMPACT HUD (SCORECARD) -->
+            <div id="poolHUD" class="hidden" style="
+                width: min(95vw, 850px);
+                background: #0d1117;
+                border: 1px solid rgba(255,255,255,0.1);
+                border-bottom: none;
+                border-radius: 12px 12px 0 0;
+                display: flex;
+                align-items: center;
+                gap: 0;
+                font-family: 'Outfit', sans-serif;
+                overflow: hidden;
+                flex-shrink: 0;
+                box-shadow: 0 -5px 25px rgba(0,0,0,0.3);
+            ">
+                <!-- Player 1 -->
+                <div style="display:flex;align-items:center;gap:8px;padding:8px 12px;flex:1;min-width:0;">
+                    <span id="p1ActiveDot" style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 5px #10b981;opacity:0;transition:opacity .3s;"></span>
+                    <span style="font-size:0.75rem;font-weight:900;color:#f1f5f9;white-space:nowrap;letter-spacing:0.3px;">P1</span>
+                    <span id="p1BallType" style="font-size:0.6rem;color:#64748b;white-space:nowrap;text-transform:uppercase;font-weight:600;"></span>
+                    <div id="p1Balls" style="display:flex;gap:3px;flex-wrap:nowrap;"></div>
+                </div>
+
+                <!-- Centre badge -->
+                <div style="display:flex;flex-direction:column;align-items:center;padding:6px 12px;border-left:1px solid rgba(255,255,255,0.08);border-right:1px solid rgba(255,255,255,0.08);flex-shrink:0;">
+                    <div id="turnBadge" style="font-size:0.62rem;font-weight:900;color:#facc15;background:rgba(250,204,21,0.08);border:1px solid rgba(250,204,21,0.25);padding:2px 12px;border-radius:20px;letter-spacing:0.8px;white-space:nowrap;text-transform:uppercase;">P1 TURN</div>
+                    <div id="hudMsg" style="font-size:0.55rem;color:#778899;margin-top:2px;font-weight:600;white-space:nowrap;text-transform:uppercase;"></div>
+                </div>
+
+                <!-- Player 2 -->
+                <div style="display:flex;align-items:center;justify-content:flex-end;gap:8px;padding:8px 12px;flex:1;min-width:0;">
+                    <div id="p2Balls" style="display:flex;gap:3px;flex-wrap:nowrap;"></div>
+                    <span id="p2BallType" style="font-size:0.6rem;color:#64748b;white-space:nowrap;text-transform:uppercase;font-weight:600;"></span>
+                    <span id="p2Label" style="font-size:0.75rem;font-weight:900;color:#f1f5f9;white-space:nowrap;letter-spacing:0.3px;">P2</span>
+                    <span id="p2ActiveDot" style="flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 5px #10b981;opacity:0;transition:opacity .3s;"></span>
+                </div>
+            </div>
+
+            <!-- TABLE -->
+            <div class="board-outer">
+                <canvas id="screen" width="1500" height="825"></canvas>
+            </div>
+        </div>
+
+        <!-- WIN POPUP MODAL -->
+        <div id="winPopup" style="
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(10px);
+            z-index: 99999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            color: #fff;
+            text-align: center;
+        ">
+            <div style="
+                background: linear-gradient(135deg, #1e293b, #0f172a);
+                padding: 40px;
+                border-radius: 24px;
+                border: 1px solid rgba(255,255,255,0.1);
+                box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+                max-width: 400px;
+                width: 90%;
+            ">
+                <div style="font-size: 3rem; margin-bottom: 20px;">🏆</div>
+                <h2 style="font-size: 2rem; margin-bottom: 10px; font-weight: 900; letter-spacing: -1px;">Congratulations!</h2>
+                <div id="winnerText" style="font-size: 1.25rem; color: #94a3b8; margin-bottom: 30px;">Player 1 Wins</div>
+                <button onclick="location.reload()" style="
+                    background: #facc15;
+                    color: #000;
+                    border: none;
+                    padding: 14px 40px;
+                    font-size: 1rem;
+                    font-weight: 800;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    transition: transform 0.2s, background 0.2s;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                " onmouseover="this.style.transform='scale(1.05)';this.style.background='#fbbf24';" onmouseout="this.style.transform='scale(1)';this.style.background='#facc15';">
+                    Play Again
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Info Sections -->
+    <section class="game-info" style="margin-top:70px;">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Classic 8-Ball Pool rules with intuitive mouse and touch controls:</p>
+                    <ul>
+                        <li><strong>Aim:</strong> Move your mouse or drag around the cue ball to aim the stick.</li>
+                        <li><strong>Shoot:</strong> Click and drag backwards to pull the stick and increase power. Release to shoot!</li>
+                        <li><strong>Rules:</strong> First player sinks a stripe or solid ball to claim that suit. Sink all your balls, then the 8-ball to win.</li>
+                        <li><strong>Fouls:</strong> Sinking the cue ball or opponent's ball results in a foul and gives the other player ball-in-hand.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-card">
+                <h2>About Pool Master</h2>
+                <div class="info-content">
+                    <p>Play free online Pool Master — a beautifully redesigned 8-ball pool experience built for PlayMix. Features realistic physics, single player AI, local multiplayer, and complete dragging controls.</p>
+                    <p>Works perfectly on mobile devices and desktop computers alike.</p>
+                    <p style="font-size:0.85rem;color:#555;margin-top:12px;">
+                        <em>Pool engine adapted from open-source Classic Pool Game (by Chen Shmilovich, MIT License). Redesigned with Playmix UI, mobile-friendly mouse/touch dragging, and Playmix platform integration.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align:center;padding:20px;background:#050510;color:#666;font-size:0.75rem;line-height:1.6;">
+        &copy; 2026 PlayMix Games · Pool engine by <a href="https://github.com/ChenShmilovich" style="color:#4d79ff;" target="_blank" rel="noopener">Chen Shmilovich</a> (MIT License)<br>
+        Music: Bossa Antigua by Kevin MacLeod (incompetech.com)<br>
+        Licensed under CC BY 3.0: http://creativecommons.org/licenses/by/3.0/
+    </footer>
+
+    <script defer src="game.js?v=8"></script>
+    <script>
+        // ── HUD update function called every frame from GamePolicy.drawScores ──
+        var _hudThrottle = 0;
+        function updatePoolHUD(policy) {
+            if (!policy) return;
+
+            // Extra check for WIN
+            if (policy.won && !window.WIN_SHOWN) {
+                window.WIN_SHOWN = true;
+                showWinPopup(policy);
+            }
+
+            var now = Date.now();
+            if (now - _hudThrottle < 100) return; // max 10 fps DOM updates
+            _hudThrottle = now;
+
+            var hud = document.getElementById('poolHUD');
+            if (!hud || hud.classList.contains('hidden')) return;
+
+            var p = policy.players;
+            var turn = policy.turn; // 0 or 1
+
+            // Active turn dots
+            document.getElementById('p1ActiveDot').style.opacity = (turn === 0) ? '1' : '0';
+            document.getElementById('p2ActiveDot').style.opacity = (turn === 1) ? '1' : '0';
+
+            // Turn badge  — show AI's Turn when relevant
+            var badge = document.getElementById('turnBadge');
+            var isAITurn = (window.POOL_AI_ON === true && turn === 1);
+            var p2LabelBadge = document.getElementById('p2Label');
+            var p1Dot = document.getElementById('p1ActiveDot');
+            var p2Dot = document.getElementById('p2ActiveDot');
+
+            p1Dot.style.opacity = (turn === 0 ? '1' : '0.2');
+            p2Dot.style.opacity = (turn === 1 ? '1' : '0.2');
+
+            if (isAITurn) {
+                badge.textContent = "AI TURN";
+                badge.style.color = '#c084fc';
+                badge.style.borderColor = 'rgba(192,132,252,0.4)';
+                badge.style.background = 'rgba(192,132,252,0.1)';
+                p2Dot.style.background = '#c084fc';
+                p2Dot.style.boxShadow = '0 0 6px #c084fc';
+                if (p2LabelBadge) p2LabelBadge.textContent = "AI";
+            } else {
+                badge.textContent = (turn === 0 ? "P1 TURN" : "P2 TURN");
+                badge.style.color = '#facc15';
+                badge.style.borderColor = 'rgba(250,204,21,0.3)';
+                badge.style.background = 'rgba(250,204,21,0.1)';
+                p2Dot.style.background = '#10b981';
+                p2Dot.style.boxShadow = '0 0 5px #10b981';
+                if (p2LabelBadge) p2LabelBadge.textContent = (window.POOL_AI_ON ? "AI" : "P2");
+            }
+
+            // Ball type labels
+            var ballColors = [
+                p[0].color, // '#FF0000' red or '#FFFF00' yellow
+                p[1].color
+            ];
+            var labels = ['—', '—'];
+            var dotColors = ['#94a3b8', '#94a3b8'];
+            if (ballColors[0] === '#FF0000') { labels[0] = '🔴 Reds'; dotColors[0] = '#ef4444'; }
+            else if (ballColors[0] === '#FFFF00') { labels[0] = '🟡 Yellows'; dotColors[0] = '#facc15'; }
+            if (ballColors[1] === '#FF0000') { labels[1] = '🔴 Reds'; dotColors[1] = '#ef4444'; }
+            else if (ballColors[1] === '#FFFF00') { labels[1] = '🟡 Yellows'; dotColors[1] = '#facc15'; }
+
+            document.getElementById('p1BallType').textContent = labels[0];
+            document.getElementById('p2BallType').textContent = labels[1];
+
+            // Ball pip indicators (filled = pocketed, outline = remaining)
+            function buildPips(container, score, color) {
+                container.innerHTML = '';
+                var c = (color === '#FF0000') ? '#ef4444' : (color === '#FFFF00') ? '#facc15' : '#475569';
+                for (var i = 0; i < 7; i++) {
+                    var dot = document.createElement('span');
+                    dot.style.cssText = 'display:inline-block;width:10px;height:10px;border-radius:50%;border:1.5px solid ' + c + ';' +
+                        (i < score ? ('background:' + c + ';box-shadow:0 0 4px ' + c + ';') : '') ;
+                    container.appendChild(dot);
+                }
+            }
+            buildPips(document.getElementById('p1Balls'), p[0].matchScore.value, ballColors[0]);
+            buildPips(document.getElementById('p2Balls'), p[1].matchScore.value, ballColors[1]);
+
+            // Foul / remaining message
+            var msg = '';
+            if (policy.foul) msg = '⚠️ FOUL';
+            else {
+                var remaining = 7 - p[turn].matchScore.value;
+                if (ballColors[turn]) msg = remaining + ' ball' + (remaining !== 1 ? 's' : '') + ' to go';
+            }
+            document.getElementById('hudMsg').textContent = msg;
+        }
+
+        function showWinPopup(policy) {
+            const popup = document.getElementById('winPopup');
+            const txt = document.getElementById('winnerText');
+            if (!popup || !txt) return;
+
+            let winnerIdx = policy.turn; // The player who just shot and hit 8ball
+            // But wait, they might have hit 8ball and fouled, in which case policy.foul is true,
+            // and actually the current player LOST.
+            // GamePolicy handles totalScore increment correctly.
+            // Let's assume the current logic in updateTurnOutcome is correct about who won.
+            
+            // Let's just check policy.players to find who won.
+            // Actually policy.turn is the current player.
+            let winnerName = (winnerIdx === 0) ? "Player 1" : "Player 2";
+            if (window.POOL_AI_ON && winnerIdx === 1) winnerName = "AI Opponent";
+
+            txt.textContent = winnerName + " Has Won the Match!";
+            popup.style.display = 'flex';
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+
+            function startGame(vsAI) {
+                document.getElementById('poolHUD').classList.remove('hidden');
+                if (typeof Game !== 'undefined') Game.startMode(vsAI);
+            }
+
+            document.getElementById('vsAiBtn').addEventListener('click', function() { startGame(true); });
+            document.getElementById('vsFriendBtn').addEventListener('click', function() { startGame(false); });
+        });
+        window.addEventListener('load', function () {
+            Game.start('game-wrapper', 'screen', 1500, 825);
+        });
+    </script>
+</body>
+</html>
