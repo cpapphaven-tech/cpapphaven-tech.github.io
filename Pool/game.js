@@ -808,40 +808,37 @@ Stick.prototype.handleInput = function (delta) {
     if(Game.policy.turnPlayed) return;
 
     if (Mouse.left.down) {
+        // ALWAYS update rotation towards mouse position (behind the ball logic)
+        var dx = Mouse.position.x - this.position.x;
+        var dy = Mouse.position.y - this.position.y;
+        
+        // Point from mouse to ball
+        this.rotation = Math.atan2(-dy, -dx);
+        
         if (!this.charging) {
-            // Lock aim angle at click start, begin drag from here
-            var dx0 = Mouse.position.x - this.position.x;
-            var dy0 = Mouse.position.y - this.position.y;
-            this.rotation = Math.atan2(-dy0, -dx0);
-            this.dragStartX = Mouse.position.x;
-            this.dragStartY = Mouse.position.y;
             this.charging = true;
             this.power = 0;
-            this.origin.x = 970; // reset stick to resting position
         }
 
-        // Power = distance pulled from click origin (starts 0, grows as you drag)
-        var ddx = Mouse.position.x - this.dragStartX;
-        var ddy = Mouse.position.y - this.dragStartY;
-        var pullDist = Math.sqrt(ddx*ddx + ddy*ddy);
-        this.power = Math.min(75, pullDist / 2.2);
-        this.origin.x = 970 + this.power * 1.66;
+        // Power scales with distance from cue ball
+        var dist = Math.sqrt(dx*dx + dy*dy);
+        // deadzone 40px, max power at ~200px drag
+        this.power = Math.max(0, Math.min(75, (dist - 42) / 2.2));
+        this.origin.x = 970 + this.power * 2;
     } else {
-        // Also track aim when mouse is free (not charging)
-        if (!this.charging) {
-            var dx = Mouse.position.x - this.position.x;
-            var dy = Mouse.position.y - this.position.y;
-            this.rotation = Math.atan2(-dy, -dx);
-        }
-
         if (this.charging) {
-            if (this.power > 2) {
+            if (this.power > 1) {
                 this.shoot(this.power, this.rotation);
             } else {
                 this.power = 0;
                 this.origin = new Vector2(970, 11);
             }
             this.charging = false;
+        } else {
+            // Free look rotation
+            var dx = Mouse.position.x - this.position.x;
+            var dy = Mouse.position.y - this.position.y;
+            this.rotation = Math.atan2(-dy, -dx);
         }
     }
 };
