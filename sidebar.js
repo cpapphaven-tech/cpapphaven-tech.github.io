@@ -21,6 +21,7 @@
     }
 
     const games = [
+        { name: "🔵 Pool", path: "Pool/index.html", icon: "assets/pool200.png", tip: "Physics" },
         { name: "🧊 Stack 3D", path: "Stack3D/index.html", icon: "img/stack200.png", tip: "Physics" },
         { name: "🐍 Neon Snake", path: "NeonSnake/index.html", icon: "assets/snake200.png", tip: "Arcade" },
         { name: "👾 Alien Highway", path: "GalaxyAssault/index.html", icon: "assets/aleign200.png", tip: "Action" },
