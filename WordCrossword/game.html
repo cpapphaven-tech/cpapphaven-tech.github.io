@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Word Crossword Game - Play Free Online | PlayMixGames</title>
+    <meta name="description" content="Play Word Crossword for free online. Connect letters, find hidden words, and solve challenging crossword puzzles in this modern, mobile-friendly word game.">
+    <meta name="keywords" content="Word Crossword, word game, free online game, crossword puzzle, anagram game, mobile game, PlayMixGames">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://playmixgames.in/WordCrossword/">
+    <meta property="og:title" content="Word Crossword Game - Play Free Online | PlayMixGames">
+    <meta property="og:description" content="Connect letters and solve word puzzles in the ultimate Word Crossword challenge.">
+    <meta property="og:image" content="https://playmixgames.in/assets/wordcross200.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://playmixgames.in/WordCrossword/">
+    <meta property="twitter:title" content="Word Crossword Game - Play Free Online | PlayMixGames">
+    <meta property="twitter:description" content="Connect letters and solve word puzzles in the ultimate Word Crossword challenge.">
+    <meta property="twitter:image" content="https://playmixgames.in/assets/wordcross200.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../ads.js"></script>
+
+    <!-- Cookie Consent Script -->
+    <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+                console.log('✅ Cookie consent accepted');
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+                console.log('❌ Cookie consent declined');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+
+    <div id="container">
+        <!-- Floating effects background -->
+        <div id="bda">
+            <span style="left:10%;animation-delay:3s;animation:anim2 10s ease-in infinite;">P</span>
+            <span style="left:30%;animation-delay:4s;animation:anim2 12s ease-out infinite;">L</span>
+            <span style="left:50%;animation-delay:2s;animation:anim2 15s ease-in-out infinite;">A</span>
+            <span style="left:70%;animation-delay:3s;animation:anim2 11s linear infinite;">Y</span>
+            <span style="left:90%;animation-delay:5s;animation:anim2 13s ease-in infinite;">M</span>
+            <span style="left:20%;animation-delay:6s;animation:anim2 14s ease-out infinite;">I</span>
+            <span style="left:80%;animation-delay:2s;animation:anim2 16s ease-in-out infinite;">X</span>
+        </div>
+
+        <!-- Word matching blocks at the top -->
+        <div id="wContainer">
+            <div id="topBar">
+                <div id="header-content">
+                    <h3 id="levelDiv">
+                        <span id="level">Level <span id="levelNum">1</span></span>
+                        <span id="coinDiv"><span id="coin"><span>0</span></span> <span id="coinSign">🪙</span></span>
+                    </h3>
+                </div>
+            </div>
+            <div id="wcont">
+                <!-- Words go here -->
+                <div class="word"></div>
+                <div class="word"></div>
+                <div class="word"></div>
+                <div class="word"></div>
+                <div class="word"></div>
+            </div>
+        </div>
+
+        <!-- The circle of letters at the bottom -->
+        <div id="lContainer">
+            <div id="l1" class="l"></div>
+            <div id="l2" class="l"></div>
+            <div id="l3" class="l"></div>
+            <div id="l4" class="l"></div>
+            <div id="l5" class="l"></div>
+            <div id="preview"><span id="previewTxt"></span></div>
+        </div>
+
+        <!-- The canvas that draws the connecting lines -->
+        <div id="tutorialHand">
+            <span class="icon">👆</span>
+            <span class="text">Drag to connect letters!</span>
+        </div>
+        <canvas id="gameContainer"></canvas>
+
+        <div id="adsterra-banner"></div>
+        <div id="bottom-ad"></div>
+
+        <!-- Overlays -->
+        <div id="over" style="display:none;">
+            <h2 id="complete"><span id="title">Wave Cleared!</span></h2>
+            <div id="starCnt">
+                <div id="starbg"><span id="stb1">⭐</span><span id="stb2">⭐</span><span id="stb3">⭐</span></div>
+                <div id="star"></div>
+            </div>
+            <div id="nextBtnCnt">
+                <button id="nextBtn" class="pmg-btn">Next Level</button>
+            </div>
+        </div>
+
+        <!-- Tool buttons -->
+        <div id="shuffle" class="tool-btn" title="Shuffle Letters">🔄</div>
+        <div id="hint" class="tool-btn" title="Hint">💡</div>
+    </div>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-icon">🍪</span>
+                <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank"
+                        style="color: #ff9800; text-decoration: underline;">Learn more</a></span>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEMANTIC DESCRIPTION FOR SEO -->
+    <section class="game-description" style="margin-top: 100px; padding: 40px; color: #fff; background: rgba(0,0,0,0.5); position: relative; z-index: 10;">
+        <h2 style="color: #fff; margin-bottom: 20px;">Master the Modern Word Crossword</h2>
+        <p>Step into the ultimate word challenge with Word Crossword! This addictive puzzle game combines the thrill of anagrams with the logic of crossword puzzles. Challenge your vocabulary, sharpen your mind, and discover hidden words as you connect letters in a beautiful, modern interface.</p>
+
+        <h3 style="color: #fff; margin: 30px 0 15px;">How to Play</h3>
+        <ul style="list-style-position: inside; margin-bottom: 30px; line-height: 1.6;">
+            <li><strong>Connect:</strong> Click/Touch and drag between letters in the circle to form a word.</li>
+            <li><strong>Solve:</strong> Correct words will automatically fill their spots in the crossword grid above.</li>
+            <li><strong>Bonus:</strong> Find extra hidden words that aren't in the grid to earn bonus coins!</li>
+            <li><strong>Hints:</strong> Use your earned coins to buy hints when you're stuck on a tough level.</li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="../index.html" style="color: #ff9800; text-decoration: none; font-weight: bold;">← Back to Portal</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links" style="text-align:center; padding: 40px;">
+            <a href="../privacy.html" style="color: #666; text-decoration: none; margin: 0 10px;">Privacy</a>
+            <a href="../terms.html" style="color: #666; text-decoration: none; margin: 0 10px;">Terms</a>
+        </div>
+        <div style="text-align:center; color: #444; font-size: 0.75rem; padding-bottom: 40px;">
+            <p>&copy; 2026 PlayMix Games. All rights reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.6;">Word engine adapted from open-source Word Shuffle Game by <strong>Kunj Patel</strong>. Distributed under Apache 2.0 License.</p>
+        </div>
+    </footer>
+
+    <script src="game.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+        
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+</html>

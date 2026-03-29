@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Word Crossword Game - Play Free Online | PlayMixGames</title>
+    <meta name="description" content="Play Word Crossword for free online. Connect letters, find hidden words, and solve challenging crossword puzzles in this modern, mobile-friendly word game.">
+    <meta name="keywords" content="Word Crossword, word game, free online game, crossword puzzle, anagram game, mobile game, PlayMixGames">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://playmixgames.in/WordCrossword/">
+    <meta property="og:title" content="Word Crossword Game - Play Free Online | PlayMixGames">
+    <meta property="og:description" content="Connect letters and solve word puzzles in the ultimate Word Crossword challenge.">
+    <meta property="og:image" content="https://playmixgames.in/assets/wordcross200.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://playmixgames.in/WordCrossword/">
+    <meta property="twitter:title" content="Word Crossword Game - Play Free Online | PlayMixGames">
+    <meta property="twitter:description" content="Connect letters and solve word puzzles in the ultimate Word Crossword challenge.">
+    <meta property="twitter:image" content="https://playmixgames.in/assets/wordcross200.png">
+
+    <link rel="canonical" href="https://playmixgames.in/WordCrossword/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Word Crossword Game",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Connect letters to form words in this relaxing crossword layout. Features engaging levels from easy to difficult!"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../loader.css">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: #050510;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        #game-wrapper {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        /* SEO Section Styling */
+        .seo-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px 20px;
+            color: #ccc;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .seo-content h2 {
+            color: #4facfe;
+            margin-top: 30px;
+        }
+
+        .seo-content ul {
+            padding-left: 20px;
+        }
+
+        .seo-content li {
+            margin-bottom: 10px;
+        }
+
+        .back-link-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .back-link {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: opacity 0.2s;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #050510;
+            color: #555;
+            font-size: 0.85rem;
+        }
+        
+        #adsterra-banner {
+            display: none;
+        }
+        
+        @media (min-width: 1024px) {
+            #adsterra-banner {
+                position: fixed;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 160px;
+                height: 600px;
+                z-index: 100;
+                display: block;
+            }
+        }
+    </style>
+
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading words...</p>
+    </div>
+
+    <main id="game-wrapper" aria-label="Word Crossword">
+        <iframe id="game-frame" title="Word Crossword Game" allow="autoplay; fullscreen;"></iframe>
+    </main>
+
+    <section class="seo-content">
+        <h2 style="margin-top: 0;">Master the Modern Word Crossword</h2>
+        <p>Step into the ultimate word challenge with Word Crossword! This addictive puzzle game combines the thrill of anagrams with the logic of crossword puzzles. Challenge your vocabulary, sharpen your mind, and discover hidden words as you connect letters in a beautiful, modern interface.</p>
+
+        <h2>How to Play Word Crossword</h2>
+        <ul>
+            <li><strong>Connect:</strong> Tap/click and drag your finger across the letters in the circle to form a valid word.</li>
+            <li><strong>Fill:</strong> Correct words will automatically fill their spots in the crossword grid above. Guess all target words to win.</li>
+            <li><strong>Bonus:</strong> Finding valid words that aren't part of the grid gives you bonus coins!</li>
+            <li><strong>Hints:</strong> Stuck? Use earned coins to buy hints which reveal random letters in the grid.</li>
+        </ul>
+
+        <h2>Why Play on PlayMix Games?</h2>
+        <ul>
+            <li><strong>Free to Play:</strong> Enjoy unlimited levels at zero cost.</li>
+            <li><strong>No Downloads:</strong> Play directly in your browser on mobile or desktop.</li>
+            <li><strong>Brain Training:</strong> Improve your spelling, vocabulary, and pattern recognition.</li>
+            <li><strong>Modern Design:</strong> A clean, glowing aesthetic that's easy on the eyes.</li>
+        </ul>
+
+        <div class="back-link-container">
+            <a href="../index.html" class="back-link">← Back to Portal</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../privacy.html" style="color: #666; text-decoration: none; margin: 0 10px;">Privacy</a>
+            <a href="../terms.html" style="color: #666; text-decoration: none; margin: 0 10px;">Terms</a>
+        </div>
+        <p>&copy; 2026 PlayMix Games</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const startTime = Date.now();
+            
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            frame.onload = function () {
+                const loadTime = Date.now() - startTime;
+                const delay = Math.max(1000 - loadTime, 300);
+
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                    console.log('✅ Word Crossword ready in ' + (loadTime + delay) + 'ms');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>
