@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Neon Pacman Arcade - Play Free Online Game | PlayMixGames</title>
+    <meta name="description" content="Play Neon Pacman Arcade online for free! Dodge cyber ghosts, chomp glowing neon dots, and conquer the maze in this massive reboot of the classic pac man game.">
+
+    <!-- OG Tags for social sharing -->
+    <meta property="og:title" content="Neon Pacman Arcade | PlayMixGames">
+    <meta property="og:description" content="Play Neon Pacman Arcade online for free! The classic pac man game gets a modern neon glow-up. Play now in your browser.">
+    <meta property="og:url" content="https://playmixgames.in/NeonPacman/game.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/NeonPacman/game.html">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Neon Pacman Arcade",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Play Neon Pacman Arcade online for free! Dodge cyber ghosts, chomp glowing neon dots, and conquer the maze."
+    }
+    </script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Powering up the Grid...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <main id="game-wrapper" aria-label="Neon Pacman Arcade Game">
+        <div id="canvas-container">
+            <canvas id="game-canvas" width="560" height="620"></canvas>
+            
+            <!-- Touch Control Overlay for Mobile -->
+            <div id="touch-controls" class="touch-controls">
+                <!-- Swipe zones overlay, handled by JS -->
+            </div>
+        </div>
+
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div class="scoreboard-compact top-bar" role="status" aria-live="polite">
+                <div class="stat-box">
+                    <span class="label">SCORE</span>
+                    <span id="score" class="val">0</span>
+                </div>
+                <!-- 
+                <div class="title-tag">NEON PACMAN</div> 
+                -->
+                <div class="stat-box right">
+                    <span class="label">LIVES</span>
+                    <span id="lives" class="val">3</span>
+                </div>
+            </div>
+
+            <!-- Start Screen / Tutorial -->
+            <div id="start-screen" class="overlay" role="dialog" aria-labelledby="game-title">
+                <div class="overlay-box neon-box">
+                    <h2 id="game-title" class="neon-text">NEON PACMAN</h2>
+                    <h3 id="tutorial-countdown" style="color: var(--neon-yellow); font-size: 1.8rem; margin: 15px 0;">GAME STARTS IN 2...</h3>
+                    <div class="instructions-box">
+                        <p>💻 <strong>Desktop:</strong> Arrow Keys / WASD.</p>
+                        <p>📱 <strong>Mobile:</strong> Swipe to turn.</p>
+                        <p>🟡 Eat dots. 🔴 Avoid Ghosts!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="overlay hidden" role="dialog" aria-labelledby="result-title">
+                <div class="overlay-box neon-box">
+                    <h2 id="result-title" class="neon-text red">GAME OVER</h2>
+                    <p id="result-desc" style="color: #ccc; margin-bottom: 20px;">Final Score: <span id="final-score">0</span></p>
+                    <button id="restart-btn" class="pmg-btn neon-btn">PLAY AGAIN</button>
+                    <a href="../index.html" class="back-link">← Back to Menu</a>
+                </div>
+            </div>
+            
+            <!-- Level Complete Screen -->
+            <div id="level-complete-screen" class="overlay hidden" role="dialog">
+                <div class="overlay-box neon-box">
+                    <h2 class="neon-text green" style="font-size: 2rem;">GRID CLEARED!</h2>
+                    <p style="color: #ccc; margin-bottom: 20px;">Get ready for the next level.</p>
+                    <button id="next-level-btn" class="pmg-btn neon-btn">CONTINUE</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="../index.html" class="back-btn back-button-corner">← Back</a>
+
+    <!-- Information Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Navigate the glowing neon grid with simple controls:</p>
+                    <ul>
+                        <li><strong>Desktop:</strong> Use Arrow Keys or WASD to guide your character.</li>
+                        <li><strong>Mobile:</strong> Swipe your finger anywhere on the screen to change direction.</li>
+                        <li><strong>Objective:</strong> Eat all the glowing neon pellets in the level without getting caught by the Cyber Ghosts.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>About Neon Pacman Arcade</h2>
+                <div class="info-content">
+                    <p>Experience the classic arcade chase in a stunning modern reboot! Neon Pacman Arcade takes the legendary maze-chomping gameplay you know and love and electrifies it with a vibrant, synthwave aesthetic, dynamic lighting, and smooth responsive controls.</p>
+                    <p>Whether you are reliving the arcade glory days or experiencing the rush for the first time, Neon Pacman provides an addictive, high-score chasing experience right in your browser, for free, without any downloads.</p>
+                    <p style="font-size: 0.8rem; margin-top: 20px; color: #888;">Based on open-source Pac-Man mechanics by Talha (MIT License)</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>Frequently Asked Questions</h2>
+                <div class="info-content">
+                    <div class="faq-item">
+                        <h4>Is the game free to play?</h4>
+                        <p>Yes, Neon Pacman Arcade is 100% free and playable directly in your web browser.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I play on my tablet or mobile phone?</h4>
+                        <p>Absolutely! The game is completely optimized for touch screens with a smooth swipe mechanic.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I increase my score?</h4>
+                        <p>Eat the small neon pellets for 10 points each, and seek out the large energy pearls for 50 points. Compete to get the highest score possible!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="font-size: 0.8rem; color: #666;">
+                    &copy; 2026 PlayMix Games &middot; Core game logic adapted from open-source mechanics by <a href="https://github.com/he-is-talha" style="color:#4facfe;" target="_blank" rel="noopener">Talha</a> (MIT License). Redesigned with Playmix Neon UI, dynamic speed scaling, touch swipe mechanics, and platform integration.<br>
+                    Licensed under CC BY 3.0: <a href="http://creativecommons.org/licenses/by/3.0/" style="color:#4facfe;" target="_blank" rel="noopener">http://creativecommons.org/licenses/by/3.0/</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+</body>
+
+</html>
