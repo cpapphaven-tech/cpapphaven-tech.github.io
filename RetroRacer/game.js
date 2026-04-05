@@ -153,7 +153,10 @@ var Render = {
 var fps = 60, step = 1/fps, width = 800, height = 600, centrifugal = 0.3, offRoadLimit = 2000, skyOffset = 0, segments = [], canvas = Dom.get('canvas'), ctx = canvas.getContext('2d');
 var roadWidth = 2000, segmentLength = 200, rumbleLength = 3, trackLength = 0, lanes = 3, fieldOfView = 100, cameraHeight = 1000, cameraDepth = null, drawDistance = 300;
 var playerX = 0, playerZ = null, fogDensity = 2, position = 0, speed = 0, maxSpeed = 12000, accel = maxSpeed/5, breaking = -maxSpeed, decel = -maxSpeed/5;
+var currentLevel = Util.toInt(Dom.storage['CarRace_Level'], 1);
+if (currentLevel > 15) { currentLevel = 1; Dom.storage['CarRace_Level'] = '1'; } // Reset if glitched
 var currentLapTime = 0, raceFinished = false, TIME_LIMIT = 90, timeRemaining = TIME_LIMIT, hitCooldown = 0;
+var gameRecordTime = Date.now();
 var keyLeft = false, keyRight = false, keyFaster = false, keySlower = false;
 var hudElements = {};
 
@@ -164,17 +167,41 @@ function resetRoad() {
     segments = [];
     var addSeg = function(c,y){ var n=segments.length; segments.push({index:n, p1:{world:{y:n?segments[n-1].p2.world.y:0, z:n*segmentLength}, camera:{}, screen:{}}, p2:{world:{y:y, z:(n+1)*segmentLength}, camera:{}, screen:{}}, curve:c, sprites:[], color:Math.floor(n/rumbleLength)%2?COLORS.DARK:COLORS.LIGHT}); };
     var addRoad = function(en,h,le,c,y){ var sY=segments.length?segments[segments.length-1].p2.world.y:0, eY=sY+(y*segmentLength), t=en+h+le; for(var n=0;n<en;n++) addSeg(Util.easeIn(0,c,n/en), Util.easeInOut(sY,eY,n/t)); for(var n=0;n<h;n++) addSeg(c, Util.easeInOut(sY,eY,(en+n)/t)); for(var n=0;n<le;n++) addSeg(Util.easeInOut(c,0,n/le), Util.easeInOut(sY,eY,(en+h+n)/t)); };
-    addRoad(100,100,100,0,0); addRoad(100,100,100,3,10); addRoad(100,100,100,-3,20); addRoad(200,200,200,0,-30); addRoad(100,100,100,0,0);
+    
+    // Level scaling: 1-10 easy, > 10 harder
+    var numCurves = Math.max(3, Math.floor(currentLevel / 3) + 3);
+    addRoad(100,100,100,0,0);
+    for (var i = 0; i < numCurves; i++) {
+        var isHardCurve = currentLevel > 10 && Math.random() > 0.5;
+        var curveForce = isHardCurve ? Util.randomChoice([-5,-4,4,5]) : Util.randomChoice([-3,-2,-1,1,2,3]);
+        var hillForce = isHardCurve ? Util.randomInt(-50, 50) : Util.randomInt(-20, 20);
+        addRoad(100, Util.randomInt(100, 200), 100, curveForce, hillForce);
+    }
+    addRoad(100,100,100,0,0);
+    
     var obsList = [SPRITES.ROCK, SPRITES.BARREL, SPRITES.CONE];
-    for(var n=10; n<segments.length; n+=5) segments[n].sprites.push({source:Util.randomChoice(SPRITES.PLANTS), offset:Util.randomChoice([1.5,-1.5])});
-    for(var n=100; n<segments.length-50; n+=Util.randomInt(25,50)) segments[n].sprites.push({source:Util.randomChoice(obsList), offset:Util.randomChoice([-0.5, 0, 0.5])});
+    for(var n=10; n<segments.length; n+=5) segments[n].sprites.push({source:Util.randomChoice(SPRITES.PLANTS), offset:Util.randomChoice([1.5,-1.5, 2.0, -2.0])});
+    
+    var obsFreq = currentLevel <= 10 ? Util.randomInt(40, 70) : Math.max(15, 40 - Math.floor((currentLevel - 10) * 1.5));
+    for(var n=150; n<segments.length-50; n+=Util.randomInt(Math.floor(obsFreq*0.7), obsFreq)) {
+        segments[n].sprites.push({source:Util.randomChoice(obsList), offset:Util.randomChoice([-0.5, 0, 0.5])});
+    }
+
     for(var i=0; i<3; i++) segments[i+2].color = COLORS.START;
     for(var i=0; i<rumbleLength; i++) segments[segments.length-1-i].color = COLORS.FINISH;
     trackLength = segments.length * segmentLength;
+    timeRemaining = TIME_LIMIT = Math.floor((trackLength / maxSpeed) * step * 100) + 15;
 }
 
 function update(dt) {
     if (window.gamePaused || raceFinished) return;
+    
+    var secondsPlayed = Math.round((Date.now() - gameRecordTime) / 1000);
+    if (secondsPlayed > (window.PMG_TICK_RATE || 60)) {
+        if(typeof syncPMGLayout === 'function') syncPMGLayout();
+        gameRecordTime = Date.now();
+    }
+
     var playerSeg = segments[Math.floor((position+playerZ)/segmentLength)%segments.length];
     var speedPct = speed/maxSpeed, dx = dt*2*speedPct;
     position = Util.increase(position, dt*speed, trackLength);
@@ -188,17 +215,37 @@ function update(dt) {
     else {
         for(var n=0; n<playerSeg.sprites.length; n++) {
             var s = playerSeg.sprites[n]; if(!s.source.isObstacle) continue;
-            if(Util.overlap(playerX, 0.3, s.offset, 0.3, 0.8)) {
+            // Shrunk hitbox logic (w1: 0.2, w2: 0.2, percent: 0.6) for fairer near-misses
+            if(Util.overlap(playerX, 0.2, s.offset, 0.2, 0.6)) {
                 timeRemaining-=8; speed=maxSpeed/6; position=Util.increase(position, -playerZ*2, trackLength); hitCooldown=1.5;
                 if(hudElements['hud']) { hudElements['hud'].classList.add('hud-hit'); setTimeout(function(){hudElements['hud'].classList.remove('hud-hit');},400); }
                 break;
             }
         }
     }
-    playerX = Util.limit(playerX, -3, 3); speed = Util.limit(speed, 0, maxSpeed); currentLapTime += dt; timeRemaining -= dt;
-    if(timeRemaining <= 0) { timeRemaining=0; raceFinished=true; window.gamePaused=true; Dom.get('menu-title').innerHTML='⏰ TIME\'S UP!'; Dom.get('main-menu').classList.remove('hidden'); }
+    playerX = Util.limit(playerX, -3, 3); 
+    speed = Util.limit(speed, 0, maxSpeed); 
+    currentLapTime += dt; 
+    timeRemaining -= dt;
+
+    if(timeRemaining <= 0) { 
+        timeRemaining=0; raceFinished=true; window.gamePaused=true; 
+        Dom.get('menu-title').innerHTML='⏰ TIME\'S UP!'; 
+        Dom.get('start-btn').innerText = 'RETRY LEVEL';
+        Dom.get('main-menu').classList.remove('hidden'); 
+    }
     updateHud('speed_value', Math.round(speedPct*100)); updateHud('timer_value', Math.max(0, Math.ceil(timeRemaining))); updateHud('current_lap_time_value', formatTime(currentLapTime)); updateHud('distance_value', Math.max(0, (trackLength-position)/5000).toFixed(2));
-    if(position >= trackLength-segmentLength*5) { raceFinished=true; window.gamePaused=true; Dom.get('menu-title').innerHTML='🏁 FINISH!'; Dom.get('main-menu').classList.remove('hidden'); }
+    updateHud('level_value', currentLevel);
+    
+    // Safety guard > 5000 prevents false positive immediately after reset
+    if(position > 5000 && position >= trackLength-segmentLength*5) { 
+        raceFinished=true; window.gamePaused=true; 
+        currentLevel++;
+        Dom.storage['CarRace_Level'] = currentLevel.toString();
+        Dom.get('menu-title').innerHTML='🎖️ LEVEL COMPLETED!'; 
+        Dom.get('start-btn').innerText = 'NEXT LEVEL';
+        Dom.get('main-menu').classList.remove('hidden'); 
+    }
 }
 
 function render() {
@@ -233,11 +280,19 @@ function render() {
     // Player dot
     ctx.fillStyle='#e74c3c'; ctx.beginPath(); ctx.arc(bX+f, bY+bH/2, 4, 0, Math.PI*2); ctx.fill();
     // Labels
-    ctx.fillStyle='#fff'; ctx.font='bold 8px Arial'; ctx.textAlign='center';
-    ctx.fillText('START', bX, bY-5); ctx.fillText('FINISH', bX+bW, bY-5); ctx.textAlign='left';
+    ctx.fillStyle='#fff'; ctx.font='bold 8px Arial'; 
+    ctx.textAlign='left'; ctx.fillText('START', bX, bY-5); 
+    ctx.textAlign='right'; ctx.fillText('FINISH', bX+bW, bY-5); 
+    ctx.textAlign='left';
 }
 
-Dom.on('start-btn', 'click', function(){ Dom.get('main-menu').classList.add('hidden'); window.gamePaused=false; window.focus(); reset(); });
+Dom.on('start-btn', 'click', function(){ 
+   
+    Dom.get('main-menu').classList.add('hidden'); 
+    window.gamePaused=false; 
+    window.focus(); 
+    reset(); 
+});
 function setupTouch(id, k) { 
     var el=Dom.get(id); if(!el) return; 
     var setKey = function(val){ 
@@ -277,8 +332,11 @@ function reset() {
     playerZ=(cameraHeight*cameraDepth); 
     position=0; playerX=0; speed=0; 
     raceFinished=false; currentLapTime=0; 
-    timeRemaining=TIME_LIMIT; hitCooldown=0; 
-    if(segments.length===0) resetRoad(); 
+    hitCooldown=0; 
+    
+    // Always regenerate road to apply new level difficulty or reset obstacles
+    resetRoad(); 
+    updateHud('level_value', currentLevel);
 }
 
 var last = Util.timestamp();
