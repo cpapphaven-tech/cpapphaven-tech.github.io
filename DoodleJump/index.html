@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Neon Bounce - Endless Jumping Arcade Game | PlayMixGames</title>
+    <meta name="description"
+        content="Play Neon Bounce online. Jump from platform to platform endlessly, dodge obstacles, and see how high you can climb in this completely revamped synthwave arcade game!">
+    <link rel="canonical" href="https://playmixgames.com/NeonBounce/">
+    
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Spinning Up Platforms...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <div id="game-wrapper" class="game-wrapper">
+        <div class="game-ui">
+            <div class="score-group">
+                <span class="score-label">Score</span>
+                <span id="scoreEl" class="score-value">0</span>
+            </div>
+            <div class="score-group">
+                <span class="high-score-label">Best</span>
+                <span id="highScoreEl" class="high-score-value">0</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas" width="480" height="600"></canvas>
+        <div class="mobile-controls" id="mobileControls">
+            <button type="button" class="ctrl-btn ctrl-left" id="btnLeft" aria-label="Move left">←</button>
+            <button type="button" class="ctrl-btn ctrl-right" id="btnRight" aria-label="Move right">→</button>
+        </div>
+        
+        <div id="startOverlay" class="overlay overlay-start">
+            <h1>Neon Bounce</h1>
+            <p>Use <kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> to move</p>
+            <p class="mobile-hint">Or tap the arrows below on mobile</p>
+            <p>Land on platforms. Tap canvas to DOUBLE JUMP!</p>
+            <button type="button" id="startBtn" class="pmg-btn">Play</button>
+        </div>
+        
+        <div id="gameOverOverlay" class="overlay overlay-gameover hidden">
+            <h2>Game Over</h2>
+            <p>Score: <span id="finalScoreEl">0</span></p>
+            <button type="button" id="restartBtn" class="pmg-btn">Play Again</button>
+            <a href="../index.html" class="pmg-btn-outline"
+                style="margin-top:10px;display:block;text-align:center;text-decoration:none;">🏠 More Games</a>
+        </div>
+    </div>
+
+    <!-- About / FAQ Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>About Neon Bounce</h2>
+                <p>Play free online Neon Bounce game. Bounce upwards across a continuously generating array of synthwave platforms. Master the brand-new double jump mechanics to traverse massive gaps and rack up high scores!</p>
+            </div>
+            <div class="info-card">
+                <h2>Game Rules</h2>
+                <ul>
+                    <li><strong>Objective:</strong> Survive as long as possible by jumping up platforms. Falling below the bottom of the screen ends the game.</li>
+                    <li><strong>Controls:</strong> Use the Left and Right arrow keys, or A and D, or tap the mobile control buttons to move horizontally. You wrap around the screen edges!</li>
+                    <li><strong>Platforms:</strong> Green platforms are solid. Brown platforms will break upon touch. Blue platforms move horizontally.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h4>How do I get a high score?</h4>
+                    <p>Focus on landing on green platforms and try to hit spring boxes to leap past difficult sections quickly without risking a fall.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is the game mobile-friendly?</h4>
+                    <p>Yes! Intuitive mobile touch buttons are overlaid at the bottom of the screen rendering it completely playable on phones and tablets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- License Footer -->
+    <footer style="text-align:center; padding: 20px; color: #888; font-size: 0.8rem; background: #000;">
+        &copy; 2026 PlayMixGames. Code based off open-source JS adaptations. All code, modifications, and portal assets are properties of PlayMixGames.
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+</body>
+
+</html>
