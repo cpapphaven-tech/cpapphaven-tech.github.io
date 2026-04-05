@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Car Race 3D - Free Online Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; user-select: none; -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+        body { background: #000; overflow: hidden; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; font-family: 'Press Start 2P', cursive; }
+        #game-wrapper { position: relative; width: 800px; height: 600px; background: #72D7EE; overflow: hidden; }
+        @media (max-width: 800px) { #game-wrapper { width: 100vw; height: 100vh; } }
+        canvas { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+        #hud { position: absolute; top: 10px; width: 100%; display: flex; justify-content: space-between; padding: 0 15px; color: #333; font-size: 10px; z-index: 10; pointer-events: none; }
+        #hud.hud-hit { background: rgba(255,0,0,0.35); border-radius: 10px; }
+        .hud-val { color: #0088ff; font-weight: bold; }
+        .hud-timer { color: #27ae60; font-size: 14px; }
+        #distance_value { color: #f1c40f; font-size: 14px; text-shadow: 1px 1px 0px #000; }
+        .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.8); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 100; color: #fff; }
+        .hidden { display: none !important; }
+        #start-btn { padding: 15px 30px; font-size: 14px; color: #fff; background: #27ae60; border: 4px solid #fff; cursor: pointer; font-family: 'Press Start 2P', cursive; margin-top: 20px; transition: 0.1s; }
+        #start-btn:active { transform: scale(0.95); }
+        #mobile-controls { position: absolute; bottom: 20px; left: 0; right: 0; height: 100px; display: flex; justify-content: space-between; padding: 0 15px; pointer-events: auto; opacity: 0.6; }
+        @media (min-width: 1024px) { #mobile-controls { display: none; } }
+        .ctrl-btn { width: 60px; height: 60px; background: rgba(255,255,255,0.3); border: 3px solid #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+        .gas { background: rgba(39, 174, 96, 0.4); width: 80px; }
+    </style>
+</head>
+<body>
+    <div id="game-wrapper">
+        <canvas id="canvas"></canvas>
+        <div id="hud">
+            <div class="hud-left">SPEED: <span id="speed_value">0</span></div>
+            <div class="hud-center" style="text-align:center;">
+                <span id="timer_value" class="hud-timer">90</span>s LEFT<br>
+                <span id="current_lap_time_value" style="font-size:9px;">0.0</span>
+            </div>
+            <div class="hud-right">DIST: <span id="distance_value">0.00</span> KM</div>
+        </div>
+        <div id="mobile-controls">
+            <div style="display:flex; gap:10px;">
+                <div class="ctrl-btn" id="btn-left">◀</div>
+                <div class="ctrl-btn" id="btn-right">▶</div>
+            </div>
+            <div style="display:flex; gap:10px;">
+                <div class="ctrl-btn" id="btn-brake" style="background:rgba(231,76,60,0.4)">B</div>
+                <div class="ctrl-btn gas" id="btn-gas">GAS</div>
+            </div>
+        </div>
+        <div id="main-menu" class="overlay">
+            <h2 id="menu-title">CAR RACE 3D</h2>
+            <button id="start-btn">RACE NOW</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

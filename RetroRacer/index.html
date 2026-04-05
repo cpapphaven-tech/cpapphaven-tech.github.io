@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Car Race 3D - Free Online Car Racing Game | PlayMix Games</title>
+    <meta name="description" content="Play Car Race 3D free online! Drive a fast car, dodge opponents and race to the finish on a beautiful 3D road. Free browser car racing game, no download needed.">
+    <meta name="keywords" content="car race, car racing game, free car race online, 3D car game, car game browser, play car race">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/RetroRacer/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/RetroRacer/index.html" />
+    <link rel="canonical" href="https://playmixgames.in/RetroRacer/index.html" />
+
+    <meta property="og:title" content="Car Race 3D - Free Online Car Racing Game">
+    <meta property="og:description" content="Play Car Race 3D free online! Fast 3D car racing in your browser — no download needed.">
+    <meta property="og:url" content="https://playmixgames.in/RetroRacer/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Car Race 3D",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Any",
+        "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+        },
+        "description": "Play Car Race 3D online for free. Drive fast, dodge opponents and race to the finish in this addictive browser car racing game."
+    }
+    </script>
+
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; min-height: 100vh;
+            background: #050510; font-family: 'Outfit', sans-serif;
+        }
+
+        /* Compact Layout Wrapper */
+        #game-wrapper {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 4/3;
+            margin: 20px auto;
+            position: relative;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        #game-frame {
+            width: 100%; height: 100%; border: none; display: block;
+            opacity: 0; transition: opacity 0.5s ease;
+        }
+        #game-frame.visible { opacity: 1; }
+
+        .seo-content {
+            max-width: 800px; margin: 40px auto; padding: 40px 20px; color: #ccc; line-height: 1.6;
+            background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .seo-content h2 { color: #d100ff; margin-top: 30px; }
+        .back-link-container { text-align: center; margin: 40px 0; }
+        .back-link { color: #d100ff; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+        footer { text-align: center; padding: 40px; background: #050510; color: #555; }
+    </style>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- Ad slots -->
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading Engine...</p>
+    </div>
+
+    <!-- Title and Game Frame -->
+    <h1 style="text-align: center; color: #d100ff; font-family: 'Outfit', sans-serif; margin-top: 40px; text-transform: uppercase;">Car Race 3D</h1>
+
+    <main id="game-wrapper" aria-label="Car Race 3D - Online Game">
+        <iframe id="game-frame" title="Car Race 3D Game" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+    
+    <div id="bottom-ad" class="pmg-bottom-ad" style="text-align: center; margin: 20px auto; min-height: 90px;"></div>
+
+    <section class="seo-content">
+        <h2 style="margin-top: 0;">Play Car Race 3D — Free Online Car Racing Game!</h2>
+        <p>Jump in and race in Car Race 3D! Press the gas, steer through curves, and overtake all opponents in this fast-paced 3D car racing game you can play free in your browser — no download required.</p>
+
+        <h2>Why Play on PlayMix Games?</h2>
+        <ul>
+            <li>100% free with no hidden charges or limits whatsoever</li>
+            <li>Play instantly in your browser (HTML5 WebGL/Canvas)</li>
+            <li>Fully optimized for touch devices and mobile screens</li>
+            <li>No intrusive account logins needed</li>
+        </ul>
+
+        <div class="back-link-container">
+            <a href="../index.html" class="back-link">← Back to Portal</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links" style="margin-bottom: 20px;">
+            <a href="../privacy.html" style="color: #666; text-decoration: none; margin: 0 10px;">Privacy</a>
+            <a href="../terms.html" style="color: #666; text-decoration: none; margin: 0 10px;">Terms</a>
+        </div>
+        <p>&copy; 2026 PlayMix Games</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                    // Auto-focus the iframe so keyboard events reach the game
+                    frame.focus();
+                }, delay);
+            };
+            // Also focus iframe on any click on the game wrapper
+            document.getElementById('game-wrapper').addEventListener('click', function() {
+                frame.focus();
+            });
+        })();
+    </script>
+</body>
+
+</html>
