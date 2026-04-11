@@ -80,6 +80,8 @@
     }
     </script>
 
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
     <script defer src="../sidebar.js"></script>
 
     <style>
@@ -281,6 +283,10 @@
             const urlParams = new URLSearchParams(window.location.search);
             const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
             frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            document.addEventListener("DOMContentLoaded", function () {
+                if (typeof prepSystem === "function") prepSystem();
+            });
 
             const loader = document.getElementById('pmg-loader');
             const start = Date.now();
