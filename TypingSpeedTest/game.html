@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Typing Speed Test Arena</title>
+
+    <!-- Essential Scripts -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        onload="console.log('✅ Supabase loaded')"
+        onerror="console.warn('⚠️ Supabase failed')">
+    </script>
+
+    <!-- Phaser 3 -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-closed">
+
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Warming up keyboard...</p>
+    </div>
+
+    <!-- Back Button -->
+    <a href="../index.html" class="back-btn">← Back</a>
+
+    <!-- Main Game Wrapper -->
+    <div id="game-wrapper">
+
+        <!-- Phaser Canvas Container -->
+        <div id="phaser-container"></div>
+
+        <!-- Hidden Input for Mobile Keyboards -->
+        <input type="text" id="mobile-keyboard-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-hidden="true" tabindex="-1">
+        
+        <!-- Mobile Tap Target -->
+        <div id="mobile-focus-overlay"></div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-box">
+                <div class="screen-icon">⌨️</div>
+                <h1>TYPING ARENA</h1>
+                <p>Type the falling words to destroy them and test your WPM!<br><br><span style="font-size:0.8rem;color:#4ade80;">Mobile Users: Tap PLAY to open keyboard.</span></p>
+                <button class="pmg-btn pmg-btn-primary" id="start-btn">🎯 PLAY NOW</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-box">
+                <div class="screen-icon">🔥</div>
+                <h1>SPEED TEST COMPLETE</h1>
+                
+                <div class="go-stats">
+                    <div class="go-stat-box">
+                        <div class="go-stat-label">Your Speed</div>
+                        <div class="go-stat-val go-wpm"><span id="go-val-wpm">0</span> <span>WPM</span></div>
+                    </div>
+                    <div class="go-stat-box">
+                        <div class="go-stat-label">Accuracy</div>
+                        <div class="go-stat-val go-acc"><span id="go-val-acc">0</span><span>%</span></div>
+                    </div>
+                </div>
+
+                <div class="go-stats" style="margin-top:-15px;">
+                    <div class="go-stat-box">
+                        <div class="go-stat-label">Best WPM</div>
+                        <div class="go-stat-val go-wpm"><span id="go-val-bestwpm">0</span></div>
+                    </div>
+                    <div class="go-stat-box">
+                        <div class="go-stat-label">Keys Hit</div>
+                        <div class="go-stat-val go-acc"><span id="go-val-keys">0</span></div>
+                    </div>
+                </div>
+
+                <button class="pmg-btn pmg-btn-primary" id="retry-btn">🔄 TYPE AGAIN</button>
+                <a href="../index.html" class="pmg-btn pmg-btn-outline" style="padding:14px;border-radius:50px;">🏠 More Games</a>
+            </div>
+        </div>
+
+    </div><!-- end #game-wrapper -->
+
+    <script src="game.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) loader.classList.add('hidden');
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+</body>
+</html>

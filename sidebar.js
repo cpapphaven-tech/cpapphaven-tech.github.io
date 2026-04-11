@@ -52,6 +52,7 @@
         { name: "🍣 Sushi Match 3D", path: "SushiMatch/index.html", icon: "assets/sushimatch3d.png", tip: "Memory" },
         { name: "🍔 Burger Stack 3D", path: "BurgerStack/index.html", icon: "assets/burgerstack.png", tip: "Physics" },
         { name: "🔡 Word Search", path: "WordSearch/index.html", icon: "img/wordsrarch200.png", tip: "Word" },
+        { name: "⌨️ Typing Arena", path: "TypingSpeedTest/index.html", icon: "assets/typingtest.png", tip: "Word" },
     ];
 
     function createSidebar() {
