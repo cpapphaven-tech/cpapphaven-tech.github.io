@@ -289,13 +289,9 @@
             });
 
             const loader = document.getElementById('pmg-loader');
-            const start = Date.now();
             frame.onload = function () {
-                const delay = Math.max(1000 - (Date.now() - start), 200);
-                setTimeout(() => {
-                    frame.classList.add('visible');
-                    loader.classList.add('hidden');
-                }, delay);
+                frame.classList.add('visible');
+                loader.classList.add('hidden');
             };
         })();
     </script>

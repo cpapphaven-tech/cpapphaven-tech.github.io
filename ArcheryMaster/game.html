@@ -137,7 +137,7 @@
             if (loader) {
                 var fill = loader.querySelector('.pmg-bar-fill');
                 if (fill) fill.style.width = '100%';
-                setTimeout(function () { loader.classList.add('hidden'); }, 400);
+                loader.classList.add('hidden');
             }
         });
         document.addEventListener("DOMContentLoaded", function () {
