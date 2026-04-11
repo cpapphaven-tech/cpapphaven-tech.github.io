@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Archery Master | PlayMixGames</title>
+    <meta name="description" content="Play Archery Master online – hit the bullseye across unlimited levels in this addictive bow and arrow game.">
+
+    <!-- Analytics & Ads -->
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../sidebar.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        onload="console.log('✅ Supabase loaded')"
+        onerror="console.warn('⚠️ Supabase failed')">
+    </script>
+
+    <!-- Phaser 3 -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading the Range...</p>
+    </div>
+
+    <!-- Back Button -->
+    <a href="../index.html" class="back-btn" id="back-btn">← Back</a>
+
+    <!-- Main Game Wrapper -->
+    <div id="game-wrapper">
+
+        <!-- HUD is now rendered inside the Phaser Canvas -->
+        <!-- Phaser Canvas container -->
+        <div id="phaser-container"></div>
+
+        <!-- Toast removed -->
+        <!-- Pull Power Meter -->
+        <div id="pull-meter" style="display:none;position:absolute;bottom:72px;left:50%;transform:translateX(-50%);width:160px;height:8px;background:rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);z-index:600;">
+            <div id="pull-fill" style="height:100%;width:0%;border-radius:10px;transition:width 0.05s,background 0.2s;"></div>
+        </div>
+        <!-- Mobile Shoot Button - HOLD to draw, release to fire -->
+        <button id="shoot-btn" aria-label="Hold to draw bow">🏹 HOLD</button>
+
+        <!-- Orientation Hint -->
+        <div id="orientation-hint">
+            <div class="hint-content">
+                <div class="rotate-icon">📱</div>
+                <p>Please rotate your device to Portrait Mode to play!</p>
+            </div>
+        </div>
+
+        <!-- ========= START SCREEN ========= -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-box">
+                <div class="screen-icon">🎯</div>
+                <h1>Archery<br>Master</h1>
+                <p>Pull the slingshot DOWN and release to shoot arrows. Pop as many colored balloons as you can before the 60 second timer runs out to clear the level!</p>
+                <div class="best-score-row">
+                    <div class="stat-box">
+                        <div class="stat-label">Best Score</div>
+                        <div class="stat-value" id="start-best">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Best Level</div>
+                        <div class="stat-value" id="start-level">1</div>
+                    </div>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="start-btn">▶ PLAY NOW</button>
+            </div>
+        </div>
+
+        <!-- ========= LEVEL CLEAR SCREEN ========= -->
+        <div id="level-clear-screen" class="overlay-screen hidden">
+            <div class="screen-box">
+                <div class="screen-icon">⭐</div>
+                <h2 id="level-clear-title">LEVEL 1 CLEAR!</h2>
+                <p id="level-clear-sub">Great shooting! Ready for the next challenge?</p>
+                <div class="best-score-row">
+                    <div class="stat-box">
+                        <div class="stat-label">Score</div>
+                        <div class="stat-value" id="lc-score">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Accuracy</div>
+                        <div class="stat-value" id="lc-acc">-</div>
+                    </div>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="next-level-btn">NEXT LEVEL →</button>
+            </div>
+        </div>
+
+        <!-- ========= GAME OVER SCREEN ========= -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-box">
+                <div class="screen-icon" id="go-icon">💔</div>
+                <h1 id="go-title">GAME OVER</h1>
+                <div id="final-score-display">0</div>
+                <div id="final-level-display">Level 1</div>
+                <div class="divider"></div>
+                <div class="best-score-row">
+                    <div class="stat-box">
+                        <div class="stat-label">Best Score</div>
+                        <div class="stat-value" id="go-best">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Best Level</div>
+                        <div class="stat-value" id="go-best-level">1</div>
+                    </div>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="retry-btn">🔄 TRY AGAIN</button>
+                <a href="../index.html" class="pmg-btn pmg-btn-secondary" style="display:block;text-align:center;text-decoration:none;margin-top:10px;padding:14px;border-radius:50px;">🏠 More Games</a>
+            </div>
+        </div>
+
+    </div><!-- end #game-wrapper -->
+
+    <!-- Game Logic -->
+    <script src="game.js"></script>
+
+    <!-- Loader hide -->
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 400);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+</body>
+</html>

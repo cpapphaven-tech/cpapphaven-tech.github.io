@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) sendHit("early-exit");
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Archery Master - Play Free Online Bow & Arrow Game | PlayMix Games</title>
+    <meta name="description" content="Play Archery Master free online! Aim your bow, release the arrow and hit the bullseye across unlimited levels. The best free archery game for mobile and desktop.">
+    <meta name="keywords" content="archery game online, bow and arrow game, archery master free, archery shooting game, bullseye game, archery game unblocked">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/ArcheryMaster/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/ArcheryMaster/index.html" />
+    <link rel="canonical" href="https://playmixgames.in/ArcheryMaster/index.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Archery Master - Play Free Online Bow & Arrow Game | PlayMix Games">
+    <meta property="og:description" content="Play Archery Master free online! Aim your bow, release the arrow and hit the bullseye across unlimited levels. The best free archery game for mobile and desktop.">
+    <meta property="og:url" content="https://playmixgames.in/ArcheryMaster/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://playmixgames.in/ArcheryMaster/og-image.png">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Archery Master",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Play Archery Master free online. Aim your bow and arrow, release at the perfect moment, and hit the bullseye across unlimited progressively challenging levels.",
+      "url": "https://playmixgames.in/ArcheryMaster/index.html"
+    }
+    </script>
+
+    <script defer src="../sidebar.js"></script>
+
+    <style>
+        body, html {
+            margin: 0; padding: 0;
+            width: 100%; min-height: 100vh;
+            overflow-x: hidden; overflow-y: auto;
+            background: #0d0a18;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #fff;
+        }
+
+        /* === PMG LOADER === */
+        #pmg-loader {
+            position: fixed; inset: 0; z-index: 99999;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            background: #0d0a18;
+            transition: opacity 0.5s ease;
+        }
+        #pmg-loader.hidden { opacity: 0; pointer-events: none; }
+
+        .pmg-brand {
+            font-size: 1.5rem; font-weight: 900;
+            letter-spacing: 2px; color: #c084fc;
+            text-transform: uppercase; margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(192, 132, 252, 0.5);
+            animation: pmgPulse 2s infinite;
+        }
+        .pmg-spinner {
+            width: 50px; height: 50px;
+            border: 4px solid rgba(192, 132, 252, 0.15);
+            border-top-color: #c084fc; border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+        .pmg-bar-track {
+            width: 200px; height: 4px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px; overflow: hidden;
+        }
+        .pmg-bar-fill {
+            height: 100%; width: 0%;
+            background: linear-gradient(90deg, #c084fc, #818cf8);
+            animation: pmgFill 5s cubic-bezier(0.1,0,0.1,1) forwards;
+        }
+        .pmg-tip { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 15px; }
+
+        @keyframes pmgSpin { to { transform: rotate(360deg); } }
+        @keyframes pmgPulse {
+            0%,100% { opacity:1; transform:scale(1); }
+            50% { opacity:0.7; transform:scale(0.98); }
+        }
+        @keyframes pmgFill { 0%{width:0%} 100%{width:95%} }
+
+        /* === IFRAME === */
+        #game-frame {
+            width: 100%; height: 100vh;
+            border: none; display: block;
+            opacity: 0; transition: opacity 0.5s ease;
+        }
+        #game-frame.visible { opacity: 1; }
+
+        /* === SEO CONTENT SECTION === */
+        .seo-section {
+            background: #0a0814;
+            padding: 60px 20px;
+            border-top: 1px solid rgba(192, 132, 252, 0.15);
+        }
+        .seo-inner {
+            max-width: 860px;
+            margin: 0 auto;
+            display: grid;
+            gap: 40px;
+        }
+        .seo-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(192,132,252,0.12);
+            border-radius: 16px;
+            padding: 30px;
+        }
+        .seo-card h2 {
+            color: #c084fc;
+            font-size: 1.4rem;
+            margin: 0 0 16px;
+            border-left: 4px solid #c084fc;
+            padding-left: 14px;
+        }
+        .seo-card p, .seo-card li {
+            color: #a0a0c0;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        .seo-card ul { padding-left: 20px; }
+        .faq-q { color: #e2e8f0; font-weight: 700; margin: 16px 0 6px; }
+        .faq-a { color: #a0a0c0; line-height: 1.6; margin-bottom: 18px; }
+
+        /* License */
+        .license-box {
+            background: rgba(192,132,252,0.04);
+            border: 1px solid rgba(192,132,252,0.15);
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #888;
+            line-height: 1.6;
+        }
+        .license-box a { color: #c084fc; }
+    </style>
+</head>
+<body>
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading the Range...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="Archery Master Game - Free Online Bow & Arrow" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <!-- SEO / About / FAQ / License section -->
+    <section class="seo-section" aria-label="About Archery Master Game">
+        <div class="seo-inner">
+
+            <div class="seo-card">
+                <h2>About Archery Master</h2>
+                <p>
+                    Play free online <strong>Archery Master</strong> – the most addictive bow and arrow game on the web! 
+                    Step onto the range, draw your bow, and release at the perfect moment to hit the spinning target's bullseye. 
+                    With <strong>unlimited progressive levels</strong>, each stage brings faster-moving targets, tighter wind, 
+                    narrower scoring zones, and explosive bonus rings that keep you on the edge of your seat. 
+                    Whether you are a casual clicker or a precision shooter, this archery shooting game delivers 
+                    satisfying gameplay in short, addictive bursts perfectly suited for mobile and desktop.
+                </p>
+                <ul>
+                    <li>🏹 Unlimited levels with progressively harder targets</li>
+                    <li>🎯 Precision physics-driven arrow flight</li>
+                    <li>💨 Dynamic wind and moving target mechanics</li>
+                    <li>⚡ Score multipliers, bullseye bonuses, and streak rewards</li>
+                    <li>📱 Full mobile touch support &amp; landscape-ready</li>
+                    <li>🎮 No download needed – play instantly in your browser</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>How to Play Archery Master</h2>
+                <ul>
+                    <li><strong>Aim:</strong> Your bow bobs up and down automatically — time your shot perfectly.</li>
+                    <li><strong>Shoot:</strong> Tap / click (or press Space/Enter) when the sight aligns with the center ring.</li>
+                    <li><strong>Score:</strong> Bullseye = 10 pts · Inner ring = 7 pts · Mid ring = 5 pts · Outer = 3 pts.</li>
+                    <li><strong>Bonus:</strong> 3 consecutive bullseyes trigger a <em>🔥 Hot Streak</em> worth 2× score.</li>
+                    <li><strong>Wind:</strong> From Level 5 onward, a crosswind deflects your arrows — adjust timing!</li>
+                    <li><strong>Advance:</strong> Hit the required score threshold to unlock the next level.</li>
+                    <li><strong>Lives:</strong> You get 3 arrows per round. Missing the board entirely costs a life. Losing all lives ends the game.</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>Frequently Asked Questions</h2>
+
+                <p class="faq-q">Is Archery Master free to play?</p>
+                <p class="faq-a">Yes! Archery Master is 100% free with no sign-up or download required. Play directly in your browser on any device.</p>
+
+                <p class="faq-q">Does Archery Master work on mobile?</p>
+                <p class="faq-a">Absolutely. The game uses responsive touch controls optimised for smartphones and tablets. Just tap the screen to shoot!</p>
+
+                <p class="faq-q">How many levels are there?</p>
+                <p class="faq-a">Archery Master features <strong>unlimited levels</strong>. Each 10-level set introduces new mechanics such as wind, moving targets, and spinning rings, keeping the challenge fresh forever.</p>
+
+                <p class="faq-q">What is the best strategy to score high?</p>
+                <p class="faq-a">Watch the target's rhythm, anticipate the wind indicator, and chain bullseyes for the Hot Streak multiplier. Consistency beats lucky shots every time.</p>
+
+                <p class="faq-q">Does my score get saved?</p>
+                <p class="faq-a">Your best score is saved locally in your browser's storage so you can track your personal best even after closing the tab.</p>
+            </div>
+
+            <div class="seo-card">
+                <h2>License &amp; Credits</h2>
+                <div class="license-box">
+                    <p><strong>Archery Master</strong> is an original HTML5 game created for <a href="https://playmixgames.in" target="_blank" rel="noopener">PlayMix Games</a>.</p>
+                    <p>Game inspired by classic archery arcade mechanics. Built with HTML5 Canvas &amp; Phaser 3 framework.</p>
+                    <p>© 2024–2025 PlayMix Games · All rights reserved.</p>
+                    <p>This game may not be redistributed, resold, or embedded on third-party sites without written permission.</p>
+                    <p>Sound effects sourced from <a href="https://freesound.org" target="_blank" rel="noopener noreferrer">Freesound.org</a> under Creative Commons license.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+</html>
