@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ─── Early Analytics ─── -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href, referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init"
+            };
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey}, body:JSON.stringify(hitData), keepalive:true });
+            };
+            sendHit("pre-init");
+            window.addEventListener("pagehide", () => { if(!window.FIREBASE_INITIALIZED) sendHit("early-exit"); });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Math Learning Quiz – Free Brain Training MCQ Game for Kids &amp; Adults | PlayMix Games</title>
+    <meta name="description" content="Play Math Learning Quiz online free! Answer unlimited math MCQ questions to boost your brain. A fun educational quiz game for kids, students &amp; adults. Learn maths fast with this addictive brain training game.">
+    <meta name="keywords" content="math learning quiz, math quiz online, brain training math game, learn maths fast, educational math game, kids math quiz, maths mcq game, mental math practice, math for students">
+    <link rel="canonical" href="https://playmixgames.in/DailyMathEquator/index.html">
+    <meta property="og:title" content="Math Learning Quiz – Free Brain Training MCQ Game | PlayMix Games">
+    <meta property="og:description" content="Answer unlimited math MCQ questions! A fun educational brain training quiz game for kids, students and adults. Learn maths with 4-option questions across unlimited levels.">
+    <meta property="og:url" content="https://playmixgames.in/DailyMathEquator/index.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Daily Math Equator",
+      "applicationCategory": "EducationalGame",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "A daily math equation guessing puzzle. Players get 6 chances to guess the correct math equation. Green tiles for correct positions, yellow for wrong positions – like Wordle but with numbers!",
+      "url": "https://playmixgames.in/DailyMathEquator/index.html"
+    }
+    </script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; }
+        body, html {
+            margin: 0; padding: 0;
+            width: 100%; min-height: 100vh;
+            overflow-x: hidden;
+            background: #0d0f1a;
+            font-family: 'Outfit', sans-serif;
+            color: #fff;
+        }
+
+        /* ── PMG Loader ── */
+        #pmg-loader {
+            position: fixed; inset: 0; z-index: 99999;
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            background: #0d0f1a; transition: opacity 0.5s ease;
+        }
+        #pmg-loader.hidden { opacity:0; pointer-events:none; }
+        .pmg-brand { font-size:1.5rem; font-weight:900; letter-spacing:2px; color:#f59e0b; text-transform:uppercase; margin-bottom:30px; text-shadow:0 0 20px rgba(245,158,11,0.5); animation:pmgPulse 2s infinite; }
+        .pmg-spinner { width:50px; height:50px; border:4px solid rgba(245,158,11,0.15); border-top-color:#f59e0b; border-radius:50%; animation:pmgSpin 0.8s linear infinite; margin-bottom:20px; }
+        .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; }
+        .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,#f59e0b,#ef4444); animation:pmgFill 5s cubic-bezier(0.1,0,0.1,1) forwards; }
+        .pmg-tip { font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:15px; }
+        @keyframes pmgSpin { to{transform:rotate(360deg);} }
+        @keyframes pmgPulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+        @keyframes pmgFill { 0%{width:0%} 100%{width:95%} }
+
+        /* ── iframe ── */
+        #game-frame {
+            width:100%; height:100vh; border:none; display:block;
+            opacity:0; transition:opacity 0.5s ease;
+        }
+        #game-frame.visible { opacity:1; }
+
+        /* ── SEO Section ── */
+        .seo-section { background:#0a0c14; padding:60px 20px; border-top:1px solid rgba(245,158,11,0.15); }
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.03); border:1px solid rgba(245,158,11,0.12); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#f59e0b; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #f59e0b; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#a0a0c0; line-height:1.7; margin-bottom:10px; }
+        .seo-card ul { padding-left:20px; }
+        .faq-q { color:#e2e8f0; font-weight:700; margin:16px 0 6px; }
+        .faq-a { color:#a0a0c0; line-height:1.6; margin-bottom:18px; }
+        .license-box { background:rgba(245,158,11,0.04); border:1px solid rgba(245,158,11,0.15); border-radius:10px; padding:20px; font-size:0.85rem; color:#888; line-height:1.6; }
+        .license-box a { color:#f59e0b; }
+    </style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading today's equation...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="Daily Math Equator – Number Puzzle Game" allow="autoplay;"></iframe>
+    </main>
+
+    <section class="seo-section" aria-label="About Daily Math Equator">
+        <div class="seo-inner">
+
+            <div class="seo-card">
+                <h1 style="font-size:1.6rem;margin:0 0 16px;color:#f59e0b;">Math Learning Quiz – Free Brain Training MCQ Game</h1>
+            <p>Sharpen your mind with <strong>Math Learning Quiz</strong> – the most addictive free online math MCQ game for kids, students, and adults! Answer unlimited questions across progressive difficulty levels from simple addition all the way to squares and algebra. Each correct answer earns you points, and the questions get harder as you advance through infinite levels, making it an incredible tool for <strong>daily brain training</strong> and <strong>learning maths</strong> the fun way.</p>
+                <p>Challenge your brain every day with <strong>Daily Math Equator</strong> – the ultimate free online number puzzle! Inspired by Nerdle, you get <strong>6 chances to crack a hidden math equation</strong>. Each correct digit in the right place glows <span style="color:#4ade80;font-weight:700;">green</span>, a right digit in the wrong spot glows <span style="color:#f59e0b;font-weight:700;">yellow</span>, and unknown digits turn <span style="color:#888;font-weight:700;">gray</span>.</p>
+                <p>A brand-new equation unlocks every single day at midnight, meaning you can play as a truly persistent <strong>daily brain training ritual</strong> just like Wordle but built entirely on math equations, making it perfect for students, adults, and seniors.</p>
+                <ul>
+                    <li>🧠 Genuine Nerdle-style daily math puzzle built for all ages</li>
+                    <li>🔢 8-character equations with +, −, × operators and = sign</li>
+                    <li>✅ 6 attempts with real-time color-coded feedback per tile</li>
+                    <li>📅 New equation every day – creates daily revisit habit</li>
+                    <li>📱 Fully touch-screen mobile keyboard friendly</li>
+                    <li>🎯 No download needed – play free instantly in your browser</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>How to Play Daily Math Equator</h2>
+                <ul>
+                    <li><strong>Guess the Equation:</strong> Type an 8-character math equation using the on-screen keypad or your physical keyboard. Example: <code style="color:#f59e0b;">12+05=17</code></li>
+                    <li><strong>Submit a Guess:</strong> Press the ENTER key or tap the ✓ button after typing a complete valid equation.</li>
+                    <li><strong>🟩 Green Tile:</strong> The digit or symbol is in the CORRECT position in the secret equation.</li>
+                    <li><strong>🟨 Yellow Tile:</strong> The digit or symbol IS in the equation, but in a DIFFERENT position.</li>
+                    <li><strong>⬛ Gray Tile:</strong> The digit or symbol is NOT present in the secret equation at all.</li>
+                    <li><strong>Win:</strong> Guess the exact equation within 6 attempts to score a win! Share your result and come back tomorrow!</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>Frequently Asked Questions</h2>
+
+                <p class="faq-q">Is Daily Math Equator free to play?</p>
+                <p class="faq-a">Yes! 100% free with no sign-up or app download required. Open your browser and play today's equation puzzle instantly.</p>
+
+                <p class="faq-q">How is Daily Math Equator different from Wordle?</p>
+                <p class="faq-a">Instead of guessing a word, you guess a <strong>hidden math equation</strong>! Both use the same green/yellow/gray color-coded feedback system, but Daily Math Equator challenges your arithmetic reasoning and logical deduction skills.</p>
+
+                <p class="faq-q">Does everyone get the same equation every day?</p>
+                <p class="faq-a">Yes – the equation is seeded by today's calendar date, so everybody around the world is solving the same daily puzzle. Compare your results with family and friends!</p>
+
+                <p class="faq-q">What kinds of equations can appear?</p>
+                <p class="faq-a">Equations use addition (+), subtraction (−), and multiplication (×) with results that always produce a valid arithmetic expression. All equations have exactly 8 characters including the equals sign.</p>
+
+                <p class="faq-q">Does playing Daily Math Equator improve math skills?</p>
+                <p class="faq-a">Absolutely! Consistent practice with number patterns, mental arithmetic, and equation logical deduction strengthens your brain's numerical processing – especially effective for students and adults seeking daily cognitive training.</p>
+            </div>
+
+            <div class="seo-card">
+                <h2>License &amp; Credits</h2>
+                <div class="license-box">
+                    <p><strong>Daily Math Equator</strong> is an original HTML5 daily puzzle game created for <a href="https://playmixgames.in" target="_blank" rel="noopener">PlayMix Games</a>.</p>
+                    <p>Inspired by the Nerdle puzzle concept (public category). Built exclusively with vanilla HTML5, CSS3, and JavaScript.</p>
+                    <p>&copy; 2024&ndash;2026 PlayMix Games &middot; All rights reserved.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+            const loader = document.getElementById('pmg-loader');
+            frame.onload = function () {
+                frame.classList.add('visible');
+                loader.classList.add('hidden');
+            };
+            document.addEventListener("DOMContentLoaded", function () {
+                if (typeof prepSystem === "function") prepSystem();
+            });
+        })();
+    </script>
+</body>
+</html>

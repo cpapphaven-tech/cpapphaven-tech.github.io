@@ -53,6 +53,7 @@
         { name: "🍔 Burger Stack Cooking", path: "BurgerStack/index.html", icon: "assets/burgerstack.png", tip: "Physics" },
         { name: "🔡 Word Search Puzzle", path: "WordSearch/index.html", icon: "img/wordsrarch200.png", tip: "Word" },
         { name: "⌨️ WPM Typing Test", path: "TypingSpeedTest/index.html", icon: "assets/typingtest.png", tip: "Word" },
+        { name: "🔢 Math Learning Quiz", path: "DailyMathEquator/index.html", icon: "assets/mathequator.png", tip: "Logic" },
     ];
 
     function createSidebar() {
