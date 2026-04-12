@@ -54,6 +54,7 @@
         { name: "🔡 Word Search Puzzle", path: "WordSearch/index.html", icon: "img/wordsrarch200.png", tip: "Word" },
         { name: "⌨️ WPM Typing Test", path: "TypingSpeedTest/index.html", icon: "assets/typingtest.png", tip: "Word" },
         { name: "🔢 Math Learning Quiz", path: "DailyMathEquator/index.html", icon: "assets/mathequator.png", tip: "Logic" },
+        { name: "📚 English Grammar Quiz", path: "EnglishGrammarQuiz/index.html", icon: "assets/grammarquiz.png", tip: "Learn" },
     ];
 
     function createSidebar() {

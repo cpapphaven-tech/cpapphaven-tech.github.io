@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey}, body:JSON.stringify({ timestamp: new Date().toISOString(), url: location.href, referrer: document.referrer, userAgent: navigator.userAgent, loadStage:"pre-init" }), keepalive:true });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>English Grammar Quiz – Learn English Grammar Free Online | PlayMix Games</title>
+    <meta name="description" content="Test and improve your English grammar with our free online quiz! MCQ questions on tenses, articles, prepositions, verbs &amp; more. A fun educational English learning game for students, kids &amp; adults.">
+    <meta name="keywords" content="english grammar quiz, learn english grammar online, grammar test free, english learning game, grammar mcq, english grammar for beginners, tenses quiz, english practice game, improve english grammar">
+    <link rel="canonical" href="https://playmixgames.in/EnglishGrammarQuiz/index.html">
+    <meta property="og:title" content="English Grammar Quiz – Learn English Free Online | PlayMix Games">
+    <meta property="og:description" content="Master English grammar with fun MCQ quizzes! Unlimited levels covering tenses, articles, prepositions and more. Free educational game for all ages.">
+    <meta property="og:url" content="https://playmixgames.in/EnglishGrammarQuiz/index.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "English Grammar Quiz",
+      "applicationCategory": "EducationalGame",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "A free educational English grammar quiz game with unlimited levels. Practice tenses, articles, prepositions, sentence correction and more through fun 4-option MCQ questions.",
+      "url": "https://playmixgames.in/EnglishGrammarQuiz/index.html"
+    }
+    </script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onerror="console.warn('Supabase failed')"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+
+        *, *::before, *::after { box-sizing:border-box; }
+        body, html { margin:0; padding:0; width:100%; min-height:100vh; overflow-x:hidden; background:#060d1f; font-family:'Outfit',sans-serif; color:#fff; }
+
+        /* Loader */
+        #pmg-loader { position:fixed; inset:0; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#060d1f; transition:opacity 0.5s; }
+        #pmg-loader.hidden { opacity:0; pointer-events:none; }
+        .pmg-brand { font-size:1.5rem; font-weight:900; color:#818cf8; letter-spacing:2px; text-transform:uppercase; margin-bottom:28px; text-shadow:0 0 20px rgba(129,140,248,0.5); animation:pulse 2s infinite; }
+        .pmg-spinner { width:50px; height:50px; border:4px solid rgba(129,140,248,0.15); border-top-color:#818cf8; border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:18px; }
+        .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; }
+        .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,#818cf8,#06b6d4); animation:fill 5s ease forwards; }
+        .pmg-tip { font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:14px; }
+        @keyframes spin  { to{transform:rotate(360deg);} }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+        @keyframes fill  { 0%{width:0%} 100%{width:92%} }
+
+        /* iframe */
+        #game-frame { width:100%; height:100vh; border:none; display:block; opacity:0; transition:opacity 0.5s; }
+        #game-frame.visible { opacity:1; }
+
+        /* SEO Section */
+        .seo-section { background:#040910; padding:60px 20px; border-top:1px solid rgba(129,140,248,0.15); }
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.03); border:1px solid rgba(129,140,248,0.12); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#818cf8; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #818cf8; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#a0a0c0; line-height:1.7; margin-bottom:10px; }
+        .seo-card ul { padding-left:20px; }
+        .faq-q { color:#e2e8f0; font-weight:700; margin:16px 0 6px; }
+        .faq-a { color:#a0a0c0; line-height:1.6; margin-bottom:18px; }
+        .license-box { background:rgba(129,140,248,0.04); border:1px solid rgba(129,140,248,0.15); border-radius:10px; padding:20px; font-size:0.85rem; color:#888; line-height:1.6; }
+        .license-box a { color:#818cf8; }
+        .topic-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); gap:10px; margin-top:12px; }
+        .topic-tag { background:rgba(129,140,248,0.1); border:1px solid rgba(129,140,248,0.2); border-radius:8px; padding:8px 12px; font-size:0.85rem; color:#a5b4fc; text-align:center; font-weight:700; }
+    </style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading grammar questions...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="English Grammar Quiz – Learn English Grammar Online" allow="autoplay;"></iframe>
+    </main>
+
+    <section class="seo-section" aria-label="About English Grammar Quiz">
+        <div class="seo-inner">
+
+            <div class="seo-card">
+                <h1 style="font-size:1.6rem;margin:0 0 16px;color:#818cf8;">English Grammar Quiz – Learn English Grammar Free Online</h1>
+                <p>Welcome to <strong>English Grammar Quiz</strong> – the most engaging free online English learning game for students, beginners, and anyone looking to improve their grammar! Answer fun 4-option MCQ questions covering every important grammar topic across unlimited difficulty levels. Each correct answer earns points, and the questions progressively get harder to challenge even advanced learners.</p>
+                <p>Whether you're preparing for school exams, competitive tests like IELTS or TOEFL, or simply want to <strong>improve your everyday English</strong>, this game turns grammar practice into an addictive, rewarding experience. A new set of questions every session means you'll never run out of things to learn!</p>
+                <div class="topic-grid">
+                    <div class="topic-tag">📝 Articles</div>
+                    <div class="topic-tag">⏰ Verb Tenses</div>
+                    <div class="topic-tag">🔗 Prepositions</div>
+                    <div class="topic-tag">✍️ Fill in Blank</div>
+                    <div class="topic-tag">🔤 Parts of Speech</div>
+                    <div class="topic-tag">📖 Vocabulary</div>
+                    <div class="topic-tag">🔁 Pronouns</div>
+                    <div class="topic-tag">✅ Sentence Fix</div>
+                    <div class="topic-tag">🔧 Conjunctions</div>
+                    <div class="topic-tag">💡 Conditionals</div>
+                </div>
+            </div>
+
+            <div class="seo-card">
+                <h2>How to Play English Grammar Quiz</h2>
+                <ul>
+                    <li><strong>Choose Your Answer:</strong> Read the question and tap one of the four answer options (A, B, C, D).</li>
+                    <li><strong>Timer:</strong> You have 30 seconds per question. Answer quickly to keep your score high!</li>
+                    <li><strong>Green = Correct:</strong> You gain points and advance to the next question.</li>
+                    <li><strong>Red = Wrong:</strong> The game ends — but you keep your score and can try again!</li>
+                    <li><strong>Level Up:</strong> Every 10 correct answers advances you to the next level with harder grammar topics and more points per question.</li>
+                    <li><strong>Use Lifelines:</strong> Stuck? Use ✂️ 50:50 to remove 2 wrong answers, ⏭️ Skip a question, or ⚡ Double your points!</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>Frequently Asked Questions</h2>
+
+                <p class="faq-q">Is English Grammar Quiz completely free?</p>
+                <p class="faq-a">Yes! 100% free to play with no registration, no download, and no subscription. Open your browser and start learning English grammar instantly.</p>
+
+                <p class="faq-q">What grammar topics does the quiz cover?</p>
+                <p class="faq-a">The quiz covers all major English grammar topics: Articles (a, an, the), verb tenses (present, past, future, perfect), prepositions, pronouns, conjunctions, parts of speech, sentence correction, fill-in-the-blanks, conditionals, and advanced vocabulary usage.</p>
+
+                <p class="faq-q">Is this suitable for beginners?</p>
+                <p class="faq-a">Absolutely! The early levels (1–3) start with simple, beginner-friendly grammar questions. As you progress through levels, the complexity gradually increases. It's designed for learners of all ages and skill levels.</p>
+
+                <p class="faq-q">Can I use this to prepare for IELTS, TOEFL, or school exams?</p>
+                <p class="faq-a">Yes! The grammar concepts covered align well with school English curricula and competitive English exams. Regular practice with this quiz will significantly improve your grammatical accuracy and confidence.</p>
+
+                <p class="faq-q">Can children play this quiz?</p>
+                <p class="faq-a">Definitely! The early levels are perfect for students from Class 4 onwards. The fun quiz format, point system, and colorful design make grammar learning enjoyable for kids and teenagers.</p>
+            </div>
+
+            <div class="seo-card">
+                <h2>License &amp; Credits</h2>
+                <div class="license-box">
+                    <p><strong>English Grammar Quiz</strong> is an original educational HTML5 game created for <a href="https://playmixgames.in" target="_blank" rel="noopener">PlayMix Games</a>. All grammar questions and content are original.</p>
+                    <p>&copy; 2024–2026 PlayMix Games &middot; All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame  = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+            frame.onload = function () { frame.classList.add('visible'); loader.classList.add('hidden'); };
+            document.addEventListener("DOMContentLoaded", function () { if (typeof prepSystem === "function") prepSystem(); });
+        })();
+    </script>
+</body>
+</html>
