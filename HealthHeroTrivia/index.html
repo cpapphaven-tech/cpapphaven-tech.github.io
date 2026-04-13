@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey}, body:JSON.stringify({ timestamp: new Date().toISOString(), url: location.href, referrer: document.referrer, userAgent: navigator.userAgent, loadStage:"pre-init" }), keepalive:true });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Health Hero – Daily Wellness Trivia | PlayMix Games</title>
+    <meta name="description" content="Play Health Hero Trivia! Test and improve your general health knowledge with our fun wellness quiz. Practice nutrition facts, sleep hygiene, and first-aid online.">
+    <meta name="keywords" content="health and wellness quiz, nutrition facts game, first aid practice online, wellness trivia, health hero game, vitamins quiz, sleep hygiene test">
+    <link rel="canonical" href="https://playmixgames.in/HealthHeroTrivia/index.html">
+    <meta property="og:title" content="Health Hero – Daily Wellness Trivia | PlayMix Games">
+    <meta property="og:description" content="Level up from Rookie to Health Master! Test your knowledge on nutrition, sleep hygiene, and first-aid with fun and rewarding quizzes.">
+    <meta property="og:url" content="https://playmixgames.in/HealthHeroTrivia/index.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Health Hero Trivia",
+      "applicationCategory": "EducationalGame",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "An educational health and wellness quiz game testing nutrition, first aid, sleep hygiene, and vitamin knowledge.",
+      "url": "https://playmixgames.in/HealthHeroTrivia/index.html"
+    }
+    </script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onerror="console.warn('Supabase failed')"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+
+        *, *::before, *::after { box-sizing:border-box; }
+        body, html { margin:0; padding:0; width:100%; min-height:100vh; overflow-x:hidden; background:#021a14; font-family:'Outfit',sans-serif; color:#fff; }
+
+        /* Loader */
+        #pmg-loader { position:fixed; inset:0; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#021a14; transition:opacity 0.5s; }
+        #pmg-loader.hidden { opacity:0; pointer-events:none; }
+        .pmg-brand { font-size:1.5rem; font-weight:900; color:#10b981; letter-spacing:2px; text-transform:uppercase; margin-bottom:28px; text-shadow:0 0 20px rgba(16,185,129,0.5); animation:pulse 2s infinite; }
+        .pmg-spinner { width:50px; height:50px; border:4px solid rgba(16,185,129,0.15); border-top-color:#10b981; border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:18px; }
+        .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; }
+        .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,#10b981,#14b8a6); animation:fill 5s ease forwards; }
+        .pmg-tip { font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:14px; }
+        @keyframes spin  { to{transform:rotate(360deg);} }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+        @keyframes fill  { 0%{width:0%} 100%{width:92%} }
+
+        /* iframe */
+        #game-frame { width:100%; height:100vh; border:none; display:block; opacity:0; transition:opacity 0.5s; }
+        #game-frame.visible { opacity:1; }
+
+        /* SEO Section */
+        .seo-section { background:#010d0a; padding:60px 20px; border-top:1px solid rgba(16,185,129,0.15); }
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.03); border:1px solid rgba(16,185,129,0.12); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#10b981; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #10b981; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#a7b8b4; line-height:1.7; margin-bottom:10px; }
+        .seo-card ul { padding-left:20px; }
+        .faq-q { color:#e2e8f0; font-weight:700; margin:16px 0 6px; }
+        .faq-a { color:#a7b8b4; line-height:1.6; margin-bottom:18px; }
+        .license-box { background:rgba(16,185,129,0.04); border:1px solid rgba(16,185,129,0.15); border-radius:10px; padding:20px; font-size:0.85rem; color:#888; line-height:1.6; }
+        .license-box a { color:#10b981; }
+        .topic-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); gap:10px; margin-top:12px; }
+        .topic-tag { background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.2); border-radius:8px; padding:8px 12px; font-size:0.85rem; color:#34d399; text-align:center; font-weight:700; }
+    </style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading daily wellness tips...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="Health Hero Trivia – Daily Wellness Game" allow="autoplay;"></iframe>
+    </main>
+
+    <section class="seo-section" aria-label="About Health Hero Trivia">
+        <div class="seo-inner">
+
+            <div class="seo-card">
+                <h1 style="font-size:1.6rem;margin:0 0 16px;color:#10b981;">Health Hero – Daily Wellness Trivia</h1>
+                <p>Welcome to <strong>Health Hero Trivia</strong> – the most engaging way to test your health and wellness knowledge online! Answer fun and informative 4-option questions covering nutrition facts, sleep hygiene, first-aid basics, and your "vitamin of the day".</p>
+                <p>Perfect for parents, students, and seniors, our game is designed to help you level up from a "Rookie" to a "Health Master." After every question, you'll receive a useful, actionable takeaway to apply to your daily life. It's the perfect blend of a <strong>health and wellness quiz</strong> and a <strong>nutrition facts game</strong>.</p>
+                <div class="topic-grid">
+                    <div class="topic-tag">🥗 Nutrition</div>
+                    <div class="topic-tag">😴 Sleep Hygiene</div>
+                    <div class="topic-tag">🚑 First Aid Practice</div>
+                    <div class="topic-tag">💊 Vitamins</div>
+                    <div class="topic-tag">🧠 Wellness Tips</div>
+                    <div class="topic-tag">⏱️ Fast Trivia</div>
+                </div>
+            </div>
+
+            <div class="seo-card">
+                <h2>How to Play Health Hero Trivia</h2>
+                <ul>
+                    <li><strong>Choose Your Answer:</strong> Tap one of the four options to answer the scenario or fact.</li>
+                    <li><strong>Read the Takeaway:</strong> Whether you're right or wrong, read the 💡 Healthy Takeaway at the bottom to learn something new!</li>
+                    <li><strong>Timer:</strong> You have 30 seconds to answer before time runs out.</li>
+                    <li><strong>Level Up:</strong> Answer questions correctly to level up and increase your rank from Rookie to Health Master!</li>
+                    <li><strong>Use Lifelines:</strong> Need help? Use ✂️ 50:50, ⏭️ Skip, or ⚡ Double your points.</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>Frequently Asked Questions</h2>
+
+                <p class="faq-q">What topics are covered in the Health Hero Quiz?</p>
+                <p class="faq-a">We cover 4 main pillars of daily wellness: Nutrition facts, Sleep Hygiene practices, First-Aid basics, and Vitamins. It acts as an excellent first aid practice online and nutrition game.</p>
+
+                <p class="faq-q">Is the information in the game medically certified?</p>
+                <p class="faq-a">The takeaways are based on widely accepted general health and wellness guidelines (like recommended daily water intake, CPR ratios). However, it is an educational game, not a substitute for professional medical advice.</p>
+
+                <p class="faq-q">Can kids play this game?</p>
+                <p class="faq-a">Yes! It is highly beneficial for students and children to learn basic nutrition and first aid from an early age in a fun, point-based system.</p>
+
+                <p class="faq-q">Do I need to sign up to play?</p>
+                <p class="faq-a">No registration is required. You can start playing the health and wellness quiz instantly from any browser on desktop or mobile.</p>
+            </div>
+
+            <div class="seo-card">
+                <h2>License &amp; Credits</h2>
+                <div class="license-box">
+                    <p><strong>Health Hero Trivia</strong> is an original educational HTML5 game created for <a href="https://playmixgames.in" target="_blank" rel="noopener">PlayMix Games</a>. All educational facts and game interactions are original.</p>
+                    <p>&copy; 2024–2026 PlayMix Games &middot; All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame  = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+            frame.onload = function () { frame.classList.add('visible'); loader.classList.add('hidden'); };
+            document.addEventListener("DOMContentLoaded", function () { if (typeof prepSystem === "function") prepSystem(); });
+        })();
+    </script>
+</body>
+</html>
