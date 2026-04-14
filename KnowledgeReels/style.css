@@ -148,7 +148,7 @@ html, body {
 /* ─── Bottom Caption Area ───────────────────────────────── */
 .reel-caption {
     position: absolute;
-    bottom: 30px;
+    bottom: 70px;
     left: 20px;
     right: 80px; /* leave space for right sidebar */
     z-index: 10;
@@ -191,7 +191,7 @@ html, body {
 /* ─── Right Sidebar Operations ──────────────────────────── */
 .right-sidebar {
     position: absolute;
-    bottom: 50px;
+    bottom: 90px;
     right: 15px;
     display: flex;
     flex-direction: column;

@@ -37,14 +37,14 @@ function initAudio() {
     const lfo = audioCtx.createOscillator();
     const lfoGain = audioCtx.createGain();
     lfo.type = 'sine';
-    lfo.frequency.value = 0.05; // extremely slow
-    lfoGain.value = 10;
+    lfo.frequency.value = 0.1; // slow
+    lfoGain.gain.value = 15;
     
     lfo.connect(lfoGain);
     lfoGain.connect(bgOsc.frequency);
     
-    bgOsc.type = 'sine';
-    bgOsc.frequency.value = 100; // Deep drone
+    bgOsc.type = 'triangle';
+    bgOsc.frequency.value = 150; // Audible on phone speakers
     bgGain.gain.value = 0; // Starts silent
     
     bgOsc.connect(filter);
@@ -62,11 +62,11 @@ function playSwishSound() {
     osc.connect(gain);
     gain.connect(audioCtx.destination);
     
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(300, audioCtx.currentTime);
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(600, audioCtx.currentTime);
     osc.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.3);
     
-    gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
     gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
     
     osc.start();
@@ -80,11 +80,11 @@ function playLikeSound() {
     osc.connect(gain);
     gain.connect(audioCtx.destination);
     
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(400, audioCtx.currentTime);
-    osc.frequency.setValueAtTime(600, audioCtx.currentTime + 0.1);
+    osc.type = 'square';
+    osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+    osc.frequency.setValueAtTime(1200, audioCtx.currentTime + 0.1);
     
-    gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
     gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
     
     osc.start();
@@ -109,9 +109,9 @@ function createReelElement(data, index) {
     el.className = `reel bg-style-${index % 4}`;
     el.dataset.index = index;
 
-    // Randomize initial like count
-    const initialLikes = Math.floor(Math.random() * 50) + 12;
-    const initialShares = Math.floor(Math.random() * 10) + 1;
+    // Randomize initial like/share exact counts
+    let currentLikes = Math.floor(Math.random() * 5000) + 800;
+    let currentShares = Math.floor(Math.random() * 500) + 50;
 
     el.innerHTML = `
         <div class="reel-content">
@@ -122,11 +122,11 @@ function createReelElement(data, index) {
         <div class="right-sidebar">
             <button class="action-btn like-btn">
                 <div class="action-icon">🤍</div>
-                <div class="action-count">${initialLikes}k</div>
+                <div class="action-count">${currentLikes.toLocaleString()}</div>
             </button>
             <button class="action-btn share-btn">
                 <div class="action-icon">📤</div>
-                <div class="action-count">${initialShares}k</div>
+                <div class="action-count">${currentShares.toLocaleString()}</div>
             </button>
         </div>
 
@@ -139,20 +139,47 @@ function createReelElement(data, index) {
         </div>
     `;
 
-    // Interactivity
+    // Interactivity: Liking
     const likeBtn = el.querySelector('.like-btn');
     let liked = false;
     likeBtn.addEventListener('click', () => {
         if(!liked) {
             liked = true;
+            currentLikes++;
             likeBtn.classList.add('liked');
             likeBtn.querySelector('.action-icon').textContent = '❤️';
-            likeBtn.querySelector('.action-count').textContent = (initialLikes + 1) + 'k';
+            likeBtn.querySelector('.action-count').textContent = currentLikes.toLocaleString();
             playLikeSound();
             spawnFloatingHeart(likeBtn);
         }
     });
 
+    // Interactivity: Sharing
+    const shareBtn = el.querySelector('.share-btn');
+    shareBtn.addEventListener('click', async () => {
+        currentShares++;
+        shareBtn.querySelector('.action-count').textContent = currentShares.toLocaleString();
+        
+        const shareData = {
+            title: 'Playmix Knowledge Reels',
+            text: `Did you know? "${data.hook}" - ${data.caption}`,
+            url: window.location.href
+        };
+
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+            } catch (err) {
+                console.log('User cancelled share');
+            }
+        } else {
+            // Fallback for desktop/unsupported browsers
+            navigator.clipboard.writeText(shareData.text + " " + shareData.url);
+            alert("Fact copied to clipboard! You can now paste and share it.");
+        }
+    });
+
+    // Interactivity: Expanding caption
     const captionText = el.querySelector('.caption-text');
     captionText.addEventListener('click', () => {
         captionText.classList.toggle('expanded');
@@ -222,13 +249,20 @@ document.getElementById('begin-btn').addEventListener('click', () => {
     initAudio();
     isAudioMuted = false;
     document.getElementById('audio-toggle').textContent = '🔊';
-    bgGain.gain.setTargetAtTime(0.15, audioCtx.currentTime, 1);
+    bgGain.gain.setTargetAtTime(0.4, audioCtx.currentTime, 1);
     
     document.getElementById('start-screen').remove();
     
     // Initialize Bank
     activeBank = shuffle([...BANK]);
     loadMoreReels(5); // Load initial batch
+    
+    // Load Ads
+    if (window.syncPMGLayout) {
+       window.syncPMGLayout();
+    } else if (window.prepSystem) {
+       window.prepSystem();
+    }
 });
 
 // Remove loader when page is ready
