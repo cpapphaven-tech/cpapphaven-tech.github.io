@@ -21,6 +21,7 @@
     }
 
     const games = [
+        { name: "📱 Knowledge Reels", path: "KnowledgeReels/index.html", icon: "assets/fallback.png", tip: "Learn" },
         { name: "🔵 8 Ball Pool Online", path: "Pool/index.html", icon: "assets/pool200.png", tip: "Sports" },
         { name: "🧱 Stack 3D Tower", path: "Stack3D/index.html", icon: "img/stack200.png", tip: "Physics" },
         { name: "🐍 Classic Neon Snake", path: "NeonSnake/index.html", icon: "assets/snake200.png", tip: "Arcade" },
