@@ -24,53 +24,60 @@ let isAudioMuted = true;
 function initAudio() {
     if (audioCtx.state === 'suspended') audioCtx.resume();
     
-    // Ambient drone generator (Soft Atmospheric sound)
-    bgOsc = audioCtx.createOscillator();
     bgGain = audioCtx.createGain();
-    
-    // Filter to make it soft / lo-fi
-    const filter = audioCtx.createBiquadFilter();
-    filter.type = 'lowpass';
-    filter.frequency.value = 300;
-    
-    // Slow evolving LFO for the frequency
-    const lfo = audioCtx.createOscillator();
-    const lfoGain = audioCtx.createGain();
-    lfo.type = 'sine';
-    lfo.frequency.value = 0.1; // slow
-    lfoGain.gain.value = 15;
-    
-    lfo.connect(lfoGain);
-    lfoGain.connect(bgOsc.frequency);
-    
-    bgOsc.type = 'triangle';
-    bgOsc.frequency.value = 150; // Audible on phone speakers
     bgGain.gain.value = 0; // Starts silent
-    
-    bgOsc.connect(filter);
-    filter.connect(bgGain);
     bgGain.connect(audioCtx.destination);
     
-    bgOsc.start();
-    lfo.start();
-}
+    // 1. Generate White Noise Buffer
+    const bufferSize = audioCtx.sampleRate * 2; 
+    const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+    const output = noiseBuffer.getChannelData(0);
+    for (let i = 0; i < bufferSize; i++) {
+        output[i] = Math.random() * 2 - 1; // Pure noise
+    }
 
-function playSwishSound() {
-    if (isAudioMuted || audioCtx.state === 'suspended') return;
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
+    const whiteNoise = audioCtx.createBufferSource();
+    whiteNoise.buffer = noiseBuffer;
+    whiteNoise.loop = true;
+
+    // 2. Initial Softening Filter (turns harsh white noise into softer brown/pink noise)
+    const lowpass1 = audioCtx.createBiquadFilter();
+    lowpass1.type = 'lowpass';
+    lowpass1.frequency.value = 1000;
+
+    // 3. Dynamic Wave Filter (simulates the crest and wash of the wave)
+    const waveFilter = audioCtx.createBiquadFilter();
+    waveFilter.type = 'lowpass';
+    waveFilter.frequency.value = 300; // Base deep underwater frequency
+
+    // The LFO acts as the tide / wave rhythm 
+    const lfo = audioCtx.createOscillator();
+    lfo.type = 'sine';
+    lfo.frequency.value = 0.12; // roughly 8 seconds per wave crash
+
+    // Modulate Frequency (creates the realistic 'whoosh' sound)
+    const lfoFreqGain = audioCtx.createGain();
+    lfoFreqGain.gain.value = 900; // Swings frequency up to 1200hz at peak crash
+    lfo.connect(lfoFreqGain);
+    lfoFreqGain.connect(waveFilter.frequency);
+
+    // 4. Modulate Volume (loud when crashing, quiet when receding)
+    const waveVol = audioCtx.createGain();
+    waveVol.gain.value = 0.5; // Base volume
     
-    osc.type = 'triangle';
-    osc.frequency.setValueAtTime(600, audioCtx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(100, audioCtx.currentTime + 0.3);
-    
-    gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
-    
-    osc.start();
-    osc.stop(audioCtx.currentTime + 0.35);
+    const lfoVolGain = audioCtx.createGain();
+    lfoVolGain.gain.value = 0.45; // Vol swings from 0.05 to 0.95
+    lfo.connect(lfoVolGain);
+    lfoVolGain.connect(waveVol.gain);
+
+    // Connect the ocean chain
+    whiteNoise.connect(lowpass1);
+    lowpass1.connect(waveFilter);
+    waveFilter.connect(waveVol);
+    waveVol.connect(bgGain);
+
+    whiteNoise.start();
+    lfo.start();
 }
 
 function playLikeSound() {
@@ -96,7 +103,7 @@ document.getElementById('audio-toggle').addEventListener('click', (e) => {
     e.target.textContent = isAudioMuted ? '🔈' : '🔊';
     if (!isAudioMuted) {
         if(audioCtx.state === 'suspended') audioCtx.resume();
-        bgGain.gain.setTargetAtTime(0.15, audioCtx.currentTime, 1);
+        bgGain.gain.setTargetAtTime(0.4, audioCtx.currentTime, 1);
     } else {
         bgGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.5);
     }
@@ -233,8 +240,6 @@ const observer = new IntersectionObserver((entries) => {
                  document.querySelectorAll('.caption-text.expanded').forEach(e => e.classList.remove('expanded'));
                  currentVisibleIndex = idx;
                  
-                 if (idx > 0) playSwishSound();
-
                  // Load more when nearing the bottom
                  if (currentIndex - idx <= 2) {
                      loadMoreReels(3);
@@ -247,9 +252,9 @@ const observer = new IntersectionObserver((entries) => {
 // --- Initialization ---
 document.getElementById('begin-btn').addEventListener('click', () => {
     initAudio();
-    isAudioMuted = false;
-    document.getElementById('audio-toggle').textContent = '🔊';
-    bgGain.gain.setTargetAtTime(0.4, audioCtx.currentTime, 1);
+    isAudioMuted = true; // Default to OFF
+    document.getElementById('audio-toggle').textContent = '🔈';
+    // Do not ramp up bgGain. It remains silently running in the background.
     
     document.getElementById('start-screen').remove();
     
