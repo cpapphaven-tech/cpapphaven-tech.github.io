@@ -259,13 +259,6 @@ function startApp() {
     activeBank = shuffle([...BANK]);
     loadMoreReels(5); // Load initial batch
     
-    // Load Ads
-    if (window.syncPMGLayout) {
-       window.syncPMGLayout();
-    } else if (window.prepSystem) {
-       window.prepSystem();
-    }
-    
     // Remove the loader immediately instead of waiting for window.load
     const loader = document.getElementById('pmg-loader');
     if(loader) {
@@ -277,4 +270,11 @@ function startApp() {
 
 startApp();
 
- 
+// Wait for deferred scripts (like ads.js) to finish parsing before triggering ads
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.syncPMGLayout) {
+       window.syncPMGLayout();
+    } else if (window.prepSystem) {
+       window.prepSystem();
+    }
+});
