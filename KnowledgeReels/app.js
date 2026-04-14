@@ -250,13 +250,10 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // --- Initialization ---
-document.getElementById('begin-btn').addEventListener('click', () => {
+function startApp() {
     initAudio();
     isAudioMuted = true; // Default to OFF
     document.getElementById('audio-toggle').textContent = '🔈';
-    // Do not ramp up bgGain. It remains silently running in the background.
-    
-    document.getElementById('start-screen').remove();
     
     // Initialize Bank
     activeBank = shuffle([...BANK]);
@@ -268,14 +265,16 @@ document.getElementById('begin-btn').addEventListener('click', () => {
     } else if (window.prepSystem) {
        window.prepSystem();
     }
-});
-
-// Remove loader when page is ready
-window.addEventListener('load', () => {
+    
+    // Remove the loader immediately instead of waiting for window.load
     const loader = document.getElementById('pmg-loader');
     if(loader) {
         loader.style.opacity = '0';
         loader.style.pointerEvents = 'none';
         setTimeout(() => loader.remove(), 500);
     }
-});
+}
+
+startApp();
+
+ 
