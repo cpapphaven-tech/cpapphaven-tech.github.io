@@ -358,5 +358,185 @@ const BANK = [
         topic: "Fitness",
         hook: "The 3 Pillars",
         caption: "Progress = (Training + Nutrition) x Consistency. If any of these is zero, your total progress will be zero. Master the fundamentals before chasing minor details."
+    },
+    {
+        id: "ft-61",
+        topic: "Fat Loss",
+        hook: "Fiber First",
+        caption: "Eat your veggies before your main meal. The fiber creates a physical mesh in your stomach that slows down the absorption of sugars and fats from the rest of the meal."
+    },
+    {
+        id: "ft-62",
+        topic: "Gym Hack",
+        hook: "Warm-up Sets",
+        caption: "Don't just jump into your heavy weight. Perform 2-3 'feeler' sets with lighter weights to lubricate your joints and prep your nervous system for the heavy load."
+    },
+    {
+        id: "ft-63",
+        topic: "Discipline",
+        hook: "Negative Visualization",
+        caption: "Visualize exactly how you'll feel tonight if you skip your workout and eat junk. That feeling of regret is often a stronger motivator than the promise of future health."
+    },
+    {
+        id: "ft-64",
+        topic: "Nutrition",
+        hook: "Casein Before Bed",
+        caption: "A slow-digesting protein like Casein (found in cottage cheese or Greek yogurt) before bed provides a steady stream of amino acids to repair muscle while you sleep."
+    },
+    {
+        id: "ft-65",
+        topic: "Mindset",
+        hook: "The 2-Minute Rule (Fitness)",
+        caption: "If a workout feels too daunting, commit to just putting on your gym shoes. Once the shoes are on, the 2rd step (getting in the car) feels much easier."
+    },
+    {
+        id: "ft-66",
+        topic: "Gym Hack",
+        hook: "Hook Grip",
+        caption: "For heavy deadlifts or cleans, wrap your fingers over your thumb. It's painful at first, but it creates a literal lock that prevents the bar from rolling out of your hands."
+    },
+    {
+        id: "ft-67",
+        topic: "Fat Loss",
+        hook: "Spice up Your Metabolism",
+        caption: "Capsaicin in spicy peppers can slightly boost your metabolic rate and reduce appetite. Add some chili flakes to your chicken for an extra calorie-burning edge."
+    },
+    {
+        id: "ft-68",
+        topic: "Discipline",
+        hook: "Pre-Commitment",
+        caption: "Pay for your gym membership or a trainer in advance. When you've already 'spent' the money, the psychological pain of wasting it drives you to show up."
+    },
+    {
+        id: "ft-69",
+        topic: "Nutrition",
+        hook: "Avoid 'Low Fat' Labels",
+        caption: "Often, companies replace fat with sugar to keep the taste. 'Low Fat' usually means 'High Sugar'. Read the ingredient list, not the marketing on the front."
+    },
+    {
+        id: "ft-70",
+        topic: "Fitness",
+        hook: "Sunlight & Vitamin D",
+        caption: "Vitamin D is technically a hormone essential for testosterone and immunity. Get 15 mins of direct sun daily. If you live in a dark climate, supplement with D3."
+    },
+    {
+        id: "ft-71",
+        topic: "Gym Hack",
+        hook: "Pause Reps",
+        caption: "At the bottom of a bench press or squat, pause for 1 second. This removes the 'bounce' momentum and forces the muscle to work much harder to move the weight."
+    },
+    {
+        id: "ft-72",
+        topic: "Fat Loss",
+        hook: "The 'Only' Rule",
+        caption: "When out with friends, pick ONE: Either the drink, the appetizer, or the dessert. Trying to have all three is where most people crash their weekly progress."
+    },
+    {
+        id: "ft-73",
+        topic: "Discipline",
+        hook: "Identity Habits",
+        caption: "Every time you choose the salad over the fries, you are casting a 'vote' for the person you want to become. You don't need to be perfect; you just need a majority of votes."
+    },
+    {
+        id: "ft-74",
+        topic: "Nutrition",
+        hook: "Potassium for Pump",
+        caption: "Most people focus only on salt. Potassium (from bananas or potatoes) is what actually pulls water INTO the muscle cells, giving you a harder, fuller look."
+    },
+    {
+        id: "ft-75",
+        topic: "Mindset",
+        hook: "Stress-Testing Your Goals",
+        caption: "Don't plan for your best days; plan for your worst. What's the minimum workout you'll do when you're busy, tired, and stressed? That's your true baseline."
+    },
+    {
+        id: "ft-76",
+        topic: "Gym Hack",
+        hook: "Video Your Form",
+        caption: "What you 'feel' you are doing is often different from what you are 'actually' doing. Record your sets to spot rounding backs or shallow depths before they cause injury."
+    },
+    {
+        id: "ft-77",
+        topic: "Fat Loss",
+        hook: "The Cold Water Trick",
+        caption: "Drinking ice-cold water forces your body to expend energy to warm it up to body temperature. It's a tiny boost, but it adds up over thousands of glasses."
+    },
+    {
+        id: "ft-78",
+        topic: "Discipline",
+        hook: "Win Your Evenings",
+        caption: "Your morning routine actually starts the night before. Set your alarm, prep your meals, and put your phone in another room. A good tomorrow is built tonight."
+    },
+    {
+        id: "ft-79",
+        topic: "Nutrition",
+        hook: "Magnesium for Recovery",
+        caption: "Magnesium relaxes the nervous system and prevents muscle cramps. Take it before bed to help your body shift into 'rest and digest' mode for deeper recovery."
+    },
+    {
+        id: "ft-80",
+        topic: "Fitness",
+        hook: "Grip It Hard",
+        caption: "Squeezing the bar as hard as you can during any lift sends a signal to your nervous system to recruit more surrounding muscles (the 'Irradiation' principle)."
+    },
+    {
+        id: "ft-81",
+        topic: "Fat Loss",
+        hook: "Walk Post-Meal",
+        caption: "A 10-minute walk immediately after eating significantly blunts the blood sugar spike of that meal, helping prevent fat storage and afternoon energy crashes."
+    },
+    {
+        id: "ft-82",
+        topic: "Gym Hack",
+        hook: "The 'Top Set' Method",
+        caption: "Focus 100% of your energy on one heavy 'top set' where you push to near failure. Use your remaining sets as back-off sets for extra volume and blood flow."
+    },
+    {
+        id: "ft-83",
+        topic: "Discipline",
+        hook: "Delay, Don't Deny",
+        caption: "If you're craving junk, tell yourself: 'I can have it, but I have to wait 20 minutes and drink a glass of water first.' Often, the craving will vanish during the wait."
+    },
+    {
+        id: "ft-84",
+        topic: "Nutrition",
+        hook: "Eggs are Superfood",
+        caption: "Eggs have the highest 'Bioavailability' of any protein source, meaning your body can actually use almost 100% of the protein they contain. Don't skip the yolks!"
+    },
+    {
+        id: "ft-85",
+        topic: "Mindset",
+        hook: "The Power of 'Yet'",
+        caption: "Instead of 'I'm not strong', say 'I'm not strong YET'. This tiny word shifts your brain from a fixed mindset to a growth mindset, opening the door for progress."
+    },
+    {
+        id: "ft-86",
+        topic: "Gym Hack",
+        hook: "Neutral Spine",
+        caption: "Protect your neck! Stop looking in the side-mirror during squats or deadlifts. Keep your neck in line with your spine to prevent unnecessary strain and disc issues."
+    },
+    {
+        id: "ft-87",
+        topic: "Fat Loss",
+        hook: "Black Coffee Power",
+        caption: "Black coffee is a natural thermogenic and appetite suppressant with zero calories. Use it strategically in the morning to extend your fat-burning window."
+    },
+    {
+        id: "ft-88",
+        topic: "Discipline",
+        hook: "The Social Shield",
+        caption: "When people pressure you to drink or eat junk, don't say 'I can't'. Say 'I don't'. 'I can't' sounds like a struggle; 'I don't' sounds like a core identity."
+    },
+    {
+        id: "ft-89",
+        topic: "Nutrition",
+        hook: "Omega-3 for Joints",
+        caption: "Heavy lifting is hard on joints. High-quality fish oil reduces systemic inflammation, keeping your knees and elbows healthy as you get stronger."
+    },
+    {
+        id: "ft-90",
+        topic: "Fitness",
+        hook: "The Compound Effect",
+        caption: "Small changes do not result in small outcomes. They result in massive outcomes over time. 1% better every day results in being 37 times better over a single year."
     }
 ];
