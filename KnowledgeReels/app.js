@@ -139,10 +139,9 @@ function createReelElement(data, index) {
 
         <div class="reel-caption">
             <div class="caption-user">
-                <img src="../assets/grammarquiz.png" alt="Playmix Profile" onerror="this.src='https://via.placeholder.com/24'">
                 Playmix Facts
             </div>
-            <div class="caption-text">${data.caption} <strong>...more</strong></div>
+            <div class="caption-text">${data.caption}</div>
         </div>
     `;
 
@@ -184,12 +183,6 @@ function createReelElement(data, index) {
             navigator.clipboard.writeText(shareData.text + " " + shareData.url);
             alert("Fact copied to clipboard! You can now paste and share it.");
         }
-    });
-
-    // Interactivity: Expanding caption
-    const captionText = el.querySelector('.caption-text');
-    captionText.addEventListener('click', () => {
-        captionText.classList.toggle('expanded');
     });
 
     return el;
@@ -236,8 +229,6 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const idx = parseInt(entry.target.dataset.index);
             if (idx !== currentVisibleIndex) {
-                 // Clean up previous expanded texts if desired
-                 document.querySelectorAll('.caption-text.expanded').forEach(e => e.classList.remove('expanded'));
                  currentVisibleIndex = idx;
                  
                  // Load more when nearing the bottom
