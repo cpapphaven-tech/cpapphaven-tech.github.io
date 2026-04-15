@@ -14,6 +14,15 @@ function shuffle(array) {
 let activeBank = [];
 let currentIndex = 0;
 const container = document.getElementById('reels-container');
+const swipeHint = document.getElementById('swipe-hint');
+
+// Hide swipe hint on first scroll
+container.addEventListener('scroll', () => {
+    if (swipeHint) {
+        swipeHint.style.opacity = '0';
+        setTimeout(() => swipeHint.remove(), 500);
+    }
+}, { once: true });
 
 // --- Audio Generation (Web Audio API) ---
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
