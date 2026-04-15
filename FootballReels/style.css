@@ -1,0 +1,321 @@
+/* ==========================================================================
+   Knowledge Reels Styles
+   ========================================================================== */
+
+:root {
+    --reel-bg-1: linear-gradient(135deg, #0f172a, #1e1b4b);
+    --reel-bg-2: linear-gradient(135deg, #022c22, #064e3b);
+    --reel-bg-3: linear-gradient(135deg, #4c0519, #7f1d1d);
+    --kr-text: #ffffff;
+    --kr-accent: #38bdf8;
+    --kr-glass: rgba(255, 255, 255, 0.1);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh; /* Mobile browser height fix */
+    overflow: hidden; /* Prevent body scrolling */
+    background: #000;
+    font-family: 'Outfit', sans-serif;
+    overscroll-behavior: none;
+}
+
+/* ─── Reels Container ──────────────────────────────────── */
+.reels-container {
+    width: 100%;
+    height: 100dvh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.reels-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* ─── Single Reel Frame ────────────────────────────────── */
+.reel {
+    width: 100%;
+    height: 100dvh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Animated gradient backgrounds for visual flair */
+.bg-style-0 { background: linear-gradient(45deg, #0f172a, #20113d, #0f172a); background-size: 400% 400%; animation: bgShift 15s ease infinite; }
+.bg-style-1 { background: linear-gradient(45deg, #064e3b, #022c22, #001712); background-size: 400% 400%; animation: bgShift 15s ease infinite; }
+.bg-style-2 { background: linear-gradient(45deg, #4c0519, #7f1d1d, #2d020d); background-size: 400% 400%; animation: bgShift 15s ease infinite; }
+.bg-style-3 { background: linear-gradient(45deg, #1e3a8a, #031338, #172554); background-size: 400% 400%; animation: bgShift 15s ease infinite; }
+
+@keyframes bgShift {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* ─── Header Overlay ────────────────────────────────────── */
+.kr-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    color: white;
+}
+
+.back-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 15px;
+    background: var(--kr-glass);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.kr-title {
+    font-weight: 800;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.audio-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: var(--kr-glass);
+    padding: 8px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+}
+
+/* ─── Reel Content Area (Center) ────────────────────────── */
+.reel-content {
+    width: 85%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 10;
+    padding-bottom: 80px; /* offset for caption */
+}
+
+.topic-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: var(--kr-accent);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.fact-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    margin: 0;
+}
+
+/* ─── Bottom Caption Area ───────────────────────────────── */
+.reel-caption {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    right: 80px; /* leave space for right sidebar */
+    z-index: 10;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 40px 15px 15px 15px; /* gradient fade out up top */
+    border-radius: 12px;
+}
+
+.caption-user {
+    font-weight: 800;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.caption-user img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.caption-text {
+    font-size: 1.15rem;
+    color: #ffffff;
+    line-height: 1.5;
+    font-weight: 500;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    margin-top: 8px;
+}
+
+/* ─── Right Sidebar Operations ──────────────────────────── */
+.right-sidebar {
+    position: absolute;
+    bottom: 90px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 20;
+    align-items: center;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.8));
+    transition: transform 0.2s;
+}
+
+.action-btn:active {
+    transform: scale(0.85);
+}
+
+.action-icon {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.action-btn.liked .action-icon {
+    color: #ef4444; /* Heart turns red */
+    animation: heartPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.action-count {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+@keyframes heartPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+}
+
+/* ─── Floating Hearts (Like Animation) ──────────────────── */
+.floating-heart {
+    position: absolute;
+    font-size: 3rem;
+    color: #ef4444;
+    pointer-events: none;
+    animation: floatUp 1s ease-out forwards;
+    z-index: 50;
+}
+
+@keyframes floatUp {
+    0% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); }
+    100% { opacity: 0; transform: translateY(-150px) scale(1.5) rotate(15deg); }
+}
+
+/* ─── Start Screen (To grab audio context) ──────────────── */
+.interaction-prompt {
+    background: #000;
+    color: white;
+}
+.start-content {
+    text-align: center;
+}
+.pulse-icon {
+    font-size: 4rem;
+    animation: pulse 1.5s infinite;
+    margin-bottom: 20px;
+}
+.begin-btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* ─── Swipe Hint ────────────────────────────────────────── */
+.swipe-hint {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    color: white;
+    text-align: center;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swipe-hint span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.swipe-arrow {
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
