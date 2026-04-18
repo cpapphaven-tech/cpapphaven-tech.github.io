@@ -103,7 +103,7 @@ function renderNews() {
                 
                 <div class="snap-content">
                     <div class="snap-meta">
-                        <span class="snap-source">${article.source}</span>
+                        <span class="snap-source">Source: ${article.source}</span>
                         <span class="snap-date">${formatDate(article.pubDate)}</span>
                     </div>
                     <h2 class="snap-title">${article.title}</h2>
@@ -118,6 +118,24 @@ function renderNews() {
 
     if (articles.length === 0) {
         html = `<div class="snap-card" style="align-items:center; justify-content:center; color:#888;">No news fetched yet.</div>`;
+    } else {
+        // Append Legal Disclaimer & Takedown Card at the end of the feed
+        html += `
+            <div class="snap-card" style="background:#0a0a0f; justify-content:center; align-items:center; text-align:center; padding: 40px;">
+                <div style="max-width: 400px;">
+                    <div style="font-size: 3rem; margin-bottom: 20px;">⚖️</div>
+                    <h3 style="color:#fff; margin-bottom:15px; font-size: 1.5rem; font-weight: 800;">Legal Disclaimer</h3>
+                    <p style="color:#888; font-size:0.95rem; line-height:1.6; margin-bottom:20px;">
+                        All articles and content belong entirely to their respective original publishers. Playmix automatically aggregates headlines and short snippets via publicly available RSS feeds.
+                    </p>
+                    <p style="color:#888; font-size:0.95rem; line-height:1.6; margin-bottom:30px;">
+                        For DMCA or takedown requests, please contact:<br>
+                        <a href="mailto:cpapphaven@gmail.com" style="color:#3b82f6; text-decoration:none; font-weight:bold;">cpapphaven@gmail.com</a>
+                    </p>
+                    <button class="cat-btn active" onclick="window.scrollTo({top:0, behavior:'smooth'})" style="padding: 12px 30px;">Back to Top ↑</button>
+                </div>
+            </div>
+        `;
     }
 
     feed.innerHTML = html;
