@@ -222,12 +222,45 @@ body, html {
     margin-bottom: 20px;
 }
 
+/* ─── Swipe Hint ────────────────────────────────────────── */
+.swipe-hint {
+    position: fixed;
+    bottom: 90px; /* Offset above the mobile ad banner */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    color: white;
+    text-align: center;
+    pointer-events: none;
+    transition: opacity 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.swipe-hint span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+.swipe-arrow {
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
 /* Desktop Ad Avoidance */
 @media (min-width: 1024px) {
     .snap-content {
-        padding-right: 180px; /* 160px for Adsterra + 20px safe buffer */
+        padding-right: 350px; /* 320px for Native Adsterra Block + 30px safe buffer */
     }
     .floating-header {
-        padding-right: 175px; /* Avoid side ad overlap on header buttons */
+        padding-right: 340px; /* Avoid side ad overlap on header buttons */
     }
 }

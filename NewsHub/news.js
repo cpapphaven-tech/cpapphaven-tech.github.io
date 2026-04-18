@@ -108,7 +108,7 @@ function renderNews() {
                     </div>
                     <h2 class="snap-title">${article.title}</h2>
                     ${descHtml}
-                    <a href="${article.link}" target="_blank" class="read-btn">
+                    <a href="${article.link}" target="_blank" rel="noopener noreferrer nofollow" class="read-btn">
                         Read Story <span>↗</span>
                     </a>
                 </div>
@@ -153,4 +153,17 @@ document.addEventListener('DOMContentLoaded', () => {
             window.prepSystem();
         }
     }, 400); 
+
+    // Dismiss swipe hint on scroll
+    const swipeHint = document.getElementById('swipe-hint');
+    if (swipeHint) {
+        const handleReelScroll = () => {
+            if (feed.scrollTop > 50) {
+                swipeHint.style.opacity = '0';
+                setTimeout(() => { if (swipeHint.parentNode) swipeHint.remove(); }, 500);
+                feed.removeEventListener('scroll', handleReelScroll);
+            }
+        };
+        feed.addEventListener('scroll', handleReelScroll, { passive: true });
+    }
 });
