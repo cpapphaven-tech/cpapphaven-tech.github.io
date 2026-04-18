@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Daily Digest Reels</title>
+    
+    <meta name="description" content="Swipe through the latest global news, gaming, and tech updates in an immersive, fast-paced reel format.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Deferred Analytics and Ads -->
+    <script defer src="../analytics.js" type="module"></script>
+    <script defer src="../ads.js"></script>
+</head>
+<body class="pmg-sidebar-start-closed ignore-pmg-sidebar game-page">
+
+    <!-- Global Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMix News</div>
+        <div class="pmg-spinner"></div>
+        <p class="pmg-tip">Swiping Headlines...</p>
+    </div>
+
+    <!-- Floating Top Header (TikTok Style) -->
+    <div class="floating-header">
+        <a href="../index.html" class="back-btn">←</a>
+        
+        <div class="category-toggle-container">
+            <div class="category-toggles">
+                <button class="cat-btn active" data-type="top">🌐 Top</button>
+                <button class="cat-btn" data-type="gaming">🎮 Gaming</button>
+                <button class="cat-btn" data-type="technology">💻 Tech</button>
+                <button class="cat-btn" data-type="finance">📈 Finance</button>
+                <button class="cat-btn" data-type="sports">⚽ Sports</button>
+                <button class="cat-btn" data-type="entertainment">🎬 Ent.</button>
+                <button class="cat-btn" data-type="health">⚕️ Health</button>
+                <button class="cat-btn" data-type="science">🔬 Science</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Infinite Swipe Reel Container -->
+    <div id="news-feed" class="reel-container">
+        <!-- Snap cards will be injected here by news.js -->
+    </div>
+
+    <!-- Data & Logic -->
+    <script src="../NewsCommon/news_data.js"></script>
+    <script src="news.js"></script>
+    <script src="../sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* immersive News Reel CSS */
+
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    background: #000;
+    overflow: hidden; /* Prevent body scroll, everything happens in reel-container */
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Floating Top Area */
+.floating-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 15px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    pointer-events: none; /* Let clicks pass through except buttons */
+}
+
+.back-btn {
+    pointer-events: auto;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.category-toggle-container {
+    pointer-events: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-grow: 1;
+}
+.category-toggle-container::-webkit-scrollbar { display: none; }
+
+.category-toggles {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+.cat-btn {
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #ccc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cat-btn.active {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* Snap Scrolling Reel */
+.reel-container {
+    height: 100dvh;
+    width: 100vw;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    background: #000;
+}
+.reel-container::-webkit-scrollbar { display: none; }
+
+.snap-card {
+    height: 100dvh;
+    width: 100vw;
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    scroll-snap-stop: always;
+}
+
+/* Backgrounds */
+.snap-bg-wrap {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 1;
+}
+.snap-bg-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.snap-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Soft gradient at top for header, dark fade at bottom for text */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, transparent 30%, rgba(0,0,0,0.6) 60%, rgba(0,0,0,0.95) 100%);
+    z-index: 2;
+}
+
+/* Content Area */
+.snap-content {
+    position: relative;
+    z-index: 3;
+    padding: 20px 20px 40px 20px;
+}
+
+.snap-meta {
+    display: flex; gap: 10px; align-items: center; margin-bottom: 15px;
+}
+
+.snap-source {
+    background: #3b82f6;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.snap-date {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.snap-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+    text-wrap: balance;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.snap-desc {
+    color: #ffd;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.8);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.read-btn:active {
+    background: #fff;
+    color: #000;
+}
+
+/* Adsterra Reel Slot */
+.ad-snap-card {
+    background: #0a0a0f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ad-badge {
+    background: rgba(59,130,246,0.1);
+    color: #3b82f6;
+    border: 1px solid rgba(59,130,246,0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}

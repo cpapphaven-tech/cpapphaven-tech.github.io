@@ -149,10 +149,63 @@
 
             <div class="search-container"
                 style="display: flex; align-items: center; gap: 15px; flex-grow: 1; justify-content: flex-end;">
-                <div class="game-count"
-                    style="font-size: 0.9rem; color: var(--pmg-secondary); font-weight: 600; background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
-                    <span id="total-games-count">0</span> Games Available
-                </div>
+                <button id="tab-btn-games" onclick="switchPortalTab('games')" style="
+                position: relative; z-index: 1;
+                background: rgba(255,255,255,0.1); border: none;
+                color: #fff; font-family: 'Outfit', sans-serif;
+                font-size: 0.95rem; font-weight: 700;
+                padding: 10px 28px; border-radius: 12px;
+                cursor: pointer; display: flex; align-items: center; gap: 8px;
+                transition: all 0.2s;
+                white-space: nowrap;
+            ">
+                🎮 Games
+                <span id="tab-count-games" style="
+                    background: rgba(255,255,255,0.15);
+                    color: #fff; font-size: 0.7rem; font-weight: 800;
+                    padding: 2px 8px; border-radius: 20px;
+                    min-width: 24px; text-align: center;
+                ">0</span>
+            </button>
+
+            <button id="tab-btn-reels" onclick="switchPortalTab('reels')" style="
+                position: relative; z-index: 1;
+                background: none; border: none;
+                color: rgba(255,255,255,0.55); font-family: 'Outfit', sans-serif;
+                font-size: 0.95rem; font-weight: 700;
+                padding: 10px 28px; border-radius: 12px;
+                cursor: pointer; display: flex; align-items: center; gap: 8px;
+                transition: color 0.2s;
+                white-space: nowrap;
+            ">
+                📜 Wisdom
+                <span id="tab-count-reels" style="
+                    background: rgba(255,255,255,0.1);
+                    color: rgba(255,255,255,0.6); font-size: 0.7rem; font-weight: 800;
+                    padding: 2px 8px; border-radius: 20px;
+                    min-width: 24px; text-align: center;
+                ">0</span>
+            </button>
+
+            <button id="tab-btn-news" onclick="switchPortalTab('news')" style="
+                position: relative; z-index: 1;
+                background: none; border: none;
+                color: rgba(255,255,255,0.55); font-family: 'Outfit', sans-serif;
+                font-size: 0.95rem; font-weight: 700;
+                padding: 10px 28px; border-radius: 12px;
+                cursor: pointer; display: flex; align-items: center; gap: 8px;
+                transition: color 0.2s;
+                white-space: nowrap;
+            ">
+                📰 Daily News
+                <span id="tab-count-news" style="
+                    background: rgba(255,255,255,0.1);
+                    color: rgba(255,255,255,0.6); font-size: 0.7rem; font-weight: 800;
+                    padding: 2px 8px; border-radius: 20px;
+                    min-width: 24px; text-align: center;
+                ">0</span>
+            </button>
+        </div>
                 <div style="position: relative; width: 300px; max-width: 100%;">
                     <input type="text" id="game-search" placeholder="Search games..." style="
                         width: 100%;
@@ -173,7 +226,17 @@
         </div>
         <div class="grid" id="main-game-grid">
 
-            <!-- Knowledge Reels (Playmix Shorts) -->
+            <!-- Daily News Hub Card -->
+            <a href="NewsHub/index.html" class="game-card">
+                <div class="card-img" style="background:linear-gradient(135deg,#1e3a8a,#1e1b4b);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(59,130,246,0.5);">📰</div>
+                <div class="card-info">
+                    <h3>📰 Daily Digest – Tech & Gaming News</h3>
+                    <p><strong>Stay Informed!</strong> Get the latest global headlines curated daily. Read top stories in gaming, technology, and finance directly on Playmix.</p>
+                    <span style="display:inline-block;background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 Updated Daily</span>
+                </div>
+            </a>
+
+            <!-- Knowledge Reels -->
             <a href="KnowledgeReels/index.html" class="game-card">
                 <div class="card-img" style="background:linear-gradient(135deg,#1e1b4b,#0f172a);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(56,189,248,0.6);">📱</div>
                 <div class="card-info">
@@ -889,57 +952,184 @@
         // by forcing an extra full page reload on every fresh visit.
     </script>
     <script>
-        // Game Search and Count Implementation
-        document.addEventListener('DOMContentLoaded', () => {
+        const NEWS_KEYWORDS = [
+            'News'
+        ];
+        const REELS_KEYWORDS = [
+            'Reels'
+        ];
+
+        let activeTab = 'games'; // default
+
+        function getCardType(card) {
+            const href = card.getAttribute('href') || '';
+            if (NEWS_KEYWORDS.some(k => href.includes(k))) return 'news';
+            if (REELS_KEYWORDS.some(k => href.includes(k))) return 'reels';
+            return 'games';
+        }
+
+        // ── Slider positioning ────────────────────────────────────
+        function positionSlider(tab) {
+            const bar    = document.getElementById('pmg-tab-bar');
+            const btnG   = document.getElementById('tab-btn-games');
+            const btnR   = document.getElementById('tab-btn-reels');
+            const btnN   = document.getElementById('tab-btn-news');
+            const slider = document.getElementById('pmg-tab-slider');
+            if (!slider || !bar) return;
+            
+            let btn;
+            if (tab === 'games') btn = btnG;
+            else if (tab === 'reels') btn = btnR;
+            else btn = btnN;
+
+            const barRect = bar.getBoundingClientRect();
+            const btnRect = btn.getBoundingClientRect();
+
+            // Set width and left based on active button
+            slider.style.width = btnRect.width + 'px';
+            slider.style.left  = (btnRect.left - barRect.left) + 'px';
+        }
+
+        window.switchPortalTab = function (tab) {
+            activeTab = tab;
+
+            const btns = {
+                games:  document.getElementById('tab-btn-games'),
+                reels:  document.getElementById('tab-btn-reels'),
+                news:   document.getElementById('tab-btn-news')
+            };
+            const cnts = {
+                games:  document.getElementById('tab-count-games'),
+                reels:  document.getElementById('tab-count-reels'),
+                news:   document.getElementById('tab-count-news')
+            };
             const searchInput = document.getElementById('game-search');
-            const gameGrid = document.getElementById('main-game-grid');
-            const countDisplay = document.getElementById('total-games-count');
-            const gameCards = gameGrid.querySelectorAll('.game-card');
 
-            // Initial Count
-            countDisplay.innerText = gameCards.length;
-
-            searchInput.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase().trim();
-                let visibleCount = 0;
-
-                gameCards.forEach(card => {
-                    const title = card.querySelector('h3').innerText.toLowerCase();
-                    const desc = card.querySelector('p').innerText.toLowerCase();
-
-                    if (title.includes(query) || desc.includes(query)) {
-                        card.style.display = 'block';
-                        visibleCount++;
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-
-                countDisplay.innerText = visibleCount;
-
-                // Show "No Results" message if needed
-                let emptyMsg = document.getElementById('search-empty-msg');
-                if (visibleCount === 0) {
-                    if (!emptyMsg) {
-                        emptyMsg = document.createElement('div');
-                        emptyMsg.id = 'search-empty-msg';
-                        emptyMsg.style.gridColumn = '1 / -1';
-                        emptyMsg.style.textAlign = 'center';
-                        emptyMsg.style.padding = '100px 20px';
-                        emptyMsg.style.color = 'var(--pmg-secondary)';
-                        emptyMsg.innerHTML = `
-                            <div style="font-size: 3rem; margin-bottom: 20px;">🔍</div>
-                            <h3>No games found for "${query}"</h3>
-                            <p>Try searching for something else!</p>
-                        `;
-                        gameGrid.appendChild(emptyMsg);
-                    } else {
-                        emptyMsg.querySelector('h3').innerText = `No games found for "${query}"`;
-                    }
-                } else if (emptyMsg) {
-                    emptyMsg.remove();
+            // Reset all
+            Object.keys(btns).forEach(key => {
+                if (!btns[key]) return;
+                const active = (key === tab);
+                btns[key].style.color = active ? '#fff' : 'rgba(255,255,255,0.5)';
+                if (cnts[key]) {
+                    cnts[key].style.background = active ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)';
+                    cnts[key].style.color = active ? '#fff' : 'rgba(255,255,255,0.45)';
                 }
             });
+
+            positionSlider(tab);
+
+            // Clear search when switching tabs
+            if (searchInput) {
+                searchInput.value = '';
+                let placeholder = 'Search 100+ games...';
+                if (tab === 'reels') placeholder = 'Search wisdom & facts...';
+                if (tab === 'news') placeholder = 'Search daily headlines...';
+                searchInput.setAttribute('placeholder', placeholder);
+            }
+
+            // Update section title
+            const title = document.querySelector('.section-title');
+            if (title) {
+                if (tab === 'games') title.textContent = '🎮 Play Now – Choose Your Game';
+                else if (tab === 'reels') title.textContent = '📜 Wisdom – Discover Secrets';
+                else title.textContent = '📰 Playmix Daily – Top News';
+            }
+
+            applyFilter('');
+        };
+
+        function applyFilter(query) {
+            const gameGrid = document.getElementById('main-game-grid');
+            if (!gameGrid) return;
+            const allCards = gameGrid.querySelectorAll('.game-card');
+            
+            let visibleCount = 0;
+            allCards.forEach(card => {
+                const type = getCardType(card);
+                
+                // 1) Match tab
+                const matchesTab = (type === activeTab);
+
+                // 2) Match search
+                const titleText  = (card.querySelector('h3')?.innerText || '').toLowerCase();
+                const descText   = (card.querySelector('p')?.innerText || '').toLowerCase();
+                const matchesSearch = !query || titleText.includes(query) || descText.includes(query);
+
+                if (matchesTab && matchesSearch) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update global "Total Games Available" header counter depending on tab
+            const countDisplay = document.getElementById('total-games-count');
+            if (countDisplay) countDisplay.innerText = visibleCount;
+
+            // Handle Empty State
+            let emptyMsg = document.getElementById('search-empty-msg');
+            if (visibleCount === 0) {
+                if (!emptyMsg) {
+                    emptyMsg = document.createElement('div');
+                    emptyMsg.id = 'search-empty-msg';
+                    emptyMsg.style.gridColumn = '1 / -1';
+                    emptyMsg.style.textAlign = 'center';
+                    emptyMsg.style.padding = '100px 20px';
+                    emptyMsg.style.color = 'rgba(255,255,255,0.4)';
+                    emptyMsg.innerHTML = `
+                        <div style="font-size: 3rem; margin-bottom: 20px;">🔍</div>
+                        <h3>No results found for "${query}"</h3>
+                        <p>Try a different keyword.</p>
+                    `;
+                    gameGrid.appendChild(emptyMsg);
+                } else {
+                    emptyMsg.querySelector('h3').innerText = `No results found for "${query}"`;
+                }
+            } else {
+                if (emptyMsg) emptyMsg.remove();
+            }
+            
+            // Re-trigger layout calculation
+            positionSlider(activeTab);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const gameGrid  = document.getElementById('main-game-grid');
+            const allCards  = gameGrid.querySelectorAll('.game-card');
+            const searchInput = document.getElementById('game-search');
+            
+            const cntG = document.getElementById('tab-count-games');
+            const cntR = document.getElementById('tab-count-reels');
+            const cntN = document.getElementById('tab-count-news');
+            
+            // Tab Setups
+            if (cntN) cntN.innerText = "Daily";
+            
+            let gamesCount = 0;
+            let reelsCount = 0;
+            allCards.forEach(card => { 
+                const cType = getCardType(card);
+                if(cType === 'games') gamesCount++; 
+                if(cType === 'reels') reelsCount++;
+            });
+            if (cntG) cntG.innerText = gamesCount;
+            if (cntR) cntR.innerText = reelsCount;
+
+            // Tie search input
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    applyFilter(e.target.value.toLowerCase().trim());
+                });
+            }
+
+            // Window resize reflow slider
+            window.addEventListener('resize', () => {
+                positionSlider(activeTab);
+            });
+
+            // Kick off
+            switchPortalTab('games');
         });
     </script>
     <script>
