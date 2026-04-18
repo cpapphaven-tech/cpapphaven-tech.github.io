@@ -1,23 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <title>Daily Digest Reels</title>
-    
-    <meta name="description" content="Swipe through the latest global news, gaming, and tech updates in an immersive, fast-paced reel format.">
-    
+
+    <!-- ═══════════════════════════════════════════════════
+         PRIMARY SEO — English
+    ═══════════════════════════════════════════════════ -->
+    <title>Daily Digest Reels — Swipe Global News | Playmix</title>
+    <meta name="description" content="Swipe through today's top global news, gaming, technology, sports and more — in a fast, immersive TikTok-style reel experience. Available in 15 languages.">
+    <meta name="keywords" content="news reels, daily news, global news, swipe news, gaming news, tech news, sports news, Playmix, news app, multilingual news">
+    <meta name="author" content="Playmix — CPAppHaven">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cpapphaven-tech.github.io/Playmix/NewsHub/">
+
+    <!-- ═══════════════════════════════════════════════════
+         hreflang — Multilingual SEO Signals (15 Languages)
+         Tells Google which version serves which audience.
+    ═══════════════════════════════════════════════════ -->
+    <link rel="alternate" hreflang="en"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=en">
+    <link rel="alternate" hreflang="ja"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=ja">
+    <link rel="alternate" hreflang="de"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=de">
+    <link rel="alternate" hreflang="fr"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=fr">
+    <link rel="alternate" hreflang="es"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=es">
+    <link rel="alternate" hreflang="pt"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=pt">
+    <link rel="alternate" hreflang="zh"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=zh">
+    <link rel="alternate" hreflang="ko"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=ko">
+    <link rel="alternate" hreflang="ar"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=ar">
+    <link rel="alternate" hreflang="hi"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=hi">
+    <link rel="alternate" hreflang="ru"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=ru">
+    <link rel="alternate" hreflang="it"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=it">
+    <link rel="alternate" hreflang="nl"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=nl">
+    <link rel="alternate" hreflang="tr"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=tr">
+    <link rel="alternate" hreflang="id"    href="https://cpapphaven-tech.github.io/Playmix/NewsHub/?lang=id">
+    <link rel="alternate" hreflang="x-default" href="https://cpapphaven-tech.github.io/Playmix/NewsHub/">
+
+    <!-- ═══════════════════════════════════════════════════
+         Open Graph (Facebook / WhatsApp / LinkedIn)
+    ═══════════════════════════════════════════════════ -->
+    <meta property="og:type"         content="website">
+    <meta property="og:site_name"    content="Playmix News">
+    <meta property="og:title"        content="Daily Digest Reels — Swipe Global News">
+    <meta property="og:description"  content="Swipe today's top stories in gaming, tech, sports, finance and more — TikTok-style, in your language.">
+    <meta property="og:url"          content="https://cpapphaven-tech.github.io/Playmix/NewsHub/">
+    <meta property="og:image"        content="https://cpapphaven-tech.github.io/Playmix/assets/news-og.jpg">
+    <meta property="og:locale"       content="en_US">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="ar_SA">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="id_ID">
+
+    <!-- ═══════════════════════════════════════════════════
+         Twitter / X Card
+    ═══════════════════════════════════════════════════ -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Daily Digest Reels — Swipe Global News | Playmix">
+    <meta name="twitter:description" content="Swipe through live global news in your native language — gaming, tech, sports and more.">
+    <meta name="twitter:image"       content="https://cpapphaven-tech.github.io/Playmix/assets/news-og.jpg">
+    <meta name="twitter:site"        content="@PlaymixGames">
+
+    <!-- ═══════════════════════════════════════════════════
+         Structured Data — NewsMediaOrganization (JSON-LD)
+         Powers Google News rich results
+    ═══════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Daily Digest Reels",
+        "description": "Swipe through today's top global news in 15 languages — gaming, tech, sports, finance and more.",
+        "url": "https://cpapphaven-tech.github.io/Playmix/NewsHub/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Playmix",
+            "url": "https://cpapphaven-tech.github.io/Playmix/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://cpapphaven-tech.github.io/Playmix/assets/logo.png"
+            }
+        },
+        "inLanguage": ["en","ja","de","fr","es","pt","zh","ko","ar","hi","ru","it","nl","tr","id"],
+        "potentialAction": {
+            "@type": "ReadAction",
+            "target": "https://cpapphaven-tech.github.io/Playmix/NewsHub/"
+        }
+    }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════
+         Multilingual Meta (per-language descriptions)
+         Note: Google primarily uses hreflang + canonical.
+         These extra tags reinforce locale signals.
+    ═══════════════════════════════════════════════════ -->
+    <!-- Japanese -->
+    <meta name="description:ja" content="ゲーム、テクノロジー、スポーツなど、今日のトップニュースをスワイプ形式でご覧いただけます。15言語対応。">
+    <!-- German -->
+    <meta name="description:de" content="Wische durch die Top-Nachrichten von heute – Gaming, Tech, Sport und mehr im TikTok-Stil, in deiner Sprache.">
+    <!-- French -->
+    <meta name="description:fr" content="Faites défiler les actualités mondiales du jour — jeux, tech, sport et plus encore, dans votre langue.">
+    <!-- Spanish -->
+    <meta name="description:es" content="Desliza las noticias más importantes de hoy — gaming, tecnología, deportes y más, en tu idioma.">
+    <!-- Portuguese -->
+    <meta name="description:pt" content="Deslize pelas principais notícias do dia — games, tecnologia, esporte e mais, no seu idioma.">
+    <!-- Chinese -->
+    <meta name="description:zh" content="滑动浏览今日全球热点新闻——游戏、科技、体育等，支持15种语言。">
+    <!-- Korean -->
+    <meta name="description:ko" content="오늘의 주요 뉴스를 스와이프하세요 — 게임, 기술, 스포츠 등 15개 언어 지원.">
+    <!-- Arabic -->
+    <meta name="description:ar" content="اسحب لأعلى لمشاهدة أهم أخبار اليوم — ألعاب، تقنية، رياضة والمزيد، بلغتك الأصلية.">
+    <!-- Hindi -->
+    <meta name="description:hi" content="आज की शीर्ष वैश्विक खबरें स्वाइप करें — गेमिंग, तकनीक, खेल और बहुत कुछ, अपनी भाषा में।">
+    <!-- Russian -->
+    <meta name="description:ru" content="Листайте главные новости дня — игры, технологии, спорт и не только, на вашем языке.">
+    <!-- Italian -->
+    <meta name="description:it" content="Scorri le notizie principali di oggi — gaming, tech, sport e altro ancora, nella tua lingua.">
+    <!-- Dutch -->
+    <meta name="description:nl" content="Swipe door het laatste nieuws — gaming, tech, sport en meer, in jouw taal. 15 talen beschikbaar.">
+    <!-- Turkish -->
+    <meta name="description:tr" content="Bugünün önemli haberlerini kaydırın — oyun, teknoloji, spor ve daha fazlası, kendi dilinizde.">
+    <!-- Indonesian -->
+    <meta name="description:id" content="Geser berita utama hari ini — gaming, teknologi, olahraga dan lainnya, dalam bahasa Anda.">
+
+    <!-- ═══════════════════════════════════════════════════
+         Mobile / PWA Meta
+    ═══════════════════════════════════════════════════ -->
+    <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Playmix News">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
-    
+
+    <!-- Styles -->
     <link rel="stylesheet" href="../portal-style.css">
     <link rel="stylesheet" href="../loader.css">
     <link rel="stylesheet" href="style.css">
 
     <!-- Deferred Analytics and Ads -->
     <script defer src="../analytics.js" type="module"></script>
-    <!-- <script defer src="../ads.js"></script> -->
+    <script defer src="../ads.js"></script>
 </head>
 <body class="pmg-sidebar-start-closed ignore-pmg-sidebar game-page">
 
@@ -25,13 +160,15 @@
     <div id="pmg-loader">
         <div class="pmg-brand">PlayMix News</div>
         <div class="pmg-spinner"></div>
-        <p class="pmg-tip">Swiping Headlines...</p>
+        <p class="pmg-tip">Loading your news...</p>
     </div>
 
     <!-- Floating Top Header (TikTok Style) -->
     <div class="floating-header">
         <a href="../index.html" class="back-btn">←</a>
-        
+        <!-- Language Toggle: shown only when native != English -->
+        <div id="btn-lang-toggle" class="lang-btn" style="display:none;">🌐 EN</div>
+
         <div class="category-toggle-container">
             <div class="category-toggles">
                 <button class="cat-btn active" data-type="top">🌐 Top</button>
@@ -46,6 +183,7 @@
         </div>
     </div>
 
+    <!-- Swipe Hint -->
     <div id="swipe-hint" class="swipe-hint">
         <span>Swipe Up</span>
         <div class="swipe-arrow">↑</div>
@@ -53,7 +191,7 @@
 
     <!-- Infinite Swipe Reel Container -->
     <div id="news-feed" class="reel-container">
-        <!-- Snap cards will be injected here by news.js -->
+        <!-- Snap cards injected by news.js -->
     </div>
 
     <!-- Data & Logic -->
