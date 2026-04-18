@@ -91,6 +91,30 @@ const COUNTRY_LANG = {
     'US':'en','GB':'en','AU':'en','CA':'en','NZ':'en','IE':'en','ZA':'en','SG':'en','PH':'en','PK':'en','NG':'en','GH':'en','KE':'en'
 };
 
+// ─── Indian State → Regional Language Map ──────────────────
+const IN_STATE_LANG = {
+    'Maharashtra': 'mr',
+    'West Bengal': 'bn',
+    'Telangana': 'te',
+    'Andhra Pradesh': 'te',
+    'Tamil Nadu': 'ta',
+    'Gujarat': 'gu',
+    'Karnataka': 'kn',
+    'Kerala': 'ml',
+    'Punjab': 'pa',
+    'Odisha': 'hi',       // fallback to hi for now
+    'Bihar': 'hi',
+    'Uttar Pradesh': 'hi',
+    'Rajasthan': 'hi',
+    'Madhya Pradesh': 'hi',
+    'Haryana': 'hi',
+    'Delhi': 'hi',
+    'Chhattisgarh': 'hi',
+    'Jharkhand': 'hi',
+    'Uttarakhand': 'hi',
+    'Himachal Pradesh': 'hi'
+};
+
 // ─── Language Detection (async, IP-first) ─────────────────
 // Priority: URL param → localStorage → IP Geolocation → navigator.language → 'en'
 function getBrowserLang() {
@@ -223,26 +247,35 @@ async function processTranslationQueue() {
 }
 
 async function detectLangAsync() {
-    // 1. Explicit URL override
+    // 1. Explicit URL override (Priority #1)
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     if (urlLang && I18N[urlLang]) return urlLang;
 
-    // 2. Browser language (checks for regional codes)
-    const browserCode = (navigator.language || 'en').substring(0, 2).toLowerCase();
-    if (I18N[browserCode]) return browserCode;
-
-    // 3. User-saved preference
+    // 2. User-saved preference (Priority #2)
     const stored = localStorage.getItem('playmix_news_lang');
     if (stored && I18N[stored]) return stored;
 
-    // 4. IP-based fallback
+    // 3. Smart IP-based Fallback (State-aware for India)
     try {
         const res = await fetch('https://ipapi.co/json/');
         const data = await res.json();
-        console.log("📍 Detected country:", data.country_name);
-        const code = COUNTRY_LANG[data.country_code];
-        if (code && I18N[code]) return code;
-    } catch(e) {}
+        
+        if (data.country_code === 'IN') {
+            console.log("📍 Detected India State:", data.region);
+            // Default to regional if matched, else fallback to Hindi for India
+            const regional = IN_STATE_LANG[data.region] || 'hi';
+            return regional;
+        }
+
+        const countryCode = COUNTRY_LANG[data.country_code];
+        if (countryCode && I18N[countryCode]) return countryCode;
+    } catch(e) {
+        console.warn("Geolocation failed, using browser language.");
+    }
+
+    // 4. Browser language (checks for regional codes)
+    const browserCode = (navigator.language || 'en').substring(0, 2).toLowerCase();
+    if (I18N[browserCode]) return browserCode;
 
     return getBrowserLang();
 }
