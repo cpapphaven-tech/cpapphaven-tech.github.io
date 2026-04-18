@@ -118,7 +118,8 @@ function translateJSONP(text, targetLang) {
             const script = document.getElementById(cbName);
             if (script) script.remove();
             const t = data?.responseData?.translatedText || '';
-            if (t && data?.responseStatus === 200 && !t.includes('QUERY LENGTH LIMIT')) {
+            // API returns responseStatus as string "200" — use == not ===
+            if (t && data?.responseStatus == 200 && !t.includes('QUERY LENGTH LIMIT') && !t.includes('MYMEMORY')) {
                 setCache(text, targetLang, t);
                 resolve(t);
             } else {
