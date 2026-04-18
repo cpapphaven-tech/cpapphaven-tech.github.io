@@ -21,8 +21,56 @@ const I18N = {
     "it": { flag:"🇮🇹 IT", dir:"ltr", read:"Leggi di più <span>↗</span>", source:"Fonte: ", no_news:"Nessuna notizia disponibile.", swipe:"Scorri su", legal:"Note Legali", legal_text_1:"Tutti gli articoli appartengono ai rispettivi editori. Playmix aggrega titoli tramite feed RSS pubblici.", legal_text_2:"Per richieste DMCA:", back_top:"Torna su ↑", time_under1h:"MENO DI 1H FA", time_xhago:(h)=>`${h}H FA`, cats:{ top:"🌐 Top", gaming:"🎮 Gaming", technology:"💻 Tech", finance:"📈 Economia", sports:"⚽ Sport", entertainment:"🎬 Intrattenimento", health:"⚕️ Salute", science:"🔬 Scienza" } },
     "nl": { flag:"🇳🇱 NL", dir:"ltr", read:"Lees meer <span>↗</span>", source:"Bron: ", no_news:"Geen nieuws beschikbaar.", swipe:"Veeg omhoog", legal:"Juridische Kennisgeving", legal_text_1:"Alle artikelen zijn eigendom van hun uitgevers. Playmix aggregeert koppen via openbare RSS-feeds.", legal_text_2:"Voor DMCA-verzoeken:", back_top:"Terug naar boven ↑", time_under1h:"MINDER DAN 1U", time_xhago:(h)=>`${h}U GELEDEN`, cats:{ top:"🌐 Top", gaming:"🎮 Games", technology:"💻 Tech", finance:"📈 Economie", sports:"⚽ Sport", entertainment:"🎬 Entertainment", health:"⚕️ Gezondheid", science:"🔬 Wetenschap" } },
     "tr": { flag:"🇹🇷 TR", dir:"ltr", read:"Devamını oku <span>↗</span>", source:"Kaynak: ", no_news:"Haber bulunamadı.", swipe:"Yukarı kaydır", legal:"Yasal Uyarı", legal_text_1:"Tüm içerikler orijinal yayıncılarına aittir. Playmix, genel RSS akışları aracılığıyla başlıkları toplar.", legal_text_2:"DMCA talepleri için:", back_top:"Başa dön ↑", time_under1h:"1 SAATTEN AZ", time_xhago:(h)=>`${h} SAAT ÖNCE`, cats:{ top:"🌐 Gündem", gaming:"🎮 Oyun", technology:"💻 Teknoloji", finance:"📈 Ekonomi", sports:"⚽ Spor", entertainment:"🎬 Eğlence", health:"⚕️ Sağlık", science:"🔬 Bilim" } },
-    "id": { flag:"🇮🇩 ID", dir:"ltr", read:"Baca selengkapnya <span>↗</span>", source:"Sumber: ", no_news:"Tidak ada berita tersedia.", swipe:"Geser ke atas", legal:"Pemberitahuan Hukum", legal_text_1:"Semua artikel adalah milik penerbit aslinya. Playmix mengumpulkan berita melalui umpan RSS publik.", legal_text_2:"Untuk permintaan DMCA:", back_top:"Kembali ke atas ↑", time_under1h:"KURANG DARI 1 JAM", time_xhago:(h)=>`${h} JAM LALU`, cats:{ top:"🌐 Utama", gaming:"🎮 Game", technology:"💻 Teknologi", finance:"📈 Ekonomi", sports:"⚽ Olahraga", entertainment:"🎬 Hiburan", health:"⚕️ Kesehatan", science:"🔬 Sains" } }
+    "id": { flag:"🇮🇩 ID", dir:"ltr", read:"Baca selengkapnya <span>↗</span>", source:"Sumber: ", no_news:"Tidak ada berita tersedia.", swipe:"Geser ke atas", legal:"Pemberitahuan Hukum", legal_text_1:"Semua artikel adalah milik penerbit aslinya. Playmix mengumpulkan berita melalui umpan RSS publik.", legal_text_2:"For DMCA info:", back_top:"Kembali ke atas ↑", time_under1h:"KURANG DARI 1 JAM", time_xhago:(h)=>`${h} JAM LALU`, cats:{ top:"🌐 Utama", gaming:"🎮 Game", technology:"💻 Teknologi", finance:"📈 Ekonomi", sports:"⚽ Olahraga", entertainment:"🎬 Hiburan", health:"⚕️ Kesehatan", science:"🔬 Sains" } },
+    "bn": { flag:"🇮🇳 BN", dir:"ltr", read:"আরও পড়ুন <span>↗</span>", source:"উৎস: ", no_news:"কোন খবর নেই", swipe:"উপরে সোয়াইপ করুন", legal:"আইনি দাবি অস্বীকার", legal_text_1:"সমস্ত নিবন্ধ প্রকাশকদের।", legal_text_2:"DMCA অনুরোধ:", back_top:"উপরে ফিরে যান ↑", time_under1h:"১ ঘণ্টার কম", time_xhago:(h)=>`${h} ঘণ্টা আগে`, cats:{ top:"🌐 শীর্ষ", gaming:"🎮 গেমিং", technology:"💻 টেক", finance:"📈 অর্থ", sports:"⚽ খেলা", entertainment:"🎬 বিনোদন", health:"⚕️ স্বাস্থ্য", science:"🔬 বিজ্ঞান" } },
+    "mr": { flag:"🇮🇳 MR", dir:"ltr", read:"पुढे वाचा <span>↗</span>", source:"स्रोत: ", no_news:"बातम्या उपलब्ध नाहीत", swipe:"वर स्वाइप करा", legal:"कायदेशीर अस्वीकरण", legal_text_1:"सर्व लेख प्रकाशकांचे आहेत।", legal_text_2:"DMCA विनंती:", back_top:"वरती जा ↑", time_under1h:"१ तासापूर्वी", time_xhago:(h)=>`${h} तासांपूर्वी`, cats:{ top:"🌐 प्रमुख", gaming:"🎮 गेमिंग", technology:"💻 तंत्रज्ञान", finance:"📈 वित्त", sports:"⚽ क्रीडा", entertainment:"🎬 मनोरंजन", health:"⚕️ आरोग्य", science:"🔬 विज्ञान" } },
+    "te": { flag:"🇮🇳 TE", dir:"ltr", read:"మరిన్ని <span>↗</span>", source:"మూలం: ", no_news:"వార్తలు లేవు", swipe:"పైకి స్వైప్ చేయండి", legal:"లీగల్ డిస్క్లైమర్", legal_text_1:"అన్ని కథనాలు ప్రచురణకర్తలవి।", legal_text_2:"DMCA అభ్యర్థన:", back_top:"పైకి వెళ్లండి ↑", time_under1h:"1 గంట లోపు", time_xhago:(h)=>`${h} గంటల క్రితం`, cats:{ top:"🌐 అగ్ర", gaming:"🎮 గేమింగ్", technology:"💻 టెక్నాలజీ", finance:"📈 ఫైనాన్స్", sports:"⚽ క్రీడలు", entertainment:"🎬 వినోదం", health:"⚕️ ఆరోగ్యం", science:"🔬 సైన్స్" } },
+    "ta": { flag:"🇮🇳 TA", dir:"ltr", read:"மேலும் படிக்க <span>↗</span>", source:"ஆதாரம்: ", no_news:"செய்திகள் இல்லை", swipe:"மேலே ஸ்வைப் செய்யவும்", legal:"சட்ட அறிவிப்பு", legal_text_1:"அனைத்து கட்டுரைகளும் வெளியீட்டாளர்களுக்கு சொந்தமானது।", legal_text_2:"DMCA கோரிக்கை:", back_top:"மேலே செல்லவும் ↑", time_under1h:"1 மணிநேரம் முன்", time_xhago:(h)=>`${h} மணிநேரம் முன்`, cats:{ top:"🌐 முக்கிய", gaming:"🎮 கேமிங்", technology:"💻 தொழில்நுட்பம்", finance:"📈 நிதி", sports:"⚽ விளையாட்டு", entertainment:"🎬 பொழுதுபோக்கு", health:"⚕️ ஆரோக்கியம்", science:"🔬 அறிவியல்" } },
+    "gu": { flag:"🇮🇳 GU", dir:"ltr", read:"વધુ વાંચો <span>↗</span>", source:"સ્ત્રોત: ", no_news:"સમાચાર ઉપલબ્ધ નથી", swipe:"ઉપર સ્વાઇપ કરો", legal:"કાનૂની અસ્વીકરણ", legal_text_1:"બધા લેખો પ્રકાશકોના છે।", legal_text_2:"DMCA વિનંતી:", back_top:"ટોચ પર પાછા જાઓ ↑", time_under1h:"1 કલાક પહેલા", time_xhago:(h)=>`${h} કલાક પહેલા`, cats:{ top:"🌐 મુખ્ય", gaming:"🎮 ગેમિંગ", technology:"💻 ટેકનોલોજી", finance:"📈 નાણાકીય", sports:"⚽ રમતગમત", entertainment:"🎬 મનોરંજન", health:"⚕️ આરોગ્ય", science:"🔬 વિજ્ઞાન" } },
+    "kn": { flag:"🇮🇳 KN", dir:"ltr", read:"ಇನ್ನಷ್ಟು <span>↗</span>", source:"ಮೂಲ: ", no_news:"ವಾರ್ತೆಗಳಿಲ್ಲ", swipe:"ಮೇಲಕ್ಕೆ ಸ್ವೈಪ್ ಮಾಡಿ", legal:"ಕಾನೂನು ಹಕ್ಕುತ್ಯಾಗ", legal_text_1:"ಎಲ್ಲಾ ಲೇಖನಗಳು ಪ್ರಕಾಶಕರವು।", legal_text_2:"DMCA ವಿನಂತಿ:", back_top:"ಮೇಲಕ್ಕೆ ಹೋಗಿ ↑", time_under1h:"1 ಗಂಟೆಯ ಹಿಂದೆ", time_xhago:(h)=>`${h} ಗಂಟೆಗಳ ಹಿಂದೆ`, cats:{ top:"🌐 ಪ್ರಮುಖ", gaming:"🎮 ಗೇಮಿಂಗ್", technology:"💻 ತಂತ್ರಜ್ಞಾನ", finance:"📈 ಹಣಕಾಸು", sports:"⚽ ಕ್ರೀಡೆ", entertainment:"🎬 ಮನರಂಜನೆ", health:"⚕️ ಆರೋಗ್ಯ", science:"🔬 ವಿಜ್ಞಾನ" } },
+    "ml": { flag:"🇮🇳 ML", dir:"ltr", read:"കൂടുതൽ വായിക്കുക <span>↗</span>", source:"ഉറവിടം: ", no_news:"വാർത്തകളില്ല", swipe:"മുകളിലേക്ക് സ്വൈപ്പ് ചെയ്യുക", legal:"ലീഗൽ ഡിസ്ക്ലൈമർ", legal_text_1:"എല്ലാ ലേഖനങ്ങളും പ്രസാധകരുടേതാണ്।", legal_text_2:"DMCA അഭ്യർത്ഥന:", back_top:"മുകളിലേക്ക് പോകുക ↑", time_under1h:"1 മണിക്കൂർ മുമ്പ്", time_xhago:(h)=>`${h} മണിക്കൂർ മുമ്പ്`, cats:{ top:"🌐 പ്രധാനപ്പെട്ട", gaming:"🎮 ഗെയിമിംഗ്", technology:"💻 സാങ്കേതികവിദ്യ", finance:"📈 ധനകാര്യം", sports:"⚽ സ്പോർട്സ്", entertainment:"🎬 വിനോദം", health:"⚕️ ആരോഗ്യം", science:"🔬 ശാസ്ത്രം" } },
+    "pa": { flag:"🇮🇳 PA", dir:"ltr", read:"ਹੋਰ ਪੜ੍ਹੋ <span>↗</span>", source:"ਸਰੋਤ: ", no_news:"ਕੋਈ ਖ਼ਬਰ ਨਹੀਂ", swipe:"ਉੱਪਰ ਸਵਾਈਪ ਕਰੋ", legal:"ਕਾਨੂੰਨੀ ਡਿਸਕਲੇਮਰ", legal_text_1:"ਸਾਰੇ ਲੇਖ ਪ੍ਰਕਾਸ਼ਕਾਂ ਦੇ ਹਨ।", legal_text_2:"DMCA ਬੇਨਤੀ:", back_top:"ਉੱਪਰ ਜਾਓ ↑", time_under1h:"1 ਘੰਟੇ ਤੋਂ ਘੱਟ", time_xhago:(h)=>`${h} ਘੰਟੇ ਪਹਿਲਾਂ`, cats:{ top:"🌐 ਖਾਸ", gaming:"🎮 ਗੇਮਿੰਗ", technology:"💻 ਤਕਨoji", finance:"📈 ਵਿੱਤ", sports:"⚽ ਖੇਡਾਂ", entertainment:"🎬 ਮਨੋਰੰਜਨ", health:"⚕️ ਸਿਹਤ", science:"🔬 ਵਿਗਿਆਨ" } }
 };
+
+// ─── SEO Metadata (23 Languages) ──────────────────────────
+const SEO_DATA = {
+    "en": { t: "Daily Digest Reels — Swipe Global News | Playmix", d: "Swipe through today's top global news, gaming, technology, and more in an immersive TikTok-style experience." },
+    "ja": { t: "デイリーダイジェスト・リール — 世界のニュースをスワイプ | Playmix", d: "ゲーム、テクノロジー、金融など、今日のトップニュースをスワイプしてチェック。" },
+    "de": { t: "Daily Digest Reels — Globale Nachrichten Swipen | Playmix", d: "Wischen Sie sich durch die wichtigsten globalen Nachrichten des Tages aus den Bereichen Gaming, Technologie und Finanzen." },
+    "fr": { t: "Daily Digest Reels — L'actu mondiale en un geste | Playmix", d: "Faites défiler les actualités mondiales du jour sur les jeux, la technologie et l'économie." },
+    "es": { t: "Daily Digest Reels — Noticias globales deslizando | Playmix", d: "Desliza para leer las mejores noticias globales de hoy sobre juegos, tecnología y finanzas." },
+    "pt": { t: "Daily Digest Reels — Notícias globais deslizando | Playmix", d: "Deslize pelas principais notícias globais de hoje sobre games, tecnologia e economia." },
+    "zh": { t: "每日新闻简报 — 全球动态纵览 | Playmix", d: "滑动查看今日全球游戏、科技和财经领域的头条新闻。" },
+    "ko": { t: "데일리 뉴스 릴 — 글로벌 이슈 스와이프 | Playmix", d: "오늘의 주요 글로벌 뉴스, 게임, 기술 소식을 스와이프하여 확인하세요." },
+    "ar": { t: "ديلي دايجست ريلز — أخبار العالم بلمسة واحدة | بلايميكس", d: "تصفح أهم أخبار العالم اليوم في مجالات الألعاب والتقنية والاقتصاد بأسلوب ممتع." },
+    "hi": { t: "डेली न्यूज़ रील्स — ताज़ा खबरें स्वाइप करें | Playmix", d: "गेमिंग, टेक और दुनिया की ताज़ा खबरों को रील स्टाइल में स्वाइप करें।" },
+    "ru": { t: "Daily Digest Reels — Мировые новости свайпом | Playmix", d: "Смахните, чтобы прочитать главные мировые новости дня об играх, технологиях и экономике." },
+    "it": { t: "Daily Digest Reels — Notizie globali con uno swipe | Playmix", d: "Scopri le principali notizie globali di oggi su videogiochi, tecnologia ed economia." },
+    "nl": { t: "Daily Digest Reels — Wereldnieuws swipen | Playmix", d: "Veeg door het belangrijkste wereldnieuws van vandaag over games, technologie en economie." },
+    "tr": { t: "Daily Digest Reels — Dünyadan Haberler Kaydırarak | Playmix", d: "Günün en önemli oyun, teknoloji ve ekonomi haberlerini kaydırarak keşfedin." },
+    "id": { t: "Daily Digest Reels — Berita Global Sekali Geser | Playmix", d: "Geser untuk melihat berita global utama hari ini tentang game, teknologi, dan ekonomi." },
+    "bn": { t: "ডেইলি নিউজ রিল — আজকের বিশ্ববিখ্যাত খবরের হেডলাইন | Playmix", d: "গেমিং, প্রযুক্তি এবং বিশ্বের ব্রেकिंग নিউজ সরাসরি রিল স্টাইলে দেখুন।" },
+    "mr": { t: "डेली न्यूज रील्स — ताज्या जगातील बातम्या | Playmix", d: "गेमिंग, तंत्रज्ञान आणि जगातील ताज्या बातम्या रील्स स्वरूपात स्वइप करून पाहा।" },
+    "te": { t: "డైలీ న్యూస్ రీల్స్ — నేటి ముఖ్య వార్తలు | Playmix", d: "గేమింగ్, టెక్నాలジー మరియు తాజా వార్తలను స్వైప్ ద్వారా త్వరగా చదవండి." },
+    "ta": { t: "டெய்லி நியூஸ் ரீல்ஸ் — இன்றைய உலகச் செய்திகள் | Playmix", d: "கேமிங், தொழில்நுட்பம் மற்றும் உலகப் செய்திகளை ஸ்வைப் மூலம் உடனுக்குடன் தெரிந்து கொள்ளுங்கள்." },
+    "gu": { t: "ડેલી ન્યૂઝ રીલ્સ — આજના મુખ્ય સમાચાર | Playmix", d: "ગેમિંગ, ટેકનોલોજી અને દુનિયાના તાજા સમાચાર રીલ્સ સ્ટાઈલમાં જુઓ." },
+    "kn": { t: "ಡೈಲಿ ನ್ಯೂಸ್ ರೀಲ್ಸ್ — ಇಂದಿನ ಪ್ರಮುಖ ಸುದ್ದಿ | Playmix", d: "ಗೇಮಿಂಗ್, ತಂತ್ರಜ್ಞಾನ ಮತ್ತು ವಿಶ್ವದ ಪ್ರಮುಖ ಸುದ್ದಿಗಳನ್ನು ಅತ್ಯಂತ ಸುಲಭವಾಗಿ ಓದಿ." },
+    "ml": { t: "ഡെയ്‌ലി ന്യൂസ് റീൽസ് — ഇന്നത്തെ പ്രസക്ത വാർത്തകൾ | Playmix", d: "ഗെയിമിംഗ്, ടെക്നോളജി തുടങ്ങി ഇന്നത്തെ പ്രധാന വാർത്തകൾ വിരൽത്തുമ്പിൽ." },
+    "pa": { t: "ਡੇਲੀ ਨਿਊਜ਼ ਰੀਲਜ਼ — ਵਿਸ਼ਵ ਦੀਆਂ ਤਾਜ਼ਾ ਖ਼ਬਰਾਂ | Playmix", d: "ਗੇਮਿੰਗ, ਟੈਕ ਅਤੇ ਵਿਸ਼ਵ ਦੀਆਂ ਖ਼ਬਰਾਂ ਨੂੰ ਸਵਾਈਪ ਰਾਹੀਂ ਆਸਾਨੀ ਨਾਲ ਦੇਖੋ।" }
+};
+
+function updateSEO() {
+    const seo = SEO_DATA[currentLang] || SEO_DATA['en'];
+    document.title = seo.t;
+    // Update Meta Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', seo.d);
+    // Update Open Graph tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', seo.t);
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute('content', seo.d);
+}
 
 // ─── Country → Language Map ───────────────────────────────
 const COUNTRY_LANG = {
@@ -55,7 +103,11 @@ async function detectLangAsync() {
     const urlLang = new URLSearchParams(window.location.search).get('lang');
     if (urlLang && I18N[urlLang]) return urlLang;
 
-    // 2. User-saved preference
+    // 2. Browser language (checks for regional codes like bn, mr, te, etc.)
+    const browserCode = (navigator.language || 'en').substring(0, 2).toLowerCase();
+    if (I18N[browserCode]) return browserCode;
+
+    // 3. User-saved preference
     const stored = localStorage.getItem('playmix_news_lang');
     if (stored && I18N[stored]) return stored;
 
@@ -170,11 +222,39 @@ async function processTranslationQueue() {
     _isTranslating = false;
 }
 
+async function detectLangAsync() {
+    // 1. Explicit URL override
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    if (urlLang && I18N[urlLang]) return urlLang;
+
+    // 2. Browser language (checks for regional codes)
+    const browserCode = (navigator.language || 'en').substring(0, 2).toLowerCase();
+    if (I18N[browserCode]) return browserCode;
+
+    // 3. User-saved preference
+    const stored = localStorage.getItem('playmix_news_lang');
+    if (stored && I18N[stored]) return stored;
+
+    // 4. IP-based fallback
+    try {
+        const res = await fetch('https://ipapi.co/json/');
+        const data = await res.json();
+        console.log("📍 Detected country:", data.country_name);
+        const code = COUNTRY_LANG[data.country_code];
+        if (code && I18N[code]) return code;
+    } catch(e) {}
+
+    return getBrowserLang();
+}
+
 // ─── Apply Language to UI ─────────────────────────────────
 function applyLang() {
     const L = I18N[currentLang];
     document.documentElement.dir  = L.dir;
     document.documentElement.lang = currentLang;
+    
+    updateSEO(); // Update Title & Meta Tags
+
     catBtns.forEach(btn => {
         const t = btn.getAttribute('data-type');
         if (L.cats[t]) btn.innerText = L.cats[t];
