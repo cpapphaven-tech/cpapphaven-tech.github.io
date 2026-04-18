@@ -21,7 +21,6 @@
     }
 
     const games = [
-        { name: "📱 Knowledge Reels", path: "KnowledgeReels/index.html", icon: "assets/fallback.png", tip: "Learn" },
         { name: "🔵 8 Ball Pool Online", path: "Pool/index.html", icon: "assets/pool200.png", tip: "Sports" },
         { name: "🧱 Stack 3D Tower", path: "Stack3D/index.html", icon: "img/stack200.png", tip: "Physics" },
         { name: "🐍 Classic Neon Snake", path: "NeonSnake/index.html", icon: "assets/snake200.png", tip: "Arcade" },
@@ -53,10 +52,6 @@
         { name: "🍣 Sushi Memory Match", path: "SushiMatch/index.html", icon: "assets/sushimatch3d.png", tip: "Memory" },
         { name: "🍔 Burger Stack Cooking", path: "BurgerStack/index.html", icon: "assets/burgerstack.png", tip: "Physics" },
         { name: "🔡 Word Search Puzzle", path: "WordSearch/index.html", icon: "img/wordsrarch200.png", tip: "Word" },
-        { name: "⌨️ WPM Typing Test", path: "TypingSpeedTest/index.html", icon: "assets/typingtest.png", tip: "Word" },
-        { name: "🔢 Math Learning Quiz", path: "DailyMathEquator/index.html", icon: "assets/mathequator.png", tip: "Logic" },
-        { name: "🏥 Health Hero Trivia", path: "HealthHeroTrivia/index.html", icon: "assets/fallback.png", tip: "Learn" },
-        { name: "📚 English Grammar Quiz", path: "EnglishGrammarQuiz/index.html", icon: "assets/grammarquiz.png", tip: "Learn" },
     ];
 
     function createSidebar() {
