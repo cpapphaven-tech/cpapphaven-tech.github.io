@@ -80,22 +80,13 @@ function renderNews() {
     let html = '';
 
     articles.forEach((article, index) => {
-        // Native Ad Slot every 5 swipes
-        if (index > 0 && index % 5 === 0) {
-            html += `
-                <div class="snap-card ad-snap-card">
-                    <div class="ad-badge">Sponsored</div>
-                    <div style="color: #666; font-size: 0.9rem; padding: 20px;">
-                        <!-- Paste Adsterra Native Code Here -->
-                        [ Native Ad Slot ]
-                    </div>
-                </div>
-            `;
-        }
-
         // Determine Image or Unsplash Fallback
         const finalImgUrl = getCoverImage(currentCategory, article.title, article.image);
-        let mediaHtml = `<img class="snap-bg-img" src="${finalImgUrl}" loading="lazy" alt="Cover">`;
+        
+        let mediaHtml = `
+            <img class="snap-bg-blur" src="${finalImgUrl}" alt="">
+            <img class="snap-bg-img" src="${finalImgUrl}" alt="Cover">
+        `;
 
         // Determine Description (if exists and is long enough)
         let descHtml = '';
@@ -156,5 +147,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         if(loader) loader.style.display = 'none';
         document.body.classList.remove('pmg-sidebar-start-closed');
+        
+        // Trigger Playmix Global Ad Injections (Desktop Sidebar + Mobile Bottom)
+        if (typeof window.prepSystem === 'function') {
+            window.prepSystem();
+        }
     }, 400); 
 });
