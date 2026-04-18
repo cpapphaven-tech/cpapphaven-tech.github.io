@@ -167,9 +167,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('pmg-sidebar-start-closed');
         
         // Trigger Playmix Global Ad Injections (Desktop Sidebar + Mobile Bottom)
-        if (typeof window.prepSystem === 'function') {
-            window.prepSystem();
-        }
+        // if (typeof window.prepSystem === 'function') {
+        //     window.prepSystem();
+        // }
     }, 400); 
 
     // Dismiss swipe hint on scroll
