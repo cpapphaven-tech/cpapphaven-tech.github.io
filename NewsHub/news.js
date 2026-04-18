@@ -90,11 +90,16 @@ function setCache(text, lang, translated) {
     catch(e) {}
 }
 
-// ─── Translation via fetch() ─────────────────────────────
-// JSONP was blocked by the site's script-src CSP.
-// fetch() uses connect-src which is unrestricted on playmixgames.in
+// ─── Translation via Google Translate (unofficial, no key) ──
+// Same API used by Google Translate browser extension.
+// No API key required, CORS-enabled, globally reliable.
+// Format: translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl={lang}&dt=t&q={text}
 async function translateText(text, targetLang) {
     if (!text || targetLang === 'en') return null;
+
+    // Google lang codes differ slightly for some locales
+    const GOOGLE_LANG = { 'zh': 'zh-CN', 'pt': 'pt', 'hi': 'hi' };
+    const tl = GOOGLE_LANG[targetLang] || targetLang;
 
     // Skip if already non-English (non-ASCII dominant)
     const nonAscii = [...text].filter(c => c.charCodeAt(0) > 127).length;
@@ -105,13 +110,13 @@ async function translateText(text, targetLang) {
 
     try {
         const q   = encodeURIComponent(text.substring(0, 400));
-        const url = `https://api.mymemory.translated.world/get?q=${q}&langpair=en|${targetLang}&de=cpapphaven@gmail.com`;
+        const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${tl}&dt=t&q=${q}`;
         const res = await fetch(url, { signal: AbortSignal.timeout(6000) });
         if (!res.ok) return null;
         const data = await res.json();
-        const t = data?.responseData?.translatedText || '';
-        // API returns responseStatus as string "200" — use == not ===
-        if (t && data?.responseStatus == 200 && !t.includes('QUERY LENGTH LIMIT') && !t.includes('MYMEMORY')) {
+        // Google returns array of arrays: data[0] = [[segment, original, ...], ...]
+        const t = data[0]?.map(seg => seg?.[0] || '').join('').trim();
+        if (t && t.length > 0) {
             setCache(text, targetLang, t);
             return t;
         }
