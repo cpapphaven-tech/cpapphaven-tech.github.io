@@ -55,18 +55,30 @@ async function requestPermission() {
     }
 }
 
-// Handle foreground messages
+// Handle foreground messages — show a non-blocking toast instead of alert()
 onMessage(messaging, (payload) => {
     console.log('Message received. ', payload);
-    // You can customize UI here, e.g., a toast notification
-    alert(`📢 ${payload.notification.title}: ${payload.notification.body}`);
+    const toast = document.createElement('div');
+    toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:12px 20px;border-radius:12px;font-size:0.9rem;z-index:99999;box-shadow:0 4px 20px rgba(0,0,0,0.4);';
+    toast.textContent = `📢 ${payload?.notification?.title || ''}: ${payload?.notification?.body || ''}`;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 5000);
 });
 
-// Auto-request (Change to button click in production)
-// Using a small timeout to not block initial render
-setTimeout(() => {
+// Request notification permission ONLY on first meaningful user interaction
+// (browsers require a user gesture — auto-requesting is blocked since Chrome 80)
+let _notifRequested = false;
+function requestPermissionOnInteraction() {
+    if (_notifRequested || Notification.permission !== 'default') return;
+    _notifRequested = true;
     requestPermission();
-}, 2000);
+    document.removeEventListener('click', requestPermissionOnInteraction);
+    document.removeEventListener('scroll', requestPermissionOnInteraction);
+    document.removeEventListener('keydown', requestPermissionOnInteraction);
+}
+document.addEventListener('click',   requestPermissionOnInteraction, { once: true, passive: true });
+document.addEventListener('scroll',  requestPermissionOnInteraction, { once: true, passive: true });
+document.addEventListener('keydown', requestPermissionOnInteraction, { once: true, passive: true });
 
 // --- End FCM ---
 
