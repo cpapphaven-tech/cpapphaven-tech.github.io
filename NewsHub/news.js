@@ -90,55 +90,37 @@ function setCache(text, lang, translated) {
     catch(e) {}
 }
 
-// ─── Translation via JSONP (works on file:// AND https://) ──
-// MyMemory JSONP callback trick — no fetch(), no CORS issues.
-const _translationCallbacks = {};
-let _cbCounter = 0;
+// ─── Translation via fetch() ─────────────────────────────
+// JSONP was blocked by the site's script-src CSP.
+// fetch() uses connect-src which is unrestricted on playmixgames.in
+async function translateText(text, targetLang) {
+    if (!text || targetLang === 'en') return null;
 
-function translateJSONP(text, targetLang) {
-    return new Promise((resolve) => {
-        if (!text || targetLang === 'en') { resolve(null); return; }
+    // Skip if already non-English (non-ASCII dominant)
+    const nonAscii = [...text].filter(c => c.charCodeAt(0) > 127).length;
+    if (nonAscii / text.length > 0.35) return null;
 
-        // Skip if content already looks non-English (non-ASCII dominant)
-        const nonAscii = [...text].filter(c => c.charCodeAt(0) > 127).length;
-        if (nonAscii / text.length > 0.25) { resolve(null); return; }
+    const cached = getCached(text, targetLang);
+    if (cached) return cached;
 
-        const cached = getCached(text, targetLang);
-        if (cached) { resolve(cached); return; }
-
-        const cbName = `_pmgTr${_cbCounter++}`;
-        const timeout = setTimeout(() => {
-            delete window[cbName];
-            resolve(null);  // silent fail after 6s
-        }, 6000);
-
-        window[cbName] = (data) => {
-            clearTimeout(timeout);
-            delete window[cbName];
-            const script = document.getElementById(cbName);
-            if (script) script.remove();
-            const t = data?.responseData?.translatedText || '';
-            // API returns responseStatus as string "200" — use == not ===
-            if (t && data?.responseStatus == 200 && !t.includes('QUERY LENGTH LIMIT') && !t.includes('MYMEMORY')) {
-                setCache(text, targetLang, t);
-                resolve(t);
-            } else {
-                resolve(null);
-            }
-        };
-
+    try {
         const q   = encodeURIComponent(text.substring(0, 400));
-        const url = `https://api.mymemory.translated.world/get?q=${q}&langpair=en|${targetLang}&de=cpapphaven@gmail.com&callback=${cbName}`;
-        const s   = document.createElement('script');
-        s.id  = cbName;
-        s.src = url;
-        s.onerror = () => { clearTimeout(timeout); resolve(null); };
-        document.head.appendChild(s);
-    });
+        const url = `https://api.mymemory.translated.world/get?q=${q}&langpair=en|${targetLang}&de=cpapphaven@gmail.com`;
+        const res = await fetch(url, { signal: AbortSignal.timeout(6000) });
+        if (!res.ok) return null;
+        const data = await res.json();
+        const t = data?.responseData?.translatedText || '';
+        // API returns responseStatus as string "200" — use == not ===
+        if (t && data?.responseStatus == 200 && !t.includes('QUERY LENGTH LIMIT') && !t.includes('MYMEMORY')) {
+            setCache(text, targetLang, t);
+            return t;
+        }
+    } catch (e) { /* silent fail — show English only */ }
+    return null;
 }
 
-// Alias so queue code uses the JSONP version
-const translate = translateJSONP;
+// Alias for queue code
+const translate = translateText;
 
 // ─── Translation Queue ────────────────────────────────────
 // Translates cards one-by-one with small delays to avoid rate limiting
