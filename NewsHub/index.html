@@ -198,6 +198,23 @@
         <div class="swipe-arrow">↑</div>
     </div>
 
+    <!-- Language Selection Modal (Manual Choice) -->
+    <div id="lang-modal" class="lang-modal hidden">
+        <div class="lang-modal-overlay"></div>
+        <div class="lang-modal-content">
+            <div class="lang-modal-header">
+                <h3>Select Language</h3>
+                <button id="btn-close-lang" class="close-btn">✕</button>
+            </div>
+            <div id="lang-list" class="lang-grid">
+                <!-- Populated by news.js -->
+            </div>
+            <div class="lang-modal-footer">
+                <p>Your preference is saved automatically.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Infinite Swipe Reel Container -->
     <div id="news-feed" class="reel-container">
         <!-- Snap cards injected by news.js -->

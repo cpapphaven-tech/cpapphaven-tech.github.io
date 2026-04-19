@@ -295,16 +295,57 @@ function applyLang() {
     const swipeTxt = document.querySelector('.swipe-hint span');
     if (swipeTxt) swipeTxt.innerText = L.swipe;
     if (langToggleBtn) {
-        const other = (currentLang === 'en') ? nativeLang : 'en';
-        langToggleBtn.innerText = (I18N[other] || I18N['en']).flag;
-        langToggleBtn.style.display = nativeLang === 'en' ? 'none' : 'flex';
+        langToggleBtn.innerText = L.flag;
+        langToggleBtn.style.display = 'flex';
     }
 }
 
-function toggleLanguage() {
-    currentLang = (currentLang === 'en') ? nativeLang : 'en';
-    localStorage.setItem('playmix_news_lang', currentLang);
+const LANG_NAMES = {
+    "en": "English", "ja": "日本語", "de": "Deutsch", "fr": "Français", "es": "Español",
+    "pt": "Português", "zh": "中文", "ko": "한국어", "ar": "العربية", "hi": "हिन्दी",
+    "ru": "Русский", "it": "Italiano", "nl": "Nederlands", "tr": "Türkçe", "id": "Indonesia",
+    "bn": "বাংলা", "mr": "मराठी", "te": "తెలుగు", "ta": "தமிழ்", "gu": "ગુજરાતી",
+    "kn": "ಕನ್ನಡ", "ml": "മലയാളം", "pa": "ਪੰਜਾਬੀ"
+};
+
+function showLangModal() {
+    const modal = document.getElementById('lang-modal');
+    const list  = document.getElementById('lang-list');
+    if (!modal || !list) return;
+
+    // Populate list if empty
+    if (list.children.length === 0) {
+        Object.keys(I18N).forEach(code => {
+            const item = document.createElement('div');
+            item.className = `lang-item ${currentLang === code ? 'active' : ''}`;
+            item.innerHTML = `<span>${I18N[code].flag}</span> ${LANG_NAMES[code] || code.toUpperCase()}`;
+            item.onclick = () => selectLanguage(code);
+            list.appendChild(item);
+        });
+    } else {
+        // Refresh active state
+        Array.from(list.children).forEach((child, idx) => {
+            const code = Object.keys(I18N)[idx];
+            child.classList.toggle('active', currentLang === code);
+        });
+    }
+
+    modal.classList.remove('hidden');
+}
+
+function hideLangModal() {
+    const modal = document.getElementById('lang-modal');
+    if (modal) modal.classList.add('hidden');
+}
+
+function selectLanguage(code) {
+    if (!I18N[code]) return;
+    currentLang = code;
+    localStorage.setItem('playmix_news_lang', code);
+    
+    hideLangModal();
     applyLang();
+    
     feed.style.opacity = '0.5';
     setTimeout(() => {
         _translationQueue = [];
@@ -440,7 +481,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     nativeLang  = getBrowserLang();
 
     catBtns.forEach(btn => btn.addEventListener('click', handleCategoryChange));
-    if (langToggleBtn) langToggleBtn.addEventListener('click', toggleLanguage);
+    if (langToggleBtn) langToggleBtn.addEventListener('click', showLangModal);
+
+    const closeBtn = document.getElementById('btn-close-lang');
+    if (closeBtn) closeBtn.addEventListener('click', hideLangModal);
+    const overlay = document.querySelector('.lang-modal-overlay');
+    if (overlay) overlay.addEventListener('click', hideLangModal);
 
     applyLang();
     renderNews();
