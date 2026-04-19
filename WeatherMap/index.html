@@ -249,7 +249,7 @@
     </div>
 
     <!-- Adsterra Containers -->
-    <div class="pmg-side-ad" id="side-ad"></div>
+    <div class="pmg-side-ad" id="adsterra-banner"></div>
     <div class="pmg-bottom-ad" id="bottom-ad"></div>
 </div>
 
@@ -562,13 +562,13 @@ function loadAds() {
 }
 
 function acceptCookies() {
-    localStorage.setItem('pm_cookies_weather_consent', 'accepted');
+    localStorage.setItem('pm_gdpr_consent', 'accepted');
     document.getElementById('cookie-notice').classList.remove('active');
     loadAds();
 }
 
 function rejectCookies() {
-    localStorage.setItem('pm_cookies_weather_consent', 'rejected');
+    localStorage.setItem('pm_gdpr_consent', 'rejected');
     document.getElementById('cookie-notice').classList.remove('active');
 }
 
@@ -576,7 +576,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initMap();
     if (typeof prepSystem === 'function') prepSystem();
     
-    const consent = localStorage.getItem('pm_cookies_weather_consent');
+    const consent = localStorage.getItem('pm_gdpr_consent');
     if (!consent) {
         document.getElementById('cookie-notice').classList.add('active');
     } else if (consent === 'accepted') {
