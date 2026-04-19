@@ -292,6 +292,9 @@ function handleHorizontalSwipe(duration) {
 function loadAds() {
     const s = document.createElement('script');
     s.src = '../ads.js';
+    s.onload = () => {
+        if (typeof window.prepSystem === 'function') window.prepSystem();
+    };
     document.body.appendChild(s);
 }
 
@@ -311,6 +314,9 @@ window.addEventListener('DOMContentLoaded', async () => {
     currentLang = await detectLangAsync();
     applyLang();
     renderNews();
+    
+    // Hide loader
+    if (loader) loader.style.display = 'none';
     
     const activeBtn = document.querySelector('.cat-btn.active');
     if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });

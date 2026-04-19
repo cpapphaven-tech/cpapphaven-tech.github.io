@@ -558,6 +558,9 @@ function showPanel(title, subtitle, weather) {
 function loadAds() {
     const s = document.createElement('script');
     s.src = '../ads.js';
+    s.onload = () => {
+        if (typeof window.prepSystem === 'function') window.prepSystem();
+    };
     document.body.appendChild(s);
 }
 
