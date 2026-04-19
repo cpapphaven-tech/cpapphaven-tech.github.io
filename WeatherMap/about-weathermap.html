@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Playmix Weather Map — Global Temperature & Weather Discovery</title>
-    <meta name="description" content="Learn how Playmix Weather Map works. Explore live global temperatures, regional weather patterns, and city-level forecasts with our interactive drill-down map.">
+    <meta name="description" content="Learn how Playmix Weather Map works. Explore climatic trends, regional weather patterns, and city-level forecasts with our interactive drill-down map.">
     <link rel="canonical" href="https://cpapphaven.tech/WeatherMap/about-weathermap.html">
     
     <!-- Fonts -->
@@ -19,6 +19,7 @@
             --accent: #3b82f6;
             --text: #ffffff;
             --text-dim: rgba(255,255,255,0.7);
+            --border: rgba(255,255,255,0.08);
         }
         body {
             margin: 0; padding: 0;
@@ -85,6 +86,45 @@
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
         }
+
+        /* Adsterra */
+        .pmg-side-ad {
+            position: fixed; top: 50%; right: 0; transform: translateY(-50%);
+            z-index: 9000; width: 160px; min-height: 600px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .pmg-bottom-ad {
+            position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+            z-index: 9001; width: 320px; height: 50px;
+        }
+        @media (max-width: 1100px) {
+            .pmg-side-ad { display: none; }
+        }
+        body { padding-bottom: 60px; } /* Space for bottom ad */
+        @media (min-width: 1100px) {
+            body { padding-right: 170px; }
+        }
+
+        /* Cookie Consent */
+        #cookie-notice {
+            position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 400px; z-index: 10000;
+            background: rgba(17,24,39,0.95); backdrop-filter: blur(12px);
+            border: 1px solid var(--accent); border-radius: 12px;
+            padding: 16px; display: none; flex-direction: column; gap: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        #cookie-notice.active { display: flex; }
+        #cookie-notice p { font-size: 0.75rem; color: var(--text); margin-bottom: 12px; line-height: 1.4; text-align: center; }
+        .cookie-btns { display: flex; gap: 10px; width: 100%; }
+        .cookie-btn {
+            flex: 1; border: none; padding: 10px; border-radius: 6px; 
+            font-weight: 800; font-size: 0.75rem; cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        #cookie-accept { background: var(--accent); color: white; }
+        #cookie-reject { background: rgba(255,255,255,0.1); color: var(--text); border: 1px solid var(--border); }
+        .cookie-btn:hover { opacity: 0.9; }
     </style>
 </head>
 <body>
@@ -94,25 +134,25 @@
     
     <header>
         <h1>About Playmix Weather Map</h1>
-        <p>Interactive Global Temperature Discovery & Weather Insights</p>
+        <p>Global Temperature Discovery & Weather Insights</p>
     </header>
 
     <section id="introduction">
         <h2>What is Playmix Weather Map?</h2>
         <p>
-            <strong>Playmix Weather Map</strong> is a high-performance, interactive visualization tool designed to help you explore the world's climate in real-time. We move beyond static numbers to provide an <strong>immersive drill-down experience</strong>, allowing you to see the big picture at a country level and zoom into state and city-level meteorological data.
+            <strong>Playmix Weather Map</strong> is a high-performance, interactive visualization tool designed to help you explore global climatic trends. We provide an <strong>immersive drill-down experience</strong>, allowing you to see the big picture at a country level and zoom into state and city-level meteorological datasets.
         </p>
         <p>
-            Our map is built for clarity and speed, providing essential data like <strong>temperature, wind speed, and precipitation conditions</strong> (rain and snow) for major urban centers globally.
+            Our map is built for clarity and speed, providing essential daily snapshots for <strong>temperature, wind speed, and precipitation conditions</strong> (rain and snow) for major urban centers globally.
         </p>
     </section>
 
     <section id="how-it-works">
-        <h2>Technical Architecture</h2>
+        <h2>Data & Methodology</h2>
         <div class="grid">
             <div class="card">
-                <h4>1. Real-time Synchronization</h4>
-                <p>We leverage the <strong>Open-Meteo API</strong> to fetch live meteorological data with high spatial resolution.</p>
+                <h4>1. Open Source Data</h4>
+                <p>We balance performance and depth by leveraging the <strong>Open-Meteo API</strong>, which provides high-resolution meteorological models.</p>
             </div>
             <div class="card">
                 <h4>2. Intelligent Caching</h4>
@@ -128,10 +168,7 @@
     <section id="transparency">
         <h2>Data Transparency & Accuracy</h2>
         <p>
-            Large countries often contain multiple climatic zones simultaneously (e.g., the difference between North and South India). 
-        </p>
-        <p>
-            To represent this fairly at a glance, our country-level temperature markers display a <strong>Major Cities Average</strong>. This avoids the "single-number trap" and provides a more representative view of the region's overall conditions before you drill down for specific local data.
+            Large countries often contain multiple climatic zones simultaneously (e.g., the difference between North and South India). To represent this fairly, our country-level temperature markers display a <strong>Major Cities Average</strong>. This provides a more representative view of the region's overall conditions before you drill down for local data.
         </p>
     </section>
 
@@ -140,29 +177,80 @@
         
         <div class="faq-item">
             <span class="faq-q">How often is the data updated?</span>
-            <p>Our global dataset refreshes every 24 hours via an automated fetch script. However, the map also includes a live fallback mechanism that can fetch real-time data directly from our meteorological partners if needed.</p>
+            <p>Our global dataset refreshes every 24 hours via automated workflows. The map also includes a live-sync fallback that can fetch updated data directly from our partners if a recent snapshot is unavailable.</p>
         </div>
 
         <div class="faq-item">
             <span class="faq-q">Which locations are supported?</span>
-            <p>We currently track the 30 most populous and economically significant countries, with deep-drill support for hundreds of states and major municipalities worldwide. We are constantly expanding our location registry.</p>
+            <p>We track dozens of populous countries, with deep-drill support for hundreds of states and major municipalities worldwide. We are constantly expanding our location registry.</p>
         </div>
 
         <div class="faq-item">
-            <span class="faq-q">Why do I see a back button?</span>
-            <p>The back button allows you to navigate back through the drill-down hierarchy (City to State, State to Country) so you don't lose your place while exploring regional weather patterns.</p>
+            <span class="faq-q">Is the data 100% accurate?</span>
+            <p>While we use professional-grade modeling from Open-Meteo, weather data can be delayed or inaccurate. This tool is for informational use and should not be relied upon for critical safety decisions.</p>
         </div>
 
         <div class="faq-item">
             <span class="faq-q">Are the markers color-coded?</span>
-            <p>Yes. We use a intuitive temperature scale: Hot (Red) → Warm (Orange) → Mild (Yellow) → Cool (Green) → Cold (Blue) → Freeze (Purple).</p>
+            <p>Yes. We use an intuitive temperature scale: Hot (Red) → Warm (Orange) → Mild (Yellow) → Cool (Green) → Cold (Blue) → Freeze (Purple).</p>
         </div>
+    </section>
+
+    <section id="legal">
+        <h2>Legal Disclaimer & Attribution</h2>
+        <p><strong>Data Source:</strong> All meteorological data is provided by <a href="https://open-meteo.com/" target="_blank" style="color:var(--accent)">Open-Meteo</a>. Please refer to their terms for deeper insight into their modeling methodology.</p>
+        
+        <p><strong>Accuracy Disclaimer:</strong> This application is for informational and educational purposes only. Weather data can be delayed, cached, or inaccurate due to the nature of predictive modeling and server sync intervals. <strong>Do not use this data for safety-critical decisions</strong>, travel planning during severe weather, or professional navigation. We assume no liability for errors or omissions.</p>
+
+        <p><strong>Privacy:</strong> We use cookies to enhance your experience and deliver relevant advertisements via Adsterra. By using this service, you consent to our use of these technologies.</p>
+
+        <p><strong>Contact:</strong> For feedback, technical issues, or legal inquiries, please reach out to us at <strong>contact@cpapphaven.tech</strong>.</p>
     </section>
 
     <footer>
         <p>&copy; 2026 Playmix Games & CPAppHaven Tech. All rights reserved.</p>
     </footer>
+
+    <!-- Adsterra Containers -->
+    <div class="pmg-side-ad" id="side-ad"></div>
+    <div class="pmg-bottom-ad" id="bottom-ad"></div>
+    
+    <!-- Cookie Notice -->
+    <div id="cookie-notice">
+        <p>We use cookies to enhance your experience and show relevant ads.</p>
+        <div class="cookie-btns">
+            <button id="cookie-reject" class="cookie-btn" onclick="rejectCookies()">Reject All</button>
+            <button id="cookie-accept" class="cookie-btn" onclick="acceptCookies()">Accept All</button>
+        </div>
+    </div>
 </div>
 
+<script>
+function loadAds() {
+    const s = document.createElement('script');
+    s.src = '../ads.js';
+    document.body.appendChild(s);
+}
+
+function acceptCookies() {
+    localStorage.setItem('pm_cookies_weather_consent', 'accepted');
+    document.getElementById('cookie-notice').classList.remove('active');
+    loadAds();
+}
+
+function rejectCookies() {
+    localStorage.setItem('pm_cookies_weather_consent', 'rejected');
+    document.getElementById('cookie-notice').classList.remove('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    const consent = localStorage.getItem('pm_cookies_weather_consent');
+    if (!consent) {
+        document.getElementById('cookie-notice').classList.add('active');
+    } else if (consent === 'accepted') {
+        loadAds();
+    }
+});
+</script>
 </body>
 </html>
