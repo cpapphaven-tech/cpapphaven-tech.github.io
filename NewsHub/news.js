@@ -34,7 +34,7 @@ const I18N = {
 
 // ─── SEO Metadata (23 Languages) ──────────────────────────
 const SEO_DATA = {
-    "en": { t: "Daily Digest Reels — Swipe Global News | Playmix", d: "Swipe through today's top global news, gaming, technology, and more in an immersive TikTok-style experience." },
+    "en": { t: "Daily Digest Reels — Swipe Global News | Playmix", d: "Swipe through today's top global news, gaming, technology, and more in an immersive reel experience." },
     "ja": { t: "デイリーダイジェスト・リール — 世界のニュースをスワイプ | Playmix", d: "ゲーム、テクノロジー、金融など、今日のトップニュースをスワイプしてチェック。" },
     "de": { t: "Daily Digest Reels — Globale Nachrichten Swipen | Playmix", d: "Wischen Sie sich durch die wichtigsten globalen Nachrichten des Tages aus den Bereichen Gaming, Technologie und Finanzen." },
     "fr": { t: "Daily Digest Reels — L'actu mondiale en un geste | Playmix", d: "Faites défiler les actualités mondiales du jour sur les jeux, la technologie et l'économie." },
@@ -439,7 +439,8 @@ function renderNews() {
                 <h3 style="color:#fff;margin-bottom:15px;font-size:1.5rem;font-weight:800;">${L.legal}</h3>
                 <p style="color:#888;font-size:.9rem;line-height:1.6;margin-bottom:20px;">${L.legal_text_1}</p>
                 <p style="color:#888;font-size:.9rem;line-height:1.6;margin-bottom:30px;">${L.legal_text_2}<br>
-                    <a href="mailto:cpapphaven@gmail.com" style="color:#3b82f6;text-decoration:none;font-weight:bold;">cpapphaven@gmail.com</a>
+                    <a href="mailto:cpapphaven@gmail.com" style="color:#3b82f6;text-decoration:none;font-weight:bold;">cpapphaven@gmail.com</a><br><br>
+                    <a href="about-newshub.html" style="color:#fff;text-decoration:underline;font-size:0.8rem;">Learn more about how NewsHub works</a>
                 </p>
                 <button class="cat-btn active" onclick="feed.scrollTo({top:0,behavior:'smooth'})" style="padding:12px 30px;">${L.back_top}</button>
             </div>

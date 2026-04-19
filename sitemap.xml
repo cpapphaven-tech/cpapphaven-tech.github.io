@@ -36,6 +36,10 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/NewsHub/index.html" />
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://playmixgames.in/NewsHub/about-newshub.html</loc>
+    <priority>0.5</priority>
+  </url>
 
   <!-- Reels Modules -->
   <url>
