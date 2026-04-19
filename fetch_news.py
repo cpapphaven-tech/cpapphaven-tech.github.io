@@ -12,6 +12,7 @@ import re
 # ─────────────────────────────────────────────────────────────
 LANG_FEEDS = {
     "en": {
+        "local":         "https://news.yahoo.com/rss/world",
         "top":           "https://news.yahoo.com/rss/",
         "technology":    "https://techcrunch.com/feed/",
         "gaming":        "https://feeds.feedburner.com/ign/news",
@@ -22,6 +23,7 @@ LANG_FEEDS = {
         "science":       "https://news.yahoo.com/rss/science"
     },
     "ja": {
+        "local":         "https://news.yahoo.co.jp/rss/topics/domestic.xml",
         "top":           "https://news.yahoo.co.jp/rss/topics/top-picks.xml",
         "technology":    "https://news.yahoo.co.jp/rss/topics/it.xml",
         "gaming":        "https://game.watch.impress.co.jp/data/rss/1.0/gmw/feed.rdf",
@@ -32,6 +34,7 @@ LANG_FEEDS = {
         "science":       "https://news.yahoo.co.jp/rss/topics/science.xml"
     },
     "de": {
+        "local":         "https://www.tagesschau.de/xml/rss2/",
         "top":           "https://www.tagesschau.de/xml/rss2/",
         "technology":    "https://www.heise.de/rss/heise.rdf",
         "gaming":        "https://www.gamestar.de/rss/rss.xml",
@@ -42,6 +45,7 @@ LANG_FEEDS = {
         "science":       "https://www.wissenschaft.de/feed/"
     },
     "fr": {
+        "local":         "https://www.lemonde.fr/rss/une.xml",
         "top":           "https://www.lemonde.fr/rss/une.xml",
         "technology":    "https://www.clubic.com/feed/actualite.rss",
         "gaming":        "https://www.jeuxvideo.com/rss/rss.xml",
@@ -52,6 +56,7 @@ LANG_FEEDS = {
         "science":       "https://www.futura-sciences.com/rss/actualites.rss"
     },
     "es": {
+        "local":         "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
         "top":           "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
         "technology":    "https://www.xataka.com/feed.xml",
         "gaming":        "https://www.3djuegos.com/rss/noticias.xml",
@@ -102,6 +107,7 @@ LANG_FEEDS = {
         "science":       "https://www.aljazeera.net/aljazeerarss/a2/b10"
     },
     "hi": {
+        "local":         "https://feeds.feedburner.com/ndtvnews-india-news",
         "top":           "https://feeds.feedburner.com/ndtvnews-top-stories",
         "technology":    "https://feeds.feedburner.com/ndtv/technology",
         "gaming":        "https://feeds.feedburner.com/ndtv/technology",
@@ -112,6 +118,7 @@ LANG_FEEDS = {
         "science":       "https://feeds.feedburner.com/ndtv/science"
     },
     "ru": {
+        "local":         "https://lenta.ru/rss/articles",
         "top":           "https://lenta.ru/rss/articles",
         "technology":    "https://lenta.ru/rss/articles/internet",
         "gaming":        "https://lenta.ru/rss/articles/games",
@@ -122,6 +129,7 @@ LANG_FEEDS = {
         "science":       "https://lenta.ru/rss/articles/science"
     },
     "it": {
+        "local":         "https://www.corriere.it/rss/homepage.xml",
         "top":           "https://www.corriere.it/rss/homepage.xml",
         "technology":    "https://www.corriere.it/rss/tecnologia.xml",
         "gaming":        "https://www.everyeye.it/rss/notizie.xml",
@@ -132,6 +140,7 @@ LANG_FEEDS = {
         "science":       "https://www.corriere.it/rss/scienze.xml"
     },
     "nl": {
+        "local":         "https://feeds.nos.nl/nosnieuwsalgemeen",
         "top":           "https://feeds.nos.nl/nosnieuwsalgemeen",
         "technology":    "https://feeds.nos.nl/nosnieuwstech",
         "gaming":        "https://feeds.nos.nl/nosnieuwsalgemeen",
@@ -142,6 +151,7 @@ LANG_FEEDS = {
         "science":       "https://feeds.nos.nl/nosnieuwsalgemeen"
     },
     "tr": {
+        "local":         "https://www.hurriyet.com.tr/rss/anasayfa",
         "top":           "https://www.hurriyet.com.tr/rss/anasayfa",
         "technology":    "https://www.hurriyet.com.tr/rss/teknoloji",
         "gaming":        "https://www.hurriyet.com.tr/rss/teknoloji",
@@ -152,6 +162,7 @@ LANG_FEEDS = {
         "science":       "https://www.hurriyet.com.tr/rss/teknoloji"
     },
     "id": {
+        "local":         "https://rss.kompas.com/nasional",
         "top":           "https://rss.kompas.com/nasional",
         "technology":    "https://rss.kompas.com/tekno",
         "gaming":        "https://rss.kompas.com/tekno",
@@ -214,17 +225,30 @@ def translate_text(text, target_lang):
 # RSS Parsing Helpers
 # ─────────────────────────────────────────────────────────────
 def extract_image_from_item(item):
-    media_content = item.find('.//{http://search.yahoo.com/mrss/}content')
-    if media_content is not None and 'url' in media_content.attrib:
-        return media_content.attrib['url']
+    # Try common media namespaces
+    for tag in ['.//{http://search.yahoo.com/mrss/}content', './/{http://search.yahoo.com/mrss/}thumbnail']:
+        media = item.find(tag)
+        if media is not None and 'url' in media.attrib:
+            return media.attrib['url']
+            
+    # RSS 2.0 Enclosure
     enclosure = item.find('enclosure')
-    if enclosure is not None and 'url' in enclosure.attrib and 'image' in enclosure.attrib.get('type', ''):
+    if enclosure is not None and 'url' in enclosure.attrib:
         return enclosure.attrib['url']
+        
+    # Search in description (raw text or embedded HTML)
     desc = item.find('description')
     if desc is not None and desc.text:
-        match = re.search(r'<img[^>]+src="([^">]+)"', desc.text)
-        if match:
-            return match.group(1)
+        # Look for standard img tags or Yahoo-style escaped images
+        match = re.search(r'src=["\'](https?://[^"\']+\.(?:jpg|jpeg|png|gif|webp|svg)[^"\']*)["\']', desc.text, re.I)
+        if match: return match.group(1)
+        
+    # Check for direct <image> or <thumbnail> children (often seen in custom feeds)
+    for tag in ['image', 'thumbnail', 'thumb']:
+        el = item.find(tag)
+        if el is not None and el.text and el.text.startswith('http'):
+            return el.text
+            
     return ""
 
 def clean_html_text(html_content):
@@ -245,8 +269,8 @@ def fetch_and_parse(url, limit=20):
         with urllib.request.urlopen(req, timeout=10) as response:
             root = ET.fromstring(response.read())
 
-            # RDF/RSS 1.0
-            if 'RDF' in root.tag:
+            # RDF/RSS 1.0 (Common in Japan)
+            if 'RDF' in root.tag or '{http://www.w3.org/1999/02/22-rdf-syntax-ns#}RDF' in root.tag:
                 ch_title = root.find('.//{http://purl.org/rss/1.0/}channel/{http://purl.org/rss/1.0/}title')
                 site_title = ch_title.text if ch_title is not None else "News"
                 for item in root.findall('.//{http://purl.org/rss/1.0/}item')[:limit]:
@@ -254,14 +278,21 @@ def fetch_and_parse(url, limit=20):
                     l  = item.find('{http://purl.org/rss/1.0/}link')
                     d  = item.find('{http://purl.org/dc/elements/1.1/}date')
                     ds = item.find('{http://purl.org/rss/1.0/}description')
-                    desc = clean_html_text(ds.text if ds is not None else "")
-                    if len(desc) > 180:
-                        desc = desc[:177] + "..."
+                    
+                    img_url = extract_image_from_item(item)
+                    desc_text = ds.text if ds is not None else ""
+                    if not img_url and desc_text:
+                        match = re.search(r'src=["\'](https?://[^"\']+\.(?:jpg|jpeg|png|gif|webp)[^"\']*)["\']', desc_text)
+                        if match: img_url = match.group(1)
+                    
+                    desc = clean_html_text(desc_text)
+                    if len(desc) > 180: desc = desc[:177] + "..."
+                    
                     items.append({
                         "title": t.text if t is not None else "",
                         "link":  l.text if l is not None else "",
                         "pubDate": d.text if d is not None else "",
-                        "source": site_title, "image": "", "description": desc
+                        "source": site_title, "image": img_url, "description": desc
                     })
                 return items
 
