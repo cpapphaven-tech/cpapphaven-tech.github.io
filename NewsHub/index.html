@@ -158,9 +158,11 @@
     <link rel="stylesheet" href="../portal-style.css">
     <link rel="stylesheet" href="../loader.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../img/192.png">
 
-    <!-- Deferred Analytics -->
+    <!-- Deferred Analytics and Ads -->
     <script defer src="../analytics.js" type="module"></script>
+    <script defer src="../ads.js"></script>
 </head>
 <body class="pmg-sidebar-start-closed ignore-pmg-sidebar game-page">
 
@@ -226,25 +228,9 @@
     <div class="pmg-side-ad" id="adsterra-banner"></div>
     <div class="pmg-bottom-ad" id="bottom-ad"></div>
 
-    <!-- Cookie Notice -->
-    <div id="cookie-notice">
-        <p>We use cookies to enhance your experience and show relevant ads. <a href="about-newshub.html" style="color:var(--accent)">Learn more</a></p>
-        <div class="cookie-btns">
-            <button id="cookie-reject" class="cookie-btn" onclick="rejectCookies()">Reject All</button>
-            <button id="cookie-accept" class="cookie-btn" onclick="acceptCookies()">Accept All</button>
-        </div>
-    </div>
-
     <!-- Data & Logic -->
     <script src="../NewsCommon/news_data.js"></script>
     <script src="news.js"></script>
     <script src="../sidebar.js"></script>
-    <script>
-        if (localStorage.getItem('cookiesAccepted') === 'true') {
-            const script = document.createElement('script');
-            script.src = 'ads.js';
-            document.body.appendChild(script);
-        }
-    </script>
 </body>
 </html>

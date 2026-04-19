@@ -289,44 +289,27 @@ function handleHorizontalSwipe(duration) {
 }
 
 // ─── Ads ──────────────────────────────────────────────────
-function loadAds() {
-    const s = document.createElement('script');
-    s.src = '../ads.js';
-    s.onload = () => {
-        if (typeof window.prepSystem === 'function') window.prepSystem();
-    };
-    document.body.appendChild(s);
-}
-
-function acceptCookies() {
-    localStorage.setItem('pm_gdpr_consent', 'accepted');
-    document.getElementById('cookie-notice').classList.remove('active');
-    loadAds();
-}
-
-function rejectCookies() {
-    localStorage.setItem('pm_gdpr_consent', 'rejected');
-    document.getElementById('cookie-notice').classList.remove('active');
-}
+// Ads are loaded via <script defer src="../ads.js"> in index.html
 
 // ─── Boot ──────────────────────────────────────────────────────────────────
 window.addEventListener('DOMContentLoaded', async () => {
+    // Start processing as soon as possible
     currentLang = await detectLangAsync();
     applyLang();
     renderNews();
     
-    // Hide loader
-    if (loader) loader.style.display = 'none';
-    
+    // Trigger ad system
+    if (typeof window.prepSystem === 'function') window.prepSystem();
+
     const activeBtn = document.querySelector('.cat-btn.active');
     if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+});
 
-    // Consent Logic
-    const consent = localStorage.getItem('pm_gdpr_consent');
-    if (!consent) {
-        document.getElementById('cookie-notice').classList.add('active');
-    } else if (consent === 'accepted') {
-        loadAds();
+// Robust loader clearing
+window.addEventListener('load', () => {
+    if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
     }
 });
 

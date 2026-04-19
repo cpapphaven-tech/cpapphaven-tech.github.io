@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Playmix Weather Map — Global Temperature Explorer</title>
+    <link rel="icon" type="image/png" href="../img/192.png">
     <meta name="description" content="Explore daily updated weather temperatures for any country, state, or city on an interactive map. Visual climate data and major city averages on Playmix.">
     <meta name="keywords" content="global weather map, temperature explorer, daily weather, city temperatures, climate map, interactive weather">
     <link rel="canonical" href="https://cpapphaven.tech/WeatherMap/">
@@ -14,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- Deferred Analytics and Ads -->
+    <script defer src="../analytics.js" type="module"></script>
+    <script defer src="../ads.js"></script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -236,15 +241,6 @@
             <div class="disclaimer-text">
                 ⚠️ Weather data is sourced from Open-Meteo. Data is provided "as is" and may be cached or delayed. Not for safety-critical decisions.
             </div>
-        </div>
-    </div>
-
-    <!-- Cookie Notice -->
-    <div id="cookie-notice">
-        <p>We use cookies to enhance your experience and show relevant ads. <a href="about-weathermap.html" style="color:var(--accent)">Learn more</a></p>
-        <div class="cookie-btns">
-            <button id="cookie-reject" class="cookie-btn" onclick="rejectCookies()">Reject All</button>
-            <button id="cookie-accept" class="cookie-btn" onclick="acceptCookies()">Accept All</button>
         </div>
     </div>
 
@@ -554,37 +550,9 @@ function showPanel(title, subtitle, weather) {
     document.getElementById('info-panel').classList.add('open');
 }
 
-// ─── Boot ──────────────────────────────────────────────────────────────────
-function loadAds() {
-    const s = document.createElement('script');
-    s.src = '../ads.js';
-    s.onload = () => {
-        if (typeof window.prepSystem === 'function') window.prepSystem();
-    };
-    document.body.appendChild(s);
-}
-
-function acceptCookies() {
-    localStorage.setItem('pm_gdpr_consent', 'accepted');
-    document.getElementById('cookie-notice').classList.remove('active');
-    loadAds();
-}
-
-function rejectCookies() {
-    localStorage.setItem('pm_gdpr_consent', 'rejected');
-    document.getElementById('cookie-notice').classList.remove('active');
-}
-
 window.addEventListener('DOMContentLoaded', () => {
     initMap();
-    if (typeof prepSystem === 'function') prepSystem();
-    
-    const consent = localStorage.getItem('pm_gdpr_consent');
-    if (!consent) {
-        document.getElementById('cookie-notice').classList.add('active');
-    } else if (consent === 'accepted') {
-        loadAds();
-    }
+    if (typeof window.prepSystem === 'function') window.prepSystem();
 });
 </script>
 </body>
