@@ -441,25 +441,27 @@ body.portal-index {
 
 /* --- COMMON AD BANNERS --- */
 .pmg-side-ad,
-#adsterra-banner {
+#adsterra-banner,
+#adsterra-left-banner,
+#adsterra-right-banner {
     position: fixed;
     right: 0px;
     bottom: 0%;
     width: 160px;
     height: 600px;
-    background: rgba(0, 0, 0, 0.2);
-    display: none;
+    background: none !important;
+    display: none !important;
     z-index: 9999;
 }
 
 @media (min-width: 1024px) {
-
+    /* Side ad unit is removed globally */
     .pmg-side-ad,
     #adsterra-banner {
         display: none !important;
     }
 
-    /* Force clearance for Side Ad (160px wide) on Portal Index */
+    /* Remove clearance for Side Ad (160px wide) on Portal Index */
     .portal-index header,
     .portal-index .hero,
     .portal-index .game-grid,

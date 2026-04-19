@@ -319,13 +319,13 @@ html, body {
     60% {transform: translateY(-5px);}
 }
 
-/* --- Desktop Ad Compatibility --- */
+/* --- Desktop Ad Compatibility - DISABLED --- */
 @media (min-width: 1024px) {
     .right-sidebar {
-        right: 180px; /* Shifted left of the 160px side ad */
+        right: 15px; /* Stay at edge */
     }
     .reel-caption {
-        right: 250px; /* Increased to follow the shifted sidebar */
+        right: 80px; 
     }
 }
 
