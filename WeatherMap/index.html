@@ -130,6 +130,13 @@
         .stat-card .stat-label { font-size: 0.6rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
 
         /* Data freshness badge */
+        #data-badge {
+            position: absolute; top: 12px; right: 12px; z-index: 400;
+            background: rgba(17,24,39,0.8); backdrop-filter: blur(8px);
+            border: 1px solid var(--border); border-radius: 8px;
+            padding: 4px 10px; font-size: 0.65rem; font-weight: 700;
+            color: var(--muted); pointer-events: none; display: none;
+        }
         #data-badge.visible { display: block; }
         
         .disclaimer-text { font-size: 0.6rem; color: var(--muted); line-height: 1.2; padding: 10px; text-align: center; }
