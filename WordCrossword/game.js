@@ -108,14 +108,7 @@
         [['CAP','PACE','PEACE'],['CAPE','CEPE','ACE','APE','PEA','PEE']]
     ];
     
-    let tickCount = 0;
-    function trackTick() {
-        tickCount++;
-        const rate = window.PMG_TICK_RATE || 60;
-        if (tickCount % rate === 0 && window.syncPMGLayout) {
-            window.syncPMGLayout();
-        }
-    }
+    // Ad sync logic removed from loops to prevent accidental reloading
 
     let currentLevel = 0;
     let totalCoin = 0;
@@ -588,7 +581,6 @@
                     previewTxt.textContent = currentWord;
                     previewTxt.style.display = "inline-block";
                     playSound('select');
-                    trackTick();
                 }
             }
         }
