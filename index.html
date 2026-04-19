@@ -197,7 +197,7 @@
                 transition: color 0.2s;
                 white-space: nowrap;
             ">
-                📰 Daily News
+                🌐 Discover
                 <span id="tab-count-news" style="
                     background: rgba(255,255,255,0.1);
                     color: rgba(255,255,255,0.6); font-size: 0.7rem; font-weight: 800;
@@ -233,6 +233,16 @@
                     <h3>📰 Daily Digest – Tech & Gaming News</h3>
                     <p><strong>Stay Informed!</strong> Get the latest global headlines curated daily. Read top stories in gaming, technology, and finance directly on Playmix.</p>
                     <span style="display:inline-block;background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 Updated Daily</span>
+                </div>
+            </a>
+
+            <!-- Weather Map Card -->
+            <a href="WeatherMap/index.html" class="game-card">
+                <div class="card-img" style="background:linear-gradient(135deg,#0c4a6e,#164e63,#134e4a);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(34,211,238,0.6);">🌍</div>
+                <div class="card-info">
+                    <h3>🌡️ Global Weather Map – Interactive Explorer</h3>
+                    <p><strong>Explore Global Climate!</strong> Advanced interactive map with major cities average temperatures. Drill down from Country → State → City with live rain &amp; snow tracking.</p>
+                    <span style="display:inline-block;background:linear-gradient(90deg,#0891b2,#0d9488);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔴 Live Data</span>
                 </div>
             </a>
 
@@ -953,7 +963,7 @@
     </script>
     <script>
         const NEWS_KEYWORDS = [
-            'News'
+            'News', 'WeatherMap'
         ];
         const REELS_KEYWORDS = [
             'Reels'
@@ -1023,7 +1033,7 @@
                 searchInput.value = '';
                 let placeholder = 'Search 100+ games...';
                 if (tab === 'reels') placeholder = 'Search wisdom & facts...';
-                if (tab === 'news') placeholder = 'Search daily headlines...';
+                if (tab === 'news') placeholder = 'Search news & weather...';
                 searchInput.setAttribute('placeholder', placeholder);
             }
 
@@ -1032,7 +1042,7 @@
             if (title) {
                 if (tab === 'games') title.textContent = '🎮 Play Now – Choose Your Game';
                 else if (tab === 'reels') title.textContent = '📜 Wisdom – Discover Secrets';
-                else title.textContent = '📰 Playmix Daily – Top News';
+                else title.textContent = '🌐 Discover – News & Weather';
             }
 
             applyFilter('');

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Playmix Weather Map — Live Temperature Explorer</title>
+    <meta name="description" content="Explore live weather temperatures for any country, state, or city on an interactive map. See rain, snow and sun conditions worldwide on Playmix.">
+    <meta name="keywords" content="live weather map, temperature explorer, global weather, city weather, rain map, interactive weather">
+    <link rel="canonical" href="https://cpapphaven.tech/WeatherMap/">
+    <meta property="og:title" content="Playmix Weather Map">
+    <meta property="og:description" content="Tap any country to drill down from national → state → city temperatures, with live rain/snow conditions.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #0a0e1a; --surface: #111827; --surface2: #1a2236;
+            --accent: #3b82f6; --accent2: #8b5cf6;
+            --hot: #ff4d00; --warm: #ff9500; --mild: #ffd000;
+            --cool: #34d399; --cold: #60a5fa; --freeze: #a5b4fc;
+            --text: #f1f5f9; --muted: #6b7280; --border: rgba(255,255,255,0.08);
+        }
+        html, body { height: 100%; font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+
+        #app { display: flex; flex-direction: column; height: 100dvh; }
+
+        /* Header */
+        #header {
+            position: relative; z-index: 1000;
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 14px;
+            background: rgba(10,14,26,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0; min-height: 56px;
+        }
+        .nav-btn {
+            width: 38px; height: 38px; border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid var(--border);
+            color: var(--text); text-decoration: none;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; transition: background 0.2s; flex-shrink: 0; cursor: pointer;
+        }
+        .nav-btn:hover { background: rgba(255,255,255,0.16); }
+        .nav-btn:disabled { opacity: 0.3; cursor: default; }
+        #header-title { display: flex; flex-direction: column; flex-grow: 1; min-width: 0; }
+        #header-title h1 {
+            font-size: 1rem; font-weight: 900;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        #breadcrumb {
+            font-size: 0.65rem; color: var(--muted); font-weight: 600;
+            letter-spacing: 0.3px; margin-top: 1px;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        #level-badge {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            padding: 5px 12px; border-radius: 20px;
+            font-size: 0.7rem; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0;
+        }
+
+        /* Map */
+        #map-container { flex-grow: 1; position: relative; overflow: hidden; }
+        #map { width: 100%; height: 100%; background: #0d1b2a; }
+
+        /* Loader */
+        #map-loader {
+            position: absolute; inset: 0; z-index: 500;
+            background: rgba(10,14,26,0.85); backdrop-filter: blur(8px);
+            display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 16px;
+            pointer-events: none; opacity: 0; transition: opacity 0.3s;
+        }
+        #map-loader.active { opacity: 1; pointer-events: all; }
+        .loader-ring {
+            width: 50px; height: 50px;
+            border: 4px solid rgba(255,255,255,0.1);
+            border-top-color: var(--accent);
+            border-radius: 50%; animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        #loader-text { font-size: 0.9rem; font-weight: 600; color: var(--muted); }
+
+        /* Legend */
+        #legend {
+            position: absolute; bottom: 70px; left: 12px; z-index: 400;
+            background: rgba(17,24,39,0.92); backdrop-filter: blur(12px);
+            border: 1px solid var(--border); border-radius: 14px;
+            padding: 10px 14px; min-width: 130px;
+        }
+        #legend h4 { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 8px; }
+        .legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; font-size: 0.72rem; font-weight: 600; }
+        .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+        /* Info Panel */
+        #info-panel {
+            position: absolute; bottom: 0; left: 0; right: 0; z-index: 450;
+            background: rgba(17,24,39,0.97); backdrop-filter: blur(20px);
+            border-top: 1px solid var(--border); border-radius: 20px 20px 0 0;
+            padding: 16px 16px 20px;
+            transform: translateY(100%);
+            transition: transform 0.35s cubic-bezier(0.34,1.2,0.64,1);
+        }
+        #info-panel.open { transform: translateY(0); }
+        #info-panel-handle { width: 36px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 4px; margin: 0 auto 14px; }
+        #info-panel-title { font-size: 1.1rem; font-weight: 900; margin-bottom: 4px; }
+        #info-panel-subtitle { font-size: 0.75rem; color: var(--muted); font-weight: 600; margin-bottom: 14px; }
+        #info-panel-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+        .stat-card { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 12px; padding: 12px 8px; text-align: center; }
+        .stat-card .stat-icon { font-size: 1.4rem; margin-bottom: 4px; }
+        .stat-card .stat-value { font-size: 1.2rem; font-weight: 900; }
+        .stat-card .stat-label { font-size: 0.6rem; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+        /* Data freshness badge */
+        #data-badge {
+            position: absolute; top: 10px; right: 10px; z-index: 400;
+            background: rgba(17,24,39,0.9); backdrop-filter: blur(8px);
+            border: 1px solid var(--border); border-radius: 20px;
+            padding: 4px 10px; font-size: 0.65rem; font-weight: 700; color: var(--muted);
+            display: none;
+        }
+        #data-badge.visible { display: block; }
+
+        /* Leaflet overrides */
+        .leaflet-container { background: #0d1b2a !important; }
+        .temp-marker {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            border-radius: 50%; border: 2px solid rgba(255,255,255,0.25);
+            font-family: 'Outfit', sans-serif; font-weight: 900; color: #fff;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8); cursor: pointer;
+            transition: transform 0.15s; box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .temp-marker:hover { transform: scale(1.12); }
+        .marker-temp { font-size: 0.85rem; line-height: 1; }
+        .marker-icon { font-size: 0.7rem; line-height: 1; margin-top: 1px; }
+        .marker-sublabel {
+            font-size: 0.45rem; font-weight: 700; line-height: 1; margin-top: 2px;
+            opacity: 0.75; text-transform: uppercase; letter-spacing: 0.3px;
+        }
+        .marker-name {
+            position: absolute; bottom: calc(100% + 4px); left: 50%; transform: translateX(-50%);
+            font-size: 0.58rem; font-weight: 700; white-space: nowrap; color: #fff;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+            background: rgba(10,14,26,0.75); padding: 2px 6px; border-radius: 6px;
+        }
+
+        /* Adsterra */
+        .pmg-side-ad {
+            position: fixed; top: 50%; right: 0; transform: translateY(-50%);
+            z-index: 9000; width: 160px; min-height: 600px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .pmg-bottom-ad {
+            position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+            z-index: 9001; width: 320px; height: 50px;
+        }
+        @media (max-width: 768px) {
+            .pmg-side-ad { display: none; }
+            #legend { bottom: 62px; }
+        }
+        @media (min-width: 1024px) { #map-container { padding-right: 160px; } }
+    </style>
+</head>
+<body>
+<div id="app">
+    <header id="header">
+        <!-- Back button — changes behaviour based on current level -->
+        <button id="nav-back-btn" class="nav-btn" onclick="navigateBack()" title="Back">←</button>
+        <div id="header-title">
+            <h1 id="header-h1">🌍 Weather Map</h1>
+            <div id="breadcrumb">World • Tap a country to explore</div>
+        </div>
+        <div id="level-badge">World</div>
+        <a href="about-weathermap.html" class="nav-btn" title="About & FAQ" style="text-decoration:none;font-size:1rem;">❓</a>
+    </header>
+
+    <div id="map-container">
+        <div id="map"></div>
+
+        <div id="map-loader">
+            <div class="loader-ring"></div>
+            <div id="loader-text">Loading weather data…</div>
+        </div>
+
+        <!-- Data freshness -->
+        <div id="data-badge"></div>
+
+        <!-- Temperature Legend -->
+        <div id="legend">
+            <h4>🌡️ Temperature</h4>
+            <div class="legend-item"><div class="legend-dot" style="background:#ff4d00"></div> &gt;35°C Hot</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#ff9500"></div> 25–35°C Warm</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#ffd000"></div> 15–25°C Mild</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#34d399"></div> 5–15°C Cool</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#60a5fa"></div> -5–5°C Cold</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#a5b4fc"></div> &lt;-5°C Freeze</div>
+        </div>
+
+        <!-- Info Panel -->
+        <div id="info-panel">
+            <div id="info-panel-handle"></div>
+            <div id="info-panel-title">—</div>
+            <div id="info-panel-subtitle">—</div>
+            <div id="info-panel-stats"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Data source (pre-cached daily snapshot) -->
+<script src="../WeatherCommon/weather_data.js" onerror="window.WEATHER_DATA=null;"></script>
+<!-- Leaflet -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- Ads -->
+<script src="../ads.js"></script>
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// STATE REGISTRY (full country/state/city definitions for map placement)
+// ─────────────────────────────────────────────────────────────────────────────
+const COUNTRIES = [
+    { name:"India",code:"IN",lat:20.59,lon:78.96,zoom:5,flag:"🇮🇳" },
+    { name:"USA",code:"US",lat:37.09,lon:-95.71,zoom:5,flag:"🇺🇸" },
+    { name:"Brazil",code:"BR",lat:-14.23,lon:-51.93,zoom:5,flag:"🇧🇷" },
+    { name:"China",code:"CN",lat:35.86,lon:104.19,zoom:5,flag:"🇨🇳" },
+    { name:"Russia",code:"RU",lat:61.52,lon:105.32,zoom:4,flag:"🇷🇺" },
+    { name:"Australia",code:"AU",lat:-25.27,lon:133.78,zoom:5,flag:"🇦🇺" },
+    { name:"Germany",code:"DE",lat:51.17,lon:10.45,zoom:6,flag:"🇩🇪" },
+    { name:"France",code:"FR",lat:46.23,lon:2.21,zoom:6,flag:"🇫🇷" },
+    { name:"Japan",code:"JP",lat:36.20,lon:138.25,zoom:6,flag:"🇯🇵" },
+    { name:"UK",code:"GB",lat:55.38,lon:-3.44,zoom:6,flag:"🇬🇧" },
+    { name:"Canada",code:"CA",lat:56.13,lon:-106.35,zoom:4,flag:"🇨🇦" },
+    { name:"Mexico",code:"MX",lat:23.63,lon:-102.55,zoom:6,flag:"🇲🇽" },
+    { name:"South Africa",code:"ZA",lat:-30.56,lon:22.94,zoom:6,flag:"🇿🇦" },
+    { name:"Egypt",code:"EG",lat:26.82,lon:30.80,zoom:7,flag:"🇪🇬" },
+    { name:"Nigeria",code:"NG",lat:9.08,lon:8.68,zoom:7,flag:"🇳🇬" },
+    { name:"Indonesia",code:"ID",lat:-0.79,lon:113.92,zoom:5,flag:"🇮🇩" },
+    { name:"Argentina",code:"AR",lat:-38.42,lon:-63.62,zoom:5,flag:"🇦🇷" },
+    { name:"Saudi Arabia",code:"SA",lat:23.886,lon:45.08,zoom:6,flag:"🇸🇦" },
+    { name:"Turkey",code:"TR",lat:38.96,lon:35.24,zoom:6,flag:"🇹🇷" },
+    { name:"Italy",code:"IT",lat:41.87,lon:12.57,zoom:6,flag:"🇮🇹" },
+    { name:"Spain",code:"ES",lat:40.46,lon:-3.75,zoom:6,flag:"🇪🇸" },
+    { name:"South Korea",code:"KR",lat:35.91,lon:127.77,zoom:7,flag:"🇰🇷" },
+    { name:"Pakistan",code:"PK",lat:30.38,lon:69.35,zoom:6,flag:"🇵🇰" },
+    { name:"Bangladesh",code:"BD",lat:23.68,lon:90.36,zoom:8,flag:"🇧🇩" },
+    { name:"Vietnam",code:"VN",lat:14.06,lon:108.28,zoom:7,flag:"🇻🇳" },
+    { name:"Thailand",code:"TH",lat:15.87,lon:100.99,zoom:7,flag:"🇹🇭" },
+    { name:"Netherlands",code:"NL",lat:52.13,lon:5.29,zoom:8,flag:"🇳🇱" },
+    { name:"Ukraine",code:"UA",lat:48.38,lon:31.17,zoom:6,flag:"🇺🇦" },
+    { name:"Poland",code:"PL",lat:51.92,lon:19.14,zoom:7,flag:"🇵🇱" },
+    { name:"Sweden",code:"SE",lat:60.13,lon:18.64,zoom:6,flag:"🇸🇪" },
+];
+
+const STATE_DATA = {
+    IN:[{name:"Maharashtra",lat:19.75,lon:75.71,cities:[{name:"Mumbai",lat:19.07,lon:72.87},{name:"Pune",lat:18.52,lon:73.85},{name:"Nagpur",lat:21.14,lon:79.09}]},{name:"Delhi",lat:28.70,lon:77.10,cities:[{name:"New Delhi",lat:28.61,lon:77.21},{name:"Noida",lat:28.54,lon:77.39},{name:"Gurgaon",lat:28.45,lon:77.03}]},{name:"Karnataka",lat:15.32,lon:75.71,cities:[{name:"Bengaluru",lat:12.97,lon:77.59},{name:"Mysuru",lat:12.30,lon:76.65},{name:"Hubli",lat:15.36,lon:75.12}]},{name:"Tamil Nadu",lat:11.13,lon:78.66,cities:[{name:"Chennai",lat:13.08,lon:80.28},{name:"Coimbatore",lat:11.02,lon:76.96},{name:"Madurai",lat:9.93,lon:78.12}]},{name:"West Bengal",lat:22.99,lon:87.85,cities:[{name:"Kolkata",lat:22.57,lon:88.36},{name:"Howrah",lat:22.59,lon:88.31},{name:"Darjeeling",lat:27.04,lon:88.27}]},{name:"Gujarat",lat:22.26,lon:71.19,cities:[{name:"Ahmedabad",lat:23.02,lon:72.57},{name:"Surat",lat:21.17,lon:72.83},{name:"Vadodara",lat:22.31,lon:73.18}]},{name:"Rajasthan",lat:27.02,lon:74.22,cities:[{name:"Jaipur",lat:26.91,lon:75.79},{name:"Jodhpur",lat:26.29,lon:73.02},{name:"Udaipur",lat:24.58,lon:73.68}]},{name:"Uttar Pradesh",lat:26.85,lon:80.91,cities:[{name:"Lucknow",lat:26.85,lon:80.95},{name:"Kanpur",lat:26.47,lon:80.33},{name:"Varanasi",lat:25.32,lon:83.01}]}],
+    US:[{name:"California",lat:36.78,lon:-119.42,cities:[{name:"Los Angeles",lat:34.05,lon:-118.24},{name:"San Francisco",lat:37.77,lon:-122.42},{name:"San Diego",lat:32.72,lon:-117.15}]},{name:"Texas",lat:31.97,lon:-99.90,cities:[{name:"Houston",lat:29.76,lon:-95.37},{name:"Dallas",lat:32.78,lon:-96.80},{name:"Austin",lat:30.27,lon:-97.74}]},{name:"New York",lat:42.17,lon:-74.95,cities:[{name:"New York City",lat:40.71,lon:-74.01},{name:"Buffalo",lat:42.89,lon:-78.86},{name:"Albany",lat:42.65,lon:-73.76}]},{name:"Florida",lat:27.99,lon:-81.76,cities:[{name:"Miami",lat:25.78,lon:-80.21},{name:"Orlando",lat:28.54,lon:-81.38},{name:"Tampa",lat:27.95,lon:-82.46}]},{name:"Illinois",lat:40.35,lon:-88.99,cities:[{name:"Chicago",lat:41.85,lon:-87.65},{name:"Springfield",lat:39.78,lon:-89.65},{name:"Rockford",lat:42.27,lon:-89.09}]},{name:"Washington",lat:47.75,lon:-120.74,cities:[{name:"Seattle",lat:47.61,lon:-122.33},{name:"Spokane",lat:47.66,lon:-117.43},{name:"Tacoma",lat:47.25,lon:-122.44}]}],
+    GB:[{name:"England",lat:52.35,lon:-1.17,cities:[{name:"London",lat:51.50,lon:-0.12},{name:"Manchester",lat:53.48,lon:-2.24},{name:"Birmingham",lat:52.48,lon:-1.90}]},{name:"Scotland",lat:56.49,lon:-4.20,cities:[{name:"Edinburgh",lat:55.95,lon:-3.19},{name:"Glasgow",lat:55.86,lon:-4.25},{name:"Aberdeen",lat:57.15,lon:-2.11}]},{name:"Wales",lat:52.13,lon:-3.78,cities:[{name:"Cardiff",lat:51.48,lon:-3.18},{name:"Swansea",lat:51.62,lon:-3.94},{name:"Newport",lat:51.59,lon:-2.99}]}],
+    AU:[{name:"New South Wales",lat:-32.16,lon:147.02,cities:[{name:"Sydney",lat:-33.87,lon:151.21},{name:"Newcastle",lat:-32.93,lon:151.78},{name:"Wollongong",lat:-34.42,lon:150.89}]},{name:"Victoria",lat:-36.85,lon:144.28,cities:[{name:"Melbourne",lat:-37.81,lon:144.96},{name:"Geelong",lat:-38.15,lon:144.36},{name:"Ballarat",lat:-37.56,lon:143.87}]},{name:"Queensland",lat:-22.57,lon:144.08,cities:[{name:"Brisbane",lat:-27.47,lon:153.02},{name:"Gold Coast",lat:-28.02,lon:153.40},{name:"Cairns",lat:-16.92,lon:145.77}]},{name:"Western Australia",lat:-25.33,lon:122.03,cities:[{name:"Perth",lat:-31.95,lon:115.86},{name:"Fremantle",lat:-32.05,lon:115.74},{name:"Geraldton",lat:-28.78,lon:114.61}]}],
+    JP:[{name:"Tokyo",lat:35.69,lon:139.69,cities:[{name:"Tokyo",lat:35.68,lon:139.69},{name:"Yokohama",lat:35.44,lon:139.64},{name:"Kawasaki",lat:35.53,lon:139.70}]},{name:"Osaka",lat:34.67,lon:135.50,cities:[{name:"Osaka",lat:34.68,lon:135.50},{name:"Kyoto",lat:35.02,lon:135.75},{name:"Kobe",lat:34.69,lon:135.19}]},{name:"Hokkaido",lat:43.46,lon:142.83,cities:[{name:"Sapporo",lat:43.06,lon:141.35},{name:"Asahikawa",lat:43.77,lon:142.38},{name:"Hakodate",lat:41.77,lon:140.73}]},{name:"Fukuoka",lat:33.56,lon:130.72,cities:[{name:"Fukuoka",lat:33.60,lon:130.40},{name:"Kitakyushu",lat:33.88,lon:130.88},{name:"Kurume",lat:33.32,lon:130.50}]}],
+    DE:[{name:"Bavaria",lat:48.79,lon:11.50,cities:[{name:"Munich",lat:48.13,lon:11.58},{name:"Nuremberg",lat:49.45,lon:11.08},{name:"Augsburg",lat:48.37,lon:10.90}]},{name:"Berlin",lat:52.52,lon:13.40,cities:[{name:"Berlin",lat:52.52,lon:13.41},{name:"Potsdam",lat:52.39,lon:13.06},{name:"Spandau",lat:52.54,lon:13.20}]},{name:"NRW",lat:51.43,lon:7.66,cities:[{name:"Cologne",lat:50.94,lon:6.96},{name:"Düsseldorf",lat:51.22,lon:6.78},{name:"Dortmund",lat:51.51,lon:7.46}]}],
+    FR:[{name:"Île-de-France",lat:48.85,lon:2.35,cities:[{name:"Paris",lat:48.86,lon:2.35},{name:"Versailles",lat:48.80,lon:2.13},{name:"Boulogne",lat:48.83,lon:2.24}]},{name:"Provence",lat:43.83,lon:5.71,cities:[{name:"Marseille",lat:43.30,lon:5.37},{name:"Nice",lat:43.70,lon:7.27},{name:"Toulon",lat:43.12,lon:5.93}]},{name:"Auvergne",lat:45.75,lon:3.07,cities:[{name:"Lyon",lat:45.75,lon:4.84},{name:"Grenoble",lat:45.19,lon:5.72},{name:"Clermont",lat:45.78,lon:3.08}]}],
+    CN:[{name:"Beijing",lat:39.91,lon:116.39,cities:[{name:"Beijing",lat:39.91,lon:116.39},{name:"Tianjin",lat:39.13,lon:117.20},{name:"Baoding",lat:38.87,lon:115.46}]},{name:"Shanghai",lat:31.23,lon:121.47,cities:[{name:"Shanghai",lat:31.23,lon:121.47},{name:"Suzhou",lat:31.30,lon:120.62},{name:"Nanjing",lat:32.06,lon:118.79}]},{name:"Guangdong",lat:23.37,lon:113.50,cities:[{name:"Guangzhou",lat:23.12,lon:113.26},{name:"Shenzhen",lat:22.55,lon:114.06},{name:"Zhuhai",lat:22.27,lon:113.57}]},{name:"Sichuan",lat:30.65,lon:102.71,cities:[{name:"Chengdu",lat:30.67,lon:104.07},{name:"Chongqing",lat:29.56,lon:106.55},{name:"Mianyang",lat:31.47,lon:104.74}]}],
+    BR:[{name:"São Paulo",lat:-23.55,lon:-46.63,cities:[{name:"São Paulo",lat:-23.55,lon:-46.63},{name:"Campinas",lat:-22.91,lon:-47.06},{name:"Santos",lat:-23.96,lon:-46.33}]},{name:"Rio de Janeiro",lat:-22.91,lon:-43.17,cities:[{name:"Rio de Janeiro",lat:-22.91,lon:-43.17},{name:"Niterói",lat:-22.89,lon:-43.10},{name:"Nova Iguaçu",lat:-22.76,lon:-43.46}]},{name:"Amazonas",lat:-3.07,lon:-60.01,cities:[{name:"Manaus",lat:-3.10,lon:-60.03},{name:"Parintins",lat:-2.63,lon:-56.74},{name:"Itacoatiara",lat:-3.14,lon:-58.44}]},{name:"Bahia",lat:-12.97,lon:-38.51,cities:[{name:"Salvador",lat:-12.97,lon:-38.50},{name:"Feira de Santana",lat:-12.27,lon:-38.97},{name:"Vitória da Conquista",lat:-14.87,lon:-40.84}]}],
+};
+
+// ─── Runtime state ────────────────────────────────────────────────────────────
+let map, currentLevel = 'world', currentCountry = null, currentState = null;
+let layers = { world: null, states: null, cities: null };
+const liveCache = {}; // fallback live data cache
+
+// ─── Data access helpers ───────────────────────────────────────────────────
+function getCountryWeather(code) {
+    if (window.WEATHER_DATA) return window.WEATHER_DATA.countries[code] || null;
+    return null;
+}
+function getStateWeather(countryCode, stateName) {
+    if (window.WEATHER_DATA) {
+        const arr = window.WEATHER_DATA.states[countryCode] || [];
+        return arr.find(s => s.name === stateName) || null;
+    }
+    return null;
+}
+function getCityWeather(countryCode, stateName, cityName) {
+    if (window.WEATHER_DATA) {
+        const arr = (window.WEATHER_DATA.cities[countryCode] || {})[stateName] || [];
+        return arr.find(c => c.name === cityName) || null;
+    }
+    return null;
+}
+
+// Fallback: live API
+async function fetchLive(lat, lon) {
+    const key = `${lat.toFixed(2)},${lon.toFixed(2)}`;
+    if (liveCache[key]) return liveCache[key];
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weathercode,precipitation,snowfall,windspeed_10m&temperature_unit=celsius&timezone=auto`;
+    try {
+        const res = await fetch(url);
+        const d = await res.json();
+        const c = d.current;
+        const r = { temp: Math.round(c.temperature_2m), code: c.weathercode, precip: c.precipitation, snow: c.snowfall, wind: Math.round(c.windspeed_10m), icon: weatherIcon(c.weathercode, c.snowfall > 0) };
+        liveCache[key] = r; return r;
+    } catch(e) { return { temp:'--', code:0, precip:0, snow:0, wind:'--', icon:'🌡️' }; }
+}
+
+function weatherIcon(code, isSnow) {
+    if (code===0) return '☀️'; if ([1,2].includes(code)) return '⛅'; if (code===3) return '☁️';
+    if ([45,48].includes(code)) return '🌫️'; if ([51,53,55,61,63,65,80,81,82].includes(code)) return '🌧️';
+    if ([71,73,75,77,85,86].includes(code)||isSnow) return '❄️'; if ([95,96,99].includes(code)) return '⛈️';
+    return '🌡️';
+}
+function tempColor(t) {
+    if (typeof t!=='number') return '#6b7280';
+    if (t>35) return '#ff4d00'; if (t>25) return '#ff9500'; if (t>15) return '#ffd000';
+    if (t>5)  return '#34d399'; if (t>-5) return '#60a5fa'; return '#a5b4fc';
+}
+function tempBg(t) { const c=tempColor(t); return `radial-gradient(circle at 40% 35%,${c}ee,${c}88)`; }
+
+// ─── Init Map ─────────────────────────────────────────────────────────────
+function initMap() {
+    map = L.map('map', { center:[20,10], zoom:2, zoomControl:false, attributionControl:true });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> &copy; <a href="https://carto.com">CARTO</a>',
+        subdomains: 'abcd', maxZoom: 19
+    }).addTo(map);
+    L.control.zoom({ position:'topright' }).addTo(map);
+    layers.world  = L.layerGroup().addTo(map);
+    layers.states = L.layerGroup();
+    layers.cities = L.layerGroup();
+    renderWorld();
+}
+
+function makeMarker(lat, lon, size, name, temp, icon, onClick, sublabel='') {
+    const subHtml = sublabel ? `<span class="marker-sublabel">${sublabel}</span>` : '';
+    const leafIcon = L.divIcon({
+        className: '',
+        html: `<div class="temp-marker" style="width:${size}px;height:${size}px;background:${tempBg(temp)};position:relative;">
+                   <span class="marker-name">${name}</span>
+                   <span class="marker-temp">${temp}°</span>
+                   <span class="marker-icon">${icon}</span>
+                   ${subHtml}
+               </div>`,
+        iconSize: [size,size], iconAnchor: [size/2,size/2],
+    });
+    return L.marker([lat,lon],{icon:leafIcon}).on('click',onClick);
+}
+
+// ─── World Level ──────────────────────────────────────────────────────────
+async function renderWorld() {
+    showLoader('Loading weather data…');
+    layers.world.clearLayers();
+    closePanel();
+
+    for (const country of COUNTRIES) {
+        let w = getCountryWeather(country.code);
+        if (!w) w = await fetchLive(country.lat, country.lon);
+        if (!w.icon) w.icon = weatherIcon(w.code, w.snow > 0.1);
+
+        makeMarker(country.lat, country.lon, 58, `${country.flag} ${country.name}`, w.temp, w.icon,
+            () => drillToCountry(country, w),
+            'cities avg'
+        ).addTo(layers.world);
+    }
+    hideLoader();
+
+    // Show data freshness
+    if (window.WEATHER_DATA?.generated_at) {
+        const d = new Date(window.WEATHER_DATA.generated_at);
+        const badge = document.getElementById('data-badge');
+        badge.textContent = `📅 Data: ${d.toLocaleDateString()} ${d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})} UTC`;
+        badge.classList.add('visible');
+    }
+}
+
+// ─── Country → States ─────────────────────────────────────────────────────
+async function drillToCountry(country, countryWeather) {
+    currentLevel = 'country'; currentCountry = country; currentState = null;
+    updateHeader(`${country.flag} ${country.name}`, `World → ${country.name}`, 'States');
+    showPanel(`${country.flag} ${country.name}`, 'Tap a state below to see city data', countryWeather);
+
+    const states = STATE_DATA[country.code];
+    if (!states) { map.flyTo([country.lat,country.lon],country.zoom,{duration:1.2}); return; }
+
+    showLoader(`Loading ${country.name} state data…`);
+    map.flyTo([country.lat,country.lon],country.zoom,{duration:1.2});
+    layers.world.remove();
+    layers.states.clearLayers(); layers.cities.clearLayers();
+    map.addLayer(layers.states);
+
+    for (const state of states) {
+        let w = getStateWeather(country.code, state.name);
+        if (!w) w = await fetchLive(state.lat, state.lon);
+        if (!w.icon) w.icon = weatherIcon(w.code, w.snow > 0.1);
+        makeMarker(state.lat, state.lon, 64, state.name, w.temp, w.icon,
+            () => drillToState(country, state, w)
+        ).addTo(layers.states);
+    }
+    hideLoader();
+}
+
+// ─── State → Cities ───────────────────────────────────────────────────────
+async function drillToState(country, state, stateWeather) {
+    currentLevel = 'state'; currentState = state;
+    updateHeader(`📍 ${state.name}`, `World → ${country.name} → ${state.name}`, 'Cities');
+    if (!state.cities?.length) return;
+
+    const avgLat = state.cities.reduce((a,c)=>a+c.lat,0)/state.cities.length;
+    const avgLon = state.cities.reduce((a,c)=>a+c.lon,0)/state.cities.length;
+    map.flyTo([avgLat,avgLon],8,{duration:1});
+
+    showLoader(`Loading ${state.name} city data…`);
+    layers.states.remove();
+    layers.cities.clearLayers();
+    map.addLayer(layers.cities);
+
+    const cityWeatherList = [];
+    for (const city of state.cities) {
+        let w = getCityWeather(country.code, state.name, city.name);
+        if (!w) w = await fetchLive(city.lat, city.lon);
+        if (!w.icon) w.icon = weatherIcon(w.code, w.snow > 0.1);
+        cityWeatherList.push({ city, w });
+
+        const precipBadge = w.snow>0.1 ? '❄️' : w.precip>0.5 ? '🌧️' : '';
+        const lyr = makeMarker(city.lat, city.lon, 68, `🏙️ ${city.name}`, w.temp, w.icon + precipBadge, () => {});
+        lyr.bindPopup(buildCityPopup(city, w), { maxWidth:280 });
+        lyr.on('click', function(){ this.openPopup(); });
+        lyr.addTo(layers.cities);
+    }
+    hideLoader();
+
+    // Panel with city grid
+    showPanel(`📍 ${state.name} — Cities`,
+        `${country.flag} ${country.name} • ${state.cities.length} major cities`,
+        stateWeather);
+    document.getElementById('info-panel-stats').innerHTML = cityWeatherList.map(({city,w}) => `
+        <div class="stat-card">
+            <div class="stat-icon">${w.icon}</div>
+            <div class="stat-value" style="color:${tempColor(w.temp)}">${w.temp}°C</div>
+            <div class="stat-label">🏙️ ${city.name}</div>
+        </div>`).join('');
+}
+
+function buildCityPopup(city, w) {
+    return `<div style="font-family:'Outfit',sans-serif;background:#111827;color:#fff;border-radius:12px;padding:12px;min-width:200px;">
+        <div style="font-size:1rem;font-weight:900;margin-bottom:8px;">🏙️ ${city.name}</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:0.78rem;">
+            <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:8px;text-align:center;">
+                <div style="font-size:1.3rem;font-weight:900;color:${tempColor(w.temp)}">${w.temp}°C</div>
+                <div style="color:#6b7280;font-size:0.65rem;font-weight:700;">TEMP</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:8px;text-align:center;">
+                <div style="font-size:1.3rem">${w.icon}</div>
+                <div style="color:#6b7280;font-size:0.65rem;font-weight:700;">CONDITIONS</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:8px;text-align:center;">
+                <div style="font-weight:900;">💨 ${w.wind}</div>
+                <div style="color:#6b7280;font-size:0.65rem;font-weight:700;">WIND km/h</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.06);border-radius:8px;padding:8px;text-align:center;">
+                <div style="font-weight:900;">${w.snow>0.1?'❄️ SNOW':w.precip>0.5?'💧 RAIN':'🌤️ CLEAR'}</div>
+                <div style="color:#6b7280;font-size:0.65rem;font-weight:700;">PRECIP</div>
+            </div>
+        </div>
+    </div>`;
+}
+
+// ─── Navigation ────────────────────────────────────────────────────────────
+function navigateBack() {
+    if (currentLevel === 'world') {
+        // Go back to Playmix portal
+        window.location.href = '../index.html';
+        return;
+    }
+    if (currentLevel === 'state') {
+        // City → State: go back to country's states
+        drillToCountry(currentCountry, getCountryWeather(currentCountry.code) || {temp:'--',icon:'🌡️',precip:0,snow:0,wind:'--'});
+        return;
+    }
+    if (currentLevel === 'country') {
+        // State → World
+        goToWorld();
+        return;
+    }
+}
+
+function goToWorld() {
+    currentLevel='world'; currentCountry=null; currentState=null;
+    updateHeader('🌍 Weather Map','World • Tap a country to explore','World');
+    closePanel();
+    layers.states.clearLayers(); layers.cities.clearLayers();
+    layers.states.remove(); layers.cities.remove();
+    map.addLayer(layers.world);
+    map.flyTo([20,10],2,{duration:1.5});
+}
+
+// ─── UI Helpers ────────────────────────────────────────────────────────────
+function updateHeader(title, breadcrumb, badge) {
+    document.getElementById('header-h1').textContent = title;
+    document.getElementById('breadcrumb').textContent = breadcrumb;
+    document.getElementById('level-badge').textContent = badge;
+}
+function showLoader(msg) { document.getElementById('loader-text').textContent=msg; document.getElementById('map-loader').classList.add('active'); }
+function hideLoader() { document.getElementById('map-loader').classList.remove('active'); }
+function closePanel() { document.getElementById('info-panel').classList.remove('open'); }
+function showPanel(title, subtitle, weather) {
+    document.getElementById('info-panel-title').textContent = title;
+    document.getElementById('info-panel-subtitle').textContent = subtitle;
+    document.getElementById('info-panel-stats').innerHTML = `
+        <div class="stat-card"><div class="stat-icon">${weather.icon||'🌡️'}</div><div class="stat-value" style="color:${tempColor(weather.temp)}">${weather.temp}°C</div><div class="stat-label">Major Cities Avg</div></div>
+        <div class="stat-card"><div class="stat-icon">${(weather.snow>0.1)?'❄️':(weather.precip>0.5)?'🌧️':'🌤️'}</div><div class="stat-value" style="font-size:0.9rem">${(weather.snow>0.1)?'Snow':(weather.precip>0.5)?'Rain':'Clear'}</div><div class="stat-label">Conditions</div></div>
+        <div class="stat-card"><div class="stat-icon">💨</div><div class="stat-value">${weather.wind}</div><div class="stat-label">Wind km/h</div></div>`;
+    document.getElementById('info-panel').classList.add('open');
+}
+
+// ─── Boot ──────────────────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+    initMap();
+    if (typeof prepSystem === 'function') prepSystem();
+});
+</script>
+</body>
+</html>
