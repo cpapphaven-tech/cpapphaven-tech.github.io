@@ -81,9 +81,12 @@ function loadSocialBarAd() {
 function _executeSystemSync(hardSync = false) {
     if (!shouldLoadAds()) return;
 
+    // Skip bottom ads for NewsHub and WeatherMap as requested
+    const isExcludedPage = location.pathname.includes('/NewsHub/') || location.pathname.includes('/WeatherMap/');
+
     // 1. Create containers if missing
     let bottomAd = document.getElementById('bottom-ad');
-    if (!bottomAd) {
+    if (!bottomAd && !isExcludedPage) {
         bottomAd = document.createElement('div');
         bottomAd.id = 'bottom-ad';
         bottomAd.className = 'pmg-bottom-ad';
@@ -105,7 +108,7 @@ function _executeSystemSync(hardSync = false) {
 
     // A. Bottom Unit
     const bottomContainer = document.getElementById("bottom-ad");
-    if (bottomContainer && !bottomContainer.dataset.loaded) {
+    if (bottomContainer && !bottomContainer.dataset.loaded && !isExcludedPage) {
         bottomContainer.dataset.loaded = "true";
         
         const iframe = document.createElement('iframe');

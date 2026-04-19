@@ -114,7 +114,7 @@ body, html {
 
 /* Snap Scrolling Reel */
 .reel-container {
-    height: calc(100dvh - 50px); /* Dedicated space for the bottom ad */
+    height: 100dvh;
     width: 100vw;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -124,7 +124,7 @@ body, html {
 .reel-container::-webkit-scrollbar { display: none; }
 
 .snap-card {
-    height: calc(100dvh - 50px);
+    height: 100dvh;
     width: 100vw;
     scroll-snap-align: start;
     position: relative;
@@ -299,7 +299,7 @@ body, html {
 /* ─── Swipe Hint ────────────────────────────────────────── */
 .swipe-hint {
     position: fixed;
-    bottom: 60px; /* Centered in bottom area above ad */
+    bottom: 40px; /* Centered in bottom area */
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
