@@ -456,7 +456,7 @@ body.portal-index {
 
     .pmg-side-ad,
     #adsterra-banner {
-        display: block;
+        display: none !important;
     }
 
     /* Force clearance for Side Ad (160px wide) on Portal Index */
@@ -464,7 +464,7 @@ body.portal-index {
     .portal-index .hero,
     .portal-index .game-grid,
     .portal-index footer {
-        padding-right: calc(5% + 160px) !important;
+        padding-right: 5% !important;
     }
 }
 

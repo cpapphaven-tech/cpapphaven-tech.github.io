@@ -196,13 +196,14 @@
             z-index: 9001; width: 320px; height: 50px;
         }
         @media (max-width: 1024px) {
-            .pmg-side-ad { display: none; }
+            .pmg-side-ad { display: none !important; }
             #legend { bottom: 70px; } /* Adjust legend slightly for mobile visibility */
             /* Move Leaflet attribution above the bottom ad */
             .leaflet-bottom.leaflet-right { margin-bottom: 55px; }
         }
         @media (min-width: 1024px) { 
-            #map-container { padding-right: 160px; } 
+            .pmg-side-ad { display: none !important; }
+            #map-container { padding-right: 0px; } 
         }
     </style>
 </head>
