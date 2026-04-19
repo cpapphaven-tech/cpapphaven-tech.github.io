@@ -114,7 +114,7 @@ body, html {
 
 /* Snap Scrolling Reel */
 .reel-container {
-    height: 100dvh;
+    height: calc(100dvh - 50px); /* Dedicated space for the bottom ad */
     width: 100vw;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
@@ -124,7 +124,7 @@ body, html {
 .reel-container::-webkit-scrollbar { display: none; }
 
 .snap-card {
-    height: 100dvh;
+    height: calc(100dvh - 50px);
     width: 100vw;
     scroll-snap-align: start;
     position: relative;
@@ -171,7 +171,7 @@ body, html {
 .snap-content {
     position: relative;
     z-index: 3;
-    padding: 20px 20px 100px 20px; /* Space for the 50px bottom ad banner + extra breathing room */
+    padding: 20px 20px 40px 20px; /* Reduced since card is already shorter */
 }
 
 .snap-meta {
@@ -299,7 +299,7 @@ body, html {
 /* ─── Swipe Hint ────────────────────────────────────────── */
 .swipe-hint {
     position: fixed;
-    bottom: 110px; /* Offset above the mobile ad banner */
+    bottom: 60px; /* Centered in bottom area above ad */
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
@@ -340,7 +340,7 @@ body, html {
 }
 @media (max-width: 1024px) {
     .pmg-side-ad { display: none; }
-    .snap-content { padding-bottom: 110px; }
+    .snap-content { padding-bottom: 20px; }
 }
 @media (min-width: 1024px) {
     .reel-container { padding-right: 160px; }
@@ -366,3 +366,45 @@ body, html {
 #cookie-accept { background: #3b82f6; color: white; }
 #cookie-reject { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.1); }
 .cookie-btn:hover { opacity: 0.9; }
+
+/* ─── Language Modal ─────────────────────────────────────── */
+.lang-modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 11000;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.3s;
+}
+.lang-modal.hidden { display: none; }
+.lang-modal-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85); backdrop-filter: blur(8px);
+}
+.lang-modal-content {
+    position: relative;
+    width: 90%; max-width: 450px; max-height: 80vh;
+    background: #1a1d2e; border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; overflow: hidden;
+    display: flex; flex-direction: column;
+}
+.lang-modal-header {
+    padding: 20px; border-bottom: 1px solid rgba(255,255,255,0.1);
+    display: flex; justify-content: space-between; align-items: center;
+}
+.lang-modal-header h3 { margin: 0; color: #fff; }
+.close-btn {
+    background: rgba(255,255,255,0.1); border: none; color: #ccc;
+    width: 30px; height: 30px; border-radius: 50%;
+    cursor: pointer; font-size: 1.2rem;
+}
+.lang-grid {
+    flex: 1; overflow-y: auto; padding: 20px;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+}
+.lang-item {
+    background: rgba(255,255,255,0.05); padding: 12px;
+    border-radius: 12px; color: #fff; cursor: pointer;
+    text-align: center; font-weight: 600; border: 1px solid transparent;
+}
+.lang-item:hover { background: rgba(255,255,255,0.1); border-color: #3b82f6; }
+.lang-modal-footer { padding: 15px; text-align: center; color: #888; font-size: 0.8rem; }
