@@ -171,7 +171,7 @@ body, html {
 .snap-content {
     position: relative;
     z-index: 3;
-    padding: 20px 20px 80px 20px; /* Space for the 50px bottom ad banner */
+    padding: 20px 20px 100px 20px; /* Space for the 50px bottom ad banner + extra breathing room */
 }
 
 .snap-meta {
@@ -299,7 +299,7 @@ body, html {
 /* ─── Swipe Hint ────────────────────────────────────────── */
 .swipe-hint {
     position: fixed;
-    bottom: 90px; /* Offset above the mobile ad banner */
+    bottom: 110px; /* Offset above the mobile ad banner */
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
@@ -340,7 +340,7 @@ body, html {
 }
 @media (max-width: 1024px) {
     .pmg-side-ad { display: none; }
-    .snap-content { padding-bottom: 80px; }
+    .snap-content { padding-bottom: 110px; }
 }
 @media (min-width: 1024px) {
     .reel-container { padding-right: 160px; }
