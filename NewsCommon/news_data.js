@@ -1,4 +1,4 @@
-// Auto-generated multinational news — 2026-04-19T03:14:57.230030Z
+// Auto-generated multinational news — 2026-04-19T03:40:09.574709Z
 // Languages: en, ja, de, fr, es, pt, zh, ko, ar, hi, ru, it, nl, tr, id
 window.NEWS_DATA = {
   "en": {
@@ -36,27 +36,11 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Stocks surge and oil prices plummet after Strait of Hormuz opens",
-        "link": "https://www.yahoo.com/news/videos/stocks-surge-oil-prices-plummet-134523237.html",
-        "pubDate": "2026-04-17T13:45:23Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/nbcu_713/3c0ce764759aa70b9754db653eae2201",
-        "description": ""
-      },
-      {
         "title": "Zelenskiy: Ukraine believes Russia will try again to involve Belarus in the war",
         "link": "https://www.yahoo.com/news/articles/zelenskiy-ukraine-believes-russia-try-174107373.html",
         "pubDate": "2026-04-17T20:36:20Z",
         "source": "News - Latest News & Headlines",
         "image": "https://media.zenfs.com/en/reuters.com/5bd363e1bf5e3d7dd5f4a0f78f3aebc7",
-        "description": ""
-      },
-      {
-        "title": "The Supreme Court hands a win to oil and gas companies fighting environmental lawsuits in Louisiana",
-        "link": "https://www.yahoo.com/news/articles/us--supreme-court-louisiana-chevron-154606337.html",
-        "pubDate": "2026-04-17T15:46:06Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/wgno_new_orleans_283/90487e10d576406d2a0d3c354a9353a7",
         "description": ""
       },
       {
@@ -68,19 +52,19 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "The Supreme Court hands a win to oil and gas companies fighting environmental lawsuits in Louisiana",
+        "link": "https://www.yahoo.com/news/articles/us--supreme-court-louisiana-chevron-154606337.html",
+        "pubDate": "2026-04-17T15:46:06Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/wgno_new_orleans_283/90487e10d576406d2a0d3c354a9353a7",
+        "description": ""
+      },
+      {
         "title": "I've lived in China for over 10 years and saw the OpenClaw craze unfold. The West needs to keep up.",
         "link": "https://tech.yahoo.com/ai/articles/ive-lived-china-over-10-040801942.html",
         "pubDate": "2026-04-17T04:08:01Z",
         "source": "News - Latest News & Headlines",
         "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/93d6f1c1aecd9b8f5289205c47b5f655",
-        "description": ""
-      },
-      {
-        "title": "Kremlin says Europe's drone cooperation with Ukraine shows its growing involvement in the war",
-        "link": "https://www.yahoo.com/news/articles/kremlin-says-europes-drone-cooperation-122526053.html",
-        "pubDate": "2026-04-17T12:25:26Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/reuters.com/c0a88265ef148ceaa98e736c1fefe5d9",
         "description": ""
       },
       {
@@ -92,19 +76,19 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "Kremlin says Europe's drone cooperation with Ukraine shows its growing involvement in the war",
+        "link": "https://www.yahoo.com/news/articles/kremlin-says-europes-drone-cooperation-122526053.html",
+        "pubDate": "2026-04-17T12:25:26Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/reuters.com/c0a88265ef148ceaa98e736c1fefe5d9",
+        "description": ""
+      },
+      {
         "title": "The Saudi pullback from sports investing shows even the ultra-wealthy are trying to cut costs",
         "link": "https://finance.yahoo.com/economy/articles/saudi-pullback-sports-investing-shows-095002215.html",
         "pubDate": "2026-04-17T09:50:02Z",
         "source": "News - Latest News & Headlines",
         "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/ddb69d01eb491b0b24f672fcefa1fe11",
-        "description": ""
-      },
-      {
-        "title": "Trump draws Marie Antoinette comparisons as he leans into the gilded trappings of the presidency",
-        "link": "https://www.yahoo.com/news/articles/trump-draws-marie-antoinette-comparisons-040054903.html",
-        "pubDate": "2026-04-17T04:00:54Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/ap.org/bc150679b6f9318f8b255c6eefd21c7a",
         "description": ""
       },
       {
@@ -116,11 +100,27 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "Trump draws Marie Antoinette comparisons as he leans into the gilded trappings of the presidency",
+        "link": "https://www.yahoo.com/news/articles/trump-draws-marie-antoinette-comparisons-040054903.html",
+        "pubDate": "2026-04-17T04:00:54Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/ap.org/bc150679b6f9318f8b255c6eefd21c7a",
+        "description": ""
+      },
+      {
         "title": "Iran's arsenal still has teeth. US intelligence says it still has thousands of missiles and drones.",
         "link": "https://www.yahoo.com/news/articles/irans-arsenal-still-teeth-us-130910739.html",
         "pubDate": "2026-04-17T13:09:10Z",
         "source": "News - Latest News & Headlines",
         "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/de49f3ef52c35469eb85892880805231",
+        "description": ""
+      },
+      {
+        "title": "Stocks surge and oil prices plummet after Strait of Hormuz opens",
+        "link": "https://www.yahoo.com/news/videos/stocks-surge-oil-prices-plummet-134523237.html",
+        "pubDate": "2026-04-17T13:45:23Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/nbcu_713/3c0ce764759aa70b9754db653eae2201",
         "description": ""
       },
       {
@@ -148,11 +148,11 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Nancy Guthrie latest updates: Sheriff denies report of new person of interest as search continues",
-        "link": "https://www.yahoo.com/news/us/live/nancy-guthrie-latest-updates-sheriff-denies-report-of-new-person-of-interest-as-search-continues-154428141.html",
-        "pubDate": "2026-02-10T15:44:28Z",
+        "title": "Iran reopens Strait of Hormuz, but says U.S. must end naval blockade",
+        "link": "https://www.yahoo.com/news/articles/trump-says-iran-war-end-052157501.html",
+        "pubDate": "2026-04-17T23:50:50Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://s.yimg.com/uu/api/res/1.2/fX1waTqAZqv8RIwuHyZdJg--~B/aD0yMDAwO3c9MzAwMDthcHBpZD15dGFjaHlvbg--/https://d29szjachogqwa.cloudfront.net/images/2026-02/85390bb8-ecbb-4c85-a9ac-9b4fba04b32f",
+        "image": "https://media.zenfs.com/en/reuters.com/9441c34ba02b2dc33fa12e590fa3b72a",
         "description": ""
       },
       {
@@ -490,147 +490,107 @@ window.NEWS_DATA = {
     ],
     "finance": [
       {
-        "title": "Oil prices end at 5-week lows after Iran declares Strait of Hormuz open. How soon could they return to prewar levels?",
-        "link": "https://finance.yahoo.com/markets/commodities/articles/oil-prices-end-5-week-195800666.html",
-        "pubDate": "2026-04-17T19:58:00Z",
+        "title": "Justice Department Nears Filing Antitrust Case Against Egg Producers",
+        "link": "https://www.wsj.com/politics/policy/justice-department-nears-filing-antitrust-case-against-egg-producers-2a019fc3?siteid=yhoof2&yptr=yahoo",
+        "pubDate": "2026-04-17T20:29:00Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/marketwatch_hosted_869/712d779173cd81c7104f898cc428643f",
+        "image": "https://media.zenfs.com/en/wsj.com/e64c06a554ce517775bd9ea3bbab9a59",
         "description": ""
       },
       {
-        "title": "Backdoor AI Play And Cool Nvidia Partner Warms Up Buy Point",
-        "link": "https://www.investors.com/research/ibd-stock-analysis/trane-technologies-nvidia-ai-partner-markets/?src=A00220&yptr=yahoo",
-        "pubDate": "2026-04-17T20:00:40Z",
+        "title": "Chase Freedom Unlimited review: Boost your cash-back rewards on everyday spending",
+        "link": "https://finance.yahoo.com/personal-finance/credit-cards/review/chase-freedom-unlimited-review-185350626.html",
+        "pubDate": "2024-11-12T18:53:50Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/ibd.com/b031e44e49f3889c66eb3d4dbb16b5e4",
+        "image": "https://s.yimg.com/os/creatr-uploaded-images/2024-11/82836b00-a124-11ef-b7eb-f56c92da0a9d",
         "description": ""
       },
       {
-        "title": "Why Many (or Most) of Your Stock Picks Have Not Been Successful",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/why-many-most-stock-picks-195430352.html",
-        "pubDate": "2026-04-17T19:54:30Z",
+        "title": "Nvidia rival Cerebras discloses US IPO filing as AI boom drives listings",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/nvidia-rival-cerebras-reveals-us-202745923.html",
+        "pubDate": "2026-04-17T20:27:45Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/barchart_com_477/07965ca589be5a5740f321374a9c190c",
+        "image": "https://media.zenfs.com/en/reuters-finance.com/9241a8d8111105c58dbf445a66548c0d",
         "description": ""
       },
       {
-        "title": "Beyond Meat Just Launched a New Beverage Line. Should You Buy BYND Stock Here?",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/beyond-meat-just-launched-beverage-195350055.html",
-        "pubDate": "2026-04-17T19:53:50Z",
+        "title": "Stock Market Today: Dow Surges On Hormuz Reopening; Tesla, Palantir Climb (Live Coverage)",
+        "link": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-trump-iran-netflix-stock-nflx-earnings/?src=A00220&yptr=yahoo",
+        "pubDate": "2026-04-17T20:31:44Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/barchart_com_477/0466384215f9f6cdd564be653dbe6aa7",
+        "image": "https://media.zenfs.com/en/ibd.com/e57f910d1c86872ac6c0d30f151ed035",
         "description": ""
       },
       {
-        "title": "Principal vs. Escrow: Which Should You Pay First?",
-        "link": "https://finance.yahoo.com/markets/options/articles/principal-vs-escrow-pay-first-195345894.html",
-        "pubDate": "2026-04-17T19:53:45Z",
+        "title": "Wabtec Stock Had The Elements Of A Winner. So Why Did We Sell It?",
+        "link": "https://www.investors.com/research/swing-trading/wabtec-stock-had-the-elements-of-a-winner-so-why-did-we-sell-it/?src=A00220&yptr=yahoo",
+        "pubDate": "2026-04-17T20:32:02Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/smartasset_475/6dd638723b4dc946c9c86dbc74a2a7b7",
+        "image": "https://media.zenfs.com/en/ibd.com/d37c976a92e15255c365f640582e360c",
         "description": ""
       },
       {
-        "title": "Berkshire Hathaway’s Big Utility Business Could Be Worth Close to $100 Billion",
-        "link": "https://www.barrons.com/articles/berkshire-hathaway-utility-buffett-wind-2010253a?siteid=yhoof2&yptr=yahoo",
-        "pubDate": "2026-04-17T20:01:00Z",
+        "title": "These Stocks Are Today’s Movers: Royal Caribbean, Dow Inc., Netflix, Intel, Albemarle, Autoliv, Alcoa, and More",
+        "link": "https://www.barrons.com/articles/stock-movers-3526a714?siteid=yhoof2&yptr=yahoo",
+        "pubDate": "2026-04-17T20:29:00Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/Barrons.com/2c3476d94e4ad350164b08e59a1f484f",
+        "image": "https://media.zenfs.com/en/Barrons.com/448fa49060e57238aed65d6f21c5ada3",
         "description": ""
       },
       {
-        "title": "Ex-CEO, ex-CFO of bankrupt AI company charged with fraud",
-        "link": "https://finance.yahoo.com/news/ex-ceo-ex-cfo-bankrupt-192954200.html",
-        "pubDate": "2026-04-17T19:52:23Z",
+        "title": "Stocks Soar on Middle East Peace Prospects",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-soar-middle-east-peace-202517062.html",
+        "pubDate": "2026-04-17T20:25:17Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/reuters.com/1fea1e7c74465b94582813094b644961",
+        "image": "https://media.zenfs.com/en/barchart_com_477/553713714e08964d7b30695b362ebe11",
         "description": ""
       },
       {
-        "title": "Stock market today: Dow leaps 850 points, S&P 500 and Nasdaq notch third straight record in stunning rally as US-Iran diplomacy gains steam",
-        "link": "https://finance.yahoo.com/markets/stocks/live/stock-market-today-dow-leaps-850-points-sp-500-and-nasdaq-notch-third-straight-record-in-stunning-rally-as-us-iran-diplomacy-gains-steam-230532965.html",
-        "pubDate": "2026-04-16T23:05:32Z",
+        "title": "Do I qualify for student loan forgiveness? What's changed under Trump.",
+        "link": "https://finance.yahoo.com/personal-finance/student-loans/article/do-i-qualify-for-student-loan-forgiveness-whats-changed-under-trump-174637306.html",
+        "pubDate": "2024-02-21T17:46:37Z",
         "source": "Finance",
-        "image": "https://s.yimg.com/os/creatr-uploaded-images/2026-04/c213d650-3292-11f1-bbfe-b7148f07439d",
+        "image": "https://s.yimg.com/os/creatr-images/2020-02/b8182070-4e5f-11ea-bf94-388b027af310",
         "description": ""
       },
       {
-        "title": "IPO Stock Of The Week: Japan-Based PayPay Nears First Buy Point As Public Company",
-        "link": "https://www.investors.com/stock-lists/ipo-analysis/paypay-stock-payp-markets-buy-point/?src=A00220&yptr=yahoo",
-        "pubDate": "2026-04-17T19:50:16Z",
+        "title": "Wells Fargo Active Cash Card review: Unlimited 2% cash rewards and generous intro APR",
+        "link": "https://finance.yahoo.com/personal-finance/credit-cards/review/wells-fargo-active-cash-card-180512515.html",
+        "pubDate": "2025-12-01T18:05:12Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/ibd.com/8e38f907f43fd59c05c5a9b9eca84c28",
+        "image": "https://s.yimg.com/os/creatr-uploaded-images/2024-11/51445a30-9aef-11ef-b1ff-05431fb3d446",
         "description": ""
       },
       {
-        "title": "The Iran War Went Pretty Much As History Predicted For Stock Market. What's Next?",
-        "link": "https://www.investors.com/news/iran-war-stock-market-energy-stocks/?src=A00220&yptr=yahoo",
-        "pubDate": "2026-04-17T19:48:29Z",
+        "title": "As Critical Metals Ups Its Stake in Greenland Rare Earths, Should You Buy CRML Stock Today?",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/critical-metals-ups-stake-greenland-202247912.html",
+        "pubDate": "2026-04-17T20:22:47Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/ibd.com/435ac2353d1b4d2cdd78154f59ca2cb1",
+        "image": "https://media.zenfs.com/en/barchart_com_477/ee5ff7760e647983ca57f577664bc511",
         "description": ""
       },
       {
-        "title": "Rally Drives Nasdaq 100 to Longest Winning Streak Since 2013",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/p-500-heads-toward-best-174915548.html",
-        "pubDate": "2026-04-17T20:02:14Z",
+        "title": "HIVE Digital to raise $75 million for AI and data centers",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/hive-digital-raise-75-million-203000565.html",
+        "pubDate": "2026-04-17T20:30:00Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/bloomberg_holding_pen_162/6975cce1146f71e807826b357a0ec181",
+        "image": "https://media.zenfs.com/en/thestreet_881/c3e9830db2edf2da35d019e702b1b466",
         "description": ""
       },
       {
-        "title": "3 Reasons to Buy Oracle Stock as the AI Trade Gets Riskier",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-buy-oracle-stock-194446760.html",
-        "pubDate": "2026-04-17T19:44:46Z",
+        "title": "These Space Stocks Surge Near, Above Buy Zones Amid Target Hikes, New Stakes",
+        "link": "https://www.investors.com/news/rocket-lab-firefly-intuitive-machines-stock-targets-roth-capital-echostar-sumitomo-mitsui-30-million-stake-entry-buy-zone/?src=A00220&yptr=yahoo",
+        "pubDate": "2026-04-17T20:19:26Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/barchart_com_477/98e4cd4f6696c005f1da1c101419a442",
+        "image": "https://media.zenfs.com/en/ibd.com/162af02383f8bc62571e36525091cbe4",
         "description": ""
       },
       {
-        "title": "Intel Stock, In Major Rally Mode, Set To Report Q1 Results; Lam Research, Tesla Also Due",
-        "link": "https://www.investors.com/research/earnings-preview/intel-stock-earnings-lam-research-tesla-earnings/?src=A00220&yptr=yahoo",
-        "pubDate": "2026-04-17T19:43:17Z",
+        "title": "Satellite Boom Launches STMicroelectronics Stock Into Orbit",
+        "link": "https://www.investors.com/news/technology/stm-stock-satellite-boom-benefits-stmicroelectronics/?src=A00220&yptr=yahoo",
+        "pubDate": "2026-04-17T20:20:01Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/ibd.com/5458d0196eb3c0adf8d3a87bd4098f8a",
-        "description": ""
-      },
-      {
-        "title": "Exclusive-Meta targets May 20 for first wave of layoffs; additional cuts later in 2026",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/exclusive-meta-targets-may-20-194219078.html",
-        "pubDate": "2026-04-17T19:42:19Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/reuters-finance.com/bc8113d4133ad22521ccb73357854896",
-        "description": ""
-      },
-      {
-        "title": "Netflix Stock Mauled As Video Streamer Faces Sluggish Growth Outlook",
-        "link": "https://www.investors.com/news/technology/netflix-stock-mauled-sluggish-growth-outlook/?src=A00220&yptr=yahoo",
-        "pubDate": "2026-04-17T20:15:13Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/ibd.com/64886bc36d26bf401cb9c346d4e08f49",
-        "description": ""
-      },
-      {
-        "title": "First Phosphate secures €170M mine funding boost – ICYMI",
-        "link": "https://finance.yahoo.com/sectors/energy/articles/first-phosphate-secures-170m-mine-200400934.html",
-        "pubDate": "2026-04-17T20:04:00Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/proactive_us_504/f22865f21d4ea3972207cb1f86ced1b1",
-        "description": ""
-      },
-      {
-        "title": "The S&P 500 Rips to New All Time Highs",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/p-500-rips-time-highs-201602845.html",
-        "pubDate": "2026-04-17T20:16:02Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/moby_896/cb7aab1f7b29812fba123f23188a8d7d",
-        "description": ""
-      },
-      {
-        "title": "S&P 500 Rips to Record High, Closes Above 7,100 for First Time",
-        "link": "https://finance.yahoo.com/markets/world-indices/articles/p-500-rips-record-high-201602623.html",
-        "pubDate": "2026-04-17T20:16:02Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/moby_896/cb7aab1f7b29812fba123f23188a8d7d",
+        "image": "https://media.zenfs.com/en/ibd.com/38e071f3460503d7a263d2f8bb10ea72",
         "description": ""
       },
       {
@@ -642,11 +602,51 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "How to Invest $2,000: Investment Opportunities and Examples",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/invest-2-000-investment-opportunities-193559513.html",
-        "pubDate": "2026-04-17T19:35:59Z",
+        "title": "The S&P 500 Rips to New All Time Highs",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/p-500-rips-time-highs-201602845.html",
+        "pubDate": "2026-04-17T20:16:02Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/smartasset_475/1324f860d6515d4fd3591c34da825a54",
+        "image": "https://media.zenfs.com/en/moby_896/cb7aab1f7b29812fba123f23188a8d7d",
+        "description": ""
+      },
+      {
+        "title": "Michael Saylor's MicroStrategy surges as Bitcoin breaks past $78K",
+        "link": "https://finance.yahoo.com/markets/crypto/articles/michael-saylors-microstrategy-surges-bitcoin-202719187.html",
+        "pubDate": "2026-04-17T20:27:19Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/thestreet_881/893793891e3dd9d52f869376660710d7",
+        "description": ""
+      },
+      {
+        "title": "S&P 500 Rips to Record High, Closes Above 7,100 for First Time",
+        "link": "https://finance.yahoo.com/markets/world-indices/articles/p-500-rips-record-high-201602623.html",
+        "pubDate": "2026-04-17T20:16:02Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/moby_896/cb7aab1f7b29812fba123f23188a8d7d",
+        "description": ""
+      },
+      {
+        "title": "Netflix Stock Mauled As Video Streamer Faces Sluggish Growth Outlook",
+        "link": "https://www.investors.com/news/technology/netflix-stock-mauled-sluggish-growth-outlook/?src=A00220&yptr=yahoo",
+        "pubDate": "2026-04-17T20:15:13Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/ibd.com/64886bc36d26bf401cb9c346d4e08f49",
+        "description": ""
+      },
+      {
+        "title": "Badger Meter, Inc. Q1 2026 Earnings Call Summary",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/badger-meter-inc-q1-2026-204433077.html",
+        "pubDate": "2026-04-17T20:44:33Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/moby_896/7d59ff90d182c1b7dbc0bcb82e1bd893",
+        "description": ""
+      },
+      {
+        "title": "State Street Corporation Q1 2026 Earnings Call Summary",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/state-street-corporation-q1-2026-204441088.html",
+        "pubDate": "2026-04-17T20:44:41Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/moby_896/f858b3a42c43d810c6952ab4cb99484d",
         "description": ""
       }
     ],
@@ -797,14 +797,6 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "池袋暴走 今も大切な被害者ノート",
-        "link": "https://news.yahoo.co.jp/pickup/6576782?source=rss",
-        "pubDate": "Sun, 19 Apr 2026 00:07:10 GMT",
-        "source": "!ニュース・トピックス - 主要",
-        "image": "",
-        "description": ""
-      },
-      {
         "title": "女児不明で犯人扱い 母の心の傷",
         "link": "https://news.yahoo.co.jp/pickup/6576796?source=rss",
         "pubDate": "Sun, 19 Apr 2026 01:47:13 GMT",
@@ -813,9 +805,25 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "議員バッジ 11県安い素材に変更へ",
-        "link": "https://news.yahoo.co.jp/pickup/6576793?source=rss",
-        "pubDate": "Sun, 19 Apr 2026 01:38:53 GMT",
+        "title": "渋谷区のバス停 車が突っ込む",
+        "link": "https://news.yahoo.co.jp/pickup/6576807?source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:28:46 GMT",
+        "source": "!ニュース・トピックス - 主要",
+        "image": "",
+        "description": ""
+      },
+      {
+        "title": "マンション敷地にクマ居座る 仙台",
+        "link": "https://news.yahoo.co.jp/pickup/6576802?source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:31 GMT",
+        "source": "!ニュース・トピックス - 主要",
+        "image": "",
+        "description": ""
+      },
+      {
+        "title": "大谷 ルースに並ぶ50試合連続出塁",
+        "link": "https://news.yahoo.co.jp/pickup/6576804?source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:09:11 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
@@ -824,14 +832,6 @@ window.NEWS_DATA = {
         "title": "卓球・福原愛さん 出産を報告",
         "link": "https://news.yahoo.co.jp/pickup/6576787?source=rss",
         "pubDate": "Sun, 19 Apr 2026 00:55:04 GMT",
-        "source": "!ニュース・トピックス - 主要",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "ランバイク日本一 小1が引退決意",
-        "link": "https://news.yahoo.co.jp/pickup/6576792?source=rss",
-        "pubDate": "Sun, 19 Apr 2026 01:12:10 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
@@ -1141,6 +1141,22 @@ window.NEWS_DATA = {
     ],
     "sports": [
       {
+        "title": "岡本和真が値千金同点打 復調兆し",
+        "link": "https://news.yahoo.co.jp/pickup/6576801?source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:19:09 GMT",
+        "source": "!ニュース・トピックス - スポーツ",
+        "image": "",
+        "description": ""
+      },
+      {
+        "title": "大谷 ルースに並ぶ50試合連続出塁",
+        "link": "https://news.yahoo.co.jp/pickup/6576804?source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:09:11 GMT",
+        "source": "!ニュース・トピックス - スポーツ",
+        "image": "",
+        "description": ""
+      },
+      {
         "title": "卓球・福原愛さん 出産を報告",
         "link": "https://news.yahoo.co.jp/pickup/6576787?source=rss",
         "pubDate": "Sun, 19 Apr 2026 00:55:04 GMT",
@@ -1149,17 +1165,17 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "ランバイク日本一 小1が引退決意",
-        "link": "https://news.yahoo.co.jp/pickup/6576792?source=rss",
-        "pubDate": "Sun, 19 Apr 2026 01:12:10 GMT",
+        "title": "三笘薫 超絶ボレー弾も負傷交代",
+        "link": "https://news.yahoo.co.jp/pickup/6576783?source=rss",
+        "pubDate": "Sun, 19 Apr 2026 00:34:21 GMT",
         "source": "!ニュース・トピックス - スポーツ",
         "image": "",
         "description": ""
       },
       {
-        "title": "三笘薫 超絶ボレー弾も負傷交代",
-        "link": "https://news.yahoo.co.jp/pickup/6576783?source=rss",
-        "pubDate": "Sun, 19 Apr 2026 00:34:21 GMT",
+        "title": "ランバイク日本一 小1が引退決意",
+        "link": "https://news.yahoo.co.jp/pickup/6576792?source=rss",
+        "pubDate": "Sun, 19 Apr 2026 01:12:10 GMT",
         "source": "!ニュース・トピックス - スポーツ",
         "image": "",
         "description": ""
@@ -1184,22 +1200,6 @@ window.NEWS_DATA = {
         "title": "久保建英 キャリア初タイトル獲得",
         "link": "https://news.yahoo.co.jp/pickup/6576769?source=rss",
         "pubDate": "Sat, 18 Apr 2026 22:14:19 GMT",
-        "source": "!ニュース・トピックス - スポーツ",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "J1京都監督 サポーターと一触即発",
-        "link": "https://news.yahoo.co.jp/pickup/6576764?source=rss",
-        "pubDate": "Sat, 18 Apr 2026 14:09:38 GMT",
-        "source": "!ニュース・トピックス - スポーツ",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "元阪神・関本賢太郎氏 活動を自粛",
-        "link": "https://news.yahoo.co.jp/pickup/6576762?source=rss",
-        "pubDate": "Sat, 18 Apr 2026 13:41:26 GMT",
         "source": "!ニュース・トピックス - スポーツ",
         "image": "",
         "description": ""
@@ -1407,6 +1407,14 @@ window.NEWS_DATA = {
   "de": {
     "top": [
       {
+        "title": "Bulgarien wählt",
+        "link": "https://www.tagesschau.de/ausland/europa/parlamentswahl-bulgarien-100.html",
+        "pubDate": "Sun, 19 Apr 2026 05:21:32 +0200",
+        "source": "tagesschau.de - Die Nachrichten der ARD",
+        "image": "",
+        "description": "Die Bulgaren wählen heute ein neues Parlament - zum achten Mal in fünf Jahren. Als Favorit gilt Ex-Präsident Radev, dem Kritiker zu große Russland-Nähe vorwerfen. Gelingt es, da..."
+      },
+      {
         "title": "Rattengift in Babynahrung in Österreich entdeckt",
         "link": "https://www.tagesschau.de/ausland/europa/oesterreich-hipp-erpressung-100.html",
         "pubDate": "Sun, 19 Apr 2026 01:47:43 +0200",
@@ -1557,14 +1565,6 @@ window.NEWS_DATA = {
         "source": "tagesschau.de - Die Nachrichten der ARD",
         "image": "",
         "description": "Der Iran-Krieg hat die Energiepreise in die Höhe getrieben. Als Gegenmaßnahme haben die USA die Lockerungen ihrer Sanktionen für russisches Öl um einen Monat verlängert - vor we..."
-      },
-      {
-        "title": "Armut in Deutschland: Wenn das Geld trotz Arbeit nicht reicht",
-        "link": "https://www.tagesschau.de/wirtschaft/verbraucher/armut-in-deutschland-100.html",
-        "pubDate": "Sat, 18 Apr 2026 07:36:25 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Jeder sechste Mensch in Deutschland gilt als armutsgefährdet. Gleichzeitig zieht die Inflation wieder an und verteuert vor allem Energie und Alltagskäufe. Was bedeutet das für B..."
       }
     ],
     "technology": [
@@ -2378,6 +2378,14 @@ window.NEWS_DATA = {
     ],
     "finance": [
       {
+        "title": "L’Asie s’est lancée dans la quête effrénée d’alternatives aux hydrocarbures du Moyen-Orient",
+        "link": "https://www.lemonde.fr/economie/article/2026/04/19/l-asie-s-est-lancee-dans-la-quete-effrenee-d-alternatives-aux-hydrocarbures-du-moyen-orient_6681357_3234.html",
+        "pubDate": "Sun, 19 Apr 2026 05:30:06 +0200",
+        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
+        "image": "https://img.lemde.fr/2026/04/17/135/0/3000/1500/644/322/60/0/835d472_upload-1-l4ulv1l2gipo-020-2271138000.jpg",
+        "description": "Ultradépendants du pétrole et du gaz du Golfe, fortement pénalisés par la flambée des cours, les pays de la région tentent de diversifier leurs approvisionnements. Une recherche..."
+      },
+      {
         "title": "Le ministre du travail, Jean-Pierre Farandou, écarte l’idée, portée par la CGT, d’instaurer un nouveau jour férié le 8 mars",
         "link": "https://www.lemonde.fr/politique/article/2026/04/19/le-ministre-du-travail-ecarte-l-idee-portee-par-la-cgt-d-instaurer-un-nouveau-jour-ferie-le-8-mars_6681188_823448.html",
         "pubDate": "Sun, 19 Apr 2026 01:53:14 +0200",
@@ -2528,14 +2536,6 @@ window.NEWS_DATA = {
         "source": "Économie : Toute l’actualité sur Le Monde.fr.",
         "image": "https://img.lemde.fr/2026/04/11/1756/0/3667/1833/644/322/60/0/f2b9890_upload-1-hf5aehbqpgyp-ad046-essenceprix-dsc07217.jpg",
         "description": "La guerre en Iran a fait s’envoler le cours du pétrole et pèse sur les prix à la pompe."
-      },
-      {
-        "title": "Cuba crée un statut migratoire spécial pour les investisseurs de la diaspora",
-        "link": "https://www.lemonde.fr/international/article/2026/04/18/cuba-cree-un-statut-migratoire-special-pour-les-investisseurs-de-la-diaspora_6680961_3210.html",
-        "pubDate": "Sat, 18 Apr 2026 01:23:59 +0200",
-        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
-        "image": "https://img.lemde.fr/2026/04/03/1833/0/3667/1833/644/322/60/0/02bf45b_ftp-1-4esxmetc3sz7-2026-04-03t140220z-693009535-rc2n3kao0qw6-rtrmadp-3-cuba-prisoner-amnesty.JPG",
-        "description": "Subissant une crise économique profonde depuis que Washington lui a imposé un blocus pétrolier en janvier, La Havane adopte des mesures pour attirer des devises et ouvrir davant..."
       }
     ],
     "sports": [],
@@ -2871,6 +2871,86 @@ window.NEWS_DATA = {
     "gaming": [],
     "finance": [
       {
+        "title": "Trump choca con su ‘drill, baby, drill’: la paradoja de EE UU se ahoga por la escasez de petróleo, pese a ser el primer productor mundial",
+        "link": "https://elpais.com/economia/2026-04-19/trump-choca-con-su-drill-baby-drill-la-paradoja-de-ee-uu-se-ahoga-por-la-escasez-de-petroleo-pese-a-ser-el-primer-productor-mundial.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/RUUCC62Q3FPSRMFFQLP2KDGHOU.jpg?auth=4b98421083920f782920056040f3c8bdb07a1be5bf37bf349f0d810c143e32e3",
+        "description": "La industria petrolera estadounidense tiene limitaciones para compensar la pérdida de barriles de crudo por la guerra en Irán, mientras crece la inflación y el precio de la gaso..."
+      },
+      {
+        "title": "Los empresarios españoles ante la regularización: “Es una medida necesaria”",
+        "link": "https://elpais.com/economia/2026-04-19/los-empresarios-espanoles-ante-la-regularizacion-es-una-noticia-buenisima.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/YUFO6TVGARBJDGUMDRQJYPGY6M.jpg?auth=e14692e09ae01f1202db3ed645ac80d41be9666ec8d130439b540f5bc8fcd834",
+        "description": "Las patronales del campo, de la construcción, de la dependencia o del transporte aplauden con entusiasmo la medida. CEOE expresa un apoyo tímido y se queja de que no pase por el..."
+      },
+      {
+        "title": "Joseph Stiglitz, premio Nobel de Economía: “La ideología de los millonarios tiene actualmente un grado de egoísmo alucinante”",
+        "link": "https://elpais.com/economia/negocios/2026-04-19/joseph-stiglitz-premio-nobel-de-economia-la-ideologia-de-los-millonarios-tiene-actualmente-un-grado-de-egoismo-alucinante.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/VZYB5A4BNZDGNP34GXEXXB4FPI.jpg?auth=f8d4c781238148363d80b1df8662132274f43889c1664e2ae1b29f2d693a3426",
+        "description": "El economista y profesor estadounidense denuncia que nunca ha habido un ataque a la democracia como el que se produce ahora bajo el mandato de Donald Trump y el grupo de oligarc..."
+      },
+      {
+        "title": "Desigual y el fondo Enduring se disputan Pronovias, un icono de las bodas en horas bajas",
+        "link": "https://elpais.com/economia/2026-04-19/desigual-y-el-fondo-enduring-se-disputan-pronovias-un-icono-de-las-bodas-en-horas-bajas.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/PNGREJ6O4JLQ7IBWYFDDHKIYRU.jpg?auth=45629521247b8cdac507d02134bef19c2bdc4e165ffa9d4bda45aeec7569b276",
+        "description": "Un juzgado analiza las propuestas para comprar la histórica marca de moda nupcial, al borde del concurso de acreedores"
+      },
+      {
+        "title": "La imprevisible carrera de la IA  ",
+        "link": "https://elpais.com/economia/negocios/2026-04-19/la-imprevisible-carrera-de-la-ia.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/7BCVAWFHYBK5DLIXKAQ243LUYE.jpg?auth=37c43644086242e688da77a0aabb23477183fa93cd9e621a0e34adf8b482995e",
+        "description": "En ausencia de cifras que apunten a un cambio de tendencia, la destrucción creativa continúa"
+      },
+      {
+        "title": "La IA no es solo tecnología, es una cuestión de líderes y de instituciones ",
+        "link": "https://elpais.com/economia/negocios/2026-04-19/la-ia-no-es-solo-tecnologia-es-una-cuestion-de-lideres-y-de-instituciones.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/SB2X42R62VAATL4WOZLOX4TN6Y.jpg?auth=3d89889963ff6c8432a674d45376a3cd2c3df3482e29f83c59ef2a5a89def8f4",
+        "description": "La dirección de una empresa no puede reducirse a una técnica; exige empatía y comprensión del mundo"
+      },
+      {
+        "title": "La Europa de los 46 millones de extranjeros",
+        "link": "https://elpais.com/economia/negocios/2026-04-19/la-europa-de-los-46-millones-de-extranjeros.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/V3QRELMZSRL5NAQ7VXS4CX7CVA.jpg?auth=51568ac5c72875f61787fc2243a4d61a3b68ae5d6408f2805aad4bea325b80f3",
+        "description": "En un continente que envejece, la pregunta no es si necesitamos más inmigración, sino cómo facilitamos su integración en la vida económica y social del continente"
+      },
+      {
+        "title": "El dólar no cae: se fragmenta",
+        "link": "https://elpais.com/economia/negocios/2026-04-19/el-dolar-no-cae-se-fragmenta.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/UUQ5RBJQ2VANPMLKLUJF6MYT6E.jpg?auth=072734d74fae2d74e5f0198288ed4bb3a7e45222ef5f1c8b2023e9e3731ecc13",
+        "description": "El mundo económico está aprendiendo a vivir sin depender exclusivamente del billete verde"
+      },
+      {
+        "title": "Un tesoro oculto para el diálogo social y político: el Pacto de Toledo para las pensiones",
+        "link": "https://elpais.com/economia/negocios/2026-04-19/un-tesoro-oculto-para-el-dialogo-social-y-politico-el-pacto-de-toledo-para-las-pensiones.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/2B5M4KC32VCT5DGQ6XRRK5FZ7U.jpg?auth=18869dc775ebddc1efe05ad9073ddbac9234e3286047935aab4e3b7b2f128ac9",
+        "description": "Los sistemas públicos de pensiones han actuado como un pegamento entre el capitalismo y la justicia social"
+      },
+      {
+        "title": "Se han hecho pasar por mi jefe para pedirme dinero y he picado, ¿me pueden despedir por el llamado fraude del consejero delegado?",
+        "link": "https://elpais.com/economia/negocios/2026-04-19/se-han-hecho-pasar-por-mi-jefe-para-pedirme-dinero-y-he-picado-me-pueden-despedir-por-el-llamado-fraude-del-consejero-delegado.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/POYZXWJ24ZD2LM5EGQUC2BQJCI.jpg?auth=500f02ebedf721ce22816e0c13e22574952d0b9c6187e763673ddf3ac6523d73",
+        "description": "Las técnicas de la suplantación de identidad se sofistican y los abogados cuestionan sus efectos laborales"
+      },
+      {
         "title": "El FMI advierte a Europa sobre el riesgo de despilfarro en los planes de alivio contra la guerra de Irán",
         "link": "https://elpais.com/economia/2026-04-17/el-fmi-advierte-a-europa-sobre-el-riesgo-de-despilfarro-en-los-planes-de-alivio-contra-la-guerra-de-iran.html",
         "pubDate": "Fri, 17 Apr 2026 16:05:14 GMT",
@@ -2887,14 +2967,6 @@ window.NEWS_DATA = {
         "description": "Los altos precios en los refinados, la escasez de barriles y una incertidumbre que paraliza las compras contraen el consumo ante el mayor choque de oferta de la historia"
       },
       {
-        "title": "El sindicato de Vox no consigue penetrar en las empresas más de cinco años después de su fundación",
-        "link": "https://elpais.com/economia/2026-04-17/el-sindicato-de-vox-no-consigue-penetrar-en-las-empresas-mas-de-cinco-anos-despues-de-su-fundacion.html",
-        "pubDate": "Fri, 17 Apr 2026 03:45:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/W7TVONXMERC2JNAJUKHDN6ZNRA.jpeg?auth=c8cc1b8d7a51aac3339c43bd4bda76df5b7ddbc970245dd4d775fe027cc8a976",
-        "description": "Solidaridad solo participó en la firma de dos del millar de convenios colectivos suscritos en España en 2025, según la estadística oficial del Ministerio de Trabajo"
-      },
-      {
         "title": "La inflación y el tirón del mercado laboral disparan la fiscalidad sobre salarios y pensiones a niveles récord",
         "link": "https://elpais.com/economia/2026-04-17/la-inflacion-y-el-tiron-del-mercado-laboral-disparan-la-fiscalidad-sobre-salarios-y-pensiones-a-niveles-record.html",
         "pubDate": "Fri, 17 Apr 2026 03:45:01 GMT",
@@ -2903,44 +2975,12 @@ window.NEWS_DATA = {
         "description": "El tipo efectivo del impuesto sobre la renta escala en 2025 hasta el 15,1%, el máximo de la serie histórica"
       },
       {
-        "title": "Cómo debe responder Europa a lo de Irán ",
-        "link": "https://elpais.com/economia/2026-04-18/como-debe-responder-europa-a-lo-de-iran.html",
-        "pubDate": "Sat, 18 Apr 2026 03:45:01 GMT",
+        "title": "El sindicato de Vox no consigue penetrar en las empresas más de cinco años después de su fundación",
+        "link": "https://elpais.com/economia/2026-04-17/el-sindicato-de-vox-no-consigue-penetrar-en-las-empresas-mas-de-cinco-anos-despues-de-su-fundacion.html",
+        "pubDate": "Fri, 17 Apr 2026 03:45:01 GMT",
         "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/GK5SEYODSFHTVMFOBDWDLQWFBY.JPG?auth=191a034e7663714bd046ff22b30935fd4c9e215e976a02815fa02709c233f4cc",
-        "description": "Europa debe revitalizar los mimbres del Pacto Verde y conseguir independizarse del petróleo"
-      },
-      {
-        "title": "Conectividad, un pilar de seguridad y soberanía en un mundo incierto",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-18/conectividad-un-pilar-de-seguridad-y-soberania-en-un-mundo-incierto.html",
-        "pubDate": "Sat, 18 Apr 2026 03:40:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/CFUPK7327QDS6NW2UPE6CQ24AU.jpg?auth=7cb181d4c06f6df27eb0c2942e9ff564077ee023f0ca1c3e37c5b6adc496edf9",
-        "description": "España tiene la oportunidad de consolidar un modelo basado en la seguridad, la innovación y la autonomía tecnológica"
-      },
-      {
-        "title": "Europa ya no tiene excusas. Que haga lo que tiene que hacer",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-18/europa-ya-no-tiene-excusas-que-haga-ya-lo-que-tiene-que-hacer.html",
-        "pubDate": "Sat, 18 Apr 2026 03:40:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/KX67O3M265BJTIMNTNQYOWEAY4.jpg?auth=bca3f5fef7659ac7c7951d14d95cabc13f2a5b210451bb8bddc97634c588b85c",
-        "description": "La caída de Orbán y el ocaso de Trump eliminan obstáculos para el avance de la UE. Pero hace falta la valentía que demostró otra generación de líderes, la que creó el euro"
-      },
-      {
-        "title": "Del TACO al FOMO: la reapertura da la razón a los optimistas",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-18/del-taco-al-fomo-la-reapertura-da-la-razon-a-los-optimistas.html",
-        "pubDate": "Sat, 18 Apr 2026 03:40:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/USRBB7ZMXRL33JLHZO2ZTUHOZI.jpg?auth=8827b061dc77c7b8abed56c3c6b359c8f7e8ec8316c6e37898b7975c0da7667a",
-        "description": "Salvado, aparentemente, el escenario de crisis petrolera, queda la pregunta de en qué medida el ‘shock’ puede aflorar otras vulnerabilidades"
-      },
-      {
-        "title": "Apagón eléctrico: vuelta a la casilla de salida ",
-        "link": "https://cincodias.elpais.com/companias/2026-04-18/apagon-electrico-vuelta-a-la-casilla-de-salida.html",
-        "pubDate": "Sat, 18 Apr 2026 03:30:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/P4WTQPXVUJNLPAPTQCEVIEFCMU.jpg?auth=f6c0ec99eea43ccae445c24d2e87ef2e9c567aa898b0fc22f40340ca62affc00",
-        "description": "La medida salomónica de la CNMC mete aparentemente a todas las empresas en el mismo saco y su solución final se podría prolongar año y medio"
+        "image": "https://imagenes.elpais.com/resizer/v2/W7TVONXMERC2JNAJUKHDN6ZNRA.jpeg?auth=c8cc1b8d7a51aac3339c43bd4bda76df5b7ddbc970245dd4d775fe027cc8a976",
+        "description": "Solidaridad solo participó en la firma de dos del millar de convenios colectivos suscritos en España en 2025, según la estadística oficial del Ministerio de Trabajo"
       },
       {
         "title": "Arsenio Domínguez (Organización Marítima Internacional): “No hay base legal para introducir peajes en Ormuz” ",
@@ -2989,46 +3029,6 @@ window.NEWS_DATA = {
         "source": "Economía en EL PAÍS",
         "image": "https://imagenes.elpais.com/resizer/v2/TRG2AZWURVGKXIUDWTNCPOIQC4.jpg?auth=bf49017de0668c0910adeb86a941020aa794ab4b2f127749bf3553018d3958f9",
         "description": "Los depósitos que han llegado al mercado no compensan la inflación y muchos incluyen cláusulas de permanencia o de vinculación a otros productos de la entidad"
-      },
-      {
-        "title": "Los mayores de 65 años tienen un tesoro: así pueden obtener liquidez de su vivienda sin tener que dejar de vivir en ella ",
-        "link": "https://elpais.com/economia/negocios/2026-04-18/los-mayores-de-65-anos-tienen-un-tesoro-asi-pueden-obtener-liquidez-de-su-vivienda-sin-tener-que-dejar-de-vivir-en-ella.html",
-        "pubDate": "Sat, 18 Apr 2026 03:30:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/BF6CCAOSF5HT3CXSCDK2YPHGK4.jpg?auth=4bc36b5d6dfff1b26ed7c0bea7455a4aaa18cf37151b67fc4b2d9e22f34909cd",
-        "description": "Las fórmulas que permiten convertir el piso en dinero son poco conocidas, aunque se benefician del bum inmobiliario"
-      },
-      {
-        "title": "Frustración en Los Ángeles por las entradas para los Juegos Olímpicos: precios desorbitados, impuestos y un ‘no hay billetes’ constante",
-        "link": "https://elpais.com/economia/negocios/carta-del-corresponsal/2026-04-18/frustracion-en-los-angeles-por-las-entradas-para-los-juegos-olimpicos-precios-desorbitados-impuestos-y-un-no-hay-billetes-constante.html",
-        "pubDate": "Sat, 18 Apr 2026 03:30:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/KSRTT6BLARASRKJM24C2PSX6K4.jpg?auth=439057871b9c42a33da1a91136668607cd516ec34aa6ab6948a23875968f58a7",
-        "description": "Cinco millones de vecinos se registraron para una venta inicial, pero pocos tuvieron acceso a ‘tickets’ de precios razonables: o no quedaban o costaban miles de dólares"
-      },
-      {
-        "title": "Un ‘coliving’ en Madrid para militares",
-        "link": "https://elpais.com/economia/vivienda/2026-04-17/un-coliving-en-madrid-para-militares.html",
-        "pubDate": "Fri, 17 Apr 2026 15:01:51 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/PPYM32E4WRJG5J7XDTLSI2TNBE.jpg?auth=d590d6fb8e6a8e2d4fa62c74be5fd483a5cd623321d5f50e3bcddd420946d0cd",
-        "description": "El Ministerio de Defensa pone en marcha un proyecto piloto residencial con 400 plazas para facilitar la estancia del colectivo y sus familias en la capital"
-      },
-      {
-        "title": "Bouygues, Orange e Iliad inician negociaciones exclusivas para adquirir SFR por 20.350 millones ",
-        "link": "https://cincodias.elpais.com/companias/2026-04-17/bouygues-orange-e-iliad-inician-negociaciones-exclusivas-para-adquirir-sfr-por-20350-millones.html",
-        "pubDate": "Fri, 17 Apr 2026 11:25:32 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/F3VGRZFU5NI7VAHNLTC6DUCCGM.jpg?auth=f87fad497f305472a9665ea8fd0689ce8f310faa7a0456726bff1bdd79779df0",
-        "description": "El consorcio liderado por las principales operadoras galas eleva su oferta un 20% para desbloquear la salida de Altice France"
-      },
-      {
-        "title": "El enorme poder de la nueva plutocracia: así condicionan nuestra vida y la democracia milmillonarios como Musk, Bezos o Zuckerberg ",
-        "link": "https://elpais.com/economia/negocios/2026-04-18/el-enorme-poder-de-la-nueva-plutocracia-asi-condicionan-nuestra-vida-y-la-democracia-milmillonarios-como-musk-bezos-o-zuckerberg.html",
-        "pubDate": "Sat, 18 Apr 2026 15:45:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/EV223D7HLZAVDO4YXNF4SIFHSM.tif?auth=3f0d14ef50be65e961dac5ebe91004ffe99b7d4b4e4cc0c504567d6800be3d71",
-        "description": "La riqueza se concentra cada vez en menos manos. Los mayores patrimonios del planeta transforman su dinero en influencia política para moldear a su gusto la sociedad y el sistem..."
       }
     ],
     "sports": [],
@@ -4221,6 +4221,14 @@ window.NEWS_DATA = {
   "ar": {
     "top": [
       {
+        "title": "سؤال وجواب.. كيف تعثرت \"الانفراجة الهشة\" بين أمريكا وإيران في 24 ساعة؟",
+        "link": "https://www.aljazeera.net/news/2026/4/19/3693?traffic_source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:09 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "في 24 ساعة فقط، تراجعت آمال التوصل إلى اتفاق بين أمريكا وإيران. إليك كيف أدت تغريدة لوزير الخارجية الإيراني عباس عراقجي و\"تفسير مفرط\" من الرئيس دونالد ترمب إلى إغلاق مضيق هرمز و..."
+      },
+      {
         "title": "12 هجوما إسرائيليا على لبنان في ثاني أيام وقف إطلاق النار",
         "link": "https://www.aljazeera.net/news/2026/4/19/12-%d9%87%d8%ac%d9%88%d9%85%d8%a7-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%81%d9%8a-%d8%ab%d8%a7%d9%86%d9%8a?traffic_source=rss",
         "pubDate": "Sun, 19 Apr 2026 02:27:51 +0300",
@@ -4371,18 +4379,18 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "تلقى المنتخب الألماني ونادي بايرن ميونخ ضربة موجعة بعد الإعلان عن إصابة المهاجم سيرج غنابري بتمزق عضلي حاد في الفخذ."
-      },
-      {
-        "title": "برشلونة تحتضن قمة اليسار والإبادة في غزة تغير وجه أوروبا السياسي",
-        "link": "https://www.aljazeera.net/politics/2026/4/18/%d8%a8%d8%b1%d8%b4%d9%84%d9%88%d9%86%d8%a9-%d8%aa%d8%ad%d8%aa%d8%b6%d9%86-%d9%82%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d9%81%d9%8a?traffic_source=rss",
-        "pubDate": "Sat, 18 Apr 2026 20:19:29 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "يسعى قادة اليسار حول العالم للتصدي لصعود اليمين \"المتطرف\" في قمة برشلونة \"اليسارية\"، بينما يجتمع بالتزامن قادة أقصى اليمين في ميلانو، في مشهد يكشف انقسام أوروبا السياسي."
       }
     ],
     "technology": [
       {
+        "title": "سؤال وجواب.. كيف تعثرت \"الانفراجة الهشة\" بين أمريكا وإيران في 24 ساعة؟",
+        "link": "https://www.aljazeera.net/news/2026/4/19/3693?traffic_source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:09 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "في 24 ساعة فقط، تراجعت آمال التوصل إلى اتفاق بين أمريكا وإيران. إليك كيف أدت تغريدة لوزير الخارجية الإيراني عباس عراقجي و\"تفسير مفرط\" من الرئيس دونالد ترمب إلى إغلاق مضيق هرمز و..."
+      },
+      {
         "title": "12 هجوما إسرائيليا على لبنان في ثاني أيام وقف إطلاق النار",
         "link": "https://www.aljazeera.net/news/2026/4/19/12-%d9%87%d8%ac%d9%88%d9%85%d8%a7-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%81%d9%8a-%d8%ab%d8%a7%d9%86%d9%8a?traffic_source=rss",
         "pubDate": "Sun, 19 Apr 2026 02:27:51 +0300",
@@ -4533,18 +4541,18 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "تلقى المنتخب الألماني ونادي بايرن ميونخ ضربة موجعة بعد الإعلان عن إصابة المهاجم سيرج غنابري بتمزق عضلي حاد في الفخذ."
-      },
-      {
-        "title": "برشلونة تحتضن قمة اليسار والإبادة في غزة تغير وجه أوروبا السياسي",
-        "link": "https://www.aljazeera.net/politics/2026/4/18/%d8%a8%d8%b1%d8%b4%d9%84%d9%88%d9%86%d8%a9-%d8%aa%d8%ad%d8%aa%d8%b6%d9%86-%d9%82%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d9%81%d9%8a?traffic_source=rss",
-        "pubDate": "Sat, 18 Apr 2026 20:19:29 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "يسعى قادة اليسار حول العالم للتصدي لصعود اليمين \"المتطرف\" في قمة برشلونة \"اليسارية\"، بينما يجتمع بالتزامن قادة أقصى اليمين في ميلانو، في مشهد يكشف انقسام أوروبا السياسي."
       }
     ],
     "gaming": [
       {
+        "title": "سؤال وجواب.. كيف تعثرت \"الانفراجة الهشة\" بين أمريكا وإيران في 24 ساعة؟",
+        "link": "https://www.aljazeera.net/news/2026/4/19/3693?traffic_source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:09 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "في 24 ساعة فقط، تراجعت آمال التوصل إلى اتفاق بين أمريكا وإيران. إليك كيف أدت تغريدة لوزير الخارجية الإيراني عباس عراقجي و\"تفسير مفرط\" من الرئيس دونالد ترمب إلى إغلاق مضيق هرمز و..."
+      },
+      {
         "title": "12 هجوما إسرائيليا على لبنان في ثاني أيام وقف إطلاق النار",
         "link": "https://www.aljazeera.net/news/2026/4/19/12-%d9%87%d8%ac%d9%88%d9%85%d8%a7-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%81%d9%8a-%d8%ab%d8%a7%d9%86%d9%8a?traffic_source=rss",
         "pubDate": "Sun, 19 Apr 2026 02:27:51 +0300",
@@ -4695,18 +4703,18 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "تلقى المنتخب الألماني ونادي بايرن ميونخ ضربة موجعة بعد الإعلان عن إصابة المهاجم سيرج غنابري بتمزق عضلي حاد في الفخذ."
-      },
-      {
-        "title": "برشلونة تحتضن قمة اليسار والإبادة في غزة تغير وجه أوروبا السياسي",
-        "link": "https://www.aljazeera.net/politics/2026/4/18/%d8%a8%d8%b1%d8%b4%d9%84%d9%88%d9%86%d8%a9-%d8%aa%d8%ad%d8%aa%d8%b6%d9%86-%d9%82%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d9%81%d9%8a?traffic_source=rss",
-        "pubDate": "Sat, 18 Apr 2026 20:19:29 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "يسعى قادة اليسار حول العالم للتصدي لصعود اليمين \"المتطرف\" في قمة برشلونة \"اليسارية\"، بينما يجتمع بالتزامن قادة أقصى اليمين في ميلانو، في مشهد يكشف انقسام أوروبا السياسي."
       }
     ],
     "finance": [
       {
+        "title": "سؤال وجواب.. كيف تعثرت \"الانفراجة الهشة\" بين أمريكا وإيران في 24 ساعة؟",
+        "link": "https://www.aljazeera.net/news/2026/4/19/3693?traffic_source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:09 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "في 24 ساعة فقط، تراجعت آمال التوصل إلى اتفاق بين أمريكا وإيران. إليك كيف أدت تغريدة لوزير الخارجية الإيراني عباس عراقجي و\"تفسير مفرط\" من الرئيس دونالد ترمب إلى إغلاق مضيق هرمز و..."
+      },
+      {
         "title": "12 هجوما إسرائيليا على لبنان في ثاني أيام وقف إطلاق النار",
         "link": "https://www.aljazeera.net/news/2026/4/19/12-%d9%87%d8%ac%d9%88%d9%85%d8%a7-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%81%d9%8a-%d8%ab%d8%a7%d9%86%d9%8a?traffic_source=rss",
         "pubDate": "Sun, 19 Apr 2026 02:27:51 +0300",
@@ -4857,18 +4865,18 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "تلقى المنتخب الألماني ونادي بايرن ميونخ ضربة موجعة بعد الإعلان عن إصابة المهاجم سيرج غنابري بتمزق عضلي حاد في الفخذ."
-      },
-      {
-        "title": "برشلونة تحتضن قمة اليسار والإبادة في غزة تغير وجه أوروبا السياسي",
-        "link": "https://www.aljazeera.net/politics/2026/4/18/%d8%a8%d8%b1%d8%b4%d9%84%d9%88%d9%86%d8%a9-%d8%aa%d8%ad%d8%aa%d8%b6%d9%86-%d9%82%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d9%81%d9%8a?traffic_source=rss",
-        "pubDate": "Sat, 18 Apr 2026 20:19:29 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "يسعى قادة اليسار حول العالم للتصدي لصعود اليمين \"المتطرف\" في قمة برشلونة \"اليسارية\"، بينما يجتمع بالتزامن قادة أقصى اليمين في ميلانو، في مشهد يكشف انقسام أوروبا السياسي."
       }
     ],
     "sports": [
       {
+        "title": "سؤال وجواب.. كيف تعثرت \"الانفراجة الهشة\" بين أمريكا وإيران في 24 ساعة؟",
+        "link": "https://www.aljazeera.net/news/2026/4/19/3693?traffic_source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:09 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "في 24 ساعة فقط، تراجعت آمال التوصل إلى اتفاق بين أمريكا وإيران. إليك كيف أدت تغريدة لوزير الخارجية الإيراني عباس عراقجي و\"تفسير مفرط\" من الرئيس دونالد ترمب إلى إغلاق مضيق هرمز و..."
+      },
+      {
         "title": "12 هجوما إسرائيليا على لبنان في ثاني أيام وقف إطلاق النار",
         "link": "https://www.aljazeera.net/news/2026/4/19/12-%d9%87%d8%ac%d9%88%d9%85%d8%a7-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%81%d9%8a-%d8%ab%d8%a7%d9%86%d9%8a?traffic_source=rss",
         "pubDate": "Sun, 19 Apr 2026 02:27:51 +0300",
@@ -5019,18 +5027,18 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "تلقى المنتخب الألماني ونادي بايرن ميونخ ضربة موجعة بعد الإعلان عن إصابة المهاجم سيرج غنابري بتمزق عضلي حاد في الفخذ."
-      },
-      {
-        "title": "برشلونة تحتضن قمة اليسار والإبادة في غزة تغير وجه أوروبا السياسي",
-        "link": "https://www.aljazeera.net/politics/2026/4/18/%d8%a8%d8%b1%d8%b4%d9%84%d9%88%d9%86%d8%a9-%d8%aa%d8%ad%d8%aa%d8%b6%d9%86-%d9%82%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d9%81%d9%8a?traffic_source=rss",
-        "pubDate": "Sat, 18 Apr 2026 20:19:29 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "يسعى قادة اليسار حول العالم للتصدي لصعود اليمين \"المتطرف\" في قمة برشلونة \"اليسارية\"، بينما يجتمع بالتزامن قادة أقصى اليمين في ميلانو، في مشهد يكشف انقسام أوروبا السياسي."
       }
     ],
     "entertainment": [
       {
+        "title": "سؤال وجواب.. كيف تعثرت \"الانفراجة الهشة\" بين أمريكا وإيران في 24 ساعة؟",
+        "link": "https://www.aljazeera.net/news/2026/4/19/3693?traffic_source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:09 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "في 24 ساعة فقط، تراجعت آمال التوصل إلى اتفاق بين أمريكا وإيران. إليك كيف أدت تغريدة لوزير الخارجية الإيراني عباس عراقجي و\"تفسير مفرط\" من الرئيس دونالد ترمب إلى إغلاق مضيق هرمز و..."
+      },
+      {
         "title": "12 هجوما إسرائيليا على لبنان في ثاني أيام وقف إطلاق النار",
         "link": "https://www.aljazeera.net/news/2026/4/19/12-%d9%87%d8%ac%d9%88%d9%85%d8%a7-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%81%d9%8a-%d8%ab%d8%a7%d9%86%d9%8a?traffic_source=rss",
         "pubDate": "Sun, 19 Apr 2026 02:27:51 +0300",
@@ -5181,18 +5189,18 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "تلقى المنتخب الألماني ونادي بايرن ميونخ ضربة موجعة بعد الإعلان عن إصابة المهاجم سيرج غنابري بتمزق عضلي حاد في الفخذ."
-      },
-      {
-        "title": "برشلونة تحتضن قمة اليسار والإبادة في غزة تغير وجه أوروبا السياسي",
-        "link": "https://www.aljazeera.net/politics/2026/4/18/%d8%a8%d8%b1%d8%b4%d9%84%d9%88%d9%86%d8%a9-%d8%aa%d8%ad%d8%aa%d8%b6%d9%86-%d9%82%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d9%81%d9%8a?traffic_source=rss",
-        "pubDate": "Sat, 18 Apr 2026 20:19:29 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "يسعى قادة اليسار حول العالم للتصدي لصعود اليمين \"المتطرف\" في قمة برشلونة \"اليسارية\"، بينما يجتمع بالتزامن قادة أقصى اليمين في ميلانو، في مشهد يكشف انقسام أوروبا السياسي."
       }
     ],
     "health": [
       {
+        "title": "سؤال وجواب.. كيف تعثرت \"الانفراجة الهشة\" بين أمريكا وإيران في 24 ساعة؟",
+        "link": "https://www.aljazeera.net/news/2026/4/19/3693?traffic_source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:09 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "في 24 ساعة فقط، تراجعت آمال التوصل إلى اتفاق بين أمريكا وإيران. إليك كيف أدت تغريدة لوزير الخارجية الإيراني عباس عراقجي و\"تفسير مفرط\" من الرئيس دونالد ترمب إلى إغلاق مضيق هرمز و..."
+      },
+      {
         "title": "12 هجوما إسرائيليا على لبنان في ثاني أيام وقف إطلاق النار",
         "link": "https://www.aljazeera.net/news/2026/4/19/12-%d9%87%d8%ac%d9%88%d9%85%d8%a7-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%81%d9%8a-%d8%ab%d8%a7%d9%86%d9%8a?traffic_source=rss",
         "pubDate": "Sun, 19 Apr 2026 02:27:51 +0300",
@@ -5343,18 +5351,18 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "تلقى المنتخب الألماني ونادي بايرن ميونخ ضربة موجعة بعد الإعلان عن إصابة المهاجم سيرج غنابري بتمزق عضلي حاد في الفخذ."
-      },
-      {
-        "title": "برشلونة تحتضن قمة اليسار والإبادة في غزة تغير وجه أوروبا السياسي",
-        "link": "https://www.aljazeera.net/politics/2026/4/18/%d8%a8%d8%b1%d8%b4%d9%84%d9%88%d9%86%d8%a9-%d8%aa%d8%ad%d8%aa%d8%b6%d9%86-%d9%82%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d9%81%d9%8a?traffic_source=rss",
-        "pubDate": "Sat, 18 Apr 2026 20:19:29 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "يسعى قادة اليسار حول العالم للتصدي لصعود اليمين \"المتطرف\" في قمة برشلونة \"اليسارية\"، بينما يجتمع بالتزامن قادة أقصى اليمين في ميلانو، في مشهد يكشف انقسام أوروبا السياسي."
       }
     ],
     "science": [
       {
+        "title": "سؤال وجواب.. كيف تعثرت \"الانفراجة الهشة\" بين أمريكا وإيران في 24 ساعة؟",
+        "link": "https://www.aljazeera.net/news/2026/4/19/3693?traffic_source=rss",
+        "pubDate": "Sun, 19 Apr 2026 03:08:09 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "في 24 ساعة فقط، تراجعت آمال التوصل إلى اتفاق بين أمريكا وإيران. إليك كيف أدت تغريدة لوزير الخارجية الإيراني عباس عراقجي و\"تفسير مفرط\" من الرئيس دونالد ترمب إلى إغلاق مضيق هرمز و..."
+      },
+      {
         "title": "12 هجوما إسرائيليا على لبنان في ثاني أيام وقف إطلاق النار",
         "link": "https://www.aljazeera.net/news/2026/4/19/12-%d9%87%d8%ac%d9%88%d9%85%d8%a7-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%a7-%d8%b9%d9%84%d9%89-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d9%81%d9%8a-%d8%ab%d8%a7%d9%86%d9%8a?traffic_source=rss",
         "pubDate": "Sun, 19 Apr 2026 02:27:51 +0300",
@@ -5505,14 +5513,6 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "تلقى المنتخب الألماني ونادي بايرن ميونخ ضربة موجعة بعد الإعلان عن إصابة المهاجم سيرج غنابري بتمزق عضلي حاد في الفخذ."
-      },
-      {
-        "title": "برشلونة تحتضن قمة اليسار والإبادة في غزة تغير وجه أوروبا السياسي",
-        "link": "https://www.aljazeera.net/politics/2026/4/18/%d8%a8%d8%b1%d8%b4%d9%84%d9%88%d9%86%d8%a9-%d8%aa%d8%ad%d8%aa%d8%b6%d9%86-%d9%82%d9%85%d8%a9-%d8%a7%d9%84%d9%8a%d8%b3%d8%a7%d8%b1-%d9%88%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d9%81%d9%8a?traffic_source=rss",
-        "pubDate": "Sat, 18 Apr 2026 20:19:29 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "يسعى قادة اليسار حول العالم للتصدي لصعود اليمين \"المتطرف\" في قمة برشلونة \"اليسارية\"، بينما يجتمع بالتزامن قادة أقصى اليمين في ميلانو، في مشهد يكشف انقسام أوروبا السياسي."
       }
     ]
   },
