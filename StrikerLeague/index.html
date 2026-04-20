@@ -236,6 +236,8 @@
         </div>
     </section>
 
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
     <script defer src="game.js"></script>
     <script>
         window.addEventListener('load', function () {
@@ -245,6 +247,7 @@
                 if (fill) fill.style.width = '100%';
                 setTimeout(function () { loader.classList.add('hidden'); }, 300);
             }
+            if (typeof prepSystem === 'function') prepSystem();
         });
     </script>
 </body>
