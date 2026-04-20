@@ -23,12 +23,18 @@ body {
 #gameCanvas {
     display: block;
     position: fixed;
-    top: 0;
+    top: 60px; /* Safe space for header/score */
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 160px); /* 60px top + 100px bottom ad space */
     z-index: 5;
     background: #0d5c1d;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+body.pmg-sidebar-open #gameCanvas {
+    left: 280px;
+    width: calc(100vw - 280px);
 }
 
 #ui-layer {
@@ -36,9 +42,15 @@ body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* UI covers full screen to handle modals, but elements are placed relatively */
     z-index: 1000;
     pointer-events: none;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+body.pmg-sidebar-open #ui-layer {
+    left: 280px;
+    width: calc(100vw - 280px);
 }
 
 .screen {
@@ -55,7 +67,8 @@ body {
     backdrop-filter: blur(12px);
     z-index: 100;
     transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    pointer-events: all;
+    pointer-events: auto; /* Standard for HTML */
+    padding-bottom: 50px; /* Shift content up slightly to avoid middle-side toggle button */
 }
 
 .screen.hidden {
@@ -107,7 +120,8 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 10px 0;
-    pointer-events: all;
+    pointer-events: auto;
+    z-index: 110;
 }
 
 .pmg-btn:hover {
@@ -129,22 +143,25 @@ body {
 }
 
 #hud {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 600px;
-    padding: 15px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    padding: 0 30px 0 100px; /* Leave space for back button on the left */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: none;
-    z-index: 50;
+    background: #000;
+    border-bottom: 2px solid rgba(0, 255, 68, 0.4);
+    z-index: 1001;
+    pointer-events: all;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+body.pmg-sidebar-open #hud {
+    left: 280px;
+    width: calc(100vw - 280px);
 }
 
 .hud-team {
@@ -234,19 +251,20 @@ body {
 }
 
 .back-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
+    position: fixed;
+    top: 12px; 
+    left: 15px;
+    z-index: 1002;
     color: white;
     text-decoration: none;
     font-weight: 700;
     background: rgba(255, 255, 255, 0.1);
-    padding: 10px 20px;
-    border-radius: 12px;
+    padding: 6px 14px;
+    border-radius: 8px;
     backdrop-filter: blur(5px);
     transition: all 0.2s;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
 }
 
 .stats-container {

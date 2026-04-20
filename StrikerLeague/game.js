@@ -47,13 +47,11 @@ const Game = {
 
     resize() {
         dpr = window.devicePixelRatio || 1;
-        this.width = window.innerWidth;
-        this.height = window.innerHeight;
+        this.width = canvas.clientWidth;
+        this.height = canvas.clientHeight;
         
         canvas.width = this.width * dpr;
         canvas.height = this.height * dpr;
-        canvas.style.width = this.width + 'px';
-        canvas.style.height = this.height + 'px';
         
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.scale(dpr, dpr);
@@ -194,6 +192,7 @@ const Game = {
         this.saves = 0;
         this.kickoffDelay = 120; // 2 seconds
         this.goalScored = false;
+        this.goalHeight = 180;
 
         this.width = window.innerWidth;
         this.height = window.innerHeight;
@@ -328,8 +327,8 @@ const Game = {
         this.ball.trail.forEach(t => t.alpha -= 0.1);
 
         // Boundaries
-        const goalTop = this.height / 2 - 60;
-        const goalBottom = this.height / 2 + 60;
+        const goalTop = this.height / 2 - this.goalHeight / 2;
+        const goalBottom = this.height / 2 + this.goalHeight / 2;
 
         if (this.ball.y - this.ball.radius < 0) {
             this.ball.y = this.ball.radius;
@@ -361,7 +360,7 @@ const Game = {
             this.onGoal('#00ff44');
         }
 
-        // Ball-player collision
+        // Ball-player collision with stuck prevention
         [...this.homePlayers, ...this.awayPlayers].forEach(p => {
             const dx = this.ball.x - p.x;
             const dy = this.ball.y - p.y;
@@ -373,7 +372,14 @@ const Game = {
                 this.ball.x = p.x + Math.cos(angle) * minDist;
                 this.ball.y = p.y + Math.sin(angle) * minDist;
 
-                const force = 2.5;
+                let force = 2.5;
+                
+                // Anti-stuck: If near boundaries, increase force to "pop" the ball out
+                if (this.ball.x < 50 || this.ball.x > this.width - 50 || 
+                    this.ball.y < 50 || this.ball.y > this.height - 50) {
+                    force = 5.0; // Stronger kick near corners/walls
+                }
+
                 this.ball.vx += Math.cos(angle) * force;
                 this.ball.vy += Math.sin(angle) * force;
                 this.ball.owner = p;
@@ -547,7 +553,7 @@ const Game = {
         ctx.beginPath(); ctx.arc(w / 2, h / 2, 4, 0, Math.PI * 2); ctx.fillStyle = 'rgba(255, 255, 255, 0.6)'; ctx.fill();
 
         // Goals
-        const goalH = 120;
+        const goalH = this.goalHeight || 120;
         const goalY = h / 2 - goalH / 2;
         ctx.strokeStyle = 'rgba(255, 255, 255, 0.8)';
         ctx.lineWidth = 3;
@@ -555,8 +561,8 @@ const Game = {
         ctx.strokeRect(w - 20, goalY, 20, goalH); ctx.fillRect(w - 20, goalY, 20, goalH);
 
         // Penalty boxes
-        ctx.strokeRect(0, h / 2 - 100, 80, 200);
-        ctx.strokeRect(w - 80, h / 2 - 100, 80, 200);
+        ctx.strokeRect(0, h / 2 - (this.goalHeight || 120) * 0.8, 80, (this.goalHeight || 120) * 1.6);
+        ctx.strokeRect(w - 80, h / 2 - (this.goalHeight || 120) * 0.8, 80, (this.goalHeight || 120) * 1.6);
 
         if (this.state === 'playing' && this.ball) {
             // Drag line
@@ -637,6 +643,11 @@ const Game = {
     loop(timestamp) {
         const dt = Math.min((timestamp - this.lastTime) / 16.67, 3);
         this.lastTime = timestamp;
+
+        if (this.width !== canvas.clientWidth || this.height !== canvas.clientHeight) {
+            this.resize();
+        }
+
         this.update(dt || 1);
         this.draw();
         requestAnimationFrame((t) => this.loop(t));
