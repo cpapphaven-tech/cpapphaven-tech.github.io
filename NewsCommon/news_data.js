@@ -1,4 +1,4 @@
-// Auto-generated multinational news — 2026-04-20T03:19:47.432283Z
+// Auto-generated multinational news — 2026-04-20T03:42:19.076836Z
 // Languages: en, ja, de, fr, es, pt, zh, ko, ar, hi, ru, it, nl, tr, id
 window.NEWS_DATA = {
   "en": {
@@ -24,7 +24,7 @@ window.NEWS_DATA = {
         "link": "https://www.yahoo.com/news/articles/least-170-soldiers-killed-54-005346109.html",
         "pubDate": "2026-04-20T00:53:46Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/jerusalem_post_articles_818/97352ec0456262de23934e4c320cebb5",
+        "image": "https://media.zenfs.com/en/jerusalem_post_articles_818/36492e9f109312fc218eea7eb79549eb",
         "description": ""
       },
       {
@@ -62,22 +62,6 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "ECB Moves Away From April Hike as Peace Talks Progress",
-        "link": "https://finance.yahoo.com/economy/policy/articles/ecb-moves-away-april-hike-140012989.html",
-        "pubDate": "2026-04-18T14:00:12Z",
-        "source": "News - Latest News & Headlines",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "Louisiana father kills 7 of his children plus another child in shooting at house, police say",
-        "link": "https://www.yahoo.com/news/articles/8-children-between-ages-1-155906012.html",
-        "pubDate": "2026-04-19T15:59:06Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/ap.org/f053f8359e84fea3aefbfeca56200245",
-        "description": ""
-      },
-      {
         "title": "Putin finally admits Russia’s economy is in trouble and grasps for answers, after warnings about a financial crisis have been piling up",
         "link": "https://finance.yahoo.com/economy/articles/putin-finally-admits-russia-economy-215355032.html",
         "pubDate": "2026-04-18T21:53:55Z",
@@ -86,11 +70,27 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "Man kills 7 of his children plus another child in shooting in Louisiana neighborhood",
+        "link": "https://www.yahoo.com/news/articles/8-children-between-ages-1-155906012.html",
+        "pubDate": "2026-04-19T15:59:06Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/ap.org/f053f8359e84fea3aefbfeca56200245",
+        "description": ""
+      },
+      {
         "title": "I'm a millennial pastor in Hawaii who started renting out my car to pay for diapers. I made $3 million last year.",
         "link": "https://finance.yahoo.com/markets/stocks/articles/im-millennial-pastor-hawaii-started-081101481.html",
         "pubDate": "2026-04-19T08:11:01Z",
         "source": "News - Latest News & Headlines",
         "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/108fc5f3a87ec1ea1c8eaf321a52190b",
+        "description": ""
+      },
+      {
+        "title": "Renowned physicist alarmed by 'unheard of' number of scientists dying or vanishing now on White House's radar",
+        "link": "https://www.yahoo.com/news/articles/renowned-physicist-alarmed-unheard-number-110015603.html",
+        "pubDate": "2026-04-18T11:00:15Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/fox_news_text_979/34f2675a2b8a31ae7459e68231eb34ff",
         "description": ""
       },
       {
@@ -110,19 +110,19 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "I graduated from Stanford and couldn't find a job, so I created my own. I turned it into a six-figure business.",
-        "link": "https://www.yahoo.com/lifestyle/articles/graduated-stanford-couldnt-job-created-122701340.html",
-        "pubDate": "2026-04-18T12:27:01Z",
+        "title": "Northeast blasted with sudden snow and freezing temperatures",
+        "link": "https://www.yahoo.com/news/videos/northeast-blasted-sudden-snow-freezing-221220753.html",
+        "pubDate": "2026-04-19T22:12:20Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/3935f5ab97679669b2276ef605b70993",
+        "image": "https://media.zenfs.com/en/nbcu_713/35d1e622c47990459af3e31bf504de65",
         "description": ""
       },
       {
-        "title": "How Will Markets React to Strait of Hormuz Being Closed Again?",
-        "link": "https://www.yahoo.com/news/videos/markets-react-strait-hormuz-being-125044768.html",
-        "pubDate": "2026-04-18T12:50:44Z",
+        "title": "A humanoid robot sprints to victory in Beijing, beating the human half-marathon world record",
+        "link": "https://www.yahoo.com/news/articles/humanoid-robot-sprints-victory-beijing-040036560.html",
+        "pubDate": "2026-04-19T04:00:36Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/nbcu_713/594cf5f802e24accca83a2d86bf55201",
+        "image": "https://media.zenfs.com/en/ap.org/7af0c08062783e78190b3c6584b0f7f4",
         "description": ""
       },
       {
@@ -142,11 +142,11 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "A humanoid robot sprints to victory in Beijing, beating the human half-marathon world record",
-        "link": "https://www.yahoo.com/news/articles/humanoid-robot-sprints-victory-beijing-040036560.html",
-        "pubDate": "2026-04-19T04:00:36Z",
+        "title": "Weapons-grade chemical carfentanil surges as dangerous substitute for fentanyl",
+        "link": "https://www.yahoo.com/news/articles/weapons-grade-chemical-carfentanil-surges-035752252.html",
+        "pubDate": "2026-04-18T03:57:52Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/ap.org/7af0c08062783e78190b3c6584b0f7f4",
+        "image": "https://media.zenfs.com/en/ap.org/7226f4cc637448a2e1067064baf02593",
         "description": ""
       },
       {
@@ -166,11 +166,11 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Weapons-grade chemical carfentanil surges as dangerous substitute for fentanyl",
-        "link": "https://www.yahoo.com/news/articles/weapons-grade-chemical-carfentanil-surges-035752252.html",
-        "pubDate": "2026-04-18T03:57:52Z",
+        "title": "Russia has looted thousands of Ukrainian cultural objects in the war. Finding them is a challenge",
+        "link": "https://www.yahoo.com/news/articles/russia-looted-thousands-ukrainian-cultural-062747510.html",
+        "pubDate": "2026-04-18T06:27:47Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/ap.org/7226f4cc637448a2e1067064baf02593",
+        "image": "https://media.zenfs.com/en/ap.org/de53a29e16ac08e63027fe8da0d6872a",
         "description": ""
       },
       {
@@ -190,11 +190,11 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "The US backs a South Africa project to extract rare earths despite a diplomatic clash",
-        "link": "https://www.yahoo.com/news/articles/us-backs-south-africa-project-040514508.html",
-        "pubDate": "2026-04-19T04:05:14Z",
+        "title": "With a handshake, Spain and Mexico put diplomatic tussle over their colonial past behind them",
+        "link": "https://www.yahoo.com/news/articles/handshake-spain-mexico-put-diplomatic-111012021.html",
+        "pubDate": "2026-04-18T11:10:12Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/ap.org/192a582b4a9f47d0c8348986cd7e240c",
+        "image": "https://media.zenfs.com/en/ap.org/5f189c08de48729c5583e4e1c3f1c061",
         "description": ""
       },
       {
@@ -540,14 +540,6 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Netflix’s Q1 Dip Is a Buying Opportunity—Here’s the Bull Case",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/netflix-q1-dip-buying-opportunity-153002067.html",
-        "pubDate": "2026-04-18T15:30:02Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/barchart_com_477/f6f52bffea7da044754aaa0e8feb0b5f",
-        "description": ""
-      },
-      {
         "title": "ADB chief warns of yen pressure from Japan's too-slow rate hikes",
         "link": "https://finance.yahoo.com/markets/currencies/articles/adb-chief-warns-yen-pressure-163900561.html",
         "pubDate": "2026-04-18T16:39:00Z",
@@ -561,22 +553,6 @@ window.NEWS_DATA = {
         "pubDate": "2026-04-18T17:00:00Z",
         "source": "Finance",
         "image": "https://media.zenfs.com/en/oilprice.com/1ce74d11c3373761c2004d851d4ade91",
-        "description": ""
-      },
-      {
-        "title": "X Says Cashtags Drove $1 Billion in Trading Volume Within Two Days",
-        "link": "https://finance.yahoo.com/markets/crypto/articles/x-says-cashtags-drove-1-150700942.html",
-        "pubDate": "2026-04-18T15:07:00Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/cryptoprowl_304/0b83510ecce72f1c87f81fac0091c345",
-        "description": ""
-      },
-      {
-        "title": "Home Depot salaries: From sales rep to CEO",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/home-depot-salaries-sales-rep-165200245.html",
-        "pubDate": "2026-04-19T16:52:00Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/thestreet_881/7bcd6ce76f46adc97a39ac768d7585cd",
         "description": ""
       },
       {
@@ -596,6 +572,14 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "Home Depot salaries: From sales rep to CEO",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/home-depot-salaries-sales-rep-165200245.html",
+        "pubDate": "2026-04-19T16:52:00Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/thestreet_881/7bcd6ce76f46adc97a39ac768d7585cd",
+        "description": ""
+      },
+      {
         "title": "Is Microsoft (MSFT) One of the Best Unrivaled Stocks of the Next 5 Years?",
         "link": "https://finance.yahoo.com/markets/stocks/articles/microsoft-msft-one-best-unrivaled-184144197.html",
         "pubDate": "2026-04-18T18:41:44Z",
@@ -609,14 +593,6 @@ window.NEWS_DATA = {
         "pubDate": "2026-04-18T18:47:21Z",
         "source": "Finance",
         "image": "https://media.zenfs.com/en/insidermonkey.com/f6f178ce5932ec386ee19c63f9fc1947",
-        "description": ""
-      },
-      {
-        "title": "The Investing Mistake Almost Everyone Makes in Their 50s",
-        "link": "https://finance.yahoo.com/markets/articles/investing-mistake-almost-everyone-makes-160705374.html",
-        "pubDate": "2026-04-18T16:07:05Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/gobankingrates_644/cd690defca64c82f841d68c55ba9a3fb",
         "description": ""
       },
       {
@@ -636,6 +612,14 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "Justin Sun Says Bitcoin 'Debates,' Ethereum Forms 'Research Committees,' While Tron 'Builds' As Blockchain Unveils Post-Quantum Initiative",
+        "link": "https://finance.yahoo.com/markets/crypto/articles/justin-sun-says-bitcoin-debates-163115646.html",
+        "pubDate": "2026-04-18T16:31:15Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/benzinga_79/a982dcc21871b82cf125e957d7c69766",
+        "description": ""
+      },
+      {
         "title": "Visa (V) Launches Validator Node on Tempo Network",
         "link": "https://finance.yahoo.com/markets/crypto/articles/visa-v-launches-validator-node-184939595.html",
         "pubDate": "2026-04-18T18:49:39Z",
@@ -649,14 +633,6 @@ window.NEWS_DATA = {
         "pubDate": "2026-04-18T18:50:18Z",
         "source": "Finance",
         "image": "https://media.zenfs.com/en/insidermonkey.com/1329434e26e794dd4fa201803012e840",
-        "description": ""
-      },
-      {
-        "title": "E-commerce giant shuts down office as layoffs rise",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/e-commerce-giant-shuts-down-160300903.html",
-        "pubDate": "2026-04-18T16:03:00Z",
-        "source": "Finance",
-        "image": "https://media.zenfs.com/en/thestreet_881/f05a1fa08359954cf882b51e12ed5a64",
         "description": ""
       },
       {
@@ -676,6 +652,14 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "Venture Capitalist Marc Andreessen: 'The Grand Unification Of AI And Crypto Is About To Happen'",
+        "link": "https://finance.yahoo.com/markets/crypto/articles/venture-capitalist-marc-andreessen-grand-163112162.html",
+        "pubDate": "2026-04-18T16:31:12Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/benzinga_79/6589800745f36c1bfabebace491ec5e3",
+        "description": ""
+      },
+      {
         "title": "Jim Cramer on Fastly (FSLY): “I Think It’s a Buy”",
         "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-fastly-fsly-think-185344344.html",
         "pubDate": "2026-04-18T18:53:44Z",
@@ -689,6 +673,22 @@ window.NEWS_DATA = {
         "pubDate": "2026-04-18T18:54:46Z",
         "source": "Finance",
         "image": "https://media.zenfs.com/en/insidermonkey.com/f6497930c7732eef3c7d79847d97e1aa",
+        "description": ""
+      },
+      {
+        "title": "Jim Cramer on GE Vernova (GEV): “We’re Comfortable With the Numbers and the Timeframe”",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-ge-vernova-gev-185608725.html",
+        "pubDate": "2026-04-18T18:56:08Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/insidermonkey.com/3d514494e70559fab2160c9e252902be",
+        "description": ""
+      },
+      {
+        "title": "Jim Cramer Believes “IBM’s a Terrific Buy Here”",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/jim-cramer-believes-ibm-terrific-185656714.html",
+        "pubDate": "2026-04-18T18:56:56Z",
+        "source": "Finance",
+        "image": "https://media.zenfs.com/en/insidermonkey.com/9ada7a5ae5dc68ceb67a8c2d41077563",
         "description": ""
       }
     ],
@@ -921,6 +921,14 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "退職代行の利用者 転職難航の背景",
+        "link": "https://news.yahoo.co.jp/pickup/6576920?source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:03:21 GMT",
+        "source": "!ニュース・トピックス - 主要",
+        "image": "",
+        "description": ""
+      },
+      {
         "title": "ギルティ炭酸 担当者が語る勝因",
         "link": "https://news.yahoo.co.jp/pickup/6576923?source=rss",
         "pubDate": "Mon, 20 Apr 2026 03:00:06 GMT",
@@ -932,14 +940,6 @@ window.NEWS_DATA = {
         "title": "りくりゅう所属 オファー100倍超",
         "link": "https://news.yahoo.co.jp/pickup/6576906?source=rss",
         "pubDate": "Mon, 20 Apr 2026 00:56:39 GMT",
-        "source": "!ニュース・トピックス - 主要",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "岡本が16試合ぶり3号 復調の兆し",
-        "link": "https://news.yahoo.co.jp/pickup/6576914?source=rss",
-        "pubDate": "Mon, 20 Apr 2026 02:23:40 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
@@ -1012,6 +1012,22 @@ window.NEWS_DATA = {
       }
     ],
     "gaming": [
+      {
+        "title": "【マリオ】USJ「スーパー・ニンテンドー・ワールド」に新グッズ多数登場！ クリボーのクレープロールやヨッシーのクッションなど",
+        "link": "https://game.watch.impress.co.jp/docs/news/2102883.html",
+        "pubDate": "2026-04-20T12:26:07+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "ユニバーサル・スタジオ・ジャパンは、「スーパー・ニンテンドー・ワールド」の新商品「クリボー クレープロール」（1,700円）、「ヨッシー クッション」（4,900円）などを発売した。"
+      },
+      {
+        "title": "スシローで「崩壊：スターレイル」コラボが4月27日から開催。コラボすし、グッズなど販売",
+        "link": "https://game.watch.impress.co.jp/docs/news/2102878.html",
+        "pubDate": "2026-04-20T12:20:55+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "あきんどスシローは、4月27日から5月31日にかけてスシローにて「崩壊：スターレイル」とのコラボを実施する。"
+      },
       {
         "title": "Steam早期アクセス中の「グーニャモンスター」派生タイトル4本が4月27日正式リリース決定Switchでもプレイ可能に。2人プレイモードも新たに実装",
         "link": "https://game.watch.impress.co.jp/docs/news/2102673.html",
@@ -1155,22 +1171,6 @@ window.NEWS_DATA = {
         "source": "GAME Watch",
         "image": "",
         "description": "Yostarは、Android/iOS用RPG「ブルーアーカイブ（ブルアカ）」において新キャラクター「クルミ」を実装する。"
-      },
-      {
-        "title": "FOX小隊ついに！ 「ブルアカ」にピンク髪のニコが実装決定",
-        "link": "https://game.watch.impress.co.jp/docs/news/2102771.html",
-        "pubDate": "2026-04-19T19:49:11+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "Yostarは、Android/iOS用RPG「ブルーアーカイブ（ブルアカ）」において新キャラクター「ニコ」を実装する。"
-      },
-      {
-        "title": "「ブルアカ」のメインストーリー第2部が4月21日に配信決定。スーツ姿の異形頭は何者か？元気のなさそうなカヤも",
-        "link": "https://game.watch.impress.co.jp/docs/news/2102769.html",
-        "pubDate": "2026-04-19T19:48:11+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "Yostarは、Android/iOS用RPG「ブルーアーカイブ（ブルアカ）」において第2部メインストーリーを4月21日メンテナンス後に配信する。"
       }
     ],
     "finance": [
@@ -1241,6 +1241,14 @@ window.NEWS_DATA = {
     ],
     "sports": [
       {
+        "title": "元近鉄監督 岡本伊三美さん死去",
+        "link": "https://news.yahoo.co.jp/pickup/6576916?source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:20:21 GMT",
+        "source": "!ニュース・トピックス - スポーツ",
+        "image": "",
+        "description": ""
+      },
+      {
         "title": "岡本が16試合ぶり3号 復調の兆し",
         "link": "https://news.yahoo.co.jp/pickup/6576914?source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:23:40 GMT",
@@ -1292,14 +1300,6 @@ window.NEWS_DATA = {
         "title": "燕・キハダ 新記録も記念球は譲る",
         "link": "https://news.yahoo.co.jp/pickup/6576890?source=rss",
         "pubDate": "Sun, 19 Apr 2026 21:47:20 GMT",
-        "source": "!ニュース・トピックス - スポーツ",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "長瀬智也さん バイクレースで2位",
-        "link": "https://news.yahoo.co.jp/pickup/6576881?source=rss",
-        "pubDate": "Sun, 19 Apr 2026 14:19:33 GMT",
         "source": "!ニュース・トピックス - スポーツ",
         "image": "",
         "description": ""
@@ -1831,7 +1831,7 @@ window.NEWS_DATA = {
     ],
     "technology": [
       {
-        "title": "NASA schaltet weiteres Instrument der ersten Voyager-Sonde zum Strom sparen ab",
+        "title": "NASA schaltet weiteres Instrument der ersten Voyager-Sonde zum Stromsparen ab",
         "link": "https://www.heise.de/news/NASA-schaltet-weiteres-Instrument-der-ersten-Voyager-Sonde-zum-Strom-sparen-ab-11263579.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
         "pubDate": "Mon, 20 Apr 2026 05:04:00 +0200",
         "source": "heise online News",
@@ -2162,12 +2162,12 @@ window.NEWS_DATA = {
   "fr": {
     "local": [
       {
-        "title": "EN DIRECT, guerre au Moyen-Orient : l’Iran promet de « riposter bientôt » à la saisie d’un cargo par les Etats-Unis",
-        "link": "https://www.lemonde.fr/international/live/2026/04/20/en-direct-guerre-au-moyen-orient-l-iran-promet-de-riposter-bientot-a-la-saisie-d-un-cargo-par-les-etats-unis_6679867_3210.html",
-        "pubDate": "Mon, 20 Apr 2026 00:47:56 +0200",
+        "title": "Entre l’Iran et les Etats-Unis, escalade navale et dialogue de sourds à l’approche de l’expiration du cessez-le-feu",
+        "link": "https://www.lemonde.fr/international/article/2026/04/20/entre-l-iran-et-les-etats-unis-escalade-navale-et-dialogue-de-sourds-a-l-approche-de-l-expiration-du-cessez-le-feu_6681600_3210.html",
+        "pubDate": "Mon, 20 Apr 2026 05:18:02 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/19/160/0/5120/2560/644/322/60/0/ef01edc_ftp-1-lqr4pi7aexv3-2026-04-19t222619z-619290836-rc2mskazi91y-rtrmadp-3-iran-crisis-trump-ship.JPG",
-        "description": "Le président américain, Donald Trump, a annoncé, dimanche sur son réseau Truth Social, que la marine américaine avait tiré en mer d’Oman sur le cargo « Touska », battant pavillo..."
+        "image": "https://img.lemde.fr/2026/04/19/638/0/6000/3000/644/322/60/0/1f77d11_ftp-1-f39tx2my9yhm-abe8fc3a23fd4c27b25babed9b2eac3e-1-73daf6aac79a45798dfe9f32540e2b54.jpg",
+        "description": "Donald Trump a annoncé, dimanche, l’envoi d’une délégation américaine à Islamabad pour de nouvelles discussions avec Téhéran, qui se refuse à confirmer sa participation."
       },
       {
         "title": "Bulgarie : la large victoire de l’ex-président Radev aux élections législatives, gage de stabilité pour le pays",
@@ -2282,20 +2282,20 @@ window.NEWS_DATA = {
         "description": "Le département du Trésor américain a prolongé, jusqu’au 16 mai, la suspension de la majorité des sanctions visant le pétrole et les produits pétroliers russes. Une décision qui ..."
       },
       {
-        "title": "« Après m’être connectée, je me lâche complètement » : plongée dans la taverne libertine de « World of Warcraft »",
-        "link": "https://www.lemonde.fr/m-perso/article/2026/04/19/apres-m-etre-connectee-je-me-lache-completement-plongee-dans-la-taverne-libertine-de-world-of-warcraft_6681486_4497916.html",
-        "pubDate": "Sun, 19 Apr 2026 20:00:03 +0200",
-        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/13/1664/0/6378/3189/644/322/60/0/0360589_upload-1-zlovjbczzvrc-lm-le-sexegame-01-cintafosch.jpg",
-        "description": "Le best-seller médiéval fantastique et multijoueur de Blizzard Entertainment héberge une communauté orientée jeu de rôle érotique. Célébrée comme libératrice par les adeptes, ce..."
-      },
-      {
         "title": "Manchester City fait à nouveau chuter Arsenal et menace les rêves de titre des Gunners en Premier League",
         "link": "https://www.lemonde.fr/sport/article/2026/04/19/manchester-city-fait-a-nouveau-chuter-arsenal-et-menace-les-reves-de-titre-des-gunners-en-premier-league_6681487_3242.html",
         "pubDate": "Sun, 19 Apr 2026 20:15:14 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
         "image": "https://img.lemde.fr/2026/04/19/0/0/5888/2944/644/322/60/0/56bfa7f_ftp-1-a0ewil44ji67-5813916-01-06.jpg",
         "description": "Toujours en tête mais dangereusement talonné par les Cityzens, le club londonien a offert de précieux points à son concurrent, dimanche, à cinq journées de la fin du championnat..."
+      },
+      {
+        "title": "« Après m’être connectée, je me lâche complètement » : plongée dans la taverne libertine de « World of Warcraft »",
+        "link": "https://www.lemonde.fr/m-perso/article/2026/04/19/apres-m-etre-connectee-je-me-lache-completement-plongee-dans-la-taverne-libertine-de-world-of-warcraft_6681486_4497916.html",
+        "pubDate": "Sun, 19 Apr 2026 20:00:03 +0200",
+        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+        "image": "https://img.lemde.fr/2026/04/13/1664/0/6378/3189/644/322/60/0/0360589_upload-1-zlovjbczzvrc-lm-le-sexegame-01-cintafosch.jpg",
+        "description": "Le best-seller médiéval fantastique et multijoueur de Blizzard Entertainment héberge une communauté orientée jeu de rôle érotique. Célébrée comme libératrice par les adeptes, ce..."
       },
       {
         "title": "Amstel Gold Race : Remco Evenepoel détrône Mattias Skjelmose, les favorites surprises par Paula Blasi pour l’ouverture des classiques ardennaises",
@@ -2308,12 +2308,12 @@ window.NEWS_DATA = {
     ],
     "top": [
       {
-        "title": "EN DIRECT, guerre au Moyen-Orient : l’Iran promet de « riposter bientôt » à la saisie d’un cargo par les Etats-Unis",
-        "link": "https://www.lemonde.fr/international/live/2026/04/20/en-direct-guerre-au-moyen-orient-l-iran-promet-de-riposter-bientot-a-la-saisie-d-un-cargo-par-les-etats-unis_6679867_3210.html",
-        "pubDate": "Mon, 20 Apr 2026 00:47:56 +0200",
+        "title": "Entre l’Iran et les Etats-Unis, escalade navale et dialogue de sourds à l’approche de l’expiration du cessez-le-feu",
+        "link": "https://www.lemonde.fr/international/article/2026/04/20/entre-l-iran-et-les-etats-unis-escalade-navale-et-dialogue-de-sourds-a-l-approche-de-l-expiration-du-cessez-le-feu_6681600_3210.html",
+        "pubDate": "Mon, 20 Apr 2026 05:18:02 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/19/160/0/5120/2560/644/322/60/0/ef01edc_ftp-1-lqr4pi7aexv3-2026-04-19t222619z-619290836-rc2mskazi91y-rtrmadp-3-iran-crisis-trump-ship.JPG",
-        "description": "Le président américain, Donald Trump, a annoncé, dimanche sur son réseau Truth Social, que la marine américaine avait tiré en mer d’Oman sur le cargo « Touska », battant pavillo..."
+        "image": "https://img.lemde.fr/2026/04/19/638/0/6000/3000/644/322/60/0/1f77d11_ftp-1-f39tx2my9yhm-abe8fc3a23fd4c27b25babed9b2eac3e-1-73daf6aac79a45798dfe9f32540e2b54.jpg",
+        "description": "Donald Trump a annoncé, dimanche, l’envoi d’une délégation américaine à Islamabad pour de nouvelles discussions avec Téhéran, qui se refuse à confirmer sa participation."
       },
       {
         "title": "Bulgarie : la large victoire de l’ex-président Radev aux élections législatives, gage de stabilité pour le pays",
@@ -2428,20 +2428,20 @@ window.NEWS_DATA = {
         "description": "Le département du Trésor américain a prolongé, jusqu’au 16 mai, la suspension de la majorité des sanctions visant le pétrole et les produits pétroliers russes. Une décision qui ..."
       },
       {
-        "title": "« Après m’être connectée, je me lâche complètement » : plongée dans la taverne libertine de « World of Warcraft »",
-        "link": "https://www.lemonde.fr/m-perso/article/2026/04/19/apres-m-etre-connectee-je-me-lache-completement-plongee-dans-la-taverne-libertine-de-world-of-warcraft_6681486_4497916.html",
-        "pubDate": "Sun, 19 Apr 2026 20:00:03 +0200",
-        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/13/1664/0/6378/3189/644/322/60/0/0360589_upload-1-zlovjbczzvrc-lm-le-sexegame-01-cintafosch.jpg",
-        "description": "Le best-seller médiéval fantastique et multijoueur de Blizzard Entertainment héberge une communauté orientée jeu de rôle érotique. Célébrée comme libératrice par les adeptes, ce..."
-      },
-      {
         "title": "Manchester City fait à nouveau chuter Arsenal et menace les rêves de titre des Gunners en Premier League",
         "link": "https://www.lemonde.fr/sport/article/2026/04/19/manchester-city-fait-a-nouveau-chuter-arsenal-et-menace-les-reves-de-titre-des-gunners-en-premier-league_6681487_3242.html",
         "pubDate": "Sun, 19 Apr 2026 20:15:14 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
         "image": "https://img.lemde.fr/2026/04/19/0/0/5888/2944/644/322/60/0/56bfa7f_ftp-1-a0ewil44ji67-5813916-01-06.jpg",
         "description": "Toujours en tête mais dangereusement talonné par les Cityzens, le club londonien a offert de précieux points à son concurrent, dimanche, à cinq journées de la fin du championnat..."
+      },
+      {
+        "title": "« Après m’être connectée, je me lâche complètement » : plongée dans la taverne libertine de « World of Warcraft »",
+        "link": "https://www.lemonde.fr/m-perso/article/2026/04/19/apres-m-etre-connectee-je-me-lache-completement-plongee-dans-la-taverne-libertine-de-world-of-warcraft_6681486_4497916.html",
+        "pubDate": "Sun, 19 Apr 2026 20:00:03 +0200",
+        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+        "image": "https://img.lemde.fr/2026/04/13/1664/0/6378/3189/644/322/60/0/0360589_upload-1-zlovjbczzvrc-lm-le-sexegame-01-cintafosch.jpg",
+        "description": "Le best-seller médiéval fantastique et multijoueur de Blizzard Entertainment héberge une communauté orientée jeu de rôle érotique. Célébrée comme libératrice par les adeptes, ce..."
       },
       {
         "title": "Amstel Gold Race : Remco Evenepoel détrône Mattias Skjelmose, les favorites surprises par Paula Blasi pour l’ouverture des classiques ardennaises",
@@ -3433,36 +3433,52 @@ window.NEWS_DATA = {
     "gaming": [],
     "finance": [
       {
-        "title": "Trump choca con su ‘drill, baby, drill’: EE UU se ahoga por la escasez de petróleo, pese a ser el primer productor mundial",
-        "link": "https://elpais.com/economia/2026-04-19/trump-choca-con-su-drill-baby-drill-la-paradoja-de-ee-uu-se-ahoga-por-la-escasez-de-petroleo-pese-a-ser-el-primer-productor-mundial.html",
-        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "title": "La guerra en el Golfo eleva los riesgos de escasez y racionamiento de combustible",
+        "link": "https://elpais.com/economia/2026-04-20/la-guerra-en-el-golfo-eleva-los-riesgos-de-escasez-y-racionamiento-de-combustible.html",
+        "pubDate": "Mon, 20 Apr 2026 03:30:01 GMT",
         "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/RUUCC62Q3FPSRMFFQLP2KDGHOU.jpg?auth=4b98421083920f782920056040f3c8bdb07a1be5bf37bf349f0d810c143e32e3",
-        "description": "La industria petrolera estadounidense tiene limitaciones para compensar la pérdida de barriles de crudo por la guerra en Irán, mientras crece la inflación y el precio de la gaso..."
+        "image": "https://imagenes.elpais.com/resizer/v2/XCNFNXMJZNGVJHDJBFHOPZS4V4.jpg?auth=65e76e5c79562505d3db2a10aca3b666e3bfe0156b2c3de72cb71e98a5837225",
+        "description": "El efímero desbloqueo del estrecho de Ormuz y el enquistamiento del conflicto provocan los primeros problemas en Asia y amenazan incluso a Europa"
       },
       {
-        "title": "Los empresarios españoles ante la regularización: “Es una medida necesaria”",
-        "link": "https://elpais.com/economia/2026-04-19/los-empresarios-espanoles-ante-la-regularizacion-es-una-noticia-buenisima.html",
-        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "title": "Telefónica Brasil se vuelca con la fibra para seguir sumando caja e ingresos al grupo",
+        "link": "https://elpais.com/economia/2026-04-20/telefonica-brasil-se-vuelca-con-la-fibra-para-seguir-sumando-caja-e-ingresos-al-grupo.html",
+        "pubDate": "Mon, 20 Apr 2026 03:15:00 GMT",
         "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/YUFO6TVGARBJDGUMDRQJYPGY6M.jpg?auth=e14692e09ae01f1202db3ed645ac80d41be9666ec8d130439b540f5bc8fcd834",
-        "description": "Las patronales del campo, de la construcción, de la dependencia o del transporte aplauden con entusiasmo la medida. CEOE expresa un apoyo tímido y se queja de que no pase por el..."
+        "image": "https://imagenes.elpais.com/resizer/v2/NYE5QRMWO5HTVCQVGXLVS7ROXU.jpg?auth=be3e5931fa21b3a0aff9c11d4d05b3d7efb66002bfae7899df0f20294375fe59",
+        "description": "La filial, que ya alcanza el 28% del negocio de la multinacional, explora nuevas vías de negocio digital y comercial"
       },
       {
-        "title": "Desigual y el fondo Enduring se disputan Pronovias, un icono de las bodas en horas bajas",
-        "link": "https://elpais.com/economia/2026-04-19/desigual-y-el-fondo-enduring-se-disputan-pronovias-un-icono-de-las-bodas-en-horas-bajas.html",
-        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "title": "Aagesen: “España está mejor preparada que otros países europeos”",
+        "link": "https://elpais.com/economia/2026-04-20/aagesen-espana-esta-mejor-preparada-que-otros-paises-europeos.html",
+        "pubDate": "Mon, 20 Apr 2026 03:30:01 GMT",
         "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/PNGREJ6O4JLQ7IBWYFDDHKIYRU.jpg?auth=45629521247b8cdac507d02134bef19c2bdc4e165ffa9d4bda45aeec7569b276",
-        "description": "Un juzgado analiza las propuestas para comprar la histórica marca de moda nupcial, al borde del concurso de acreedores"
+        "image": "https://imagenes.elpais.com/resizer/v2/RXMZTSXARFLGHBZFAA7O4YSL4Y.jpg?auth=a07158255aa0cb29f624a0a4fc7417c432c03b118a7eb28cc7034459090825eb",
+        "description": "La vicepresidenta de Transición Energética reclama “un nuevo marco en la UE” para los desafíos energéticos"
       },
       {
-        "title": "El enorme poder de la nueva plutocracia: así condicionan nuestra vida y la democracia milmillonarios como Musk, Bezos o Zuckerberg ",
-        "link": "https://elpais.com/economia/negocios/2026-04-18/el-enorme-poder-de-la-nueva-plutocracia-asi-condicionan-nuestra-vida-y-la-democracia-milmillonarios-como-musk-bezos-o-zuckerberg.html",
-        "pubDate": "Sat, 18 Apr 2026 15:45:00 GMT",
+        "title": "Kazajistán, la república exsoviética que aspira con su uranio a ser la meca del mundo cripto y de los datos  ",
+        "link": "https://elpais.com/economia/2026-04-20/kazajistan-la-republica-exsovietica-que-aspira-con-su-uranio-a-ser-la-meca-del-mundo-cripto-y-de-los-datos.html",
+        "pubDate": "Mon, 20 Apr 2026 03:30:01 GMT",
         "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/EV223D7HLZAVDO4YXNF4SIFHSM.tif?auth=3f0d14ef50be65e961dac5ebe91004ffe99b7d4b4e4cc0c504567d6800be3d71",
-        "description": "La riqueza se concentra cada vez en menos manos. Los mayores patrimonios del planeta transforman su dinero en influencia política para moldear a su gusto la sociedad y el sistem..."
+        "image": "https://imagenes.elpais.com/resizer/v2/6VJC3HBACNDU7D2F4JISO33KGI.jpg?auth=1f59d1fe30774168b7d90d480796e75746b6522c3bd3090cc566ce1a54eef6f6",
+        "description": "El país confía en capitalizar la guerra en Oriente Próximo y las sanciones contra Moscú para atraer a las grandes tecnológicas usando como incentivo sus bajos costes eléctricos"
+      },
+      {
+        "title": "La hambruna que viene",
+        "link": "https://elpais.com/economia/2026-04-20/la-hambruna-que-viene.html",
+        "pubDate": "Mon, 20 Apr 2026 03:30:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/VOK7MONAP5A6LCX5QLBTOW5NOA.jpg?auth=ed8b888ba0ee9c1f2d3869cec469f5f42f1dd02f2ee6a812afe9f59c4d21c2e7",
+        "description": "Por el estrecho de Ormuz transitan el 35% de los fertilizantes fundamentales para la agricultura"
+      },
+      {
+        "title": "La batalla por Jack Daniel’s y Sir ‘Drastic Dave’",
+        "link": "https://cincodias.elpais.com/fondos-y-planes/2026-04-20/la-batalla-por-jack-daniels-y-sir-drastic-dave.html",
+        "pubDate": "Mon, 20 Apr 2026 03:25:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/MEQA66LWCFPPHEEJ6JG4QPCCFY.jpg?auth=951a70097228372d7f82e43f923c3a27dd76d6d282a4d81e4c592dec9db35dee",
+        "description": "Los fabricantes de bebidas alcohólicas afrontan uno de los ciclos bajistas más duros que se recuerdan"
       },
       {
         "title": "De una crisis a otra a un ritmo vertiginoso",
@@ -3489,20 +3505,60 @@ window.NEWS_DATA = {
         "description": "Protege ante un posible deterioro económico y permite asegurar rentabilidades atractivas a medio plazo"
       },
       {
-        "title": "Las claves: la falta de fuel para los aviones es un problema importante, aunque sea del primer mundo",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-19/las-claves-la-falta-de-fuel-para-los-aviones-es-un-problema-importante-aunque-sea-del-primer-mundo.html",
-        "pubDate": "Sun, 19 Apr 2026 03:40:00 GMT",
+        "title": "Iker Barricat (Adecco): “Disfruto mucho yendo al mercado, es como un parque de atracciones”",
+        "link": "https://elpais.com/economia/negocios/entrevistas-afterwork/2026-04-20/iker-barricat-adecco-disfruto-mucho-yendo-al-mercado-es-como-un-parque-de-atracciones.html",
+        "pubDate": "Mon, 20 Apr 2026 03:30:00 GMT",
         "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/HPIE7ECAKBLS7MRAHGEHK6K2BI.jpg?auth=973af12eb5261aec7c9234ddd243f96cba151ad5484bbb1f348250f49cb3bedb",
-        "description": "Afecta sobre todo a los vuelos cortos y menos rentables, y que son los que quieren recortar los políticos más ecologistas"
+        "image": "https://imagenes.elpais.com/resizer/v2/7YS3G2DXZRA4JAUYQ66GHZXIM4.jpg?auth=bd29c7b6bf14c97f7768720736357fc3366e52d0439cafc6d39f18c610cbe28f",
+        "description": "El presidente de la empresa de recursos humanos adora la cocina y reconoce que a veces tiene el síndrome del impostor"
       },
       {
-        "title": "El club de Washington del FMI es poco común... y útil",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-19/el-club-de-washington-del-fmi-es-poco-comun-y-util.html",
-        "pubDate": "Sun, 19 Apr 2026 03:39:00 GMT",
+        "title": "Apostaron por entrenar a las máquinas y ganaron: así es una de las profesiones con más futuro ",
+        "link": "https://elpais.com/economia/negocios/2026-04-20/apostaron-por-entrenar-a-las-maquinas-y-ganaron-asi-es-una-de-las-profesiones-con-mas-futuro.html",
+        "pubDate": "Mon, 20 Apr 2026 03:30:00 GMT",
         "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/RLNBC3UNGZPMNOGAAVID7FAWMU.jpg?auth=e3bf787653c9459d2d73ff37a77ffda04b333282a552c7be9e48d144e7bf20cd",
-        "description": "El apoyo de EE UU a cualquier componente de la arquitectura global es hoy día extremadamente inusual"
+        "image": "https://imagenes.elpais.com/resizer/v2/BGLYSSIJ7FFJNDZSALODJ4JGEY.jpg?auth=a2620e6f07e385fa2c0b59f83fa5786b3fe1490516a7691432a14059e868d397",
+        "description": "Los desarrolladores de modelos de lenguaje como ChatGPT se han convertido en un perfil codiciado por las empresas. Aunque la profesión podría tener los días contados, según los ..."
+      },
+      {
+        "title": "Tres de cada cuatro españoles apoyan la prórroga de los alquileres",
+        "link": "https://elpais.com/economia/2026-04-20/tres-de-cada-cuatro-espanoles-apoyan-la-prorroga-de-los-alquileres.html",
+        "pubDate": "Mon, 20 Apr 2026 03:30:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/FA4N7NSCUZLKVAYTMI7MPDIJLI.jpg?auth=bcd1e831c0507cd6cc4e22889bff5e2d78bbb1cc2a6da1a944902ec3d6d8d21a",
+        "description": "Más del 90% de los encuestados por Ateneo del Dato consideran que el precio de los arrendamientos es “alto” o “muy alto”"
+      },
+      {
+        "title": "Trump choca con su ‘drill, baby, drill’: EE UU se ahoga por la escasez de petróleo, pese a ser el primer productor mundial",
+        "link": "https://elpais.com/economia/2026-04-19/trump-choca-con-su-drill-baby-drill-la-paradoja-de-ee-uu-se-ahoga-por-la-escasez-de-petroleo-pese-a-ser-el-primer-productor-mundial.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/RUUCC62Q3FPSRMFFQLP2KDGHOU.jpg?auth=4b98421083920f782920056040f3c8bdb07a1be5bf37bf349f0d810c143e32e3",
+        "description": "La industria petrolera estadounidense tiene limitaciones para compensar la pérdida de barriles de crudo por la guerra en Irán, mientras crece la inflación y el precio de la gaso..."
+      },
+      {
+        "title": "Los empresarios españoles ante la regularización: “Es una medida necesaria”",
+        "link": "https://elpais.com/economia/2026-04-19/los-empresarios-espanoles-ante-la-regularizacion-es-una-noticia-buenisima.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/YUFO6TVGARBJDGUMDRQJYPGY6M.jpg?auth=e14692e09ae01f1202db3ed645ac80d41be9666ec8d130439b540f5bc8fcd834",
+        "description": "Las patronales del campo, de la construcción, de la dependencia o del transporte aplauden con entusiasmo la medida. CEOE expresa un apoyo tímido y se queja de que no pase por el..."
+      },
+      {
+        "title": "El enorme poder de la nueva plutocracia: así condicionan nuestra vida y la democracia milmillonarios como Musk, Bezos o Zuckerberg ",
+        "link": "https://elpais.com/economia/negocios/2026-04-18/el-enorme-poder-de-la-nueva-plutocracia-asi-condicionan-nuestra-vida-y-la-democracia-milmillonarios-como-musk-bezos-o-zuckerberg.html",
+        "pubDate": "Sat, 18 Apr 2026 15:45:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/EV223D7HLZAVDO4YXNF4SIFHSM.tif?auth=3f0d14ef50be65e961dac5ebe91004ffe99b7d4b4e4cc0c504567d6800be3d71",
+        "description": "La riqueza se concentra cada vez en menos manos. Los mayores patrimonios del planeta transforman su dinero en influencia política para moldear a su gusto la sociedad y el sistem..."
+      },
+      {
+        "title": "Desigual y el fondo Enduring se disputan Pronovias, un icono de las bodas en horas bajas",
+        "link": "https://elpais.com/economia/2026-04-19/desigual-y-el-fondo-enduring-se-disputan-pronovias-un-icono-de-las-bodas-en-horas-bajas.html",
+        "pubDate": "Sun, 19 Apr 2026 03:30:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/PNGREJ6O4JLQ7IBWYFDDHKIYRU.jpg?auth=45629521247b8cdac507d02134bef19c2bdc4e165ffa9d4bda45aeec7569b276",
+        "description": "Un juzgado analiza las propuestas para comprar la histórica marca de moda nupcial, al borde del concurso de acreedores"
       },
       {
         "title": "Joseph Stiglitz, premio Nobel de Economía: “La ideología de los millonarios tiene actualmente un grado de egoísmo alucinante”",
@@ -3527,62 +3583,6 @@ window.NEWS_DATA = {
         "source": "Economía en EL PAÍS",
         "image": "https://imagenes.elpais.com/resizer/v2/II3RDTKQVBKN5IIRARKF2GM7GY.jpg?auth=918ff5358479d10c4eac8c952e424e15c2ed2674cfba5bbd9ad08f7edba25ec2",
         "description": "El organismo pide a los países europeos que no caigan en la tentación de fijar topes tarifarios, subsidios universales o recortes en los impuestos a los combustibles"
-      },
-      {
-        "title": "El miedo a la escasez agrieta la adicción global al petróleo",
-        "link": "https://elpais.com/economia/2026-04-17/el-miedo-a-la-escasez-agrieta-la-adiccion-global-al-petroleo.html",
-        "pubDate": "Fri, 17 Apr 2026 03:45:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/B4BN5PKS7BCEZCEK6LUWJYMJJY.jpg?auth=5c7b2a8632c38f3fc8ba548e7d3d13cc961acf2054428e5f6e9a3640460343fb",
-        "description": "Los altos precios en los refinados, la escasez de barriles y una incertidumbre que paraliza las compras contraen el consumo ante el mayor choque de oferta de la historia"
-      },
-      {
-        "title": "La inflación y el tirón del mercado laboral disparan la fiscalidad sobre salarios y pensiones a niveles récord",
-        "link": "https://elpais.com/economia/2026-04-17/la-inflacion-y-el-tiron-del-mercado-laboral-disparan-la-fiscalidad-sobre-salarios-y-pensiones-a-niveles-record.html",
-        "pubDate": "Fri, 17 Apr 2026 03:45:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/AIBW3NXESBFUVIHZVPMISPK3YU.jpg?auth=3fcf7087a8f6f9a39595f4c463dc7444ec96da14e31506116e9c55309456357d",
-        "description": "El tipo efectivo del impuesto sobre la renta escala en 2025 hasta el 15,1%, el máximo de la serie histórica"
-      },
-      {
-        "title": "El sindicato de Vox no consigue penetrar en las empresas más de cinco años después de su fundación",
-        "link": "https://elpais.com/economia/2026-04-17/el-sindicato-de-vox-no-consigue-penetrar-en-las-empresas-mas-de-cinco-anos-despues-de-su-fundacion.html",
-        "pubDate": "Fri, 17 Apr 2026 03:45:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/W7TVONXMERC2JNAJUKHDN6ZNRA.jpeg?auth=c8cc1b8d7a51aac3339c43bd4bda76df5b7ddbc970245dd4d775fe027cc8a976",
-        "description": "Solidaridad solo participó en la firma de dos del millar de convenios colectivos suscritos en España en 2025, según la estadística oficial del Ministerio de Trabajo"
-      },
-      {
-        "title": "Arsenio Domínguez (Organización Marítima Internacional): “No hay base legal para introducir peajes en Ormuz” ",
-        "link": "https://elpais.com/economia/2026-04-17/arsenio-dominguez-omi-iran-debe-presentar-su-propuesta-para-ormuz-junto-con-oman-de-acuerdo-con-el-derecho-internacional.html",
-        "pubDate": "Fri, 17 Apr 2026 03:30:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/RYJK7STDHJE6HER6FAYQENX3RU.jpg?auth=0b7e76846c1a6897ef56b491af784c8e1a44517563909c86254d804e9d7cc357",
-        "description": "El secretario general de la agencia de la ONU que vela por la seguridad marítima exige a Irán una propuesta ajustada a derecho, mientras trabaja para dar salida a los 2.000 buqu..."
-      },
-      {
-        "title": "Malestar económico y falta de expectativas: por qué los jóvenes se alejan del sistema fiscal",
-        "link": "https://elpais.com/economia/2026-04-18/malestar-economico-y-falta-de-expectativas-por-que-los-jovenes-se-alejan-del-sistema-fiscal.html",
-        "pubDate": "Sat, 18 Apr 2026 03:45:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/DFIFZ6DISVEFJN6NM6KKB22JJA.jpg?auth=5f026624607bf7a77b3ffabff23943860a2aa2ee12c1a0d769f0facdbe6b53d3",
-        "description": "La desafección hacia los impuestos no responde a un rechazo frontal, sino a una combinación de factores que se intensifican en la juventud"
-      },
-      {
-        "title": "El largo camino para restablecer el suministro energético",
-        "link": "https://elpais.com/economia/2026-04-18/el-largo-camino-para-restablecer-el-suministro-energetico-tras-la-reapertura-de-ormuz.html",
-        "pubDate": "Sat, 18 Apr 2026 03:40:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/SYJRBMSA6VLYVI424B24QZIDXU.jpg?auth=149eb4c7006028945e5274a92f96d211015177b2abf064062d814080f6a4918e",
-        "description": "El suministro tardará semanas en empezar a recomponerse, incluso si el paso en Ormuz termina por desbloquearse"
-      },
-      {
-        "title": "Ekaterina Zaharieva, comisaria de Innovación: “No queremos que los modelos de IA entrenen a nuestros hijos para fabricar bombas o quitarse la vida”",
-        "link": "https://elpais.com/economia/2026-04-18/ekaterina-zaharieva-comisaria-de-innovacion-no-queremos-que-los-modelos-de-ia-entrenen-a-nuestros-hijos-para-fabricar-bombas-o-quitarse-la-vida.html",
-        "pubDate": "Sat, 18 Apr 2026 03:45:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/MYL42EP4I5A7LJU6NI3ZIZ57ZQ.jpg?auth=1051cb51fea9d0ebbc9b67726010d85cb1c0e8db53bbab76ac22356c80f1c7dc",
-        "description": "La política búlgara defiende que el continente no se está quedando atrás frente a EE UU en innovación y observa un desembarco de investigadores estadounidenses en Europa"
       },
       {
         "title": "Los bancos se lanzan a captar nuestro dinero: estas son las principales ofertas para el ahorro más conservador",
@@ -3626,6 +3626,14 @@ window.NEWS_DATA = {
   "pt": {
     "top": [
       {
+        "title": "BBB 26: Relembre falas de Ana Paula sobre o pai durante o programa",
+        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://f5.folha.uol.com.br/televisao/bbb26/2026/04/bbb-26-relembre-falas-de-ana-paula-sobre-o-pai-durante-o-programa.shtml",
+        "pubDate": "20 Apr 2026 00:15:00 -0300",
+        "source": "Folha de S.Paulo - Em cima da hora - Principal",
+        "image": "",
+        "description": "O pai de Ana Paula Renault , Gerardo Renault , morreu neste domingo (19) em Belo Horizonte aos 96 anos de idade. A família decidiu não avisar a jornalista, que segue confinada n..."
+      },
+      {
         "title": "Por que o BBB 26, marcado por expulsões, gerou debate sobre os limites da diversão",
         "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/por-que-o-bbb-26-marcado-por-expulsoes-gerou-debate-sobre-os-limites-da-diversao.shtml",
         "pubDate": "20 Apr 2026 00:10:00 -0300",
@@ -3642,7 +3650,7 @@ window.NEWS_DATA = {
         "description": "Ana Paula Renault , Milena Moreira e Juliano Floss stão na final do BBB 26. Um dos participantes vai levar o prêmio de R$ 5,4 milhões na próxima terça-feira (21). Leia mais (04/..."
       },
       {
-        "title": "BBB 26: Ana Paula conta para Milena sobre a morte de seu pai",
+        "title": "BBB 26: Aos prantos, Ana Paula conta para Milena sobre a morte de seu pai",
         "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://f5.folha.uol.com.br/televisao/bbb26/2026/04/bbb-26-ana-paula-conta-para-milena-sobre-a-morte-de-seu-pai.shtml",
         "pubDate": "20 Apr 2026 00:04:00 -0300",
         "source": "Folha de S.Paulo - Em cima da hora - Principal",
@@ -3704,6 +3712,14 @@ window.NEWS_DATA = {
         "source": "Folha de S.Paulo - Em cima da hora - Principal",
         "image": "",
         "description": "O advogado Gerardo Henrique Machado Renault, pai de Ana Paula Renault , que está na reta final do BBB 26 , morreu neste domingo (19), aos 96 anos . A notícia foi compartilhada n..."
+      },
+      {
+        "title": "Você está enriquecendo ou apenas vendendo seu tempo?",
+        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/blogs/de-grao-em-grao/2026/04/voce-esta-enriquecendo-ou-apenas-vendendo-seu-tempo.shtml",
+        "pubDate": "19 Apr 2026 23:00:00 -0300",
+        "source": "Folha de S.Paulo - Em cima da hora - Principal",
+        "image": "",
+        "description": "Muita gente passa a vida pedalando uma bicicleta ergométrica financeira. O esforço é real, o suor também, mas a sensação de movimento nem sempre significa avanço. Trabalha-se mu..."
       },
       {
         "title": "Dólar abaixo de R$ 5 sugere momento favorável para compra, dizem analistas",
@@ -3768,22 +3784,6 @@ window.NEWS_DATA = {
         "source": "Folha de S.Paulo - Em cima da hora - Principal",
         "image": "",
         "description": "Sobreviventes do genocídio em Ruanda dizem que viveram o apocalipse nos cem dias e depois deles. Crianças sem adultos que pudessem alimentá-las. Todos procurando parentes que ai..."
-      },
-      {
-        "title": "A AGU não é fiscal do debate público",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/lygia-maria/2026/04/a-agu-nao-e-fiscal-do-debate-publico.shtml",
-        "pubDate": "19 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "No primeiro dia do seu governo, Lula instituiu por decreto, dentro da Advocacia-Geral da União , a Procuradoria Nacional de Defesa da Democracia (PNDD). Dentre as suas atribuiçõ..."
-      },
-      {
-        "title": "Livrarias em SP fazem evento noturno com saraus, festa do pijama e conversa com autores",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://guia.folha.uol.com.br/passeios/2026/04/livrarias-em-sp-fazem-evento-noturno-com-saraus-festa-do-pijama-e-conversa-com-autores.shtml",
-        "pubDate": "19 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "No Dia Mundial do Livro , celebrado na quinta-feira (23), livrarias de São Paulo e de outras cidades do país estendem o horário de funcionamento com programação noturna grátis, ..."
       }
     ],
     "technology": [
@@ -3951,6 +3951,14 @@ window.NEWS_DATA = {
     "gaming": [],
     "finance": [
       {
+        "title": "Você está enriquecendo ou apenas vendendo seu tempo?",
+        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/blogs/de-grao-em-grao/2026/04/voce-esta-enriquecendo-ou-apenas-vendendo-seu-tempo.shtml",
+        "pubDate": "19 Apr 2026 23:00:00 -0300",
+        "source": "Folha de S.Paulo - Mercado - Principal",
+        "image": "",
+        "description": "Muita gente passa a vida pedalando uma bicicleta ergométrica financeira. O esforço é real, o suor também, mas a sensação de movimento nem sempre significa avanço. Trabalha-se mu..."
+      },
+      {
         "title": "Dólar abaixo de R$ 5 sugere momento favorável para compra, dizem analistas",
         "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/dolar-abaixo-de-r-5-sugere-momento-favoravel-para-compra-dizem-analistas.shtml",
         "pubDate": "19 Apr 2026 23:00:00 -0300",
@@ -4101,14 +4109,6 @@ window.NEWS_DATA = {
         "source": "Folha de S.Paulo - Mercado - Principal",
         "image": "",
         "description": "Quase metade (46%) dos brasileiros que fazem apostas em bets e cassinos online afirma adotar a prática para obter renda extra e ajudar a pagar as contas, aponta o Datafolha . Le..."
-      },
-      {
-        "title": "O empurrão da história",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/candido-bracher/2026/04/o-empurrao-da-historia.shtml",
-        "pubDate": "18 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "O modelo abaixo, de maneira simples e sintética, permite captar as variáveis que descrevem esquematicamente a maior parte dos movimentos relevantes de nossas vidas. Ele foi idea..."
       }
     ],
     "sports": [],
@@ -4775,6 +4775,38 @@ window.NEWS_DATA = {
   "ar": {
     "top": [
       {
+        "title": "جنوب لبنان.. عودة النازحين وحياة تنبعث من وسط الركام",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ac%d9%86%d9%88%d8%a8-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%b9%d9%88%d8%af%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%88%d8%ad%d9%8a%d8%a7%d8%a9-%d8%aa%d9%86%d8%a8%d8%b9%d8%ab?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:27 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "رصدت كاميرا الجزيرة بدء عودة عدد من النازحين إلى قراهم في جنوب لبنان لتفقد ممتلكاتهم واستئناف حياتهم، رغم الدمار الواسع الذي خلفه القصف الإسرائيلي المكثف الذي استهدف المنطقة وال..."
+      },
+      {
+        "title": "غزة.. مأساة الأطفال في الخيام وحكايات الحرمان",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ba%d8%b2%d8%a9-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d8%ae%d9%8a%d8%a7%d9%85-%d9%88%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:20 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "تتكشف مأساة آلاف الأطفال في قطاع غزة داخل خيام تحولت لمأوى دائم، حيث يواجهون فقدان المعيل والحرمان من التعليم في ظل ظروف إنسانية قاسية تفرضها الحرب الإسرائيلية المستمرة على القطاع."
+      },
+      {
+        "title": "خلافات الإطار التنسيقي بالعراق.. سباق حسم مرشح رئاسة الحكومة",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ae%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a-%d8%a8%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%b3%d8%a8%d8%a7%d9%82?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:11 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يعقد الإطار التنسيقي في العراق اجتماعا حاسما الاثنين في مكتب زعيم تيار الحكمة عمار الحكيم، لمحاولة تجاوز الخلافات العميقة التي عرقلت اختيار مرشح رئاسة الحكومة المقبلة وسط ترقب س..."
+      },
+      {
+        "title": "ماذا يعني إعلان واشنطن فرض حصار بحري عالمي على سفن إيران؟",
+        "link": "https://www.aljazeera.net/news/2026/4/20/%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%b9%d9%86%d9%8a-%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d9%81%d8%b1%d8%b6-%d8%ad%d8%b5%d8%a7%d8%b1-%d8%a8%d8%ad%d8%b1%d9%8a?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 02:59:32 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يتجه الحصار البحري الذي فرضته الولايات المتحدة على التجارة البحرية الإيرانية إلى مرحلة جديدة أكثر اتساعا، بعد أن أعلن الجيش الأمريكي أن استهدافه للسفن المرتبطة بإيران لن يقتصر ع..."
+      },
+      {
         "title": "شهيد وإصابات بغارتين إسرائيليتين على قطاع غزة",
         "link": "https://www.aljazeera.net/news/2026/4/20/%d8%b4%d9%87%d9%8a%d8%af-%d9%88%d9%85%d8%b5%d8%a7%d8%a8%d9%88%d9%86-%d8%a8%d8%ba%d8%a7%d8%b1%d8%aa%d9%8a%d9%86-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%aa%d9%8a%d9%86-%d8%b9%d9%84%d9%89?traffic_source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:43:13 +0300",
@@ -4901,42 +4933,42 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "يسعى الرئيس الأوكراني فولوديمير زيلينسكي لإقناع أوروبا بإنشاء منظومة دفاع صاروخي، فيما طلبت كييف وساطة تركية لعقد قمة تجمعه بالرئيس الروسي فلاديمير بوتين، بمشاركة الرئيسين الترك..."
-      },
-      {
-        "title": "ترمب يعلن مهاجمة سفينة شحن إيرانية بخليج عُمان وطهران تتوعد بالرد",
-        "link": "https://www.aljazeera.net/news/2026/4/20/%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d8%b9%d9%84%d9%86-%d9%85%d9%87%d8%a7%d8%ac%d9%85%d8%a9-%d8%b3%d9%81%d9%8a%d9%86%d8%a9-%d8%b4%d8%ad%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 23:17:00 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "أطلقت المدمرة الأمريكية \"يو إس إس سبروانس\" النار مباشرة على \"غرفة المحركات\" في السفينة الإيرانية \"توسكا\"، مما أدى إلى ثقبها وإيقافها تماما في مكانها."
-      },
-      {
-        "title": "شاهد.. خسارة مفاجئة لسان جيرمان تُشعل المنافسة على صدارة الدوري الفرنسي",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d8%a8%d8%a7%d8%b1%d9%8a%d8%b3-%d8%b3%d8%a7%d9%86-%d8%ac%d9%8a%d8%b1%d9%85%d8%a7%d9%86-%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%af%d9%88%d8%b1%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86%d8%b3%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:50:13 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "باريس سان جيرمان يتلقى خسارته الخامسة هذا الموسم في الدوري الفرنسي."
-      },
-      {
-        "title": "مباراة الأهلي القطري ضد النصر السعودي في نصف نهائي أبطال آسيا 2.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d9%85%d9%88%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%82%d8%b7%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:25:41 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "موعد مباراة النصر السعودي ضد الأهلي القطري في نصف نهائي دوري أبطال آسيا 2."
-      },
-      {
-        "title": "\"الشانغل\" الهجين.. الولد الشقي الذي صنع الفكاهة والاندماج بكوبلنز الألمانية",
-        "link": "https://www.aljazeera.net/politics/2026/4/20/%d8%a7%d9%84%d8%b4%d8%a7%d9%86%d8%ba%d9%84-%d8%a7%d9%84%d9%87%d8%ac%d9%8a%d9%86-%d8%a7%d9%84%d9%88%d9%84%d8%af-%d8%a7%d9%84%d8%b4%d9%82%d9%8a-%d8%a7%d9%84%d8%b0%d9%8a-%d8%b5%d9%86%d8%b9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:17:15 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "\"الشانغل\" طفل ساهم في إبقاء روح الفكاهة في مدينة عانت من الحروب بسبب موقعها الإستراتيجي عند ملتقى نهريْ الراين والموزيل."
       }
     ],
     "technology": [
       {
+        "title": "جنوب لبنان.. عودة النازحين وحياة تنبعث من وسط الركام",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ac%d9%86%d9%88%d8%a8-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%b9%d9%88%d8%af%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%88%d8%ad%d9%8a%d8%a7%d8%a9-%d8%aa%d9%86%d8%a8%d8%b9%d8%ab?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:27 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "رصدت كاميرا الجزيرة بدء عودة عدد من النازحين إلى قراهم في جنوب لبنان لتفقد ممتلكاتهم واستئناف حياتهم، رغم الدمار الواسع الذي خلفه القصف الإسرائيلي المكثف الذي استهدف المنطقة وال..."
+      },
+      {
+        "title": "غزة.. مأساة الأطفال في الخيام وحكايات الحرمان",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ba%d8%b2%d8%a9-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d8%ae%d9%8a%d8%a7%d9%85-%d9%88%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:20 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "تتكشف مأساة آلاف الأطفال في قطاع غزة داخل خيام تحولت لمأوى دائم، حيث يواجهون فقدان المعيل والحرمان من التعليم في ظل ظروف إنسانية قاسية تفرضها الحرب الإسرائيلية المستمرة على القطاع."
+      },
+      {
+        "title": "خلافات الإطار التنسيقي بالعراق.. سباق حسم مرشح رئاسة الحكومة",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ae%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a-%d8%a8%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%b3%d8%a8%d8%a7%d9%82?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:11 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يعقد الإطار التنسيقي في العراق اجتماعا حاسما الاثنين في مكتب زعيم تيار الحكمة عمار الحكيم، لمحاولة تجاوز الخلافات العميقة التي عرقلت اختيار مرشح رئاسة الحكومة المقبلة وسط ترقب س..."
+      },
+      {
+        "title": "ماذا يعني إعلان واشنطن فرض حصار بحري عالمي على سفن إيران؟",
+        "link": "https://www.aljazeera.net/news/2026/4/20/%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%b9%d9%86%d9%8a-%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d9%81%d8%b1%d8%b6-%d8%ad%d8%b5%d8%a7%d8%b1-%d8%a8%d8%ad%d8%b1%d9%8a?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 02:59:32 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يتجه الحصار البحري الذي فرضته الولايات المتحدة على التجارة البحرية الإيرانية إلى مرحلة جديدة أكثر اتساعا، بعد أن أعلن الجيش الأمريكي أن استهدافه للسفن المرتبطة بإيران لن يقتصر ع..."
+      },
+      {
         "title": "شهيد وإصابات بغارتين إسرائيليتين على قطاع غزة",
         "link": "https://www.aljazeera.net/news/2026/4/20/%d8%b4%d9%87%d9%8a%d8%af-%d9%88%d9%85%d8%b5%d8%a7%d8%a8%d9%88%d9%86-%d8%a8%d8%ba%d8%a7%d8%b1%d8%aa%d9%8a%d9%86-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%aa%d9%8a%d9%86-%d8%b9%d9%84%d9%89?traffic_source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:43:13 +0300",
@@ -5063,42 +5095,42 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "يسعى الرئيس الأوكراني فولوديمير زيلينسكي لإقناع أوروبا بإنشاء منظومة دفاع صاروخي، فيما طلبت كييف وساطة تركية لعقد قمة تجمعه بالرئيس الروسي فلاديمير بوتين، بمشاركة الرئيسين الترك..."
-      },
-      {
-        "title": "ترمب يعلن مهاجمة سفينة شحن إيرانية بخليج عُمان وطهران تتوعد بالرد",
-        "link": "https://www.aljazeera.net/news/2026/4/20/%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d8%b9%d9%84%d9%86-%d9%85%d9%87%d8%a7%d8%ac%d9%85%d8%a9-%d8%b3%d9%81%d9%8a%d9%86%d8%a9-%d8%b4%d8%ad%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 23:17:00 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "أطلقت المدمرة الأمريكية \"يو إس إس سبروانس\" النار مباشرة على \"غرفة المحركات\" في السفينة الإيرانية \"توسكا\"، مما أدى إلى ثقبها وإيقافها تماما في مكانها."
-      },
-      {
-        "title": "شاهد.. خسارة مفاجئة لسان جيرمان تُشعل المنافسة على صدارة الدوري الفرنسي",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d8%a8%d8%a7%d8%b1%d9%8a%d8%b3-%d8%b3%d8%a7%d9%86-%d8%ac%d9%8a%d8%b1%d9%85%d8%a7%d9%86-%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%af%d9%88%d8%b1%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86%d8%b3%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:50:13 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "باريس سان جيرمان يتلقى خسارته الخامسة هذا الموسم في الدوري الفرنسي."
-      },
-      {
-        "title": "مباراة الأهلي القطري ضد النصر السعودي في نصف نهائي أبطال آسيا 2.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d9%85%d9%88%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%82%d8%b7%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:25:41 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "موعد مباراة النصر السعودي ضد الأهلي القطري في نصف نهائي دوري أبطال آسيا 2."
-      },
-      {
-        "title": "\"الشانغل\" الهجين.. الولد الشقي الذي صنع الفكاهة والاندماج بكوبلنز الألمانية",
-        "link": "https://www.aljazeera.net/politics/2026/4/20/%d8%a7%d9%84%d8%b4%d8%a7%d9%86%d8%ba%d9%84-%d8%a7%d9%84%d9%87%d8%ac%d9%8a%d9%86-%d8%a7%d9%84%d9%88%d9%84%d8%af-%d8%a7%d9%84%d8%b4%d9%82%d9%8a-%d8%a7%d9%84%d8%b0%d9%8a-%d8%b5%d9%86%d8%b9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:17:15 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "\"الشانغل\" طفل ساهم في إبقاء روح الفكاهة في مدينة عانت من الحروب بسبب موقعها الإستراتيجي عند ملتقى نهريْ الراين والموزيل."
       }
     ],
     "gaming": [
       {
+        "title": "جنوب لبنان.. عودة النازحين وحياة تنبعث من وسط الركام",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ac%d9%86%d9%88%d8%a8-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%b9%d9%88%d8%af%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%88%d8%ad%d9%8a%d8%a7%d8%a9-%d8%aa%d9%86%d8%a8%d8%b9%d8%ab?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:27 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "رصدت كاميرا الجزيرة بدء عودة عدد من النازحين إلى قراهم في جنوب لبنان لتفقد ممتلكاتهم واستئناف حياتهم، رغم الدمار الواسع الذي خلفه القصف الإسرائيلي المكثف الذي استهدف المنطقة وال..."
+      },
+      {
+        "title": "غزة.. مأساة الأطفال في الخيام وحكايات الحرمان",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ba%d8%b2%d8%a9-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d8%ae%d9%8a%d8%a7%d9%85-%d9%88%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:20 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "تتكشف مأساة آلاف الأطفال في قطاع غزة داخل خيام تحولت لمأوى دائم، حيث يواجهون فقدان المعيل والحرمان من التعليم في ظل ظروف إنسانية قاسية تفرضها الحرب الإسرائيلية المستمرة على القطاع."
+      },
+      {
+        "title": "خلافات الإطار التنسيقي بالعراق.. سباق حسم مرشح رئاسة الحكومة",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ae%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a-%d8%a8%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%b3%d8%a8%d8%a7%d9%82?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:11 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يعقد الإطار التنسيقي في العراق اجتماعا حاسما الاثنين في مكتب زعيم تيار الحكمة عمار الحكيم، لمحاولة تجاوز الخلافات العميقة التي عرقلت اختيار مرشح رئاسة الحكومة المقبلة وسط ترقب س..."
+      },
+      {
+        "title": "ماذا يعني إعلان واشنطن فرض حصار بحري عالمي على سفن إيران؟",
+        "link": "https://www.aljazeera.net/news/2026/4/20/%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%b9%d9%86%d9%8a-%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d9%81%d8%b1%d8%b6-%d8%ad%d8%b5%d8%a7%d8%b1-%d8%a8%d8%ad%d8%b1%d9%8a?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 02:59:32 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يتجه الحصار البحري الذي فرضته الولايات المتحدة على التجارة البحرية الإيرانية إلى مرحلة جديدة أكثر اتساعا، بعد أن أعلن الجيش الأمريكي أن استهدافه للسفن المرتبطة بإيران لن يقتصر ع..."
+      },
+      {
         "title": "شهيد وإصابات بغارتين إسرائيليتين على قطاع غزة",
         "link": "https://www.aljazeera.net/news/2026/4/20/%d8%b4%d9%87%d9%8a%d8%af-%d9%88%d9%85%d8%b5%d8%a7%d8%a8%d9%88%d9%86-%d8%a8%d8%ba%d8%a7%d8%b1%d8%aa%d9%8a%d9%86-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%aa%d9%8a%d9%86-%d8%b9%d9%84%d9%89?traffic_source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:43:13 +0300",
@@ -5225,42 +5257,42 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "يسعى الرئيس الأوكراني فولوديمير زيلينسكي لإقناع أوروبا بإنشاء منظومة دفاع صاروخي، فيما طلبت كييف وساطة تركية لعقد قمة تجمعه بالرئيس الروسي فلاديمير بوتين، بمشاركة الرئيسين الترك..."
-      },
-      {
-        "title": "ترمب يعلن مهاجمة سفينة شحن إيرانية بخليج عُمان وطهران تتوعد بالرد",
-        "link": "https://www.aljazeera.net/news/2026/4/20/%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d8%b9%d9%84%d9%86-%d9%85%d9%87%d8%a7%d8%ac%d9%85%d8%a9-%d8%b3%d9%81%d9%8a%d9%86%d8%a9-%d8%b4%d8%ad%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 23:17:00 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "أطلقت المدمرة الأمريكية \"يو إس إس سبروانس\" النار مباشرة على \"غرفة المحركات\" في السفينة الإيرانية \"توسكا\"، مما أدى إلى ثقبها وإيقافها تماما في مكانها."
-      },
-      {
-        "title": "شاهد.. خسارة مفاجئة لسان جيرمان تُشعل المنافسة على صدارة الدوري الفرنسي",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d8%a8%d8%a7%d8%b1%d9%8a%d8%b3-%d8%b3%d8%a7%d9%86-%d8%ac%d9%8a%d8%b1%d9%85%d8%a7%d9%86-%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%af%d9%88%d8%b1%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86%d8%b3%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:50:13 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "باريس سان جيرمان يتلقى خسارته الخامسة هذا الموسم في الدوري الفرنسي."
-      },
-      {
-        "title": "مباراة الأهلي القطري ضد النصر السعودي في نصف نهائي أبطال آسيا 2.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d9%85%d9%88%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%82%d8%b7%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:25:41 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "موعد مباراة النصر السعودي ضد الأهلي القطري في نصف نهائي دوري أبطال آسيا 2."
-      },
-      {
-        "title": "\"الشانغل\" الهجين.. الولد الشقي الذي صنع الفكاهة والاندماج بكوبلنز الألمانية",
-        "link": "https://www.aljazeera.net/politics/2026/4/20/%d8%a7%d9%84%d8%b4%d8%a7%d9%86%d8%ba%d9%84-%d8%a7%d9%84%d9%87%d8%ac%d9%8a%d9%86-%d8%a7%d9%84%d9%88%d9%84%d8%af-%d8%a7%d9%84%d8%b4%d9%82%d9%8a-%d8%a7%d9%84%d8%b0%d9%8a-%d8%b5%d9%86%d8%b9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:17:15 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "\"الشانغل\" طفل ساهم في إبقاء روح الفكاهة في مدينة عانت من الحروب بسبب موقعها الإستراتيجي عند ملتقى نهريْ الراين والموزيل."
       }
     ],
     "finance": [
       {
+        "title": "جنوب لبنان.. عودة النازحين وحياة تنبعث من وسط الركام",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ac%d9%86%d9%88%d8%a8-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%b9%d9%88%d8%af%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%88%d8%ad%d9%8a%d8%a7%d8%a9-%d8%aa%d9%86%d8%a8%d8%b9%d8%ab?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:27 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "رصدت كاميرا الجزيرة بدء عودة عدد من النازحين إلى قراهم في جنوب لبنان لتفقد ممتلكاتهم واستئناف حياتهم، رغم الدمار الواسع الذي خلفه القصف الإسرائيلي المكثف الذي استهدف المنطقة وال..."
+      },
+      {
+        "title": "غزة.. مأساة الأطفال في الخيام وحكايات الحرمان",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ba%d8%b2%d8%a9-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d8%ae%d9%8a%d8%a7%d9%85-%d9%88%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:20 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "تتكشف مأساة آلاف الأطفال في قطاع غزة داخل خيام تحولت لمأوى دائم، حيث يواجهون فقدان المعيل والحرمان من التعليم في ظل ظروف إنسانية قاسية تفرضها الحرب الإسرائيلية المستمرة على القطاع."
+      },
+      {
+        "title": "خلافات الإطار التنسيقي بالعراق.. سباق حسم مرشح رئاسة الحكومة",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ae%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a-%d8%a8%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%b3%d8%a8%d8%a7%d9%82?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:11 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يعقد الإطار التنسيقي في العراق اجتماعا حاسما الاثنين في مكتب زعيم تيار الحكمة عمار الحكيم، لمحاولة تجاوز الخلافات العميقة التي عرقلت اختيار مرشح رئاسة الحكومة المقبلة وسط ترقب س..."
+      },
+      {
+        "title": "ماذا يعني إعلان واشنطن فرض حصار بحري عالمي على سفن إيران؟",
+        "link": "https://www.aljazeera.net/news/2026/4/20/%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%b9%d9%86%d9%8a-%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d9%81%d8%b1%d8%b6-%d8%ad%d8%b5%d8%a7%d8%b1-%d8%a8%d8%ad%d8%b1%d9%8a?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 02:59:32 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يتجه الحصار البحري الذي فرضته الولايات المتحدة على التجارة البحرية الإيرانية إلى مرحلة جديدة أكثر اتساعا، بعد أن أعلن الجيش الأمريكي أن استهدافه للسفن المرتبطة بإيران لن يقتصر ع..."
+      },
+      {
         "title": "شهيد وإصابات بغارتين إسرائيليتين على قطاع غزة",
         "link": "https://www.aljazeera.net/news/2026/4/20/%d8%b4%d9%87%d9%8a%d8%af-%d9%88%d9%85%d8%b5%d8%a7%d8%a8%d9%88%d9%86-%d8%a8%d8%ba%d8%a7%d8%b1%d8%aa%d9%8a%d9%86-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%aa%d9%8a%d9%86-%d8%b9%d9%84%d9%89?traffic_source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:43:13 +0300",
@@ -5387,42 +5419,42 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "يسعى الرئيس الأوكراني فولوديمير زيلينسكي لإقناع أوروبا بإنشاء منظومة دفاع صاروخي، فيما طلبت كييف وساطة تركية لعقد قمة تجمعه بالرئيس الروسي فلاديمير بوتين، بمشاركة الرئيسين الترك..."
-      },
-      {
-        "title": "ترمب يعلن مهاجمة سفينة شحن إيرانية بخليج عُمان وطهران تتوعد بالرد",
-        "link": "https://www.aljazeera.net/news/2026/4/20/%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d8%b9%d9%84%d9%86-%d9%85%d9%87%d8%a7%d8%ac%d9%85%d8%a9-%d8%b3%d9%81%d9%8a%d9%86%d8%a9-%d8%b4%d8%ad%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 23:17:00 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "أطلقت المدمرة الأمريكية \"يو إس إس سبروانس\" النار مباشرة على \"غرفة المحركات\" في السفينة الإيرانية \"توسكا\"، مما أدى إلى ثقبها وإيقافها تماما في مكانها."
-      },
-      {
-        "title": "شاهد.. خسارة مفاجئة لسان جيرمان تُشعل المنافسة على صدارة الدوري الفرنسي",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d8%a8%d8%a7%d8%b1%d9%8a%d8%b3-%d8%b3%d8%a7%d9%86-%d8%ac%d9%8a%d8%b1%d9%85%d8%a7%d9%86-%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%af%d9%88%d8%b1%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86%d8%b3%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:50:13 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "باريس سان جيرمان يتلقى خسارته الخامسة هذا الموسم في الدوري الفرنسي."
-      },
-      {
-        "title": "مباراة الأهلي القطري ضد النصر السعودي في نصف نهائي أبطال آسيا 2.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d9%85%d9%88%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%82%d8%b7%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:25:41 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "موعد مباراة النصر السعودي ضد الأهلي القطري في نصف نهائي دوري أبطال آسيا 2."
-      },
-      {
-        "title": "\"الشانغل\" الهجين.. الولد الشقي الذي صنع الفكاهة والاندماج بكوبلنز الألمانية",
-        "link": "https://www.aljazeera.net/politics/2026/4/20/%d8%a7%d9%84%d8%b4%d8%a7%d9%86%d8%ba%d9%84-%d8%a7%d9%84%d9%87%d8%ac%d9%8a%d9%86-%d8%a7%d9%84%d9%88%d9%84%d8%af-%d8%a7%d9%84%d8%b4%d9%82%d9%8a-%d8%a7%d9%84%d8%b0%d9%8a-%d8%b5%d9%86%d8%b9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:17:15 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "\"الشانغل\" طفل ساهم في إبقاء روح الفكاهة في مدينة عانت من الحروب بسبب موقعها الإستراتيجي عند ملتقى نهريْ الراين والموزيل."
       }
     ],
     "sports": [
       {
+        "title": "جنوب لبنان.. عودة النازحين وحياة تنبعث من وسط الركام",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ac%d9%86%d9%88%d8%a8-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%b9%d9%88%d8%af%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%88%d8%ad%d9%8a%d8%a7%d8%a9-%d8%aa%d9%86%d8%a8%d8%b9%d8%ab?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:27 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "رصدت كاميرا الجزيرة بدء عودة عدد من النازحين إلى قراهم في جنوب لبنان لتفقد ممتلكاتهم واستئناف حياتهم، رغم الدمار الواسع الذي خلفه القصف الإسرائيلي المكثف الذي استهدف المنطقة وال..."
+      },
+      {
+        "title": "غزة.. مأساة الأطفال في الخيام وحكايات الحرمان",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ba%d8%b2%d8%a9-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d8%ae%d9%8a%d8%a7%d9%85-%d9%88%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:20 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "تتكشف مأساة آلاف الأطفال في قطاع غزة داخل خيام تحولت لمأوى دائم، حيث يواجهون فقدان المعيل والحرمان من التعليم في ظل ظروف إنسانية قاسية تفرضها الحرب الإسرائيلية المستمرة على القطاع."
+      },
+      {
+        "title": "خلافات الإطار التنسيقي بالعراق.. سباق حسم مرشح رئاسة الحكومة",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ae%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a-%d8%a8%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%b3%d8%a8%d8%a7%d9%82?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:11 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يعقد الإطار التنسيقي في العراق اجتماعا حاسما الاثنين في مكتب زعيم تيار الحكمة عمار الحكيم، لمحاولة تجاوز الخلافات العميقة التي عرقلت اختيار مرشح رئاسة الحكومة المقبلة وسط ترقب س..."
+      },
+      {
+        "title": "ماذا يعني إعلان واشنطن فرض حصار بحري عالمي على سفن إيران؟",
+        "link": "https://www.aljazeera.net/news/2026/4/20/%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%b9%d9%86%d9%8a-%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d9%81%d8%b1%d8%b6-%d8%ad%d8%b5%d8%a7%d8%b1-%d8%a8%d8%ad%d8%b1%d9%8a?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 02:59:32 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يتجه الحصار البحري الذي فرضته الولايات المتحدة على التجارة البحرية الإيرانية إلى مرحلة جديدة أكثر اتساعا، بعد أن أعلن الجيش الأمريكي أن استهدافه للسفن المرتبطة بإيران لن يقتصر ع..."
+      },
+      {
         "title": "شهيد وإصابات بغارتين إسرائيليتين على قطاع غزة",
         "link": "https://www.aljazeera.net/news/2026/4/20/%d8%b4%d9%87%d9%8a%d8%af-%d9%88%d9%85%d8%b5%d8%a7%d8%a8%d9%88%d9%86-%d8%a8%d8%ba%d8%a7%d8%b1%d8%aa%d9%8a%d9%86-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%aa%d9%8a%d9%86-%d8%b9%d9%84%d9%89?traffic_source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:43:13 +0300",
@@ -5549,42 +5581,42 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "يسعى الرئيس الأوكراني فولوديمير زيلينسكي لإقناع أوروبا بإنشاء منظومة دفاع صاروخي، فيما طلبت كييف وساطة تركية لعقد قمة تجمعه بالرئيس الروسي فلاديمير بوتين، بمشاركة الرئيسين الترك..."
-      },
-      {
-        "title": "ترمب يعلن مهاجمة سفينة شحن إيرانية بخليج عُمان وطهران تتوعد بالرد",
-        "link": "https://www.aljazeera.net/news/2026/4/20/%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d8%b9%d9%84%d9%86-%d9%85%d9%87%d8%a7%d8%ac%d9%85%d8%a9-%d8%b3%d9%81%d9%8a%d9%86%d8%a9-%d8%b4%d8%ad%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 23:17:00 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "أطلقت المدمرة الأمريكية \"يو إس إس سبروانس\" النار مباشرة على \"غرفة المحركات\" في السفينة الإيرانية \"توسكا\"، مما أدى إلى ثقبها وإيقافها تماما في مكانها."
-      },
-      {
-        "title": "شاهد.. خسارة مفاجئة لسان جيرمان تُشعل المنافسة على صدارة الدوري الفرنسي",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d8%a8%d8%a7%d8%b1%d9%8a%d8%b3-%d8%b3%d8%a7%d9%86-%d8%ac%d9%8a%d8%b1%d9%85%d8%a7%d9%86-%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%af%d9%88%d8%b1%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86%d8%b3%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:50:13 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "باريس سان جيرمان يتلقى خسارته الخامسة هذا الموسم في الدوري الفرنسي."
-      },
-      {
-        "title": "مباراة الأهلي القطري ضد النصر السعودي في نصف نهائي أبطال آسيا 2.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d9%85%d9%88%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%82%d8%b7%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:25:41 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "موعد مباراة النصر السعودي ضد الأهلي القطري في نصف نهائي دوري أبطال آسيا 2."
-      },
-      {
-        "title": "\"الشانغل\" الهجين.. الولد الشقي الذي صنع الفكاهة والاندماج بكوبلنز الألمانية",
-        "link": "https://www.aljazeera.net/politics/2026/4/20/%d8%a7%d9%84%d8%b4%d8%a7%d9%86%d8%ba%d9%84-%d8%a7%d9%84%d9%87%d8%ac%d9%8a%d9%86-%d8%a7%d9%84%d9%88%d9%84%d8%af-%d8%a7%d9%84%d8%b4%d9%82%d9%8a-%d8%a7%d9%84%d8%b0%d9%8a-%d8%b5%d9%86%d8%b9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:17:15 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "\"الشانغل\" طفل ساهم في إبقاء روح الفكاهة في مدينة عانت من الحروب بسبب موقعها الإستراتيجي عند ملتقى نهريْ الراين والموزيل."
       }
     ],
     "entertainment": [
       {
+        "title": "جنوب لبنان.. عودة النازحين وحياة تنبعث من وسط الركام",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ac%d9%86%d9%88%d8%a8-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%b9%d9%88%d8%af%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%88%d8%ad%d9%8a%d8%a7%d8%a9-%d8%aa%d9%86%d8%a8%d8%b9%d8%ab?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:27 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "رصدت كاميرا الجزيرة بدء عودة عدد من النازحين إلى قراهم في جنوب لبنان لتفقد ممتلكاتهم واستئناف حياتهم، رغم الدمار الواسع الذي خلفه القصف الإسرائيلي المكثف الذي استهدف المنطقة وال..."
+      },
+      {
+        "title": "غزة.. مأساة الأطفال في الخيام وحكايات الحرمان",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ba%d8%b2%d8%a9-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d8%ae%d9%8a%d8%a7%d9%85-%d9%88%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:20 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "تتكشف مأساة آلاف الأطفال في قطاع غزة داخل خيام تحولت لمأوى دائم، حيث يواجهون فقدان المعيل والحرمان من التعليم في ظل ظروف إنسانية قاسية تفرضها الحرب الإسرائيلية المستمرة على القطاع."
+      },
+      {
+        "title": "خلافات الإطار التنسيقي بالعراق.. سباق حسم مرشح رئاسة الحكومة",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ae%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a-%d8%a8%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%b3%d8%a8%d8%a7%d9%82?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:11 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يعقد الإطار التنسيقي في العراق اجتماعا حاسما الاثنين في مكتب زعيم تيار الحكمة عمار الحكيم، لمحاولة تجاوز الخلافات العميقة التي عرقلت اختيار مرشح رئاسة الحكومة المقبلة وسط ترقب س..."
+      },
+      {
+        "title": "ماذا يعني إعلان واشنطن فرض حصار بحري عالمي على سفن إيران؟",
+        "link": "https://www.aljazeera.net/news/2026/4/20/%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%b9%d9%86%d9%8a-%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d9%81%d8%b1%d8%b6-%d8%ad%d8%b5%d8%a7%d8%b1-%d8%a8%d8%ad%d8%b1%d9%8a?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 02:59:32 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يتجه الحصار البحري الذي فرضته الولايات المتحدة على التجارة البحرية الإيرانية إلى مرحلة جديدة أكثر اتساعا، بعد أن أعلن الجيش الأمريكي أن استهدافه للسفن المرتبطة بإيران لن يقتصر ع..."
+      },
+      {
         "title": "شهيد وإصابات بغارتين إسرائيليتين على قطاع غزة",
         "link": "https://www.aljazeera.net/news/2026/4/20/%d8%b4%d9%87%d9%8a%d8%af-%d9%88%d9%85%d8%b5%d8%a7%d8%a8%d9%88%d9%86-%d8%a8%d8%ba%d8%a7%d8%b1%d8%aa%d9%8a%d9%86-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%aa%d9%8a%d9%86-%d8%b9%d9%84%d9%89?traffic_source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:43:13 +0300",
@@ -5711,42 +5743,42 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "يسعى الرئيس الأوكراني فولوديمير زيلينسكي لإقناع أوروبا بإنشاء منظومة دفاع صاروخي، فيما طلبت كييف وساطة تركية لعقد قمة تجمعه بالرئيس الروسي فلاديمير بوتين، بمشاركة الرئيسين الترك..."
-      },
-      {
-        "title": "ترمب يعلن مهاجمة سفينة شحن إيرانية بخليج عُمان وطهران تتوعد بالرد",
-        "link": "https://www.aljazeera.net/news/2026/4/20/%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d8%b9%d9%84%d9%86-%d9%85%d9%87%d8%a7%d8%ac%d9%85%d8%a9-%d8%b3%d9%81%d9%8a%d9%86%d8%a9-%d8%b4%d8%ad%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 23:17:00 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "أطلقت المدمرة الأمريكية \"يو إس إس سبروانس\" النار مباشرة على \"غرفة المحركات\" في السفينة الإيرانية \"توسكا\"، مما أدى إلى ثقبها وإيقافها تماما في مكانها."
-      },
-      {
-        "title": "شاهد.. خسارة مفاجئة لسان جيرمان تُشعل المنافسة على صدارة الدوري الفرنسي",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d8%a8%d8%a7%d8%b1%d9%8a%d8%b3-%d8%b3%d8%a7%d9%86-%d8%ac%d9%8a%d8%b1%d9%85%d8%a7%d9%86-%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%af%d9%88%d8%b1%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86%d8%b3%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:50:13 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "باريس سان جيرمان يتلقى خسارته الخامسة هذا الموسم في الدوري الفرنسي."
-      },
-      {
-        "title": "مباراة الأهلي القطري ضد النصر السعودي في نصف نهائي أبطال آسيا 2.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d9%85%d9%88%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%82%d8%b7%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:25:41 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "موعد مباراة النصر السعودي ضد الأهلي القطري في نصف نهائي دوري أبطال آسيا 2."
-      },
-      {
-        "title": "\"الشانغل\" الهجين.. الولد الشقي الذي صنع الفكاهة والاندماج بكوبلنز الألمانية",
-        "link": "https://www.aljazeera.net/politics/2026/4/20/%d8%a7%d9%84%d8%b4%d8%a7%d9%86%d8%ba%d9%84-%d8%a7%d9%84%d9%87%d8%ac%d9%8a%d9%86-%d8%a7%d9%84%d9%88%d9%84%d8%af-%d8%a7%d9%84%d8%b4%d9%82%d9%8a-%d8%a7%d9%84%d8%b0%d9%8a-%d8%b5%d9%86%d8%b9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:17:15 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "\"الشانغل\" طفل ساهم في إبقاء روح الفكاهة في مدينة عانت من الحروب بسبب موقعها الإستراتيجي عند ملتقى نهريْ الراين والموزيل."
       }
     ],
     "health": [
       {
+        "title": "جنوب لبنان.. عودة النازحين وحياة تنبعث من وسط الركام",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ac%d9%86%d9%88%d8%a8-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%b9%d9%88%d8%af%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%88%d8%ad%d9%8a%d8%a7%d8%a9-%d8%aa%d9%86%d8%a8%d8%b9%d8%ab?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:27 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "رصدت كاميرا الجزيرة بدء عودة عدد من النازحين إلى قراهم في جنوب لبنان لتفقد ممتلكاتهم واستئناف حياتهم، رغم الدمار الواسع الذي خلفه القصف الإسرائيلي المكثف الذي استهدف المنطقة وال..."
+      },
+      {
+        "title": "غزة.. مأساة الأطفال في الخيام وحكايات الحرمان",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ba%d8%b2%d8%a9-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d8%ae%d9%8a%d8%a7%d9%85-%d9%88%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:20 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "تتكشف مأساة آلاف الأطفال في قطاع غزة داخل خيام تحولت لمأوى دائم، حيث يواجهون فقدان المعيل والحرمان من التعليم في ظل ظروف إنسانية قاسية تفرضها الحرب الإسرائيلية المستمرة على القطاع."
+      },
+      {
+        "title": "خلافات الإطار التنسيقي بالعراق.. سباق حسم مرشح رئاسة الحكومة",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ae%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a-%d8%a8%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%b3%d8%a8%d8%a7%d9%82?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:11 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يعقد الإطار التنسيقي في العراق اجتماعا حاسما الاثنين في مكتب زعيم تيار الحكمة عمار الحكيم، لمحاولة تجاوز الخلافات العميقة التي عرقلت اختيار مرشح رئاسة الحكومة المقبلة وسط ترقب س..."
+      },
+      {
+        "title": "ماذا يعني إعلان واشنطن فرض حصار بحري عالمي على سفن إيران؟",
+        "link": "https://www.aljazeera.net/news/2026/4/20/%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%b9%d9%86%d9%8a-%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d9%81%d8%b1%d8%b6-%d8%ad%d8%b5%d8%a7%d8%b1-%d8%a8%d8%ad%d8%b1%d9%8a?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 02:59:32 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يتجه الحصار البحري الذي فرضته الولايات المتحدة على التجارة البحرية الإيرانية إلى مرحلة جديدة أكثر اتساعا، بعد أن أعلن الجيش الأمريكي أن استهدافه للسفن المرتبطة بإيران لن يقتصر ع..."
+      },
+      {
         "title": "شهيد وإصابات بغارتين إسرائيليتين على قطاع غزة",
         "link": "https://www.aljazeera.net/news/2026/4/20/%d8%b4%d9%87%d9%8a%d8%af-%d9%88%d9%85%d8%b5%d8%a7%d8%a8%d9%88%d9%86-%d8%a8%d8%ba%d8%a7%d8%b1%d8%aa%d9%8a%d9%86-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%aa%d9%8a%d9%86-%d8%b9%d9%84%d9%89?traffic_source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:43:13 +0300",
@@ -5873,42 +5905,42 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "يسعى الرئيس الأوكراني فولوديمير زيلينسكي لإقناع أوروبا بإنشاء منظومة دفاع صاروخي، فيما طلبت كييف وساطة تركية لعقد قمة تجمعه بالرئيس الروسي فلاديمير بوتين، بمشاركة الرئيسين الترك..."
-      },
-      {
-        "title": "ترمب يعلن مهاجمة سفينة شحن إيرانية بخليج عُمان وطهران تتوعد بالرد",
-        "link": "https://www.aljazeera.net/news/2026/4/20/%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d8%b9%d9%84%d9%86-%d9%85%d9%87%d8%a7%d8%ac%d9%85%d8%a9-%d8%b3%d9%81%d9%8a%d9%86%d8%a9-%d8%b4%d8%ad%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 23:17:00 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "أطلقت المدمرة الأمريكية \"يو إس إس سبروانس\" النار مباشرة على \"غرفة المحركات\" في السفينة الإيرانية \"توسكا\"، مما أدى إلى ثقبها وإيقافها تماما في مكانها."
-      },
-      {
-        "title": "شاهد.. خسارة مفاجئة لسان جيرمان تُشعل المنافسة على صدارة الدوري الفرنسي",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d8%a8%d8%a7%d8%b1%d9%8a%d8%b3-%d8%b3%d8%a7%d9%86-%d8%ac%d9%8a%d8%b1%d9%85%d8%a7%d9%86-%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%af%d9%88%d8%b1%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86%d8%b3%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:50:13 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "باريس سان جيرمان يتلقى خسارته الخامسة هذا الموسم في الدوري الفرنسي."
-      },
-      {
-        "title": "مباراة الأهلي القطري ضد النصر السعودي في نصف نهائي أبطال آسيا 2.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d9%85%d9%88%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%82%d8%b7%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:25:41 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "موعد مباراة النصر السعودي ضد الأهلي القطري في نصف نهائي دوري أبطال آسيا 2."
-      },
-      {
-        "title": "\"الشانغل\" الهجين.. الولد الشقي الذي صنع الفكاهة والاندماج بكوبلنز الألمانية",
-        "link": "https://www.aljazeera.net/politics/2026/4/20/%d8%a7%d9%84%d8%b4%d8%a7%d9%86%d8%ba%d9%84-%d8%a7%d9%84%d9%87%d8%ac%d9%8a%d9%86-%d8%a7%d9%84%d9%88%d9%84%d8%af-%d8%a7%d9%84%d8%b4%d9%82%d9%8a-%d8%a7%d9%84%d8%b0%d9%8a-%d8%b5%d9%86%d8%b9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:17:15 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "\"الشانغل\" طفل ساهم في إبقاء روح الفكاهة في مدينة عانت من الحروب بسبب موقعها الإستراتيجي عند ملتقى نهريْ الراين والموزيل."
       }
     ],
     "science": [
       {
+        "title": "جنوب لبنان.. عودة النازحين وحياة تنبعث من وسط الركام",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ac%d9%86%d9%88%d8%a8-%d9%84%d8%a8%d9%86%d8%a7%d9%86-%d8%b9%d9%88%d8%af%d8%a9-%d8%a7%d9%84%d9%86%d8%a7%d8%b2%d8%ad%d9%8a%d9%86-%d9%88%d8%ad%d9%8a%d8%a7%d8%a9-%d8%aa%d9%86%d8%a8%d8%b9%d8%ab?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:27 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "رصدت كاميرا الجزيرة بدء عودة عدد من النازحين إلى قراهم في جنوب لبنان لتفقد ممتلكاتهم واستئناف حياتهم، رغم الدمار الواسع الذي خلفه القصف الإسرائيلي المكثف الذي استهدف المنطقة وال..."
+      },
+      {
+        "title": "غزة.. مأساة الأطفال في الخيام وحكايات الحرمان",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ba%d8%b2%d8%a9-%d9%85%d8%a3%d8%b3%d8%a7%d8%a9-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d9%81%d9%8a-%d8%a7%d9%84%d8%ae%d9%8a%d8%a7%d9%85-%d9%88%d8%ad%d9%83%d8%a7%d9%8a%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:20 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "تتكشف مأساة آلاف الأطفال في قطاع غزة داخل خيام تحولت لمأوى دائم، حيث يواجهون فقدان المعيل والحرمان من التعليم في ظل ظروف إنسانية قاسية تفرضها الحرب الإسرائيلية المستمرة على القطاع."
+      },
+      {
+        "title": "خلافات الإطار التنسيقي بالعراق.. سباق حسم مرشح رئاسة الحكومة",
+        "link": "https://www.aljazeera.net/video/2026/4/20/%d8%ae%d9%84%d8%a7%d9%81%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a-%d8%a8%d8%a7%d9%84%d8%b9%d8%b1%d8%a7%d9%82-%d8%b3%d8%a8%d8%a7%d9%82?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 03:14:11 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يعقد الإطار التنسيقي في العراق اجتماعا حاسما الاثنين في مكتب زعيم تيار الحكمة عمار الحكيم، لمحاولة تجاوز الخلافات العميقة التي عرقلت اختيار مرشح رئاسة الحكومة المقبلة وسط ترقب س..."
+      },
+      {
+        "title": "ماذا يعني إعلان واشنطن فرض حصار بحري عالمي على سفن إيران؟",
+        "link": "https://www.aljazeera.net/news/2026/4/20/%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%b9%d9%86%d9%8a-%d8%a5%d8%b9%d9%84%d8%a7%d9%86-%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d9%81%d8%b1%d8%b6-%d8%ad%d8%b5%d8%a7%d8%b1-%d8%a8%d8%ad%d8%b1%d9%8a?traffic_source=rss",
+        "pubDate": "Mon, 20 Apr 2026 02:59:32 +0300",
+        "source": "الجزيرة نت",
+        "image": "",
+        "description": "يتجه الحصار البحري الذي فرضته الولايات المتحدة على التجارة البحرية الإيرانية إلى مرحلة جديدة أكثر اتساعا، بعد أن أعلن الجيش الأمريكي أن استهدافه للسفن المرتبطة بإيران لن يقتصر ع..."
+      },
+      {
         "title": "شهيد وإصابات بغارتين إسرائيليتين على قطاع غزة",
         "link": "https://www.aljazeera.net/news/2026/4/20/%d8%b4%d9%87%d9%8a%d8%af-%d9%88%d9%85%d8%b5%d8%a7%d8%a8%d9%88%d9%86-%d8%a8%d8%ba%d8%a7%d8%b1%d8%aa%d9%8a%d9%86-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84%d9%8a%d8%aa%d9%8a%d9%86-%d8%b9%d9%84%d9%89?traffic_source=rss",
         "pubDate": "Mon, 20 Apr 2026 02:43:13 +0300",
@@ -6035,38 +6067,6 @@ window.NEWS_DATA = {
         "source": "الجزيرة نت",
         "image": "",
         "description": "يسعى الرئيس الأوكراني فولوديمير زيلينسكي لإقناع أوروبا بإنشاء منظومة دفاع صاروخي، فيما طلبت كييف وساطة تركية لعقد قمة تجمعه بالرئيس الروسي فلاديمير بوتين، بمشاركة الرئيسين الترك..."
-      },
-      {
-        "title": "ترمب يعلن مهاجمة سفينة شحن إيرانية بخليج عُمان وطهران تتوعد بالرد",
-        "link": "https://www.aljazeera.net/news/2026/4/20/%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d8%b9%d9%84%d9%86-%d9%85%d9%87%d8%a7%d8%ac%d9%85%d8%a9-%d8%b3%d9%81%d9%8a%d9%86%d8%a9-%d8%b4%d8%ad%d9%86-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 23:17:00 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "أطلقت المدمرة الأمريكية \"يو إس إس سبروانس\" النار مباشرة على \"غرفة المحركات\" في السفينة الإيرانية \"توسكا\"، مما أدى إلى ثقبها وإيقافها تماما في مكانها."
-      },
-      {
-        "title": "شاهد.. خسارة مفاجئة لسان جيرمان تُشعل المنافسة على صدارة الدوري الفرنسي",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d8%a8%d8%a7%d8%b1%d9%8a%d8%b3-%d8%b3%d8%a7%d9%86-%d8%ac%d9%8a%d8%b1%d9%85%d8%a7%d9%86-%d9%84%d9%8a%d9%88%d9%86-%d8%a7%d9%84%d8%af%d9%88%d8%b1%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86%d8%b3%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:50:13 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "باريس سان جيرمان يتلقى خسارته الخامسة هذا الموسم في الدوري الفرنسي."
-      },
-      {
-        "title": "مباراة الأهلي القطري ضد النصر السعودي في نصف نهائي أبطال آسيا 2.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/20/%d9%85%d9%88%d8%b9%d8%af-%d8%a7%d9%84%d9%86%d8%b5%d8%b1-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%82%d8%b7%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:25:41 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "موعد مباراة النصر السعودي ضد الأهلي القطري في نصف نهائي دوري أبطال آسيا 2."
-      },
-      {
-        "title": "\"الشانغل\" الهجين.. الولد الشقي الذي صنع الفكاهة والاندماج بكوبلنز الألمانية",
-        "link": "https://www.aljazeera.net/politics/2026/4/20/%d8%a7%d9%84%d8%b4%d8%a7%d9%86%d8%ba%d9%84-%d8%a7%d9%84%d9%87%d8%ac%d9%8a%d9%86-%d8%a7%d9%84%d9%88%d9%84%d8%af-%d8%a7%d9%84%d8%b4%d9%82%d9%8a-%d8%a7%d9%84%d8%b0%d9%8a-%d8%b5%d9%86%d8%b9?traffic_source=rss",
-        "pubDate": "Sun, 19 Apr 2026 22:17:15 +0300",
-        "source": "الجزيرة نت",
-        "image": "",
-        "description": "\"الشانغل\" طفل ساهم في إبقاء روح الفكاهة في مدينة عانت من الحروب بسبب موقعها الإستراتيجي عند ملتقى نهريْ الراين والموزيل."
       }
     ]
   },
