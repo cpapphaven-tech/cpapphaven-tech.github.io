@@ -301,6 +301,15 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Trigger ad system
     if (typeof window.prepSystem === 'function') window.prepSystem();
 
+    // Hide swipe hint on first scroll
+    const swipeHint = document.getElementById('swipe-hint');
+    if (swipeHint) {
+        feed.addEventListener('scroll', () => {
+            swipeHint.style.opacity = '0';
+            setTimeout(() => swipeHint.remove(), 500);
+        }, { once: true });
+    }
+
     const activeBtn = document.querySelector('.cat-btn.active');
     if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
 });
