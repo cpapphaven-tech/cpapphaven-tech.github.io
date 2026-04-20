@@ -52,6 +52,7 @@
         { name: "🍣 Sushi Memory Match", path: "SushiMatch/index.html", icon: "assets/sushimatch3d.png", tip: "Memory" },
         { name: "🍔 Burger Stack Cooking", path: "BurgerStack/index.html", icon: "assets/burgerstack.png", tip: "Physics" },
         { name: "🔡 Word Search Puzzle", path: "WordSearch/index.html", icon: "img/wordsrarch200.png", tip: "Word" },
+        { name: "🐦 Flappy Rise Bird", path: "FlappyRise/index.html", icon: "assets/flappy200.png", tip: "Arcade" },
     ];
 
     function createSidebar() {

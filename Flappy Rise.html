@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Flappy Rise - Infinite Addictive Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            touch-action: none; /* Prevent zoom on mobile */
+        }
+        #game-container {
+            position: relative;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+        #ui-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Let clicks pass through */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #score-display {
+            font-size: 60px;
+            font-weight: 900;
+            color: white;
+            text-shadow: 2px 2px 0 #000;
+            margin-top: 50px;
+            opacity: 0.8;
+        }
+        #high-score {
+            font-size: 20px;
+            color: #ffd700;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        #game-over-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            display: none; /* Hidden by default */
+            pointer-events: auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid white;
+        }
+        h1 { margin: 0 0 10px 0; color: #ff4444; font-size: 40px; text-shadow: 2px 2px #000; }
+        p { color: white; font-size: 18px; margin-bottom: 20px; }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px #2E7D32;
+            transition: transform 0.1s;
+        }
+        button:active {
+            transform: translateY(4px);
+            box-shadow: 0 0 #2E7D32;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="ui-layer">
+            <div id="score-display">0</div>
+            <div id="high-score">BEST: 0</div>
+        </div>
+        
+        <div id="game-over-screen">
+            <h1>CRASHED!</h1>
+            <p>Score: <span id="final-score">0</span></p>
+            <button id="restart-btn">TRY AGAIN</button>
+        </div>
+    </div>
+
+    <script>
+        // --- CONFIGURATION ---
+        const config = {
+            type: Phaser.AUTO,
+            width: 400, // Portrait mobile aspect ratio
+            height: 600,
+            parent: 'game-container',
+            backgroundColor: '#70c5ce', // Classic sky blue
+            physics: {
+                default: 'arcade',
+                arcade: {
+                    gravity: { y: 0 }, // We handle gravity manually for tighter control
+                    debug: false
+                }
+            },
+            scene: {
+                preload: preload,
+                create: create,
+                update: update
+            }
+        };
+
+        // --- GAME VARIABLES ---
+        let bird;
+        let pipes;
+        let particles;
+        let score = 0;
+        let highScore = localStorage.getItem('flappyHighScore') || 0;
+        let gameSpeed = 2.5; // Initial speed
+        let isGameOver = false;
+        let jumpTimer = 0;
+        
+        // DOM Elements
+        const scoreEl = document.getElementById('score-display');
+        const highScoreEl = document.getElementById('high-score');
+        const gameOverScreen = document.getElementById('game-over-screen');
+        const finalScoreEl = document.getElementById('final-score');
+        const restartBtn = document.getElementById('restart-btn');
+
+        // Update High Score Display
+        highScoreEl.innerText = `BEST: ${highScore}`;
+
+        const game = new Phaser.Game(config);
+
+        // --- PRELOAD ---
+        function preload() {
+            // 1. Generate Bird Texture (Yellow circle with eye)
+            const g = this.make.graphics({ x: 0, y: 0, add: false });
+            g.fillStyle(0xffd700, 1); // Gold
+            g.fillCircle(16, 16, 16);
+            g.fillStyle(0xffffff, 1); // Eye
+            g.fillCircle(22, 10, 5);
+            g.fillStyle(0x000000, 1); // Pupil
+            g.fillCircle(24, 10, 2);
+            g.fillStyle(0xffa500, 1); // Beak
+            g.fillTriangle(24, 16, 32, 20, 24, 24);
+            g.generateTexture('bird', 32, 32);
+
+            // 2. Generate Pipe Texture (Green with border)
+            const pg = this.make.graphics({ x: 0, y: 0, add: false });
+            pg.fillStyle(0x73bf2e, 1);
+            pg.fillRect(0, 0, 50, 400);
+            pg.lineStyle(4, 0x558c22, 1);
+            pg.strokeRect(0, 0, 50, 400);
+            pg.generateTexture('pipe', 50, 400);
+
+            // 3. Generate Particle Texture (White square)
+            const partG = this.make.graphics({x:0, y:0, add:false});
+            partG.fillStyle(0xffffff, 0.8);
+            partG.fillRect(0,0,4,4);
+            partG.generateTexture('particle', 4, 4);
+        }
+
+        // --- CREATE ---
+        function create() {
+            // Create Bird Group
+            bird = this.physics.add.sprite(100, 300, 'bird');
+            bird.setCollideWorldBounds(true);
+            bird.body.allowGravity = false; // We simulate gravity for better "jump" feel
+
+            // Input (Spacebar, Click, Touch)
+            this.input.on('pointerdown', jump, this);
+            this.input.keyboard.on('keydown-SPACE', jump, this);
+
+            // Pipes Group
+            pipes = this.physics.add.group();
+
+            // Pipe Spawning Timer
+            this.time.addEvent({
+                delay: 1500, // Spawn pipe every 1.5s
+                callback: spawnPipe,
+                callbackScope: this,
+                loop: true
+            });
+
+            // Particle Emitter (Trail)
+            particles = this.add.particles(0, 0, 'particle', {
+                speed: 50,
+                scale: { start: 1, end: 0 },
+                blendMode: 'ADD',
+                lifespan: 300
+            });
+            particles.startFollow(bird);
+
+            // Colliders
+            this.physics.add.collider(bird, pipes, gameOver, null, this);
+        }
+
+        // --- JUMP LOGIC ---
+        function jump() {
+            if (isGameOver) return;
+
+            // Set velocity upwards
+            bird.setVelocityY(-300);
+            
+            // Visual feedback: Tilt bird up
+            bird.setRotation(-0.3);
+
+            // Stop previous rotation tween if exists
+            if (bird.rotationTween) bird.rotationTween.remove();
+
+            // Tween to rotate down slowly (simulating gravity fall)
+            bird.rotationTween = this.tweens.add({
+                targets: bird,
+                rotation: 0.5, // Nose dive
+                duration: 500,
+                ease: 'Linear'
+            });
+        }
+
+        // --- SPAWN PIPES ---
+        function spawnPipe() {
+            if (isGameOver) return;
+
+            const gap = 160; // Size of the opening
+            const minHeight = 50;
+            const maxPosition = 600 - gap - minHeight;
+            const position = Phaser.Math.Between(minHeight, maxPosition);
+
+            // Top Pipe
+            const topPipe = pipes.create(450, position - 200, 'pipe');
+            topPipe.setVelocityX(-gameSpeed * 100); // Move Left
+            topPipe.body.allowGravity = false;
+            topPipe.setOrigin(0.5, 1); // Pivot from bottom
+            topPipe.setFlipY(true); // Flip texture so border is at bottom
+
+            // Bottom Pipe
+            const bottomPipe = pipes.create(450, position + gap, 'pipe');
+            bottomPipe.setVelocityX(-gameSpeed * 100);
+            bottomPipe.body.allowGravity = false;
+            bottomPipe.setOrigin(0.5, 0); // Pivot from top
+        }
+
+        // --- UPDATE ---
+        function update(time, delta) {
+            if (isGameOver) return;
+
+            // 1. Custom Gravity (simulates falling)
+            if (bird.body.velocity.y < 300) {
+                bird.body.velocity.y += 10; // Gravity force
+            }
+
+            // 2. Ground/Ceiling Collision (Manual check)
+            if (bird.y > 600 || bird.y < 0) {
+                gameOver();
+            }
+
+            // 3. Pipe Cleanup & Scoring
+            pipes.children.iterate((pipe) => {
+                if (pipe) {
+                    // If pipe passed the bird
+                    if (pipe.x < 100 && !pipe.passed) {
+                        pipe.passed = true;
+                        score += 0.5; // 0.5 because there are 2 pipes per set
+                        scoreEl.innerText = Math.floor(score);
+                        
+                        // Increase Difficulty: Speed up every 5 points
+                        if (Math.floor(score) > 0 && Math.floor(score) % 5 === 0) {
+                            gameSpeed += 0.1;
+                        }
+                    }
+                    // Destroy off-screen pipes to save memory
+                    if (pipe.x < -60) {
+                        pipe.destroy();
+                    }
+                }
+            });
+        }
+
+        // --- GAME OVER ---
+        function gameOver() {
+            isGameOver = true;
+            this.physics.pause();
+            bird.setTint(0xff0000); // Red tint
+            particles.stop(); // Stop trail
+
+            // Update High Score
+            const finalScore = Math.floor(score);
+            if (finalScore > highScore) {
+                highScore = finalScore;
+                localStorage.setItem('flappyHighScore', highScore);
+                highScoreEl.innerText = `BEST: ${highScore}`;
+            }
+
+            // Show UI
+            finalScoreEl.innerText = finalScore;
+            gameOverScreen.style.display = 'block';
+        }
+
+        // --- RESTART ---
+        restartBtn.addEventListener('click', () => {
+            isGameOver = false;
+            score = 0;
+            gameSpeed = 2.5;
+            scoreEl.innerText = '0';
+            gameOverScreen.style.display = 'none';
+            
+            // Reset Scene
+            game.scene.scenes[0].scene.restart();
+        });
+
+    </script>
+</body>
+</html>

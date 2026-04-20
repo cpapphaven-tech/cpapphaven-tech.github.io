@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Flappy Rise Bird Game | Play Infinite Flight Challenge Online | PlayMixGames</title>
+    <meta name="description"
+        content="Play Flappy Rise online free! Experience physics-based infinite bird flight. Tap to flap, avoid pipes, and climb the global leaderboards in this addictive arcade hit.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="flappy bird, flappy rise, arcade game, bird flight, flap game, infinite runner, フラッピーバード, アーケードゲーム, 飛行ゲーム, juego de aves, arcade gratis, oiseau flappy, jeu d'arcade">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="フラッピー・ライズ - 無限飛行アーケード">
+    <meta name="twitter:description:ja" content="無料でフラッピーライズをプレイ！物理ベースの無限飛行を体験。パイプを避け、ハイスコアを目指しましょう。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Flappy Rise - Desafío de Vuelo Infinito">
+    <meta name="twitter:description:es" content="¡Juega Flappy Rise gratis! Experimenta el vuelo infinito basado en física. Evita las tuberías y bate récords.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Flappy Rise - Défi de Vol Infini">
+    <meta name="twitter:description:fr" content="Jouez à Flappy Rise gratuitement ! Découvrez le vol infini basé sur la physique. Évitez les obstacles et gagnez.">
+    
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Warming up the wings...</p>
+    </div>
+
+    <a href="../index.html" class="back-btn">← Back</a>
+
+    <!-- Game Wrapper -->
+    <main id="game-wrapper">
+        <div id="game-container"></div>
+
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div id="score-display">0</div>
+            <div id="high-score">BEST: 0</div>
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="overlay">
+                <div class="overlay-box">
+                    <div style="font-size: 5rem; margin-bottom: 10px;">🐦</div>
+                    <h1>FLAPPY RISE</h1>
+                    <p>Can you beat the gravity and obstacles?</p>
+                    <button id="start-btn" class="pmg-btn">START FLIGHT</button>
+                    <div class="instructions-box">
+                        <p>👆 <strong>Tap</strong> or Press <strong>Space</strong> to flap.</p>
+                        <p>🚧 <strong>Avoid</strong> the green pipes.</p>
+                        <p>⚡ Game <strong>speeds up</strong> every 5 points!</p>
+                        <p>🏆 Aim for the <strong>Ultimate High Score</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="overlay hidden">
+                <div class="overlay-box">
+                    <div style="font-size: 5rem; margin-bottom: 10px;">💥</div>
+                    <h1>CRASHED!</h1>
+                    <p>Flight ended at <strong id="final-score">0</strong> points.</p>
+                    <button id="restart-btn" class="pmg-btn">RETRY FLIGHT</button>
+                    <a href="../index.html" style="display: block; margin-top: 20px; color: #94a3b8; text-decoration: none; font-weight: bold;">← Back to Menu</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Information Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play Flappy Rise</h2>
+                <div class="info-content">
+                    <p>Experience the ultimate test of patience and timing:</p>
+                    <ul>
+                        <li><strong>Flapping:</strong> Click your mouse, tap your screen, or press the spacebar to flap your wings and rise.</li>
+                        <li><strong>Gravity:</strong> Gravity is always pulling you down. You must time your flaps to maintain the perfect altitude.</li>
+                        <li><strong>Obstacles:</strong> Navigate through the gaps in the green pipes. Hitting a pipe or touching the ground will end your flight.</li>
+                        <li><strong>Difficulty:</strong> The game gets faster every 5 points you score. Stay focused!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>About the Game</h2>
+                <div class="info-content">
+                    <p>Flappy Rise is a modern tribute to the legendary arcade mechanics that took the world by storm. Built with the Phaser engine, it offers smooth physics and responsive controls optimized for both desktop and mobile devices.</p>
+                    <p>Our version features a dynamic difficulty scaling system and custom particle effects to make every flight feel immersive and premium.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>FAQ</h2>
+                <div class="info-content">
+                    <div class="faq-item">
+                        <h4>Is Flappy Rise free?</h4>
+                        <p>Yes! Like all games on PlayMixGames, Flappy Rise is 100% free to play in your browser.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Does it save my high score?</h4>
+                        <p>Yes, your best score is saved locally on your device so you can always come back and try to beat it.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I play on my phone?</h4>
+                        <p>Absolutely. The game is fully responsive and works great on all modern smartphones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+</body>
+
+</html>
