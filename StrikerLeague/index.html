@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Striker League Soccer | Play Online Football Championship | PlayMixGames</title>
+    <meta name="description"
+        content="Lead your team to victory in Striker League! Experience fast-paced 2D soccer action with strategic formations and physics-based shooting. Play free online.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="soccer game, football league, striker league, arcade football, soccer cup, サッカーゲーム, フットボール, 蹴球, juego de fútbol, liga de fútbol, football d'arcade, jeu de foot">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ストライカー・リーグ - オンラインサッカー選手権">
+    <meta name="twitter:description:ja" content="ストライカー・リーグでチームを勝利に導こう！戦略的なフォーメーションと物理ベースのシュートが楽しめる高速2Dサッカー。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Striker League - Campeonato de Fútbol">
+    <meta name="twitter:description:es" content="¡Lleva a tu equipo a la victoria en Striker League! Fútbol 2D rápido con formaciones estratégicas.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Striker League - Championnat de Football">
+    <meta name="twitter:description:fr" content="Menez votre équipe à la victoire dans Striker League ! Action de football 2D rapide.">
+    
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Pitching the field...</p>
+    </div>
+
+    <a href="../index.html" class="back-btn">← Back</a>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="ui-layer">
+        <div id="hud">
+            <div class="hud-team">
+                <div class="team-color-indicator" style="background: #00ff44;"></div>
+                <div>
+                    <div class="hud-name">HOME</div>
+                    <div id="score-home" class="hud-score" style="color: #00ff44;">0</div>
+                </div>
+            </div>
+            <div id="match-timer" class="hud-timer">00:00</div>
+            <div class="hud-team">
+                <div style="text-align: right;">
+                    <div class="hud-name">CPU</div>
+                    <div id="score-away" class="hud-score" style="color: #ff4444;">0</div>
+                </div>
+                <div class="team-color-indicator" style="background: #ff4444;"></div>
+            </div>
+        </div>
+
+        <div id="match-events"></div>
+
+        <div id="power-bar-container">
+            <div id="power-bar"></div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen">
+            <div class="game-title">
+                <span class="title-green">STRIKER</span> <span class="title-white">LEAGUE</span>
+            </div>
+            <div class="subtitle">FOOTBALL CHAMPIONSHIP</div>
+
+            <div style="margin-bottom: 25px; text-align: center;">
+                <div style="font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 3px; font-family: 'Orbitron';">Choose Formation</div>
+                <div class="formation-selector">
+                    <button class="formation-btn active" data-form="442">4-4-2</button>
+                    <button class="formation-btn" data-form="433">4-3-3</button>
+                    <button class="formation-btn" data-form="352">3-5-2</button>
+                </div>
+            </div>
+
+            <button class="pmg-btn" id="start-btn">PLAY MATCH</button>
+            <button class="pmg-btn pmg-btn-secondary" id="howto-btn">HOW TO PLAY</button>
+        </div>
+
+        <!-- Match Over Screen -->
+        <div id="matchover-screen" class="screen hidden">
+            <div class="game-title" style="font-size: 40px;">
+                <span class="title-green">MATCH</span> <span class="title-white">OVER</span>
+            </div>
+
+            <div style="font-family: 'Orbitron', monospace; font-size: 56px; margin: 20px 0; display: flex; align-items: center; gap: 20px;">
+                <span id="final-home" style="color: #00ff44;">0</span>
+                <span style="color: rgba(255,255,255,0.2); font-size: 32px;">VS</span>
+                <span id="final-away" style="color: #ff4444;">0</span>
+            </div>
+
+            <div id="match-result" style="font-size: 24px; font-family: 'Orbitron'; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 6px;"></div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-val" id="stat-shots">0</div>
+                    <div class="stat-lab">Shots</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="stat-passes">0</div>
+                    <div class="stat-lab">Passes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="stat-possession">50%</div>
+                    <div class="stat-lab">Possession</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="stat-saves">0</div>
+                    <div class="stat-lab">Saves</div>
+                </div>
+            </div>
+
+            <button class="pmg-btn" id="rematch-btn">REMATCH</button>
+            <button class="pmg-btn pmg-btn-secondary" id="menu-btn">MENU</button>
+        </div>
+
+        <!-- How To Play -->
+        <div id="howto-screen" class="screen hidden">
+            <div class="game-title" style="font-size: 32px;">
+                <span class="title-green">CONTROLS</span>
+            </div>
+
+            <div style="max-width: 320px; text-align: left; margin: 30px 0; line-height: 2.2; color: #cbd5e1; font-size: 1.1rem;">
+                <p>⚡ <strong>DRAG</strong> on your player to aim</p>
+                <p>⚡ <strong>PULL BACK</strong> for more power</p>
+                <p>⚡ <strong>RELEASE</strong> to shoot or pass</p>
+                <p>⚡ <strong>STRATEGY:</strong> Aim at goal to score!</p>
+            </div>
+
+            <button class="pmg-btn" id="howto-back-btn">READY</button>
+        </div>
+    </div>
+
+    <!-- Information Section -->
+    <section class="game-info" style="position: relative; z-index: 1; background: #050f05; padding-top: 50px;">
+        <div class="info-container" style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #00ff44; margin-bottom: 20px; font-family: 'Orbitron'; font-size: 1.5rem;">The Soccer Championship Awaits</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <p>Enter the arena in <strong>Striker League</strong>, the ultimate 2D soccer experience crafted for tactical masters and fast-reacting strikers. Control your dream team through intuitive drag-and-aim mechanics, allowing you to execute pinpoint passes and devastating shots with simple touch or mouse controls.</p>
+                </div>
+            </div>
+
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #00ff44; margin-bottom: 20px; font-family: 'Orbitron'; font-size: 1.5rem;">Tactical Gameplay</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <ul>
+                        <li><strong>Choose Your Formation:</strong> Adapt your playstyle with 4-4-2, 4-3-3, or 3-5-2 systems.</li>
+                        <li><strong>Realistic Physics:</strong> Experience ball trajectory influenced by your drag power and angle.</li>
+                        <li><strong>AI Opponents:</strong> Face off against a dynamically scaling CPU that reacts to your possession.</li>
+                        <li><strong>2-Minute Matches:</strong> Fast-paced sessions perfect for a quick gaming break.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>
