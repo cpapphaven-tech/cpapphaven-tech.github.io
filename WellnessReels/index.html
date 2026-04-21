@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Early Tracking Script (matching Playmix standards) -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wellness Reels - Mental Health & Mindset</title>
+    
+    <meta name="description" content="Relatable mental health tips, mindset shifts, and psychological frameworks delivered in an intuitive, infinite scrolling reel viewer.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="mental health, wellness, mindset, anxiety relief, ウェルネス, メンタルヘルス, salud mental, bienestar, crecimiento, santé mentale, bien-être">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ウェルネスリール - メンタルヘルスとマインドセット">
+    <meta name="twitter:description:ja" content="共感できるメンタルヘルスのヒントやマインドセットの転換を、直感的な無限スクロール動画で発見しましょう。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Wellness Reels - Salud Mental y Mentalidad">
+    <meta name="twitter:description:es" content="Consejos de salud mental, cambios de mentalidad y marcos psicológicos en este visor de carretes.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Wellness Reels - Santé Mentale et État d'Esprit">
+    <meta name="twitter:description:fr" content="Astuces de santé mentale, changements d'état d'esprit et cadres psychologiques.">
+
+    <link rel="canonical" href="https://playmixgames.in/WellnessReels/index.html" />
+
+    <!-- Preconnect & Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Deferred Ads & Analytics -->
+    <script defer src="../analytics.js" type="module"></script>
+    <script defer src="../ads.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-17908156906');
+    </script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
+</head>
+<body class="pmg-sidebar-start-closed ignore-pmg-sidebar game-page">
+
+    <!-- Global Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMix</div>
+        <div class="pmg-spinner"></div>
+        <p class="pmg-tip">Loading Wellness Reels...</p>
+    </div>
+
+    <!-- Header Overlay -->
+    <div class="kr-header">
+        <a href="../index.html" class="back-btn">← Home</a>
+        <div class="kr-title">Wellness Reels</div>
+        <button id="audio-toggle" class="audio-btn">🔈</button>
+    </div>
+
+    <div id="swipe-hint" class="swipe-hint">
+        <span>Swipe Up</span>
+        <div class="swipe-arrow">↑</div>
+    </div>
+
+    <!-- Main Reels Container -->
+    <div id="reels-container" class="reels-container">
+        <!-- Dynamic reels will be injected here -->
+    </div>
+
+    <script src="mindset.js"></script>
+    <script src="../sidebar.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
