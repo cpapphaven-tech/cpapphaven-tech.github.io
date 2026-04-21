@@ -40,6 +40,15 @@
     <loc>https://playmixgames.in/NewsHub/about-newshub.html</loc>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://playmixgames.in/WeatherMap/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/WeatherMap/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/WeatherMap/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/WeatherMap/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/WeatherMap/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/WeatherMap/index.html" />
+    <priority>0.8</priority>
+  </url>
 
   <!-- Reels Modules -->
   <url>
@@ -190,6 +199,60 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/TrafficJam/index.html" />
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://playmixgames.in/ArcheryMaster/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/ArcheryMaster/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/ArcheryMaster/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/ArcheryMaster/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/ArcheryMaster/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/ArcheryMaster/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/DoodleJump/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/DoodleJump/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/DoodleJump/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/DoodleJump/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/DoodleJump/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/DoodleJump/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/RetroRacer/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/RetroRacer/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/RetroRacer/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/RetroRacer/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/RetroRacer/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/RetroRacer/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/NeonPacman/game.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/NeonPacman/game.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/NeonPacman/game.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/NeonPacman/game.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/NeonPacman/game.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/NeonPacman/game.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/NeonSlicer/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/NeonSlicer/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/NeonSlicer/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/NeonSlicer/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/NeonSlicer/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/NeonSlicer/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/CrossyRoad/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/CrossyRoad/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/CrossyRoad/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/CrossyRoad/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/CrossyRoad/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/CrossyRoad/index.html" />
+    <priority>0.9</priority>
+  </url>
 
   <!-- Casual & Classic -->
   <url>
@@ -309,6 +372,132 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/GalaxyAssault/index.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/GalaxyAssault/index.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/GalaxyAssault/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/Pool/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/Pool/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/Pool/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/Pool/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/Pool/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/Pool/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/VolleyballArena/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/VolleyballArena/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/VolleyballArena/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/VolleyballArena/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/VolleyballArena/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/VolleyballArena/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/HelixBounce/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/HelixBounce/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/HelixBounce/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/HelixBounce/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/HelixBounce/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/HelixBounce/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/NumberBalloonShooter/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/NumberBalloonShooter/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/NumberBalloonShooter/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/NumberBalloonShooter/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/NumberBalloonShooter/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/NumberBalloonShooter/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/BrickBreaker/game.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/BrickBreaker/game.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/BrickBreaker/game.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/BrickBreaker/game.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/BrickBreaker/game.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/BrickBreaker/game.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/Tennis/game.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/Tennis/game.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/Tennis/game.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/Tennis/game.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/Tennis/game.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/Tennis/game.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/BottleShoot3D/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/BottleShoot3D/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/BottleShoot3D/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/BottleShoot3D/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/BottleShoot3D/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/BottleShoot3D/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/HeadFootball/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/HeadFootball/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/HeadFootball/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/HeadFootball/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/HeadFootball/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/HeadFootball/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/PocketGolf/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/PocketGolf/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/PocketGolf/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/PocketGolf/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/PocketGolf/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/PocketGolf/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/AirHockey3D/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/AirHockey3D/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/AirHockey3D/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/AirHockey3D/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/AirHockey3D/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/AirHockey3D/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/BubbleShooter/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/BubbleShooter/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/BubbleShooter/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/BubbleShooter/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/BubbleShooter/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/BubbleShooter/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/FlappyRise/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/FlappyRise/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/FlappyRise/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/FlappyRise/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/FlappyRise/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/FlappyRise/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/StrikerLeague/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/StrikerLeague/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/StrikerLeague/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/StrikerLeague/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/StrikerLeague/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/StrikerLeague/index.html" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/FruitSplash/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/FruitSplash/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/FruitSplash/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/FruitSplash/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/FruitSplash/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/FruitSplash/index.html" />
     <priority>0.9</priority>
   </url>
 
