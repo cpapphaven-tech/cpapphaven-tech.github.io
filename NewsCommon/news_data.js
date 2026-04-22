@@ -1,46 +1,46 @@
-// Auto-generated multinational news — 2026-04-22T03:32:43.077407Z
+// Auto-generated multinational news — 2026-04-22T08:29:45.616492Z
 // Languages: en, ja, de, fr, es, pt, zh, ko, ar, hi, ru, it, nl, tr, id
 window.NEWS_DATA = {
   "en": {
     "local": [
       {
-        "title": "Fact Check: Images Are NOT Real Showing IDF Soldier Repairing The Crucifixion Statue He Vandalized -- They Are AI-Generated",
-        "link": "https://www.yahoo.com/news/articles/fact-check-images-not-real-025841944.html",
-        "pubDate": "2026-04-22T02:58:41Z",
+        "title": "UK inflation rises after Iran war pushes up fuel prices",
+        "link": "https://finance.yahoo.com/economy/articles/uk-inflation-rises-iran-war-061255933.html",
+        "pubDate": "2026-04-22T07:36:07Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/lead_stories_560/c1265fb58cd88211c570f4186371161a",
+        "image": "https://media.zenfs.com/en/bbc_us_articles_995/1db1859808905ccb463fe9c096822ee0",
         "description": ""
       },
       {
-        "title": "After being sexually harassed by terrorists, female IDF reservists refuse to serve",
-        "link": "https://www.yahoo.com/news/articles/being-sexually-harassed-terrorists-female-013948893.html",
-        "pubDate": "2026-04-22T01:39:48Z",
+        "title": "German insolvencies put 200,000 jobs at risk, insurer says",
+        "link": "https://finance.yahoo.com/economy/articles/german-insolvencies-put-200-000-070719889.html",
+        "pubDate": "2026-04-22T07:07:19Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/jerusalem_post_articles_818/3616c6d3257fcc9457febad7d00043e3",
+        "image": "https://media.zenfs.com/en/dpa_international_526/08e43c3b9fa5f112295a8f834883afad",
         "description": ""
       },
       {
-        "title": "‘Smart Fabric’ Turns Sweat Into Real-Time Health Data",
-        "link": "https://tech.yahoo.com/wearables/articles/smart-fabric-turns-sweat-real-224942119.html",
-        "pubDate": "2026-04-21T22:49:42Z",
+        "title": "Ailing whale remains stuck off German coast amid low water concerns",
+        "link": "https://www.yahoo.com/news/articles/ailing-whale-remains-stuck-off-065229190.html",
+        "pubDate": "2026-04-22T06:52:29Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/men_s_journal_718/59395707b31ddb2840fa63219b2c8ab6",
+        "image": "https://media.zenfs.com/en/dpa_international_526/8fe0502485cd43b8042bd43739caf7e2",
         "description": ""
       },
       {
-        "title": "Peru's election chief resigns over logistical problems in hotly disputed presidential contest",
-        "link": "https://www.yahoo.com/news/articles/perus-election-chief-resigns-over-213830175.html",
-        "pubDate": "2026-04-21T21:38:30Z",
+        "title": "Price rise contingency plans 'ready if needed'",
+        "link": "https://www.yahoo.com/news/articles/price-rise-contingency-plans-ready-052436047.html",
+        "pubDate": "2026-04-22T05:24:36Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/ap.org/e126f43cfea48e88c5a04d0002264e36",
+        "image": "https://media.zenfs.com/en/bbc_us_articles_995/ff87c18318d598b038c2e87bb231ac41",
         "description": ""
       },
       {
-        "title": "Houston man recalls witnessing deadly shooting at Mexican pyramids",
-        "link": "https://www.yahoo.com/news/articles/houston-man-recalls-witnessing-deadly-205915036.html",
-        "pubDate": "2026-04-21T20:59:15Z",
+        "title": "Two arrested in possession of IDF weapons, ammunition, and illegal drugs",
+        "link": "https://www.yahoo.com/news/articles/two-arrested-possession-idf-weapons-050045086.html",
+        "pubDate": "2026-04-22T05:00:45Z",
         "source": "News - Latest News & Headlines",
-        "image": "",
+        "image": "https://media.zenfs.com/en/jerusalem_post_articles_818/39e729367f037d465859c6e3bc5b3b8e",
         "description": ""
       }
     ],
@@ -86,22 +86,6 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Epstein's other house of 'horrors': Zorro Ranch",
-        "link": "https://www.yahoo.com/news/videos/epsteins-other-house-horrors-zorro-232249573.html",
-        "pubDate": "2026-04-20T23:22:49Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/nbcu_713/13aec73048a5bfd9cc30fabb86e706d0",
-        "description": ""
-      },
-      {
-        "title": "Russian blogger whose angry appeal to Putin went viral hits back after state TV attack",
-        "link": "https://www.yahoo.com/news/articles/russian-blogger-whose-angry-appeal-143759427.html",
-        "pubDate": "2026-04-20T14:37:59Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/reuters.com/d4cad1c74e242f8d0ccde58daf62598d",
-        "description": ""
-      },
-      {
         "title": "The world's biggest airlines are canceling flights as they face jet fuel shortages and rising prices",
         "link": "https://finance.yahoo.com/sectors/energy/articles/airlines-starting-cancel-flights-face-214736570.html",
         "pubDate": "2026-04-21T20:45:46Z",
@@ -110,19 +94,19 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Navy warns US sailors to secure social media from Iran online threats",
-        "link": "https://www.yahoo.com/news/articles/navy-warns-us-sailors-secure-184947150.html",
-        "pubDate": "2026-04-20T18:49:47Z",
+        "title": "Seized Iranian ship likely carrying equipment deemed dual-use by US, sources say",
+        "link": "https://www.yahoo.com/news/articles/seized-iranian-ship-likely-carrying-150535105.html",
+        "pubDate": "2026-04-21T03:37:21Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/the_hill_articles_341/dc29c7a44cd23436609695911714eb3c",
+        "image": "https://media.zenfs.com/en/reuters.com/1be42cc9dc5729f4a1dbb6a0c506f8b7",
         "description": ""
       },
       {
-        "title": "Pennsylvania court overturns limits on Medicaid coverage for abortions",
-        "link": "https://www.yahoo.com/news/articles/pennsylvania-court-overturns-limits-medicaid-190146548.html",
-        "pubDate": "2026-04-20T19:01:46Z",
+        "title": "Epstein's other house of 'horrors': Zorro Ranch",
+        "link": "https://www.yahoo.com/news/videos/epsteins-other-house-horrors-zorro-232249573.html",
+        "pubDate": "2026-04-20T23:22:49Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/ap.org/6e51d0aca4b6587c95742e1406ad1039",
+        "image": "https://media.zenfs.com/en/nbcu_713/13aec73048a5bfd9cc30fabb86e706d0",
         "description": ""
       },
       {
@@ -134,6 +118,22 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
+        "title": "Exclusive-Pakistan places $1.5 billion Sudan weapons sale on hold after Saudi objection, sources say",
+        "link": "https://www.yahoo.com/news/articles/exclusive-pakistan-places-1-5-110212060.html",
+        "pubDate": "2026-04-20T11:02:12Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/reuters.com/3777d6c0be20c5b0148450e4366fbbd2",
+        "description": ""
+      },
+      {
+        "title": "DC police lieutenant celebrated as first gay union boss accused of soliciting underage boy",
+        "link": "https://www.yahoo.com/news/articles/dc-police-lieutenant-celebrated-first-193818946.html",
+        "pubDate": "2026-04-20T19:38:18Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/fox_news_text_979/3a950a7dc3dbb4a5a8dedcddaae17ab8",
+        "description": ""
+      },
+      {
         "title": "A deal to end the Iran war seemed close. Then Trump started posting on social media",
         "link": "https://www.yahoo.com/news/articles/deal-end-iran-war-seemed-225402785.html",
         "pubDate": "2026-04-20T22:54:02Z",
@@ -142,11 +142,11 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Exclusive-Pakistan places $1.5 billion Sudan weapons sale on hold after Saudi objection, sources say",
-        "link": "https://www.yahoo.com/news/articles/exclusive-pakistan-places-1-5-110212060.html",
-        "pubDate": "2026-04-20T11:02:12Z",
+        "title": "Cuba confirms meeting with US officials on island, wants energy blockade lifted",
+        "link": "https://www.yahoo.com/news/articles/cuba-confirms-meeting-us-officials-183448117.html",
+        "pubDate": "2026-04-20T18:34:48Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/reuters.com/3777d6c0be20c5b0148450e4366fbbd2",
+        "image": "https://media.zenfs.com/en/ap.org/ea504564121f9f58157e6831d54f4b10",
         "description": ""
       },
       {
@@ -158,19 +158,19 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "A Ukrainian drone company says it's teaming up with a US firm because staying home means getting 'eliminated'",
-        "link": "https://finance.yahoo.com/sectors/technology/articles/ukrainian-drone-company-says-teaming-152503336.html",
-        "pubDate": "2026-04-20T15:25:03Z",
+        "title": "Nvidia CEO says that AI agents will make workers busier than ever—they’ll ‘harass’ and ‘micromanage’ you, instead of take your job",
+        "link": "https://finance.yahoo.com/sectors/technology/articles/nvidia-jensen-huang-says-ai-150112554.html",
+        "pubDate": "2026-04-20T15:01:12Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/920f8c5be73412fd838f4c096c010248",
+        "image": "https://media.zenfs.com/en/fortune_175/2efbd12428098edc25c09505ff5c08fc",
         "description": ""
       },
       {
-        "title": "Iran's president stresses importance of diplomacy while noting distrust of U.S",
-        "link": "https://www.yahoo.com/news/articles/irans-president-stresses-importance-diplomacy-072342411.html",
-        "pubDate": "2026-04-20T07:23:42Z",
+        "title": "California says Amazon pressured retailers to boost prices on their websites to not undercut it",
+        "link": "https://finance.yahoo.com/economy/policy/articles/california-says-amazon-pressured-retailers-195046406.html",
+        "pubDate": "2026-04-20T19:50:46Z",
         "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/reuters.com/39344e373bb6c41a26c2e72ada1097bb",
+        "image": "https://media.zenfs.com/en/ap.org/c16ac8cfa2d13e1930b0225c41315a74",
         "description": ""
       },
       {
@@ -182,27 +182,27 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "PTO, parental leave, pensions: Even the most prized benefits are on the chopping block",
-        "link": "https://finance.yahoo.com/economy/policy/articles/pto-parental-leave-pensions-even-094901441.html",
-        "pubDate": "2026-04-20T09:49:01Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/188bc6b7a064b7a3fd636e6879ba764f",
-        "description": ""
-      },
-      {
-        "title": "An Iraqi captain keeps sailing despite the threat of attack amid regional war",
-        "link": "https://www.yahoo.com/news/articles/iraqi-captain-keeps-sailing-despite-050610442.html",
-        "pubDate": "2026-04-20T05:06:10Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://media.zenfs.com/en/ap.org/6cbe7846597afc6791075e3df098d097",
-        "description": ""
-      },
-      {
         "title": "Jonathan Turley warns Dems turning impeachment into ‘unbridled circus’ with new push to oust Hegseth",
         "link": "https://www.yahoo.com/news/articles/jonathan-turley-warns-dems-turning-143537665.html",
         "pubDate": "2026-04-20T14:35:37Z",
         "source": "News - Latest News & Headlines",
         "image": "https://media.zenfs.com/en/fox_news_text_979/c9356046fd331c8c4dc6b6189899446d",
+        "description": ""
+      },
+      {
+        "title": "Biggest party in Romanian coalition withdraws support for PM, political crisis looms",
+        "link": "https://www.yahoo.com/news/articles/biggest-party-romanian-coalition-set-092833266.html",
+        "pubDate": "2026-04-20T17:27:50Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/reuters.com/2a9fdcb97164326092745cfb70a2d488",
+        "description": ""
+      },
+      {
+        "title": "PTO, parental leave, pensions: Even the most prized benefits are on the chopping block",
+        "link": "https://finance.yahoo.com/economy/policy/articles/pto-parental-leave-pensions-even-094901441.html",
+        "pubDate": "2026-04-20T09:49:01Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://media.zenfs.com/en/business_insider_consolidated_articles_886/188bc6b7a064b7a3fd636e6879ba764f",
         "description": ""
       }
     ],
@@ -540,35 +540,35 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Qualcomm Just Increased Its Dividend. Should You Buy QCOM Stock Here?",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/qualcomm-just-increased-dividend-buy-154250918.html",
-        "pubDate": "2026-04-20T15:42:50Z",
+        "title": "Stocks Settle Lower on Doubts Over a Middle East Peace Deal",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/stocks-settle-lower-doubts-over-203330707.html",
+        "pubDate": "2026-04-20T20:33:30Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/barchart_com_477/fbdf6226373634d96c2ef15831fe7e65",
+        "image": "https://media.zenfs.com/en/barchart_com_477/bc1ca70c2b48d920c5437c60396a6beb",
         "description": ""
       },
       {
-        "title": "Motley Fool Asset Management’s Top AI Stock Pick: Amazon.com (AMZN)",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/motley-fool-asset-management-top-154250967.html",
-        "pubDate": "2026-04-20T15:42:50Z",
+        "title": "Your choice of state can almost triple your tax burden. Do you know what your home base is costing you?",
+        "link": "https://finance.yahoo.com/economy/policy/articles/choice-state-almost-triple-tax-203000381.html",
+        "pubDate": "2026-04-20T20:30:00Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/f44d956d3c5dc0b8c077dfd303fc4707",
+        "image": "https://media.zenfs.com/en/moneywise_327/ba8ab3561c431b99caa64d83d9a8665b",
         "description": ""
       },
       {
-        "title": "What to Expect From Amgen's Next Quarterly Earnings Report",
-        "link": "https://finance.yahoo.com/sectors/healthcare/articles/expect-amgens-next-quarterly-earnings-154906289.html",
-        "pubDate": "2026-04-20T15:49:06Z",
+        "title": "Morningstar considers revamping index construction ahead of SpaceX IPO",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/morningstar-considers-revamping-index-construction-202805381.html",
+        "pubDate": "2026-04-20T20:28:05Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/barchart_com_477/8edc41ee642c072b019eddb5984ee1e7",
+        "image": "https://media.zenfs.com/en/reuters-finance.com/3c328089c6a779cae0a518de36057247",
         "description": ""
       },
       {
-        "title": "Middlesex Water (MSEX) Names Tatyana Kaplan Chief Accounting Officer",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/middlesex-water-msex-names-tatyana-155129618.html",
-        "pubDate": "2026-04-20T15:51:29Z",
+        "title": "Buy the Dip in Netflix Stock Now, Says JPMorgan",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/buy-dip-netflix-stock-now-202903794.html",
+        "pubDate": "2026-04-20T20:29:03Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/d6a24ae88d725d0c6e9f72f1f1d34795",
+        "image": "https://media.zenfs.com/en/barchart_com_477/dab6a5019d999f68d85c24ad2b767d5a",
         "description": ""
       },
       {
@@ -580,136 +580,159 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "Morgan Stanley Maintains an Underweight Rating on Edison International (EIX)",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-maintains-underweight-rating-155156109.html",
-        "pubDate": "2026-04-20T15:51:56Z",
+        "title": "Iran’s GDP drain grows as maritime blockades tighten financial pressure points",
+        "link": "https://finance.yahoo.com/economy/articles/iran-gdp-drain-grows-maritime-203020954.html",
+        "pubDate": "2026-04-20T20:30:20Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/6cbcce379ef00c6f49af5d1ba1bc60f1",
+        "image": "https://media.zenfs.com/en/oil_and_gas_360_817/371d124e5434ab4bcfe4e78e24e141cb",
         "description": ""
       },
       {
-        "title": "Is American Water Works Company, Inc. (AWK) Among the Most Profitable Utility Stocks to Invest In Now?",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/american-water-works-company-inc-155017191.html",
-        "pubDate": "2026-04-20T15:50:17Z",
+        "title": "BlackBerry Stock Is Soaring on a New Nvidia Deal. Does That Make BB a Buy Here?",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/blackberry-stock-soaring-nvidia-deal-203621231.html",
+        "pubDate": "2026-04-20T20:36:21Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/df29abf600770935b63c15bb42022b31",
+        "image": "https://media.zenfs.com/en/barchart_com_477/dbdc7c2edf54399c1816854f540cc947",
         "description": ""
       },
       {
-        "title": "Is NextEra Energy, Inc. (NEE) Among the Most Profitable Utility Stocks to Invest In Now?",
-        "link": "https://finance.yahoo.com/sectors/energy/articles/nextera-energy-inc-nee-among-155321793.html",
-        "pubDate": "2026-04-20T15:53:21Z",
+        "title": "Half of America Can Buy Weed Legally. The Other Half Is Getting There.",
+        "link": "https://finance.yahoo.com/economy/policy/articles/half-america-buy-weed-legally-202006512.html",
+        "pubDate": "2026-04-20T20:20:06Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/b1973964fd8c78489fcfcf8a8990b239",
+        "image": "https://media.zenfs.com/en/moby_896/a885ecb9329cc69e9e6cfd9c1de13972",
         "description": ""
       },
       {
-        "title": "Deutsche Bank Maintains a Hold Rating on Enlight Renewable Energy Ltd (ENLT)",
-        "link": "https://finance.yahoo.com/sectors/energy/articles/deutsche-bank-maintains-hold-rating-155421346.html",
-        "pubDate": "2026-04-20T15:54:21Z",
+        "title": "Customers Bank review (2026): A 'super-community bank' serving individuals and businesses",
+        "link": "https://finance.yahoo.com/personal-finance/banking/review/customers-bank-review-215803684.html",
+        "pubDate": "2025-02-11T21:58:03Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/3abe94203ac478ccbf0a682380c3e168",
+        "image": "https://s.yimg.com/uu/api/res/1.2/NRCW28bJ6QMvKHDbJlcvYQ--~B/aD0yMjUwO3c9Mjk1NzthcHBpZD15dGFjaHlvbg--/https://d29szjachogqwa.cloudfront.net/images/user-uploaded/epf_thumb_banks_customers_6755.png",
         "description": ""
       },
       {
-        "title": "AT&T Stock Price Prediction: Bull and Bear Case",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/t-stock-price-prediction-bull-154338378.html",
-        "pubDate": "2026-04-20T15:43:38Z",
+        "title": "Gold Falls as Renewed Hormuz Disruption Stokes Inflation Concern",
+        "link": "https://finance.yahoo.com/news/gold-falls-as-renewed-hormuz-disruption-stokes-inflation-concern-010143211.html",
+        "pubDate": "2026-04-20T20:32:01Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/24_7_wall_st__718/ffef307e45e6ed92bccbc2d5e1b30517",
+        "image": "https://media.zenfs.com/en/bloomberg_markets_video_2/229ac67dd024b5444230a9e94919deac",
         "description": ""
       },
       {
-        "title": "Essential Utilities’s (WTRG) Aqua Pennsylvania Acquires Greenville Municipal Water Authority in Mercer County",
-        "link": "https://finance.yahoo.com/sectors/energy/articles/essential-utilities-wtrg-aqua-pennsylvania-155256006.html",
-        "pubDate": "2026-04-20T15:52:56Z",
+        "title": "Bank of Hawaii Corporation Q1 2026 Earnings Call Summary",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/bank-hawaii-corporation-q1-2026-204530422.html",
+        "pubDate": "2026-04-20T20:45:30Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/3c0a81421c2ac6826556099b956263be",
+        "image": "https://media.zenfs.com/en/moby_896/121ec3590cb2f4ca1d581e454c74dd54",
         "description": ""
       },
       {
-        "title": "Apple's Q2 2026 Earnings: What to Expect",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/apples-q2-2026-earnings-expect-153647073.html",
-        "pubDate": "2026-04-20T15:36:47Z",
+        "title": "Stock Market Today: Dow Dips, Trump Fed Pick To Say This; FedEx Clears Entry (Live Coverage)",
+        "link": "https://www.investors.com/market-trend/stock-market-today/dow-jones-sp500-nasdaq-us-iran-oil-prices/?src=A00220&yptr=yahoo",
+        "pubDate": "2026-04-20T20:44:45Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/barchart_com_477/5c73a52b7903649f6e8fae3cb550b52f",
+        "image": "https://media.zenfs.com/en/ibd.com/da8fe3de95e98df41551b71e3d730b5b",
         "description": ""
       },
       {
-        "title": "The York Water Company (YORW) Acquires Wastewater System Serving Pine Run Retirement Community",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/york-water-company-yorw-acquires-155353590.html",
-        "pubDate": "2026-04-20T15:53:53Z",
+        "title": "Rare Earth Stocks Rally Further Above Key Levels, Led By 2 Trump Bets",
+        "link": "https://www.investors.com/news/usa-rare-earth-stock-soars-brazil-mega-deal-china-battle-heats-up/?src=A00220&yptr=yahoo",
+        "pubDate": "2026-04-20T20:50:58Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/96a46019da38bea642f5eb3e2fd5e5f8",
+        "image": "https://media.zenfs.com/en/ibd.com/157fece5222606467d06bf6448e72bf2",
         "description": ""
       },
       {
-        "title": "Fed chief nominee Warsh pledges new divestment in updated financial filing",
-        "link": "https://finance.yahoo.com/economy/policy/articles/fed-chief-nominee-warsh-pledges-155556947.html",
-        "pubDate": "2026-04-20T15:55:56Z",
+        "title": "Tim Cook Is Stepping Down as Apple CEO, AAPL Stock Dips in After-Hours Trading",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/tim-cook-stepping-down-apple-205445049.html",
+        "pubDate": "2026-04-20T20:54:45Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/reuters.com/fd36575223c02ab5bc53a02f89b03ef1",
+        "image": "https://media.zenfs.com/en/barchart_com_477/a4977b80534dae3398e391c09fa8763e",
         "description": ""
       },
       {
-        "title": "EMLC Paid Dividends for 16 Years, but Short Interest Surged 73%",
-        "link": "https://finance.yahoo.com/markets/currencies/articles/emlc-paid-dividends-16-years-154523020.html",
-        "pubDate": "2026-04-20T15:45:23Z",
+        "title": "ASML Just Got Hit by a New China Export Threat. Is This a Buying Opportunity or a Red Flag?",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/asml-just-got-hit-china-203500009.html",
+        "pubDate": "2026-04-20T20:35:00Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/24_7_wall_st__718/c00bc03b9fb61cc1bec46772ce8481a9",
+        "image": "https://media.zenfs.com/en/motleyfool.com/8bbb1330a7d9211a43feca41afec5dcf",
         "description": ""
       },
       {
-        "title": "Central Puerto S.A. (CEPU) Enters Vaca Muerta and Joins the Oil & Gas Sector",
-        "link": "https://finance.yahoo.com/sectors/energy/articles/central-puerto-cepu-enters-vaca-155452438.html",
-        "pubDate": "2026-04-20T15:54:52Z",
+        "title": "Innodata Inc. (INOD): Pivot to Data Engineering Turning Heads on Wall Street",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/innodata-inc-inod-pivot-data-205512219.html",
+        "pubDate": "2026-04-20T20:55:12Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/insidermonkey.com/1bfcede152f6814ddda022f7283287c7",
+        "image": "https://media.zenfs.com/en/insidermonkey.com/a76b7beb0bc6722f80b42436e15e39b6",
         "description": ""
       },
       {
-        "title": "Morgan Stanley Says Palantir Stock Can Keep Accelerating Revenue Growth. Load Up on PLTR Here.",
-        "link": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-says-palantir-stock-153321510.html",
-        "pubDate": "2026-04-20T15:33:21Z",
+        "title": "Equinix Inc. (EQIX): AI Data Center Darling for Elite Investors",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/equinix-inc-eqix-ai-data-205553303.html",
+        "pubDate": "2026-04-20T20:55:53Z",
         "source": "Finance",
-        "image": "https://media.zenfs.com/en/barchart_com_477/89a9024bc4bf1aa58a439641243780e3",
+        "image": "https://media.zenfs.com/en/insidermonkey.com/61065709a1bdf54b4284c76a9977e4c9",
         "description": ""
       },
       {
-        "title": "Will gold reach $6,000 this year? Experts weigh in on gold prices.",
-        "link": "https://finance.yahoo.com/personal-finance/investing/article/will-gold-reach-6000-this-year-experts-weigh-in-on-gold-prices-150000855.html",
-        "pubDate": "2026-03-27T15:00:00Z",
+        "title": "Astera Labs Inc. (ALAB): Hedge Fund Darling Is Solving Compute Bottlenecks",
+        "link": "https://finance.yahoo.com/markets/stocks/articles/astera-labs-inc-alab-hedge-205640887.html",
+        "pubDate": "2026-04-20T20:56:40Z",
         "source": "Finance",
-        "image": "https://s.yimg.com/os/creatr-uploaded-images/2026-01/0935a730-f6b5-11f0-bf5e-6959578a4d75",
+        "image": "https://media.zenfs.com/en/insidermonkey.com/700a88c85bcbc2181bfb31279ea20b55",
         "description": ""
       },
       {
-        "title": "AST SpaceMobile stock tanks after flawed satellite launch by Blue Origin",
-        "link": "https://finance.yahoo.com/markets/article/ast-spacemobile-stock-tanks-after-flawed-satellite-launch-by-blue-origin-155834304.html",
-        "pubDate": "2026-04-20T15:58:34Z",
+        "title": "Constellation Energy Corporation (CEG): Traditional Utility Versus Tech Infrastructure",
+        "link": "https://finance.yahoo.com/sectors/energy/articles/constellation-energy-corporation-ceg-traditional-205857186.html",
+        "pubDate": "2026-04-20T20:58:57Z",
         "source": "Finance",
-        "image": "https://s.yimg.com/uu/api/res/1.2/._lgAF5W3fKZCBp1tK2pMw--~B/aD0zMTMyO3c9NDU4NDthcHBpZD15dGFjaHlvbg--/https://d29szjachogqwa.cloudfront.net/images/2026-04/273b148d-5859-4dd1-8ef4-81c4b0ca9604",
+        "image": "https://media.zenfs.com/en/insidermonkey.com/6c56bf7b8cf602a4adcbb7a3e56f9397",
         "description": ""
       }
     ],
-    "sports": [
-      {
-        "title": "Local team wins championship",
-        "link": "https://example.com/sports-news",
-        "pubDate": "2026-04-22T00:00:00Z",
-        "source": "Sports Feed",
-        "image": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800",
-        "description": "In an amazing comeback, they won the match."
-      }
-    ],
+    "sports": [],
     "entertainment": [
       {
-        "title": "New block-buster movie shatters records",
-        "link": "https://example.com/movie-news",
-        "pubDate": "2026-04-22T00:00:00Z",
-        "source": "Entertainment Weekly",
-        "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800",
-        "description": "The opening weekend was the biggest in history."
+        "title": "Poll: Americans approve of Jimmy Kimmel's return to TV by a more than 2-to-1 margin",
+        "link": "https://www.yahoo.com/entertainment/tv/article/poll-americans-approve-of-jimmy-kimmels-return-to-tv-by-a-more-than-2-to-1-margin-183746388.html",
+        "pubDate": "2025-09-30T18:37:46Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-09/23139e11-9e17-11f0-96c6-70f4b908e44e",
+        "description": ""
+      },
+      {
+        "title": "Trump calls Sydney Sweeney's American Eagle 'good jeans' campaign the 'HOTTEST’ ad out there, driving up the company's stock",
+        "link": "https://www.yahoo.com/entertainment/celebrity/article/trump-calls-sydney-sweeneys-american-eagle-good-jeans-campaign-the-hottest-ad-out-there-driving-up-the-companys-stock-221428273.html",
+        "pubDate": "2025-07-31T22:14:28Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-08/ec51b290-6ed2-11f0-9bf7-aee5e8ae402d",
+        "description": ""
+      },
+      {
+        "title": "Hulk Hogan's roles as movie star, media crusader and MAGA hypeman had a major impact outside of the ring",
+        "link": "https://www.yahoo.com/entertainment/celebrity/article/hulk-hogans-roles-as-movie-star-media-crusader-and-maga-hypeman-had-a-major-impact-outside-of-the-ring-184345886.html",
+        "pubDate": "2025-07-24T18:43:45Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-07/a51dc900-68b4-11f0-bdfd-5ceac011739a",
+        "description": ""
+      },
+      {
+        "title": "China is taking aim at American movies over Trump's tariffs. Here's why that poses a big risk to Hollywood.",
+        "link": "https://www.yahoo.com/news/china-is-taking-aim-at-american-movies-over-trumps-tariffs-heres-why-that-poses-a-big-risk-to-hollywood-194753887.html",
+        "pubDate": "2025-04-10T19:47:53Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-04/af9d2420-163e-11f0-adff-7bad0e0832a1",
+        "description": ""
+      },
+      {
+        "title": "How COVID changed America, in 12 charts",
+        "link": "https://www.yahoo.com/news/how-covid-changed-america-in-12-charts-163056855.html",
+        "pubDate": "2025-03-10T16:30:56Z",
+        "source": "News - Latest News & Headlines",
+        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-03/0db6e560-fdb6-11ef-a7bf-2a91abf82b77",
+        "description": ""
       }
     ],
     "health": [
@@ -795,20 +818,18 @@ window.NEWS_DATA = {
         "image": "https://media.zenfs.com/en/space_311/e816bc5d47768c68e4237a627e1ccb3e",
         "description": ""
       }
-    ],
-    "ai": [
-      {
-        "title": "AI model creates new possibilities for productivity",
-        "link": "https://example.com/ai-news",
-        "pubDate": "2026-04-22T00:00:00Z",
-        "source": "Tech News",
-        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
-        "description": "A new generative AI model has been released."
-      }
     ]
   },
   "ja": {
     "local": [
+      {
+        "title": "旧統一の精算手続き 400億円保全",
+        "link": "https://news.yahoo.co.jp/pickup/6577210?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:41:30 GMT",
+        "source": "!ニュース・トピックス - 国内",
+        "image": "",
+        "description": ""
+      },
       {
         "title": "ペルシャ湾内船舶から邦人4人下船",
         "link": "https://news.yahoo.co.jp/pickup/6577184?source=rss",
@@ -842,14 +863,6 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "再審見直し政府案 抗告を原則禁止",
-        "link": "https://news.yahoo.co.jp/pickup/6577114?source=rss",
-        "pubDate": "Tue, 21 Apr 2026 10:32:32 GMT",
-        "source": "!ニュース・トピックス - 国内",
-        "image": "",
-        "description": ""
-      },
-      {
         "title": "働きづらさ支援 効果試算460億円",
         "link": "https://news.yahoo.co.jp/pickup/6577190?source=rss",
         "pubDate": "Wed, 22 Apr 2026 03:17:12 GMT",
@@ -858,9 +871,9 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "才能突出の小中学生に大学講義 案",
-        "link": "https://news.yahoo.co.jp/pickup/6577122?source=rss",
-        "pubDate": "Tue, 21 Apr 2026 11:21:29 GMT",
+        "title": "小説BUTTER 新潮社から版権移動",
+        "link": "https://news.yahoo.co.jp/pickup/6577194?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 03:28:36 GMT",
         "source": "!ニュース・トピックス - 国内",
         "image": "",
         "description": ""
@@ -876,71 +889,79 @@ window.NEWS_DATA = {
     ],
     "top": [
       {
-        "title": "ペルシャ湾内船舶から邦人4人下船",
-        "link": "https://news.yahoo.co.jp/pickup/6577184?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:56:43 GMT",
+        "title": "旧統一の精算手続き 400億円保全",
+        "link": "https://news.yahoo.co.jp/pickup/6577210?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:41:30 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
       },
       {
-        "title": "銀座線見合わせ 夕方再開の見通し",
-        "link": "https://news.yahoo.co.jp/pickup/6577183?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:38:56 GMT",
+        "title": "日経平均終値 過去最高値を更新",
+        "link": "https://news.yahoo.co.jp/pickup/6577212?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:54:49 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
       },
       {
-        "title": "乳児を骨折させた父 酌量求めた妻",
-        "link": "https://news.yahoo.co.jp/pickup/6577186?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:08:35 GMT",
+        "title": "殺害疑い母逮捕 無理心中装ったか",
+        "link": "https://news.yahoo.co.jp/pickup/6577215?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:33:25 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
       },
       {
-        "title": "山にいた泣く高校生 登山客が救助",
-        "link": "https://news.yahoo.co.jp/pickup/6577182?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:31:54 GMT",
+        "title": "JASRACに嘘報告か 詐取疑い逮捕",
+        "link": "https://news.yahoo.co.jp/pickup/6577216?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:37:48 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
       },
       {
-        "title": "大阪駅前のフードコート なぜ閑散",
-        "link": "https://news.yahoo.co.jp/pickup/6577166?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:05:19 GMT",
+        "title": "女児一時不明 百貨店で保護し連絡",
+        "link": "https://news.yahoo.co.jp/pickup/6577219?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:04:37 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
       },
       {
-        "title": "速報ドジャース 山本由伸が先発",
-        "link": "https://news.yahoo.co.jp/pickup/6577172?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:48:48 GMT",
+        "title": "病院にサイバー攻撃 救急など休診",
+        "link": "https://news.yahoo.co.jp/pickup/6577214?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:28:42 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
       },
       {
-        "title": "村上宗隆が4戦連発 驚異のペース",
-        "link": "https://news.yahoo.co.jp/pickup/6577179?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:31:28 GMT",
+        "title": "バレー・江畑幸子さん 第2子妊娠",
+        "link": "https://news.yahoo.co.jp/pickup/6577213?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:41 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
       },
       {
-        "title": "菊池風磨が数週間活動休止 喉不調",
-        "link": "https://news.yahoo.co.jp/pickup/6577170?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:40:38 GMT",
+        "title": "村上宗隆が4戦連発 監督は絶賛",
+        "link": "https://news.yahoo.co.jp/pickup/6577211?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:39:40 GMT",
         "source": "!ニュース・トピックス - 主要",
         "image": "",
         "description": ""
       }
     ],
     "technology": [
+      {
+        "title": "病院にサイバー攻撃 救急など休診",
+        "link": "https://news.yahoo.co.jp/pickup/6577214?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:28:42 GMT",
+        "source": "!ニュース・トピックス - IT",
+        "image": "",
+        "description": ""
+      },
       {
         "title": "米Apple次期CEO ターナス氏とは",
         "link": "https://news.yahoo.co.jp/pickup/6577153?source=rss",
@@ -996,17 +1017,121 @@ window.NEWS_DATA = {
         "source": "!ニュース・トピックス - IT",
         "image": "",
         "description": ""
-      },
-      {
-        "title": "子のSNS規制 各国で抜け穴露呈",
-        "link": "https://news.yahoo.co.jp/pickup/6576728?source=rss",
-        "pubDate": "Sat, 18 Apr 2026 08:18:22 GMT",
-        "source": "!ニュース・トピックス - IT",
-        "image": "",
-        "description": ""
       }
     ],
     "gaming": [
+      {
+        "title": "ホリのレバーレスアケコン「NOLVA」が静音仕様に！ PS5/PS4/PC対応",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103796.html",
+        "pubDate": "2026-04-22T17:00:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "HORIは、レバーレスコントローラー「NOLVA Reactor Mechanical All-Button Arcade Controller for PlayStation5, Playstaion4, Windows PC」を6月に発売する。価格は19,980円。"
+      },
+      {
+        "title": "「FFXIV」パッチ7.5「彼方に至る路」まであと1週間！指揮者エモートなど報酬アイテムやサブクエストを紹介",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103629.html",
+        "pubDate": "2026-04-22T17:00:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "スクウェア・エニックスは、プレイステーション 5/プレイステーション 4/Xbox Series X|S/Windows/Mac/Steam用MMORPG「ファイナルファンタジーXIV: 黄金のレガシー」のメジャーアップデートとなるパッチ7.5「彼方に至る路」を4月28日に実装する。"
+      },
+      {
+        "title": "SNKの「ストリートスマート」がアケアカ/アケアカ2に登場。4月23日配信孤高の空手家とプロレスラーが最強の喧嘩野郎を目指して戦うアクション",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103601.html",
+        "pubDate": "2026-04-22T17:00:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "ハムスターは、プレイステーション 4/Nintendo Switch用「アーケードアーカイブス ストリートスマート」を4月23日より配信する。価格はPS4版が837円、Nintendo Switch版が838円。"
+      },
+      {
+        "title": "小島秀夫監督とXbox、良好な関係をアピールXbox新CEO Asha Sharma氏とのショットなど米オフィスを満喫する様子を公開",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103778.html",
+        "pubDate": "2026-04-22T16:54:55+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "ゲームクリエイターの小島秀夫氏は4月22日、自身のXにてMicrosoft Gaming CEOのAsha Sharma氏とCCOのMatt Booty氏との写真などを投稿した。"
+      },
+      {
+        "title": "USJの夏の夜が一新「ユニバーサル・サマー・マツリ・ナイト ～ネオン・グロウアップ～」7月1日より開催。お得なチケットも用意",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103790.html",
+        "pubDate": "2026-04-22T16:52:54+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "ユニバーサル・スタジオ・ジャパンは、7月1日から8月26日にかけて「ユニバーサル・サマー・マツリ・ナイト ～ネオン・グロウアップ～」を開催する。期間中には限定チケットとして15時以降何度も入退場ができる「サマー・シーズン・パス」および17時以降入場できる「ナイト・パス」が用意される。"
+      },
+      {
+        "title": "「REANIMAL」が初のセール。THQ NordicとHandyGamesタイトルがPS StoreのGWセールに登場",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103775.html",
+        "pubDate": "2026-04-22T16:16:20+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "PlayStation Storeにて5月6日まで開催されているゴールデンウィークセールにて、THQ NordicとHandyGamesのタイトルがセール対象となっている。"
+      },
+      {
+        "title": "【ナンジャタウン】街巡りなのに地図がない。新アトラクション「ナジャヴとふしぎな石ころ」体験レポート“石に引っ張られる”魔法のような感覚。新触覚デバイス「エコーブ」を使った新鮮な街巡り＆謎解き",
+        "link": "https://game.watch.impress.co.jp/docs/preview/2103759.html",
+        "pubDate": "2026-04-22T16:13:31+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "東京・池袋の屋内型テーマパーク「NAMJATOWN（ナンジャタウン）」にて、新アトラクション「石に導かれるふしぎ体験アトラクション ナジャヴとふしぎな石ころ」が4月24日から8月30日まで開催される。今回は本アトラクションを体験できたので、その模様をお伝えする。"
+      },
+      {
+        "title": "「スプラトゥーン レイダース」予約特典まとめ｜店舗別特典一覧【Switch2】",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103760.html",
+        "pubDate": "2026-04-22T16:08:43+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "任天堂は、Nintendo Switch 2 用ソフト「スプラトゥーン レイダース」を7月23日に発売する。価格はパッケージ版が7,480円、ダウンロード版が6,480円。"
+      },
+      {
+        "title": "超大吉は「山崎18年」！ ウイスキーくじ「第120弾 豪華ウイスキーみくじ」4月22日より発売",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103581.html",
+        "pubDate": "2026-04-22T15:00:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "アップライジングは、ウイスキーくじ「第120弾 豪華ウイスキーみくじ」の販売を4月22日より開始した。価格は3,980円で、送料は990円。"
+      },
+      {
+        "title": "【ハウステンボス】「エヴァンゲリオン・ザ・ライド -8K-」＆スタンプラリー最速体験レポート圧巻の8K設備でエヴァの世界に没入。ミサトさんからの特別任務に挑め！",
+        "link": "https://game.watch.impress.co.jp/docs/preview/2103548.html",
+        "pubDate": "2026-04-22T13:30:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "長崎県のテーマパークリゾート「ハウステンボス」は、アニメ「エヴァンゲリオン」シリーズをテーマにしたライドアトラクション「エヴァンゲリオン・ザ・ライド -8K-」を4月24日にオープンする。"
+      },
+      {
+        "title": "【ハウステンボス】気分はNERV職員！ ホテルデンハーグ「エヴァ」特別室最速フォトレポート",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103493.html",
+        "pubDate": "2026-04-22T13:30:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "長崎県のテーマパークリゾート「ハウステンボス」は、オフィシャルホテル「ホテルデンハーグ」とアニメ「エヴァンゲリオン」シリーズがコラボレーションしたコンセプトルームを4月24日より展開する。"
+      },
+      {
+        "title": "【ハウステンボス】「初号機 暴走パエリア」など個性豊かなメニュー！ 「エヴァ」コラボグルメ最速フォトレポート",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103489.html",
+        "pubDate": "2026-04-22T13:30:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "長崎県のテーマパークリゾート「ハウステンボス」は、アニメ「エヴァンゲリオン」シリーズをテーマにしたライドアトラクション「エヴァンゲリオン・ザ・ライド -8K-」を4月24日にオープンする。本稿では、コラボグルメの最速フォトレポートをお届けする。"
+      },
+      {
+        "title": "【ハウステンボス】「エヴァ」コラボグッズ最速フォトレポート！ NERV佐世保支部限定のアイテムがズラリ",
+        "link": "https://game.watch.impress.co.jp/docs/news/2103485.html",
+        "pubDate": "2026-04-22T13:30:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "長崎県のテーマパークリゾート「ハウステンボス」は、アニメ「エヴァンゲリオン」シリーズをテーマにしたライドアトラクション「エヴァンゲリオン・ザ・ライド -8K-」を4月24日にオープンする。本稿では、コラボグッズの最速フォトレポートをお届けしていく。"
+      },
+      {
+        "title": "Happyくじ「パペットスンスン」撮影会レポート！ オリジナルのボイスを収録したアイテムも登場",
+        "link": "https://game.watch.impress.co.jp/docs/kikaku/2103094.html",
+        "pubDate": "2026-04-22T12:31:00+09:00",
+        "source": "GAME Watch",
+        "image": "",
+        "description": "サニーサイドアップは、SNSを中心に大きな人気を集めているキャラクター「パペットスンスン」をフィーチャーしたHappyくじ「パペットスンスン」を5月29日より順次販売する。取扱店舗はセブン-イレブンの一部店舗やイトーヨーカドー、ゆめタウンなど。価格は1回920.70円。"
+      },
       {
         "title": "Happyくじ「パペットスンスン」5月29日発売！ ぬいぐるみやフィギュアなど、スンスンがおしゃべりするアイテムがラインナップ",
         "link": "https://game.watch.impress.co.jp/docs/news/2103463.html",
@@ -1054,121 +1179,17 @@ window.NEWS_DATA = {
         "source": "GAME Watch",
         "image": "",
         "description": "ソニー・インタラクティブエンタテインメントは、PlayStation Storeにてプレイステーション 5/プレイステーション 4用タイトルを中心とした「Golden Week Sale」を開催している。期間は5月6日まで。"
-      },
-      {
-        "title": "「トロピコ 7」の最新ティザー映像が公開！PS5/PS4版「トロピコ 6」過去最大セールも実施",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103411.html",
-        "pubDate": "2026-04-22T10:00:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "Kalypso Media Japanは、2026年に発売を予定しているプレイステーション 5/Xbox Series X|S/PC（Steam、Epic Games、Microsoft Store）用独裁国家運営シミュレーション「トロピコ 7」の最新ティザー映像を公開した。本作はXbox Game Pass UltimateおよびPC Game Pa..."
-      },
-      {
-        "title": "「Fallout 76」サブスクサービス「Fallout 1st」Xbox日本版の提供が開始",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103398.html",
-        "pubDate": "2026-04-22T09:00:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "Bethesda JapanはXbox版「Fallout 76」において、サブスクリプションサービス「Fallout 1st」の提供を4月22日から開始した。"
-      },
-      {
-        "title": "【Amazonセール】Wellmo、オールシーズン対応リカバリーウェア上下セットがお買い得！遠赤外線でじんわり血行促進、休息環境を整える「ケアウェア」",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103384.html",
-        "pubDate": "2026-04-22T00:05:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "AmazonにてWellmoのリカバリーウェアが特別価格で販売されている。期間は4月27日23時59分まで。"
-      },
-      {
-        "title": "【Amazonセール】通信速度最大19GbpsのTP-Linkゲーミングルーター「Archer GE800」がお買い得",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103381.html",
-        "pubDate": "2026-04-22T00:05:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "Amazonにて、TP-Linkのゲーミングルーター「Archer GE800」がセール価格で販売されている。セール期間は5月5日23時59分まで。"
-      },
-      {
-        "title": "【Amazonセール】うまい棒など5種類のお菓子が入ったラッピング済み詰め合わせ15セットがお買い得",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103360.html",
-        "pubDate": "2026-04-22T00:05:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "Amazonにて、お菓子の詰め合わせがセール価格で販売されている。セール期間は4月22日23時59分まで。"
-      },
-      {
-        "title": "【Amazonセール】KOORUIのゲーミングモニターがお買い得！　WQHD湾曲モデル「34E6UC」や240Hz対応モデル「27E3QK」などがラインナップ",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103330.html",
-        "pubDate": "2026-04-22T00:05:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "AmazonにてKOORUIのゲーミングモニターが特別価格で販売されている。期間は5月5日23時59分まで。"
-      },
-      {
-        "title": "「Dead by Daylight」の「2対8モード」が4月29日より期間限定で再実装TVアニメ「進撃の巨人」コレクションに新たなコーディネートが多数追加",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103310.html",
-        "pubDate": "2026-04-22T00:00:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "Behaviour Interactiveは、プレイステーション 5/プレイステーション 4/Xbox Series X|S/Xbox One/Nintendo Switch/PC向け非対称対戦型マルチプレイヤーホラーゲーム「Dead by Daylight」においてアップデートを実施し、「2対8モード」を4月29日から5月20日まで期間限定で再実装する。"
-      },
-      {
-        "title": "一斉を風靡した「ヴァンサバ」のデッキビルダー「Vampire Crawlers」が本日発売「Vampire Survivors」初のスピンオフゲーム",
-        "link": "https://game.watch.impress.co.jp/docs/news/2102747.html",
-        "pubDate": "2026-04-22T00:00:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "poncleは、Windows/Mac用カードゲーム「Vampire Crawlers: The Turbo Wildcard from Vampire Survivors（以下、Vampire Crawlers）」をSteamにて4月22日に発売する。価格は1,200円。"
-      },
-      {
-        "title": "PS Storeにて開催中のセール「SPRING SALE」が本日4月22日まで。対象のPS5、PS4タイトルがお買い得",
-        "link": "https://game.watch.impress.co.jp/docs/news/2102025.html",
-        "pubDate": "2026-04-22T00:00:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "ソニー・インタラクティブエンタテインメント（SIE）は、PlayStation Storeにてセール「SPRING SALE」を開催している。期間は4月22日23時59分まで。"
-      },
-      {
-        "title": "【特集】「Keyの作品は\"生き様\"の物語」――ビジュアルアーツ天雲玄樹社長が語る、四半世紀の歩みとこれから",
-        "link": "https://game.watch.impress.co.jp/docs/feature/2099937.html",
-        "pubDate": "2026-04-22T00:00:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "「Kanon」発売の年に入社。修羅場で学んだKeyの本質、テンセント子会社化の舞台裏、そしてKeyの目指す未来"
-      },
-      {
-        "title": "バトロワ経営シム「BROMS: バトルロワイヤル経営シミュレーター」の体験版がSteamで5月20日より配信開始",
-        "link": "https://game.watch.impress.co.jp/docs/news/2099602.html",
-        "pubDate": "2026-04-22T00:00:00+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "Windows用経営シミュレーション「BROMS: バトルロワイヤル経営シミュレーター」の体験版が、Steamにて5月20日より配信される。本作の開発はMIZO CLEATE氏。"
-      },
-      {
-        "title": "「スプラトゥーン レイダース」、すりみ連合3人のamiibo発売決定フウカ、マンタロー、ウツホが「レイダース」姿で登場",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103488.html",
-        "pubDate": "2026-04-21T22:19:24+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "任天堂は、amiibo「フウカ[レイダース]」「マンタロー[レイダース]」「ウツホ[レイダース]」を7月23日に発売する。価格は未定。"
-      },
-      {
-        "title": "Switch 2「スプラトゥーン レイダース」7月23日発売決定。価格は6,480円～",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103486.html",
-        "pubDate": "2026-04-21T22:01:37+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "任天堂は、Nintendo Switch 2用新作タイトル「スプラトゥーン レイダース」の発売日を7月23日と発表した。価格はダウンロード版が6,480円、パッケージ版が7,480円。"
-      },
-      {
-        "title": "【獣道】ウメハラvsメナの10先イベント「Evo LEGENDS LIVE」抽選受付は本日まで「TEKKEN 8」Arslan Ash vs チクリン・「餓狼伝説CotW」Laggia vs GO1の7先も",
-        "link": "https://game.watch.impress.co.jp/docs/news/2103462.html",
-        "pubDate": "2026-04-21T19:42:41+09:00",
-        "source": "GAME Watch",
-        "image": "",
-        "description": "世界最大級の格闘ゲーム大会「Evolution Championship Series（以下、EVO）」が4月29日に開催する、格闘ゲームイベント「Evo Legends Live」のチケット抽選受付期間は本日4月21日23時59分までとなっている。価格は全自由席 5,500円（1ドリンク付）。"
       }
     ],
     "finance": [
+      {
+        "title": "日経平均終値 過去最高値を更新",
+        "link": "https://news.yahoo.co.jp/pickup/6577212?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:54:49 GMT",
+        "source": "!ニュース・トピックス - 経済",
+        "image": "",
+        "description": ""
+      },
       {
         "title": "25年度の貿易収支 1.7兆円の赤字",
         "link": "https://news.yahoo.co.jp/pickup/6577171?source=rss",
@@ -1178,9 +1199,9 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "プルデンシャル被害申告2倍超に増",
-        "link": "https://news.yahoo.co.jp/pickup/6577155?source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:13:41 GMT",
+        "title": "首都高談合 4社に排除措置命令",
+        "link": "https://news.yahoo.co.jp/pickup/6577218?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:58 GMT",
         "source": "!ニュース・トピックス - 経済",
         "image": "",
         "description": ""
@@ -1194,9 +1215,9 @@ window.NEWS_DATA = {
         "description": ""
       },
       {
-        "title": "銀座線見合わせ 夕方再開の見通し",
-        "link": "https://news.yahoo.co.jp/pickup/6577183?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:38:56 GMT",
+        "title": "大手 新卒「厳選採用」相次ぐ背景",
+        "link": "https://news.yahoo.co.jp/pickup/6577198?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 04:02:30 GMT",
         "source": "!ニュース・トピックス - 経済",
         "image": "",
         "description": ""
@@ -1205,14 +1226,6 @@ window.NEWS_DATA = {
         "title": "レコード生産09年比33倍 急増背景",
         "link": "https://news.yahoo.co.jp/pickup/6577187?source=rss",
         "pubDate": "Wed, 22 Apr 2026 03:13:01 GMT",
-        "source": "!ニュース・トピックス - 経済",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "サウナの2割超 非常ボタン未設置",
-        "link": "https://news.yahoo.co.jp/pickup/6577152?source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:33:15 GMT",
         "source": "!ニュース・トピックス - 経済",
         "image": "",
         "description": ""
@@ -1236,9 +1249,25 @@ window.NEWS_DATA = {
     ],
     "sports": [
       {
-        "title": "村上宗隆が4戦連発 驚異のペース",
-        "link": "https://news.yahoo.co.jp/pickup/6577179?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:31:28 GMT",
+        "title": "バレー・江畑幸子さん 第2子妊娠",
+        "link": "https://news.yahoo.co.jp/pickup/6577213?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:41 GMT",
+        "source": "!ニュース・トピックス - スポーツ",
+        "image": "",
+        "description": ""
+      },
+      {
+        "title": "村上宗隆が4戦連発 監督は絶賛",
+        "link": "https://news.yahoo.co.jp/pickup/6577211?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:39:40 GMT",
+        "source": "!ニュース・トピックス - スポーツ",
+        "image": "",
+        "description": ""
+      },
+      {
+        "title": "山本由伸 圧巻の立て直しも黒星",
+        "link": "https://news.yahoo.co.jp/pickup/6577203?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 04:25:01 GMT",
         "source": "!ニュース・トピックス - スポーツ",
         "image": "",
         "description": ""
@@ -1255,14 +1284,6 @@ window.NEWS_DATA = {
         "title": "鈴木誠也が特大2ラン 今永を援護",
         "link": "https://news.yahoo.co.jp/pickup/6577180?source=rss",
         "pubDate": "Wed, 22 Apr 2026 02:23:22 GMT",
-        "source": "!ニュース・トピックス - スポーツ",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "速報ドジャース 山本由伸が先発",
-        "link": "https://news.yahoo.co.jp/pickup/6577172?source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:48:48 GMT",
         "source": "!ニュース・トピックス - スポーツ",
         "image": "",
         "description": ""
@@ -1290,17 +1311,33 @@ window.NEWS_DATA = {
         "source": "!ニュース・トピックス - スポーツ",
         "image": "",
         "description": ""
-      },
-      {
-        "title": "阪神また激震 ドラ1立石3度目負傷",
-        "link": "https://news.yahoo.co.jp/pickup/6577119?source=rss",
-        "pubDate": "Tue, 21 Apr 2026 11:03:59 GMT",
-        "source": "!ニュース・トピックス - スポーツ",
-        "image": "",
-        "description": ""
       }
     ],
     "entertainment": [
+      {
+        "title": "奥田瑛二 娘サクラと大河「共演」",
+        "link": "https://news.yahoo.co.jp/pickup/6577205?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 04:42:35 GMT",
+        "source": "!ニュース・トピックス - エンタメ",
+        "image": "",
+        "description": ""
+      },
+      {
+        "title": "漫画サザエさん 初の電子書籍化",
+        "link": "https://news.yahoo.co.jp/pickup/6577197?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 04:01:57 GMT",
+        "source": "!ニュース・トピックス - エンタメ",
+        "image": "",
+        "description": ""
+      },
+      {
+        "title": "AAA與真司郎 6～7年ぶり金髪に",
+        "link": "https://news.yahoo.co.jp/pickup/6577196?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 03:53:12 GMT",
+        "source": "!ニュース・トピックス - エンタメ",
+        "image": "",
+        "description": ""
+      },
       {
         "title": "菊池風磨が数週間活動休止 喉不調",
         "link": "https://news.yahoo.co.jp/pickup/6577170?source=rss",
@@ -1340,33 +1377,17 @@ window.NEWS_DATA = {
         "source": "!ニュース・トピックス - エンタメ",
         "image": "",
         "description": ""
-      },
-      {
-        "title": "LiLiCo「永住者」の文字を見て涙",
-        "link": "https://news.yahoo.co.jp/pickup/6577108?source=rss",
-        "pubDate": "Tue, 21 Apr 2026 09:45:07 GMT",
-        "source": "!ニュース・トピックス - エンタメ",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "三吉彩花が披露 タトゥーに理解は",
-        "link": "https://news.yahoo.co.jp/pickup/6577104?source=rss",
-        "pubDate": "Tue, 21 Apr 2026 08:57:02 GMT",
-        "source": "!ニュース・トピックス - エンタメ",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "向田邦子賞受賞 異例の顔出しNG",
-        "link": "https://news.yahoo.co.jp/pickup/6577094?source=rss",
-        "pubDate": "Tue, 21 Apr 2026 08:18:09 GMT",
-        "source": "!ニュース・トピックス - エンタメ",
-        "image": "",
-        "description": ""
       }
     ],
     "health": [
+      {
+        "title": "暗黒物質探る 米望遠鏡打ち上げへ",
+        "link": "https://news.yahoo.co.jp/pickup/6577220?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:14:14 GMT",
+        "source": "!ニュース・トピックス - 科学",
+        "image": "",
+        "description": ""
+      },
       {
         "title": "火星岩石から有機分子検出 NASA",
         "link": "https://news.yahoo.co.jp/pickup/6577165?source=rss",
@@ -1419,14 +1440,6 @@ window.NEWS_DATA = {
         "title": "ロボット マラソン世界記録上回る",
         "link": "https://news.yahoo.co.jp/pickup/6576811?source=rss",
         "pubDate": "Sun, 19 Apr 2026 04:14:33 GMT",
-        "source": "!ニュース・トピックス - 科学",
-        "image": "",
-        "description": ""
-      },
-      {
-        "title": "妊娠中期の猛暑で早産リスク 研究",
-        "link": "https://news.yahoo.co.jp/pickup/6576798?source=rss",
-        "pubDate": "Sun, 19 Apr 2026 02:23:57 GMT",
         "source": "!ニュース・トピックス - 科学",
         "image": "",
         "description": ""
@@ -1434,6 +1447,14 @@ window.NEWS_DATA = {
     ],
     "science": [
       {
+        "title": "暗黒物質探る 米望遠鏡打ち上げへ",
+        "link": "https://news.yahoo.co.jp/pickup/6577220?source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:14:14 GMT",
+        "source": "!ニュース・トピックス - 科学",
+        "image": "",
+        "description": ""
+      },
+      {
         "title": "火星岩石から有機分子検出 NASA",
         "link": "https://news.yahoo.co.jp/pickup/6577165?source=rss",
         "pubDate": "Wed, 22 Apr 2026 01:04:29 GMT",
@@ -1488,578 +1509,183 @@ window.NEWS_DATA = {
         "source": "!ニュース・トピックス - 科学",
         "image": "",
         "description": ""
-      },
-      {
-        "title": "妊娠中期の猛暑で早産リスク 研究",
-        "link": "https://news.yahoo.co.jp/pickup/6576798?source=rss",
-        "pubDate": "Sun, 19 Apr 2026 02:23:57 GMT",
-        "source": "!ニュース・トピックス - 科学",
-        "image": "",
-        "description": ""
       }
-    ],
-    "ai": []
+    ]
   },
   "de": {
-    "local": [
-      {
-        "title": "Neue Gespräche: Wie es zwischen den USA und Iran weitergehen könnte",
-        "link": "https://www.tagesschau.de/ausland/asien/verhandlungen-usa-iran-szenarien-100.html",
-        "pubDate": "Wed, 22 Apr 2026 05:19:41 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Die USA haben die Waffenruhe ausgeweitet. Doch kommen die Verhandlungen mit Iran nun voran, oder vertieft sich der Konflikt? Vor möglichen weiteren Gesprächen sind mehrere Szena..."
-      },
-      {
-        "title": "Lufthansa streicht 20.000 Flüge bis Oktober",
-        "link": "https://www.tagesschau.de/inland/regional/hessen/lufthansa-flugstreichungen-100.html",
-        "pubDate": "Wed, 22 Apr 2026 04:16:30 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Nach dem Wegfall der Cityline und aufgrund der hohen Kerosin-Preise streicht die Lufthansa ihren Flugplan drastisch zusammen. Betroffen sind zahlreiche Destinationen in Europa."
-      },
-      {
-        "title": "Europa und die Energiepreise: Jeder für sich",
-        "link": "https://www.tagesschau.de/ausland/europa/eu-staaten-umgang-spritpreise-100.html",
-        "pubDate": "Wed, 22 Apr 2026 04:05:06 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Es herrscht in der EU kein Mangel an Maßnahmen gegen die gestiegenen Energiepreise. Nur: Sie werden kaum koordiniert, die EU-Staaten handeln ohne gemeinsame Strategie. Das will ..."
-      },
-      {
-        "title": "Nahost-Liveblog: ++ Keine Entspannung an den Ölmärkten ++",
-        "link": "https://www.tagesschau.de/newsticker/liveblog-iran-mittwoch-112.html",
-        "pubDate": "Wed, 22 Apr 2026 03:09:07 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Trotz der angekündigten Verlängerung der Waffenruhe mit dem Iran zeichnet sich an den Ölmärkten keine echte Entspannung ab. Mehr als 30 Länder beteiligen sich an einer Planungsk..."
-      },
-      {
-        "title": "Internationale Studie: Pollensaison wird länger und stärker",
-        "link": "https://www.tagesschau.de/wissen/gesundheit/pollen-saison-klimawandel-100.html",
-        "pubDate": "Wed, 22 Apr 2026 00:57:00 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Allergieauslösende Pollen wie die von Erle und Birke fliegen früher und stärker als noch vor 30 Jahren. Verantwortlich ist der Klimawandel - das belegen neueste Daten einer inte..."
-      },
-      {
-        "title": "Trump verlängert Waffenruhe mit Iran",
-        "link": "https://www.tagesschau.de/ausland/amerika/trump-iran-waffenruhe-100.html",
-        "pubDate": "Wed, 22 Apr 2026 02:51:17 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Kurz vor Ende des Ultimatums hat US-Präsident Trump die Waffenruhe mit Iran überraschend verlängert. Zugleich soll die Blockade iranischer Häfen aufrechterhalten bleiben. Tehera..."
-      },
-      {
-        "title": "Nahost-Liveblog: ++ Revolutionsgarde droht Golfstaaten ++",
-        "link": "https://www.tagesschau.de/newsticker/liveblog-iran-dienstag-112.html",
-        "pubDate": "Wed, 22 Apr 2026 00:14:11 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Ein Kommandeur der Revolutionsgarde hat den Golfstaaten mit der Zerstörung ihrer Ölproduktion gedroht, sollten sie Angriffe auf Iran von ihrem Staatsgebiet aus erlauben. Die His..."
-      },
-      {
-        "title": "Unklarheit über Waffenruhe und Verhandlungen zwischen Iran und USA",
-        "link": "https://www.tagesschau.de/ausland/asien/iran-usa-waffenruhe-treffen-100.html",
-        "pubDate": "Tue, 21 Apr 2026 21:32:23 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Eigentlich wollten sich Vertreter der USA und Irans vor Auslaufen der Waffenruhe zu Verhandlungen treffen. Doch weder sind die Delegationen nach Pakistan aufgebrochen, noch ist ..."
-      },
-      {
-        "title": "München: Kardinal Marx erlaubt Segnung queerer Paare",
-        "link": "https://www.tagesschau.de/inland/regional/bayern/kardinal-marx-segnung-queer-100.html",
-        "pubDate": "Tue, 21 Apr 2026 20:51:19 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Als erster Kardinal in Deutschland lässt Reinhard Marx die Segnung homosexueller Paare für das Erzbistum München und Freising zu. Das hat er Pfarrern, Seelsorgerinnen und Seelso..."
-      },
-      {
-        "title": "Merz zu SPD und Rente: Droht der nächste Koalitionsärger?",
-        "link": "https://www.tagesschau.de/inland/innenpolitik/merz-rente-108.html",
-        "pubDate": "Tue, 21 Apr 2026 19:37:09 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Eine Rede von Kanzler Merz gestern Abend hallt nach. Vor allem zwei Dinge blieben hängen: seine Kritik am Koalitionspartner SPD und eine Äußerung zum Thema Rente. Die Sozialdemo..."
-      },
-      {
-        "title": "Ukraine: Wenn Soldaten spielsüchtig werden",
-        "link": "https://www.tagesschau.de/ausland/europa/ukraine-armee-spielsucht-100.html",
-        "pubDate": "Tue, 21 Apr 2026 19:01:26 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Einsatz an der Front heißt für ukrainische Soldaten auch: Sie haben wenig Möglichkeiten, abzuschalten. Manche verfallen deshalb der Spielsucht. Profitiert davon auch Russland? F..."
-      },
-      {
-        "title": "Druschba-Pipeline laut Selenskyj wieder repariert",
-        "link": "https://www.tagesschau.de/ausland/europa/druschba-pipeline-ukraine-100.html",
-        "pubDate": "Tue, 21 Apr 2026 19:31:12 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Seit Ende Januar fließt kein Erdöl über die Ukraine nach Ungarn und in die Slowakei. Nun gab Kiew bekannt, die beschädigte Pipeline repariert zu haben. Die Wiederaufnahme des Be..."
-      },
-      {
-        "title": "Marktbericht: DAX schließt erneut im Minus",
-        "link": "https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-geldanlage-122.html",
-        "pubDate": "Tue, 21 Apr 2026 18:36:14 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Angesichts der bald auslaufenden Feuerpause im Iran-Krieg werden die Anlegerinnen und Anleger nervöser. Neue Verhandlungen bleiben weiter ungewiss. Der DAX beendete den Handel e..."
-      },
-      {
-        "title": "Wo Streitpunkte der geplanten Gesundheitsreform liegen",
-        "link": "https://www.tagesschau.de/inland/innenpolitik/gesundheitsreform-krankenkassen-warken-koalition-100.html",
-        "pubDate": "Tue, 21 Apr 2026 18:14:57 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Die Gesundheitsreform soll möglichst schnell vorankommen. Doch dafür müsste sich die Koalition erstmal auf ein Gesamtpaket einigen. Vier Streitpunkte, die für besonders viel Ges..."
-      },
-      {
-        "title": "Gesundheitsministerin Warken will bis Mitte Mai Pflegereform vorlegen",
-        "link": "https://www.tagesschau.de/inland/warken-pflegereform-vorschlaege-100.html",
-        "pubDate": "Tue, 21 Apr 2026 18:13:28 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Zu wenig Personal, mehr Pflegebedürftige, zu hohe Kosten: Gesundheitsministerin Warken will bis Mitte Mai einen Gesetzentwurf für eine Pflegereform vorlegen. Der sieht laut eine..."
-      },
-      {
-        "title": "Wie Zelltherapien bezahlbar werden könnten",
-        "link": "https://www.tagesschau.de/wissen/forschung/hannover-messe-krebs-zelltherapie-100.html",
-        "pubDate": "Tue, 21 Apr 2026 17:35:35 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Individuelle Krebstherapien können sehr wirksam sein - ihre Herstellung ist oft Handarbeit und damit teuer. Unternehmen und Forschungseinrichtungen stellen auf der Hannover Mess..."
-      },
-      {
-        "title": "Während Israel um Soldaten und Terroropfer trauert, droht Netanjahu Iran",
-        "link": "https://www.tagesschau.de/ausland/israel-memorial-day-100.html",
-        "pubDate": "Tue, 21 Apr 2026 17:01:05 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Seit Montagabend trauert Israel um gefallene Soldaten und Terror-Opfer - der Memorial Day verlief trotz angespannter Lage weitgehend ruhig. Premier und Verteidigungsminister dro..."
-      },
-      {
-        "title": "Kerosin-Krise: Folgen für Flugpreise, Rechte und Pauschalreisen",
-        "link": "https://www.tagesschau.de/wirtschaft/verbraucher/kerosin-flugpreise-passagierrechte-pauschalreisen-100.html",
-        "pubDate": "Tue, 21 Apr 2026 16:34:27 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Steigende Kerosinkosten verteuern Flüge und erhöhen das Risiko von Kürzungen im Angebot. Was Reisende bei Tickets, Pauschalreisen, Annullierungen und möglichen Insolvenzen wisse..."
-      },
-      {
-        "title": "EuGH hält Ungarns Anti-LGBTQ-Gesetz für diskriminierend",
-        "link": "https://www.tagesschau.de/ausland/europa/ungarn-eugh-lgbtq-diskriminierung-100.html",
-        "pubDate": "Tue, 21 Apr 2026 15:25:39 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Informationen über Homosexualität und Transidentität sind in Ungarn für Minderjährige verboten. Für den EuGH ist das eine Verletzung von Grundwerten der EU. Ob sich unter der ne..."
-      },
-      {
-        "title": "Keine Anzeichen für neue Verhandlungen von Iran und USA",
-        "link": "https://www.tagesschau.de/ausland/asien/ende-waffenruhe-iran-krieg-100.html",
-        "pubDate": "Tue, 21 Apr 2026 18:47:59 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "In der Nacht zu Donnerstag oder deutlich früher? Es gibt Verwirrung, wann genau die Waffenruhe im Iran-Krieg ausläuft. Klar ist aber: Die Zeit, um vorher noch in Pakistan zu ver..."
-      }
-    ],
-    "top": [
-      {
-        "title": "Neue Gespräche: Wie es zwischen den USA und Iran weitergehen könnte",
-        "link": "https://www.tagesschau.de/ausland/asien/verhandlungen-usa-iran-szenarien-100.html",
-        "pubDate": "Wed, 22 Apr 2026 05:19:41 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Die USA haben die Waffenruhe ausgeweitet. Doch kommen die Verhandlungen mit Iran nun voran, oder vertieft sich der Konflikt? Vor möglichen weiteren Gesprächen sind mehrere Szena..."
-      },
-      {
-        "title": "Lufthansa streicht 20.000 Flüge bis Oktober",
-        "link": "https://www.tagesschau.de/inland/regional/hessen/lufthansa-flugstreichungen-100.html",
-        "pubDate": "Wed, 22 Apr 2026 04:16:30 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Nach dem Wegfall der Cityline und aufgrund der hohen Kerosin-Preise streicht die Lufthansa ihren Flugplan drastisch zusammen. Betroffen sind zahlreiche Destinationen in Europa."
-      },
-      {
-        "title": "Europa und die Energiepreise: Jeder für sich",
-        "link": "https://www.tagesschau.de/ausland/europa/eu-staaten-umgang-spritpreise-100.html",
-        "pubDate": "Wed, 22 Apr 2026 04:05:06 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Es herrscht in der EU kein Mangel an Maßnahmen gegen die gestiegenen Energiepreise. Nur: Sie werden kaum koordiniert, die EU-Staaten handeln ohne gemeinsame Strategie. Das will ..."
-      },
-      {
-        "title": "Nahost-Liveblog: ++ Keine Entspannung an den Ölmärkten ++",
-        "link": "https://www.tagesschau.de/newsticker/liveblog-iran-mittwoch-112.html",
-        "pubDate": "Wed, 22 Apr 2026 03:09:07 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Trotz der angekündigten Verlängerung der Waffenruhe mit dem Iran zeichnet sich an den Ölmärkten keine echte Entspannung ab. Mehr als 30 Länder beteiligen sich an einer Planungsk..."
-      },
-      {
-        "title": "Internationale Studie: Pollensaison wird länger und stärker",
-        "link": "https://www.tagesschau.de/wissen/gesundheit/pollen-saison-klimawandel-100.html",
-        "pubDate": "Wed, 22 Apr 2026 00:57:00 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Allergieauslösende Pollen wie die von Erle und Birke fliegen früher und stärker als noch vor 30 Jahren. Verantwortlich ist der Klimawandel - das belegen neueste Daten einer inte..."
-      },
-      {
-        "title": "Trump verlängert Waffenruhe mit Iran",
-        "link": "https://www.tagesschau.de/ausland/amerika/trump-iran-waffenruhe-100.html",
-        "pubDate": "Wed, 22 Apr 2026 02:51:17 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Kurz vor Ende des Ultimatums hat US-Präsident Trump die Waffenruhe mit Iran überraschend verlängert. Zugleich soll die Blockade iranischer Häfen aufrechterhalten bleiben. Tehera..."
-      },
-      {
-        "title": "Nahost-Liveblog: ++ Revolutionsgarde droht Golfstaaten ++",
-        "link": "https://www.tagesschau.de/newsticker/liveblog-iran-dienstag-112.html",
-        "pubDate": "Wed, 22 Apr 2026 00:14:11 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Ein Kommandeur der Revolutionsgarde hat den Golfstaaten mit der Zerstörung ihrer Ölproduktion gedroht, sollten sie Angriffe auf Iran von ihrem Staatsgebiet aus erlauben. Die His..."
-      },
-      {
-        "title": "Unklarheit über Waffenruhe und Verhandlungen zwischen Iran und USA",
-        "link": "https://www.tagesschau.de/ausland/asien/iran-usa-waffenruhe-treffen-100.html",
-        "pubDate": "Tue, 21 Apr 2026 21:32:23 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Eigentlich wollten sich Vertreter der USA und Irans vor Auslaufen der Waffenruhe zu Verhandlungen treffen. Doch weder sind die Delegationen nach Pakistan aufgebrochen, noch ist ..."
-      },
-      {
-        "title": "München: Kardinal Marx erlaubt Segnung queerer Paare",
-        "link": "https://www.tagesschau.de/inland/regional/bayern/kardinal-marx-segnung-queer-100.html",
-        "pubDate": "Tue, 21 Apr 2026 20:51:19 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Als erster Kardinal in Deutschland lässt Reinhard Marx die Segnung homosexueller Paare für das Erzbistum München und Freising zu. Das hat er Pfarrern, Seelsorgerinnen und Seelso..."
-      },
-      {
-        "title": "Merz zu SPD und Rente: Droht der nächste Koalitionsärger?",
-        "link": "https://www.tagesschau.de/inland/innenpolitik/merz-rente-108.html",
-        "pubDate": "Tue, 21 Apr 2026 19:37:09 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Eine Rede von Kanzler Merz gestern Abend hallt nach. Vor allem zwei Dinge blieben hängen: seine Kritik am Koalitionspartner SPD und eine Äußerung zum Thema Rente. Die Sozialdemo..."
-      },
-      {
-        "title": "Ukraine: Wenn Soldaten spielsüchtig werden",
-        "link": "https://www.tagesschau.de/ausland/europa/ukraine-armee-spielsucht-100.html",
-        "pubDate": "Tue, 21 Apr 2026 19:01:26 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Einsatz an der Front heißt für ukrainische Soldaten auch: Sie haben wenig Möglichkeiten, abzuschalten. Manche verfallen deshalb der Spielsucht. Profitiert davon auch Russland? F..."
-      },
-      {
-        "title": "Druschba-Pipeline laut Selenskyj wieder repariert",
-        "link": "https://www.tagesschau.de/ausland/europa/druschba-pipeline-ukraine-100.html",
-        "pubDate": "Tue, 21 Apr 2026 19:31:12 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Seit Ende Januar fließt kein Erdöl über die Ukraine nach Ungarn und in die Slowakei. Nun gab Kiew bekannt, die beschädigte Pipeline repariert zu haben. Die Wiederaufnahme des Be..."
-      },
-      {
-        "title": "Marktbericht: DAX schließt erneut im Minus",
-        "link": "https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-geldanlage-122.html",
-        "pubDate": "Tue, 21 Apr 2026 18:36:14 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Angesichts der bald auslaufenden Feuerpause im Iran-Krieg werden die Anlegerinnen und Anleger nervöser. Neue Verhandlungen bleiben weiter ungewiss. Der DAX beendete den Handel e..."
-      },
-      {
-        "title": "Wo Streitpunkte der geplanten Gesundheitsreform liegen",
-        "link": "https://www.tagesschau.de/inland/innenpolitik/gesundheitsreform-krankenkassen-warken-koalition-100.html",
-        "pubDate": "Tue, 21 Apr 2026 18:14:57 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Die Gesundheitsreform soll möglichst schnell vorankommen. Doch dafür müsste sich die Koalition erstmal auf ein Gesamtpaket einigen. Vier Streitpunkte, die für besonders viel Ges..."
-      },
-      {
-        "title": "Gesundheitsministerin Warken will bis Mitte Mai Pflegereform vorlegen",
-        "link": "https://www.tagesschau.de/inland/warken-pflegereform-vorschlaege-100.html",
-        "pubDate": "Tue, 21 Apr 2026 18:13:28 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Zu wenig Personal, mehr Pflegebedürftige, zu hohe Kosten: Gesundheitsministerin Warken will bis Mitte Mai einen Gesetzentwurf für eine Pflegereform vorlegen. Der sieht laut eine..."
-      },
-      {
-        "title": "Wie Zelltherapien bezahlbar werden könnten",
-        "link": "https://www.tagesschau.de/wissen/forschung/hannover-messe-krebs-zelltherapie-100.html",
-        "pubDate": "Tue, 21 Apr 2026 17:35:35 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Individuelle Krebstherapien können sehr wirksam sein - ihre Herstellung ist oft Handarbeit und damit teuer. Unternehmen und Forschungseinrichtungen stellen auf der Hannover Mess..."
-      },
-      {
-        "title": "Während Israel um Soldaten und Terroropfer trauert, droht Netanjahu Iran",
-        "link": "https://www.tagesschau.de/ausland/israel-memorial-day-100.html",
-        "pubDate": "Tue, 21 Apr 2026 17:01:05 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Seit Montagabend trauert Israel um gefallene Soldaten und Terror-Opfer - der Memorial Day verlief trotz angespannter Lage weitgehend ruhig. Premier und Verteidigungsminister dro..."
-      },
-      {
-        "title": "Kerosin-Krise: Folgen für Flugpreise, Rechte und Pauschalreisen",
-        "link": "https://www.tagesschau.de/wirtschaft/verbraucher/kerosin-flugpreise-passagierrechte-pauschalreisen-100.html",
-        "pubDate": "Tue, 21 Apr 2026 16:34:27 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Steigende Kerosinkosten verteuern Flüge und erhöhen das Risiko von Kürzungen im Angebot. Was Reisende bei Tickets, Pauschalreisen, Annullierungen und möglichen Insolvenzen wisse..."
-      },
-      {
-        "title": "EuGH hält Ungarns Anti-LGBTQ-Gesetz für diskriminierend",
-        "link": "https://www.tagesschau.de/ausland/europa/ungarn-eugh-lgbtq-diskriminierung-100.html",
-        "pubDate": "Tue, 21 Apr 2026 15:25:39 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "Informationen über Homosexualität und Transidentität sind in Ungarn für Minderjährige verboten. Für den EuGH ist das eine Verletzung von Grundwerten der EU. Ob sich unter der ne..."
-      },
-      {
-        "title": "Keine Anzeichen für neue Verhandlungen von Iran und USA",
-        "link": "https://www.tagesschau.de/ausland/asien/ende-waffenruhe-iran-krieg-100.html",
-        "pubDate": "Tue, 21 Apr 2026 18:47:59 +0200",
-        "source": "tagesschau.de - Die Nachrichten der ARD",
-        "image": "",
-        "description": "In der Nacht zu Donnerstag oder deutlich früher? Es gibt Verwirrung, wann genau die Waffenruhe im Iran-Krieg ausläuft. Klar ist aber: Die Zeit, um vorher noch in Pakistan zu ver..."
-      }
-    ],
+    "local": [],
+    "top": [],
     "technology": [
       {
-        "title": "Meta erfasst Mausbewegungen und Tastenanschläge von Mitarbeitern für KI-Training",
-        "link": "https://www.heise.de/news/Meta-erfasst-Mausbewegungen-und-Tastenanschlaege-von-Mitarbeitern-fuer-KI-Training-11266871.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Wed, 22 Apr 2026 05:05:00 +0200",
+        "title": "Weniger Cloud, mehr Kontrolle: PHP wandert zurück ins eigene Rechenzentrum",
+        "link": "https://www.heise.de/news/Weniger-Cloud-mehr-Kontrolle-PHP-wandert-zurueck-ins-eigene-Rechenzentrum-11265155.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 10:01:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Neue Tracking-Software auf Büro-PCs bei Meta Platforms zeichnet Maus- und Tastaturaktionen der Nutzer auf. So sollen KI-Modelle menschliches Verhalten lernen."
+        "description": "Die PHP-Entwicklung findet immer häufiger abseits der Cloud statt. Meist kommt dabei PHP 8.3 zum Einsatz. Bei den Betriebssystemen erlebt Windows ein Comeback."
       },
       {
-        "title": "Deutschland soll bei EU-Gesundheitsdatenraum, ePA und EUDI-Wallet liefern",
-        "link": "https://www.heise.de/news/Deutschland-soll-bei-EU-Gesundheitsdatenraum-ePA-und-EUDI-Wallet-liefern-11266827.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 22:52:00 +0200",
+        "title": "heise+ | Die sparsamsten Neuwagen mit Hybridantrieb: Verbrauch und Kosten im Vergleich",
+        "link": "https://www.heise.de/ratgeber/Die-sparsamsten-Neuwagen-mit-Hybridantrieb-Verbrauch-und-Kosten-im-Vergleich-11266943.html?wt_mc=rss.red.ho.ho.rdf.beitrag_plus.beitrag_plus",
+        "pubDate": "Wed, 22 Apr 2026 10:01:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Der EHDS, die ePA und die EUDI-Wallet sollen Europas Gesundheitsdaten vernetzen. Doch sind Fragen zum Notfallzugriff und zur Governance bislang ungelöst."
+        "description": "Noch immer haben die meisten Neuwagen einen Verbrennungsmotor eingebaut. Welche bieten den geringsten Spritverbrauch?"
       },
       {
-        "title": "Glasfaser-Bestechung: Razzien in Nordrhein-Westfalen",
-        "link": "https://www.heise.de/news/Glasfaser-Bestechung-Razzien-in-Nordrhein-Westfalen-11266837.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 21:54:00 +0200",
+        "title": "heise-Angebot: iX-Workshop Keycloak: Die Grundlagen für effizientes IAM und SSO",
+        "link": "https://www.heise.de/news/iX-Workshop-Keycloak-Die-Grundlagen-fuer-effizientes-IAM-und-SSO-11255546.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 10:00:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Ein Mitarbeiter der Deutschen Telekom soll Aufträge für den Glasfaser-Ausbau einer Duisburger Baufirma zugeschanzt haben. Gegen Gebühr."
+        "description": "SSO und Multifaktor-Authentifizierung – mehr Sicherheit und einfache Zugangsverwaltung mit dem OpenID-Connect-Provider Keycloak."
       },
       {
-        "title": "Framework Laptop 13 Pro verlängert Akkulaufzeit erheblich",
-        "link": "https://www.heise.de/news/Framework-Laptop-13-Pro-verlaengert-Akkulaufzeit-erheblich-11266002.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 20:15:00 +0200",
+        "title": "Tado vereint alte und neue Heiz- und Klimasysteme unter einem Konto",
+        "link": "https://www.heise.de/news/Tado-vereint-alte-und-neue-Heiz-und-Klimasysteme-unter-einem-Konto-11267007.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 10:00:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Neue Prozessoren, besseres Display, gefrästes Gehäuse. Der Framework Laptop 13 Pro macht vieles besser. Alte Notebooks sind aufrüstbar."
+        "description": "Tado führt Multi-Haushalt-Accounts ein, was den lästigen System-Split zwischen X- und V3+-Thermostaten aufhebt. Doch vollen Komfort gibt es bloß im Bezahl-Abo."
       },
       {
-        "title": "Reiskocher im Überblick: simpel bis smart – mit App, Backfunktion & Lernmodus",
-        "link": "https://www.heise.de/bestenlisten/ratgeber/reiskocher-im-ueberblick-simpel-bis-smart-mit-app-backfunktion-und-lernmodus/egpvkwk?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 20:00:00 +0200",
+        "title": "Deezer: 44 Prozent neu hochgeladener Musik ist KI-generiert",
+        "link": "https://www.heise.de/news/Deezer-44-Prozent-neu-hochgeladener-Musik-ist-KI-generiert-11267095.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 09:52:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Reiskocher von simpel bis smart sorgen im Idealfall für immer perfekt gegarten Reis. Wer mehr Geld in die Hand nimmt, bekommt intelligente Zusatzfunktionen."
+        "description": "44 Prozent der Songs, die täglich beim Musikstreamingdienst Deezer hochgeladen werden, sind KI-generiert. Das entspricht knapp 75.000 Tracks täglich."
       },
       {
-        "title": "Ternus als Apple-CEO: Fokus auf Hardware und schnelle Entscheidungen",
-        "link": "https://www.heise.de/news/John-Ternus-als-neuer-Apple-CEO-Mehr-Entscheidungsfreude-erwartet-11266703.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 18:10:00 +0200",
+        "title": "Samsung Galaxy: April-Patch macht offenbar Probleme mit Microsoft-Apps",
+        "link": "https://www.heise.de/news/Samsung-Galaxy-April-Patch-macht-offenbar-Probleme-mit-Microsoft-Apps-11267013.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 09:48:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Mit dem Amtsantritt von John Ternus als Apple-CEO im September 2026 könnte sich der Führungsstil bei Apple wandeln. Er gilt als entscheidungsfreudiger als Cook."
+        "description": "Der April-Sicherheitspatch für Samsung-Galaxy-Geräte führt offenbar zu massiven Problemen mit Microsoft-Apps. Es scheint eine Übergangslösung zu geben."
       },
       {
-        "title": "heise+ | Wi-Fi-7-Router für Glasfaser und DSL im Test: Deutsche Telekom Speedport 7",
-        "link": "https://www.heise.de/tests/Wi-Fi-7-Router-fuer-Glasfaser-und-DSL-im-Test-Deutsche-Telekom-Speedport-7-11112427.html?wt_mc=rss.red.ho.ho.rdf.beitrag_plus.beitrag_plus",
-        "pubDate": "Tue, 21 Apr 2026 17:30:00 +0200",
+        "title": "Cyberresilienz im Gesundheitswesen: Europa ringt mit der Umsetzung",
+        "link": "https://www.heise.de/news/Cyberresilienz-im-Gesundheitswesen-Europa-ringt-mit-der-Umsetzung-11266791.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 09:37:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Mit dem Speedport 7 funkt das Magenta-Mesh mit modernem Wi-Fi 7. Wir haben Router und Repeater ausprobiert."
+        "description": "Auf einem DMEA-Panel zur Cybersicherheit im Gesundheitswesen wurde deutlich: Strategien gibt es genug, doch an der praktischen Umsetzung hapert es oft."
       },
       {
-        "title": "DMA-Vorgaben: Apple blockiert Interoperabilität für Drittanbieter-Apps",
-        "link": "https://www.heise.de/news/DMA-FSFE-beklagt-Apples-Blockade-bei-Interoperabilitaets-Antraegen-11266605.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 17:04:00 +0200",
+        "title": "GhostBSD 26.1: FreeBSD-Desktop mit XLibre und ZFS-Snapshots",
+        "link": "https://www.heise.de/news/GhostBSD-26-1-FreeBSD-Desktop-mit-XLibre-und-ZFS-Snapshots-11267057.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 09:34:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Die Free Software Foundation wirft Apple vor, entgegen der DMA-Vorgaben den Zugang zu iOS-Schnittstellen zu erschweren und so Interoperabilität zu behindern."
+        "description": "GhostBSD 26.1 integriert FreeBSD 15.0p2, setzt auf XLibre und bietet verbesserte Hardware-Unterstützung sowie ZFS-Snapshots."
       },
       {
-        "title": "Google Maps: KI-Modell Gemini soll gegen Fake-Bewertungen helfen",
-        "link": "https://www.heise.de/news/Google-Maps-KI-Modell-Gemini-soll-gegen-Fake-Bewertungen-helfen-11266593.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 16:32:00 +0200",
+        "title": "Open Source ist nicht das Problem, sondern sein Missbrauch durch Konzerne",
+        "link": "https://www.heise.de/blog/Open-Source-ist-nicht-das-Problem-sondern-sein-Missbrauch-durch-Konzerne-11244125.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 09:30:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Google räumt bei Maps auf: Mit Gemini-KI und neuen Schutzmechanismen sollen Fake-Bewertungen und manipulierte Ortsnamen verhindert werden."
+        "description": "Konzerne kontrollieren Märkte strategisch mit Open-Source-Software . Die Community macht dabei mit und merkt nicht, dass das System kleine Anbieter verdrängt."
       },
       {
-        "title": "Darknet Diaries Deutsch: Gestohlene Beats Teil 1",
-        "link": "https://www.heise.de/news/Darknet-Diaries-Deutsch-Gestohlene-Beats-Teil-1-11225562.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 16:02:00 +0200",
+        "title": "heise+ | Little Snitch für Linux: Netzwerkverkehr überwachen und regeln",
+        "link": "https://www.heise.de/ratgeber/Little-Snitch-fuer-Linux-Netzwerkverkehr-ueberwachen-und-regeln-11253789.html?wt_mc=rss.red.ho.ho.rdf.beitrag_plus.beitrag_plus",
+        "pubDate": "Wed, 22 Apr 2026 09:00:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Wie weit würde ein Fan gehen, um einen ersten Einblick in die unveröffentlichten Songs seines Lieblingskünstlers zu bekommen?"
+        "description": "Welche Programme telefonieren nach Hause? Little Snitch für Linux beantwortet nicht nur die Frage, sondern unterbindet unerwünschte Kontakte mit einem Klick."
       },
       {
-        "title": "Zendure Solarflow 2400 Pro im Test: Speicher für BKW mit lokaler Ansteuerung",
-        "link": "https://www.heise.de/bestenlisten/testbericht/zendure-solarflow-2400-pro-im-test-speicher-fuer-bkw-mit-lokaler-ansteuerung/j46rq9m?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 16:00:00 +0200",
+        "title": "Softwarearchitektur leserfreundlich mit LLMs dokumentieren",
+        "link": "https://www.heise.de/hintergrund/Softwarearchitektur-leserfreundlich-mit-LLMs-dokumentieren-11266519.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 08:51:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Starker Balkonkraftwerk-Speicher mit bis zu 2400 W Ausgang, 16,8 kWh max., 3000 W Solar-Eingang und optionaler lokaler MQTT-Steuerung."
+        "description": "KI erleichtert Softwareentwicklern und -architekten die Dokumentation erheblich. Sie schreibt Geschichten, malt Grafiken und überarbeitet ihre Ergebnisse."
       },
       {
-        "title": "Neuer Apple-CEO, alte Probleme: Jetzt muss Ternus liefern | Mac & i-Podcast",
-        "link": "https://www.heise.de/news/Neuer-Apple-CEO-alte-Probleme-Jetzt-muss-Ternus-liefern-Mac-i-Podcast-11266557.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 15:59:00 +0200",
+        "title": "BMW forscht an optimierter Batteriezellfertigung durch KI",
+        "link": "https://www.heise.de/news/BMW-forscht-an-optimierter-Batteriezellfertigung-durch-KI-11266975.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 08:47:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Apples nächster CEO heißt John Ternus. Wir analysieren, welche massiven Herausforderungen auf den Ingenieur warten und welche Rolle Tim Cook spielt."
+        "description": "BMW arbeitet zusammen mit der Universität Zagreb daran, wie mittels Künstlicher Intelligenz die Batteriezellenproduktion optimiert werden kann."
       },
       {
-        "title": "Rennen gegen Rust: GNU Coreutils werden schneller",
-        "link": "https://www.heise.de/news/Rennen-gegen-Rust-GNU-Coreutils-werden-schneller-11265724.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 15:52:00 +0200",
+        "title": "Microsoft: Xbox Game Pass wird günstiger",
+        "link": "https://www.heise.de/news/Microsoft-Xbox-Game-Pass-wird-guenstiger-11266951.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 08:44:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Zuletzt verzeichnete die Rust-Implementierung der Coreutils einen spürbaren Performance-Zuwachs. Jetzt legen die GNU-Entwickler nach."
+        "description": "Der Xbox Game Pass ist zu teuer geworden, meint Xbox-Chefin Asha Sharma. Sie senkt die Abo-Preise – durch einen Kompromiss, der „Call of Duty“-Fans trifft."
       },
       {
-        "title": "Vertragsfehler: 75.000 Microsoft-Lizenzen in Hannover vorerst nutzlos",
-        "link": "https://www.heise.de/news/Vertragsfehler-75-000-Microsoft-Lizenzen-in-Hannover-vorerst-nutzlos-11266223.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 15:24:00 +0200",
+        "title": "Anschlag auf US-Uni: Strafrechtliche Ermittlungen wegen Beihilfe gegen ChatGPT",
+        "link": "https://www.heise.de/news/Anschlag-auf-US-Uni-Strafrechtliche-Ermittlungen-wegen-Beihilfe-gegen-ChatGPT-11266899.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 08:00:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Eine Datenschutzvereinbarung für Microsoft 365 an Schulen in Hannover fiel nicht streng genug aus. Kann die Stadt die Nutzung der Software noch ermöglichen?"
+        "description": "Vor einem Jahr hat ein Mann in Florida zwei Menschen getötet. Weil ChatGPT bei der Vorbereitung geholfen haben soll, wird jetzt gegen OpenAI ermittelt."
       },
       {
-        "title": "DMEA: Wie digitale Kommunikation Patienten stärken soll",
-        "link": "https://www.heise.de/news/DMEA-Wie-digitale-Kommunikation-Patienten-staerken-soll-11265744.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 15:10:00 +0200",
+        "title": "heise-Angebot: c’t Retro: Sonderheft über C64, Amiga und Atari ST",
+        "link": "https://www.heise.de/news/c-t-Retro-Sonderheft-ueber-C64-Amiga-und-Atari-ST-11265676.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 08:00:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Auf der DMEA wurde deutlich: Digitale Kommunikation im Gesundheitswesen soll Patienten von passiven Empfängern zu aktiven Partnern in der Behandlung machen."
+        "description": "In den Achtzigern begann die Ära der Heimcomputer, C64, Amiga und Atari ST kamen in viele Haushalte. Wir haben Wissen zum Entstauben und Restaurieren gesammelt."
       },
       {
-        "title": "AMDs neues AM5-Topmodell kostet 910 Euro",
-        "link": "https://www.heise.de/news/AMDs-neues-AM5-Topmodell-kostet-910-Euro-11266141.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 15:01:00 +0200",
+        "title": "heise+ | Mercedes CLA 350 EQ im Test: Lädt schneller, als du tankst",
+        "link": "https://www.heise.de/tests/Mercedes-CLA-350-EQ-im-Test-Laedt-schneller-als-du-tankst-11241353.html?wt_mc=rss.red.ho.ho.rdf.beitrag_plus.beitrag_plus",
+        "pubDate": "Wed, 22 Apr 2026 07:30:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Einen Tag vor der Markteinführung des Ryzen 9 9950X3D2 gibt AMD das letzte wichtige Detail preis: Der Prozessor erscheint für 910 Euro."
+        "description": "Der Mercedes-Benz CLA EQ erfüllt im Test die Versprechungen, die seine Eckdaten bei der Vorstellung machten. Er lädt sauschnell und braucht nur wenig Strom."
       },
       {
-        "title": "heise+ | Plattformen und Haftung: Das Prinzip Nichtverantwortung wankt",
-        "link": "https://www.heise.de/hintergrund/Plattformen-und-Haftung-Das-Prinzip-Nichtverantwortung-wankt-11208254.html?wt_mc=rss.red.ho.ho.rdf.beitrag_plus.beitrag_plus",
-        "pubDate": "Tue, 21 Apr 2026 15:00:00 +0200",
+        "title": "Studie: Klimawandel wirkt sich immer stärker auf die menschliche Gesundheit aus",
+        "link": "https://www.heise.de/news/Studie-Klimawandel-wirkt-sich-immer-staerker-auf-die-menschliche-Gesundheit-aus-11266895.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Soziale Medien prägen die Debatte und entziehen sich zugleich weitgehend der Haftung. Dieses Privileg war einst Motor für Innovation. Heute wird es zum Problem."
+        "description": "Ein internationales Wissenschaftsteam sieht stärkere Auswirkungen, die der Klimawandel vor allem durch größere Hitze auf die Gesundheit der Menschen hat."
       },
       {
-        "title": "DxO Nik Collection 9: KI-Masken und neue Effektfilter",
-        "link": "https://www.heise.de/news/DxO-Nik-Collection-9-KI-Masken-und-neue-Effektfilter-11258895.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 15:00:00 +0200",
+        "title": "Anthropics „gefährliche“ KI Mythos: Unbefugte mit Zugriff seit dem ersten Tag",
+        "link": "https://www.heise.de/news/Anthropics-gefaehrliche-KI-Mythos-Unbefugte-wohl-mit-Zugriff-seit-dem-ersten-Tag-11266891.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 06:54:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Die Effektsuite Nik Collection erhält Effekte für Farbverschiebung, Glas-Look und Lichthöfe sowie Werkzeuge für KI-generierte Tiefenmasken und Color Grading."
+        "description": "Anthropics leistungsfähigste KI soll so gefährlich sein, dass nur ausgewählte Firmen Zugriff haben. Unbekannte sollen das laut eines Berichts umgangen haben."
       },
       {
-        "title": "Amazon: Bisherige Kindle-App für PC wird eingestellt",
-        "link": "https://www.heise.de/news/Amazon-Kindle-App-fuer-PC-wandert-in-den-Microsoft-Store-11265530.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 14:56:00 +0200",
+        "title": "Mittwoch: Razzien wegen Glasfaser-Bestechung, Meta-Mitarbeiterüberwachung für KI",
+        "link": "https://www.heise.de/news/Mittwoch-Razzien-wegen-Glasfaser-Bestechung-Meta-Mitarbeiterueberwachung-fuer-KI-11266883.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 06:15:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Amazon will die bisherige Kindle-App für PC ab dem 30. Juni nicht mehr anbieten. Sie soll durch eine neue Version aus dem Microsoft Store ersetzt werden."
+        "description": "Bestechungsverdacht bei Telekom + KI lernt von Meta-Mitarbeitern + Framework mit Pro-Laptop + Deutschland in EU-Gesundheitspflicht + Bit-Rauschen zu MacBook Neo"
       },
       {
-        "title": "VW-Chef Blume will Produktionskapazität um weitere Million senken",
-        "link": "https://www.heise.de/news/VW-Chef-Blume-will-Produktionskapazitaet-um-weitere-Million-senken-11265764.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
-        "pubDate": "Tue, 21 Apr 2026 14:52:00 +0200",
+        "title": "Bit-Rauschen, der Prozessor-Podcast: Apples MacBook Neo überrollt die Konkurrenz",
+        "link": "https://www.heise.de/meinung/Bit-Rauschen-der-Prozessor-Podcast-Apples-MacBook-Neo-ueberrollt-die-Konkurrenz-11264288.html?wt_mc=rss.red.ho.ho.rdf.beitrag.beitrag",
+        "pubDate": "Wed, 22 Apr 2026 06:10:00 +0200",
         "source": "heise online News",
         "image": "",
-        "description": "Volkswagen-Konzernchef Oliver Blume will die Produktion angesichts des schwierigen Marktumfelds dauerhaft um eine auf neun Millionen Autos senken."
+        "description": "Apples 700-Euro-Notebook sticht alle aktuellen Windows-Konkurrenten aus. Wir besprechen, wie das gelingen konnte: Folge 2026/8 des Podcasts Bit-Rauschen."
       }
     ],
     "gaming": [],
     "finance": [
       {
-        "title": "Finanzen: Bis zu 30 Milliarden Euro Entlastung – Unionspolitiker formulieren Konzept für Steuerreform",
+        "title": "Finanzen: Soli fällt weg, Spitzensteuersatz greift später – Unionspolitiker legen Steuerkonzept vor",
         "link": "https://www.handelsblatt.com/politik/deutschland/finanzen-unionsabgeordnete-formulieren-konzept-fuer-grosse-steuerreform/100218548.html",
         "pubDate": "Wed, 22 Apr 2026 02:02:21 GMT",
         "source": "Handelsblatt Online Top-Themen",
         "image": "https://images.handelsblatt.com/3yGqKoLwIZzy/cover/900/506/0/0/256/161/0.5/0.5/archiv-13.11.2025-berlin-markus-soeder-l-r-csu-vorsitzender-und-ministerpraesident-von-bayern.jpg",
-        "description": "Spitzensteuersatz greift später, Soli fällt weg, Reichensteuer steigt: Finanzexperten von CDU und CSU legen erste Vorschläge für eine große Steuerreform vor – inklusive Gegenfin..."
-      },
-      {
-        "title": "Iran-Krieg: Trump will die Waffenruhe im Iran-Krieg verlängern",
-        "link": "https://www.handelsblatt.com/politik/international/iran-krieg-trump-will-die-waffenruhe-im-iran-krieg-verlaengern/100218879.html",
-        "pubDate": "Tue, 21 Apr 2026 21:01:24 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/SGW8NBlprRrz/cover/900/506/0/0/2/415/0.5/0.5/tankers-anchored-in-the-strait-of-hormuz-off-the-coast-of-qeshm-island-iran-saturday-april-18-20.jpg",
-        "description": "US-Präsident Donald Trump gibt Teheran mehr Zeit für Verhandlungen. Auf Bitten Pakistans verzichtet er vorerst auf Angriffe, hält aber an der Blockade der Straße von Hormus fest."
-      },
-      {
-        "title": "+++ Iran-Krieg +++: Militärs planen Einsatz zur Sicherung der Straße von Hormus",
-        "link": "https://www.handelsblatt.com/politik/international/iran-krieg-militaers-planen-einsatz-zur-sicherung-der-strasse-von-hormus/100136895.html",
-        "pubDate": "Tue, 21 Apr 2026 19:31:00 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/XGbQW-Zgf3rS/cover/900/506/0/0/208/208/0.5/0.5/luftaufnahem-von-der-strasse-von-hormus.jpg",
-        "description": "Verlängerte Waffenruhe stoppt Ölpreis-Anstieg kaum +++ US-Finanzminister: Blockade nimmt Iran wichtige Einnahmen+++ Trump – Waffenruhe mit Iran wird verlängert +++ Der Newsblog."
-      },
-      {
-        "title": "Telekommunikation: Deutsche Telekom prüft Fusion mit US-Tochter T-Mobile",
-        "link": "https://www.handelsblatt.com/technik/it-internet/telekommunikation-deutsche-telekom-prueft-fusion-mit-us-tochter-t-mobile/100218870.html",
-        "pubDate": "Tue, 21 Apr 2026 19:38:41 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/nZtC3OMK5UkA/cover/900/506/0/0/105/104/0.5/0.5/tim-hoettges-chief-executive-officer-of-deutsche-telekom-ag-at-the-hannover-messe-2026-trade-fair.jpg",
-        "description": "Der Konzern spielt offenbar die Gründung einer multinationalen Holding durch. Die politischen Hürden wären erheblich – in Berlin wie in Washington."
-      },
-      {
-        "title": "Kommunikationstechnik: Spektakulärer Milliardenauftrag für Rohde & Schwarz in den USA",
-        "link": "https://www.handelsblatt.com/unternehmen/industrie/kommunikationstechnik-milliardenauftrag-fuer-rohde-schwarz-in-den-usa/100218865.html",
-        "pubDate": "Tue, 21 Apr 2026 19:51:38 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/M21ZyyA7UUA8/cover/900/506/0/0/0/0/0.5/0.5/koerperscanner-von-rohde-schwarz.jpg",
-        "description": "Der deutsche Konzern soll Flughäfen ausrüsten. Das Auftragsvolumen ist höher als der Jahresumsatz des Unternehmens. Das Unternehmen plant dafür eine dreistellige Zahl von Neuein..."
-      },
-      {
-        "title": "Nikkei, Topix, CSI 300: Technologiewerte treiben Nikkei auf Rekordhoch",
-        "link": "https://www.handelsblatt.com/finanzen/maerkte/marktberichte/nikkei-topix-csi-300-technologiewerte-treiben-nikkei-auf-rekordhoch/100218932.html",
-        "pubDate": "Wed, 22 Apr 2026 03:19:48 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/XTG6w3WKpTJV/cover/900/506/0/0/209/208/0.5/0.5/a-man-passes-an-electronic-quotation-board-displaying-the-nikkei-225-stock-prices-on-the-tokyo-stock.jpg",
-        "description": "Der japanische Leitindex Nikkei gewinnt zwar. Aber die Unsicherheit über die Friedensgespräche zwischen den USA und Iran hält bei den Anlegern an."
-      },
-      {
-        "title": "Banken: Betrug rund um Konto und Zahlungskarte nimmt deutlich zu",
-        "link": "https://www.handelsblatt.com/finanzen/banken-versicherungen/banken/banken-betrug-rund-um-konto-und-zahlungskarte-nimmt-deutlich-zu/100218448.html",
-        "pubDate": "Tue, 21 Apr 2026 13:37:18 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/GVMqIMerJJjA/cover/900/506/0/0/209/208/0.5/0.5/hacker-using-computer-smartphone-and-coding-to-steal-password-and-private-data-remotely-from-car.-s.jpg",
-        "description": "Das Bundeskriminalamt registriert mehr Fälle von Zahlungsbetrug. Viele Taten werden aus dem Ausland begangen. Bei Verbraucherschützern gingen 2025 gut 50 Prozent mehr Beschwerde..."
-      },
-      {
-        "title": "Märkte-Insight: Der Chip-Boom wirbelt Anleihe- und Währungsmärkte durcheinander",
-        "link": "https://www.handelsblatt.com/finanzen/anlagestrategie/kolumnen/maerkte-der-chip-boom-wirbelt-anleihe-und-waehrungsmaerkte-durcheinander/100217752.html",
-        "pubDate": "Tue, 21 Apr 2026 15:54:48 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/X8CIyW03dNyf/cover/900/506/0/0/0/0/0.5/0.5/marktkolumne-jakob-blume-et-21.04.2026.png",
-        "description": "Der Preisanstieg bei Dram-Speicherchips verschiebt die Macht im Welthandel zugunsten der Industriestaaten Südostasiens. Das hat weitreichende Folgen für globale Portfolios, weiß..."
-      },
-      {
-        "title": "Geldanlage: Technologie: Die stille Kraft hinter der Rally an der US-Börse",
-        "link": "https://www.handelsblatt.com/finanzen/anlagestrategie/trends/geldanlage-die-stille-kraft-hinter-der-rally-an-der-us-boerse/100217875.html",
-        "pubDate": "Wed, 22 Apr 2026 02:02:16 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/6MFujD3yvgkK/cover/900/506/0/0/0/417/0.5/0.5/haendler-an-der-boerse-new-york.jpg",
-        "description": "Für die US-Konzerne boomt das Geschäft. Analysten erwarten für das erste Quartal ein deutliches Gewinnplus. Das treibt die Börse an, doch ein Risiko bleibt – auch abseits des Ir..."
+        "description": "Die Finanzexperten von CDU und CSU erhoffen sich durch die Steuerreform Entlastungen von bis zu 30 Milliarden Euro. Zur Gegenfinanzierung sollen unter anderem reiche Deutsche me..."
       },
       {
         "title": "Gastkommentar: Eine Steuerreform mit Entlastungen für alle ist möglich",
@@ -2070,28 +1696,100 @@ window.NEWS_DATA = {
         "description": "Eine große Steuerreform ohne Mehrbelastung gelingt, wenn der Staat zugleich Einsparpotenziale im Haushalt hebt, argumentieren die Finanzpolitiker der Union Yannick Bury und Flor..."
       },
       {
-        "title": "Europäische Union: Druschba-Pipeline repariert – Weg frei für Ukraine-Darlehen",
-        "link": "https://www.handelsblatt.com/politik/international/europaeische-union-druschba-pipeline-repariert-weg-frei-fuer-ukraine-darlehen/100218859.html",
-        "pubDate": "Tue, 21 Apr 2026 20:21:25 GMT",
+        "title": "Nahost: Trump verlängert Waffenruhe mit dem Iran",
+        "link": "https://www.handelsblatt.com/politik/international/nahost-trump-verlaengert-waffenruhe-mit-dem-iran/100218879.html",
+        "pubDate": "Wed, 22 Apr 2026 07:04:12 GMT",
         "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/lKe0SddkmYnN/cover/900/506/0/0/16/311/0.5/0.5/archiv-14.04.2026-berlin-wolodymyr-selenskyj-praesident-der-ukraine-spricht-bei-einer-pressekon.jpg",
-        "description": "Nach der Wahlniederlage Orbans kommt Bewegung in den monatelangen Streit um die Ukrainekredite. Selenskyj verkündet die Reparatur der Pipeline – und kann nun auf das Geld hoffen."
+        "image": "https://images.handelsblatt.com/24Zjmz4LaOpi/cover/900/506/0/0/0/209/0.5/0.5/us-president-donald-trump.jpg",
+        "description": "US-Präsident Donald Trump gibt Teheran mehr Zeit für Verhandlungen. Auf Bitten Pakistans verzichtet er vorerst auf Angriffe, hält aber an der Blockade der Straße von Hormus fest."
       },
       {
-        "title": "Iran-Krieg: Kleine Schnellboote gegen Kriegsschiffe: Iran kontrolliert die Straße von Hormus mit „Moskitoflotte“",
-        "link": "https://www.handelsblatt.com/politik/international/iran-krieg-iran-kontrolliert-die-strasse-von-hormus-mit-moskitoflotte/100218777.html",
-        "pubDate": "Tue, 21 Apr 2026 18:23:22 GMT",
+        "title": "+++ Iran-Krieg +++: Militärs aus 30 Ländern planen Einsatz zur Sicherung der Straße von Hormus",
+        "link": "https://www.handelsblatt.com/politik/international/iran-krieg-militaers-aus-30-laendern-planen-einsatz-in-strasse-von-hormus/100136895.html",
+        "pubDate": "Wed, 22 Apr 2026 01:31:00 GMT",
         "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/C20rZ9pQN1df/cover/900/506/0/0/118/90/0.5/0.5/21072019-iran-bandar-abbas-ein-schnellboot-der-iranischen-revolutionsgarden-steuert-auf-den-unt.jpg",
-        "description": "Der Iran setzt durch seine Blockade der Straße von Hormus die Weltwirtschaft unter Druck. Das gelingt ihm mit einer guerillaartigen Taktik der Revolutionsgarden."
+        "image": "https://images.handelsblatt.com/nyzqMMYsPH2w/cover/900/506/3/2/0/0/0.5/0.5/dpatopbilder-21.07.2019-iran-bandar-abbas-die-luftaufnahme-zeigt-ein-schnellboot-der-iranischen.jpg",
+        "description": "Briten melden Beschuss von Containerschiff vor Oman +++ Verlängerte Waffenruhe stoppt Ölpreis-Anstieg kaum +++ US-Finanzminister: Blockade nimmt Iran wichtige Einnahmen +++ Der ..."
       },
       {
-        "title": "US-Notenbank: Fed-Anhörung von Kevin Warsh: „Werden Sie die menschliche Marionette des Präsidenten sein?“ ",
-        "link": "https://www.handelsblatt.com/finanzen/geldpolitik/us-notenbank-werden-sie-die-menschliche-marionette-des-praesidenten-sein/100218863.html",
-        "pubDate": "Tue, 21 Apr 2026 20:09:42 GMT",
+        "title": "Telekommunikation: Deutsche Telekom prüft Fusion mit US-Tochter T-Mobile",
+        "link": "https://www.handelsblatt.com/technik/it-internet/telekommunikation-deutsche-telekom-prueft-fusion-mit-us-tochter-t-mobile/100218870.html",
+        "pubDate": "Tue, 21 Apr 2026 19:38:41 GMT",
         "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/srtIVaiucCLN/cover/900/506/0/0/0/209/0.5/0.5/kevin-warsh-chairman-of-the-us-federal-reserve-nominee-for-us-president-donald-trump-during-a-sena.jpg",
-        "description": "Kevin Warsh will die US-Notenbank umkrempeln, wenn er deren Chef wird. Nach seiner Anhörung im Senat wird deutlich: Er setzt sich deutlich von Fed-Chef Jerome Powell ab."
+        "image": "https://images.handelsblatt.com/nZtC3OMK5UkA/cover/900/506/0/0/105/104/0.5/0.5/tim-hoettges-chief-executive-officer-of-deutsche-telekom-ag-at-the-hannover-messe-2026-trade-fair.jpg",
+        "description": "Der Konzern spielt offenbar die Gründung einer multinationalen Holding durch. Die politischen Hürden wären erheblich – in Berlin wie in Washington."
+      },
+      {
+        "title": "Dax aktuell: „Krieg oder Frieden?“ Dax startet im Plus – trotz ambivalenter Signale zum Iran",
+        "link": "https://www.handelsblatt.com/finanzen/maerkte/marktberichte/dax-aktuell-dax-startet-im-plus-und-verteidigt-24.000-punkte-marke/100218962.html",
+        "pubDate": "Wed, 22 Apr 2026 07:26:55 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/bckzfpdOn42n/cover/900/506/0/1/0/0/0.5/0.5/graph-aktienkurs-aktienchart-dax-online-dax-bericht.jpg",
+        "description": "Von den vergangenen 20 Handelstagen beendete der Dax jeweils die Hälfte im Minus und die Hälfte im Plus. Trotzdem liegt der Index weiterhin oberhalb einer wichtigen Linie."
+      },
+      {
+        "title": "Banken: Betrug rund um Konto und Zahlungskarte nimmt deutlich zu",
+        "link": "https://www.handelsblatt.com/finanzen/banken-versicherungen/banken/banken-betrug-rund-um-konto-und-zahlungskarte-nimmt-deutlich-zu/100218448.html",
+        "pubDate": "Tue, 21 Apr 2026 13:37:18 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/GVMqIMerJJjA/cover/900/506/0/0/209/208/0.5/0.5/hacker-using-computer-smartphone-and-coding-to-steal-password-and-private-data-remotely-from-car.-s.jpg",
+        "description": "Das Bundeskriminalamt registriert mehr Fälle von Zahlungsbetrug. Viele Taten werden aus dem Ausland begangen. Bei Verbraucherschützern gingen 2025 gut 50 Prozent mehr Beschwerde..."
+      },
+      {
+        "title": "Invest: JP-Morgan-Stratege Tilmann Galler sieht „stagflationären Schock“ – bleibt aber trotzdem optimistisch",
+        "link": "https://www.handelsblatt.com/audio/handelsblatt-invest/invest-jp-morgan-stratege-tilmann-galler-sieht-stagflationaeren-schock-bleibt-aber-trotzdem-optimistisch/100218740.html",
+        "pubDate": "Wed, 22 Apr 2026 01:00:00 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/l3Hn5eBPy7b1/cover/900/506/0/0/0/0/0.5/0.5/tilmann-galler-jp-morgan-stratege.jpg",
+        "description": "Tilmann Galler von der Investmentsparte der US-Bank JP Morgan blickt trotz des Iran-Kriegs positiv auf die Weltwirtschaft. Im Podcast erklärt er, woran das liegt."
+      },
+      {
+        "title": "Geldanlage: Technologie: Die stille Kraft hinter der Rally an der US-Börse",
+        "link": "https://www.handelsblatt.com/finanzen/anlagestrategie/trends/geldanlage-die-stille-kraft-hinter-der-rally-an-der-us-boerse/100217875.html",
+        "pubDate": "Wed, 22 Apr 2026 02:02:16 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/6MFujD3yvgkK/cover/900/506/0/0/0/417/0.5/0.5/haendler-an-der-boerse-new-york.jpg",
+        "description": "Für die US-Konzerne boomt das Geschäft. Analysten erwarten für das erste Quartal ein deutliches Gewinnplus. Das treibt die Börse an, doch ein Risiko bleibt – auch abseits des Ir..."
+      },
+      {
+        "title": "Kommunikationstechnik: Spektakulärer Milliardenauftrag für Rohde & Schwarz in den USA",
+        "link": "https://www.handelsblatt.com/unternehmen/industrie/kommunikationstechnik-milliardenauftrag-fuer-rohde-schwarz-in-den-usa/100218865.html",
+        "pubDate": "Tue, 21 Apr 2026 19:51:38 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/M21ZyyA7UUA8/cover/900/506/0/0/0/0/0.5/0.5/koerperscanner-von-rohde-schwarz.jpg",
+        "description": "Der deutsche Konzern soll Flughäfen ausrüsten. Das Auftragsvolumen ist höher als der Jahresumsatz des Unternehmens. Das Unternehmen plant dafür eine dreistellige Zahl von Neuein..."
+      },
+      {
+        "title": "Gebäudeenergiegesetz: Habecks Heizungszwang könnte doch noch kommen – weil Schwarz-Rot zu lange streitet",
+        "link": "https://www.handelsblatt.com/politik/deutschland/gebaeudeenergiegesetz-habecks-heizungszwang-koennte-doch-noch-kommen/100216515.html",
+        "pubDate": "Tue, 21 Apr 2026 16:10:23 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/YxBBdQAxpZIe/cover/900/506/0/0/151/151/0.5/0.5/thermostat-einer-heizung.jpg",
+        "description": "Für die Reform des „Heizungsgesetzes“ fehlt noch immer ein Gesetzentwurf. Einigt sich die Koalition nicht rechtzeitig, tritt genau das in Kraft, was CDU und SPD eigentlich verhi..."
+      },
+      {
+        "title": "Kommentar: Merz spricht eine unbequeme Wahrheit aus – und die SPD beschleunigt reflexhaft den eigenen Niedergang",
+        "link": "https://www.handelsblatt.com/meinung/kommentare/kommentar-merz-zerstoert-die-rentenillusion-der-spd/100218814.html",
+        "pubDate": "Tue, 21 Apr 2026 16:08:48 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/fZDDStpmtF1t/cover/900/506/0/0/123/86/0.5/0.5/friedrich-merz-germanyaposs-chancellor-at-the-association-of-german-banks-annual-reception-in-be.jpg",
+        "description": "Der Kanzler warnt vor dem Kollaps des Rentensystems und löst bei seinem Koalitionspartner Empörung aus. Der Vorgang lässt ahnen, wie die Debatte enden dürfte."
+      },
+      {
+        "title": "Teuerung: Iran-Krieg treibt britische Inflationsrate im März auf 3,3 Prozent",
+        "link": "https://www.handelsblatt.com/politik/international/grossbritannien-iran-krieg-treibt-inflationsrate-im-maerz-auf-33-prozent/100218981.html",
+        "pubDate": "Wed, 22 Apr 2026 08:03:29 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/HY0pgTlN35k4/cover/900/506/0/0/156/157/0.5/0.5/fruechte-auf-einem-wochenmarkt-in-london.jpg",
+        "description": "Die Bank of England steht vor einem Stagflationsdilemma. Anleger erwarten nächste Woche eine Zinspause. Besonders ein Bereich sorgt für einen starken Auftrieb."
+      },
+      {
+        "title": "Seltene Erden: Kann Brasilien die Elemente liefern, die bisher nur China bietet?",
+        "link": "https://www.handelsblatt.com/finanzen/maerkte/devisen-rohstoffe/rohstoffe-kann-brasilien-die-elemente-liefern-die-bisher-nur-china-bietet/100218770.html",
+        "pubDate": "Wed, 22 Apr 2026 07:14:57 GMT",
+        "source": "Handelsblatt Online Top-Themen",
+        "image": "https://images.handelsblatt.com/AOeQsX-GISNT/cover/900/506/0/0/94/93/0.5/0.5/28.07.2025-brasilien-minacu-in-einer-von-serra-verde-mining-betriebenen-mine-in-minacu-im-brasili.jpg",
+        "description": "Brasilien verfügt über die zweitgrößten Vorkommen Seltener Erden weltweit. Kann Europa jetzt investieren und unabhängiger von China werden?"
       },
       {
         "title": "Zwischenwahlen 2026: Ginge es nur nach dem Geld, stünde der Sieger längst fest – doch Trump muss trotzdem bangen",
@@ -2110,28 +1808,20 @@ window.NEWS_DATA = {
         "description": "Boutiquen haben ihre Nische gefunden, und Branchengrößen nutzen die Weltlage für umfassende Programme: Mit Krisen und Kriegen verdienen Berater inzwischen gutes Geld."
       },
       {
-        "title": "Künstliche Intelligenz: „Seine Erfahrung hilft Leegle“: Start-up will mit Christian Lindners Hilfe Regulierung vereinfachen",
-        "link": "https://www.handelsblatt.com/unternehmen/start-ups/ki-start-up-will-mit-christian-lindners-hilfe-regulierung-vereinfachen/100218329.html",
-        "pubDate": "Wed, 22 Apr 2026 02:03:27 GMT",
+        "title": "Europäische Union: Druschba-Pipeline repariert – Weg frei für Ukraine-Darlehen",
+        "link": "https://www.handelsblatt.com/politik/international/europaeische-union-druschba-pipeline-repariert-weg-frei-fuer-ukraine-darlehen/100218859.html",
+        "pubDate": "Tue, 21 Apr 2026 20:21:25 GMT",
         "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/xo0IuWNbbbUY/cover/900/506/0/0/0/750/0.5/0.5/leegle.jpg",
-        "description": "Leegle gewinnt den Ex-FDP-Chef Lindner als Investor und Beirat. Die Firma will der weltweit größte Anbieter für Compliance-Lösungen werden. Sennheiser und Obi nutzen die Softwar..."
+        "image": "https://images.handelsblatt.com/lKe0SddkmYnN/cover/900/506/0/0/16/311/0.5/0.5/archiv-14.04.2026-berlin-wolodymyr-selenskyj-praesident-der-ukraine-spricht-bei-einer-pressekon.jpg",
+        "description": "Nach der Wahlniederlage Orbans kommt Bewegung in den monatelangen Streit um die Ukrainekredite. Selenskyj verkündet die Reparatur der Pipeline – und kann nun auf das Geld hoffen."
       },
       {
-        "title": "Gesundheitsreform: Warken plant höhere Belastung für Pflegeheimbewohner",
-        "link": "https://www.handelsblatt.com/politik/deutschland/gesundheitsreform-warken-plant-hoehere-belastung-fuer-pflegeheimbewohner/100218640.html",
-        "pubDate": "Tue, 21 Apr 2026 16:06:37 GMT",
+        "title": "Claude Mythos Preview: Unbefugte hatten wohl Zugang zu Anthropics Super-KI",
+        "link": "https://www.handelsblatt.com/technik/ki/claude-mythos-preview-unbefugte-hatten-wohl-zugang-zu-anthropics-super-ki/100218966.html",
+        "pubDate": "Wed, 22 Apr 2026 06:48:26 GMT",
         "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/DTxQ4PD8trUi/cover/900/506/0/0/0/311/0.5/0.5/pflege.jpeg",
-        "description": "Erste Pläne der Gesundheitsministerin zur Reform der Pflege sind bekannt geworden. Spürbar treffen dürften sie vor allem Menschen in Pflegeheimen. Sie werden künftig wohl mehr z..."
-      },
-      {
-        "title": "Gebäudeenergiegesetz: Habecks Heizungszwang könnte doch noch kommen – weil Schwarz-Rot zu lange streitet",
-        "link": "https://www.handelsblatt.com/politik/deutschland/gebaeudeenergiegesetz-habecks-heizungszwang-koennte-doch-noch-kommen/100216515.html",
-        "pubDate": "Tue, 21 Apr 2026 16:10:23 GMT",
-        "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/YxBBdQAxpZIe/cover/900/506/0/0/151/151/0.5/0.5/thermostat-einer-heizung.jpg",
-        "description": "Für die Reform des „Heizungsgesetzes“ fehlt noch immer ein Gesetzentwurf. Einigt sich die Koalition nicht rechtzeitig, tritt genau das in Kraft, was CDU und SPD eigentlich verhi..."
+        "image": "https://images.handelsblatt.com/FG3m8wW4d-eh/cover/900/506/0/0/417/0/0.5/0.5/this-photograph-shows-a-smartphone-displaying-the-logo-of-the-us-artificial-intelligence-safety-and.jpg",
+        "description": "Ein Bericht über die unbefugte Nutzung von Anthropics Sicherheitsmodell sorgt für Unruhe. Die KI ist ein mächtiges Werkzeug, aber auch ein potenzielles Risiko für Cyberangriffe."
       },
       {
         "title": "Geldanlage: Inflation im Blick – wie Sparer jetzt ihr Geld schützen",
@@ -2142,40 +1832,31 @@ window.NEWS_DATA = {
         "description": "Viele Anleger warten auf ruhigere Zeiten an den Märkten. Doch das Geld nun auf dem Girokonto liegen zu lassen, ist keine gute Lösung. Warum Tagesgeld aktuell besonders attraktiv..."
       },
       {
-        "title": "Steuerberater: Überraschende Wende: Beteiligungen von Finanzinvestoren an Steuerberaterkanzleien sollen verboten werden",
-        "link": "https://www.handelsblatt.com/unternehmen/dienstleister/steuerberater-finanzausschuss-will-finanzinvestoren-beteiligungen-verbieten/100218846.html",
-        "pubDate": "Tue, 21 Apr 2026 19:42:59 GMT",
+        "title": "Raumfahrt: Atmos Space Cargo erzielt außergewöhnlich hohe Bewertung",
+        "link": "https://www.handelsblatt.com/technik/forschung-innovation/raumfahrt-atmos-space-cargo-erzielt-aussergewoehnlich-hohe-bewertung/100217821.html",
+        "pubDate": "Wed, 22 Apr 2026 04:10:24 GMT",
         "source": "Handelsblatt Online Top-Themen",
-        "image": "https://images.handelsblatt.com/aM0PZr5n6pv2/cover/900/506/0/0/255/254/0.5/0.5/steuerberater-illustration-handelsblatt-montage.jpg",
-        "description": "Nach langem Ringen soll das bisher geltende Fremdbesitzverbot für Steuerberaterkanzleien nach Handelsblatt-Informationen nun doch verschärft werden. Private Equity soll außen vo..."
+        "image": "https://images.handelsblatt.com/YdYJorHpSEUv/cover/900/506/0/0/1/0/0.5/0.5/atmos-hitzeschild.png",
+        "description": "Erfolg für das deutsch-französische Raumfahrtunternehmen: Nach der ersten Finanzierungsrunde ist das Start-up rund 100 Millionen Euro wert. Atmos liefert etwas in Europa Einziga..."
       }
     ],
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": [],
-    "ai": []
+    "science": []
   },
   "fr": {
     "local": [
       {
-        "title": "EN DIRECT, guerre au Moyen-Orient : le Pakistan, qui fait office de médiateur entre Washington et Téhéran, salue l’extension du cessez-le-feu annoncée par Donald Trump",
-        "link": "https://www.lemonde.fr/international/live/2026/04/22/en-direct-guerre-au-moyen-orient-le-pakistan-qui-fait-office-de-mediateur-entre-washington-et-teheran-salue-l-extension-du-cessez-le-feu-annonce-par-donald-trump_6681958_3210.html",
-        "pubDate": "Wed, 22 Apr 2026 02:11:12 +0200",
+        "title": "Ni guerre ni paix : Donald Trump prolonge le cessez-le-feu en Iran de façon unilatérale",
+        "link": "https://www.lemonde.fr/international/article/2026/04/22/ni-guerre-ni-paix-donald-trump-prolonge-le-cessez-le-feu-en-iran-de-facon-unilaterale_6682336_3210.html",
+        "pubDate": "Wed, 22 Apr 2026 05:46:18 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
         "image": "https://img.lemde.fr/2026/04/21/205/0/3850/1925/644/322/60/0/172f620_ftp-1-9vzhz2vulbfu-2026-04-21t211841z-743894530-rc2xtkappcqh-rtrmadp-3-usa-trump.JPG",
-        "description": "S’exprimant sur sa plateforme, Truth Social, le président américain a écrit, mardi soir, avoir décidé de prolonger la trêve jusqu’à « ce que l’Iran présente une proposition visa..."
+        "description": "Le président américain n’a pas donné de nouveau délai, affirmant attendre que les différents courants du régime iranien, sécuritaire et politique, parviennent à une « propositio..."
       },
       {
-        "title": "Carburants : Sébastien Lecornu va aider les « grands rouleurs » aux revenus modestes, malgré des marges de manœuvre budgétaires réduites",
-        "link": "https://www.lemonde.fr/politique/article/2026/04/21/carburants-lecornu-va-aider-les-grands-rouleurs-aux-revenus-tres-modestes_6682044_823448.html",
-        "pubDate": "Tue, 21 Apr 2026 19:05:47 +0200",
-        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/05/770/0/6299/3149/644/322/60/0/896fedf_ftp-1-u6353xbensky-1161101b04c64eda9964c4f1abb179be-0-257b463ccf3c49cf80750448a48847ef.jpg",
-        "description": "Face aux prix élevés des carburants, Matignon élargit les aides déjà lancées, notamment aux « grands rouleurs » disposant de faibles revenus. Le coût du dispositif passe de 70 m..."
-      },
-      {
-        "title": "Aide de 90 milliards à l’Ukraine : les Européens croient à la levée imminente du veto hongrois",
+        "title": "Aide de 90 milliards d’euros à l’Ukraine : les Européens croient à la levée imminente du veto hongrois",
         "link": "https://www.lemonde.fr/international/article/2026/04/21/aide-de-90-milliards-a-l-ukraine-les-europeens-croient-a-la-levee-imminente-du-veto-hongrois_6682058_3210.html",
         "pubDate": "Tue, 21 Apr 2026 21:30:40 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
@@ -2183,60 +1864,44 @@ window.NEWS_DATA = {
         "description": "Volodymyr Zelensky a annoncé, mardi, que l’oléoduc Droujba, qui achemine du pétrole russe en Hongrie en passant par l’Ukraine et qui avait été endommagé par des frappes russes, ..."
       },
       {
-        "title": "Fuite de données à l’Agence nationale des titres sécurisés : « 11,7 millions de comptes seraient concernés », selon le ministère de l’intérieur",
-        "link": "https://www.lemonde.fr/pixels/article/2026/04/21/fuite-de-donnees-a-l-agence-nationale-des-titres-securises-pres-de-douze-millions-de-comptes-concernes_6682059_4408996.html",
-        "pubDate": "Tue, 21 Apr 2026 21:36:15 +0200",
+        "title": "Bruno Retailleau et sa « radicalité raisonnable » en question, après sa déclaration visant à mettre l’Espagne « au ban des nations européennes »",
+        "link": "https://www.lemonde.fr/politique/article/2026/04/22/la-radicalite-raisonnable-de-bruno-retailleau-a-l-epreuve-de-sa-declaration-contre-l-espagne-de-pedro-sanchez_6682298_823448.html",
+        "pubDate": "Wed, 22 Apr 2026 05:00:01 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/20/0/0/5886/2943/644/322/60/0/81317aa_ftp-1-fxqfidldoplq-5821183-01-06.jpg",
-        "description": "Lundi, le ministère avait fait savoir que les « données à caractère personnel » touchées étaient les nom et prénom, l’adresse électronique et la date de naissance d’usagers."
+        "image": "https://img.lemde.fr/2026/04/19/119/0/5826/2913/644/322/60/0/e86a902_ftp-1-k7v4qnaxpzal-5814428-01-06.jpg",
+        "description": "Lundi, le candidat à la présidentielle investi par Les Républicains a déclaré vouloir mettre « au ban des nations » le pays et son dirigeant socialiste pour avoir lancé un vaste..."
       },
       {
-        "title": "Des capteurs de Météo-France de l’aéroport de Roissy au cœur d’une suspicion de manipulation sur Polymarket",
-        "link": "https://www.lemonde.fr/pixels/article/2026/04/21/des-capteurs-de-meteo-france-de-l-aeroport-de-roissy-au-c-ur-d-une-suspicion-de-manipulation-sur-polymarket_6682047_4408996.html",
-        "pubDate": "Tue, 21 Apr 2026 19:51:43 +0200",
+        "title": "Les voitures électriques viennent titiller les hybrides dans la bataille des très longs trajets",
+        "link": "https://www.lemonde.fr/economie/article/2026/04/22/les-voitures-electriques-viennent-titiller-les-hybrides-dans-la-bataille-de-la-grande-autonomie_6682342_3234.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:15 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/1232/0/7360/3680/644/322/60/0/3881fff_upload-1-4o5fzqr04bny-000-par8212381.jpg",
-        "description": "Les 6 et 15 avril au soir, les températures enregistrées par une sonde positionnée à Paris - Charles-de-Gaulle se sont anormalement emballées. Phénomène météo ou anomalie ? De f..."
+        "image": "https://img.lemde.fr/2026/04/17/319/0/2433/1216/644/322/60/0/112f6f9_upload-1-we2ozccuwokq-flottes-ent-2026-ouv.jpg",
+        "description": "La demande de pouvoir rouler très longtemps sans avoir à recharger les batteries reste forte chez de nombreux acheteurs de modèles. L’industrie tente d’y répondre, avec des auto..."
       },
       {
-        "title": "Saint-Pierre-et-Miquelon, un exemple pionnier d’adaptation au changement climatique",
-        "link": "https://www.lemonde.fr/planete/visuel/2026/04/21/saint-pierre-et-miquelon-un-exemple-pionnier-d-adaptation-au-changement-climatique_6682045_3244.html",
-        "pubDate": "Tue, 21 Apr 2026 19:30:04 +0200",
+        "title": "La NASA dévoile son nouveau télescope spatial Roman, qui réalisera un « atlas de l’Univers »",
+        "link": "https://www.lemonde.fr/sciences/article/2026/04/22/la-nasa-devoile-son-nouveau-telescope-spatial-roman-qui-realisera-un-atlas-de-l-univers_6682355_1650684.html",
+        "pubDate": "Wed, 22 Apr 2026 08:11:15 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/02/27/375/0/1500/750/644/322/60/0/c6f313c_upload-1-1idakhdkocff-spm-mediaappel.png",
-        "description": "A l’automne, les premiers habitants de Miquelon pourraient s’installer dans leur nouveau village. Ce déménagement, premier cas de relocalisation anticipée d’une commune entière ..."
+        "image": "https://img.lemde.fr/2026/04/21/579/0/6945/3472/644/322/60/0/234ab84_ftp-1-crbi3hdpvefh-5831781-01-06.jpg",
+        "description": "Développé pendant plus d’une décennie pour un coût dépassant 4 milliards de dollars, il a été baptisé en l’honneur d’une des plus grandes astronomes américaines, Nancy Grace Roman."
       },
       {
-        "title": "Coupe de France : Lens s’envole en finale après sa victoire 4-1 contre Toulouse",
-        "link": "https://www.lemonde.fr/sport/article/2026/04/21/coupe-de-france-lens-s-envole-en-finale-apres-sa-victoire-4-1-contre-toulouse_6682063_3242.html",
-        "pubDate": "Tue, 21 Apr 2026 23:53:50 +0200",
+        "title": "Dans « Nous l’orchestre », Philippe Béziat filme la musique, cette magie collective, en train de se faire",
+        "link": "https://www.lemonde.fr/culture/article/2026/04/22/dans-nous-l-orchestre-philippe-beziat-filme-la-musique-cette-magie-collective-en-train-de-se-faire_6682362_3246.html",
+        "pubDate": "Wed, 22 Apr 2026 09:45:07 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/188/0/3571/1785/644/322/60/0/fae6eac_ftp-1-al2sb9ryipx5-2026-04-21t210421z-579644356-up1em4l1ic202-rtrmadp-3-soccer-france-rcl-tfc.JPG",
-        "description": "Les Sang et Or joueront leur quatrième finale, le 22 mai au Stade de France, espérant inscrire leur nom pour la première fois au palmarès. Ils affronteront le vainqueur de Stras..."
+        "image": "https://img.lemde.fr/2026/04/15/80/0/1920/960/644/322/60/0/953838b_upload-1-fjfi8sjlmh6r-orchestre-copie.jpg",
+        "description": "Le passionnant documentaire, saisi au plus près des musiciens, montre à la fois les batailles d’ego et la communion à laquelle ils aboutissent lorsqu’ils jouent ensemble."
       },
       {
-        "title": "Fed : Kevin Warsh, le candidat de Donald Trump, à l’épreuve du Sénat",
-        "link": "https://www.lemonde.fr/economie/article/2026/04/21/fed-kevin-warsh-le-candidat-de-donald-trump-a-l-epreuve-du-senat_6682049_3234.html",
-        "pubDate": "Tue, 21 Apr 2026 20:07:41 +0200",
+        "title": "Prix des carburants : pour aider les « grands rouleurs » aux revenus modestes, Sébastien Lecornu élargit les aides",
+        "link": "https://www.lemonde.fr/politique/article/2026/04/21/carburants-lecornu-va-aider-les-grands-rouleurs-aux-revenus-tres-modestes_6682044_823448.html",
+        "pubDate": "Tue, 21 Apr 2026 19:05:47 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/9/0/6000/3000/644/322/60/0/f0b3aa4_ftp-1-f9uoh7ni6eni-2026-04-21t162811z-1021754749-rc2stkarhfsx-rtrmadp-3-usa-fed-warsh.JPG",
-        "description": "Désigné par la Maison Blanche pour succéder à Jerome Powell à la tête de la banque centrale des Etats-Unis, Kevin Warsh a promis d’agir en toute indépendance s’il est confirmé p..."
-      },
-      {
-        "title": "OpenAI et ChatGPT visés par une enquête criminelle en Floride, en lien avec des tirs mortels",
-        "link": "https://www.lemonde.fr/international/article/2026/04/21/le-procureur-de-floride-ouvre-une-enquete-criminelle-sur-openai-et-chatgpt-en-lien-avec-des-tirs-mortels_6682051_3210.html",
-        "pubDate": "Tue, 21 Apr 2026 20:19:00 +0200",
-        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/0/0/3936/1968/644/322/60/0/411e7dd_upload-1-elxgvuenmjde-ap26022699784658.jpg",
-        "description": "Le robot conversationnel a en particulier formulé des suggestions quant à l’arme et aux munitions adaptées, ainsi qu’au moment et aux endroits propices pour toucher le plus de p..."
-      },
-      {
-        "title": "Etudiants étrangers : le ministre de l’enseignement supérieur tance les universités qui n’appliquent pas les frais d’inscriptions majorés",
-        "link": "https://www.lemonde.fr/campus/article/2026/04/21/etudiants-etrangers-le-ministre-de-l-enseignement-superieur-tance-les-universites-qui-n-appliquent-pas-les-frais-d-inscriptions-majores_6682061_4401467.html",
-        "pubDate": "Tue, 21 Apr 2026 22:17:16 +0200",
-        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/15/62/0/7094/3547/644/322/60/0/6a3dfd4_ftp-1-y620jnnvjr0i-5774288-01-06.jpg",
-        "description": "En présentant le plan Choose France For Higher Education pour renforcer l’attractivité de l’enseignement supérieur français, mardi, Philippe Baptiste a instauré comme une règle ..."
+        "image": "https://img.lemde.fr/2026/04/10/1740/0/3667/1833/644/322/60/0/268cae9_upload-1-onbkgyxcra4d-ad029-essenceprix-dsc07135.jpg",
+        "description": "Le coût du dispositif passe de 70 millions à 180 millions d’euros par mois, malgré des marges de manœuvre budgétaires réduites."
       },
       {
         "title": "Etats-Unis : la Virginie approuve par référendum un redécoupage électoral favorable aux démocrates",
@@ -2244,34 +1909,42 @@ window.NEWS_DATA = {
         "pubDate": "Wed, 22 Apr 2026 03:32:41 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
         "image": "https://img.lemde.fr/2026/04/21/0/0/4470/2235/644/322/60/0/e6a6730_ftp-1-yws3ybtvurik-5831404-01-06.jpg",
-        "description": "La victoire du « oui », par plus de 51 %, est un revers pour le président américain qui a fait campagne contre cette initiative démocrate visant à annuler les effets du « gerrym..."
+        "description": "La victoire du oui, par plus de 51 %, est un revers pour le président américain, qui a fait campagne contre cette initiative démocrate visant à annuler les effets du « gerrymand..."
       },
       {
-        "title": "Sarcelles : garde à vue levée pour les trois policiers soupçonnés de violences et viol",
-        "link": "https://www.lemonde.fr/societe/article/2026/04/22/sarcelles-garde-a-vue-levee-pour-les-trois-policiers-soupconnes-de-violences-et-viol_6682064_3224.html",
-        "pubDate": "Wed, 22 Apr 2026 00:43:02 +0200",
+        "title": "Le PS publie une ébauche de projet pour 2027 qui provoque déjà des divisions internes",
+        "link": "https://www.lemonde.fr/politique/article/2026/04/21/presidentielle-2027-le-parti-socialiste-publie-une-ebauche-programmatique-sur-fond-de-divisions-internes_6681968_823448.html",
+        "pubDate": "Tue, 21 Apr 2026 09:00:09 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2021/06/10/550/0/5568/2781/644/322/60/0/3f47258_820696607-000-9268fa.jpg",
-        "description": "Un homme arrêté pour détention de stupéfiants a affirmé avoir été frappé par les trois agents lors de sa garde à vue vendredi, et avoir été violé avec une matraque. L’enquête se..."
+        "image": "https://img.lemde.fr/2026/04/11/458/0/5500/2750/644/322/60/0/15ba884_upload-1-bvkpkemeuuvw-ad055-rencontres-montreuil-dsc07984.jpg",
+        "description": "Olivier Faure accélère la publication d’un projet présidentiel qui doit infuser lors de la campagne. Avec la liberté au cœur du projet, le Parti socialiste opère un virage idéol..."
       },
       {
-        "title": "Luis Puenzo, le réalisateur oscarisé de « L’Histoire officielle » et figure du cinéma argentin, est mort à l’âge de 80 ans",
-        "link": "https://www.lemonde.fr/cinema/article/2026/04/21/luis-puenzo-le-realisateur-oscarise-de-l-histoire-officielle-et-figure-du-cinema-argentin-est-mort-a-l-age-de-80-ans_6682060_3476.html",
-        "pubDate": "Tue, 21 Apr 2026 22:02:04 +0200",
+        "title": "Victor Wembanyama sort après un choc à la tête, les Spurs perdent leur deuxième match de playoffs NBA face aux Trail Blazers",
+        "link": "https://www.lemonde.fr/sport/article/2026/04/22/victor-wembanyama-sort-apres-un-choc-a-la-tete-les-spurs-s-inclinent-lors-de-leur-deuxieme-match-de-playoffs-nba-face-aux-trail-blazers_6682339_3242.html",
+        "pubDate": "Wed, 22 Apr 2026 05:52:46 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/293/0/3000/1500/644/322/60/0/4a3c4ed_upload-1-bxml0u4iybiz-ap870223025.jpg",
-        "description": "Le réalisateur et scénariste prolifique a été l’un des promoteurs de la loi sur le cinéma adoptée en 1994, qui a fortement stimulé le développement de l’industrie cinématographi..."
+        "image": "https://img.lemde.fr/2026/04/22/1295/0/7768/3884/644/322/60/0/c73585c_ftp-1-xc9iupmonkwa-2026-04-22t012234z-250062867-mt1usatoday28780491-rtrmadp-3-nba-portland-trail-blazers-at-san-antonio-spurs.JPG",
+        "description": "En s’imposant à San Antonio (106-103), Portland a égalisé à une manche partout au premier tour des playoffs. Le joueur français est sorti en première période après une lourde ch..."
       },
       {
-        "title": "Confrontés au profond déficit de la métropole Aix-Marseille-Provence, les maires alertent l’Etat et menacent de ne pas voter le budget",
-        "link": "https://www.lemonde.fr/politique/article/2026/04/22/confrontes-au-profond-deficit-de-la-metropole-aix-marseille-provence-les-maires-alertent-l-etat-et-menacent-de-ne-pas-voter-le-budget_6682098_823448.html",
-        "pubDate": "Wed, 22 Apr 2026 01:21:01 +0200",
+        "title": "Le duel entre Bally Bagayoko et Karim Bouamrane en Seine-Saint-Denis, révélateur de la guerre des gauches",
+        "link": "https://www.lemonde.fr/politique/article/2026/04/22/en-seine-saint-denis-la-guerre-des-gauches-s-est-jouee-dans-le-duel-entre-bally-bagayoko-et-karim-bouamrane-pour-la-presidence-de-l-intercommunalite_6682350_823448.html",
+        "pubDate": "Wed, 22 Apr 2026 06:31:03 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/478/0/6000/3000/644/322/60/0/f6a677b_upload-1-ubrdiwrqdwn4-000-a6xn4hh.jpg",
-        "description": "Les édiles de la métropole réclament une intervention de l’Etat pour aider à combler un trou de 123 millions d’euros, consécutif en partie, selon eux, à une baisse des dotations..."
+        "image": "https://img.lemde.fr/2026/04/16/1137/0/5118/2559/644/322/60/0/57d7420_upload-1-xhcrv2tbh1d1-kew2026008g0415-1009203.jpg",
+        "description": "Mardi 21 avril, le maire La France insoumise de Saint-Denis a été élu président de la structure intercommunale Plaine Commune (450 000 habitants) par 46 voix contre 32 pour l’éd..."
       },
       {
-        "title": "La patronne d’Engie dénonce les idées « mauvaises pour la France » du Rassemblement national en matière d’énergie",
+        "title": "Les effets du réchauffement climatique sur la santé en Europe de plus en plus marqués",
+        "link": "https://www.lemonde.fr/planete/article/2026/04/22/les-effets-du-rechauffement-climatique-sur-la-sante-en-europe-de-plus-en-plus-marques_6682346_3244.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:36 +0200",
+        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+        "image": "https://img.lemde.fr/2026/04/21/456/0/5472/2736/644/322/60/0/4448a1e_upload-1-e4xw55j3szo5-2025-08-15t115225z-750292314-rc2c6ga80ab9-rtrmadp-3-europe-weather-spain-heat.JPG",
+        "description": "La mortalité liée à la chaleur extrême augmente, ainsi que la menace des maladies vectorielles comme la dengue et le chikungunya, dans une région du monde particulièrement vulné..."
+      },
+      {
+        "title": "La patronne d’Engie dénonce les idées « mauvaises pour la France » du RN en matière d’énergie",
         "link": "https://www.lemonde.fr/politique/article/2026/04/22/la-patronne-d-engie-denonce-les-idees-mauvaises-pour-la-france-du-rassemblement-national-en-matiere-d-energie_6682065_823448.html",
         "pubDate": "Wed, 22 Apr 2026 01:03:34 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
@@ -2279,49 +1952,57 @@ window.NEWS_DATA = {
         "description": "Catherine MacGregor affirme avoir notamment défendu la transition énergétique auprès de Marine Le Pen, critiquant les mesures mises en avant par son parti au moment de la dissol..."
       },
       {
-        "title": "LFI huée lors d’une commémoration d’attentat antisémite : Jean-Luc Mélenchon dénonce une « opération montée d’avance » et veut des « explications »",
-        "link": "https://www.lemonde.fr/politique/article/2026/04/21/lfi-huee-lors-d-une-commemoration-d-attentat-antisemite-jean-luc-melenchon-veut-des-explications_6682054_823448.html",
-        "pubDate": "Tue, 21 Apr 2026 20:42:54 +0200",
+        "title": "« La brevetabilité des plantes pourrait diminuer la diversité génétique et appauvrir l’innovation »",
+        "link": "https://www.lemonde.fr/idees/article/2026/04/22/la-brevetabilite-des-plantes-pourrait-diminuer-la-diversite-genetique-et-appauvrir-l-innovation_6682347_3232.html",
+        "pubDate": "Wed, 22 Apr 2026 06:30:15 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/03/19/383/0/6433/3216/644/322/60/0/a56b322_ftp-1-6cr6zmxvapgp-5527043-01-06.jpg",
-        "description": "Des tensions inédites secouent la couverture médiatique d’une commémoration à Toulouse, alors que des accusations de manipulation et de rétention d’information visent France Tél..."
+        "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/0d46916_upload-1-slnbljri1xqm-frame-790.jpg",
+        "description": "Un collectif de généticiens, d’agronomes et de biologistes alerte, dans une tribune au « Monde », sur le risque d’une monopolisation accrue des semences par quelques multination..."
       },
       {
-        "title": "Angoulême : le groupe Morgane désigné pour organiser un nouveau festival de bande dessinée",
-        "link": "https://www.lemonde.fr/culture/article/2026/04/21/le-groupe-morgane-designe-pour-organiser-un-nouveau-festival-de-bande-dessinee-a-angouleme_6682052_3246.html",
-        "pubDate": "Tue, 21 Apr 2026 20:22:56 +0200",
+        "title": "En Corse, le dispositif de financement des vols hors saison suspendu après un recours du préfet",
+        "link": "https://www.lemonde.fr/societe/article/2026/04/22/en-corse-le-dispositif-de-financement-des-vols-hors-saison-suspendu-apres-un-recours-du-prefet_6682264_3224.html",
+        "pubDate": "Wed, 22 Apr 2026 04:36:14 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/883/0/3695/1847/644/322/60/0/7c34f1c_upload-1-nnaigqkdgx5t-celine-bagot-marie-parisot-2.jpg",
-        "description": "La tenue de la manifestation reste suspendue à l’issue de la procédure judiciaire lancée par la société 9ᵉ Art+, évincée de l’organisation après la crise qui a éclaté en 2025."
+        "image": "https://img.lemde.fr/2026/04/22/575/0/3447/1723/644/322/60/0/8245597_upload-1-udy2pcainslt-000-33dy86y.jpg",
+        "description": "L’Etat craint que le système mis en place pour doper les visites sur l’île hors saison touristique contrevienne au droit européen, alors qu’il aurait déjà attiré plus 15 000 vis..."
       },
       {
-        "title": "A Castres, un homme de 44 ans tué par balles lors d’une rixe familiale devant une clinique",
+        "title": "La pollution lumineuse a nettement diminué en France entre 2014 et 2022",
+        "link": "https://www.lemonde.fr/sciences/article/2026/04/22/la-pollution-lumineuse-a-nettement-diminue-en-france-entre-2014-et-2022_6682334_1650684.html",
+        "pubDate": "Wed, 22 Apr 2026 05:30:11 +0200",
+        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+        "image": "https://img.lemde.fr/2026/04/20/1248/0/7490/3745/644/322/60/0/fef1546_upload-1-x0zacrxtb02p-000-33uz8gz.jpg",
+        "description": "Si la luminosité a globalement augmenté dans le monde pendant cette période, une étude souligne l’efficacité des politiques de baisse de l’éclairage public."
+      },
+      {
+        "title": "En Turquie, l’indignation après deux fusillades en milieu scolaire",
+        "link": "https://www.lemonde.fr/international/article/2026/04/22/en-turquie-l-indignation-apres-deux-fusillades-en-milieu-scolaire_6682165_3210.html",
+        "pubDate": "Wed, 22 Apr 2026 03:00:09 +0200",
+        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+        "image": "https://img.lemde.fr/2026/04/14/94/0/2040/1020/644/322/60/0/ea60d88_ftp-1-xtr1sp09x9ob-2026-04-14t095205z-1048861190-rc2xokaazjd2-rtrmadp-3-turkey-violence-school.JPG",
+        "description": "Un jeune homme de 19 ans et un garçon de 13 ans ont tiré sur des élèves les 14 et 15 avril. Des enquêtes sont en cours, mais nombreux sont ceux qui estiment que le gouvernement ..."
+      },
+      {
+        "title": "A Castres, un homme de 44 ans tué par balle au cours d’une rixe familiale devant une clinique",
         "link": "https://www.lemonde.fr/societe/article/2026/04/22/a-castres-un-homme-de-44-ans-tue-par-balles-lors-d-une-rixe-familiale-devant-une-clinique_6682131_3224.html",
         "pubDate": "Wed, 22 Apr 2026 01:55:59 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
         "image": "https://img.lemde.fr/2026/04/21/59/0/2114/1057/644/322/60/0/f0dd7c4_ftp-1-l2cptzdccvw3-5830687-01-06.jpg",
-        "description": "Quatre personnes, âgées de 17 à 42 ans, ont été placées en garde à vue « dont un individu majeur identifié comme l’auteur des tirs », a précisé la procureure de la République."
+        "description": "Quatre personnes, âgées de 17 à 42 ans, ont été placées en garde à vue, « dont un individu majeur identifié comme l’auteur des tirs », a précisé la procureure de la République."
       }
     ],
     "top": [
       {
-        "title": "EN DIRECT, guerre au Moyen-Orient : le Pakistan, qui fait office de médiateur entre Washington et Téhéran, salue l’extension du cessez-le-feu annoncée par Donald Trump",
-        "link": "https://www.lemonde.fr/international/live/2026/04/22/en-direct-guerre-au-moyen-orient-le-pakistan-qui-fait-office-de-mediateur-entre-washington-et-teheran-salue-l-extension-du-cessez-le-feu-annonce-par-donald-trump_6681958_3210.html",
-        "pubDate": "Wed, 22 Apr 2026 02:11:12 +0200",
+        "title": "Ni guerre ni paix : Donald Trump prolonge le cessez-le-feu en Iran de façon unilatérale",
+        "link": "https://www.lemonde.fr/international/article/2026/04/22/ni-guerre-ni-paix-donald-trump-prolonge-le-cessez-le-feu-en-iran-de-facon-unilaterale_6682336_3210.html",
+        "pubDate": "Wed, 22 Apr 2026 05:46:18 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
         "image": "https://img.lemde.fr/2026/04/21/205/0/3850/1925/644/322/60/0/172f620_ftp-1-9vzhz2vulbfu-2026-04-21t211841z-743894530-rc2xtkappcqh-rtrmadp-3-usa-trump.JPG",
-        "description": "S’exprimant sur sa plateforme, Truth Social, le président américain a écrit, mardi soir, avoir décidé de prolonger la trêve jusqu’à « ce que l’Iran présente une proposition visa..."
+        "description": "Le président américain n’a pas donné de nouveau délai, affirmant attendre que les différents courants du régime iranien, sécuritaire et politique, parviennent à une « propositio..."
       },
       {
-        "title": "Carburants : Sébastien Lecornu va aider les « grands rouleurs » aux revenus modestes, malgré des marges de manœuvre budgétaires réduites",
-        "link": "https://www.lemonde.fr/politique/article/2026/04/21/carburants-lecornu-va-aider-les-grands-rouleurs-aux-revenus-tres-modestes_6682044_823448.html",
-        "pubDate": "Tue, 21 Apr 2026 19:05:47 +0200",
-        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/05/770/0/6299/3149/644/322/60/0/896fedf_ftp-1-u6353xbensky-1161101b04c64eda9964c4f1abb179be-0-257b463ccf3c49cf80750448a48847ef.jpg",
-        "description": "Face aux prix élevés des carburants, Matignon élargit les aides déjà lancées, notamment aux « grands rouleurs » disposant de faibles revenus. Le coût du dispositif passe de 70 m..."
-      },
-      {
-        "title": "Aide de 90 milliards à l’Ukraine : les Européens croient à la levée imminente du veto hongrois",
+        "title": "Aide de 90 milliards d’euros à l’Ukraine : les Européens croient à la levée imminente du veto hongrois",
         "link": "https://www.lemonde.fr/international/article/2026/04/21/aide-de-90-milliards-a-l-ukraine-les-europeens-croient-a-la-levee-imminente-du-veto-hongrois_6682058_3210.html",
         "pubDate": "Tue, 21 Apr 2026 21:30:40 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
@@ -2329,60 +2010,44 @@ window.NEWS_DATA = {
         "description": "Volodymyr Zelensky a annoncé, mardi, que l’oléoduc Droujba, qui achemine du pétrole russe en Hongrie en passant par l’Ukraine et qui avait été endommagé par des frappes russes, ..."
       },
       {
-        "title": "Fuite de données à l’Agence nationale des titres sécurisés : « 11,7 millions de comptes seraient concernés », selon le ministère de l’intérieur",
-        "link": "https://www.lemonde.fr/pixels/article/2026/04/21/fuite-de-donnees-a-l-agence-nationale-des-titres-securises-pres-de-douze-millions-de-comptes-concernes_6682059_4408996.html",
-        "pubDate": "Tue, 21 Apr 2026 21:36:15 +0200",
+        "title": "Bruno Retailleau et sa « radicalité raisonnable » en question, après sa déclaration visant à mettre l’Espagne « au ban des nations européennes »",
+        "link": "https://www.lemonde.fr/politique/article/2026/04/22/la-radicalite-raisonnable-de-bruno-retailleau-a-l-epreuve-de-sa-declaration-contre-l-espagne-de-pedro-sanchez_6682298_823448.html",
+        "pubDate": "Wed, 22 Apr 2026 05:00:01 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/20/0/0/5886/2943/644/322/60/0/81317aa_ftp-1-fxqfidldoplq-5821183-01-06.jpg",
-        "description": "Lundi, le ministère avait fait savoir que les « données à caractère personnel » touchées étaient les nom et prénom, l’adresse électronique et la date de naissance d’usagers."
+        "image": "https://img.lemde.fr/2026/04/19/119/0/5826/2913/644/322/60/0/e86a902_ftp-1-k7v4qnaxpzal-5814428-01-06.jpg",
+        "description": "Lundi, le candidat à la présidentielle investi par Les Républicains a déclaré vouloir mettre « au ban des nations » le pays et son dirigeant socialiste pour avoir lancé un vaste..."
       },
       {
-        "title": "Des capteurs de Météo-France de l’aéroport de Roissy au cœur d’une suspicion de manipulation sur Polymarket",
-        "link": "https://www.lemonde.fr/pixels/article/2026/04/21/des-capteurs-de-meteo-france-de-l-aeroport-de-roissy-au-c-ur-d-une-suspicion-de-manipulation-sur-polymarket_6682047_4408996.html",
-        "pubDate": "Tue, 21 Apr 2026 19:51:43 +0200",
+        "title": "Les voitures électriques viennent titiller les hybrides dans la bataille des très longs trajets",
+        "link": "https://www.lemonde.fr/economie/article/2026/04/22/les-voitures-electriques-viennent-titiller-les-hybrides-dans-la-bataille-de-la-grande-autonomie_6682342_3234.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:15 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/1232/0/7360/3680/644/322/60/0/3881fff_upload-1-4o5fzqr04bny-000-par8212381.jpg",
-        "description": "Les 6 et 15 avril au soir, les températures enregistrées par une sonde positionnée à Paris - Charles-de-Gaulle se sont anormalement emballées. Phénomène météo ou anomalie ? De f..."
+        "image": "https://img.lemde.fr/2026/04/17/319/0/2433/1216/644/322/60/0/112f6f9_upload-1-we2ozccuwokq-flottes-ent-2026-ouv.jpg",
+        "description": "La demande de pouvoir rouler très longtemps sans avoir à recharger les batteries reste forte chez de nombreux acheteurs de modèles. L’industrie tente d’y répondre, avec des auto..."
       },
       {
-        "title": "Saint-Pierre-et-Miquelon, un exemple pionnier d’adaptation au changement climatique",
-        "link": "https://www.lemonde.fr/planete/visuel/2026/04/21/saint-pierre-et-miquelon-un-exemple-pionnier-d-adaptation-au-changement-climatique_6682045_3244.html",
-        "pubDate": "Tue, 21 Apr 2026 19:30:04 +0200",
+        "title": "La NASA dévoile son nouveau télescope spatial Roman, qui réalisera un « atlas de l’Univers »",
+        "link": "https://www.lemonde.fr/sciences/article/2026/04/22/la-nasa-devoile-son-nouveau-telescope-spatial-roman-qui-realisera-un-atlas-de-l-univers_6682355_1650684.html",
+        "pubDate": "Wed, 22 Apr 2026 08:11:15 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/02/27/375/0/1500/750/644/322/60/0/c6f313c_upload-1-1idakhdkocff-spm-mediaappel.png",
-        "description": "A l’automne, les premiers habitants de Miquelon pourraient s’installer dans leur nouveau village. Ce déménagement, premier cas de relocalisation anticipée d’une commune entière ..."
+        "image": "https://img.lemde.fr/2026/04/21/579/0/6945/3472/644/322/60/0/234ab84_ftp-1-crbi3hdpvefh-5831781-01-06.jpg",
+        "description": "Développé pendant plus d’une décennie pour un coût dépassant 4 milliards de dollars, il a été baptisé en l’honneur d’une des plus grandes astronomes américaines, Nancy Grace Roman."
       },
       {
-        "title": "Coupe de France : Lens s’envole en finale après sa victoire 4-1 contre Toulouse",
-        "link": "https://www.lemonde.fr/sport/article/2026/04/21/coupe-de-france-lens-s-envole-en-finale-apres-sa-victoire-4-1-contre-toulouse_6682063_3242.html",
-        "pubDate": "Tue, 21 Apr 2026 23:53:50 +0200",
+        "title": "Dans « Nous l’orchestre », Philippe Béziat filme la musique, cette magie collective, en train de se faire",
+        "link": "https://www.lemonde.fr/culture/article/2026/04/22/dans-nous-l-orchestre-philippe-beziat-filme-la-musique-cette-magie-collective-en-train-de-se-faire_6682362_3246.html",
+        "pubDate": "Wed, 22 Apr 2026 09:45:07 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/188/0/3571/1785/644/322/60/0/fae6eac_ftp-1-al2sb9ryipx5-2026-04-21t210421z-579644356-up1em4l1ic202-rtrmadp-3-soccer-france-rcl-tfc.JPG",
-        "description": "Les Sang et Or joueront leur quatrième finale, le 22 mai au Stade de France, espérant inscrire leur nom pour la première fois au palmarès. Ils affronteront le vainqueur de Stras..."
+        "image": "https://img.lemde.fr/2026/04/15/80/0/1920/960/644/322/60/0/953838b_upload-1-fjfi8sjlmh6r-orchestre-copie.jpg",
+        "description": "Le passionnant documentaire, saisi au plus près des musiciens, montre à la fois les batailles d’ego et la communion à laquelle ils aboutissent lorsqu’ils jouent ensemble."
       },
       {
-        "title": "Fed : Kevin Warsh, le candidat de Donald Trump, à l’épreuve du Sénat",
-        "link": "https://www.lemonde.fr/economie/article/2026/04/21/fed-kevin-warsh-le-candidat-de-donald-trump-a-l-epreuve-du-senat_6682049_3234.html",
-        "pubDate": "Tue, 21 Apr 2026 20:07:41 +0200",
+        "title": "Prix des carburants : pour aider les « grands rouleurs » aux revenus modestes, Sébastien Lecornu élargit les aides",
+        "link": "https://www.lemonde.fr/politique/article/2026/04/21/carburants-lecornu-va-aider-les-grands-rouleurs-aux-revenus-tres-modestes_6682044_823448.html",
+        "pubDate": "Tue, 21 Apr 2026 19:05:47 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/9/0/6000/3000/644/322/60/0/f0b3aa4_ftp-1-f9uoh7ni6eni-2026-04-21t162811z-1021754749-rc2stkarhfsx-rtrmadp-3-usa-fed-warsh.JPG",
-        "description": "Désigné par la Maison Blanche pour succéder à Jerome Powell à la tête de la banque centrale des Etats-Unis, Kevin Warsh a promis d’agir en toute indépendance s’il est confirmé p..."
-      },
-      {
-        "title": "OpenAI et ChatGPT visés par une enquête criminelle en Floride, en lien avec des tirs mortels",
-        "link": "https://www.lemonde.fr/international/article/2026/04/21/le-procureur-de-floride-ouvre-une-enquete-criminelle-sur-openai-et-chatgpt-en-lien-avec-des-tirs-mortels_6682051_3210.html",
-        "pubDate": "Tue, 21 Apr 2026 20:19:00 +0200",
-        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/0/0/3936/1968/644/322/60/0/411e7dd_upload-1-elxgvuenmjde-ap26022699784658.jpg",
-        "description": "Le robot conversationnel a en particulier formulé des suggestions quant à l’arme et aux munitions adaptées, ainsi qu’au moment et aux endroits propices pour toucher le plus de p..."
-      },
-      {
-        "title": "Etudiants étrangers : le ministre de l’enseignement supérieur tance les universités qui n’appliquent pas les frais d’inscriptions majorés",
-        "link": "https://www.lemonde.fr/campus/article/2026/04/21/etudiants-etrangers-le-ministre-de-l-enseignement-superieur-tance-les-universites-qui-n-appliquent-pas-les-frais-d-inscriptions-majores_6682061_4401467.html",
-        "pubDate": "Tue, 21 Apr 2026 22:17:16 +0200",
-        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/15/62/0/7094/3547/644/322/60/0/6a3dfd4_ftp-1-y620jnnvjr0i-5774288-01-06.jpg",
-        "description": "En présentant le plan Choose France For Higher Education pour renforcer l’attractivité de l’enseignement supérieur français, mardi, Philippe Baptiste a instauré comme une règle ..."
+        "image": "https://img.lemde.fr/2026/04/10/1740/0/3667/1833/644/322/60/0/268cae9_upload-1-onbkgyxcra4d-ad029-essenceprix-dsc07135.jpg",
+        "description": "Le coût du dispositif passe de 70 millions à 180 millions d’euros par mois, malgré des marges de manœuvre budgétaires réduites."
       },
       {
         "title": "Etats-Unis : la Virginie approuve par référendum un redécoupage électoral favorable aux démocrates",
@@ -2390,34 +2055,42 @@ window.NEWS_DATA = {
         "pubDate": "Wed, 22 Apr 2026 03:32:41 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
         "image": "https://img.lemde.fr/2026/04/21/0/0/4470/2235/644/322/60/0/e6a6730_ftp-1-yws3ybtvurik-5831404-01-06.jpg",
-        "description": "La victoire du « oui », par plus de 51 %, est un revers pour le président américain qui a fait campagne contre cette initiative démocrate visant à annuler les effets du « gerrym..."
+        "description": "La victoire du oui, par plus de 51 %, est un revers pour le président américain, qui a fait campagne contre cette initiative démocrate visant à annuler les effets du « gerrymand..."
       },
       {
-        "title": "Sarcelles : garde à vue levée pour les trois policiers soupçonnés de violences et viol",
-        "link": "https://www.lemonde.fr/societe/article/2026/04/22/sarcelles-garde-a-vue-levee-pour-les-trois-policiers-soupconnes-de-violences-et-viol_6682064_3224.html",
-        "pubDate": "Wed, 22 Apr 2026 00:43:02 +0200",
+        "title": "Le PS publie une ébauche de projet pour 2027 qui provoque déjà des divisions internes",
+        "link": "https://www.lemonde.fr/politique/article/2026/04/21/presidentielle-2027-le-parti-socialiste-publie-une-ebauche-programmatique-sur-fond-de-divisions-internes_6681968_823448.html",
+        "pubDate": "Tue, 21 Apr 2026 09:00:09 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2021/06/10/550/0/5568/2781/644/322/60/0/3f47258_820696607-000-9268fa.jpg",
-        "description": "Un homme arrêté pour détention de stupéfiants a affirmé avoir été frappé par les trois agents lors de sa garde à vue vendredi, et avoir été violé avec une matraque. L’enquête se..."
+        "image": "https://img.lemde.fr/2026/04/11/458/0/5500/2750/644/322/60/0/15ba884_upload-1-bvkpkemeuuvw-ad055-rencontres-montreuil-dsc07984.jpg",
+        "description": "Olivier Faure accélère la publication d’un projet présidentiel qui doit infuser lors de la campagne. Avec la liberté au cœur du projet, le Parti socialiste opère un virage idéol..."
       },
       {
-        "title": "Luis Puenzo, le réalisateur oscarisé de « L’Histoire officielle » et figure du cinéma argentin, est mort à l’âge de 80 ans",
-        "link": "https://www.lemonde.fr/cinema/article/2026/04/21/luis-puenzo-le-realisateur-oscarise-de-l-histoire-officielle-et-figure-du-cinema-argentin-est-mort-a-l-age-de-80-ans_6682060_3476.html",
-        "pubDate": "Tue, 21 Apr 2026 22:02:04 +0200",
+        "title": "Victor Wembanyama sort après un choc à la tête, les Spurs perdent leur deuxième match de playoffs NBA face aux Trail Blazers",
+        "link": "https://www.lemonde.fr/sport/article/2026/04/22/victor-wembanyama-sort-apres-un-choc-a-la-tete-les-spurs-s-inclinent-lors-de-leur-deuxieme-match-de-playoffs-nba-face-aux-trail-blazers_6682339_3242.html",
+        "pubDate": "Wed, 22 Apr 2026 05:52:46 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/293/0/3000/1500/644/322/60/0/4a3c4ed_upload-1-bxml0u4iybiz-ap870223025.jpg",
-        "description": "Le réalisateur et scénariste prolifique a été l’un des promoteurs de la loi sur le cinéma adoptée en 1994, qui a fortement stimulé le développement de l’industrie cinématographi..."
+        "image": "https://img.lemde.fr/2026/04/22/1295/0/7768/3884/644/322/60/0/c73585c_ftp-1-xc9iupmonkwa-2026-04-22t012234z-250062867-mt1usatoday28780491-rtrmadp-3-nba-portland-trail-blazers-at-san-antonio-spurs.JPG",
+        "description": "En s’imposant à San Antonio (106-103), Portland a égalisé à une manche partout au premier tour des playoffs. Le joueur français est sorti en première période après une lourde ch..."
       },
       {
-        "title": "Confrontés au profond déficit de la métropole Aix-Marseille-Provence, les maires alertent l’Etat et menacent de ne pas voter le budget",
-        "link": "https://www.lemonde.fr/politique/article/2026/04/22/confrontes-au-profond-deficit-de-la-metropole-aix-marseille-provence-les-maires-alertent-l-etat-et-menacent-de-ne-pas-voter-le-budget_6682098_823448.html",
-        "pubDate": "Wed, 22 Apr 2026 01:21:01 +0200",
+        "title": "Le duel entre Bally Bagayoko et Karim Bouamrane en Seine-Saint-Denis, révélateur de la guerre des gauches",
+        "link": "https://www.lemonde.fr/politique/article/2026/04/22/en-seine-saint-denis-la-guerre-des-gauches-s-est-jouee-dans-le-duel-entre-bally-bagayoko-et-karim-bouamrane-pour-la-presidence-de-l-intercommunalite_6682350_823448.html",
+        "pubDate": "Wed, 22 Apr 2026 06:31:03 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/478/0/6000/3000/644/322/60/0/f6a677b_upload-1-ubrdiwrqdwn4-000-a6xn4hh.jpg",
-        "description": "Les édiles de la métropole réclament une intervention de l’Etat pour aider à combler un trou de 123 millions d’euros, consécutif en partie, selon eux, à une baisse des dotations..."
+        "image": "https://img.lemde.fr/2026/04/16/1137/0/5118/2559/644/322/60/0/57d7420_upload-1-xhcrv2tbh1d1-kew2026008g0415-1009203.jpg",
+        "description": "Mardi 21 avril, le maire La France insoumise de Saint-Denis a été élu président de la structure intercommunale Plaine Commune (450 000 habitants) par 46 voix contre 32 pour l’éd..."
       },
       {
-        "title": "La patronne d’Engie dénonce les idées « mauvaises pour la France » du Rassemblement national en matière d’énergie",
+        "title": "Les effets du réchauffement climatique sur la santé en Europe de plus en plus marqués",
+        "link": "https://www.lemonde.fr/planete/article/2026/04/22/les-effets-du-rechauffement-climatique-sur-la-sante-en-europe-de-plus-en-plus-marques_6682346_3244.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:36 +0200",
+        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+        "image": "https://img.lemde.fr/2026/04/21/456/0/5472/2736/644/322/60/0/4448a1e_upload-1-e4xw55j3szo5-2025-08-15t115225z-750292314-rc2c6ga80ab9-rtrmadp-3-europe-weather-spain-heat.JPG",
+        "description": "La mortalité liée à la chaleur extrême augmente, ainsi que la menace des maladies vectorielles comme la dengue et le chikungunya, dans une région du monde particulièrement vulné..."
+      },
+      {
+        "title": "La patronne d’Engie dénonce les idées « mauvaises pour la France » du RN en matière d’énergie",
         "link": "https://www.lemonde.fr/politique/article/2026/04/22/la-patronne-d-engie-denonce-les-idees-mauvaises-pour-la-france-du-rassemblement-national-en-matiere-d-energie_6682065_823448.html",
         "pubDate": "Wed, 22 Apr 2026 01:03:34 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
@@ -2425,193 +2098,72 @@ window.NEWS_DATA = {
         "description": "Catherine MacGregor affirme avoir notamment défendu la transition énergétique auprès de Marine Le Pen, critiquant les mesures mises en avant par son parti au moment de la dissol..."
       },
       {
-        "title": "LFI huée lors d’une commémoration d’attentat antisémite : Jean-Luc Mélenchon dénonce une « opération montée d’avance » et veut des « explications »",
-        "link": "https://www.lemonde.fr/politique/article/2026/04/21/lfi-huee-lors-d-une-commemoration-d-attentat-antisemite-jean-luc-melenchon-veut-des-explications_6682054_823448.html",
-        "pubDate": "Tue, 21 Apr 2026 20:42:54 +0200",
+        "title": "« La brevetabilité des plantes pourrait diminuer la diversité génétique et appauvrir l’innovation »",
+        "link": "https://www.lemonde.fr/idees/article/2026/04/22/la-brevetabilite-des-plantes-pourrait-diminuer-la-diversite-genetique-et-appauvrir-l-innovation_6682347_3232.html",
+        "pubDate": "Wed, 22 Apr 2026 06:30:15 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/03/19/383/0/6433/3216/644/322/60/0/a56b322_ftp-1-6cr6zmxvapgp-5527043-01-06.jpg",
-        "description": "Des tensions inédites secouent la couverture médiatique d’une commémoration à Toulouse, alors que des accusations de manipulation et de rétention d’information visent France Tél..."
+        "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/0d46916_upload-1-slnbljri1xqm-frame-790.jpg",
+        "description": "Un collectif de généticiens, d’agronomes et de biologistes alerte, dans une tribune au « Monde », sur le risque d’une monopolisation accrue des semences par quelques multination..."
       },
       {
-        "title": "Angoulême : le groupe Morgane désigné pour organiser un nouveau festival de bande dessinée",
-        "link": "https://www.lemonde.fr/culture/article/2026/04/21/le-groupe-morgane-designe-pour-organiser-un-nouveau-festival-de-bande-dessinee-a-angouleme_6682052_3246.html",
-        "pubDate": "Tue, 21 Apr 2026 20:22:56 +0200",
+        "title": "En Corse, le dispositif de financement des vols hors saison suspendu après un recours du préfet",
+        "link": "https://www.lemonde.fr/societe/article/2026/04/22/en-corse-le-dispositif-de-financement-des-vols-hors-saison-suspendu-apres-un-recours-du-prefet_6682264_3224.html",
+        "pubDate": "Wed, 22 Apr 2026 04:36:14 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
-        "image": "https://img.lemde.fr/2026/04/21/883/0/3695/1847/644/322/60/0/7c34f1c_upload-1-nnaigqkdgx5t-celine-bagot-marie-parisot-2.jpg",
-        "description": "La tenue de la manifestation reste suspendue à l’issue de la procédure judiciaire lancée par la société 9ᵉ Art+, évincée de l’organisation après la crise qui a éclaté en 2025."
+        "image": "https://img.lemde.fr/2026/04/22/575/0/3447/1723/644/322/60/0/8245597_upload-1-udy2pcainslt-000-33dy86y.jpg",
+        "description": "L’Etat craint que le système mis en place pour doper les visites sur l’île hors saison touristique contrevienne au droit européen, alors qu’il aurait déjà attiré plus 15 000 vis..."
       },
       {
-        "title": "A Castres, un homme de 44 ans tué par balles lors d’une rixe familiale devant une clinique",
+        "title": "La pollution lumineuse a nettement diminué en France entre 2014 et 2022",
+        "link": "https://www.lemonde.fr/sciences/article/2026/04/22/la-pollution-lumineuse-a-nettement-diminue-en-france-entre-2014-et-2022_6682334_1650684.html",
+        "pubDate": "Wed, 22 Apr 2026 05:30:11 +0200",
+        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+        "image": "https://img.lemde.fr/2026/04/20/1248/0/7490/3745/644/322/60/0/fef1546_upload-1-x0zacrxtb02p-000-33uz8gz.jpg",
+        "description": "Si la luminosité a globalement augmenté dans le monde pendant cette période, une étude souligne l’efficacité des politiques de baisse de l’éclairage public."
+      },
+      {
+        "title": "En Turquie, l’indignation après deux fusillades en milieu scolaire",
+        "link": "https://www.lemonde.fr/international/article/2026/04/22/en-turquie-l-indignation-apres-deux-fusillades-en-milieu-scolaire_6682165_3210.html",
+        "pubDate": "Wed, 22 Apr 2026 03:00:09 +0200",
+        "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
+        "image": "https://img.lemde.fr/2026/04/14/94/0/2040/1020/644/322/60/0/ea60d88_ftp-1-xtr1sp09x9ob-2026-04-14t095205z-1048861190-rc2xokaazjd2-rtrmadp-3-turkey-violence-school.JPG",
+        "description": "Un jeune homme de 19 ans et un garçon de 13 ans ont tiré sur des élèves les 14 et 15 avril. Des enquêtes sont en cours, mais nombreux sont ceux qui estiment que le gouvernement ..."
+      },
+      {
+        "title": "A Castres, un homme de 44 ans tué par balle au cours d’une rixe familiale devant une clinique",
         "link": "https://www.lemonde.fr/societe/article/2026/04/22/a-castres-un-homme-de-44-ans-tue-par-balles-lors-d-une-rixe-familiale-devant-une-clinique_6682131_3224.html",
         "pubDate": "Wed, 22 Apr 2026 01:55:59 +0200",
         "source": "Le Monde.fr - Actualités et Infos en France et dans le monde",
         "image": "https://img.lemde.fr/2026/04/21/59/0/2114/1057/644/322/60/0/f0dd7c4_ftp-1-l2cptzdccvw3-5830687-01-06.jpg",
-        "description": "Quatre personnes, âgées de 17 à 42 ans, ont été placées en garde à vue « dont un individu majeur identifié comme l’auteur des tirs », a précisé la procureure de la République."
+        "description": "Quatre personnes, âgées de 17 à 42 ans, ont été placées en garde à vue, « dont un individu majeur identifié comme l’auteur des tirs », a précisé la procureure de la République."
       }
     ],
-    "technology": [
-      {
-        "title": "Découverte majeure sur Mars, la NASA confirme la présence de 20 molécules organiques dans de vieilles roches",
-        "link": "https://www.clubic.com/actualite-610036-decouverte-majeure-sur-mars-la-nasa-confirme-la-presence-de-20-molecules-organiques-dans-de-vieilles-roches.html",
-        "pubDate": "Tue, 21 Apr 2026 20:02:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404480/raw",
-        "description": "Le rover Curiosity de la NASA a détecté plus de 20 molécules organiques dans des roches martiennes vieilles de 3,5 milliards d'années, grâce à une expérience de thermochemolyse ..."
-      },
-      {
-        "title": "Framework annonce son Laptop 13 Pro : autonomie enfin au point, Panther Lake... et un prix qui pousse à embrasser Linux",
-        "link": "https://www.clubic.com/actualite-610033-framework-annonce-son-laptop-13-pro-autonomie-enfin-au-point-puce-panther-lake-mais-un-prix-qui-pousse-a-embrasser-linux.html",
-        "pubDate": "Tue, 21 Apr 2026 18:32:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404426/raw",
-        "description": "La start-up californienne Framework enrichit une nouvelle fois son catalogue avec un tout nouveau modèle de PC portable : le Laptop 13 Pro. Conçu pour prendre petit à petit le r..."
-      },
-      {
-        "title": "Microsoft baisse les prix de son Game Pass... et fait sortir Call of Duty",
-        "link": "https://www.clubic.com/actualite-610066-microsoft-baisse-les-prix-de-son-game-pass-et-fait-sortir-call-of-duty.html",
-        "pubDate": "Tue, 21 Apr 2026 17:26:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2167918/raw",
-        "description": "Le temps des rumeurs et des petites phrases est passé. Microsoft annonce du changement sur son fameux Game Pass et ce n’est pas forcément pour nous déplaire."
-      },
-      {
-        "title": "Fire TV Stick : Amazon accusé d’avoir rendu ses anciens modèles inutilisables",
-        "link": "https://www.clubic.com/actualite-610060-fire-tv-stick-amazon-accuse-d-avoir-rendu-ses-anciens-modeles-inutilisables.html",
-        "pubDate": "Tue, 21 Apr 2026 16:59:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404447/raw",
-        "description": "Amazon se retrouve au cœur d’une action collective aux États-Unis, accusé d’avoir rendu progressivement inutilisables ses anciens Fire TV Stick. En cause : l’arrêt du support lo..."
-      },
-      {
-        "title": "Ce malware Android retourne votre reconnaissance faciale contre vous pour vider vos comptes bancaires",
-        "link": "https://www.clubic.com/actualite-610015-ce-malware-android-retourne-votre-reconnaissance-faciale-contre-vous-pour-vider-vos-comptes-bancaires.html",
-        "pubDate": "Tue, 21 Apr 2026 16:43:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404444/raw",
-        "description": "Un malware Android capable de contourner la reconnaissance faciale et les codes SMS pour vider des comptes bancaires dans 21 pays. Des experts sont remontés jusqu'aux centres d'..."
-      },
-      {
-        "title": "Des chercheurs inventent une maladie imaginaire pour piéger l'IA, quelques temps plus tard elle est citée... par des chercheurs humains",
-        "link": "https://www.clubic.com/actualite-610030-des-chercheurs-inventent-une-maladie-imaginaire-pour-pieger-l-ia-quelques-mois-plus-tard-elle-est-citee-par-des-chercheurs-humains.html",
-        "pubDate": "Tue, 21 Apr 2026 16:29:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2280153/raw",
-        "description": "Des scientifiques ont voulu piéger l'intelligence artificielle en inventant une maladie, pour voir ce que l'IA ferait de son savoir. Mais l'expérience a donné des résultats qui ..."
-      },
-      {
-        "title": "CyberGhost dégaine une offre VPN à un prix jamais vu 💥",
-        "link": "https://www.clubic.com/bons-plans-610054-cyberghost-frappe-fort-sur-la-concurrence-avec-une-offre-a-un-prix-jamais-vu.html",
-        "pubDate": "Tue, 21 Apr 2026 16:16:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2308677/raw",
-        "description": "Avec l’explosion du streaming et la multiplication des connexions sur Wi-Fi publics, sécuriser sa navigation tout en gardant un accès fluide à ses contenus devient essentiel. Bo..."
-      },
-      {
-        "title": "C'est catastrophique : la NASA n'aura pas de combinaisons prêtes pour remarcher sur la Lune en 2028",
-        "link": "https://www.clubic.com/actualite-609997-c-est-catastrophique-la-nasa-n-aura-pas-de-combinaisons-pretes-pour-remarcher-sur-la-lune-en-2028.html",
-        "pubDate": "Tue, 21 Apr 2026 16:14:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404315/raw",
-        "description": "C'est la douche froide pour la NASA. Selon un rapport de l'Office of Inspector General (OIG), le service d'audit indépendant de l'agence, les nouvelles combinaisons spatiales de..."
-      },
-      {
-        "title": "Objection : la start-up de Peter Thiel qui veut remplacer les juges par une intelligence artificielle",
-        "link": "https://www.clubic.com/actualite-610021-objection-la-start-up-de-peter-thiel-qui-veut-remplacer-les-juges-par-une-intelligence-artificielle.html",
-        "pubDate": "Tue, 21 Apr 2026 15:57:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404363/raw",
-        "description": "Peter Thiel fait encore parler de lui. L'investisseur de la tech soutient une entreprise IA qui aura pour ambition de passer au crible le travail des journalistes !"
-      },
-      {
-        "title": "Fini l'élitisme des « K » ? Intel promet d'étendre l'overcklocking à beaucoup plus de processeurs",
-        "link": "https://www.clubic.com/actualite-609988-fini-l-elitisme-intel-promet-d-etendre-l-overcklocking-a-beaucoup-plus-de-processeurs.html",
-        "pubDate": "Tue, 21 Apr 2026 15:45:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2393521/raw",
-        "description": "Dans un entretien, Robert Hallock, VP d'Intel, a indiqué qu'un des objectifs de l'entreprise serait d'étendre, avec le temps, l'overclocking à un nombre nettement plus conséquen..."
-      },
-      {
-        "title": "Lisser la peau, blanchir les dents... Google Photos enrichit son éditeur avec des retouches intelligentes",
-        "link": "https://www.clubic.com/actualite-609919-lisser-la-peau-blanchir-les-dents-google-photos-enrichit-son-editeur-avec-des-retouches-intelligentes.html",
-        "pubDate": "Tue, 21 Apr 2026 15:31:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2403184/raw",
-        "description": "Google lance une nouvelle fonction de retouche, directement intégrée à son application Google Photos, afin de permettre à tous les utilisateurs d'optimiser facilement et rapidem..."
-      },
-      {
-        "title": "Votre compte Google est-il suffisamment sécurisé ? 5 paramètres à vérifier d’urgence",
-        "link": "https://www.clubic.com/actualite-609907-votre-compte-google-est-il-suffisamment-securise-5-parametres-a-verifier-d-urgence.html",
-        "pubDate": "Tue, 21 Apr 2026 15:15:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2380276/raw",
-        "description": "Les comptes Google sont des cibles privilégiées pour les pirates. Pour éviter toute mauvaise surprise, bien configurer vos paramètres est primordial."
-      },
-      {
-        "title": "La vérification de l'âge arrive aussi chez PlayStation pour accéder à certains fonctions",
-        "link": "https://www.clubic.com/actualite-609901-la-verification-de-l-age-arrive-aussi-chez-playstation-pour-acceder-a-certains-fonctions.html",
-        "pubDate": "Tue, 21 Apr 2026 15:01:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2276886/raw",
-        "description": "Les dérives en ligne ne sont plus un secret pour personne. Entre harcèlement, propos toxiques et risques bien réels pour les plus jeunes, parfois exposés à des individus malveil..."
-      },
-      {
-        "title": "Ventes Flash Amazon : 10 réductions tech à surveiller de près aujourd’hui",
-        "link": "https://www.clubic.com/bons-plans-609841-amazon-frappe-fort-avec-10-bons-plans-high-tech-incontournables-ce-lundi.html",
-        "pubDate": "Tue, 21 Apr 2026 14:58:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2399497/raw",
-        "description": "Smartphones, accessoires et équipements connectés profitent actuellement de remises sur Amazon. Voici 10 offres qui se distinguent dans cette vague de promotions."
-      },
-      {
-        "title": "Fibre optique : le gouvernement étend son aide aux travaux de raccordement à toute la France",
-        "link": "https://www.clubic.com/actualite-610024-fibre-optique-le-gouvernement-etend-son-aide-aux-travaux-de-raccordement-a-toute-la-france.html",
-        "pubDate": "Tue, 21 Apr 2026 14:42:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2379769/raw",
-        "description": "Bonne nouvelle pour ceux qui peinent encore à se raccorder à la fibre. Le gouvernement a annoncé mardi étendre à tout le territoire son aide aux travaux, ouverte aux particulier..."
-      },
-      {
-        "title": "Oppo Find X9 Ultra : le smartphone de tous les superlatifs est enfin disponible en France",
-        "link": "https://www.clubic.com/actualite-609904-oppo-find-x9-ultra-le-smartphone-de-tous-les-superlatifs-est-enfin-disponible-en-france.html",
-        "pubDate": "Tue, 21 Apr 2026 14:32:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404375/raw",
-        "description": "C'est le grand jour pour Oppo, le constructeur annonce son smartphone le plus haut de gamme en France. Avec des capacités photo impressionnantes, ce smartphone très haut de gamm..."
-      },
-      {
-        "title": "Avec un peu d'IA, Microsoft Teams va pouvoir résumer ces longues visioconférences",
-        "link": "https://www.clubic.com/actualite-609982-avec-un-peu-d-ia-microsoft-teams-va-pouvoir-resumer-ces-longues-visioconferences.html",
-        "pubDate": "Tue, 21 Apr 2026 14:17:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404294/raw",
-        "description": "Regarder le replay d’une réunion d’une heure pour retrouver trois minutes utiles n’a jamais fait rêver grand monde. Microsoft l’a bien compris et commence à déployer dans Teams ..."
-      },
-      {
-        "title": "IA : après OpenAI, Amazon va aussi investir plusieurs dizaines de milliards de dollars dans Anthropic",
-        "link": "https://www.clubic.com/actualite-610000-ia-apres-openai-amazon-va-aussi-investir-plusieurs-dizaines-de-milliards-de-dollars-dans-anthropic.html",
-        "pubDate": "Tue, 21 Apr 2026 13:55:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2388043/raw",
-        "description": "Le concurrent d'OpenAI, Anthropic (Claude), continue son ascension. Et pour cela, il va en plus bénéficier d'un gros coup de pouce d'Amazon !"
-      },
-      {
-        "title": "Apple TV débarque sur Amazon Prime Video...mais à une condition",
-        "link": "https://www.clubic.com/actualite-610006-apple-tv-debarque-sur-amazon-prime-video-mais-a-une-condition.html",
-        "pubDate": "Tue, 21 Apr 2026 13:36:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2342464/raw",
-        "description": "C’est le mariage que les fans de streaming n'attendaient plus : Apple TV+ intègre enfin les \"Channels\" d'Amazon Prime Video. Plus besoin de jongler entre les apps pour retrouver..."
-      },
-      {
-        "title": "Un pop-up Star Wars de 300 m² ouvre à Paris avec sabre laser, LEGO et café thématique pour fêter le 4 mai",
-        "link": "https://www.clubic.com/actualite-609994-un-pop-up-star-wars-de-300-m-ouvre-a-paris-avec-sabre-laser-lego-et-cafe-thematique-pour-feter-le-4-mai.html",
-        "pubDate": "Tue, 21 Apr 2026 13:16:00 GMT",
-        "source": "Clubic",
-        "image": "https://pic.clubic.com/v1/images/2404345/raw",
-        "description": "Disney et King Jouet vont inaugurer, le 30 avril à Paris, un pop-up Star Wars inédit. Ce sera le point de départ d'un mois de mai particulièrement chargé en contenus pour les fa..."
-      }
-    ],
+    "technology": [],
     "gaming": [
+      {
+        "title": " Le Royaume-Uni devrait s’inspirer de ce qu’a fait la France avec Clair Obscur, selon ce ministre britannique",
+        "link": "https://www.jeuxvideo.com/news/2076451/le-royaume-uni-devrait-s-inspirer-de-ce-qu-a-fait-la-france-avec-clair-obscur-selon-ce-ministre-britannique.htm",
+        "pubDate": "Wed, 22 Apr 2026 07:20:09 +0200",
+        "source": "JeuxVideo.com",
+        "image": "https://image.jeuxvideo.com/medias-lg/177669/1776685640-5527-card.jpg",
+        "description": "Cocorico : et si le Royaume-Uni agissait plus comme la France ? C'est en tout cas le souhait d'un responsable politique outre-manche."
+      },
+      {
+        "title": "Pour pouvoir se moquer de Marvel et DC, The Boys (Amazon) doit respecter une règle bien précise",
+        "link": "https://www.jeuxvideo.com/news/2076639/pour-pouvoir-se-moquer-de-marvel-et-dc-the-boys-amazon-doit-respecter-une-regle-bien-precise.htm",
+        "pubDate": "Wed, 22 Apr 2026 06:14:09 +0200",
+        "source": "JeuxVideo.com",
+        "image": "https://image.jeuxvideo.com/medias-lg/177676/1776756145-7464-card.jpg",
+        "description": "The Boys s'amuse régulièrement à parodier les blockbusters de super-héros comme Marvel et DC Comics. Cependant, pour maintenir la cohérence de sa parodie, la production s'est im..."
+      },
+      {
+        "title": "La fusion du hack et de l’action dans Pragmata fonctionne-t-elle vraiment ? Voici notre avis dans ce vidéo test !",
+        "link": "https://www.jeuxvideo.com/videos/2076271/la-fusion-du-hack-et-de-l-action-dans-pragmata-fonctionne-t-elle-vraiment-voici-notre-avis-dans-ce-video-test.htm",
+        "pubDate": "Wed, 22 Apr 2026 05:50:10 +0200",
+        "source": "JeuxVideo.com",
+        "image": "https://image.jeuxvideo.com/medias-lg/177644/1776438477-2885-card.jpg",
+        "description": "Avec Pragmata, Capcom tente un pari risqué : imposer une nouvelle licence ambitieuse. Entre hacking, action nerveuse et duo marquant, le jeu intrigue autant qu’il surprend. Mais..."
+      },
       {
         "title": "Ruines de la Colline frétillante Desert : comment résoudre l’énigme du bassin ? ",
         "link": "https://www.jeuxvideo.com/news/2076725/ruines-de-la-colline-fretillante-desert-comment-resoudre-l-enigme-du-bassin.htm",
@@ -2747,33 +2299,65 @@ window.NEWS_DATA = {
         "source": "JeuxVideo.com",
         "image": "https://image.jeuxvideo.com/medias-lg/177668/1776675598-3920-card.jpg",
         "description": "Alors que la série One Piece sur Netflix vient d'achever sa seconde saison, la série ne semble pas prête de s'arrêter vu son succès. Si de nombreuses parties sont encore prévenu..."
-      },
-      {
-        "title": "“C’est quoi ce b… ?” Après 200 heures de jeu, ces joueurs de Crimson Desert comprennent qu’ils ont oublié une étape cruciale de ces défis",
-        "link": "https://www.jeuxvideo.com/news/2076244/c-est-quoi-ce-b-apres-200-heures-de-jeu-ces-joueurs-de-crimson-desert-comprennent-qu-ils-ont-oublie-une-etape-cruciale-de-ces-defis.htm",
-        "pubDate": "Tue, 21 Apr 2026 09:41:09 +0200",
-        "source": "JeuxVideo.com",
-        "image": "https://image.jeuxvideo.com/medias-lg/177644/1776436654-426-card.jpg",
-        "description": "Ces derniers jours, les joueurs de Crimson Desert ont fait une découverte sidérante à propos de l’une des activités les plus importantes du jeu. On le sait, le jeu de Pearl Abys..."
-      },
-      {
-        "title": "En attendant Metro 2039, le précédent FPS post apo de 4A Games est à moins de 5€, mais il faut faire vite",
-        "link": "https://www.jeuxvideo.com/news/2076540/en-attendant-metro-2039-le-precedent-fps-post-apo-de-4a-games-est-a-moins-de-5-mais-il-faut-faire-vite.htm",
-        "pubDate": "Tue, 21 Apr 2026 08:22:10 +0200",
-        "source": "JeuxVideo.com",
-        "image": "https://image.jeuxvideo.com/medias-lg/177669/1776692753-8053-card.jpg",
-        "description": "Vous avez vu la présentation de Metro 2039 et cela vous a donné envie de découvrir d’autres épisodes de la saga ? C’est sûrement le bon moment pour craquer grâce à cette promotion."
-      },
-      {
-        "title": "Blizzard remporte une bataille juridique qui va décevoir de nombreux joueurs. Après huit ans d'activité, ce serveur interdit ultra populaire de World of Warcraft va fermer.",
-        "link": "https://www.jeuxvideo.com/news/2076371/blizzard-remporte-une-bataille-juridique-qui-va-decevoir-de-nombreux-joueurs-apres-huit-ans-d-activite-ce-serveur-interdit-ultra-populaire-de-world-of-warcraft-va-fermer.htm",
-        "pubDate": "Tue, 21 Apr 2026 07:00:12 +0200",
-        "source": "JeuxVideo.com",
-        "image": "https://image.jeuxvideo.com/medias-lg/177667/1776672478-7613-card.jpg",
-        "description": "Les serveurs privés de World of Warcraft sont une véritable alternative pour de très nombreux joueurs, qui y trouvent ce que Blizzard a modifié ou tout simplement jamais impléme..."
       }
     ],
     "finance": [
+      {
+        "title": "« Les jeunes issus de familles pauvres doivent soutenir leurs parents, mais cela se fait au prix de leur propre émancipation »",
+        "link": "https://www.lemonde.fr/idees/article/2026/04/22/les-jeunes-issus-de-familles-pauvres-doivent-soutenir-leurs-parents-mais-cela-se-fait-au-prix-de-leur-propre-emancipation_6682366_3232.html",
+        "pubDate": "Wed, 22 Apr 2026 10:00:07 +0200",
+        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
+        "image": "https://img.lemde.fr/2026/02/25/125/0/1500/750/644/322/60/0/b924425_upload-1-f0ne0c4sdt0h-frame-815.jpg",
+        "description": "Dans une tribune au « Monde », le collectif Il faut bien que jeunesse se fâche, soutenu par plus d’une trentaine d’autres organisations, syndicats et associations, demande la mo..."
+      },
+      {
+        "title": "Après le coup de force de Vincent Bolloré à Grasset, « les librairies sont désormais des vigies »",
+        "link": "https://www.lemonde.fr/economie/article/2026/04/22/apres-le-coup-de-force-de-bollore-les-librairies-sont-desormais-des-vigies_6682358_3234.html",
+        "pubDate": "Wed, 22 Apr 2026 08:38:31 +0200",
+        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
+        "image": "https://img.lemde.fr/2026/04/21/0/0/5500/2750/644/322/60/0/329abc2_upload-1-syml47hl7azf-rea9026417.jpg",
+        "description": "Christian Thorel, figure de la librairie indépendante, a été l’un des premiers à alerter sur la mainmise idéologique de Vincent Bolloré sur le secteur de l’édition, dès le racha..."
+      },
+      {
+        "title": "En Grèce, les ports athéniens au cœur de la rivalité entre la Chine et les Etats-Unis",
+        "link": "https://www.lemonde.fr/economie/article/2026/04/22/en-grece-les-ports-atheniens-au-c-ur-de-la-rivalite-entre-la-chine-et-les-etats-unis_6682356_3234.html",
+        "pubDate": "Wed, 22 Apr 2026 08:30:06 +0200",
+        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
+        "image": "https://img.lemde.fr/2026/04/21/474/0/3841/1920/644/322/60/0/920b4f1_upload-1-nnetsr3xqzkt-lemonde-louiza-vradi-peiraias-eleusis-094.jpg",
+        "description": "Washington a annoncé vouloir créer un nouveau port à Eleusis, près d’Athènes, qui concurrencerait le Pirée, détenu en majorité par le groupe chinois Cosco. Mais les investisseme..."
+      },
+      {
+        "title": "Les discriminations et agressions vécues par les salariés LGBTQIA+ repartent à la hausse",
+        "link": "https://www.lemonde.fr/emploi/article/2026/04/22/les-discriminations-et-agressions-vecues-par-les-salaries-lgbtqia-repartent-a-la-hausse_6682348_1698637.html",
+        "pubDate": "Wed, 22 Apr 2026 06:30:09 +0200",
+        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
+        "image": "https://img.lemde.fr/2018/10/05/1572/1233/3415/1707/644/322/60/0/3530f27_jMobcQXG2iK_0OQvzDbSa71p.jpg",
+        "description": "19 % des salariés LGBTQIA+ rapportent avoir déjà été victimes de violences physiques sur leur lieu de travail. Les personnes transgenres sont les plus discriminées. Sur le sujet..."
+      },
+      {
+        "title": "Trois nouveautés fiscales pour l’épargne-retraite",
+        "link": "https://www.lemonde.fr/argent/article/2026/04/22/trois-nouveautes-fiscales-pour-l-epargne-retraite_6682343_1657007.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:25 +0200",
+        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
+        "image": "https://img.lemde.fr/2023/04/17/411/0/3000/1500/644/322/60/0/308d2ae_1681718655248-argent-08.jpg",
+        "description": "Le PER bénéficie d’avantages fiscaux qui ont fait l’objet de modifications dans les budgets 2026 de l’Etat et de la Sécurité sociale. Leur portée demeure toutefois modeste."
+      },
+      {
+        "title": "« Nous leur garantissons le maintien de leur rémunération, un mentor et le droit au retour » : l’essor des reconversions internes dans des secteurs en tension",
+        "link": "https://www.lemonde.fr/emploi/article/2026/04/22/nous-leur-garantissons-le-maintien-de-leur-remuneration-un-mentor-et-le-droit-au-retour-l-essor-des-reconversions-internes-dans-des-secteurs-en-tension_6682345_1698637.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:15 +0200",
+        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
+        "image": "https://img.lemde.fr/2026/04/17/963/0/5780/2890/644/322/60/0/640cd98_upload-1-gcsli0zyfqvd-000-48br9ct.jpg",
+        "description": "Pour s’assurer des compétences très spécifiques et s’épargner le coût d’un recrutement, les entreprises, en particulier les plus grandes, tablent de plus en plus sur leurs salar..."
+      },
+      {
+        "title": "Les voitures électriques viennent titiller les hybrides dans la bataille des très longs trajets",
+        "link": "https://www.lemonde.fr/economie/article/2026/04/22/les-voitures-electriques-viennent-titiller-les-hybrides-dans-la-bataille-de-la-grande-autonomie_6682342_3234.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:15 +0200",
+        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
+        "image": "https://img.lemde.fr/2026/04/17/319/0/2433/1216/644/322/60/0/112f6f9_upload-1-we2ozccuwokq-flottes-ent-2026-ouv.jpg",
+        "description": "La demande de pouvoir rouler très longtemps sans avoir à recharger les batteries reste forte chez de nombreux acheteurs de modèles. L’industrie tente d’y répondre, avec des auto..."
+      },
       {
         "title": "En Corse, le dispositif de financement des vols hors saison suspendu après un recours du préfet",
         "link": "https://www.lemonde.fr/societe/article/2026/04/22/en-corse-le-dispositif-de-financement-des-vols-hors-saison-suspendu-apres-un-recours-du-prefet_6682264_3224.html",
@@ -2783,7 +2367,7 @@ window.NEWS_DATA = {
         "description": "L’Etat craint que le système mis en place pour doper les visites sur l’île hors saison touristique contrevienne au droit européen, alors qu’il aurait déjà attiré plus 15 000 vis..."
       },
       {
-        "title": "La patronne d’Engie dénonce les idées « mauvaises pour la France » du Rassemblement national en matière d’énergie",
+        "title": "La patronne d’Engie dénonce les idées « mauvaises pour la France » du RN en matière d’énergie",
         "link": "https://www.lemonde.fr/politique/article/2026/04/22/la-patronne-d-engie-denonce-les-idees-mauvaises-pour-la-france-du-rassemblement-national-en-matiere-d-energie_6682065_823448.html",
         "pubDate": "Wed, 22 Apr 2026 01:03:34 +0200",
         "source": "Économie : Toute l’actualité sur Le Monde.fr.",
@@ -2799,7 +2383,7 @@ window.NEWS_DATA = {
         "description": "Le premier ministre a donné ses solutions, mardi, à l’issue d’une réunion interministérielle à Matignon, pour compenser la flambée des prix des carburants liée à la guerre au Mo..."
       },
       {
-        "title": "Fed : Kevin Warsh, le candidat de Donald Trump, à l’épreuve du Sénat",
+        "title": "Kevin Warsh, le candidat de Donald Trump pour prendre la tête de la Fed, à l’épreuve du Sénat",
         "link": "https://www.lemonde.fr/economie/article/2026/04/21/fed-kevin-warsh-le-candidat-de-donald-trump-a-l-epreuve-du-senat_6682049_3234.html",
         "pubDate": "Tue, 21 Apr 2026 20:07:41 +0200",
         "source": "Économie : Toute l’actualité sur Le Monde.fr.",
@@ -2877,66 +2461,138 @@ window.NEWS_DATA = {
         "source": "Économie : Toute l’actualité sur Le Monde.fr.",
         "image": "https://img.lemde.fr/2026/04/16/624/0/2421/1210/644/322/60/0/b3fac48_upload-1-4touywgxs2ow-le-monde-flottes-ent-2026-une.jpg",
         "description": "Les ventes de véhicules à batterie aux entreprises ont atteint des niveaux record ce printemps en France, en raison de la mise en place de mesures fiscales fortement incitatives..."
-      },
-      {
-        "title": "Grasset : les auteurs des livres jeunesse de la maison d’édition se mobilisent après le licenciement d’Olivier Nora",
-        "link": "https://www.lemonde.fr/economie/article/2026/04/21/grasset-les-auteurs-des-livres-jeunesse-de-la-maison-d-edition-se-mobilisent-apres-le-licenciement-d-olivier-nora_6682001_3234.html",
-        "pubDate": "Tue, 21 Apr 2026 15:40:16 +0200",
-        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
-        "image": "https://img.lemde.fr/2026/04/18/574/0/8082/4041/644/322/60/0/32f7ca7_ftp-1-vwcy2ccii8no-5806900-01-06.jpg",
-        "description": "Les 76 auteurs signataires déclarent « se joindre au débat sur le droit à une clause de conscience qui [leur] laisserait le choix de rester ou de déménager »."
-      },
-      {
-        "title": "Au Brésil, la « vallée du lithium » ne tient pas ses promesses de sortir des habitants de la pauvreté",
-        "link": "https://www.lemonde.fr/economie/article/2026/04/21/au-bresil-la-vallee-du-lithium-ne-tient-pas-ses-promesses-de-sortir-des-habitants-de-la-pauvrete_6681997_3234.html",
-        "pubDate": "Tue, 21 Apr 2026 15:30:06 +0200",
-        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
-        "image": "https://img.lemde.fr/2026/04/20/198/0/2387/1193/644/322/60/0/b0fad1f_upload-1-2wlshksx2ucd-image-03-rebeca-binda-poc-odantas-3.jpg",
-        "description": "L’exploitation de l’or blanc devait transformer le nord du Minas Gerais. Deux ans après, citoyens et élus constatent que les bénéfices tardent à se matérialiser, tandis que les ..."
-      },
-      {
-        "title": "1ᵉʳ-Mai : le patronat pousse pour élargir la liste des commerces autorisés à ouvrir",
-        "link": "https://www.lemonde.fr/politique/article/2026/04/21/1-mai-le-patronat-pousse-pour-elargir-la-liste-des-commerces-autorises-a-ouvrir_6681994_823448.html",
-        "pubDate": "Tue, 21 Apr 2026 15:00:01 +0200",
-        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
-        "image": "https://img.lemde.fr/2023/05/01/213/0/5568/2784/644/322/60/0/937bb9c_5145832-01-06.jpg",
-        "description": "Les représentants des travailleurs et des chefs d’entreprise ont été consultés lundi sur le projet de loi que le gouvernement entend présenter rapidement en conseil des ministre..."
-      },
-      {
-        "title": "Blablacar veut arrêter son service d’autocars, BlaBlaCar Bus, en raison de « difficultés économiques structurelles »",
-        "link": "https://www.lemonde.fr/economie/article/2026/04/21/blablacar-veut-cesser-son-service-d-autocars-blablacar-bus-en-raison-de-difficultes-economiques-structurelles_6681990_3234.html",
-        "pubDate": "Tue, 21 Apr 2026 13:32:03 +0200",
-        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
-        "image": "https://img.lemde.fr/2026/04/21/468/0/5660/2830/644/322/60/0/fb16db4_ftp-1-7axatfatqxan-5827397-01-06.jpg",
-        "description": "Le projet de cessation « entraînerait la suppression de 40 postes » directement, selon la plateforme de covoiturage, laissant également dans l’incertitude les sous-traitants qui..."
-      },
-      {
-        "title": "Bourse : « Avec l’invasion de l’Ukraine et le conflit au Moyen-Orient, la guerre est devenue un sujet vendeur »",
-        "link": "https://www.lemonde.fr/economie/article/2026/04/21/bourse-avec-l-invasion-de-l-ukraine-et-le-conflit-au-moyen-orient-la-guerre-est-devenue-un-sujet-vendeur_6681976_3234.html",
-        "pubDate": "Tue, 21 Apr 2026 10:30:07 +0200",
-        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
-        "image": "https://img.lemde.fr/2026/04/21/332/0/2800/1400/644/322/60/0/f490447_upload-1-cdid0d2wovq8-000-a42l8t3.jpg",
-        "description": "Ces dernières semaines, les entrées en Bourse s’enchaînent pour les entreprises du secteur de la défense. Le reflet d’un monde qui laisse parler les armes, observe Olivier Pinau..."
-      },
-      {
-        "title": "« Les maîtres de l’IA seront haïs pour leur fortune et pour leur transformation de la société »",
-        "link": "https://www.lemonde.fr/idees/article/2026/04/21/les-maitres-de-l-ia-seront-hais-pour-leur-fortune-et-pour-leur-transformation-de-la-societe_6681970_3232.html",
-        "pubDate": "Tue, 21 Apr 2026 09:42:24 +0200",
-        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
-        "image": "https://img.lemde.fr/2026/04/16/204/0/2416/1208/644/322/60/0/b157c37_ftp-1-ysgee0kq6lmw-2026-04-16t011615z-1943454688-rc2ne4a4i3ji-rtrmadp-3-openai-altman-sister-lawsuit.JPG",
-        "description": "Signe de la vitalité extraordinaire du capitalisme américain, l’intelligence artificielle, guidée par ses nouveaux maîtres SpaceX, Anthropic et OpenAI, pourrait être le nouveau ..."
-      },
-      {
-        "title": "Aux Etats-Unis, malgré les critiques de Trump, les énergies renouvelables prospèrent au niveau local",
-        "link": "https://www.lemonde.fr/economie/article/2026/04/21/aux-etats-unis-malgre-les-critiques-de-trump-les-energies-renouvelables-prosperent-au-niveau-local_6681960_3234.html",
-        "pubDate": "Tue, 21 Apr 2026 07:31:03 +0200",
-        "source": "Économie : Toute l’actualité sur Le Monde.fr.",
-        "image": "https://img.lemde.fr/2026/04/20/333/0/4000/2000/644/322/60/0/e81b553_upload-1-fqoykc88g6b1-000-33ac3c8.jpg",
-        "description": "En dépit d’un discours largement hostile au sein de la Maison Blanche, qui donne la priorité aux hydrocarbures, le solaire et l’éolien continuent de progresser dans certains Etats."
       }
     ],
     "sports": [],
     "entertainment": [
+      {
+        "title": "Ici tout commence sur TF1 : ces deux personnages vont bientôt vivre une histoire d'amour !",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200570.html",
+        "pubDate": "Tue, 21 Apr 2026 14:39:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img5.acsta.net/img/37/e3/37e3cdd6e2c0e6453de20a4248d8654c.jpg",
+        "description": "Cuisine et romance vont généralement de pair dans \"Ici tout commence\" sur TF1... Découvrez quels personnages du feuilleton vont tomber sous le charme de l'un et l'autre !"
+      },
+      {
+        "title": "Michael : pourquoi Janet Jackson n'apparaît pas dans le biopic consacré à son frère",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200572.html",
+        "pubDate": "Wed, 22 Apr 2026 10:00:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img6.acsta.net/img/35/a6/35a6a119ac8716709e546142f3592ef6.jpg",
+        "description": "Dans \"Michael\" d'Antoine Fuqua, la sœur du roi de la pop est le seul membre de la famille Jackson à ne pas apparaître à l'écran. Pour quelle raison ?"
+      },
+      {
+        "title": "\"Une production courageuse et réussie\" : noté 3,9 sur 5, c'est le meilleur film de Louis Garrel !",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000199308.html",
+        "pubDate": "Wed, 22 Apr 2026 10:00:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img6.acsta.net/img/b6/1b/b61b4424289d18df9bb280e7ffa14377.jpg",
+        "description": "Louis Garrel est actuellement à l’affiche de \"Juste une illusion\" d'Éric Toledano et Olivier Nakache. L'occasion de découvrir le film préféré de la filmographie du comédien par ..."
+      },
+      {
+        "title": "Une comédie d'arnaque avec Josiane Balasko et Fadily Camara, c'est L'arnaqueuse !",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000197858.html",
+        "pubDate": "Wed, 22 Apr 2026 09:15:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img5.acsta.net/img/2d/65/2d65992c417ce7d880a63fc878f87339.jpg",
+        "description": "A voir au cinéma ce mercredi, une comédie remarquée au Festival de l'Alpe d'Huez, \"L'arnaqueuse\", avec Josiane Balasko et Fadily Camara. Nous nous sommes entretenus avec son réa..."
+      },
+      {
+        "title": "\"Tout ça va désespérément me manquer\" : il y a 7 ans, les acteurs d'une des plus grande série de tous les temps disaient au revoir à leurs fans",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200588.html",
+        "pubDate": "Wed, 22 Apr 2026 09:00:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img6.acsta.net/img/04/19/041998ded484db798a147514ba31a553.jpg",
+        "description": "Pour fêter les 15 ans de la série mythique, le compte officiel de \"Game of Thrones\" a dévoilé une vidéo inédite montrant les principaux membres du casting faire des adieux larmo..."
+      },
+      {
+        "title": "Nous l'orchestre : une plongée immersive dans les coulisses de la création musicale",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000199956.html",
+        "pubDate": "Wed, 22 Apr 2026 08:30:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img5.acsta.net/img/8e/a5/8ea518771c847c7bcf4eba544650aac0.jpg",
+        "description": "Vous n'avez jamais vu des musiciens filmés de cette façon au cinéma ! \"Nous l'orchestre\" est une plongée immersive dans les coulisses de la création musicale. Les spectateurs so..."
+      },
+      {
+        "title": "\"C'était une lente humiliation\" : Vincent Lacoste a très mal vécu le tournage de cette comédie culte qui l'a pourtant révélé au grand public",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200505.html",
+        "pubDate": "Wed, 22 Apr 2026 08:00:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img4.acsta.net/img/cb/f4/cbf4e659fe67f2d6c520b0d1a2c2e28b.jpg",
+        "description": "En 2009, un jeune comédien âgé de 16 ans se révèle au grand public dans Les Beaux Gosses : Vincent Lacoste. Cependant, pour le jeune homme, le tournage n'a pas été un très bon m..."
+      },
+      {
+        "title": "Ce soir à la télé : Karin Viard mérite 100 fois le César qu'elle a décroché pour ce personnage digne et touchant",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000199696.html",
+        "pubDate": "Wed, 22 Apr 2026 08:00:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img2.acsta.net/img/75/db/75dbc73f7d7b40cbc39442a4214317e6.jpg",
+        "description": "Chaque jour, AlloCiné vous recommande un film à (re)voir à la télé. Ce soir, Arte diffuse une oeuvre poignante qui a valu le César de la meilleure actrice à Karin Viard en 2000."
+      },
+      {
+        "title": "À voix basse : que signifie le titre de ce drame sensible présenté à Berlin ?",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000199214.html",
+        "pubDate": "Wed, 22 Apr 2026 08:00:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img6.acsta.net/img/7d/4e/7d4e5db03307434da8e22d45746d1f73.jpg",
+        "description": "Quatre ans après \"Une histoire d'amour et de désir\", Leyla Bouzid enrichit son oeuvre avec \"À voix basse\", drame sur fond de secrets de famille à voir au cinéma."
+      },
+      {
+        "title": "Michael Jackson : où s'arrête le biopic dans la vie du roi de la pop ?",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200425.html",
+        "pubDate": "Wed, 22 Apr 2026 07:30:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img3.acsta.net/img/69/b6/69b60d1c04f650debb52f996aa0f43f4.jpg",
+        "description": "Réalisé par Antoine Fuqua, le biopic \"Michael\" retrace les débuts du roi de la pop et son ascension fulgurante, le tout interprété par son neveu, Jaafar Jackson. Mais toute la v..."
+      },
+      {
+        "title": "\"C'était un requin, il nous volait nos répliques\" : Henri Guybet se souvient de sa collaboration houleuse avec Coluche",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200583.html",
+        "pubDate": "Wed, 22 Apr 2026 07:30:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img4.acsta.net/img/11/f4/11f40a2d2fc2ed0cf9d05a110484a1d4.jpg",
+        "description": "Henri Guybet est l'un des derniers pionniers du cinéma français populaire des années 70-80. Invité dans l'émission \"Vivement dimanche\" en février 2025, il avait raconté une anec..."
+      },
+      {
+        "title": "Pour le meilleur : qui joue Philippe Croizon dans le film inspiré de sa vie ?",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000199942.html",
+        "pubDate": "Wed, 22 Apr 2026 07:30:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img5.acsta.net/img/98/33/9833bb789fb605da2c6e386967a1e3af.jpg",
+        "description": "Premier homme amputé des quatre membres à avoir traversé la Manche à la nage, Philippe Croizon voit son histoire racontée au cinéma dans \"Pour le meilleur\". Et c'est Pierre Rabi..."
+      },
+      {
+        "title": "Chef-d’œuvre crépusculaire noté 4 sur 5 : ce film est aussi le dernier de Marilyn Monroe et Clark Gable",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200601.html",
+        "pubDate": "Wed, 22 Apr 2026 06:45:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img3.acsta.net/img/f8/77/f87774b1be54269d337ea7d8600739c1.jpg",
+        "description": "Les stars du film \"Les Désaxés\" sorti en 1961 sont mortes peu après sa sortie, ce qui a conduit certains à penser que le film, le dernier pour Marilyn Monroe et Clark Gable, éta..."
+      },
+      {
+        "title": "Elles deux sur France 2 : ce téléfilm poignant avec Sylvie Testud est-il adapté d'une histoire vraie ?",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000199748.html",
+        "pubDate": "Wed, 22 Apr 2026 06:15:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img3.acsta.net/img/b8/7d/b87dd7c2c60c6fde3bea03e22f1789af.png",
+        "description": "France 2 diffuse l'unitaire \"Elles deux\" avec Sylvie Testud. Ici, elle joue une grand-mère prête à tous les sacrifices pour avoir la garde de son petit-fils, revenu d'un camp de..."
+      },
+      {
+        "title": "Plus belle la vie en avance : ce qui vous attend dans l'épisode 568 du jeudi 23 avril 2026 [SPOILERS]",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200519.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img5.acsta.net/img/42/b2/42b24ec6becac73a74109a1b57827bed.jpg",
+        "description": "Dans le prochain épisode de \"Plus belle la vie, encore plus belle\"... Apolline découvre le vrai visage d'Alice Bataille. Pendant ce temps, au cabinet médical, Jennifer fait une ..."
+      },
+      {
+        "title": "Les Saisons :  pourquoi il ne faut pas manquer cette pépite qui arrive enfin sur HBO Max",
+        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000198971.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:00 +0200",
+        "source": "News cinéma, films et séries",
+        "image": "https://fr.web.img6.acsta.net/img/b8/d7/b8d7fb7e9758f4b390d7015196fdbea2.png",
+        "description": "Diffusée en décembre dernier sur Arte, la série Les saisons débarque dès aujourd'hui sur HBO Max et voici pourquoi il ne faut surtout pas la rater !"
+      },
       {
         "title": "Demain nous appartient : Sara et Roxane ont enfin pris leur décision",
         "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200547.html",
@@ -2968,144 +2624,23 @@ window.NEWS_DATA = {
         "source": "News cinéma, films et séries",
         "image": "https://fr.web.img6.acsta.net/img/4b/81/4b81dff25c2c265356c0aba680c62b10.jpg",
         "description": "En 1992, une série télé réunissait des noms prestigieux du cinéma, de Brad Pitt à Kirk Douglas en passant par Robert Zemeckis ou Richard Donner ! Malheureusement, elle n'ira pas..."
-      },
-      {
-        "title": "Ici tout commence : ce qui vous attend dans l'épisode 1420 du mercredi 22 avril 2026 [SPOILERS]",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200108.html",
-        "pubDate": "Tue, 21 Apr 2026 19:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img2.acsta.net/img/cf/f4/cff46f017f3a32430373e9e6c2e6b946.jpg",
-        "description": "Dans le prochain épisode d'\"Ici tout commence\"... Noé en sait plus que ce qu'il ne laisse paraître... Bianca fait fausse route ! Avec Denis, Jeanne fait acte de résilience."
-      },
-      {
-        "title": "Depuis 58 ans, tous les spectateurs français se demandent ce qui a bien pu arriver au héros de ce film",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000198087.html",
-        "pubDate": "Tue, 21 Apr 2026 19:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img6.acsta.net/img/29/2a/292a709a15327b85a0ab24e0ea0a402e.jpg",
-        "description": "Comme la plupart des longs métrages avec Louis de Funès, \"Le Petit baigneur\" se termine sur un hilarant point d'interrogation."
-      },
-      {
-        "title": "Quiz Cinéma : 8 affiches de film à reconnaître !",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200096.html",
-        "pubDate": "Tue, 21 Apr 2026 19:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img2.acsta.net/img/ae/96/ae96c429f022921a813175ef20c15e59.jpg",
-        "description": "Nous reprenons après quelques semaines de pause, notre quiz de l'abécédaire des affiches de film. Place à la lettre \"E\" avec huit nouveaux films à retrouver !"
-      },
-      {
-        "title": "Ce soir sur Netflix : amateurs de thriller psychologique ? Ce K-drama est fait pour vous !",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000186185.html",
-        "pubDate": "Tue, 21 Apr 2026 19:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img3.acsta.net/img/f0/a2/f0a2c8753d5c077ac3ee56f0274e3d27.jpg",
-        "description": "Entre manipulations psychologiques, enquêtes haletantes et relations bouleversantes, ce thriller explore jusqu’où l’amour peut nous pousser et où notre passé peut nous emmener :..."
-      },
-      {
-        "title": "9-1-1 : surprise, cette star de cinéma des années 1990 rejoint la franchise !",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200623.html",
-        "pubDate": "Tue, 21 Apr 2026 18:32:08 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img3.acsta.net/img/b6/6e/b66e81cdca03067902ed42c8a4407427.png",
-        "description": "La série dérivée de \"9-1-1\" voit son casting s'étoffer pour sa saison 2 : une star de cinéma de la fin des années 1990 va en effet rejoindre la distribution de \"9-1-1 : Nashvill..."
-      },
-      {
-        "title": "1,5 milliard de dollars : c'est le plus gros succès de Tom Cruise et il revient au cinéma pour une semaine seulement",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200593.html",
-        "pubDate": "Tue, 21 Apr 2026 18:30:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img3.acsta.net/img/e3/22/e322a430c3623570dcfd3283f200fd35.jpg",
-        "description": "Sorti en 1896, \"Top Gun\" est le film qui a fait de Tom Cruise la star qu'il est encore aujourd'hui. Et le long métrage fera son retour dans les salles françaises pendant une sem..."
-      },
-      {
-        "title": "Premières images du nouveau film Evil Dead par le réalisateur français de Vermines !",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200502.html",
-        "pubDate": "Tue, 21 Apr 2026 18:07:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img3.acsta.net/img/c3/11/c311e48a3a95237dc3bd35784c35b231.jpg",
-        "description": "La bande-annonce de \"Evil Dead : Burn\" de Sébastien Vaniček vient d'être dévoilée. Le long métrage sortira dans nos salles le 8 juillet prochain."
-      },
-      {
-        "title": "Un Si Grand Soleil en avance : résumé de l’épisode du mercredi 22 avril 2026 [SPOILERS]",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200574.html",
-        "pubDate": "Tue, 21 Apr 2026 18:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img6.acsta.net/img/f1/00/f100444ff5f94cac13b63c805b2274c3.jpg",
-        "description": "Dans le prochain épisode de \"Un Si Grand Soleil\"... Tandis que Jeanne fait une découverte macabre, Gary fait une proposition à Guillaume."
-      },
-      {
-        "title": "\"On a fait connaissance 10 minutes avant de tourner\" : il y a 41 ans, les premiers pas de Michael J. Fox dans Retour vers le Futur ont été d'une tension absolue",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200557.html",
-        "pubDate": "Tue, 21 Apr 2026 18:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img3.acsta.net/img/99/8c/998c94e76b98c9650fd9b8c11d3539cf.jpg",
-        "description": "Aussi étonnait que cela puisse paraître, les débuts de Michael J. Fox dans Retour vers le Futur n'ont pas été de tout repos ! Le jeune comédien, propulsé rôle principal après le..."
-      },
-      {
-        "title": "“Il s’est montré très grossier” : cette actrice culte ne garde pas un bon souvenir de Gene Hackman",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200083.html",
-        "pubDate": "Tue, 21 Apr 2026 18:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img6.acsta.net/img/8f/1b/8f1b8a99c04c3f7c162673d9c4554802.jpg",
-        "description": "Dans \"Le Cabaret de ma vie\", son autobiographie publiée chez nous en mars dernier, la légendaire Liza Minnelli, 80 ans, évoque notamment sa collaboration avec Gene Hackman sur u..."
-      },
-      {
-        "title": "101 ans, un Oscar et deux étoiles sur le Hollywood Walk of Fame : cette icone du cinéma n'a rien perdu de sa prestance et ses films fascinent toujours autant",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200506.html",
-        "pubDate": "Tue, 21 Apr 2026 17:45:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img6.acsta.net/img/d5/37/d53777e085bc128d168f0fb08869aba0.jpg",
-        "description": "Elle aura 102 ans en juillet : retour sur la carrière de l'actrice américaine Eva Marie Saint, qui a tourné avec certains des plus grands réalisateurs hollywoodiens."
-      },
-      {
-        "title": "La Corde au cou : c'est grâce à Stranger Things que cet acteur a été choisi par Gus van Sant pour son film",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000198681.html",
-        "pubDate": "Tue, 21 Apr 2026 17:30:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img2.acsta.net/img/09/86/0986c983a78a37cb6f7e72a62415a6eb.jpg",
-        "description": "Méconnaissable dans le nouveau film de Gus van Sant, sorti dans nos salles le 15 avril, Dacre Montgomery doit sa présence dans \"La Corde au cou\" à la vidéo qu'il avait faite pou..."
-      },
-      {
-        "title": "Ici tout commence sur TF1 : on connaît enfin le grand secret des Teyssier et vous n'êtes certainement pas prêts !",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200589.html",
-        "pubDate": "Tue, 21 Apr 2026 17:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img5.acsta.net/img/1b/2b/1b2b97c71e99f8b3572477b602a66aab.png",
-        "description": "Un corbeau fait chanter les Teyssier dans \"Ici tout commence\" et celui-ci détient un très gros secret au sujet de la famille. Cette révélation concerne Noé, le commis de Charlèn..."
-      },
-      {
-        "title": "Olivia Colman ne reviendra pas pour la conclusion de ce hit Netflix et a été recastée !",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200565.html",
-        "pubDate": "Tue, 21 Apr 2026 17:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img5.acsta.net/img/0e/e9/0ee93dea5aa36d48452241689e396dd9.jpg",
-        "description": "Le film qui servira de conclusion à la série \"Heartstopper\" verra la majorité du casting faire son retour, à l’exception de cette actrice oscarisée qui sera remplacée par une au..."
-      },
-      {
-        "title": "A priori : \"J'ai besoin de vérité\" ... Florent Manaudou revient sur ses premiers pas de comédien dans la série",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000199628.html",
-        "pubDate": "Tue, 21 Apr 2026 17:00:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img2.acsta.net/img/f8/59/f859e152dcd3d7556eea272b58e7357a.png",
-        "description": "Dans A priori, Florent Manaudou interprète le rôle principal d'une série pour la première fois. L'occasion pour lui de se confier sur cette expérience très différente !"
-      },
-      {
-        "title": "Sydney Sweeney coupée au montage : pourquoi elle n'apparaîtra pas dans Le Diable s'habille en Prada 2",
-        "link": "https://www.allocine.fr/article/fichearticle_gen_carticle=1000200591.html",
-        "pubDate": "Tue, 21 Apr 2026 16:45:00 +0200",
-        "source": "News cinéma, films et séries",
-        "image": "https://fr.web.img6.acsta.net/img/50/7a/507a977806767927dacc10aafeb01bb8.jpg",
-        "description": "Alors que \"Le Diable s'habille en Prada 2\" sort le 29 avril prochain en France, Entertainment Weekly révèle que le caméo de Sydney Sweeney a été coupée au montage du film."
       }
     ],
     "health": [],
-    "science": [],
-    "ai": []
+    "science": []
   },
   "es": {
     "local": [
       {
-        "title": "Trump prorroga el alto el fuego hasta que Irán presente una propuesta y se negocie hasta el final",
+        "title": "Última hora de la guerra de Estados Unidos e Israel contra Irán, en directo | Irán ataca un buque de carga en el estrecho de Ormuz pese a la prórroga del alto el fuego anunciada por EE UU",
+        "link": "https://elpais.com/internacional/2026-04-22/ultima-hora-de-la-guerra-de-estados-unidos-e-israel-contra-iran-en-directo.html",
+        "pubDate": "Wed, 22 Apr 2026 08:10:10 GMT",
+        "source": "EL PAÍS: el periódico global",
+        "image": "https://imagenes.elpais.com/resizer/v2/IN4RETXY3BBBDMZQ7GJSHMFVAE.jpg?auth=3d8ddda7387b54d500ed15aa499fdd2a1a468b91a39b05aefe7073691c68a638",
+        "description": "La autoridad marítima británica informa de disparos contra un segundo carguero al oeste de Irán | Trump asegura que el bloqueo naval sobre el corredor es necesario para alcanzar..."
+      },
+      {
+        "title": "Trump prorroga el alto el fuego hasta que Irán presente una propuesta y concluyan las negociaciones",
         "link": "https://elpais.com/internacional/2026-04-21/trump-prorroga-el-alto-el-fuego-hasta-que-iran-presente-una-propuesta-y-se-negocie-hasta-el-final.html",
         "pubDate": "Tue, 21 Apr 2026 21:30:37 GMT",
         "source": "EL PAÍS: el periódico global",
@@ -3113,60 +2648,44 @@ window.NEWS_DATA = {
         "description": "El presidente de EE UU extiende la tregua a pocas horas de que expire, aunque mantiene el bloqueo naval sobre Ormuz"
       },
       {
-        "title": "Italia y Alemania frenan la posibilidad de suspender el Acuerdo de Asociación de la UE con Israel como pide España ",
-        "link": "https://elpais.com/internacional/2026-04-21/albares-la-ue-debe-enviar-una-senal-fuerte-a-israel.html",
-        "pubDate": "Tue, 21 Apr 2026 16:49:50 GMT",
+        "title": "Repsol, Moeve y BP solo garantizan el  combustible de aviación hasta antes del verano",
+        "link": "https://elpais.com/economia/2026-04-22/repsol-moeve-y-bp-garantizan-el-suministro-de-combustible-de-aviacion-hasta-antes-del-verano.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162104_103607_video_1800.mp4",
-        "description": "Aunque la propuesta española, irlandesa y eslovena sigue careciendo de respaldo suficiente, la iniciativa reactiva la discusión sobre la necesidad de “hacer algo” para que el Go..."
+        "image": "https://imagenes.elpais.com/resizer/v2/KWGECDHCOBFLZPFOSJAT2IAPJ4.jpg?auth=b273bf537c1d88d380a20149dc08a9b62691bbf105dfccc56970cbaea98d974e",
+        "description": "Los principales operadores nacionales trasladan al Gobierno que no habrá problemas de queroseno en mayo y que están trabajando para contar con suministro suficiente en junio"
       },
       {
-        "title": "Vox fuerza al PP a votar en el Congreso la “prioridad nacional” en las ayudas frente a los inmigrantes  ",
-        "link": "https://elpais.com/espana/2026-04-21/vox-fuerza-al-pp-a-votar-en-el-congreso-la-prioridad-nacional-en-las-ayudas-y-prestaciones-publicas-a-los-inmigrantes.html",
-        "pubDate": "Tue, 21 Apr 2026 19:13:59 GMT",
+        "title": "Los precios bajo cero de la electricidad y la guerra ponen contra las cuerdas a los promotores fotovoltaicos",
+        "link": "https://cincodias.elpais.com/companias/2026-04-22/los-precios-bajo-cero-de-la-electricidad-y-la-guerra-ponen-contra-las-cuerdas-a-los-promotores-fotovoltaicos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:15:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162268_160903_video_1800.mp4",
-        "description": "En paralelo a la sesión de investidura de Guardiola, el PP presenta una enmienda que asume el principio de la ultraderecha pero Feijóo insiste en que la concesión dependerá del ..."
+        "image": "https://imagenes.elpais.com/resizer/v2/BFPHI2EY3BIZHNS4W3GL3D7PU4.jpg?auth=e043c70c075a7c9a09259a6ed307a00bb8e6231b043187a4a1208224eb630348",
+        "description": "Los bancos cierran la puerta a la financiación, y algunos inversores oportunistas y de largo plazo sacan la chequera. El número de gigavatios solares con conexión que no están o..."
       },
       {
-        "title": "Guardiola promete cumplir el pacto con Vox, pero omite la “prioridad nacional”",
-        "link": "https://elpais.com/espana/2026-04-21/sigue-en-directo-la-intervencion-de-maria-guardiola.html",
-        "pubDate": "Tue, 21 Apr 2026 16:53:13 GMT",
+        "title": "Última hora de la actualidad política, en directo | El PSOE en la investidura de Guardiola: “La prioridad nacional ni es legal ni es humana”",
+        "link": "https://elpais.com/espana/2026-04-22/ultima-hora-de-la-actualidad-politica-en-directo.html",
+        "pubDate": "Wed, 22 Apr 2026 08:18:52 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162329_180609_video_1800.mp4",
-        "description": "La presidenta en funciones será investida de nuevo este miércoles con los votos de la ultraderecha y tras una parálisis de casi cinco meses"
+        "image": "https://imagenes.elpais.com/resizer/v2/PVUQD4ICGJAKJCUW4N3O45BRQM.jpg?auth=7904eae219a3ba6299c12f38d28d613161f281e9ec643cd69281f5a11797c1cb",
+        "description": "La candidata popular será nombrada de nuevo presidenta con los votos de Vox"
       },
       {
-        "title": "El Gobierno aprueba el nuevo plan estatal que blinda las viviendas protegidas",
-        "link": "https://elpais.com/economia/vivienda/2026-04-21/el-gobierno-aprueba-el-nuevo-plan-estatal-que-blinda-las-viviendas-protegidas.html",
-        "pubDate": "Tue, 21 Apr 2026 11:46:40 GMT",
+        "title": "Feijóo reprocha la falta de inversión y Sánchez responde: “Ustedes se financian en B y quieren trabajadores en B”",
+        "link": "https://elpais.com/espana/2026-04-22/feijoo-reprocha-la-falta-de-inversion-y-sanchez-responde-ustedes-se-financian-en-b-y-quieren-trabajadores-en-b.html",
+        "pubDate": "Wed, 22 Apr 2026 07:41:18 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162241_153614_video_1800.mp4",
-        "description": "El programa para 2026-2030, dotado con 7.000 millones de euros, se desplegará en el segundo semestre tras el acuerdo con las comunidades"
+        "image": "https://imagenes.elpais.com/resizer/v2/6DSQQVQ2UVCHHHHUMTRZCTWQWA.jpg?auth=720dbe0cb9f3fde52a375abc650048349befef5b263de603cb15fa90cd9750f3",
+        "description": "Junts reclama al presidente un adelanto electoral por la corrupción y por no cumplir los acuerdos alcanzados con su formación"
       },
       {
-        "title": "Ayudas de 300 euros para alquilar y de 30.000 para reformar casas vacías: las claves del nuevo plan estatal de vivienda",
-        "link": "https://elpais.com/economia/vivienda/2026-04-21/ayudas-de-300-euros-para-alquilar-y-de-30000-para-reformar-casas-vacias-las-claves-del-nuevo-plan-estatal-de-vivienda.html",
-        "pubDate": "Tue, 21 Apr 2026 14:37:16 GMT",
+        "title": "Oír, ver y acatar: el papel de las secretarias del ‘caso Koldo’",
+        "link": "https://elpais.com/espana/2026-04-22/oir-ver-y-acatar-el-papel-de-las-secretarias-del-caso-koldo.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162241_153614_video_1800.mp4",
-        "description": "El programa para 2026-2030 busca ampliar el parque público y ofrecer arrendamientos asequibles para colectivos vulnerables"
-      },
-      {
-        "title": "El PP propone bajar de 1.800 a 900 euros la renta para declarar a una familia vulnerable",
-        "link": "https://elpais.com/espana/2026-04-21/el-pp-propone-bajar-de-1800-a-900-euros-la-renta-para-declarar-a-una-familia-vulnerable.html",
-        "pubDate": "Tue, 21 Apr 2026 18:15:09 GMT",
-        "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/VDUCRCCLTJK6PLLEP7JBNDEDCA.jpg?auth=6e914b0713b5d96202c1a048c52b6f785cc60af91af656f503aaf3e234dd2547",
-        "description": "Los populares impulsan una reforma urbanística para eliminar trámites y facilitar desahucios"
-      },
-      {
-        "title": "Morante de la Puebla, la dolorosa contrariedad de un torero roto por dentro",
-        "link": "https://elpais.com/cultura/2026-04-21/morante-de-la-puebla-la-dolorosa-contrariedad-de-un-torero-roto-por-dentro.html",
-        "pubDate": "Tue, 21 Apr 2026 15:07:19 GMT",
-        "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/KMEB74OWKVDFNIANQPONUCNURA.jpg?auth=e6c4b573b27a9e3411d84187a34f9186cd90b5770945a5721b0ff4dcc84a3476",
-        "description": "La cogida plantea muchos interrogantes sobre el futuro del sevillano y añade un capítulo épico a su brillante hoja de servicios"
+        "image": "https://imagenes.elpais.com/resizer/v2/MT47CS4A7BP7NFW4N6MV4HTMSY.jpg?auth=16498361e1f62ad0623526478f7272966d1ed0bb3fc9cf99272a15b7a461351e",
+        "description": "La asistente de Ábalos reconoce que expidió salvoconductos sin control para eludir las restricciones de movilidad en pandemia"
       },
       {
         "title": "El antiguo CEO de Air Europa niega pagos a Ábalos y rechaza que sus gestiones favorecieran el rescate de la aerolínea ",
@@ -3185,89 +2704,105 @@ window.NEWS_DATA = {
         "description": "Hay un testigo nervioso que dice que alguna vez ha saludado a Ábalos y recrea con la mano el saludo que le hacía. La cara de Ábalos en el banquillo es un poema"
       },
       {
-        "title": "El esperado testimonio del CEO de Globalia: defiende la legalidad del rescate y rebaja el papel de Aldama",
-        "link": "https://elpais.com/videos/2026-04-21/el-esperado-testimonio-del-ceo-de-globalia-defiende-la-legalidad-del-rescate-y-rebaja-el-papel-de-aldama.html",
-        "pubDate": "Tue, 21 Apr 2026 19:20:07 GMT",
+        "title": "‘Cara al show’: Marc Giró, los prefachas y un poco lo de siempre",
+        "link": "https://elpais.com/television/2026-04-22/cara-al-show-marc-giro-los-prefachas-y-un-poco-lo-de-siempre.html",
+        "pubDate": "Wed, 22 Apr 2026 05:03:07 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162350_190808_video_1800.mp4",
-        "description": "El empresario ha afirmado que nunca nadie les pidió que pagaran mordidas para lograr el rescate de la compañía aerea"
+        "image": "https://imagenes.elpais.com/resizer/v2/SVVPGZK6OJD6FCLHHLM4JGIPBY.jpg?auth=fad8d365794a72afd95de27708778651357fceb36f5efce3247ffc970f083630",
+        "description": "En el estreno del programa en La Sexta el presentador tiró de lo que mejor sabe hacer y mandó algunos mensajes"
       },
       {
-        "title": "El comisario jefe de la unidad que investigó Gürtel declara que nadie le informó del espionaje a Bárcenas",
-        "link": "https://elpais.com/espana/2026-04-21/el-comisario-jefe-de-la-unidad-que-investigo-gurtel-declara-que-nadie-lo-informo-del-espionaje-a-barcenas.html",
-        "pubDate": "Tue, 21 Apr 2026 18:41:30 GMT",
+        "title": "El debate | ¿Ha dañado Trump definitivamente la autoridad de Estados Unidos?",
+        "link": "https://elpais.com/opinion/2026-04-22/el-debate-ha-danado-trump-definitivamente-la-autoridad-de-estados-unidos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/RBIHPD55RZC6DDU2RWFJT5NKDM.jpg?auth=115bd0b25f60cdef57fb70c616064d84e9d6bc7634aba737579539b3c08a8e88",
-        "description": "La Fiscalía trata de evidenciar que Kitchen se desplegó de forma ajena a los agentes que cercaban al extesorero bajo el control del juez"
+        "image": "https://imagenes.elpais.com/resizer/v2/ZC6N27WCEBIZDCXVI6FR3W5MGI.jpg?auth=d17bcb5bf67a8d45ce81a07db134ce804fe50398c905f65edaf4047437446c2b",
+        "description": "Las constantes exageraciones y amenazas del presidente republicano han ido mermando la credibilidad de Washington entre sus aliados"
       },
       {
-        "title": "Venezuela emprende cambios profundos en el Tribunal Supremo de Justicia",
-        "link": "https://elpais.com/america/2026-04-21/venezuela-emprende-cambios-profundos-en-el-tribunal-supremo-de-justicia.html",
-        "pubDate": "Tue, 21 Apr 2026 22:04:28 GMT",
+        "title": "Una avería de madrugada en Atocha provoca el caos ferroviario en casi toda la red de Cercanías en plena hora punta: “El tren va a trompicones”",
+        "link": "https://elpais.com/espana/madrid/2026-04-22/una-averia-de-madrugada-en-atocha-provoca-el-caos-ferroviario-en-casi-toda-la-red-de-cercanias-en-plena-hora-punta.html",
+        "pubDate": "Wed, 22 Apr 2026 06:49:21 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/ANW7UKEHTRJULOAKQAROU2U5EI.jpg?auth=049776627ce62d09d971a647890e82708f1634c0e1edb6e701eaf7f5fcccb58f",
-        "description": "La Asamblea Nacional inició las gestiones para renovar al 70% de los magistrados del Supremo, un movimiento que reduce la influencia de Maduro y Cilia Flores del Poder Judicial"
+        "image": "https://imagenes.elpais.com/resizer/v2/NFDQIA3OK5C7LC7JGKNMVA274Q.jpg?auth=fbacbd785bd71cb8b4c16977427c2b2311285091a0e2e9a8e4be8904642e05dc",
+        "description": "La incidencia afecta a las líneas C2, C3, C4, C7, C8 y C10 del núcleo de Cercanías de Madrid"
       },
       {
-        "title": "Kevin Warsh asegura que no será “un títere” en manos de Trump y defiende la independencia de la Reserva Federal",
-        "link": "https://elpais.com/economia/2026-04-21/kevin-warsh-asegura-que-no-sera-un-titere-en-manos-de-trump-y-defiende-la-independencia-de-la-reserva-federal.html",
-        "pubDate": "Tue, 21 Apr 2026 17:50:19 GMT",
+        "title": "Trump lee la Biblia desde el Despacho Oval tras sus ataques al Papa ",
+        "link": "https://elpais.com/internacional/2026-04-22/trump-lee-la-biblia-desde-el-despacho-oval-tras-sus-ataques-al-papa.html",
+        "pubDate": "Wed, 22 Apr 2026 01:08:28 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/HEX2MCFFPNKE7JHTRD6I6DYBPA.jpg?auth=110d13a0003a8a61e6cdadf3724bbd01c302a52c148a623944598f11b6705f61",
-        "description": "El candidato del presidente estadounidense a presidir la Fed evita confirmar si las elecciones de 2020 fueron un fraude"
+        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260422/1162459_011907_video_1800.mp4",
+        "description": "El presidente de Estados Unidos participa con un mensaje grabado en una lectura continuada durante una semana de las Sagradas Escrituras en la que participan varios miembros de ..."
       },
       {
-        "title": "Julio César Jasso Ramírez: el tirador de Teotihuacán que celebraba la matanza de Columbine y a la ultraderecha fascista",
-        "link": "https://elpais.com/mexico/2026-04-21/julio-cesar-n-el-tirador-de-teotihuacan-que-celebraba-la-matanza-de-columbine-y-a-la-ultraderecha-fascista.html",
-        "pubDate": "Tue, 21 Apr 2026 16:24:29 GMT",
+        "title": "Maykel Osorbo y Luis Manuel Otero, los presos políticos cubanos que más pesan en La Habana y Washington",
+        "link": "https://elpais.com/america/2026-04-22/maykel-osorbo-y-luis-manuel-otero-los-presos-politicos-cubanos-que-mas-pesan-en-la-habana-y-washington.html",
+        "pubDate": "Wed, 22 Apr 2026 04:00:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162308_171002_video_1800.mp4",
-        "description": "Las autoridades identifican al agresor como un hombre de 27 años originario del Estado de Guerrero que vivía en la capital. Tras asesinar a una turista canadiense y herir a 13 p..."
+        "image": "https://imagenes.elpais.com/resizer/v2/5BPGG426SJCONGWAOVZS2B4JIU.jpg?auth=4f3eff998fd415135c53052d683523dea1fcb4071864abf59676ae0e70f1ee79",
+        "description": "Los artistas, reconocidos internacionalmente, son parte de las negociaciones entre Cuba y Estados Unidos"
       },
       {
-        "title": "Los colombianos varados en el Congo tras ser expulsados de Estados Unidos: “Nunca pensé conocer África en estas circunstancias”",
-        "link": "https://elpais.com/america-colombia/2026-04-21/los-colombianos-varados-en-el-congo-tras-ser-expulsados-de-estados-unidos-nunca-pense-conocer-africa-en-estas-circunstancias.html",
-        "pubDate": "Tue, 21 Apr 2026 04:00:00 GMT",
+        "title": "Madrid dispara hasta los 270.000 euros al año el presupuesto para taxis de sus diputados, a los que les ha subido el sueldo cuatro veces en dos años",
+        "link": "https://elpais.com/espana/madrid/2026-04-22/madrid-dispara-hasta-los-270000-euros-al-ano-el-presupuesto-para-taxis-de-sus-diputados-a-los-que-les-ha-subido-el-sueldo-cuatro-veces-en-dos-anos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/ZGSHASWNSFGD5CELRV3HQODERU.jpeg?auth=ed7e4bfbc55537e02e0199f517795ef891d356f79ddf7fade705b612a7967ab4",
-        "description": "Un grupo de 15 latinoamericanos fue deportado a la nación centroafricana, que recibe por primera vez a migrantes de terceros países enviados por la Administración de Donald Trump"
+        "image": "https://imagenes.elpais.com/resizer/v2/JXOVEXEN3JPTRKRZARPSOZV5R4.jpg?auth=cfa112e6d9675ab7b2cf15264234e05427a7faf86a5e11f3903b2e901005fa25",
+        "description": "La Asamblea de Madrid aprueba una mejora de 500 euros al año que incrementa hasta los 2.000 la cuantía disponible para cada uno de sus 135 representantes"
       },
       {
-        "title": "La cobardía de dos policías durante un tiroteo desata la indignación en Ucrania",
-        "link": "https://elpais.com/internacional/2026-04-21/la-cobardia-de-dos-policias-durante-un-tiroteo-desata-la-indignacion-en-ucrania.html",
-        "pubDate": "Tue, 21 Apr 2026 17:46:45 GMT",
+        "title": "Ricos para siempre y pobres estancados: la movilidad de ingresos en España se atasca en los extremos",
+        "link": "https://elpais.com/economia/2026-04-22/ricos-para-siempre-y-pobres-estancados-la-movilidad-de-ingresos-en-espana-se-atasca-en-los-extremos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162320_174049_video_1800.mp4",
-        "description": "La inacción de los agentes en un ataque con ocho muertos en Kiev provoca una tormenta política y un debate a favor de la tenencia de armas para defensa propia"
+        "image": "https://imagenes.elpais.com/resizer/v2/3I7EVIZYKREHXMUJRYM6JLXHTU.jpg?auth=a4d63283741c4f43db14eaaa56181bc5bec204fe3a28ffdc4e320d20de316e8f",
+        "description": "El 80% de las rentas altas empieza y termina el año en el grupo de más capacidad económica, según datos de un organismo de Hacienda, que refleja mayores cambios en el periodo 20..."
       },
       {
-        "title": "La familia española de las cinco víctimas mortales de un accidente de helicóptero en Nueva York demandan a la empresa que operaba el vuelo",
-        "link": "https://elpais.com/espana/catalunya/2026-04-21/las-familias-de-las-cinco-victimas-de-un-accidente-de-helicoptero-en-nueva-york-demandan-a-la-empresa-que-operaba-el-vuelo.html",
-        "pubDate": "Tue, 21 Apr 2026 20:54:44 GMT",
+        "title": "Mi casero se quiere quedar con el importe total de la fianza y la garantía, ¿es legal? ",
+        "link": "https://elpais.com/economia/vivienda/consultorio/2026-04-22/mi-casero-se-quiere-quedar-con-el-importe-total-de-la-fianza-y-la-garantia-es-legal.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/EIKUGV3WMGD6VSZJTR6NF4NFSE.jpg?auth=94658525880d9405c0149b9d38f7e24ec06daaeace08bb5d5dadeda9eb67f5e1",
-        "description": "Los familiares del matrimonio catalán que falleció junto a sus tres hijos en 2025 acusa a la compañía de negligencia y solicita un juicio con jurado y una indemnización por daños"
+        "image": "https://imagenes.elpais.com/resizer/v2/JNU552RENGF6MXR7LI7RKCOCIQ.jpg?auth=639893b6af1b1af6dded85e86370cf06c89d9f191464aef2cf1a0c77f02c6d6d",
+        "description": "Los lectores envían sus preguntas al consultorio de vivienda de EL PAÍS en colaboración con Legálitas"
       },
       {
-        "title": "El Papa critica ante Obiang “la voluntad de dominio, la prepotencia y la discriminación”",
-        "link": "https://elpais.com/internacional/2026-04-21/el-papa-critica-ante-obiang-la-voluntad-de-dominio-la-prepotencia-y-la-discriminacion.html",
-        "pubDate": "Tue, 21 Apr 2026 18:19:21 GMT",
+        "title": "El Gobierno fija descuentos del 25% en internet para 800.000 hogares vulnerables",
+        "link": "https://elpais.com/economia/2026-04-22/el-gobierno-fija-descuentos-del-25-en-internet-para-800000-hogares-vulnerables.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/WUQDRZF27ZEG5BVVROKRH27BGE.JPG?auth=90b71ee0abd690c3fe36b0ce5f334f4215b2f12616bbd8f92f3bfd7147d0ebb9",
-        "description": "León XIV ofrece un discurso en Guinea Ecuatorial y en lengua española cargado de alusiones a la situación política mundial"
+        "image": "https://imagenes.elpais.com/resizer/v2/6ZTOOWHPIRFOFAKOTBVXKNARJM.JPG?auth=c27d84df778aa38795defe3fb0b09f89e2b07d7fa117d895dc295d7d4b5d91af",
+        "description": "El nuevo servicio universal obligará a los operadores a rebajar la tarifa a perceptores del ingreso mínimo vital y eleva la velocidad mínima a 100 megas"
       },
       {
-        "title": "Deutsche Telekom estudia una megafusión con T-Mobile para crear la mayor operadora del mundo",
-        "link": "https://elpais.com/economia/2026-04-21/deutsche-telekom-estudia-una-megafusion-con-t-mobile-para-crear-la-mayor-teleoperadora-del-mundo.html",
-        "pubDate": "Tue, 21 Apr 2026 20:08:30 GMT",
+        "title": "Electrodos en el cerebro para mitigar el síndrome de Tourette grave: “Los tics más fuertes, junto con gritos y golpes, empezaron a menguar”",
+        "link": "https://elpais.com/salud-y-bienestar/2026-04-22/electrodos-en-el-cerebro-para-mitigar-el-sindrome-de-tourette-grave-los-tics-mas-fuertes-junto-con-gritos-y-golpes-empezaron-a-menguar.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/V2VZXBCQIZC47I6MHQV4STN6MM.jpg?auth=d4d1705aad0b9115f9c8c1dcfe7de5e7de177d93227571720437947ffcc3226b",
-        "description": "La compañía alemana crearía una nueva sociedad fuera de Alemania para integrar su filial estadounidense"
+        "image": "https://imagenes.elpais.com/resizer/v2/ODI5BGUFURCTXLPY7TYIVGXMBU.jpg?auth=70994792dc8a4cbb61eed4eeb004876ab390d020869d8aa61d92bd75fe4dcc74",
+        "description": "Josep, de 21 años, se somete con éxito a una cirugía de estimulación cerebral profunda para paliar síntomas motores y conductuales muy discapacitantes"
+      },
+      {
+        "title": "El cambio climático empeora las alergias, aumenta las olas de calor y empobrece la dieta en Europa",
+        "link": "https://elpais.com/salud-y-bienestar/2026-04-22/el-cambio-climatico-empeora-y-adelanta-dos-semanas-la-temporada-de-alergias-en-europa.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:01 GMT",
+        "source": "EL PAÍS: el periódico global",
+        "image": "https://imagenes.elpais.com/resizer/v2/AEHZ5TWRZRCB7AOY27VRW2JBJI.jpg?auth=3faa7be8d87414d4b1804a9ddec3dc16658fbd755c905d576aa5d9c9fa5c3289",
+        "description": "Un informe alerta de los impactos del calor en la salud: “El caso de España es especialmente grave”, advierte uno de los coautores"
       }
     ],
     "top": [
       {
-        "title": "Trump prorroga el alto el fuego hasta que Irán presente una propuesta y se negocie hasta el final",
+        "title": "Última hora de la guerra de Estados Unidos e Israel contra Irán, en directo | Irán ataca un buque de carga en el estrecho de Ormuz pese a la prórroga del alto el fuego anunciada por EE UU",
+        "link": "https://elpais.com/internacional/2026-04-22/ultima-hora-de-la-guerra-de-estados-unidos-e-israel-contra-iran-en-directo.html",
+        "pubDate": "Wed, 22 Apr 2026 08:10:10 GMT",
+        "source": "EL PAÍS: el periódico global",
+        "image": "https://imagenes.elpais.com/resizer/v2/IN4RETXY3BBBDMZQ7GJSHMFVAE.jpg?auth=3d8ddda7387b54d500ed15aa499fdd2a1a468b91a39b05aefe7073691c68a638",
+        "description": "La autoridad marítima británica informa de disparos contra un segundo carguero al oeste de Irán | Trump asegura que el bloqueo naval sobre el corredor es necesario para alcanzar..."
+      },
+      {
+        "title": "Trump prorroga el alto el fuego hasta que Irán presente una propuesta y concluyan las negociaciones",
         "link": "https://elpais.com/internacional/2026-04-21/trump-prorroga-el-alto-el-fuego-hasta-que-iran-presente-una-propuesta-y-se-negocie-hasta-el-final.html",
         "pubDate": "Tue, 21 Apr 2026 21:30:37 GMT",
         "source": "EL PAÍS: el periódico global",
@@ -3275,60 +2810,44 @@ window.NEWS_DATA = {
         "description": "El presidente de EE UU extiende la tregua a pocas horas de que expire, aunque mantiene el bloqueo naval sobre Ormuz"
       },
       {
-        "title": "Italia y Alemania frenan la posibilidad de suspender el Acuerdo de Asociación de la UE con Israel como pide España ",
-        "link": "https://elpais.com/internacional/2026-04-21/albares-la-ue-debe-enviar-una-senal-fuerte-a-israel.html",
-        "pubDate": "Tue, 21 Apr 2026 16:49:50 GMT",
+        "title": "Repsol, Moeve y BP solo garantizan el  combustible de aviación hasta antes del verano",
+        "link": "https://elpais.com/economia/2026-04-22/repsol-moeve-y-bp-garantizan-el-suministro-de-combustible-de-aviacion-hasta-antes-del-verano.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162104_103607_video_1800.mp4",
-        "description": "Aunque la propuesta española, irlandesa y eslovena sigue careciendo de respaldo suficiente, la iniciativa reactiva la discusión sobre la necesidad de “hacer algo” para que el Go..."
+        "image": "https://imagenes.elpais.com/resizer/v2/KWGECDHCOBFLZPFOSJAT2IAPJ4.jpg?auth=b273bf537c1d88d380a20149dc08a9b62691bbf105dfccc56970cbaea98d974e",
+        "description": "Los principales operadores nacionales trasladan al Gobierno que no habrá problemas de queroseno en mayo y que están trabajando para contar con suministro suficiente en junio"
       },
       {
-        "title": "Vox fuerza al PP a votar en el Congreso la “prioridad nacional” en las ayudas frente a los inmigrantes  ",
-        "link": "https://elpais.com/espana/2026-04-21/vox-fuerza-al-pp-a-votar-en-el-congreso-la-prioridad-nacional-en-las-ayudas-y-prestaciones-publicas-a-los-inmigrantes.html",
-        "pubDate": "Tue, 21 Apr 2026 19:13:59 GMT",
+        "title": "Los precios bajo cero de la electricidad y la guerra ponen contra las cuerdas a los promotores fotovoltaicos",
+        "link": "https://cincodias.elpais.com/companias/2026-04-22/los-precios-bajo-cero-de-la-electricidad-y-la-guerra-ponen-contra-las-cuerdas-a-los-promotores-fotovoltaicos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:15:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162268_160903_video_1800.mp4",
-        "description": "En paralelo a la sesión de investidura de Guardiola, el PP presenta una enmienda que asume el principio de la ultraderecha pero Feijóo insiste en que la concesión dependerá del ..."
+        "image": "https://imagenes.elpais.com/resizer/v2/BFPHI2EY3BIZHNS4W3GL3D7PU4.jpg?auth=e043c70c075a7c9a09259a6ed307a00bb8e6231b043187a4a1208224eb630348",
+        "description": "Los bancos cierran la puerta a la financiación, y algunos inversores oportunistas y de largo plazo sacan la chequera. El número de gigavatios solares con conexión que no están o..."
       },
       {
-        "title": "Guardiola promete cumplir el pacto con Vox, pero omite la “prioridad nacional”",
-        "link": "https://elpais.com/espana/2026-04-21/sigue-en-directo-la-intervencion-de-maria-guardiola.html",
-        "pubDate": "Tue, 21 Apr 2026 16:53:13 GMT",
+        "title": "Última hora de la actualidad política, en directo | El PSOE en la investidura de Guardiola: “La prioridad nacional ni es legal ni es humana”",
+        "link": "https://elpais.com/espana/2026-04-22/ultima-hora-de-la-actualidad-politica-en-directo.html",
+        "pubDate": "Wed, 22 Apr 2026 08:18:52 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162329_180609_video_1800.mp4",
-        "description": "La presidenta en funciones será investida de nuevo este miércoles con los votos de la ultraderecha y tras una parálisis de casi cinco meses"
+        "image": "https://imagenes.elpais.com/resizer/v2/PVUQD4ICGJAKJCUW4N3O45BRQM.jpg?auth=7904eae219a3ba6299c12f38d28d613161f281e9ec643cd69281f5a11797c1cb",
+        "description": "La candidata popular será nombrada de nuevo presidenta con los votos de Vox"
       },
       {
-        "title": "El Gobierno aprueba el nuevo plan estatal que blinda las viviendas protegidas",
-        "link": "https://elpais.com/economia/vivienda/2026-04-21/el-gobierno-aprueba-el-nuevo-plan-estatal-que-blinda-las-viviendas-protegidas.html",
-        "pubDate": "Tue, 21 Apr 2026 11:46:40 GMT",
+        "title": "Feijóo reprocha la falta de inversión y Sánchez responde: “Ustedes se financian en B y quieren trabajadores en B”",
+        "link": "https://elpais.com/espana/2026-04-22/feijoo-reprocha-la-falta-de-inversion-y-sanchez-responde-ustedes-se-financian-en-b-y-quieren-trabajadores-en-b.html",
+        "pubDate": "Wed, 22 Apr 2026 07:41:18 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162241_153614_video_1800.mp4",
-        "description": "El programa para 2026-2030, dotado con 7.000 millones de euros, se desplegará en el segundo semestre tras el acuerdo con las comunidades"
+        "image": "https://imagenes.elpais.com/resizer/v2/6DSQQVQ2UVCHHHHUMTRZCTWQWA.jpg?auth=720dbe0cb9f3fde52a375abc650048349befef5b263de603cb15fa90cd9750f3",
+        "description": "Junts reclama al presidente un adelanto electoral por la corrupción y por no cumplir los acuerdos alcanzados con su formación"
       },
       {
-        "title": "Ayudas de 300 euros para alquilar y de 30.000 para reformar casas vacías: las claves del nuevo plan estatal de vivienda",
-        "link": "https://elpais.com/economia/vivienda/2026-04-21/ayudas-de-300-euros-para-alquilar-y-de-30000-para-reformar-casas-vacias-las-claves-del-nuevo-plan-estatal-de-vivienda.html",
-        "pubDate": "Tue, 21 Apr 2026 14:37:16 GMT",
+        "title": "Oír, ver y acatar: el papel de las secretarias del ‘caso Koldo’",
+        "link": "https://elpais.com/espana/2026-04-22/oir-ver-y-acatar-el-papel-de-las-secretarias-del-caso-koldo.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162241_153614_video_1800.mp4",
-        "description": "El programa para 2026-2030 busca ampliar el parque público y ofrecer arrendamientos asequibles para colectivos vulnerables"
-      },
-      {
-        "title": "El PP propone bajar de 1.800 a 900 euros la renta para declarar a una familia vulnerable",
-        "link": "https://elpais.com/espana/2026-04-21/el-pp-propone-bajar-de-1800-a-900-euros-la-renta-para-declarar-a-una-familia-vulnerable.html",
-        "pubDate": "Tue, 21 Apr 2026 18:15:09 GMT",
-        "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/VDUCRCCLTJK6PLLEP7JBNDEDCA.jpg?auth=6e914b0713b5d96202c1a048c52b6f785cc60af91af656f503aaf3e234dd2547",
-        "description": "Los populares impulsan una reforma urbanística para eliminar trámites y facilitar desahucios"
-      },
-      {
-        "title": "Morante de la Puebla, la dolorosa contrariedad de un torero roto por dentro",
-        "link": "https://elpais.com/cultura/2026-04-21/morante-de-la-puebla-la-dolorosa-contrariedad-de-un-torero-roto-por-dentro.html",
-        "pubDate": "Tue, 21 Apr 2026 15:07:19 GMT",
-        "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/KMEB74OWKVDFNIANQPONUCNURA.jpg?auth=e6c4b573b27a9e3411d84187a34f9186cd90b5770945a5721b0ff4dcc84a3476",
-        "description": "La cogida plantea muchos interrogantes sobre el futuro del sevillano y añade un capítulo épico a su brillante hoja de servicios"
+        "image": "https://imagenes.elpais.com/resizer/v2/MT47CS4A7BP7NFW4N6MV4HTMSY.jpg?auth=16498361e1f62ad0623526478f7272966d1ed0bb3fc9cf99272a15b7a461351e",
+        "description": "La asistente de Ábalos reconoce que expidió salvoconductos sin control para eludir las restricciones de movilidad en pandemia"
       },
       {
         "title": "El antiguo CEO de Air Europa niega pagos a Ábalos y rechaza que sus gestiones favorecieran el rescate de la aerolínea ",
@@ -3347,90 +2866,178 @@ window.NEWS_DATA = {
         "description": "Hay un testigo nervioso que dice que alguna vez ha saludado a Ábalos y recrea con la mano el saludo que le hacía. La cara de Ábalos en el banquillo es un poema"
       },
       {
-        "title": "El esperado testimonio del CEO de Globalia: defiende la legalidad del rescate y rebaja el papel de Aldama",
-        "link": "https://elpais.com/videos/2026-04-21/el-esperado-testimonio-del-ceo-de-globalia-defiende-la-legalidad-del-rescate-y-rebaja-el-papel-de-aldama.html",
-        "pubDate": "Tue, 21 Apr 2026 19:20:07 GMT",
+        "title": "‘Cara al show’: Marc Giró, los prefachas y un poco lo de siempre",
+        "link": "https://elpais.com/television/2026-04-22/cara-al-show-marc-giro-los-prefachas-y-un-poco-lo-de-siempre.html",
+        "pubDate": "Wed, 22 Apr 2026 05:03:07 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162350_190808_video_1800.mp4",
-        "description": "El empresario ha afirmado que nunca nadie les pidió que pagaran mordidas para lograr el rescate de la compañía aerea"
+        "image": "https://imagenes.elpais.com/resizer/v2/SVVPGZK6OJD6FCLHHLM4JGIPBY.jpg?auth=fad8d365794a72afd95de27708778651357fceb36f5efce3247ffc970f083630",
+        "description": "En el estreno del programa en La Sexta el presentador tiró de lo que mejor sabe hacer y mandó algunos mensajes"
       },
       {
-        "title": "El comisario jefe de la unidad que investigó Gürtel declara que nadie le informó del espionaje a Bárcenas",
-        "link": "https://elpais.com/espana/2026-04-21/el-comisario-jefe-de-la-unidad-que-investigo-gurtel-declara-que-nadie-lo-informo-del-espionaje-a-barcenas.html",
-        "pubDate": "Tue, 21 Apr 2026 18:41:30 GMT",
+        "title": "El debate | ¿Ha dañado Trump definitivamente la autoridad de Estados Unidos?",
+        "link": "https://elpais.com/opinion/2026-04-22/el-debate-ha-danado-trump-definitivamente-la-autoridad-de-estados-unidos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/RBIHPD55RZC6DDU2RWFJT5NKDM.jpg?auth=115bd0b25f60cdef57fb70c616064d84e9d6bc7634aba737579539b3c08a8e88",
-        "description": "La Fiscalía trata de evidenciar que Kitchen se desplegó de forma ajena a los agentes que cercaban al extesorero bajo el control del juez"
+        "image": "https://imagenes.elpais.com/resizer/v2/ZC6N27WCEBIZDCXVI6FR3W5MGI.jpg?auth=d17bcb5bf67a8d45ce81a07db134ce804fe50398c905f65edaf4047437446c2b",
+        "description": "Las constantes exageraciones y amenazas del presidente republicano han ido mermando la credibilidad de Washington entre sus aliados"
       },
       {
-        "title": "Venezuela emprende cambios profundos en el Tribunal Supremo de Justicia",
-        "link": "https://elpais.com/america/2026-04-21/venezuela-emprende-cambios-profundos-en-el-tribunal-supremo-de-justicia.html",
-        "pubDate": "Tue, 21 Apr 2026 22:04:28 GMT",
+        "title": "Una avería de madrugada en Atocha provoca el caos ferroviario en casi toda la red de Cercanías en plena hora punta: “El tren va a trompicones”",
+        "link": "https://elpais.com/espana/madrid/2026-04-22/una-averia-de-madrugada-en-atocha-provoca-el-caos-ferroviario-en-casi-toda-la-red-de-cercanias-en-plena-hora-punta.html",
+        "pubDate": "Wed, 22 Apr 2026 06:49:21 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/ANW7UKEHTRJULOAKQAROU2U5EI.jpg?auth=049776627ce62d09d971a647890e82708f1634c0e1edb6e701eaf7f5fcccb58f",
-        "description": "La Asamblea Nacional inició las gestiones para renovar al 70% de los magistrados del Supremo, un movimiento que reduce la influencia de Maduro y Cilia Flores del Poder Judicial"
+        "image": "https://imagenes.elpais.com/resizer/v2/NFDQIA3OK5C7LC7JGKNMVA274Q.jpg?auth=fbacbd785bd71cb8b4c16977427c2b2311285091a0e2e9a8e4be8904642e05dc",
+        "description": "La incidencia afecta a las líneas C2, C3, C4, C7, C8 y C10 del núcleo de Cercanías de Madrid"
       },
       {
-        "title": "Kevin Warsh asegura que no será “un títere” en manos de Trump y defiende la independencia de la Reserva Federal",
-        "link": "https://elpais.com/economia/2026-04-21/kevin-warsh-asegura-que-no-sera-un-titere-en-manos-de-trump-y-defiende-la-independencia-de-la-reserva-federal.html",
-        "pubDate": "Tue, 21 Apr 2026 17:50:19 GMT",
+        "title": "Trump lee la Biblia desde el Despacho Oval tras sus ataques al Papa ",
+        "link": "https://elpais.com/internacional/2026-04-22/trump-lee-la-biblia-desde-el-despacho-oval-tras-sus-ataques-al-papa.html",
+        "pubDate": "Wed, 22 Apr 2026 01:08:28 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/HEX2MCFFPNKE7JHTRD6I6DYBPA.jpg?auth=110d13a0003a8a61e6cdadf3724bbd01c302a52c148a623944598f11b6705f61",
-        "description": "El candidato del presidente estadounidense a presidir la Fed evita confirmar si las elecciones de 2020 fueron un fraude"
+        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260422/1162459_011907_video_1800.mp4",
+        "description": "El presidente de Estados Unidos participa con un mensaje grabado en una lectura continuada durante una semana de las Sagradas Escrituras en la que participan varios miembros de ..."
       },
       {
-        "title": "Julio César Jasso Ramírez: el tirador de Teotihuacán que celebraba la matanza de Columbine y a la ultraderecha fascista",
-        "link": "https://elpais.com/mexico/2026-04-21/julio-cesar-n-el-tirador-de-teotihuacan-que-celebraba-la-matanza-de-columbine-y-a-la-ultraderecha-fascista.html",
-        "pubDate": "Tue, 21 Apr 2026 16:24:29 GMT",
+        "title": "Maykel Osorbo y Luis Manuel Otero, los presos políticos cubanos que más pesan en La Habana y Washington",
+        "link": "https://elpais.com/america/2026-04-22/maykel-osorbo-y-luis-manuel-otero-los-presos-politicos-cubanos-que-mas-pesan-en-la-habana-y-washington.html",
+        "pubDate": "Wed, 22 Apr 2026 04:00:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162308_171002_video_1800.mp4",
-        "description": "Las autoridades identifican al agresor como un hombre de 27 años originario del Estado de Guerrero que vivía en la capital. Tras asesinar a una turista canadiense y herir a 13 p..."
+        "image": "https://imagenes.elpais.com/resizer/v2/5BPGG426SJCONGWAOVZS2B4JIU.jpg?auth=4f3eff998fd415135c53052d683523dea1fcb4071864abf59676ae0e70f1ee79",
+        "description": "Los artistas, reconocidos internacionalmente, son parte de las negociaciones entre Cuba y Estados Unidos"
       },
       {
-        "title": "Los colombianos varados en el Congo tras ser expulsados de Estados Unidos: “Nunca pensé conocer África en estas circunstancias”",
-        "link": "https://elpais.com/america-colombia/2026-04-21/los-colombianos-varados-en-el-congo-tras-ser-expulsados-de-estados-unidos-nunca-pense-conocer-africa-en-estas-circunstancias.html",
-        "pubDate": "Tue, 21 Apr 2026 04:00:00 GMT",
+        "title": "Madrid dispara hasta los 270.000 euros al año el presupuesto para taxis de sus diputados, a los que les ha subido el sueldo cuatro veces en dos años",
+        "link": "https://elpais.com/espana/madrid/2026-04-22/madrid-dispara-hasta-los-270000-euros-al-ano-el-presupuesto-para-taxis-de-sus-diputados-a-los-que-les-ha-subido-el-sueldo-cuatro-veces-en-dos-anos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/ZGSHASWNSFGD5CELRV3HQODERU.jpeg?auth=ed7e4bfbc55537e02e0199f517795ef891d356f79ddf7fade705b612a7967ab4",
-        "description": "Un grupo de 15 latinoamericanos fue deportado a la nación centroafricana, que recibe por primera vez a migrantes de terceros países enviados por la Administración de Donald Trump"
+        "image": "https://imagenes.elpais.com/resizer/v2/JXOVEXEN3JPTRKRZARPSOZV5R4.jpg?auth=cfa112e6d9675ab7b2cf15264234e05427a7faf86a5e11f3903b2e901005fa25",
+        "description": "La Asamblea de Madrid aprueba una mejora de 500 euros al año que incrementa hasta los 2.000 la cuantía disponible para cada uno de sus 135 representantes"
       },
       {
-        "title": "La cobardía de dos policías durante un tiroteo desata la indignación en Ucrania",
-        "link": "https://elpais.com/internacional/2026-04-21/la-cobardia-de-dos-policias-durante-un-tiroteo-desata-la-indignacion-en-ucrania.html",
-        "pubDate": "Tue, 21 Apr 2026 17:46:45 GMT",
+        "title": "Ricos para siempre y pobres estancados: la movilidad de ingresos en España se atasca en los extremos",
+        "link": "https://elpais.com/economia/2026-04-22/ricos-para-siempre-y-pobres-estancados-la-movilidad-de-ingresos-en-espana-se-atasca-en-los-extremos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162320_174049_video_1800.mp4",
-        "description": "La inacción de los agentes en un ataque con ocho muertos en Kiev provoca una tormenta política y un debate a favor de la tenencia de armas para defensa propia"
+        "image": "https://imagenes.elpais.com/resizer/v2/3I7EVIZYKREHXMUJRYM6JLXHTU.jpg?auth=a4d63283741c4f43db14eaaa56181bc5bec204fe3a28ffdc4e320d20de316e8f",
+        "description": "El 80% de las rentas altas empieza y termina el año en el grupo de más capacidad económica, según datos de un organismo de Hacienda, que refleja mayores cambios en el periodo 20..."
       },
       {
-        "title": "La familia española de las cinco víctimas mortales de un accidente de helicóptero en Nueva York demandan a la empresa que operaba el vuelo",
-        "link": "https://elpais.com/espana/catalunya/2026-04-21/las-familias-de-las-cinco-victimas-de-un-accidente-de-helicoptero-en-nueva-york-demandan-a-la-empresa-que-operaba-el-vuelo.html",
-        "pubDate": "Tue, 21 Apr 2026 20:54:44 GMT",
+        "title": "Mi casero se quiere quedar con el importe total de la fianza y la garantía, ¿es legal? ",
+        "link": "https://elpais.com/economia/vivienda/consultorio/2026-04-22/mi-casero-se-quiere-quedar-con-el-importe-total-de-la-fianza-y-la-garantia-es-legal.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/EIKUGV3WMGD6VSZJTR6NF4NFSE.jpg?auth=94658525880d9405c0149b9d38f7e24ec06daaeace08bb5d5dadeda9eb67f5e1",
-        "description": "Los familiares del matrimonio catalán que falleció junto a sus tres hijos en 2025 acusa a la compañía de negligencia y solicita un juicio con jurado y una indemnización por daños"
+        "image": "https://imagenes.elpais.com/resizer/v2/JNU552RENGF6MXR7LI7RKCOCIQ.jpg?auth=639893b6af1b1af6dded85e86370cf06c89d9f191464aef2cf1a0c77f02c6d6d",
+        "description": "Los lectores envían sus preguntas al consultorio de vivienda de EL PAÍS en colaboración con Legálitas"
       },
       {
-        "title": "El Papa critica ante Obiang “la voluntad de dominio, la prepotencia y la discriminación”",
-        "link": "https://elpais.com/internacional/2026-04-21/el-papa-critica-ante-obiang-la-voluntad-de-dominio-la-prepotencia-y-la-discriminacion.html",
-        "pubDate": "Tue, 21 Apr 2026 18:19:21 GMT",
+        "title": "El Gobierno fija descuentos del 25% en internet para 800.000 hogares vulnerables",
+        "link": "https://elpais.com/economia/2026-04-22/el-gobierno-fija-descuentos-del-25-en-internet-para-800000-hogares-vulnerables.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:01 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/WUQDRZF27ZEG5BVVROKRH27BGE.JPG?auth=90b71ee0abd690c3fe36b0ce5f334f4215b2f12616bbd8f92f3bfd7147d0ebb9",
-        "description": "León XIV ofrece un discurso en Guinea Ecuatorial y en lengua española cargado de alusiones a la situación política mundial"
+        "image": "https://imagenes.elpais.com/resizer/v2/6ZTOOWHPIRFOFAKOTBVXKNARJM.JPG?auth=c27d84df778aa38795defe3fb0b09f89e2b07d7fa117d895dc295d7d4b5d91af",
+        "description": "El nuevo servicio universal obligará a los operadores a rebajar la tarifa a perceptores del ingreso mínimo vital y eleva la velocidad mínima a 100 megas"
       },
       {
-        "title": "Deutsche Telekom estudia una megafusión con T-Mobile para crear la mayor operadora del mundo",
-        "link": "https://elpais.com/economia/2026-04-21/deutsche-telekom-estudia-una-megafusion-con-t-mobile-para-crear-la-mayor-teleoperadora-del-mundo.html",
-        "pubDate": "Tue, 21 Apr 2026 20:08:30 GMT",
+        "title": "Electrodos en el cerebro para mitigar el síndrome de Tourette grave: “Los tics más fuertes, junto con gritos y golpes, empezaron a menguar”",
+        "link": "https://elpais.com/salud-y-bienestar/2026-04-22/electrodos-en-el-cerebro-para-mitigar-el-sindrome-de-tourette-grave-los-tics-mas-fuertes-junto-con-gritos-y-golpes-empezaron-a-menguar.html",
+        "pubDate": "Wed, 22 Apr 2026 06:00:00 GMT",
         "source": "EL PAÍS: el periódico global",
-        "image": "https://imagenes.elpais.com/resizer/v2/V2VZXBCQIZC47I6MHQV4STN6MM.jpg?auth=d4d1705aad0b9115f9c8c1dcfe7de5e7de177d93227571720437947ffcc3226b",
-        "description": "La compañía alemana crearía una nueva sociedad fuera de Alemania para integrar su filial estadounidense"
+        "image": "https://imagenes.elpais.com/resizer/v2/ODI5BGUFURCTXLPY7TYIVGXMBU.jpg?auth=70994792dc8a4cbb61eed4eeb004876ab390d020869d8aa61d92bd75fe4dcc74",
+        "description": "Josep, de 21 años, se somete con éxito a una cirugía de estimulación cerebral profunda para paliar síntomas motores y conductuales muy discapacitantes"
+      },
+      {
+        "title": "El cambio climático empeora las alergias, aumenta las olas de calor y empobrece la dieta en Europa",
+        "link": "https://elpais.com/salud-y-bienestar/2026-04-22/el-cambio-climatico-empeora-y-adelanta-dos-semanas-la-temporada-de-alergias-en-europa.html",
+        "pubDate": "Wed, 22 Apr 2026 03:30:01 GMT",
+        "source": "EL PAÍS: el periódico global",
+        "image": "https://imagenes.elpais.com/resizer/v2/AEHZ5TWRZRCB7AOY27VRW2JBJI.jpg?auth=3faa7be8d87414d4b1804a9ddec3dc16658fbd755c905d576aa5d9c9fa5c3289",
+        "description": "Un informe alerta de los impactos del calor en la salud: “El caso de España es especialmente grave”, advierte uno de los coautores"
       }
     ],
     "technology": [],
     "gaming": [],
     "finance": [
       {
+        "title": "Repsol, Moeve y BP solo garantizan el  combustible de aviación hasta antes del verano",
+        "link": "https://elpais.com/economia/2026-04-22/repsol-moeve-y-bp-garantizan-el-suministro-de-combustible-de-aviacion-hasta-antes-del-verano.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/KWGECDHCOBFLZPFOSJAT2IAPJ4.jpg?auth=b273bf537c1d88d380a20149dc08a9b62691bbf105dfccc56970cbaea98d974e",
+        "description": "Los principales operadores nacionales trasladan al Gobierno que no habrá problemas de queroseno en mayo y que están trabajando para contar con suministro suficiente en junio"
+      },
+      {
+        "title": "El Gobierno fija descuentos del 25% en internet para 800.000 hogares vulnerables",
+        "link": "https://elpais.com/economia/2026-04-22/el-gobierno-fija-descuentos-del-25-en-internet-para-800000-hogares-vulnerables.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/6ZTOOWHPIRFOFAKOTBVXKNARJM.JPG?auth=c27d84df778aa38795defe3fb0b09f89e2b07d7fa117d895dc295d7d4b5d91af",
+        "description": "El nuevo servicio universal obligará a los operadores a rebajar la tarifa a perceptores del ingreso mínimo vital y eleva la velocidad mínima a 100 megas"
+      },
+      {
+        "title": "El gigante chino CATL presenta baterías con autonomía para 1.500 kilómetros y recargas en 6 minutos",
+        "link": "https://elpais.com/economia/2026-04-22/el-gigante-chino-catl-presenta-baterias-con-autonomia-para-1500-kilometros-y-recargas-en-6-minutos.html",
+        "pubDate": "Wed, 22 Apr 2026 07:18:52 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/RRLCKBQ7XJNXHBVJOVIYCH67MY.jpg?auth=ba323cbf8035c70c19acb6ce9d10d995e6866c0ba2b0c050ac1a7fd686768a23",
+        "description": "La compañía, que levanta una planta en España, muestra en Pekín sus últimos avances en un nuevo capítulo de la pugna con su gran rival BYD"
+      },
+      {
+        "title": "Ricos para siempre y pobres estancados: la movilidad de ingresos en España se atasca en los extremos",
+        "link": "https://elpais.com/economia/2026-04-22/ricos-para-siempre-y-pobres-estancados-la-movilidad-de-ingresos-en-espana-se-atasca-en-los-extremos.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/3I7EVIZYKREHXMUJRYM6JLXHTU.jpg?auth=a4d63283741c4f43db14eaaa56181bc5bec204fe3a28ffdc4e320d20de316e8f",
+        "description": "El 80% de las rentas altas empieza y termina el año en el grupo de más capacidad económica, según datos de un organismo de Hacienda, que refleja mayores cambios en el periodo 20..."
+      },
+      {
+        "title": "La pobreza infantil es un problema de empleo",
+        "link": "https://elpais.com/economia/2026-04-22/la-pobreza-infantil-es-un-problema-de-empleo.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/3WPAKREA25E5NLZIGQ5FPNL27E.jpg?auth=9e1ff65bfdd9b830d865be0e48dca67a7f9dd9f4ad28a1a0e4ca24add4d471c0",
+        "description": "Las dificultades en los menores suelen derivar de la falta de trabajo en el hogar en general, pero más de la insuficiente participación laboral de las madres"
+      },
+      {
+        "title": "La esperanza de SpaceX, valorada en 1,75 billones de dólares, depende de la imaginación de Musk",
+        "link": "https://cincodias.elpais.com/opinion/2026-04-22/la-esperanza-de-spacex-valorada-en-175-billones-de-dolares-depende-de-la-imaginacion-de-musk.html",
+        "pubDate": "Wed, 22 Apr 2026 03:40:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/LC6MQYCJ3BE3BHFKIN7J4X53R4.jpg?auth=e68fc8d291ae3fb173ba5c0d8fc6f0e4215664d0aafd20877c7e2fe600235371",
+        "description": "La empresa prepara una OPV en junio para buscar inversiones por 75.000 millones de dólares"
+      },
+      {
+        "title": "La crisis de la vivienda en España exige acciones reales e inmediatas",
+        "link": "https://cincodias.elpais.com/opinion/2026-04-22/la-crisis-de-la-vivienda-en-espana-exige-acciones-reales-e-inmediatas.html",
+        "pubDate": "Wed, 22 Apr 2026 03:40:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/BG2MQ3MQTRKJVKI2ACYJ2V6AEY.jpg?auth=09fc5f5fc19ef9ef5c46f9e40ddb6c11019a17531b476e72b8c7f15922a49ee6",
+        "description": "Requiere un enfoque integral que incluya una política activa de generación de oferta y estabilizar la regulación del mercado"
+      },
+      {
+        "title": "Las claves: la veterana Apple cambia de capitán para el nuevo gran reto, la IA",
+        "link": "https://cincodias.elpais.com/opinion/2026-04-22/las-claves-la-veterana-apple-cambia-de-capitan-para-el-nuevo-gran-reto-la-ia.html",
+        "pubDate": "Wed, 22 Apr 2026 03:40:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/RY2356HBPJIJVC5DRGN4SZKTOU.jpg?auth=d242b3cb308e5cc18d6c758d1c97308cdbf2b4ad5e47b7c37aa65caa6283dffa",
+        "description": "Su dependencia de la cadena global de suministro ha obligado a Cook a mantener una relación cercana con el poder político"
+      },
+      {
+        "title": "Ternus solo debe seguir los pasos de Jobs y de Cook",
+        "link": "https://cincodias.elpais.com/opinion/2026-04-22/ternus-solo-debe-seguir-los-pasos-de-jobs-y-de-cook.html",
+        "pubDate": "Wed, 22 Apr 2026 03:40:00 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/IH23GSQBLZJNXP4LJ5GCXSPR4A.jpg?auth=0d07f880456ed5a9774fbe94b13cfefc99a3efc3397bf25b3206084d64d863e4",
+        "description": "Es probable que el próximo CEO de Apple pueda hacer realidad el nuevo gran producto de consumo de la IA"
+      },
+      {
+        "title": "El Gobierno reactiva el nuevo examen a la sostenibilidad del sistema de pensiones que le reclamó Bruselas",
+        "link": "https://elpais.com/economia/2026-04-22/el-gobierno-reactiva-el-nuevo-examen-a-la-sostenibilidad-del-sistema-de-pensiones-que-le-reclamo-bruselas.html",
+        "pubDate": "Wed, 22 Apr 2026 03:45:01 GMT",
+        "source": "Economía en EL PAÍS",
+        "image": "https://imagenes.elpais.com/resizer/v2/FWX6D4RT6BCDBFERBJU5CQ2L44.jpg?auth=13e592650cc8e9e1a3b88f352c51b1d403f1a38b4f44eba85d0ff34c6de0dea4",
+        "description": "El Consejo de Ministros aprueba encargar un estudio a la Autoridad Fiscal por la vía que reclamaba el supervisor, que apreciaba en la anterior petición una “merma” a su independ..."
+      },
+      {
         "title": "El Gobierno aprueba el nuevo plan estatal que blinda las viviendas protegidas",
         "link": "https://elpais.com/economia/vivienda/2026-04-21/el-gobierno-aprueba-el-nuevo-plan-estatal-que-blinda-las-viviendas-protegidas.html",
         "pubDate": "Tue, 21 Apr 2026 11:46:40 GMT",
@@ -3445,14 +3052,6 @@ window.NEWS_DATA = {
         "source": "Economía en EL PAÍS",
         "image": "https://vdmedia.elpais.com/mcv/elpais/multimedia/20260421/1162241_153614_video_1800.mp4",
         "description": "El programa para 2026-2030 busca ampliar el parque público y ofrecer arrendamientos asequibles para colectivos vulnerables"
-      },
-      {
-        "title": "Deutsche Telekom estudia una megafusión con T-Mobile para crear la mayor operadora del mundo",
-        "link": "https://elpais.com/economia/2026-04-21/deutsche-telekom-estudia-una-megafusion-con-t-mobile-para-crear-la-mayor-teleoperadora-del-mundo.html",
-        "pubDate": "Tue, 21 Apr 2026 20:08:30 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/V2VZXBCQIZC47I6MHQV4STN6MM.jpg?auth=d4d1705aad0b9115f9c8c1dcfe7de5e7de177d93227571720437947ffcc3226b",
-        "description": "La compañía alemana crearía una nueva sociedad fuera de Alemania para integrar su filial estadounidense"
       },
       {
         "title": "Vivir entre cuatro paredes: el refugio emergente contra la crisis de la vivienda  ",
@@ -3463,44 +3062,12 @@ window.NEWS_DATA = {
         "description": "La oferta de habitaciones en alquiler ha crecido un 17% en un año. Las dificultades de acceso impulsan negocios que incluso ofrecen comprar estancias en un piso"
       },
       {
-        "title": "Las claves: Bruselas arrastra los pies ante el impuesto a las energéticas, y el feo de María Corina Machado a La Moncloa",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-21/las-claves-bruselas-arrastra-los-pies-ante-las-peticiones-de-un-impuesto-a-las-energeticas.html",
-        "pubDate": "Tue, 21 Apr 2026 03:40:00 GMT",
+        "title": "Deutsche Telekom estudia una megafusión con T-Mobile para crear la mayor operadora del mundo",
+        "link": "https://elpais.com/economia/2026-04-21/deutsche-telekom-estudia-una-megafusion-con-t-mobile-para-crear-la-mayor-teleoperadora-del-mundo.html",
+        "pubDate": "Tue, 21 Apr 2026 20:08:30 GMT",
         "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/DIEYXBTNNJIWFEMGKYY3Z46BGA.jpg?auth=da05d7a963e0e00332eebcd467091cd7ee4ed3f3d3124a06dda2c15065523104",
-        "description": "Se echa de menos mayor proactividad para buscar soluciones por parte de la Comisión Europea"
-      },
-      {
-        "title": "Vía libre a Indra y Escribano en los programas de defensa",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-21/via-libre-a-indra-y-escribano-en-los-programas-de-defensa.html",
-        "pubDate": "Tue, 21 Apr 2026 03:40:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/ZW7URJYUB5GHTJQMDU56FAQ3EE.jpeg?auth=df1352076f94919e61d6e9db295b5375ffb2988c22140763f66143c831c5631d",
-        "description": "La decisión de la justicia no deja de proporcionar un balón de oxígeno al esfuerzo de los políticos por hacer un gran conglomerado nacional de la defensa"
-      },
-      {
-        "title": "Confianza rota: por qué Estados Unidos ve inmoral a su propio pueblo",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-21/confianza-rota-por-que-estados-unidos-ve-inmoral-a-su-propio-pueblo.html",
-        "pubDate": "Tue, 21 Apr 2026 03:40:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/4GV6EAS3X5BTNJJIKKQIV7PZV4.jpg?auth=77de0523296f0716935a7622195ea2791fa75662135b9932b7b0d54d37b8342c",
-        "description": "La propagación de la desinformación y la manipulación emocional deterioran la confianza mutua"
-      },
-      {
-        "title": "Patrick Drahi arranca una victoria de las fauces de la derrota",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-21/patrick-drahi-arranca-una-victoria-de-las-fauces-de-la-derrota.html",
-        "pubDate": "Tue, 21 Apr 2026 03:40:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/PKFJL2OKCBNCLNHTGSUDWC2YW4.jpg?auth=3711aebb5e818f3ecc7dccbfcbdf93684082a04fcd1c35bff6c359ad3b99758c",
-        "description": "El consorcio de Bouygues, Iliad-Free y Orange mejoran su oferta por SFR hasta 20.000 millones de euros"
-      },
-      {
-        "title": "Las empresas no son un buen amortiguador frente al impacto presupuestario de la guerra",
-        "link": "https://cincodias.elpais.com/opinion/2026-04-21/las-empresas-no-son-un-buen-amortiguador-frente-al-impacto-presupuestario-de-la-guerra.html",
-        "pubDate": "Tue, 21 Apr 2026 03:36:00 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/LEHIBRTFB5MPBI3GLQ5KOEM44I.jpg?auth=d3cf8b04fca7248238adf43260852d6e0f2352da2debb02167c7bf1e0584565b",
-        "description": "India traslada al sector privado la carga de la crisis energética"
+        "image": "https://imagenes.elpais.com/resizer/v2/V2VZXBCQIZC47I6MHQV4STN6MM.jpg?auth=d4d1705aad0b9115f9c8c1dcfe7de5e7de177d93227571720437947ffcc3226b",
+        "description": "La compañía alemana crearía una nueva sociedad fuera de Alemania para integrar su filial estadounidense"
       },
       {
         "title": "El Gobierno se enfrenta al rechazo sindical a la oferta de empleo público en la Administración General del Estado",
@@ -3549,46 +3116,6 @@ window.NEWS_DATA = {
         "source": "Economía en EL PAÍS",
         "image": "https://imagenes.elpais.com/resizer/v2/I62LT6RW6JB4HPOZDZ4ZPPDTNM.jpg?auth=d9fb25f6f928891b8028d27185998f0823952655ef84c2c40e254bbc3d21e7ec",
         "description": "Más de la mitad de las familias españolas reciben en prestaciones y servicios públicos más de lo que pagan en impuestos"
-      },
-      {
-        "title": "Las jornadas de huelga se dispararon en 2025 entre los funcionarios y cayeron en las empresas privadas",
-        "link": "https://elpais.com/economia/2026-04-21/las-jornadas-de-huelga-se-dispararon-en-2025-entre-los-funcionarios-y-cayeron-en-las-empresas-privadas.html",
-        "pubDate": "Tue, 21 Apr 2026 03:45:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/3FDSNULRRVCEVEKWBHYB4WFIMA.jpg?auth=9e4445c917486822cdebe06a1a6922a1597bb1cc7eb6d398499bdc059be0f4a7",
-        "description": "Los paros educativos explican el acelerón en lo público, mientras que en lo privado se nota la caída de la conflictividad en la industria manufacturera. Los sindicatos anticipan..."
-      },
-      {
-        "title": "El candidato de Trump para presidir la Fed se examina en el Senado con una defensa de la independencia de la institución",
-        "link": "https://elpais.com/economia/2026-04-21/el-candidato-de-trump-para-presidir-la-fed-se-examina-en-el-senado-con-una-defensa-de-la-independencia-de-la-institucion.html",
-        "pubDate": "Tue, 21 Apr 2026 03:45:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/H767UOBICRPQNNTQP5BHJ46AOM.jpg?auth=134d954b6d614d6c5cb5332505d049ff64291bdc1de5407dd48ae694b700633b",
-        "description": "Kevin Warsh comparece este martes en la comisión bancaria del Senado, que debe aprobar su nombramiento"
-      },
-      {
-        "title": "Orange obtiene la autorización del Gobierno para controlar el 100% de MasOrange",
-        "link": "https://cincodias.elpais.com/companias/2026-04-21/orange-obtiene-la-autorizacion-del-gobierno-para-controlar-el-100-de-masorange.html",
-        "pubDate": "Tue, 21 Apr 2026 09:13:19 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/S6DOVXC3WTB2G66W5EMRYJAVQI.jpg?auth=c9b471189ad795d478ac62979c0397ddc0582b20340adfa3430bd2e1ec409cd2",
-        "description": "La multinacional francesa completará la adquisición de la participación de los fondos antes del 14 de mayo pendiente del último trámite comunitario"
-      },
-      {
-        "title": "La guerra en el Golfo eleva los riesgos de escasez y racionamiento de combustible",
-        "link": "https://elpais.com/economia/2026-04-20/la-guerra-en-el-golfo-eleva-los-riesgos-de-escasez-y-racionamiento-de-combustible.html",
-        "pubDate": "Mon, 20 Apr 2026 03:30:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/35RZ3TRTXBMZTB6WURXHWCERPI.jpg?auth=42e5a7415484714d54e70f1efcc055cd0d87976d22fea5369f6b99ccbf0bd7a6",
-        "description": "El efímero desbloqueo del estrecho de Ormuz y el enquistamiento del conflicto provocan los primeros problemas en Asia y amenazan incluso a Europa"
-      },
-      {
-        "title": "Aagesen: “España está mejor preparada que otros países europeos”",
-        "link": "https://elpais.com/economia/2026-04-20/aagesen-espana-esta-mejor-preparada-que-otros-paises-europeos.html",
-        "pubDate": "Mon, 20 Apr 2026 03:30:01 GMT",
-        "source": "Economía en EL PAÍS",
-        "image": "https://imagenes.elpais.com/resizer/v2/RXMZTSXARFLGHBZFAA7O4YSL4Y.jpg?auth=a07158255aa0cb29f624a0a4fc7417c432c03b118a7eb28cc7034459090825eb",
-        "description": "La vicepresidenta de Transición Ecológica reclama “un nuevo marco en la UE” para los desafíos energéticos"
       }
     ],
     "sports": [],
@@ -3619,172 +3146,10 @@ window.NEWS_DATA = {
       }
     ],
     "health": [],
-    "science": [],
-    "ai": []
+    "science": []
   },
   "pt": {
-    "top": [
-      {
-        "title": "BBB 26: À sombra de aliadas no jogo, Juliano Floss fica em terceiro lugar no reality",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://f5.folha.uol.com.br/televisao/bbb26/2026/04/bbb-26-a-sombra-de-aliadas-no-jogo-juliano-floss-fica-em-terceiro-lugar-no-reality.shtml",
-        "pubDate": "22 Apr 2026 00:14:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "O catarinense Juliano Floss ficou conhecido nas redes sociais ao fazer vídeos dançando em seu perfil do TikTok. Sucesso entre a geração Z , o loiro entrou no BBB 26 a convite da..."
-      },
-      {
-        "title": "Indignação com as 'novelinhas de frutas' só alimenta máquina da IA",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/indignacao-com-as-novelinhas-de-frutas-so-alimenta-maquina-da-ia.shtml",
-        "pubDate": "21 Apr 2026 23:15:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Prompt: \"Para o desespero da Moranguete, Abacatudo se recusa a procurar emprego porque acha que o tigrinho vai salvar o orçamento do mês. Moranguete tenta um aumento com o chefe..."
-      },
-      {
-        "title": "BBB 26: Torcidas se reúnem e festejam nas cidades de origem dos finalistas",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://f5.folha.uol.com.br/televisao/bbb26/2026/04/bbb-26-torcidas-se-reunem-e-festejam-nas-cidades-de-origem-dos-finalistas.shtml",
-        "pubDate": "21 Apr 2026 23:08:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "A grande final do BBB 26 ( Globo ) acontece na noite desta terça-feira (21) para coroar Ana Paula Renault , Juliano Floss ou Milena Moreira . O programa, comandado por Tadeu Sch..."
-      },
-      {
-        "title": "Ratos, pulgas e parasitas proliferam em abrigos em Gaza",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/04/ratos-pulgas-e-parasitas-proliferam-em-abrigos-em-gaza.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Meses após o cessar-fogo em Gaza , Mohamed al Raqab ainda não consegue dormir. Já não são as bombas que o mantêm acordado, mas os ratos, as pulgas e outros parasitas que prolife..."
-      },
-      {
-        "title": "Lean, novo tira-teima da matemática",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/marceloviana/2026/04/lean-novo-tira-teima-da-matematica.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Uma coisa que sempre me atraiu na matemática é que o único domínio do conhecimento em que é possível dar respostas definitivas a, virtualmente, qualquer questão: quando um matem..."
-      },
-      {
-        "title": "Master ofertou ao BRB créditos gerados por beneficiários de auxílio social e gestora de cemitérios",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/master-ofertou-ao-brb-creditos-gerados-por-beneficiarios-de-auxilio-social-e-gestora-de-cemiterios.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "A troca de carteiras de crédito entre o Banco Master e o BRB (Banco de Brasília), após a detecção de fraudes nas carteiras originais adquiridas pelo banco público do DF, envolve..."
-      },
-      {
-        "title": "Empresa de pré-candidato do PL no RJ comprou precatório de anistiada da ditadura",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/04/empresa-de-pre-candidato-do-pl-no-rj-comprou-precatorio-de-anistiada-da-ditadura.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Empresas ligadas ao presidente da Alerj (Assembleia Legislativa do Rio de Janeiro), Douglas Ruas ( PL ), pré-candidato ao governo estadual, investiram na compra de precatórios e..."
-      },
-      {
-        "title": "Lula intensifica na pré-campanha contraponto a Trump, de olho em desgaste para Flávio Bolsonaro",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/04/lula-intensifica-na-pre-campanha-contraponto-a-trump-de-olho-em-desgaste-para-flavio-bolsonaro.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "O presidente Lula (PT) utilizou a viagem à Europa encerrada nesta terça (21) para fazer uma série de contrapontos ao presidente dos Estados Unidos , Donald Trump . A sequência d..."
-      },
-      {
-        "title": "Flávio planeja reajustar aposentadorias e despesas com saúde e educação só pela inflação",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/flavio-planeja-reajustar-aposentadorias-e-despesas-com-saude-e-educacao-so-pela-inflacao.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "A equipe a cargo do programa econômico do pré-candidato à Presidência Flávio Bolsonaro (PL) considera politicamente viável um ajuste fiscal inicial da ordem de dois pontos perce..."
-      },
-      {
-        "title": "BRB faz assembleia nesta quarta (22) para aumentar capital em até R$ 8,8 bi",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/brb-faz-assembleia-nesta-quarta-22-para-aumentar-capital-em-ate-r-88-bi.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "O BRB (Banco de Brasília) realizará nesta quarta-feira (22) uma assembleia geral extraordinária de acionistas com o objetivo de aumentar o capital em até R$ 8,8 bilhões. Leia ma..."
-      },
-      {
-        "title": "Proposta de Dino e criação de código de ética no STF são complementares, avaliam entidades",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/poder/2026/04/proposta-de-dino-e-criacao-de-codigo-de-etica-no-stf-sao-complementares-avaliam-entidades.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "A proposta de reforma do Judiciário apresentada pelo ministro do STF (Supremo Tribunal Federal) Flávio Dino complementa o projeto do presidente da corte, Edson Fachin , de criar..."
-      },
-      {
-        "title": "Lula perdeu a aposta",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/eliogaspari/2026/04/lula-perdeu-a-aposta.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "O nível de endividamento das famílias cresceu e esse pode ser um dos fatores que erodem a popularidade de Lula . Vá lá que seja. Segundo os alquimistas do Planalto, uma das caus..."
-      },
-      {
-        "title": "Saiba onde experimentar cafés especiais no Tatuapé",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://guia.folha.uol.com.br/restaurantes/2026/04/saiba-onde-experimentar-cafes-especiais-no-tatuape.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Nem tudo que se diz especial é especial. No caso do café , o termo gera confusão. Em algumas cafeterias, é usado para descrever bebidas incrementadas com caldas, chantili ou doc..."
-      },
-      {
-        "title": "Geração solar de casas e pequenos comércios faz rede de energia atingir limite em três estados",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/geracao-solar-de-casas-e-pequenos-comercios-faz-rede-de-energia-atingir-limite-em-tres-estados.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "A instalação de placas solares em residências, pequenos comércios e fazendas por todo o país -muitas vezes sem a permissão de órgãos reguladores- tem testado os limites das rede..."
-      },
-      {
-        "title": "China ganha prestígio na América Latina, enquanto EUA e Europa perdem reputação, aponta pesquisa",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/mundo/2026/04/china-ganha-prestigio-na-america-latina-enquanto-eua-e-europa-perdem-reputacao-aponta-pesquisa.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Latino-americanos ouvidos em uma pesquisa sobre o cenário internacional percebem o mundo como um lugar mais hostil, incerto e menos regulamentado. Num contexto de conflitos e de..."
-      },
-      {
-        "title": "Só há uma saída de um beco sem saída, como Hormuz: recuar",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/rui-tavares/2026/04/so-ha-uma-saida-de-um-beco-sem-saida-como-hormuz-recuar.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Chegamos a um ponto em que toda a gente perdeu o fio à meada desta guerra, a começar por quem a começou. As justificativas foram mudando nos combates, os prazos vão mudando no c..."
-      },
-      {
-        "title": "Apóstolo Estevam Hernandes declara apoio a Jorge Messias para o STF",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/colunas/monicabergamo/2026/04/apostolo-estevam-hernandes-declara-apoio-a-jorge-messias-para-o-stf.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Uma das principais lideranças evangélicas do Brasil, o apóstolo Estevam Hernandes, da igreja Renascer em Cristo, decidiu declarar apoio à indicação de Jorge Messias ao STF (Supr..."
-      },
-      {
-        "title": "SpaceX anuncia opção de compra do editor de código Cursor por US$ 60 bilhões",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/tec/2026/04/spacex-anuncia-opcao-de-compra-do-editor-de-codigo-cursor-por-us-60-bilhoes.shtml",
-        "pubDate": "21 Apr 2026 22:49:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "A SpaceX anunciou, nesta terça-feira (21), uma parceria com o Cursor, um editor de código de programação assistido por inteligência artificial altamente conceituado entre desenv..."
-      },
-      {
-        "title": "Morre Moogie Canazio, engenheiro de som elogiado por João Gilberto, aos 70",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/morre-moogie-canazio-engenheiro-de-som-elogiado-por-joao-gilberto-aos-70.shtml",
-        "pubDate": "21 Apr 2026 22:03:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Morreu nesta terça-feira o engenheiro de som e produtor musical Antônio Canazio, conhecido como Moogie Canazio, aos 70 anos, em Los Angeles , nos Estados Unidos . Ele se sentiu ..."
-      },
-      {
-        "title": "Do bônus ao ônus demográfico",
-        "link": "https://redir.folha.com.br/redir/online/emcimadahora/rss091/*https://www1.folha.uol.com.br/opiniao/2026/04/do-bonus-ao-onus-demografico.shtml",
-        "pubDate": "21 Apr 2026 22:00:00 -0300",
-        "source": "Folha de S.Paulo - Em cima da hora - Principal",
-        "image": "",
-        "description": "Realizado com atraso de dois anos devido à pandemia de Covid-19, o Censo 2022 mostrou que a população brasileira envelhece mais rapidamente do que se imaginava. Desde então, nov..."
-      }
-    ],
+    "top": [],
     "technology": [
       {
         "title": "Meta vai monitorar computador de funcionários para treinar IA, diz reportagem",
@@ -3948,331 +3313,9 @@ window.NEWS_DATA = {
       }
     ],
     "gaming": [],
-    "finance": [
-      {
-        "title": "Master ofertou ao BRB créditos gerados por beneficiários de auxílio social e gestora de cemitérios",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/master-ofertou-ao-brb-creditos-gerados-por-beneficiarios-de-auxilio-social-e-gestora-de-cemiterios.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "A troca de carteiras de crédito entre o Banco Master e o BRB (Banco de Brasília), após a detecção de fraudes nas carteiras originais adquiridas pelo banco público do DF, envolve..."
-      },
-      {
-        "title": "Flávio planeja reajustar aposentadorias e despesas com saúde e educação só pela inflação",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/flavio-planeja-reajustar-aposentadorias-e-despesas-com-saude-e-educacao-so-pela-inflacao.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "A equipe a cargo do programa econômico do pré-candidato à Presidência Flávio Bolsonaro (PL) considera politicamente viável um ajuste fiscal inicial da ordem de dois pontos perce..."
-      },
-      {
-        "title": "BRB faz assembleia nesta quarta (22) para aumentar capital em até R$ 8,8 bi",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/brb-faz-assembleia-nesta-quarta-22-para-aumentar-capital-em-ate-r-88-bi.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "O BRB (Banco de Brasília) realizará nesta quarta-feira (22) uma assembleia geral extraordinária de acionistas com o objetivo de aumentar o capital em até R$ 8,8 bilhões. Leia ma..."
-      },
-      {
-        "title": "Geração solar de casas e pequenos comércios faz rede de energia atingir limite em três estados",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/geracao-solar-de-casas-e-pequenos-comercios-faz-rede-de-energia-atingir-limite-em-tres-estados.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "A instalação de placas solares em residências, pequenos comércios e fazendas por todo o país -muitas vezes sem a permissão de órgãos reguladores- tem testado os limites das rede..."
-      },
-      {
-        "title": "SpaceX anuncia opção de compra do editor de código Cursor por US$ 60 bilhões",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/tec/2026/04/spacex-anuncia-opcao-de-compra-do-editor-de-codigo-cursor-por-us-60-bilhoes.shtml",
-        "pubDate": "21 Apr 2026 22:49:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "A SpaceX anunciou, nesta terça-feira (21), uma parceria com o Cursor, um editor de código de programação assistido por inteligência artificial altamente conceituado entre desenv..."
-      },
-      {
-        "title": "Banco Rendimento sofre ataque hacker nesta terça (21) e alerta clientes",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/banco-rendimento-sofre-ataque-hacker-nesta-terca-21-e-alerta-clientes.shtml",
-        "pubDate": "21 Apr 2026 21:44:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "O Banco Rendimento, que atua nas áreas de câmbio e crédito, sofreu um ataque hacker nesta terça-feira (21). Informações de alguns clientes, em número não divulgado, podem ter si..."
-      },
-      {
-        "title": "A eleição e o Brasil 'queridinho' dos donos do dinheiro grosso",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/viniciustorres/2026/04/a-eleicao-e-o-brasil-queridinho-dos-donos-do-dinheiro-grosso.shtml",
-        "pubDate": "21 Apr 2026 21:20:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "O Brasil seria agora o \"queridinho\" dos donos do dinheiro grosso do mundo, lê-se por aí, entre outras expressões constrangedoras de cafonas e exageradas. A medida principal dess..."
-      },
-      {
-        "title": "Governo Trump sofre derrota judicial em disputa sobre energia limpa nos EUA",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/governo-trump-sofre-derrota-judicial-em-disputa-sobre-energia-limpa-nos-eua.shtml",
-        "pubDate": "21 Apr 2026 19:30:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "Uma juíza federal impediu nesta terça-feira (21) que o governo do presidente Donald Trump aplique uma série de políticas de licenciamento que, segundo grupos do setor de energia..."
-      },
-      {
-        "title": "Amstel foca Geração Z com portfólio de baixo teor alcoólico e redes sociais",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/painelsa/2026/04/amstel-foca-geracao-z-com-portfolio-de-baixo-teor-alcoolico-e-redes-sociais.shtml",
-        "pubDate": "21 Apr 2026 19:00:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "A Amstel, marca da Heineken, reorganiza sua estratégia de comunicação no Brasil para conquistar consumidores da Geração Z -um público que, segundo a própria companhia, está mais..."
-      },
-      {
-        "title": "De Tiradentes ao Imposto de Renda",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/bernardo-guimaraes/2026/04/de-tiradentes-ao-imposto-de-renda.shtml",
-        "pubDate": "21 Apr 2026 18:22:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "A história do feriado de 21 de abril começa com a Coroa portuguesa ameaçando cobrar mais impostos e termina com Tiradentes enforcado em 1792 devido a sua participação em uma con..."
-      },
-      {
-        "title": "Lula defende acordo UE-Mercosul e propõe Portugal como porta de entrada para empresas brasileiras",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/lula-defende-acordo-ue-mercosul-e-propoe-portugal-como-porta-de-entrada-para-empresas-brasileiras.shtml",
-        "pubDate": "21 Apr 2026 17:24:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "Na declaração conjunta que deu ao lado do premiê português Luís Montenegro, durante uma visita-relâmpago de cinco horas a Lisboa , o presidente Luiz Inácio Lula da Silva elogiou..."
-      },
-      {
-        "title": "Empresas veem contradição entre decreto do governo sobre combustíveis e nota do Cade",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/colunas/painelsa/2026/04/empresas-veem-contradicao-entre-decreto-do-governo-sobre-combustiveis-e-nota-do-cade.shtml",
-        "pubDate": "21 Apr 2026 16:51:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "Empresas do setor de combustíveis ouvidas pela coluna apontam contradição entre decreto do governo e recomendação do Cade (Conselho Administrativo de Defesa Econômica) sobre a d..."
-      },
-      {
-        "title": "Lufthansa cancela 20 mil voos para economizar combustível em meio à guerra no Irã",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/lufthansa-cancela-20-mil-voos-para-economizar-combustivel-em-meio-a-guerra-no-ira.shtml",
-        "pubDate": "21 Apr 2026 15:43:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "A Lufthansa cancelará 20 mil voos entre maio e outubro na Europa para economizar combustível, em um dos maiores cortes feitos por companhias aéreas globais após a duplicação dos..."
-      },
-      {
-        "title": "CEOs são os chefes das empresas; mas devem ser também o rosto delas?",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/ceos-sao-os-chefes-das-empresas-mas-devem-ser-tambem-o-rosto-delas.shtml",
-        "pubDate": "21 Apr 2026 15:41:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "Quando o departamento de marketing do Burger King sugeriu que Tom Curtis, presidente da empresa, assumisse um papel de destaque em seu mais recente comercial de televisão, a res..."
-      },
-      {
-        "title": "Após bater US$ 100, petróleo perde força com extensão do cessar-fogo entre EUA e Irã",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/petroleo-volta-a-rondar-us-100-com-proximidade-do-fim-do-cessar-fogo-no-ira.shtml",
-        "pubDate": "21 Apr 2026 15:09:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "O petróleo chegou a bater os US$ 100 nesta terça-feira (21) por causa da indefinição causada pela guerra no Oriente Médio. Os preços desaceleraram após o presidente dos Estados ..."
-      },
-      {
-        "title": "UE tem reservas e produção para abastecer combustível de aviação por cinco meses, diz governo holandês",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/ue-tem-reservas-e-producao-para-abastecer-combustivel-de-aviacao-por-cinco-meses-diz-governo-holandes.shtml",
-        "pubDate": "21 Apr 2026 14:29:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "O governo holandês estimou nesta segunda-feira (20) que a União Europeia poderia fornecer querosene suficiente para a economia do bloco por cerca de cinco meses, utilizando prod..."
-      },
-      {
-        "title": "Indicado de Trump pede uma 'mudança de regime' no Fed e uma nova abordagem para inflação",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/indicado-de-trump-pede-uma-mudanca-de-regime-no-fed-e-uma-nova-abordagem-para-inflacao.shtml",
-        "pubDate": "21 Apr 2026 14:09:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "Kevin Warsh , indicado para presidir o Federal Reserve , pediu uma \"mudança de regime\" no banco central dos Estados Unidos , que incluiria uma nova \"estrutura\" para o controle d..."
-      },
-      {
-        "title": "Regulador britânico de mídia investiga Telegram por conteúdos de abuso sexual infantil",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/regulador-britanico-de-midia-investiga-telegram-por-conteudos-de-abuso-sexual-infantil.shtml",
-        "pubDate": "21 Apr 2026 13:34:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "O regulador britânico de mídia, Ofcom, anunciou nesta terça-feira (21) a abertura de uma investigação contra o Telegram , após indícios que sugerem que \"material de abuso sexual..."
-      },
-      {
-        "title": "Polícia solicita mandado de prisão para Bang, fundador de agência do BTS na Coreia do Sul",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/policia-solicita-mandado-de-prisao-para-bang-fundador-de-agencia-do-bts-na-coreia-do-sul.shtml",
-        "pubDate": "21 Apr 2026 13:27:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "A polícia sul-coreana solicitou um mandado de prisão preventiva contra Bang Si-hyuk, presidente da agência de K-pop HYBE, por supostas negociações ilegais relacionadas ao IPO (o..."
-      },
-      {
-        "title": "'O dilema de Malaca': por que outra passagem crítica para a navegação gera preocupação no comércio global",
-        "link": "https://redir.folha.com.br/redir/online/mercado/rss091/*https://www1.folha.uol.com.br/mercado/2026/04/o-dilema-de-malaca-por-que-outra-passagem-critica-para-a-navegacao-gera-preocupacao-no-comercio-global.shtml",
-        "pubDate": "21 Apr 2026 12:29:00 -0300",
-        "source": "Folha de S.Paulo - Mercado - Principal",
-        "image": "",
-        "description": "Em meio ao bloqueio do estreito de Hormuz , uma das vias marítimas mais importantes do mundo, outra artéria vital para o comércio global começa a chamar a atenção internacional...."
-      }
-    ],
+    "finance": [],
     "sports": [],
-    "entertainment": [
-      {
-        "title": "Indignação com as 'novelinhas de frutas' só alimenta máquina da IA",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/indignacao-com-as-novelinhas-de-frutas-so-alimenta-maquina-da-ia.shtml",
-        "pubDate": "21 Apr 2026 23:15:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Prompt: \"Para o desespero da Moranguete, Abacatudo se recusa a procurar emprego porque acha que o tigrinho vai salvar o orçamento do mês. Moranguete tenta um aumento com o chefe..."
-      },
-      {
-        "title": "Saiba onde experimentar cafés especiais no Tatuapé",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://guia.folha.uol.com.br/restaurantes/2026/04/saiba-onde-experimentar-cafes-especiais-no-tatuape.shtml",
-        "pubDate": "21 Apr 2026 23:00:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Nem tudo que se diz especial é especial. No caso do café , o termo gera confusão. Em algumas cafeterias, é usado para descrever bebidas incrementadas com caldas, chantili ou doc..."
-      },
-      {
-        "title": "Morre Moogie Canazio, engenheiro de som elogiado por João Gilberto, aos 70",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/morre-moogie-canazio-engenheiro-de-som-elogiado-por-joao-gilberto-aos-70.shtml",
-        "pubDate": "21 Apr 2026 22:03:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Morreu nesta terça-feira o engenheiro de som e produtor musical Antônio Canazio, conhecido como Moogie Canazio, aos 70 anos, em Los Angeles , nos Estados Unidos . Ele se sentiu ..."
-      },
-      {
-        "title": "Morre o ator Ricardo de Pascual, que trabalhou em 'Chaves' e 'Chapolin', aos 85",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/morre-o-ator-ricardo-de-pascual-que-trabalhou-em-chaves-e-chapolin-aos-85.shtml",
-        "pubDate": "21 Apr 2026 21:40:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Morreu, nesta segunda-feira, o ator mexicano Ricardo de Pascual, que ganhou notoriedade por viver diversos personagens em programas como \" Chaves \", \" O Chapolin Colorado \" e \"C..."
-      },
-      {
-        "title": "BBB 26 chega ao final hoje e terá show de Alok; veja que horas começa o programa",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/bbb-26-chega-ao-final-hoje-e-tera-show-de-alok-veja-que-horas-comeca-o-programa.shtml",
-        "pubDate": "21 Apr 2026 21:26:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "O episódio final do Big Brother Brasil 26 deve começar às 22h25 desta terça-feira (21), após a novela \" Três Graças \". Segundo a programação oficial da TV Globo, o programa deve..."
-      },
-      {
-        "title": "Prisão de artista por esculturas feitas há 15 anos revela novos extremos da censura na China",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/prisao-de-artista-por-esculturas-feitas-ha-15-anos-revela-novos-extremos-da-censura-na-china.shtml",
-        "pubDate": "21 Apr 2026 18:49:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Jesus Cristo está sob a mira de armas, com as palmas das mãos voltadas para cima, cercado por sete figuras que compõem um pelotão de fuzilamento. Os soldados de bronze são incon..."
-      },
-      {
-        "title": "Iron Maiden prioriza shows e vai faltar à cerimônia do Hall da Fama do Rock",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/iron-maiden-prioriza-shows-e-vai-faltar-a-cerimonia-do-hall-da-fama-do-rock.shtml",
-        "pubDate": "21 Apr 2026 18:17:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Na semana passada, o Iron Maiden foi anunciado como parte dos novos integrantes deste ano do Hall da Fama do Rock . A lendária banda de metal, no entanto, não deve comparecer à ..."
-      },
-      {
-        "title": "Novo 'O Diabo Veste Prada' é uma versão água com açúcar do original?",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/novo-o-diabo-veste-prada-e-uma-versao-agua-com-acucar-do-original.shtml",
-        "pubDate": "21 Apr 2026 17:50:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "\" O Diabo Veste Prada 2 \" é um dos filmes mais aguardados de 2026 até agora. Mas a campanha de divulgação indica que a sátira do original foi suavizada ?assim como a vilã tóxica..."
-      },
-      {
-        "title": "Festival de Cannes celebra 'Thelma & Louise' em cartaz de sua nova edição; veja",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/festival-de-cannes-celebra-thelma-louise-em-cartaz-de-sua-nova-edicao-veja.shtml",
-        "pubDate": "21 Apr 2026 17:17:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "O Festival de Cannes divulgou, nesta terça-feira, o pôster oficial da sua próxima edição, que acontece entre 12 e 23 de maio. O cartaz traz uma imagem em preto e branco de Geena..."
-      },
-      {
-        "title": "Cinebiografia de Michael Jackson é filme chapa-branca sem polêmicas",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/cinebiografia-de-michael-jackson-e-filme-chapa-branca-sem-polemicas.shtml",
-        "pubDate": "21 Apr 2026 17:00:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Algumas camadas se impõem entre \"Michael\", cinebiografia de Michael Jackson , o maior astro pop do século 20, e o espectador. Para vê-la como ela é, ou seja, como um filme, é ne..."
-      },
-      {
-        "title": "Autenticação de desenhos de Tarsila do Amaral gera novo racha entre seus herdeiros",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/autenticacao-de-desenhos-de-tarsila-do-amaral-gera-novo-racha-entre-seus-herdeiros.shtml",
-        "pubDate": "21 Apr 2026 15:51:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Um conjunto de 16 desenhos atribuídos a Tarsila do Amaral teve sua autoria confirmada, nesta segunda-feira, por um comitê, liderado pelo perito Douglas Quintale, e ganhou um cer..."
-      },
-      {
-        "title": "Emanuelle Araújo se equilibra entre o privilégio e a inquietação em novela: 'Mulher complexa'",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://f5.folha.uol.com.br/televisao/2026/04/emanuelle-araujo-se-equilibra-entre-o-privilegio-e-a-inquietacao-em-novela-mulher-complexa.shtml",
-        "pubDate": "21 Apr 2026 15:30:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Para Emanuelle Araújo, 49, Marta, sua personagem em \" A Nobreza do Amor \", vai além da aparência sofisticada e do lugar social privilegiado. \"É uma mulher cheia de privilégios, ..."
-      },
-      {
-        "title": "'Marty Supreme' e 'Mãos na Terra': o que ver na TV e no streaming nesta quarta",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/marty-supreme-e-maos-na-terra-o-que-ver-na-tv-e-no-streaming-nesta-quarta.shtml",
-        "pubDate": "21 Apr 2026 15:00:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "No dia da Terra, a plataforma estreia a docussérie \"Mãos na Terra\", que mistura comédia e educação ambiental com o ator Zach Galifianakis que vai explorar o universo da jardinag..."
-      },
-      {
-        "title": "Boninho anuncia 'chá revelação' para lançar reality da Record no dia da final do BBB 26",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://f5.folha.uol.com.br/televisao/2026/04/boninho-anuncia-cha-revelacao-para-lancar-reality-da-record-no-dia-da-final-do-bbb-26.shtml",
-        "pubDate": "21 Apr 2026 14:15:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "No dia da final do BBB 26 , o diretor Boninho aproveitou a atenção do público para promover seu novo reality, Casa do Patrão , que estreia no próximo dia 27 na Record . Leia mai..."
-      },
-      {
-        "title": "Colombiana Karol G anuncia show no Brasil",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://guia.folha.uol.com.br/shows/2026/04/colombiana-karol-g-anuncia-show-no-brasil.shtml",
-        "pubDate": "21 Apr 2026 13:27:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Conhecida por músicas como \"Si Antes te Hubiera Conocido\", a colombiana Karol G anunciou show em São Paulo em fevereiro de 2027, como parte da turnê \"Viajando por el Mundo\", em ..."
-      },
-      {
-        "title": "Roger Waters e outros artistas pedem que Israel fique fora do Eurovision",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/roger-waters-e-outros-artistas-pedem-que-israel-fique-fora-do-eurovision.shtml",
-        "pubDate": "21 Apr 2026 13:20:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Artistas e outros profissionais do setor da música assinaram um manifesto que pede pela exclusão de Israel do Eurovision 2026, competição musical mais importante da Europa. O do..."
-      },
-      {
-        "title": "Morre Alan Osmond, do The Osmonds, banda que fez hits na década de 1970, aos 76",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/morre-alan-osmond-do-the-osmonds-banda-que-fez-hits-na-decada-de-1970-aos-76.shtml",
-        "pubDate": "21 Apr 2026 13:01:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Alan Osmond, membro da banda The Osmonds , morreu nesta terça-feira (21), aos 76 anos, informou Merrill Osmond nas redes sociais. A causa da morte não foi divulgada. O cantor ti..."
-      },
-      {
-        "title": "Como Zara Larsson retorna às paradas com som que a consagrou há 10 anos",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/ilustrada/2026/04/como-zara-larsson-retorna-as-paradas-com-som-que-a-consagrou-ha-10-anos.shtml",
-        "pubDate": "21 Apr 2026 13:00:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Uma cantora pop alcançou o sucesso há dez anos com hits dançantes e influências de música eletrônica e, agora, volta às paradas com o mesmo som que a levou ao estrelato. Essa é ..."
-      },
-      {
-        "title": "A política de indignação moral não elegerá Lula",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/colunas/wilson-gomes/2026/04/a-politica-de-indignacao-moral-nao-elegera-lula.shtml",
-        "pubDate": "21 Apr 2026 12:00:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Lula e a deputada Erika Hilton não têm o mesmo eleitorado. Parece óbvio, não é? Mas tudo indica que a comunicação política do governo não opera com essa distinção com a clareza ..."
-      },
-      {
-        "title": "Aviso",
-        "link": "https://redir.folha.com.br/redir/online/ilustrada/rss091/*https://www1.folha.uol.com.br/colunas/joanna-moura/2026/04/aviso.shtml",
-        "pubDate": "21 Apr 2026 11:37:00 -0300",
-        "source": "Folha de S.Paulo - Ilustrada - Principal",
-        "image": "",
-        "description": "Excepcionalmente, a coluna não será publicada nesta terça (21). Leia mais (04/21/2026 - 11h37)"
-      }
-    ],
+    "entertainment": [],
     "health": [
       {
         "title": "Quais são os alimentos mais contaminados por agrotóxicos e os mais seguros no Brasil",
@@ -4435,26 +3478,17 @@ window.NEWS_DATA = {
         "description": "Nova regra busca acabar com engano gerado por produtos \"sabor chocolate\" e não impede que alimentos com alto teor de cacau sejam vendidos"
       }
     ],
-    "science": [],
-    "ai": []
+    "science": []
   },
   "zh": {
     "top": [
       {
-        "title": "「非洲最後一塊拼圖」：賴清德臨時取消訪問史瓦帝尼，分析指北京對台灣「空中圍堵」",
-        "link": "https://www.bbc.com/zhongwen/articles/cx297dezd8jo/trad?at_medium=RSS&at_campaign=rss",
-        "pubDate": "Tue, 21 Apr 2026 18:05:37 GMT",
+        "title": "「去看回我以前的家」  香港宏福苑首批回家執拾居民的追悼與道別",
+        "link": "https://www.bbc.com/zhongwen/articles/cx2dzg4px5jo/trad?at_medium=RSS&at_campaign=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:57 GMT",
         "source": "BBC Chinese",
-        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/dab8/live/9f9610b0-3dab-11f1-b377-d7765ac78768.jpg",
-        "description": "史瓦帝尼是台灣在非洲的唯一邦交國，賴清德臨時取消了出訪行程，稱原因涉及中國對航道途經第三國施壓。學者分析，北京此舉是前所未見的做法，試圖「空中圍堵」並進一步孤立台灣。"
-      },
-      {
-        "title": "伊朗戰火推高油價：中國新能源車「瘋狂三月」背後的危與機",
-        "link": "https://www.bbc.com/zhongwen/articles/cx2dr18rz2eo/trad?at_medium=RSS&at_campaign=rss",
-        "pubDate": "Tue, 21 Apr 2026 01:37:25 GMT",
-        "source": "BBC Chinese",
-        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/64cd/live/5ed64190-3cab-11f1-8659-276ea07eb2ce.jpg",
-        "description": "中國新能源汽車出口「受到制約的並非需求端，而是政治因素和貿易壁壘，尤其在歐洲和美國市場。」"
+        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/f77b/live/3ec516b0-3e22-11f1-bd52-e755d604ece4.jpg",
+        "description": "距離大火發生五個月後，宏福苑居民首度獲香港政府安排上樓執拾個人物品。BBC記錄下他們為這一天所做的準備，以及返家時的訴求和情感。"
       },
       {
         "title": "中國新一波「出海」商品：火鍋、奶茶與運動服如何走向全球",
@@ -4465,6 +3499,46 @@ window.NEWS_DATA = {
         "description": "「中國製造」過去往往意味著廉價、量產的商品，但如今一批新的中國品牌正迅速崛起。"
       },
       {
+        "title": "日本放寬武器出口規定，打破二戰後和平主義路線",
+        "link": "https://www.bbc.com/zhongwen/articles/cp3l0pg0ewno/trad?at_medium=RSS&at_campaign=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:03:56 GMT",
+        "source": "BBC Chinese",
+        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/87b0/live/2e1e3780-3d7b-11f1-ac78-2112837ce2aa.png",
+        "description": "此前，日本只允許出口用於五大類用途的裝備，包括救援、運輸、警戒、監控和掃雷。日本今後可向與其簽署防衛協議的17個國家出售具殺傷力的武器。"
+      },
+      {
+        "title": "「非洲最後一塊拼圖」：賴清德臨時取消訪問史瓦帝尼，分析指北京對台灣「空中圍堵」",
+        "link": "https://www.bbc.com/zhongwen/articles/cx297dezd8jo/trad?at_medium=RSS&at_campaign=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:50:56 GMT",
+        "source": "BBC Chinese",
+        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/dab8/live/9f9610b0-3dab-11f1-b377-d7765ac78768.jpg",
+        "description": "史瓦帝尼是台灣在非洲的唯一邦交國，賴清德臨時取消了出訪行程，稱原因涉及中國對航道途經第三國施壓。學者分析，北京此舉是前所未見的做法，試圖「空中圍堵」並進一步孤立台灣。"
+      },
+      {
+        "title": "戰爭陰影下的就業、通脹和消費   伊朗各行業大規模裁員",
+        "link": "https://www.bbc.com/zhongwen/articles/c74vkywn92yo/trad?at_medium=RSS&at_campaign=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:15:51 GMT",
+        "source": "BBC Chinese",
+        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fd4a/live/df3e79e0-3d8e-11f1-ac78-2112837ce2aa.jpg",
+        "description": "戰爭影響已波及製造業、零售業及數碼產業，外界警告若戰事再度爆發，情況恐將進一步惡化。"
+      },
+      {
+        "title": "伊朗戰火推高油價：中國新能源車「瘋狂三月」背後的危與機",
+        "link": "https://www.bbc.com/zhongwen/articles/cx2dr18rz2eo/trad?at_medium=RSS&at_campaign=rss",
+        "pubDate": "Tue, 21 Apr 2026 01:37:25 GMT",
+        "source": "BBC Chinese",
+        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/64cd/live/5ed64190-3cab-11f1-8659-276ea07eb2ce.jpg",
+        "description": "中國新能源汽車出口「受到制約的並非需求端，而是政治因素和貿易壁壘，尤其在歐洲和美國市場。」"
+      },
+      {
+        "title": "伊朗戰事迫使航班改道，機票價格飆升近25%",
+        "link": "https://www.bbc.com/zhongwen/articles/cde50p32wkdo/trad?at_medium=RSS&at_campaign=rss",
+        "pubDate": "Wed, 22 Apr 2026 04:58:41 GMT",
+        "source": "BBC Chinese",
+        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/1062/live/da6149f0-3d90-11f1-92be-b5fcda70efcc.jpg",
+        "description": "研究顯示，伊朗戰爭衝突所引發的空域限制推高了機票的價格。"
+      },
+      {
         "title": "霍爾木茲海峽：海上封鎖真的有用嗎？",
         "link": "https://www.bbc.com/zhongwen/articles/c5y7dge2513o/trad?at_medium=RSS&at_campaign=rss",
         "pubDate": "Tue, 21 Apr 2026 03:55:25 GMT",
@@ -4473,20 +3547,20 @@ window.NEWS_DATA = {
         "description": "美國宣布的封鎖決定，使戰爭時期最古老的脅迫手段之一——切斷海上航線以削弱經濟、擾亂貿易並迫使對手改變策略或讓步——再次成為焦點。"
       },
       {
-        "title": "無煙世代：英國有望對2008年後出生者實施終身禁煙",
-        "link": "https://www.bbc.com/zhongwen/articles/c98m0qd5jz7o/trad?at_medium=RSS&at_campaign=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:35:00 GMT",
-        "source": "BBC Chinese",
-        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2a0c/live/b7b82910-3de9-11f1-b55d-0f258dce1735.jpg",
-        "description": "這項「里程碑式」的立法旨在阻止2009年1月1日之後出生的人開始吸煙，從而創造無煙世代。"
-      },
-      {
         "title": "蘋果公司任命約翰·特納斯為新CEO，接替蒂姆・庫克",
         "link": "https://www.bbc.com/zhongwen/articles/cx26zn366z7o/trad?at_medium=RSS&at_campaign=rss",
         "pubDate": "Tue, 21 Apr 2026 04:41:51 GMT",
         "source": "BBC Chinese",
         "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/fd24/live/5d5e1f40-3d55-11f1-879d-1b2f5c3919b8.jpg",
         "description": "約翰・特納斯將接掌這家科技巨頭的日常營運，庫克則將升任執行董事長。"
+      },
+      {
+        "title": "無煙世代：英國有望對2008年後出生者實施終身禁煙",
+        "link": "https://www.bbc.com/zhongwen/articles/c98m0qd5jz7o/trad?at_medium=RSS&at_campaign=rss",
+        "pubDate": "Wed, 22 Apr 2026 02:35:00 GMT",
+        "source": "BBC Chinese",
+        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/2a0c/live/b7b82910-3de9-11f1-b55d-0f258dce1735.jpg",
+        "description": "這項「里程碑式」的立法旨在阻止2009年1月1日之後出生的人開始吸煙，從而創造無煙世代。"
       },
       {
         "title": "《邁克爾・傑克遜》：註定引起爭議的話題電影",
@@ -4511,38 +3585,6 @@ window.NEWS_DATA = {
         "source": "BBC Chinese",
         "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/8cde/live/a64b25a0-3d40-11f1-879d-1b2f5c3919b8.jpg",
         "description": "從地質學角度來看，阿波羅計劃到阿提米絲計劃的半個多世紀不過是彈指一揮間。但氣候變遷在過去60年間已經顯著改變了地球表面。專家們向BBC講述了地球升起和落下照片之間的明顯差異，以及這些差異告訴我們地球過去和現在的變化。"
-      },
-      {
-        "title": "這就是德國納粹獨裁者希特勒的牙齒嗎？",
-        "link": "https://www.bbc.com/zhongwen/articles/c93e5q7wqq4o/trad?at_medium=RSS&at_campaign=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:22:01 GMT",
-        "source": "BBC Chinese",
-        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/647a/live/595f7de0-3bf6-11f1-983e-05cd62d1d57e.jpg",
-        "description": "1945年，蘇聯戰時口譯員熱夫斯卡婭收到一個覆蓋著紅色緞面的細小盒子，裏面裝著據稱是納粹德國頭目希特勒死後留下的牙齒。"
-      },
-      {
-        "title": "缺工、失聯、種族歧視：一場印度移工爭議，揭開台灣的三重困境",
-        "link": "https://www.bbc.com/zhongwen/articles/cpvxppkdwkxo/trad?at_medium=RSS&at_campaign=rss",
-        "pubDate": "Sun, 19 Apr 2026 04:39:48 GMT",
-        "source": "BBC Chinese",
-        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/507a/live/0743a680-3ba6-11f1-b54a-adc2002217f8.jpg",
-        "description": "這場爭議所揭示的，不只是一個政策的進退，而是台灣長期面對的三重困境：產業缺工的結構性危機、現行制度下近十萬名「失聯移工」的管理漏洞，以及社會對外來勞動力的偏見。"
-      },
-      {
-        "title": "藝術受審——雕塑家高兟被捕，凸顯中國審查制度的新極端",
-        "link": "https://www.bbc.com/zhongwen/articles/c15d1x3n893o/trad?at_medium=RSS&at_campaign=rss",
-        "pubDate": "Mon, 20 Apr 2026 08:16:31 GMT",
-        "source": "BBC Chinese",
-        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/5312/live/d2315560-3bf9-11f1-808b-d530aa7a4025.jpg",
-        "description": "藝術家高兟因15年前創作的作品而遭到溯及既往的懲罰，人權團體對此案表示憂慮。"
-      },
-      {
-        "title": "特朗普時代備受關注的內幕交易質疑  以及幾個關鍵時刻",
-        "link": "https://www.bbc.com/zhongwen/articles/c79jgrwy350o/trad?at_medium=RSS&at_campaign=rss",
-        "pubDate": "Mon, 20 Apr 2026 06:05:25 GMT",
-        "source": "BBC Chinese",
-        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0993/live/bfcf1060-387a-11f1-9b73-21c33a4cdac9.jpg",
-        "description": "BBC調查發現一個固定模式，在特朗普多次宣佈重大消息前，交易量出現了明顯飆升。一些分析師指出，這種情況具備非法內線交易的典型特徵"
       },
       {
         "title": "宏福苑居民災後首度「回家」執拾 ：「每一位居民都不甘心」",
@@ -4585,23 +3627,63 @@ window.NEWS_DATA = {
         "description": "國際貨幣基金組織（IMF）警告，戰爭與能源價格飆升可能壓低全球經濟增長，BBC記者米歇爾·弗羅麗（Michelle Fleury）解說為何油價、通脹與利率是關鍵風險。"
       },
       {
+        "title": "特朗普時代備受關注的內幕交易質疑  以及幾個關鍵時刻",
+        "link": "https://www.bbc.com/zhongwen/articles/c79jgrwy350o/trad?at_medium=RSS&at_campaign=rss",
+        "pubDate": "Mon, 20 Apr 2026 06:05:25 GMT",
+        "source": "BBC Chinese",
+        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/0993/live/bfcf1060-387a-11f1-9b73-21c33a4cdac9.jpg",
+        "description": "BBC調查發現一個固定模式，在特朗普多次宣佈重大消息前，交易量出現了明顯飆升。一些分析師指出，這種情況具備非法內線交易的典型特徵"
+      },
+      {
         "title": "美伊衝突接下來會如何發展：四種可能情境",
         "link": "https://www.bbc.com/zhongwen/articles/clyxpdw4ynko/trad?at_medium=RSS&at_campaign=rss",
         "pubDate": "Thu, 16 Apr 2026 08:55:32 GMT",
         "source": "BBC Chinese",
         "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/929f/live/3e6fadb0-38d2-11f1-9d5c-8ba507d7dbde.jpg",
         "description": "停火能否維持、外交是否會延續，抑或伊朗與美國正走向「可控升級」，甚至滑向更大範圍的戰爭？"
-      },
-      {
-        "title": "馬六甲海峽：為何全球貿易的另一個「咽喉要道」正引發擔憂",
-        "link": "https://www.bbc.com/zhongwen/articles/c0mj27g8v2vo/trad?at_medium=RSS&at_campaign=rss",
-        "pubDate": "Fri, 17 Apr 2026 08:50:39 GMT",
-        "source": "BBC Chinese",
-        "image": "https://ichef.bbci.co.uk/ace/ws/240/cpsprodpb/7198/live/75659290-3994-11f1-afdb-63f82099d974.jpg",
-        "description": "雅加達官員證實，美國在與印尼簽署防務協議後已提出希望獲得全面的軍事飛越許可。這條位於東南亞、至關重要的航運航道再度受到全球關注。"
       }
     ],
     "technology": [
+      {
+        "title": "Scattered Spider 资深成员 Tylerb 认罪",
+        "link": "https://www.solidot.org/story?sid=84114",
+        "pubDate": "Wed, 22 Apr 2026 15:03:59 +0800",
+        "source": "奇客Solidot–传递最新科技情报",
+        "image": "",
+        "description": "24 岁的英国公民、勒索组织 Scattered Spider 资深成员 Tyler Robert Buchanan aka Tylerb 认罪。他目前关押在美国，面临逾 20 年监禁。Scattered Spider 以利用社交工程方法入侵公司窃取数据勒索赎金闻名，该组织成员通常采取的方法是冒充员工或合同工欺骗 IT 授予企业的访问权限。作为认罪协议..."
+      },
+      {
+        "title": "微软降低 Game Pass 订阅费",
+        "link": "https://www.solidot.org/story?sid=84113",
+        "pubDate": "Wed, 22 Apr 2026 14:36:47 +0800",
+        "source": "奇客Solidot–传递最新科技情报",
+        "image": "",
+        "description": "在新上任 Xbox CEO Asha Sharma 上周表示 Game Pass 订阅费对玩家而言太贵之后，微软下调了价格，不过代价是《使命召唤》系列新作不会同步加入到 Game Pass 服务，而是会延后一年加入。此前有报道称 Game Pass 订阅服务让《使命召唤》损失了 3 亿美元的收入。根据最新调价：Xbox Game Pass Ultima..."
+      },
+      {
+        "title": "Meta 开始记录员工鼠标移动和按键用于 AI 训练",
+        "link": "https://www.solidot.org/story?sid=84112",
+        "pubDate": "Wed, 22 Apr 2026 14:09:43 +0800",
+        "source": "奇客Solidot–传递最新科技情报",
+        "image": "",
+        "description": "公司内部备忘录显示，Meta 正在美国员工电脑上安装追踪软件，捕捉员工鼠标移动、点击和按键数据以用于训练 AI 模型，此举是该公司构建能自动执行工作任务的 AI 智能体的大计划的一部分。被称为 Model Capability Initiative(MCI)的工具将在工作相关应用和网站上运行，会不定时截取屏幕内容的快照。备忘录表示此举旨在改进公司 AI..."
+      },
+      {
+        "title": "Firefox 150 释出",
+        "link": "https://www.solidot.org/story?sid=84111",
+        "pubDate": "Wed, 22 Apr 2026 13:42:39 +0800",
+        "source": "奇客Solidot–传递最新科技情报",
+        "image": "",
+        "description": "Mozilla 释出了 Firefox 150，主要新特性包括：对所有用户启用“本地网络访问限制”；通过内置 PDF 编辑器支持对文件进行页面重排序、复制、删除、粘贴和导出；改进分屏浏览；通过 about:translations 体验尊重隐私的即时翻译（或在地址栏直接输入 translate）；等等。"
+      },
+      {
+        "title": "SpaceX 达成协议可选以 600 亿美元收购 Cursor",
+        "link": "https://www.solidot.org/story?sid=84110",
+        "pubDate": "Wed, 22 Apr 2026 13:28:42 +0800",
+        "source": "奇客Solidot–传递最新科技情报",
+        "image": "",
+        "description": "SpaceX 还在继续为其史上最高估值增加燃料。它宣布获得了一个选择权，可选择在晚些时候以 600 亿美元收购 Cursor，或者支付 100 亿美元建立新的合作伙伴关系。Cursor 提供了 AI 驱动的集成开发环境（IDE），支持代码生成、智能重写和代码库查询等功能。收购或与 Cursor 合作将有助于增强 SpaceX 旗下的 xAI 在 AI ..."
+      },
       {
         "title": "创意软件行业向 Adobe 宣战 ",
         "link": "https://www.solidot.org/story?sid=84109",
@@ -4721,46 +3803,6 @@ window.NEWS_DATA = {
         "source": "奇客Solidot–传递最新科技情报",
         "image": "",
         "description": "Brave 推出了付费版浏览器 Brave Origin，该版本移除了原版内置的变现功能如 Rewards。Origin 可单独下载，或作为现有版本的升级，一次购买即可解锁，可以在多个设备上激活。Origin 的 Linux 版本是免费的，这可能会让 Windows 付费版用户困惑：为什么他们要为别人免费获得的东西付费？"
-      },
-      {
-        "title": "Sruthi Chandran 当选为 DPL",
-        "link": "https://www.solidot.org/story?sid=84094",
-        "pubDate": "Mon, 20 Apr 2026 16:20:13 +0800",
-        "source": "奇客Solidot–传递最新科技情报",
-        "image": "",
-        "description": "2026 年 Debian 项目领导人（DPL）选举结束，唯一的候选人、来自印度的图书管理员 Sruthi Chandran 当选，她将于 4 月 21 日上任。Sruthi Chandran 从图书管理员转为自由软件爱好者和 Debian 开发者，自 2016 年以来一直参与 Debian 的 Ruby、JavaScript、Go 和字体软件包的开发..."
-      },
-      {
-        "title": "亚马逊 Fire 电视棒不再支持侧载",
-        "link": "https://www.solidot.org/story?sid=84093",
-        "pubDate": "Mon, 20 Apr 2026 15:36:33 +0800",
-        "source": "奇客Solidot–传递最新科技情报",
-        "image": "",
-        "description": "亚马逊正式声明，新款 Fire 电视棒不再支持从其官方应用商店之外的任何来源侧载 Android 应用。从去年发布的 Fire TV Stick 4K Select 开始，未来的 Fire 电视棒都将运行基于 Linux 的操作系统 Vega，不支持侧载非亚马逊官方应用商店之外的应用。上周亚马逊发布 Fire TV Stick HD 时在其产品页面加入..."
-      },
-      {
-        "title": "偏头痛发作增加与空气污染相关",
-        "link": "https://www.solidot.org/story?sid=84092",
-        "pubDate": "Mon, 20 Apr 2026 14:51:08 +0800",
-        "source": "奇客Solidot–传递最新科技情报",
-        "image": "",
-        "description": "研究团队对 7032 名生活在以色列南部内盖夫沙漠地区的偏头痛患者进行了平均 10 年的随访，分析其每日暴露于交通、工业及沙尘暴带来的空气污染情况以及气象条件，并与患者因急性偏头痛就医时间进行对比，同时追溯发作前 7 天内的环境变化。研究还通过药房记录统计了曲坦类药物（专门用于缓解偏头痛发作的药物）的使用情况。结果显示，约 32% 的参与者至少因急性偏..."
-      },
-      {
-        "title": "Blue Origin 第二次回收 New Glenn 火箭但上面级未能成功入轨",
-        "link": "https://www.solidot.org/story?sid=84091",
-        "pubDate": "Mon, 20 Apr 2026 14:15:42 +0800",
-        "source": "奇客Solidot–传递最新科技情报",
-        "image": "",
-        "description": "贝佐斯（Jeff Bezos）旗下的 Blue Origin 公司于上周日执行了 New Glenn 重型火箭的第三次飞行，火箭第一级顺利回收，但上面级未能成功将 AST SpaceMobile 的蜂窝宽带通信卫星送入正确的轨道，这次发射被认为失败了。New Glenn 是直径 7 米的两级构型火箭。其第一级火箭由 7个 BE-4 发动机提供动力，它被..."
-      },
-      {
-        "title": "欧盟推动远程办公以缓解能源危机",
-        "link": "https://www.solidot.org/story?sid=84090",
-        "pubDate": "Mon, 20 Apr 2026 13:47:50 +0800",
-        "source": "奇客Solidot–传递最新科技情报",
-        "image": "",
-        "description": "欧盟委员会将鼓励远程办公，并为公共交通提供补贴，以减少化石燃料使用；目前，各国正艰难应对中东战事引发的能源价格冲击。欧委会将于本周向成员国提出一系列措施，以降低能源需求、提高能效，并推动向清洁电力转型。这些举措旨在为高企的能源价格提供“即时缓解”。这些建议基于俄罗斯入侵乌克兰后引发的上一轮能源危机期间实施的各项措施。它们旨在减少对化石燃料的依赖，并鼓励..."
       }
     ],
     "gaming": [],
@@ -4768,8 +3810,7 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": [],
-    "ai": []
+    "science": []
   },
   "ko": {
     "top": [],
@@ -4779,1631 +3820,1629 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": [],
-    "ai": []
+    "science": []
   },
   "ar": {
     "top": [
       {
-        "title": "توقعات بانضمام روبيو لجولة المحادثات الثانية بين لبنان وإسرائيل",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d9%88%d9%82%d8%b9%d8%a7%d8%aa-%d8%a8%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%b1%d9%88%d8%a8%d9%8a%d9%88-%d9%84%d8%ac%d9%88%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:02:10 +0300",
+        "title": "أسواق التنبؤ تدخل نشرات الأخبار.. هل تتحول التغطية إلى مراهنة جماهيرية؟",
+        "link": "https://www.aljazeera.net/media/2026/4/22/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d8%aa%d9%86%d8%a8%d8%a4-%d8%aa%d8%af%d8%ae%d9%84-%d9%86%d8%b4%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%87%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:09 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تنطلق غدا الخميس في واشنطن جولة المحادثات الثانية بين لبنان وإسرائيل، وقال مسؤول أمريكي إنه يُتوقع أن ينضم وزير الخارجية ماركو روبيو إلى المفاوضات."
+        "description": "دخول أسواق التنبؤ إلى نشرات الأخبار يثير جدلا إزاء تأثيرها في الجمهور، خاصة كبار السن، وذلك وسط مخاوف من تحول التغطية إلى أداة تؤثر في الرأي العام لا مجرد تحليل."
       },
       {
-        "title": "رواسب اليورانيوم.. البصمة التي تمنح المفتشين مفاتيح أسرار المفاعلات",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%b1%d9%88%d8%a7%d8%b3%d8%a8-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a8%d8%b5%d9%85%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%85%d9%86%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:59:11 +0300",
+        "title": "أمن كأس العالم 2026.. رئيسة المكسيك تتعهد بحماية المونديال بعد هجوم الأهرامات الدامي",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%86-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d9%83%d8%b3%d9%8a%d9%83-%d8%a3%d9%87%d8%b1%d8%a7%d9%85%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:06 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "يمكن للمفتشين النوويين معرفة الكثير عن البرنامج النووي بناء على تعقب رواسب اليورانيوم في محيط منطقة التفتيش كاستنتاج نسبة التخصيب التي تم الوصول إليها وغيرها من المعلومات عن الب..."
+        "description": "قال مجلس الأمن المكسيكي إن حادث إطلاق نار خلف إصابة 13 شخصا بينهم طفلان يبلغان من العمر 13 و6 سنوات."
       },
       {
-        "title": "إسرائيل إلى أين؟ مؤرخ للإبادة الجماعية يفكك تحوّل الصهيونية",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d9%85%d8%a4%d8%b1%d8%ae-%d9%84%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:49:38 +0300",
+        "title": "ومضة في السماء ثم سقوط مفاجئ.. كاميرا توثق لحظة اصطدام طائرة بأسلاك الضغط العالي",
+        "link": "https://www.aljazeera.net/misc/2026/4/22/%d9%88%d9%85%d8%b6%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1-%d8%ab%d9%85-%d8%b3%d9%82%d9%88%d8%b7-%d9%85%d9%81%d8%a7%d8%ac%d8%a6-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:54:11 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "حذّر المؤرخ الإسرائيلي المتخصص في شؤون الإبادة الجماعية عومير بارتوف من أن مسار إسرائيل يهدد مكانتها الأخلاقية ودعمها الدولي بعد أن أصبحت دولة مدمنة على العنف، وقال إنها اقترفت ..."
+        "description": "من خلف زجاج سيارة عابرة، تتحول سماء هادئة في كاليفورنيا إلى ومضة عمياء وسقوط مفاجئ لطائرة صغيرة تغرق الحي في العتمة وتترك أسباب الحادث معلقة في الهواء."
       },
       {
-        "title": "ملف اليورانيوم الإيراني يعرقل مفاوضات واشنطن وطهران",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d9%85%d9%84%d9%81-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a-%d9%8a%d8%b9%d8%b1%d9%82%d9%84?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:48:25 +0300",
+        "title": "فريدمان: هكذا تاهت إسرائيل وهكذا يمكن لترمب إنقاذ لبنان",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%b1%d9%8a%d8%af%d9%85%d8%a7%d9%86-%d9%87%d9%83%d8%b0%d8%a7-%d8%aa%d8%a7%d9%87%d8%aa-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d9%87%d9%83%d8%b0%d8%a7-%d9%8a%d9%85%d9%83%d9%86?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:49:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعد مطالبة الولايات المتحدة إيران بتسليم مخزونها من اليورانيوم المخصب بنسبة 60% من أهم الملفات الساخنة المطروحة على طاولة المفاوضات بين البلدين."
+        "description": "يرى فريدمان أن إسرائيل، بقيادة اليمين المتطرف، باتت تعتمد \"إستراتيجية المطرقة\" التي تحطم كل شيء دون بناء أي أفق سياسي، مما يهدد مستقبلها الإستراتيجي وعلاقاتها الدولية، بل وعلاقت..."
       },
       {
-        "title": "أكثر من 30 دولة تبحث في لندن إعادة فتح مضيق هرمز",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d9%81%d9%8a-%d9%84%d9%86%d8%af%d9%86-%d9%84%d8%a8%d8%ad%d8%ab-%d8%a5%d8%b9%d8%a7%d8%af%d8%a9-%d9%81%d8%aa%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:09:35 +0300",
+        "title": "السوق تفتقد الوضوح.. الذهب يرتفع والنفط يختبر هدنة أمريكا وإيران",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d8%a7%d9%84%d8%b3%d9%88%d9%82-%d8%aa%d9%81%d8%aa%d9%82%d8%af-%d8%a7%d9%84%d9%88%d8%b6%d9%88%d8%ad-%d8%a7%d9%84%d8%b0%d9%87%d8%a8-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%88%d8%a7%d9%84%d9%86%d9%81%d8%b7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:35:51 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أعلنت بريطانيا أنها ستستضيف عسكريين من نحو 30 بلدا، يومي الأربعاء والخميس، لمناقشة تشكيل مهمة بقيادة لندن وباريس لحماية الملاحة في مضيق هرمز."
+        "description": "ارتفع الذهب مع تراجع محدود للنفط عقب تمديد هدنة أمريكا وإيران، في ظل ترقب الأسواق لمسار المحادثات وتأثيرها على التضخم والفائدة، واستمرار اضطراب إمدادات الطاقة عبر مضيق هرمز."
       },
       {
-        "title": "كيف تنظر تل أبيب إلى تمديد وقف إطلاق النار مع إيران؟",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%8a%d8%af%d9%8a%d8%b9%d9%88%d8%aa-%d8%a3%d8%ad%d8%b1%d9%86%d9%88%d8%aa-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%84%d9%82-%d8%aa%d9%85%d8%af%d9%8a%d8%af-%d8%aa%d8%b1%d9%85%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:46:05 +0300",
+        "title": "بين الدعم والتحفظ والمعارضة.. انقسام أوروبي يحول دون تعليق اتفاق الشراكة مع إسرائيل",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%af%d8%b9%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d9%81%d8%b8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b1%d8%b6%d8%a9-%d8%a7%d9%86%d9%82%d8%b3%d8%a7%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:31:03 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تترقب تل أبيب بحذر قرار ترمب تمديد مهلة وقف إطلاق النار مع إيران دون سقف محدد، وتخشى استغلال طهران ذلك لكسب الوقت، في حين تواصل تحضيراتها العسكرية لسيناريو استئناف الحرب."
+        "description": "أقر دبلوماسيون أوروبيون بعدم توفر الإجماع اللازم لتعليق اتفاقية الشراكة مع إسرائيل، في ظل تمسك دول رئيسية، على رأسها ألمانيا وإيطاليا، برفض المضي في هذا الاتجاه في الوقت الراهن."
       },
       {
-        "title": "فايننشال تايمز: لهذا تراجع الحب الأمريكي لإسرائيل",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%a7%d9%8a%d9%86%d9%86%d8%b4%d8%a7%d9%84-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d9%84%d9%87%d8%b0%d8%a7-%d8%aa%d8%b1%d8%a7%d8%ac%d8%b9-%d8%a7%d9%84%d8%ad%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:44:04 +0300",
+        "title": "من النفط إلى الدواء.. كيف فجّرت الحرب أزمة صحية عالمية؟",
+        "link": "https://www.aljazeera.net/health/2026/4/22/%d9%85%d9%86-%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%af%d9%88%d8%a7%d8%a1-%d9%83%d9%8a%d9%81-%d9%81%d8%ac%d8%b1%d8%aa-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت صحيفة فايننشال تايمز إن التعاطف الأمريكي مع إسرائيل يتراجع تدريجيا منذ عام 1995 وزاد حدة في عهد نتنياهو، وهو ما قد يُدخل العلاقة طويلة الأمد بين أمريكا وإسرائيل في مرحلة أك..."
+        "description": "يُعد النفط والغاز المصدر الرئيسي للبتروكيماويات الداخلة في تصنيع معظم الأدوية والمستلزمات الطبية، كما تشكّل ممرات العبور في الشرق الأوسط ما بين 10% و20% من التجارة الدوائية."
       },
       {
-        "title": "واشنطن تراجع خريطة وجودها العسكري بعد ضربات طهران",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%82%d8%af-%d9%86%d8%ba%d9%8a%d8%b1-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d9%82%d9%88%d8%a7%d8%b9%d8%af%d9%86%d8%a7?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:59:48 +0300",
+        "title": "صحيفة: أمريكا توقف شحنات الدولار عن العراق وتطالب بتفكيك الفصائل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b5%d8%ad%d9%8a%d9%81%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d8%aa%d9%88%d9%82%d9%81-%d8%b4%d8%ad%d9%86%d8%a7%d8%aa-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:49 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أقرت وزارة الحرب الأمريكية بجهلها بحجم التكاليف النهائية اللازمة لإصلاح قواعدها العسكرية المتضررة في الشرق الأوسط جراء الحرب مع إيران، مشيرة إلى أنها قد تغيّر نمط بنائها وفقا له..."
+        "description": "ذكرت صحيفة وول ستريت جورنال أن إدارة الرئيس الأمريكي دونالد ترمب ‌علقت شحنات الدولار إلى العراق وجمدت برامج تعاون أمني معه، في إطار ضغوطها على بغداد من أجل تفكيك الفصائل المسلحة..."
       },
       {
-        "title": "\"سأظل معذبا بسبب ذلك\".. تاكر كارلسون يعتذر عن دعمه ترمب",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b3%d8%a3%d8%b8%d9%84-%d9%85%d8%b9%d8%b0%d8%a8%d8%a7-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b0%d9%84%d9%83-%d8%aa%d8%a7%d9%83%d8%b1-%d9%83%d8%a7%d8%b1%d9%84%d8%b3%d9%88%d9%86?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:47:33 +0300",
+        "title": "بتسيلم: الإبادة الجماعية أصبحت رسميا جزءا من سردية إسرائيل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b3%d9%8a%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d8%b9%d9%8a%d8%a9-%d8%a3%d8%b5%d8%a8%d8%ad%d8%aa-%d8%b1%d8%b3%d9%85%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:40 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "عبّر المذيع السابق في شبكة \"فوكس نيوز\" تاكر كارلسون عن ندمه لدعمه الرئيس الأمريكي دونالد ترمب خلال حملته الرئاسية عام 2024، قائلا إنه سيظل \"معذبا بسبب ذلك مدة طويلة\"."
+        "description": "أصبح اسم الحاخام الإسرائيلي المتطرف أفراهام زربيف مرادفا للتدمير المتعمد والمنهجي لغزة حسب منظمة \"بتسيلم\" الحقوقية الإسرائيلية، التي نددت بتكريم حكومة بنيامين نتنياهو له أمس الث..."
       },
       {
-        "title": "صدام الإرادات بهرمز.. شروط ترمب تصطدم بخطوط إيران الحمر",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%a7-%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:18:13 +0300",
+        "title": "الحرب في المنطقة تزيد نمو الصناعة العسكرية الأمريكية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d8%b2%d9%8a%d8%af-%d9%86%d9%85%d9%88-%d8%a7%d9%84%d8%b5%d9%86%d8%a7%d8%b9%d8%a9?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:05 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تتمسك واشنطن بنزع السلاح النووي وتغيير السلوك الإقليمي تحت ضغط الحصار، في حين تشترط طهران رفع القيود الاقتصادية والاعتراف بحقوقها السيادية لبدء التفاوض."
+        "description": "أفادت شركات الدفاع الأمريكية \"آر تي إكس\" و\"نورثروب غرومان\" و\"جنرال إلكتريك أيروسبايس\" بزيادة الطلب على المعدات العسكرية بسبب الحرب في المنطقة."
       },
       {
-        "title": "الأمم المتحدة: صعوبات تعترض عودة 4 ملايين نازح في السودان",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%b5%d8%b9%d9%88%d8%a8%d8%a7%d8%aa-%d8%aa%d8%b9%d8%aa%d8%b1%d8%b6?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:02:43 +0300",
+        "title": "في حادثة لافتة.. \"تشات جي بي تي\" أمام القضاء في قضية إطلاق نار بفلوريدا",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b6-%d8%aa%d8%b4%d8%a7%d8%aa-%d8%ac%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:04:57 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وسط تحديات معيشية قاسية، كشفت الأمم المتحدة عن عودة نحو 4 ملايين نازح سوداني طوعا إلى ديارهم، تزامنا مع استعادة الجيش السيطرة على مناطق واسعة في العاصمة الخرطوم."
+        "description": "تصنف القوانين الأمريكية أي مساعدة أو نصح لشخص ما بارتكاب جريمة \"تحريضا\" يتحمل صاحبها المسؤولية نفسها التي يتحمّلها الجاني، ومن هذا المنطلق تأتي ملاحقة \"تشات جي بي تي\"."
       },
       {
-        "title": "نيويورك تايمز: أوروبا وقصة الدور الضائع في حرب إيران",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%86%d9%8a%d9%88%d9%8a%d9%88%d8%b1%d9%83-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d8%a7-%d8%aa%d8%b7%d9%85%d8%ad-%d9%84%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:39:50 +0300",
+        "title": "الوقف الإسلامي.. هندسة الاستدامة قبل عصر المؤسسات",
+        "link": "https://www.aljazeera.net/encyclopedia/2026/4/22/%d8%a7%d9%84%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d9%82%d8%a8%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:23 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت نيويورك تايمز إن أوروبا تطمح للعب دور \"حارس القانون الدولي\" بشأن الأزمة الناجمة عن الحرب على إيران، غير أن التطورات المتسارعة سرعان ما قوضت هذا الطموح وأعادت التأكيد على ها..."
+        "description": "أحد أبرز الأدوات التي أسهمت في بناء البنية الاجتماعية والاقتصادية في الحضارة الإسلامية، فلم يقتصر دوره على العمل الخيري المباشر، وإنما شكل منظومة مستدامة لتمويل الخدمات العامة و..."
       },
       {
-        "title": "دروس حرب إيران.. 1.5 تريليون دولار لتطوير ترسانة أمريكا العسكرية",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%8a%d8%b9%d8%aa%d8%b2%d9%85-%d8%a5%d9%86%d9%81%d8%a7%d9%82-%d8%b9%d8%b4%d8%b1%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:34:05 +0300",
+        "title": "لماذا يتأخر تسليم طائرة الركاب الصينية \"سي 919″؟",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%aa%d8%a3%d8%ae%d8%b1-%d8%aa%d8%b3%d9%84%d9%8a%d9%85-%d8%b7%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d9%83%d8%a7%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعتزم وزارة الحرب الأمريكية إنفاق أكثر من 30 مليار دولار لشراء ذخائر أساسية، في مقدمتها صواريخ الاعتراض، عقب تراجع مخزوناتها إلى مستويات وُصفت بأنها حرجة بسبب الحرب مع إيران."
+        "description": "شركة الطائرات التجارية الصينية \"كوماك\" التي تنتج طائرة الركاب \"سي 919\" تواجه تحديات كبيرة، أبرزها استيراد المحركات من شركة أمريكية-فرنسية، فيما تصر على جودة عالية لطائراتها."
       },
       {
-        "title": "8 آلاف شخص ضحايا الهجرة في عام وأوروبا تتصدر قائمة المأساة",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b7%d8%b1%d9%82-%d8%a7%d9%84%d9%87%d8%ac%d8%b1%d8%a9-%d9%85%d8%b5%d8%b1%d8%b9-%d9%88%d9%81%d9%82%d8%af%d8%a7%d9%86-8-%d8%a2%d9%84%d8%a7%d9%81-%d8%b4%d8%ae%d8%b5-%d9%81%d9%8a-%d8%b9%d8%a7%d9%85?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:33:13 +0300",
+        "title": "نساء بحيرة فيكتوريا يكسرن المحظورات ويخضن غمار مهنة صيد الأسماك",
+        "link": "https://www.aljazeera.net/lifestyle/2026/4/22/%d9%86%d8%b3%d8%a7%d8%a1-%d8%a8%d8%ad%d9%8a%d8%b1%d8%a9-%d9%81%d9%8a%d9%83%d8%aa%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d9%83%d8%b3%d8%b1%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%b8%d9%88%d8%b1%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:36:28 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وثق تقرير للمنظمة الدولية للهجرة وفاة وفقدان نحو 8 آلاف شخص في طرق الهجرة بأنحاء العالم خلال العام الماضي، وتصدرت المسارات المؤدية إلى أوروبا قائمة الضحايا في حين شهدت الأمريكتا..."
+        "description": "نجحت نساء بحيرة فيكتوريا في كسر المحظورات الاجتماعية بامتهانهن الصيد لمواجهة التحديات الاقتصادية وتغير المناخ. تجربة ملهمة تحكيها رودا أكيتش ورفيقاتها."
       },
       {
-        "title": "تحركات أوروبية لتعليق اتفاقيات مع إسرائيل",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%aa%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d9%8a%d8%a9-%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d8%aa%d9%81%d8%a7%d9%82%d9%8a%d8%a7%d8%aa-%d9%85%d8%b9?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:09:52 +0300",
+        "title": "أين تذهب مليارات الفيفا؟",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d9%81%d9%8a%d9%81%d8%a7-%d8%a5%d9%86%d9%81%d8%a7%d9%86%d8%aa%d9%8a%d9%86%d9%88-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:15:04 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "في وقت يتواصل فيه الجدل داخل الاتحاد الأوروبي حول العلاقات مع إسرائيل، أكدت مسؤولة السياسة الخارجية كايا كالاس أنه لم يتوفر الدعم الكافي من الدول الأعضاء لتعليق اتفاق الشراكة مع..."
+        "description": "في ظل الطفرة المالية التي يقودها الاتحاد الدولي لكرة القدم، تتجدد الأسئلة حول مصير المليارات التي يدرها المونديال."
       },
       {
-        "title": "شاهد.. هكذا ردت جماهير ريال مدريد على إشارة فينيسيوس في ملعب البرنابيو",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%b1%d9%8a%d8%a7%d9%84-%d9%85%d8%af%d8%b1%d9%8a%d8%af-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%81%d9%8a%d9%86%d9%8a%d8%b3%d9%8a%d9%88%d8%b3-%d8%ac%d9%88%d9%86%d9%8a%d9%88%d8%b1?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:56:32 +0300",
+        "title": "واشنطن تنفي نقل نظام \"ثاد\" من كوريا الجنوبية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%aa%d9%86%d9%81%d9%8a-%d9%86%d9%82%d9%84-%d9%86%d8%b8%d8%a7%d9%85-%d8%ab%d8%a7%d8%af-%d9%85%d9%86-%d9%83%d9%88%d8%b1%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:06:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ما الذي فعلته جماهير ريال مدريد بعد إشارة فينيسيوس في البرنابيو؟"
+        "description": "بعد مرور نحو شهر على تصريحات مسؤولين أمريكيين بنقل أجزاء من نظام الدفاع الصاروخي \"ثاد\" من كوريا الجنوبية لاستخدامه في حرب الولايات المتحدة على إيران، نفى قائد عسكري أمريكي ذلك ق..."
       },
       {
-        "title": "روسيا توظف الذكاء الاصطناعي لفرض رقابة كاملة على مواطنيها",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%b1%d9%88%d8%b3%d9%8a%d8%a7-%d8%aa%d8%aa%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%b1%d9%82%d8%a7%d8%a8%d8%a9-%d8%b1%d9%82%d9%85%d9%8a%d8%a9-%d9%83%d8%a7%d9%85%d9%84%d8%a9-%d8%b9%d9%84%d9%89?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:38:28 +0300",
+        "title": "ترمب: إيران تنهار ماليا وتتأخر في دفع رواتب الجيش والشرطة",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b1%d9%85%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%aa%d9%86%d9%87%d8%a7%d8%b1-%d9%85%d8%a7%d9%84%d9%8a%d8%a7-%d9%88%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d9%81%d8%aa%d8%ad?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:05:37 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "بدأت روسيا مشروعا ضخما للرقابة الرقمية على المواطنين بتطبيق ضوابط صارمة ومُوجّهة على أداء الموظفين، تتضمن برامج تتبّع الوقت، والتقاط لقطات الشاشة، ومراقبة النشاط على الإنترنت، و..."
+        "description": "أكد الرئيس الأمريكي ترمب أن إيران تنهار ماليا وتطالب بفتح مضيق هرمز لإنقاذ اقتصادها من الحصار البحري. بينما يدرس تمديد إعفاءات شحن النفط لخفض تكاليف الوقود ومواجهة تداعيات الحرب..."
       },
       {
-        "title": "الأهلي السعودي يواجه ماتشيدا الياباني بنهائي أبطال آسيا للنخبة.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d9%85%d8%a7%d8%aa%d8%b4%d9%8a%d8%af%d8%a7-%d8%b2%d9%8a%d9%84%d9%81%d9%8a%d8%a7?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:26:18 +0300",
+        "title": "5 أيام حاسمة.. هل يتجاوز الإطار التنسيقي عراقيل اختيار رئيس الحكومة العراقية؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/5-%d8%a3%d9%8a%d8%a7%d9%85-%d8%ad%d8%a7%d8%b3%d9%85%d8%a9-%d9%87%d9%84-%d9%8a%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:46:15 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ماتشيدا زيلفيا يضرب موعدا مع الأهلي السعودي في نهائي دوري أبطال آسيا للنخبة."
+        "description": "لم يتبقَّ من المهلة المحددة لرئيس الجمهورية لتكليف مرشح الإطار التنسيقي بتشكيل الحكومة سوى أيام قليلة، ورغم ذلك فإن الخلافات المستمرة بين قوى الإطار تعرقل إنجاز هذا الاستحقاق."
       },
       {
-        "title": "اتهامات إيرانية بالمناورة.. ترمب يمدد وقف إطلاق النار ويتمسك بحصار الموانئ",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d8%aa%d9%87%d8%a7%d9%85%d8%a7%d8%aa-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%88%d8%b1%d8%a9-%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d9%85%d8%af%d8%af?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:21:08 +0300",
+        "title": "القصة الكاملة لرفع علم إسرائيل على كنيس بدمشق",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b1%d9%81%d8%b9-%d8%b9%d9%84%d9%85-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%b9%d9%84%d9%89?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:19:59 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قرر الرئيس الأمريكي دونالد ترمب تمديد الهدنة مع طهران استجابة لوساطة باكستانية، سعيا لمنح المفاوضات فرصة إضافية للنجاح، وفق قوله، رغم تمسكه باستمرار الحصار البحري الذي تعُده إير..."
+        "description": "صورة متداولة لرفع علم إسرائيل فوق كنيس في دمشق مفبركة بالذكاء الاصطناعي، التحقق يكشف تشوهات بصرية وغياب معالم حقيقية، في سياق حملات تضليل عن \"التطبيع\"."
       },
       {
-        "title": "مباراة الزمالك ضد بيراميدز في الدوري المصري.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%84%d9%83-%d8%a8%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d8%af%d8%b2-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 21:58:35 +0300",
+        "title": "كانت ذراعا لمخابرات الأسد.. أي دور للجان الأحياء في عهد أحمد الشرع؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%83%d8%a7%d9%86%d8%aa-%d8%b0%d8%b1%d8%a7%d8%b9%d8%a7-%d9%84%d9%85%d8%ae%d8%a7%d8%a8%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%b3%d8%af-%d9%81%d9%85%d8%a7-%d8%af%d9%88%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:17:55 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
+        "description": "يقول السوريون إن لجان الأحياء كانت أذرعًا لمخابرات نظام الأسد، ترصد حركة الناس عن قرب، فتوشي بهم وتوردهم المهالك والسجون. فأي مبرر لبقاء هذه اللجان في عهد أحمد الشرع؟"
       }
     ],
     "technology": [
       {
-        "title": "توقعات بانضمام روبيو لجولة المحادثات الثانية بين لبنان وإسرائيل",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d9%88%d9%82%d8%b9%d8%a7%d8%aa-%d8%a8%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%b1%d9%88%d8%a8%d9%8a%d9%88-%d9%84%d8%ac%d9%88%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:02:10 +0300",
+        "title": "أسواق التنبؤ تدخل نشرات الأخبار.. هل تتحول التغطية إلى مراهنة جماهيرية؟",
+        "link": "https://www.aljazeera.net/media/2026/4/22/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d8%aa%d9%86%d8%a8%d8%a4-%d8%aa%d8%af%d8%ae%d9%84-%d9%86%d8%b4%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%87%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:09 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تنطلق غدا الخميس في واشنطن جولة المحادثات الثانية بين لبنان وإسرائيل، وقال مسؤول أمريكي إنه يُتوقع أن ينضم وزير الخارجية ماركو روبيو إلى المفاوضات."
+        "description": "دخول أسواق التنبؤ إلى نشرات الأخبار يثير جدلا إزاء تأثيرها في الجمهور، خاصة كبار السن، وذلك وسط مخاوف من تحول التغطية إلى أداة تؤثر في الرأي العام لا مجرد تحليل."
       },
       {
-        "title": "رواسب اليورانيوم.. البصمة التي تمنح المفتشين مفاتيح أسرار المفاعلات",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%b1%d9%88%d8%a7%d8%b3%d8%a8-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a8%d8%b5%d9%85%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%85%d9%86%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:59:11 +0300",
+        "title": "أمن كأس العالم 2026.. رئيسة المكسيك تتعهد بحماية المونديال بعد هجوم الأهرامات الدامي",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%86-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d9%83%d8%b3%d9%8a%d9%83-%d8%a3%d9%87%d8%b1%d8%a7%d9%85%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:06 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "يمكن للمفتشين النوويين معرفة الكثير عن البرنامج النووي بناء على تعقب رواسب اليورانيوم في محيط منطقة التفتيش كاستنتاج نسبة التخصيب التي تم الوصول إليها وغيرها من المعلومات عن الب..."
+        "description": "قال مجلس الأمن المكسيكي إن حادث إطلاق نار خلف إصابة 13 شخصا بينهم طفلان يبلغان من العمر 13 و6 سنوات."
       },
       {
-        "title": "إسرائيل إلى أين؟ مؤرخ للإبادة الجماعية يفكك تحوّل الصهيونية",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d9%85%d8%a4%d8%b1%d8%ae-%d9%84%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:49:38 +0300",
+        "title": "ومضة في السماء ثم سقوط مفاجئ.. كاميرا توثق لحظة اصطدام طائرة بأسلاك الضغط العالي",
+        "link": "https://www.aljazeera.net/misc/2026/4/22/%d9%88%d9%85%d8%b6%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1-%d8%ab%d9%85-%d8%b3%d9%82%d9%88%d8%b7-%d9%85%d9%81%d8%a7%d8%ac%d8%a6-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:54:11 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "حذّر المؤرخ الإسرائيلي المتخصص في شؤون الإبادة الجماعية عومير بارتوف من أن مسار إسرائيل يهدد مكانتها الأخلاقية ودعمها الدولي بعد أن أصبحت دولة مدمنة على العنف، وقال إنها اقترفت ..."
+        "description": "من خلف زجاج سيارة عابرة، تتحول سماء هادئة في كاليفورنيا إلى ومضة عمياء وسقوط مفاجئ لطائرة صغيرة تغرق الحي في العتمة وتترك أسباب الحادث معلقة في الهواء."
       },
       {
-        "title": "ملف اليورانيوم الإيراني يعرقل مفاوضات واشنطن وطهران",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d9%85%d9%84%d9%81-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a-%d9%8a%d8%b9%d8%b1%d9%82%d9%84?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:48:25 +0300",
+        "title": "فريدمان: هكذا تاهت إسرائيل وهكذا يمكن لترمب إنقاذ لبنان",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%b1%d9%8a%d8%af%d9%85%d8%a7%d9%86-%d9%87%d9%83%d8%b0%d8%a7-%d8%aa%d8%a7%d9%87%d8%aa-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d9%87%d9%83%d8%b0%d8%a7-%d9%8a%d9%85%d9%83%d9%86?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:49:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعد مطالبة الولايات المتحدة إيران بتسليم مخزونها من اليورانيوم المخصب بنسبة 60% من أهم الملفات الساخنة المطروحة على طاولة المفاوضات بين البلدين."
+        "description": "يرى فريدمان أن إسرائيل، بقيادة اليمين المتطرف، باتت تعتمد \"إستراتيجية المطرقة\" التي تحطم كل شيء دون بناء أي أفق سياسي، مما يهدد مستقبلها الإستراتيجي وعلاقاتها الدولية، بل وعلاقت..."
       },
       {
-        "title": "أكثر من 30 دولة تبحث في لندن إعادة فتح مضيق هرمز",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d9%81%d9%8a-%d9%84%d9%86%d8%af%d9%86-%d9%84%d8%a8%d8%ad%d8%ab-%d8%a5%d8%b9%d8%a7%d8%af%d8%a9-%d9%81%d8%aa%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:09:35 +0300",
+        "title": "السوق تفتقد الوضوح.. الذهب يرتفع والنفط يختبر هدنة أمريكا وإيران",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d8%a7%d9%84%d8%b3%d9%88%d9%82-%d8%aa%d9%81%d8%aa%d9%82%d8%af-%d8%a7%d9%84%d9%88%d8%b6%d9%88%d8%ad-%d8%a7%d9%84%d8%b0%d9%87%d8%a8-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%88%d8%a7%d9%84%d9%86%d9%81%d8%b7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:35:51 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أعلنت بريطانيا أنها ستستضيف عسكريين من نحو 30 بلدا، يومي الأربعاء والخميس، لمناقشة تشكيل مهمة بقيادة لندن وباريس لحماية الملاحة في مضيق هرمز."
+        "description": "ارتفع الذهب مع تراجع محدود للنفط عقب تمديد هدنة أمريكا وإيران، في ظل ترقب الأسواق لمسار المحادثات وتأثيرها على التضخم والفائدة، واستمرار اضطراب إمدادات الطاقة عبر مضيق هرمز."
       },
       {
-        "title": "كيف تنظر تل أبيب إلى تمديد وقف إطلاق النار مع إيران؟",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%8a%d8%af%d9%8a%d8%b9%d9%88%d8%aa-%d8%a3%d8%ad%d8%b1%d9%86%d9%88%d8%aa-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%84%d9%82-%d8%aa%d9%85%d8%af%d9%8a%d8%af-%d8%aa%d8%b1%d9%85%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:46:05 +0300",
+        "title": "بين الدعم والتحفظ والمعارضة.. انقسام أوروبي يحول دون تعليق اتفاق الشراكة مع إسرائيل",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%af%d8%b9%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d9%81%d8%b8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b1%d8%b6%d8%a9-%d8%a7%d9%86%d9%82%d8%b3%d8%a7%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:31:03 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تترقب تل أبيب بحذر قرار ترمب تمديد مهلة وقف إطلاق النار مع إيران دون سقف محدد، وتخشى استغلال طهران ذلك لكسب الوقت، في حين تواصل تحضيراتها العسكرية لسيناريو استئناف الحرب."
+        "description": "أقر دبلوماسيون أوروبيون بعدم توفر الإجماع اللازم لتعليق اتفاقية الشراكة مع إسرائيل، في ظل تمسك دول رئيسية، على رأسها ألمانيا وإيطاليا، برفض المضي في هذا الاتجاه في الوقت الراهن."
       },
       {
-        "title": "فايننشال تايمز: لهذا تراجع الحب الأمريكي لإسرائيل",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%a7%d9%8a%d9%86%d9%86%d8%b4%d8%a7%d9%84-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d9%84%d9%87%d8%b0%d8%a7-%d8%aa%d8%b1%d8%a7%d8%ac%d8%b9-%d8%a7%d9%84%d8%ad%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:44:04 +0300",
+        "title": "من النفط إلى الدواء.. كيف فجّرت الحرب أزمة صحية عالمية؟",
+        "link": "https://www.aljazeera.net/health/2026/4/22/%d9%85%d9%86-%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%af%d9%88%d8%a7%d8%a1-%d9%83%d9%8a%d9%81-%d9%81%d8%ac%d8%b1%d8%aa-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت صحيفة فايننشال تايمز إن التعاطف الأمريكي مع إسرائيل يتراجع تدريجيا منذ عام 1995 وزاد حدة في عهد نتنياهو، وهو ما قد يُدخل العلاقة طويلة الأمد بين أمريكا وإسرائيل في مرحلة أك..."
+        "description": "يُعد النفط والغاز المصدر الرئيسي للبتروكيماويات الداخلة في تصنيع معظم الأدوية والمستلزمات الطبية، كما تشكّل ممرات العبور في الشرق الأوسط ما بين 10% و20% من التجارة الدوائية."
       },
       {
-        "title": "واشنطن تراجع خريطة وجودها العسكري بعد ضربات طهران",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%82%d8%af-%d9%86%d8%ba%d9%8a%d8%b1-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d9%82%d9%88%d8%a7%d8%b9%d8%af%d9%86%d8%a7?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:59:48 +0300",
+        "title": "صحيفة: أمريكا توقف شحنات الدولار عن العراق وتطالب بتفكيك الفصائل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b5%d8%ad%d9%8a%d9%81%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d8%aa%d9%88%d9%82%d9%81-%d8%b4%d8%ad%d9%86%d8%a7%d8%aa-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:49 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أقرت وزارة الحرب الأمريكية بجهلها بحجم التكاليف النهائية اللازمة لإصلاح قواعدها العسكرية المتضررة في الشرق الأوسط جراء الحرب مع إيران، مشيرة إلى أنها قد تغيّر نمط بنائها وفقا له..."
+        "description": "ذكرت صحيفة وول ستريت جورنال أن إدارة الرئيس الأمريكي دونالد ترمب ‌علقت شحنات الدولار إلى العراق وجمدت برامج تعاون أمني معه، في إطار ضغوطها على بغداد من أجل تفكيك الفصائل المسلحة..."
       },
       {
-        "title": "\"سأظل معذبا بسبب ذلك\".. تاكر كارلسون يعتذر عن دعمه ترمب",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b3%d8%a3%d8%b8%d9%84-%d9%85%d8%b9%d8%b0%d8%a8%d8%a7-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b0%d9%84%d9%83-%d8%aa%d8%a7%d9%83%d8%b1-%d9%83%d8%a7%d8%b1%d9%84%d8%b3%d9%88%d9%86?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:47:33 +0300",
+        "title": "بتسيلم: الإبادة الجماعية أصبحت رسميا جزءا من سردية إسرائيل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b3%d9%8a%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d8%b9%d9%8a%d8%a9-%d8%a3%d8%b5%d8%a8%d8%ad%d8%aa-%d8%b1%d8%b3%d9%85%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:40 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "عبّر المذيع السابق في شبكة \"فوكس نيوز\" تاكر كارلسون عن ندمه لدعمه الرئيس الأمريكي دونالد ترمب خلال حملته الرئاسية عام 2024، قائلا إنه سيظل \"معذبا بسبب ذلك مدة طويلة\"."
+        "description": "أصبح اسم الحاخام الإسرائيلي المتطرف أفراهام زربيف مرادفا للتدمير المتعمد والمنهجي لغزة حسب منظمة \"بتسيلم\" الحقوقية الإسرائيلية، التي نددت بتكريم حكومة بنيامين نتنياهو له أمس الث..."
       },
       {
-        "title": "صدام الإرادات بهرمز.. شروط ترمب تصطدم بخطوط إيران الحمر",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%a7-%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:18:13 +0300",
+        "title": "الحرب في المنطقة تزيد نمو الصناعة العسكرية الأمريكية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d8%b2%d9%8a%d8%af-%d9%86%d9%85%d9%88-%d8%a7%d9%84%d8%b5%d9%86%d8%a7%d8%b9%d8%a9?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:05 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تتمسك واشنطن بنزع السلاح النووي وتغيير السلوك الإقليمي تحت ضغط الحصار، في حين تشترط طهران رفع القيود الاقتصادية والاعتراف بحقوقها السيادية لبدء التفاوض."
+        "description": "أفادت شركات الدفاع الأمريكية \"آر تي إكس\" و\"نورثروب غرومان\" و\"جنرال إلكتريك أيروسبايس\" بزيادة الطلب على المعدات العسكرية بسبب الحرب في المنطقة."
       },
       {
-        "title": "الأمم المتحدة: صعوبات تعترض عودة 4 ملايين نازح في السودان",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%b5%d8%b9%d9%88%d8%a8%d8%a7%d8%aa-%d8%aa%d8%b9%d8%aa%d8%b1%d8%b6?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:02:43 +0300",
+        "title": "في حادثة لافتة.. \"تشات جي بي تي\" أمام القضاء في قضية إطلاق نار بفلوريدا",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b6-%d8%aa%d8%b4%d8%a7%d8%aa-%d8%ac%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:04:57 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وسط تحديات معيشية قاسية، كشفت الأمم المتحدة عن عودة نحو 4 ملايين نازح سوداني طوعا إلى ديارهم، تزامنا مع استعادة الجيش السيطرة على مناطق واسعة في العاصمة الخرطوم."
+        "description": "تصنف القوانين الأمريكية أي مساعدة أو نصح لشخص ما بارتكاب جريمة \"تحريضا\" يتحمل صاحبها المسؤولية نفسها التي يتحمّلها الجاني، ومن هذا المنطلق تأتي ملاحقة \"تشات جي بي تي\"."
       },
       {
-        "title": "نيويورك تايمز: أوروبا وقصة الدور الضائع في حرب إيران",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%86%d9%8a%d9%88%d9%8a%d9%88%d8%b1%d9%83-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d8%a7-%d8%aa%d8%b7%d9%85%d8%ad-%d9%84%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:39:50 +0300",
+        "title": "الوقف الإسلامي.. هندسة الاستدامة قبل عصر المؤسسات",
+        "link": "https://www.aljazeera.net/encyclopedia/2026/4/22/%d8%a7%d9%84%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d9%82%d8%a8%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:23 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت نيويورك تايمز إن أوروبا تطمح للعب دور \"حارس القانون الدولي\" بشأن الأزمة الناجمة عن الحرب على إيران، غير أن التطورات المتسارعة سرعان ما قوضت هذا الطموح وأعادت التأكيد على ها..."
+        "description": "أحد أبرز الأدوات التي أسهمت في بناء البنية الاجتماعية والاقتصادية في الحضارة الإسلامية، فلم يقتصر دوره على العمل الخيري المباشر، وإنما شكل منظومة مستدامة لتمويل الخدمات العامة و..."
       },
       {
-        "title": "دروس حرب إيران.. 1.5 تريليون دولار لتطوير ترسانة أمريكا العسكرية",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%8a%d8%b9%d8%aa%d8%b2%d9%85-%d8%a5%d9%86%d9%81%d8%a7%d9%82-%d8%b9%d8%b4%d8%b1%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:34:05 +0300",
+        "title": "لماذا يتأخر تسليم طائرة الركاب الصينية \"سي 919″؟",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%aa%d8%a3%d8%ae%d8%b1-%d8%aa%d8%b3%d9%84%d9%8a%d9%85-%d8%b7%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d9%83%d8%a7%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعتزم وزارة الحرب الأمريكية إنفاق أكثر من 30 مليار دولار لشراء ذخائر أساسية، في مقدمتها صواريخ الاعتراض، عقب تراجع مخزوناتها إلى مستويات وُصفت بأنها حرجة بسبب الحرب مع إيران."
+        "description": "شركة الطائرات التجارية الصينية \"كوماك\" التي تنتج طائرة الركاب \"سي 919\" تواجه تحديات كبيرة، أبرزها استيراد المحركات من شركة أمريكية-فرنسية، فيما تصر على جودة عالية لطائراتها."
       },
       {
-        "title": "8 آلاف شخص ضحايا الهجرة في عام وأوروبا تتصدر قائمة المأساة",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b7%d8%b1%d9%82-%d8%a7%d9%84%d9%87%d8%ac%d8%b1%d8%a9-%d9%85%d8%b5%d8%b1%d8%b9-%d9%88%d9%81%d9%82%d8%af%d8%a7%d9%86-8-%d8%a2%d9%84%d8%a7%d9%81-%d8%b4%d8%ae%d8%b5-%d9%81%d9%8a-%d8%b9%d8%a7%d9%85?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:33:13 +0300",
+        "title": "نساء بحيرة فيكتوريا يكسرن المحظورات ويخضن غمار مهنة صيد الأسماك",
+        "link": "https://www.aljazeera.net/lifestyle/2026/4/22/%d9%86%d8%b3%d8%a7%d8%a1-%d8%a8%d8%ad%d9%8a%d8%b1%d8%a9-%d9%81%d9%8a%d9%83%d8%aa%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d9%83%d8%b3%d8%b1%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%b8%d9%88%d8%b1%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:36:28 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وثق تقرير للمنظمة الدولية للهجرة وفاة وفقدان نحو 8 آلاف شخص في طرق الهجرة بأنحاء العالم خلال العام الماضي، وتصدرت المسارات المؤدية إلى أوروبا قائمة الضحايا في حين شهدت الأمريكتا..."
+        "description": "نجحت نساء بحيرة فيكتوريا في كسر المحظورات الاجتماعية بامتهانهن الصيد لمواجهة التحديات الاقتصادية وتغير المناخ. تجربة ملهمة تحكيها رودا أكيتش ورفيقاتها."
       },
       {
-        "title": "تحركات أوروبية لتعليق اتفاقيات مع إسرائيل",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%aa%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d9%8a%d8%a9-%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d8%aa%d9%81%d8%a7%d9%82%d9%8a%d8%a7%d8%aa-%d9%85%d8%b9?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:09:52 +0300",
+        "title": "أين تذهب مليارات الفيفا؟",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d9%81%d9%8a%d9%81%d8%a7-%d8%a5%d9%86%d9%81%d8%a7%d9%86%d8%aa%d9%8a%d9%86%d9%88-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:15:04 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "في وقت يتواصل فيه الجدل داخل الاتحاد الأوروبي حول العلاقات مع إسرائيل، أكدت مسؤولة السياسة الخارجية كايا كالاس أنه لم يتوفر الدعم الكافي من الدول الأعضاء لتعليق اتفاق الشراكة مع..."
+        "description": "في ظل الطفرة المالية التي يقودها الاتحاد الدولي لكرة القدم، تتجدد الأسئلة حول مصير المليارات التي يدرها المونديال."
       },
       {
-        "title": "شاهد.. هكذا ردت جماهير ريال مدريد على إشارة فينيسيوس في ملعب البرنابيو",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%b1%d9%8a%d8%a7%d9%84-%d9%85%d8%af%d8%b1%d9%8a%d8%af-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%81%d9%8a%d9%86%d9%8a%d8%b3%d9%8a%d9%88%d8%b3-%d8%ac%d9%88%d9%86%d9%8a%d9%88%d8%b1?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:56:32 +0300",
+        "title": "واشنطن تنفي نقل نظام \"ثاد\" من كوريا الجنوبية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%aa%d9%86%d9%81%d9%8a-%d9%86%d9%82%d9%84-%d9%86%d8%b8%d8%a7%d9%85-%d8%ab%d8%a7%d8%af-%d9%85%d9%86-%d9%83%d9%88%d8%b1%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:06:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ما الذي فعلته جماهير ريال مدريد بعد إشارة فينيسيوس في البرنابيو؟"
+        "description": "بعد مرور نحو شهر على تصريحات مسؤولين أمريكيين بنقل أجزاء من نظام الدفاع الصاروخي \"ثاد\" من كوريا الجنوبية لاستخدامه في حرب الولايات المتحدة على إيران، نفى قائد عسكري أمريكي ذلك ق..."
       },
       {
-        "title": "روسيا توظف الذكاء الاصطناعي لفرض رقابة كاملة على مواطنيها",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%b1%d9%88%d8%b3%d9%8a%d8%a7-%d8%aa%d8%aa%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%b1%d9%82%d8%a7%d8%a8%d8%a9-%d8%b1%d9%82%d9%85%d9%8a%d8%a9-%d9%83%d8%a7%d9%85%d9%84%d8%a9-%d8%b9%d9%84%d9%89?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:38:28 +0300",
+        "title": "ترمب: إيران تنهار ماليا وتتأخر في دفع رواتب الجيش والشرطة",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b1%d9%85%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%aa%d9%86%d9%87%d8%a7%d8%b1-%d9%85%d8%a7%d9%84%d9%8a%d8%a7-%d9%88%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d9%81%d8%aa%d8%ad?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:05:37 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "بدأت روسيا مشروعا ضخما للرقابة الرقمية على المواطنين بتطبيق ضوابط صارمة ومُوجّهة على أداء الموظفين، تتضمن برامج تتبّع الوقت، والتقاط لقطات الشاشة، ومراقبة النشاط على الإنترنت، و..."
+        "description": "أكد الرئيس الأمريكي ترمب أن إيران تنهار ماليا وتطالب بفتح مضيق هرمز لإنقاذ اقتصادها من الحصار البحري. بينما يدرس تمديد إعفاءات شحن النفط لخفض تكاليف الوقود ومواجهة تداعيات الحرب..."
       },
       {
-        "title": "الأهلي السعودي يواجه ماتشيدا الياباني بنهائي أبطال آسيا للنخبة.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d9%85%d8%a7%d8%aa%d8%b4%d9%8a%d8%af%d8%a7-%d8%b2%d9%8a%d9%84%d9%81%d9%8a%d8%a7?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:26:18 +0300",
+        "title": "5 أيام حاسمة.. هل يتجاوز الإطار التنسيقي عراقيل اختيار رئيس الحكومة العراقية؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/5-%d8%a3%d9%8a%d8%a7%d9%85-%d8%ad%d8%a7%d8%b3%d9%85%d8%a9-%d9%87%d9%84-%d9%8a%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:46:15 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ماتشيدا زيلفيا يضرب موعدا مع الأهلي السعودي في نهائي دوري أبطال آسيا للنخبة."
+        "description": "لم يتبقَّ من المهلة المحددة لرئيس الجمهورية لتكليف مرشح الإطار التنسيقي بتشكيل الحكومة سوى أيام قليلة، ورغم ذلك فإن الخلافات المستمرة بين قوى الإطار تعرقل إنجاز هذا الاستحقاق."
       },
       {
-        "title": "اتهامات إيرانية بالمناورة.. ترمب يمدد وقف إطلاق النار ويتمسك بحصار الموانئ",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d8%aa%d9%87%d8%a7%d9%85%d8%a7%d8%aa-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%88%d8%b1%d8%a9-%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d9%85%d8%af%d8%af?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:21:08 +0300",
+        "title": "القصة الكاملة لرفع علم إسرائيل على كنيس بدمشق",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b1%d9%81%d8%b9-%d8%b9%d9%84%d9%85-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%b9%d9%84%d9%89?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:19:59 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قرر الرئيس الأمريكي دونالد ترمب تمديد الهدنة مع طهران استجابة لوساطة باكستانية، سعيا لمنح المفاوضات فرصة إضافية للنجاح، وفق قوله، رغم تمسكه باستمرار الحصار البحري الذي تعُده إير..."
+        "description": "صورة متداولة لرفع علم إسرائيل فوق كنيس في دمشق مفبركة بالذكاء الاصطناعي، التحقق يكشف تشوهات بصرية وغياب معالم حقيقية، في سياق حملات تضليل عن \"التطبيع\"."
       },
       {
-        "title": "مباراة الزمالك ضد بيراميدز في الدوري المصري.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%84%d9%83-%d8%a8%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d8%af%d8%b2-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 21:58:35 +0300",
+        "title": "كانت ذراعا لمخابرات الأسد.. أي دور للجان الأحياء في عهد أحمد الشرع؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%83%d8%a7%d9%86%d8%aa-%d8%b0%d8%b1%d8%a7%d8%b9%d8%a7-%d9%84%d9%85%d8%ae%d8%a7%d8%a8%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%b3%d8%af-%d9%81%d9%85%d8%a7-%d8%af%d9%88%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:17:55 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
+        "description": "يقول السوريون إن لجان الأحياء كانت أذرعًا لمخابرات نظام الأسد، ترصد حركة الناس عن قرب، فتوشي بهم وتوردهم المهالك والسجون. فأي مبرر لبقاء هذه اللجان في عهد أحمد الشرع؟"
       }
     ],
     "gaming": [
       {
-        "title": "توقعات بانضمام روبيو لجولة المحادثات الثانية بين لبنان وإسرائيل",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d9%88%d9%82%d8%b9%d8%a7%d8%aa-%d8%a8%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%b1%d9%88%d8%a8%d9%8a%d9%88-%d9%84%d8%ac%d9%88%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:02:10 +0300",
+        "title": "أسواق التنبؤ تدخل نشرات الأخبار.. هل تتحول التغطية إلى مراهنة جماهيرية؟",
+        "link": "https://www.aljazeera.net/media/2026/4/22/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d8%aa%d9%86%d8%a8%d8%a4-%d8%aa%d8%af%d8%ae%d9%84-%d9%86%d8%b4%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%87%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:09 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تنطلق غدا الخميس في واشنطن جولة المحادثات الثانية بين لبنان وإسرائيل، وقال مسؤول أمريكي إنه يُتوقع أن ينضم وزير الخارجية ماركو روبيو إلى المفاوضات."
+        "description": "دخول أسواق التنبؤ إلى نشرات الأخبار يثير جدلا إزاء تأثيرها في الجمهور، خاصة كبار السن، وذلك وسط مخاوف من تحول التغطية إلى أداة تؤثر في الرأي العام لا مجرد تحليل."
       },
       {
-        "title": "رواسب اليورانيوم.. البصمة التي تمنح المفتشين مفاتيح أسرار المفاعلات",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%b1%d9%88%d8%a7%d8%b3%d8%a8-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a8%d8%b5%d9%85%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%85%d9%86%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:59:11 +0300",
+        "title": "أمن كأس العالم 2026.. رئيسة المكسيك تتعهد بحماية المونديال بعد هجوم الأهرامات الدامي",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%86-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d9%83%d8%b3%d9%8a%d9%83-%d8%a3%d9%87%d8%b1%d8%a7%d9%85%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:06 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "يمكن للمفتشين النوويين معرفة الكثير عن البرنامج النووي بناء على تعقب رواسب اليورانيوم في محيط منطقة التفتيش كاستنتاج نسبة التخصيب التي تم الوصول إليها وغيرها من المعلومات عن الب..."
+        "description": "قال مجلس الأمن المكسيكي إن حادث إطلاق نار خلف إصابة 13 شخصا بينهم طفلان يبلغان من العمر 13 و6 سنوات."
       },
       {
-        "title": "إسرائيل إلى أين؟ مؤرخ للإبادة الجماعية يفكك تحوّل الصهيونية",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d9%85%d8%a4%d8%b1%d8%ae-%d9%84%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:49:38 +0300",
+        "title": "ومضة في السماء ثم سقوط مفاجئ.. كاميرا توثق لحظة اصطدام طائرة بأسلاك الضغط العالي",
+        "link": "https://www.aljazeera.net/misc/2026/4/22/%d9%88%d9%85%d8%b6%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1-%d8%ab%d9%85-%d8%b3%d9%82%d9%88%d8%b7-%d9%85%d9%81%d8%a7%d8%ac%d8%a6-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:54:11 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "حذّر المؤرخ الإسرائيلي المتخصص في شؤون الإبادة الجماعية عومير بارتوف من أن مسار إسرائيل يهدد مكانتها الأخلاقية ودعمها الدولي بعد أن أصبحت دولة مدمنة على العنف، وقال إنها اقترفت ..."
+        "description": "من خلف زجاج سيارة عابرة، تتحول سماء هادئة في كاليفورنيا إلى ومضة عمياء وسقوط مفاجئ لطائرة صغيرة تغرق الحي في العتمة وتترك أسباب الحادث معلقة في الهواء."
       },
       {
-        "title": "ملف اليورانيوم الإيراني يعرقل مفاوضات واشنطن وطهران",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d9%85%d9%84%d9%81-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a-%d9%8a%d8%b9%d8%b1%d9%82%d9%84?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:48:25 +0300",
+        "title": "فريدمان: هكذا تاهت إسرائيل وهكذا يمكن لترمب إنقاذ لبنان",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%b1%d9%8a%d8%af%d9%85%d8%a7%d9%86-%d9%87%d9%83%d8%b0%d8%a7-%d8%aa%d8%a7%d9%87%d8%aa-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d9%87%d9%83%d8%b0%d8%a7-%d9%8a%d9%85%d9%83%d9%86?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:49:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعد مطالبة الولايات المتحدة إيران بتسليم مخزونها من اليورانيوم المخصب بنسبة 60% من أهم الملفات الساخنة المطروحة على طاولة المفاوضات بين البلدين."
+        "description": "يرى فريدمان أن إسرائيل، بقيادة اليمين المتطرف، باتت تعتمد \"إستراتيجية المطرقة\" التي تحطم كل شيء دون بناء أي أفق سياسي، مما يهدد مستقبلها الإستراتيجي وعلاقاتها الدولية، بل وعلاقت..."
       },
       {
-        "title": "أكثر من 30 دولة تبحث في لندن إعادة فتح مضيق هرمز",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d9%81%d9%8a-%d9%84%d9%86%d8%af%d9%86-%d9%84%d8%a8%d8%ad%d8%ab-%d8%a5%d8%b9%d8%a7%d8%af%d8%a9-%d9%81%d8%aa%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:09:35 +0300",
+        "title": "السوق تفتقد الوضوح.. الذهب يرتفع والنفط يختبر هدنة أمريكا وإيران",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d8%a7%d9%84%d8%b3%d9%88%d9%82-%d8%aa%d9%81%d8%aa%d9%82%d8%af-%d8%a7%d9%84%d9%88%d8%b6%d9%88%d8%ad-%d8%a7%d9%84%d8%b0%d9%87%d8%a8-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%88%d8%a7%d9%84%d9%86%d9%81%d8%b7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:35:51 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أعلنت بريطانيا أنها ستستضيف عسكريين من نحو 30 بلدا، يومي الأربعاء والخميس، لمناقشة تشكيل مهمة بقيادة لندن وباريس لحماية الملاحة في مضيق هرمز."
+        "description": "ارتفع الذهب مع تراجع محدود للنفط عقب تمديد هدنة أمريكا وإيران، في ظل ترقب الأسواق لمسار المحادثات وتأثيرها على التضخم والفائدة، واستمرار اضطراب إمدادات الطاقة عبر مضيق هرمز."
       },
       {
-        "title": "كيف تنظر تل أبيب إلى تمديد وقف إطلاق النار مع إيران؟",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%8a%d8%af%d9%8a%d8%b9%d9%88%d8%aa-%d8%a3%d8%ad%d8%b1%d9%86%d9%88%d8%aa-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%84%d9%82-%d8%aa%d9%85%d8%af%d9%8a%d8%af-%d8%aa%d8%b1%d9%85%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:46:05 +0300",
+        "title": "بين الدعم والتحفظ والمعارضة.. انقسام أوروبي يحول دون تعليق اتفاق الشراكة مع إسرائيل",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%af%d8%b9%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d9%81%d8%b8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b1%d8%b6%d8%a9-%d8%a7%d9%86%d9%82%d8%b3%d8%a7%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:31:03 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تترقب تل أبيب بحذر قرار ترمب تمديد مهلة وقف إطلاق النار مع إيران دون سقف محدد، وتخشى استغلال طهران ذلك لكسب الوقت، في حين تواصل تحضيراتها العسكرية لسيناريو استئناف الحرب."
+        "description": "أقر دبلوماسيون أوروبيون بعدم توفر الإجماع اللازم لتعليق اتفاقية الشراكة مع إسرائيل، في ظل تمسك دول رئيسية، على رأسها ألمانيا وإيطاليا، برفض المضي في هذا الاتجاه في الوقت الراهن."
       },
       {
-        "title": "فايننشال تايمز: لهذا تراجع الحب الأمريكي لإسرائيل",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%a7%d9%8a%d9%86%d9%86%d8%b4%d8%a7%d9%84-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d9%84%d9%87%d8%b0%d8%a7-%d8%aa%d8%b1%d8%a7%d8%ac%d8%b9-%d8%a7%d9%84%d8%ad%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:44:04 +0300",
+        "title": "من النفط إلى الدواء.. كيف فجّرت الحرب أزمة صحية عالمية؟",
+        "link": "https://www.aljazeera.net/health/2026/4/22/%d9%85%d9%86-%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%af%d9%88%d8%a7%d8%a1-%d9%83%d9%8a%d9%81-%d9%81%d8%ac%d8%b1%d8%aa-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت صحيفة فايننشال تايمز إن التعاطف الأمريكي مع إسرائيل يتراجع تدريجيا منذ عام 1995 وزاد حدة في عهد نتنياهو، وهو ما قد يُدخل العلاقة طويلة الأمد بين أمريكا وإسرائيل في مرحلة أك..."
+        "description": "يُعد النفط والغاز المصدر الرئيسي للبتروكيماويات الداخلة في تصنيع معظم الأدوية والمستلزمات الطبية، كما تشكّل ممرات العبور في الشرق الأوسط ما بين 10% و20% من التجارة الدوائية."
       },
       {
-        "title": "واشنطن تراجع خريطة وجودها العسكري بعد ضربات طهران",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%82%d8%af-%d9%86%d8%ba%d9%8a%d8%b1-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d9%82%d9%88%d8%a7%d8%b9%d8%af%d9%86%d8%a7?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:59:48 +0300",
+        "title": "صحيفة: أمريكا توقف شحنات الدولار عن العراق وتطالب بتفكيك الفصائل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b5%d8%ad%d9%8a%d9%81%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d8%aa%d9%88%d9%82%d9%81-%d8%b4%d8%ad%d9%86%d8%a7%d8%aa-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:49 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أقرت وزارة الحرب الأمريكية بجهلها بحجم التكاليف النهائية اللازمة لإصلاح قواعدها العسكرية المتضررة في الشرق الأوسط جراء الحرب مع إيران، مشيرة إلى أنها قد تغيّر نمط بنائها وفقا له..."
+        "description": "ذكرت صحيفة وول ستريت جورنال أن إدارة الرئيس الأمريكي دونالد ترمب ‌علقت شحنات الدولار إلى العراق وجمدت برامج تعاون أمني معه، في إطار ضغوطها على بغداد من أجل تفكيك الفصائل المسلحة..."
       },
       {
-        "title": "\"سأظل معذبا بسبب ذلك\".. تاكر كارلسون يعتذر عن دعمه ترمب",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b3%d8%a3%d8%b8%d9%84-%d9%85%d8%b9%d8%b0%d8%a8%d8%a7-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b0%d9%84%d9%83-%d8%aa%d8%a7%d9%83%d8%b1-%d9%83%d8%a7%d8%b1%d9%84%d8%b3%d9%88%d9%86?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:47:33 +0300",
+        "title": "بتسيلم: الإبادة الجماعية أصبحت رسميا جزءا من سردية إسرائيل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b3%d9%8a%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d8%b9%d9%8a%d8%a9-%d8%a3%d8%b5%d8%a8%d8%ad%d8%aa-%d8%b1%d8%b3%d9%85%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:40 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "عبّر المذيع السابق في شبكة \"فوكس نيوز\" تاكر كارلسون عن ندمه لدعمه الرئيس الأمريكي دونالد ترمب خلال حملته الرئاسية عام 2024، قائلا إنه سيظل \"معذبا بسبب ذلك مدة طويلة\"."
+        "description": "أصبح اسم الحاخام الإسرائيلي المتطرف أفراهام زربيف مرادفا للتدمير المتعمد والمنهجي لغزة حسب منظمة \"بتسيلم\" الحقوقية الإسرائيلية، التي نددت بتكريم حكومة بنيامين نتنياهو له أمس الث..."
       },
       {
-        "title": "صدام الإرادات بهرمز.. شروط ترمب تصطدم بخطوط إيران الحمر",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%a7-%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:18:13 +0300",
+        "title": "الحرب في المنطقة تزيد نمو الصناعة العسكرية الأمريكية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d8%b2%d9%8a%d8%af-%d9%86%d9%85%d9%88-%d8%a7%d9%84%d8%b5%d9%86%d8%a7%d8%b9%d8%a9?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:05 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تتمسك واشنطن بنزع السلاح النووي وتغيير السلوك الإقليمي تحت ضغط الحصار، في حين تشترط طهران رفع القيود الاقتصادية والاعتراف بحقوقها السيادية لبدء التفاوض."
+        "description": "أفادت شركات الدفاع الأمريكية \"آر تي إكس\" و\"نورثروب غرومان\" و\"جنرال إلكتريك أيروسبايس\" بزيادة الطلب على المعدات العسكرية بسبب الحرب في المنطقة."
       },
       {
-        "title": "الأمم المتحدة: صعوبات تعترض عودة 4 ملايين نازح في السودان",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%b5%d8%b9%d9%88%d8%a8%d8%a7%d8%aa-%d8%aa%d8%b9%d8%aa%d8%b1%d8%b6?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:02:43 +0300",
+        "title": "في حادثة لافتة.. \"تشات جي بي تي\" أمام القضاء في قضية إطلاق نار بفلوريدا",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b6-%d8%aa%d8%b4%d8%a7%d8%aa-%d8%ac%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:04:57 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وسط تحديات معيشية قاسية، كشفت الأمم المتحدة عن عودة نحو 4 ملايين نازح سوداني طوعا إلى ديارهم، تزامنا مع استعادة الجيش السيطرة على مناطق واسعة في العاصمة الخرطوم."
+        "description": "تصنف القوانين الأمريكية أي مساعدة أو نصح لشخص ما بارتكاب جريمة \"تحريضا\" يتحمل صاحبها المسؤولية نفسها التي يتحمّلها الجاني، ومن هذا المنطلق تأتي ملاحقة \"تشات جي بي تي\"."
       },
       {
-        "title": "نيويورك تايمز: أوروبا وقصة الدور الضائع في حرب إيران",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%86%d9%8a%d9%88%d9%8a%d9%88%d8%b1%d9%83-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d8%a7-%d8%aa%d8%b7%d9%85%d8%ad-%d9%84%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:39:50 +0300",
+        "title": "الوقف الإسلامي.. هندسة الاستدامة قبل عصر المؤسسات",
+        "link": "https://www.aljazeera.net/encyclopedia/2026/4/22/%d8%a7%d9%84%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d9%82%d8%a8%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:23 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت نيويورك تايمز إن أوروبا تطمح للعب دور \"حارس القانون الدولي\" بشأن الأزمة الناجمة عن الحرب على إيران، غير أن التطورات المتسارعة سرعان ما قوضت هذا الطموح وأعادت التأكيد على ها..."
+        "description": "أحد أبرز الأدوات التي أسهمت في بناء البنية الاجتماعية والاقتصادية في الحضارة الإسلامية، فلم يقتصر دوره على العمل الخيري المباشر، وإنما شكل منظومة مستدامة لتمويل الخدمات العامة و..."
       },
       {
-        "title": "دروس حرب إيران.. 1.5 تريليون دولار لتطوير ترسانة أمريكا العسكرية",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%8a%d8%b9%d8%aa%d8%b2%d9%85-%d8%a5%d9%86%d9%81%d8%a7%d9%82-%d8%b9%d8%b4%d8%b1%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:34:05 +0300",
+        "title": "لماذا يتأخر تسليم طائرة الركاب الصينية \"سي 919″؟",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%aa%d8%a3%d8%ae%d8%b1-%d8%aa%d8%b3%d9%84%d9%8a%d9%85-%d8%b7%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d9%83%d8%a7%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعتزم وزارة الحرب الأمريكية إنفاق أكثر من 30 مليار دولار لشراء ذخائر أساسية، في مقدمتها صواريخ الاعتراض، عقب تراجع مخزوناتها إلى مستويات وُصفت بأنها حرجة بسبب الحرب مع إيران."
+        "description": "شركة الطائرات التجارية الصينية \"كوماك\" التي تنتج طائرة الركاب \"سي 919\" تواجه تحديات كبيرة، أبرزها استيراد المحركات من شركة أمريكية-فرنسية، فيما تصر على جودة عالية لطائراتها."
       },
       {
-        "title": "8 آلاف شخص ضحايا الهجرة في عام وأوروبا تتصدر قائمة المأساة",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b7%d8%b1%d9%82-%d8%a7%d9%84%d9%87%d8%ac%d8%b1%d8%a9-%d9%85%d8%b5%d8%b1%d8%b9-%d9%88%d9%81%d9%82%d8%af%d8%a7%d9%86-8-%d8%a2%d9%84%d8%a7%d9%81-%d8%b4%d8%ae%d8%b5-%d9%81%d9%8a-%d8%b9%d8%a7%d9%85?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:33:13 +0300",
+        "title": "نساء بحيرة فيكتوريا يكسرن المحظورات ويخضن غمار مهنة صيد الأسماك",
+        "link": "https://www.aljazeera.net/lifestyle/2026/4/22/%d9%86%d8%b3%d8%a7%d8%a1-%d8%a8%d8%ad%d9%8a%d8%b1%d8%a9-%d9%81%d9%8a%d9%83%d8%aa%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d9%83%d8%b3%d8%b1%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%b8%d9%88%d8%b1%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:36:28 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وثق تقرير للمنظمة الدولية للهجرة وفاة وفقدان نحو 8 آلاف شخص في طرق الهجرة بأنحاء العالم خلال العام الماضي، وتصدرت المسارات المؤدية إلى أوروبا قائمة الضحايا في حين شهدت الأمريكتا..."
+        "description": "نجحت نساء بحيرة فيكتوريا في كسر المحظورات الاجتماعية بامتهانهن الصيد لمواجهة التحديات الاقتصادية وتغير المناخ. تجربة ملهمة تحكيها رودا أكيتش ورفيقاتها."
       },
       {
-        "title": "تحركات أوروبية لتعليق اتفاقيات مع إسرائيل",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%aa%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d9%8a%d8%a9-%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d8%aa%d9%81%d8%a7%d9%82%d9%8a%d8%a7%d8%aa-%d9%85%d8%b9?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:09:52 +0300",
+        "title": "أين تذهب مليارات الفيفا؟",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d9%81%d9%8a%d9%81%d8%a7-%d8%a5%d9%86%d9%81%d8%a7%d9%86%d8%aa%d9%8a%d9%86%d9%88-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:15:04 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "في وقت يتواصل فيه الجدل داخل الاتحاد الأوروبي حول العلاقات مع إسرائيل، أكدت مسؤولة السياسة الخارجية كايا كالاس أنه لم يتوفر الدعم الكافي من الدول الأعضاء لتعليق اتفاق الشراكة مع..."
+        "description": "في ظل الطفرة المالية التي يقودها الاتحاد الدولي لكرة القدم، تتجدد الأسئلة حول مصير المليارات التي يدرها المونديال."
       },
       {
-        "title": "شاهد.. هكذا ردت جماهير ريال مدريد على إشارة فينيسيوس في ملعب البرنابيو",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%b1%d9%8a%d8%a7%d9%84-%d9%85%d8%af%d8%b1%d9%8a%d8%af-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%81%d9%8a%d9%86%d9%8a%d8%b3%d9%8a%d9%88%d8%b3-%d8%ac%d9%88%d9%86%d9%8a%d9%88%d8%b1?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:56:32 +0300",
+        "title": "واشنطن تنفي نقل نظام \"ثاد\" من كوريا الجنوبية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%aa%d9%86%d9%81%d9%8a-%d9%86%d9%82%d9%84-%d9%86%d8%b8%d8%a7%d9%85-%d8%ab%d8%a7%d8%af-%d9%85%d9%86-%d9%83%d9%88%d8%b1%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:06:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ما الذي فعلته جماهير ريال مدريد بعد إشارة فينيسيوس في البرنابيو؟"
+        "description": "بعد مرور نحو شهر على تصريحات مسؤولين أمريكيين بنقل أجزاء من نظام الدفاع الصاروخي \"ثاد\" من كوريا الجنوبية لاستخدامه في حرب الولايات المتحدة على إيران، نفى قائد عسكري أمريكي ذلك ق..."
       },
       {
-        "title": "روسيا توظف الذكاء الاصطناعي لفرض رقابة كاملة على مواطنيها",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%b1%d9%88%d8%b3%d9%8a%d8%a7-%d8%aa%d8%aa%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%b1%d9%82%d8%a7%d8%a8%d8%a9-%d8%b1%d9%82%d9%85%d9%8a%d8%a9-%d9%83%d8%a7%d9%85%d9%84%d8%a9-%d8%b9%d9%84%d9%89?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:38:28 +0300",
+        "title": "ترمب: إيران تنهار ماليا وتتأخر في دفع رواتب الجيش والشرطة",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b1%d9%85%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%aa%d9%86%d9%87%d8%a7%d8%b1-%d9%85%d8%a7%d9%84%d9%8a%d8%a7-%d9%88%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d9%81%d8%aa%d8%ad?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:05:37 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "بدأت روسيا مشروعا ضخما للرقابة الرقمية على المواطنين بتطبيق ضوابط صارمة ومُوجّهة على أداء الموظفين، تتضمن برامج تتبّع الوقت، والتقاط لقطات الشاشة، ومراقبة النشاط على الإنترنت، و..."
+        "description": "أكد الرئيس الأمريكي ترمب أن إيران تنهار ماليا وتطالب بفتح مضيق هرمز لإنقاذ اقتصادها من الحصار البحري. بينما يدرس تمديد إعفاءات شحن النفط لخفض تكاليف الوقود ومواجهة تداعيات الحرب..."
       },
       {
-        "title": "الأهلي السعودي يواجه ماتشيدا الياباني بنهائي أبطال آسيا للنخبة.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d9%85%d8%a7%d8%aa%d8%b4%d9%8a%d8%af%d8%a7-%d8%b2%d9%8a%d9%84%d9%81%d9%8a%d8%a7?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:26:18 +0300",
+        "title": "5 أيام حاسمة.. هل يتجاوز الإطار التنسيقي عراقيل اختيار رئيس الحكومة العراقية؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/5-%d8%a3%d9%8a%d8%a7%d9%85-%d8%ad%d8%a7%d8%b3%d9%85%d8%a9-%d9%87%d9%84-%d9%8a%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:46:15 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ماتشيدا زيلفيا يضرب موعدا مع الأهلي السعودي في نهائي دوري أبطال آسيا للنخبة."
+        "description": "لم يتبقَّ من المهلة المحددة لرئيس الجمهورية لتكليف مرشح الإطار التنسيقي بتشكيل الحكومة سوى أيام قليلة، ورغم ذلك فإن الخلافات المستمرة بين قوى الإطار تعرقل إنجاز هذا الاستحقاق."
       },
       {
-        "title": "اتهامات إيرانية بالمناورة.. ترمب يمدد وقف إطلاق النار ويتمسك بحصار الموانئ",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d8%aa%d9%87%d8%a7%d9%85%d8%a7%d8%aa-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%88%d8%b1%d8%a9-%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d9%85%d8%af%d8%af?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:21:08 +0300",
+        "title": "القصة الكاملة لرفع علم إسرائيل على كنيس بدمشق",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b1%d9%81%d8%b9-%d8%b9%d9%84%d9%85-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%b9%d9%84%d9%89?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:19:59 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قرر الرئيس الأمريكي دونالد ترمب تمديد الهدنة مع طهران استجابة لوساطة باكستانية، سعيا لمنح المفاوضات فرصة إضافية للنجاح، وفق قوله، رغم تمسكه باستمرار الحصار البحري الذي تعُده إير..."
+        "description": "صورة متداولة لرفع علم إسرائيل فوق كنيس في دمشق مفبركة بالذكاء الاصطناعي، التحقق يكشف تشوهات بصرية وغياب معالم حقيقية، في سياق حملات تضليل عن \"التطبيع\"."
       },
       {
-        "title": "مباراة الزمالك ضد بيراميدز في الدوري المصري.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%84%d9%83-%d8%a8%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d8%af%d8%b2-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 21:58:35 +0300",
+        "title": "كانت ذراعا لمخابرات الأسد.. أي دور للجان الأحياء في عهد أحمد الشرع؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%83%d8%a7%d9%86%d8%aa-%d8%b0%d8%b1%d8%a7%d8%b9%d8%a7-%d9%84%d9%85%d8%ae%d8%a7%d8%a8%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%b3%d8%af-%d9%81%d9%85%d8%a7-%d8%af%d9%88%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:17:55 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
+        "description": "يقول السوريون إن لجان الأحياء كانت أذرعًا لمخابرات نظام الأسد، ترصد حركة الناس عن قرب، فتوشي بهم وتوردهم المهالك والسجون. فأي مبرر لبقاء هذه اللجان في عهد أحمد الشرع؟"
       }
     ],
     "finance": [
       {
-        "title": "توقعات بانضمام روبيو لجولة المحادثات الثانية بين لبنان وإسرائيل",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d9%88%d9%82%d8%b9%d8%a7%d8%aa-%d8%a8%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%b1%d9%88%d8%a8%d9%8a%d9%88-%d9%84%d8%ac%d9%88%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:02:10 +0300",
+        "title": "أسواق التنبؤ تدخل نشرات الأخبار.. هل تتحول التغطية إلى مراهنة جماهيرية؟",
+        "link": "https://www.aljazeera.net/media/2026/4/22/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d8%aa%d9%86%d8%a8%d8%a4-%d8%aa%d8%af%d8%ae%d9%84-%d9%86%d8%b4%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%87%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:09 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تنطلق غدا الخميس في واشنطن جولة المحادثات الثانية بين لبنان وإسرائيل، وقال مسؤول أمريكي إنه يُتوقع أن ينضم وزير الخارجية ماركو روبيو إلى المفاوضات."
+        "description": "دخول أسواق التنبؤ إلى نشرات الأخبار يثير جدلا إزاء تأثيرها في الجمهور، خاصة كبار السن، وذلك وسط مخاوف من تحول التغطية إلى أداة تؤثر في الرأي العام لا مجرد تحليل."
       },
       {
-        "title": "رواسب اليورانيوم.. البصمة التي تمنح المفتشين مفاتيح أسرار المفاعلات",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%b1%d9%88%d8%a7%d8%b3%d8%a8-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a8%d8%b5%d9%85%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%85%d9%86%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:59:11 +0300",
+        "title": "أمن كأس العالم 2026.. رئيسة المكسيك تتعهد بحماية المونديال بعد هجوم الأهرامات الدامي",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%86-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d9%83%d8%b3%d9%8a%d9%83-%d8%a3%d9%87%d8%b1%d8%a7%d9%85%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:06 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "يمكن للمفتشين النوويين معرفة الكثير عن البرنامج النووي بناء على تعقب رواسب اليورانيوم في محيط منطقة التفتيش كاستنتاج نسبة التخصيب التي تم الوصول إليها وغيرها من المعلومات عن الب..."
+        "description": "قال مجلس الأمن المكسيكي إن حادث إطلاق نار خلف إصابة 13 شخصا بينهم طفلان يبلغان من العمر 13 و6 سنوات."
       },
       {
-        "title": "إسرائيل إلى أين؟ مؤرخ للإبادة الجماعية يفكك تحوّل الصهيونية",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d9%85%d8%a4%d8%b1%d8%ae-%d9%84%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:49:38 +0300",
+        "title": "ومضة في السماء ثم سقوط مفاجئ.. كاميرا توثق لحظة اصطدام طائرة بأسلاك الضغط العالي",
+        "link": "https://www.aljazeera.net/misc/2026/4/22/%d9%88%d9%85%d8%b6%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1-%d8%ab%d9%85-%d8%b3%d9%82%d9%88%d8%b7-%d9%85%d9%81%d8%a7%d8%ac%d8%a6-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:54:11 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "حذّر المؤرخ الإسرائيلي المتخصص في شؤون الإبادة الجماعية عومير بارتوف من أن مسار إسرائيل يهدد مكانتها الأخلاقية ودعمها الدولي بعد أن أصبحت دولة مدمنة على العنف، وقال إنها اقترفت ..."
+        "description": "من خلف زجاج سيارة عابرة، تتحول سماء هادئة في كاليفورنيا إلى ومضة عمياء وسقوط مفاجئ لطائرة صغيرة تغرق الحي في العتمة وتترك أسباب الحادث معلقة في الهواء."
       },
       {
-        "title": "ملف اليورانيوم الإيراني يعرقل مفاوضات واشنطن وطهران",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d9%85%d9%84%d9%81-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a-%d9%8a%d8%b9%d8%b1%d9%82%d9%84?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:48:25 +0300",
+        "title": "فريدمان: هكذا تاهت إسرائيل وهكذا يمكن لترمب إنقاذ لبنان",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%b1%d9%8a%d8%af%d9%85%d8%a7%d9%86-%d9%87%d9%83%d8%b0%d8%a7-%d8%aa%d8%a7%d9%87%d8%aa-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d9%87%d9%83%d8%b0%d8%a7-%d9%8a%d9%85%d9%83%d9%86?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:49:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعد مطالبة الولايات المتحدة إيران بتسليم مخزونها من اليورانيوم المخصب بنسبة 60% من أهم الملفات الساخنة المطروحة على طاولة المفاوضات بين البلدين."
+        "description": "يرى فريدمان أن إسرائيل، بقيادة اليمين المتطرف، باتت تعتمد \"إستراتيجية المطرقة\" التي تحطم كل شيء دون بناء أي أفق سياسي، مما يهدد مستقبلها الإستراتيجي وعلاقاتها الدولية، بل وعلاقت..."
       },
       {
-        "title": "أكثر من 30 دولة تبحث في لندن إعادة فتح مضيق هرمز",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d9%81%d9%8a-%d9%84%d9%86%d8%af%d9%86-%d9%84%d8%a8%d8%ad%d8%ab-%d8%a5%d8%b9%d8%a7%d8%af%d8%a9-%d9%81%d8%aa%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:09:35 +0300",
+        "title": "السوق تفتقد الوضوح.. الذهب يرتفع والنفط يختبر هدنة أمريكا وإيران",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d8%a7%d9%84%d8%b3%d9%88%d9%82-%d8%aa%d9%81%d8%aa%d9%82%d8%af-%d8%a7%d9%84%d9%88%d8%b6%d9%88%d8%ad-%d8%a7%d9%84%d8%b0%d9%87%d8%a8-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%88%d8%a7%d9%84%d9%86%d9%81%d8%b7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:35:51 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أعلنت بريطانيا أنها ستستضيف عسكريين من نحو 30 بلدا، يومي الأربعاء والخميس، لمناقشة تشكيل مهمة بقيادة لندن وباريس لحماية الملاحة في مضيق هرمز."
+        "description": "ارتفع الذهب مع تراجع محدود للنفط عقب تمديد هدنة أمريكا وإيران، في ظل ترقب الأسواق لمسار المحادثات وتأثيرها على التضخم والفائدة، واستمرار اضطراب إمدادات الطاقة عبر مضيق هرمز."
       },
       {
-        "title": "كيف تنظر تل أبيب إلى تمديد وقف إطلاق النار مع إيران؟",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%8a%d8%af%d9%8a%d8%b9%d9%88%d8%aa-%d8%a3%d8%ad%d8%b1%d9%86%d9%88%d8%aa-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%84%d9%82-%d8%aa%d9%85%d8%af%d9%8a%d8%af-%d8%aa%d8%b1%d9%85%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:46:05 +0300",
+        "title": "بين الدعم والتحفظ والمعارضة.. انقسام أوروبي يحول دون تعليق اتفاق الشراكة مع إسرائيل",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%af%d8%b9%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d9%81%d8%b8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b1%d8%b6%d8%a9-%d8%a7%d9%86%d9%82%d8%b3%d8%a7%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:31:03 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تترقب تل أبيب بحذر قرار ترمب تمديد مهلة وقف إطلاق النار مع إيران دون سقف محدد، وتخشى استغلال طهران ذلك لكسب الوقت، في حين تواصل تحضيراتها العسكرية لسيناريو استئناف الحرب."
+        "description": "أقر دبلوماسيون أوروبيون بعدم توفر الإجماع اللازم لتعليق اتفاقية الشراكة مع إسرائيل، في ظل تمسك دول رئيسية، على رأسها ألمانيا وإيطاليا، برفض المضي في هذا الاتجاه في الوقت الراهن."
       },
       {
-        "title": "فايننشال تايمز: لهذا تراجع الحب الأمريكي لإسرائيل",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%a7%d9%8a%d9%86%d9%86%d8%b4%d8%a7%d9%84-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d9%84%d9%87%d8%b0%d8%a7-%d8%aa%d8%b1%d8%a7%d8%ac%d8%b9-%d8%a7%d9%84%d8%ad%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:44:04 +0300",
+        "title": "من النفط إلى الدواء.. كيف فجّرت الحرب أزمة صحية عالمية؟",
+        "link": "https://www.aljazeera.net/health/2026/4/22/%d9%85%d9%86-%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%af%d9%88%d8%a7%d8%a1-%d9%83%d9%8a%d9%81-%d9%81%d8%ac%d8%b1%d8%aa-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت صحيفة فايننشال تايمز إن التعاطف الأمريكي مع إسرائيل يتراجع تدريجيا منذ عام 1995 وزاد حدة في عهد نتنياهو، وهو ما قد يُدخل العلاقة طويلة الأمد بين أمريكا وإسرائيل في مرحلة أك..."
+        "description": "يُعد النفط والغاز المصدر الرئيسي للبتروكيماويات الداخلة في تصنيع معظم الأدوية والمستلزمات الطبية، كما تشكّل ممرات العبور في الشرق الأوسط ما بين 10% و20% من التجارة الدوائية."
       },
       {
-        "title": "واشنطن تراجع خريطة وجودها العسكري بعد ضربات طهران",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%82%d8%af-%d9%86%d8%ba%d9%8a%d8%b1-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d9%82%d9%88%d8%a7%d8%b9%d8%af%d9%86%d8%a7?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:59:48 +0300",
+        "title": "صحيفة: أمريكا توقف شحنات الدولار عن العراق وتطالب بتفكيك الفصائل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b5%d8%ad%d9%8a%d9%81%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d8%aa%d9%88%d9%82%d9%81-%d8%b4%d8%ad%d9%86%d8%a7%d8%aa-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:49 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أقرت وزارة الحرب الأمريكية بجهلها بحجم التكاليف النهائية اللازمة لإصلاح قواعدها العسكرية المتضررة في الشرق الأوسط جراء الحرب مع إيران، مشيرة إلى أنها قد تغيّر نمط بنائها وفقا له..."
+        "description": "ذكرت صحيفة وول ستريت جورنال أن إدارة الرئيس الأمريكي دونالد ترمب ‌علقت شحنات الدولار إلى العراق وجمدت برامج تعاون أمني معه، في إطار ضغوطها على بغداد من أجل تفكيك الفصائل المسلحة..."
       },
       {
-        "title": "\"سأظل معذبا بسبب ذلك\".. تاكر كارلسون يعتذر عن دعمه ترمب",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b3%d8%a3%d8%b8%d9%84-%d9%85%d8%b9%d8%b0%d8%a8%d8%a7-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b0%d9%84%d9%83-%d8%aa%d8%a7%d9%83%d8%b1-%d9%83%d8%a7%d8%b1%d9%84%d8%b3%d9%88%d9%86?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:47:33 +0300",
+        "title": "بتسيلم: الإبادة الجماعية أصبحت رسميا جزءا من سردية إسرائيل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b3%d9%8a%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d8%b9%d9%8a%d8%a9-%d8%a3%d8%b5%d8%a8%d8%ad%d8%aa-%d8%b1%d8%b3%d9%85%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:40 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "عبّر المذيع السابق في شبكة \"فوكس نيوز\" تاكر كارلسون عن ندمه لدعمه الرئيس الأمريكي دونالد ترمب خلال حملته الرئاسية عام 2024، قائلا إنه سيظل \"معذبا بسبب ذلك مدة طويلة\"."
+        "description": "أصبح اسم الحاخام الإسرائيلي المتطرف أفراهام زربيف مرادفا للتدمير المتعمد والمنهجي لغزة حسب منظمة \"بتسيلم\" الحقوقية الإسرائيلية، التي نددت بتكريم حكومة بنيامين نتنياهو له أمس الث..."
       },
       {
-        "title": "صدام الإرادات بهرمز.. شروط ترمب تصطدم بخطوط إيران الحمر",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%a7-%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:18:13 +0300",
+        "title": "الحرب في المنطقة تزيد نمو الصناعة العسكرية الأمريكية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d8%b2%d9%8a%d8%af-%d9%86%d9%85%d9%88-%d8%a7%d9%84%d8%b5%d9%86%d8%a7%d8%b9%d8%a9?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:05 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تتمسك واشنطن بنزع السلاح النووي وتغيير السلوك الإقليمي تحت ضغط الحصار، في حين تشترط طهران رفع القيود الاقتصادية والاعتراف بحقوقها السيادية لبدء التفاوض."
+        "description": "أفادت شركات الدفاع الأمريكية \"آر تي إكس\" و\"نورثروب غرومان\" و\"جنرال إلكتريك أيروسبايس\" بزيادة الطلب على المعدات العسكرية بسبب الحرب في المنطقة."
       },
       {
-        "title": "الأمم المتحدة: صعوبات تعترض عودة 4 ملايين نازح في السودان",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%b5%d8%b9%d9%88%d8%a8%d8%a7%d8%aa-%d8%aa%d8%b9%d8%aa%d8%b1%d8%b6?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:02:43 +0300",
+        "title": "في حادثة لافتة.. \"تشات جي بي تي\" أمام القضاء في قضية إطلاق نار بفلوريدا",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b6-%d8%aa%d8%b4%d8%a7%d8%aa-%d8%ac%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:04:57 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وسط تحديات معيشية قاسية، كشفت الأمم المتحدة عن عودة نحو 4 ملايين نازح سوداني طوعا إلى ديارهم، تزامنا مع استعادة الجيش السيطرة على مناطق واسعة في العاصمة الخرطوم."
+        "description": "تصنف القوانين الأمريكية أي مساعدة أو نصح لشخص ما بارتكاب جريمة \"تحريضا\" يتحمل صاحبها المسؤولية نفسها التي يتحمّلها الجاني، ومن هذا المنطلق تأتي ملاحقة \"تشات جي بي تي\"."
       },
       {
-        "title": "نيويورك تايمز: أوروبا وقصة الدور الضائع في حرب إيران",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%86%d9%8a%d9%88%d9%8a%d9%88%d8%b1%d9%83-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d8%a7-%d8%aa%d8%b7%d9%85%d8%ad-%d9%84%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:39:50 +0300",
+        "title": "الوقف الإسلامي.. هندسة الاستدامة قبل عصر المؤسسات",
+        "link": "https://www.aljazeera.net/encyclopedia/2026/4/22/%d8%a7%d9%84%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d9%82%d8%a8%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:23 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت نيويورك تايمز إن أوروبا تطمح للعب دور \"حارس القانون الدولي\" بشأن الأزمة الناجمة عن الحرب على إيران، غير أن التطورات المتسارعة سرعان ما قوضت هذا الطموح وأعادت التأكيد على ها..."
+        "description": "أحد أبرز الأدوات التي أسهمت في بناء البنية الاجتماعية والاقتصادية في الحضارة الإسلامية، فلم يقتصر دوره على العمل الخيري المباشر، وإنما شكل منظومة مستدامة لتمويل الخدمات العامة و..."
       },
       {
-        "title": "دروس حرب إيران.. 1.5 تريليون دولار لتطوير ترسانة أمريكا العسكرية",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%8a%d8%b9%d8%aa%d8%b2%d9%85-%d8%a5%d9%86%d9%81%d8%a7%d9%82-%d8%b9%d8%b4%d8%b1%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:34:05 +0300",
+        "title": "لماذا يتأخر تسليم طائرة الركاب الصينية \"سي 919″؟",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%aa%d8%a3%d8%ae%d8%b1-%d8%aa%d8%b3%d9%84%d9%8a%d9%85-%d8%b7%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d9%83%d8%a7%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعتزم وزارة الحرب الأمريكية إنفاق أكثر من 30 مليار دولار لشراء ذخائر أساسية، في مقدمتها صواريخ الاعتراض، عقب تراجع مخزوناتها إلى مستويات وُصفت بأنها حرجة بسبب الحرب مع إيران."
+        "description": "شركة الطائرات التجارية الصينية \"كوماك\" التي تنتج طائرة الركاب \"سي 919\" تواجه تحديات كبيرة، أبرزها استيراد المحركات من شركة أمريكية-فرنسية، فيما تصر على جودة عالية لطائراتها."
       },
       {
-        "title": "8 آلاف شخص ضحايا الهجرة في عام وأوروبا تتصدر قائمة المأساة",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b7%d8%b1%d9%82-%d8%a7%d9%84%d9%87%d8%ac%d8%b1%d8%a9-%d9%85%d8%b5%d8%b1%d8%b9-%d9%88%d9%81%d9%82%d8%af%d8%a7%d9%86-8-%d8%a2%d9%84%d8%a7%d9%81-%d8%b4%d8%ae%d8%b5-%d9%81%d9%8a-%d8%b9%d8%a7%d9%85?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:33:13 +0300",
+        "title": "نساء بحيرة فيكتوريا يكسرن المحظورات ويخضن غمار مهنة صيد الأسماك",
+        "link": "https://www.aljazeera.net/lifestyle/2026/4/22/%d9%86%d8%b3%d8%a7%d8%a1-%d8%a8%d8%ad%d9%8a%d8%b1%d8%a9-%d9%81%d9%8a%d9%83%d8%aa%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d9%83%d8%b3%d8%b1%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%b8%d9%88%d8%b1%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:36:28 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وثق تقرير للمنظمة الدولية للهجرة وفاة وفقدان نحو 8 آلاف شخص في طرق الهجرة بأنحاء العالم خلال العام الماضي، وتصدرت المسارات المؤدية إلى أوروبا قائمة الضحايا في حين شهدت الأمريكتا..."
+        "description": "نجحت نساء بحيرة فيكتوريا في كسر المحظورات الاجتماعية بامتهانهن الصيد لمواجهة التحديات الاقتصادية وتغير المناخ. تجربة ملهمة تحكيها رودا أكيتش ورفيقاتها."
       },
       {
-        "title": "تحركات أوروبية لتعليق اتفاقيات مع إسرائيل",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%aa%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d9%8a%d8%a9-%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d8%aa%d9%81%d8%a7%d9%82%d9%8a%d8%a7%d8%aa-%d9%85%d8%b9?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:09:52 +0300",
+        "title": "أين تذهب مليارات الفيفا؟",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d9%81%d9%8a%d9%81%d8%a7-%d8%a5%d9%86%d9%81%d8%a7%d9%86%d8%aa%d9%8a%d9%86%d9%88-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:15:04 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "في وقت يتواصل فيه الجدل داخل الاتحاد الأوروبي حول العلاقات مع إسرائيل، أكدت مسؤولة السياسة الخارجية كايا كالاس أنه لم يتوفر الدعم الكافي من الدول الأعضاء لتعليق اتفاق الشراكة مع..."
+        "description": "في ظل الطفرة المالية التي يقودها الاتحاد الدولي لكرة القدم، تتجدد الأسئلة حول مصير المليارات التي يدرها المونديال."
       },
       {
-        "title": "شاهد.. هكذا ردت جماهير ريال مدريد على إشارة فينيسيوس في ملعب البرنابيو",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%b1%d9%8a%d8%a7%d9%84-%d9%85%d8%af%d8%b1%d9%8a%d8%af-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%81%d9%8a%d9%86%d9%8a%d8%b3%d9%8a%d9%88%d8%b3-%d8%ac%d9%88%d9%86%d9%8a%d9%88%d8%b1?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:56:32 +0300",
+        "title": "واشنطن تنفي نقل نظام \"ثاد\" من كوريا الجنوبية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%aa%d9%86%d9%81%d9%8a-%d9%86%d9%82%d9%84-%d9%86%d8%b8%d8%a7%d9%85-%d8%ab%d8%a7%d8%af-%d9%85%d9%86-%d9%83%d9%88%d8%b1%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:06:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ما الذي فعلته جماهير ريال مدريد بعد إشارة فينيسيوس في البرنابيو؟"
+        "description": "بعد مرور نحو شهر على تصريحات مسؤولين أمريكيين بنقل أجزاء من نظام الدفاع الصاروخي \"ثاد\" من كوريا الجنوبية لاستخدامه في حرب الولايات المتحدة على إيران، نفى قائد عسكري أمريكي ذلك ق..."
       },
       {
-        "title": "روسيا توظف الذكاء الاصطناعي لفرض رقابة كاملة على مواطنيها",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%b1%d9%88%d8%b3%d9%8a%d8%a7-%d8%aa%d8%aa%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%b1%d9%82%d8%a7%d8%a8%d8%a9-%d8%b1%d9%82%d9%85%d9%8a%d8%a9-%d9%83%d8%a7%d9%85%d9%84%d8%a9-%d8%b9%d9%84%d9%89?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:38:28 +0300",
+        "title": "ترمب: إيران تنهار ماليا وتتأخر في دفع رواتب الجيش والشرطة",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b1%d9%85%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%aa%d9%86%d9%87%d8%a7%d8%b1-%d9%85%d8%a7%d9%84%d9%8a%d8%a7-%d9%88%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d9%81%d8%aa%d8%ad?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:05:37 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "بدأت روسيا مشروعا ضخما للرقابة الرقمية على المواطنين بتطبيق ضوابط صارمة ومُوجّهة على أداء الموظفين، تتضمن برامج تتبّع الوقت، والتقاط لقطات الشاشة، ومراقبة النشاط على الإنترنت، و..."
+        "description": "أكد الرئيس الأمريكي ترمب أن إيران تنهار ماليا وتطالب بفتح مضيق هرمز لإنقاذ اقتصادها من الحصار البحري. بينما يدرس تمديد إعفاءات شحن النفط لخفض تكاليف الوقود ومواجهة تداعيات الحرب..."
       },
       {
-        "title": "الأهلي السعودي يواجه ماتشيدا الياباني بنهائي أبطال آسيا للنخبة.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d9%85%d8%a7%d8%aa%d8%b4%d9%8a%d8%af%d8%a7-%d8%b2%d9%8a%d9%84%d9%81%d9%8a%d8%a7?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:26:18 +0300",
+        "title": "5 أيام حاسمة.. هل يتجاوز الإطار التنسيقي عراقيل اختيار رئيس الحكومة العراقية؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/5-%d8%a3%d9%8a%d8%a7%d9%85-%d8%ad%d8%a7%d8%b3%d9%85%d8%a9-%d9%87%d9%84-%d9%8a%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:46:15 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ماتشيدا زيلفيا يضرب موعدا مع الأهلي السعودي في نهائي دوري أبطال آسيا للنخبة."
+        "description": "لم يتبقَّ من المهلة المحددة لرئيس الجمهورية لتكليف مرشح الإطار التنسيقي بتشكيل الحكومة سوى أيام قليلة، ورغم ذلك فإن الخلافات المستمرة بين قوى الإطار تعرقل إنجاز هذا الاستحقاق."
       },
       {
-        "title": "اتهامات إيرانية بالمناورة.. ترمب يمدد وقف إطلاق النار ويتمسك بحصار الموانئ",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d8%aa%d9%87%d8%a7%d9%85%d8%a7%d8%aa-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%88%d8%b1%d8%a9-%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d9%85%d8%af%d8%af?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:21:08 +0300",
+        "title": "القصة الكاملة لرفع علم إسرائيل على كنيس بدمشق",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b1%d9%81%d8%b9-%d8%b9%d9%84%d9%85-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%b9%d9%84%d9%89?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:19:59 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قرر الرئيس الأمريكي دونالد ترمب تمديد الهدنة مع طهران استجابة لوساطة باكستانية، سعيا لمنح المفاوضات فرصة إضافية للنجاح، وفق قوله، رغم تمسكه باستمرار الحصار البحري الذي تعُده إير..."
+        "description": "صورة متداولة لرفع علم إسرائيل فوق كنيس في دمشق مفبركة بالذكاء الاصطناعي، التحقق يكشف تشوهات بصرية وغياب معالم حقيقية، في سياق حملات تضليل عن \"التطبيع\"."
       },
       {
-        "title": "مباراة الزمالك ضد بيراميدز في الدوري المصري.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%84%d9%83-%d8%a8%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d8%af%d8%b2-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 21:58:35 +0300",
+        "title": "كانت ذراعا لمخابرات الأسد.. أي دور للجان الأحياء في عهد أحمد الشرع؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%83%d8%a7%d9%86%d8%aa-%d8%b0%d8%b1%d8%a7%d8%b9%d8%a7-%d9%84%d9%85%d8%ae%d8%a7%d8%a8%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%b3%d8%af-%d9%81%d9%85%d8%a7-%d8%af%d9%88%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:17:55 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
+        "description": "يقول السوريون إن لجان الأحياء كانت أذرعًا لمخابرات نظام الأسد، ترصد حركة الناس عن قرب، فتوشي بهم وتوردهم المهالك والسجون. فأي مبرر لبقاء هذه اللجان في عهد أحمد الشرع؟"
       }
     ],
     "sports": [
       {
-        "title": "توقعات بانضمام روبيو لجولة المحادثات الثانية بين لبنان وإسرائيل",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d9%88%d9%82%d8%b9%d8%a7%d8%aa-%d8%a8%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%b1%d9%88%d8%a8%d9%8a%d9%88-%d9%84%d8%ac%d9%88%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:02:10 +0300",
+        "title": "أسواق التنبؤ تدخل نشرات الأخبار.. هل تتحول التغطية إلى مراهنة جماهيرية؟",
+        "link": "https://www.aljazeera.net/media/2026/4/22/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d8%aa%d9%86%d8%a8%d8%a4-%d8%aa%d8%af%d8%ae%d9%84-%d9%86%d8%b4%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%87%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:09 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تنطلق غدا الخميس في واشنطن جولة المحادثات الثانية بين لبنان وإسرائيل، وقال مسؤول أمريكي إنه يُتوقع أن ينضم وزير الخارجية ماركو روبيو إلى المفاوضات."
+        "description": "دخول أسواق التنبؤ إلى نشرات الأخبار يثير جدلا إزاء تأثيرها في الجمهور، خاصة كبار السن، وذلك وسط مخاوف من تحول التغطية إلى أداة تؤثر في الرأي العام لا مجرد تحليل."
       },
       {
-        "title": "رواسب اليورانيوم.. البصمة التي تمنح المفتشين مفاتيح أسرار المفاعلات",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%b1%d9%88%d8%a7%d8%b3%d8%a8-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a8%d8%b5%d9%85%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%85%d9%86%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:59:11 +0300",
+        "title": "أمن كأس العالم 2026.. رئيسة المكسيك تتعهد بحماية المونديال بعد هجوم الأهرامات الدامي",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%86-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d9%83%d8%b3%d9%8a%d9%83-%d8%a3%d9%87%d8%b1%d8%a7%d9%85%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:06 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "يمكن للمفتشين النوويين معرفة الكثير عن البرنامج النووي بناء على تعقب رواسب اليورانيوم في محيط منطقة التفتيش كاستنتاج نسبة التخصيب التي تم الوصول إليها وغيرها من المعلومات عن الب..."
+        "description": "قال مجلس الأمن المكسيكي إن حادث إطلاق نار خلف إصابة 13 شخصا بينهم طفلان يبلغان من العمر 13 و6 سنوات."
       },
       {
-        "title": "إسرائيل إلى أين؟ مؤرخ للإبادة الجماعية يفكك تحوّل الصهيونية",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d9%85%d8%a4%d8%b1%d8%ae-%d9%84%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:49:38 +0300",
+        "title": "ومضة في السماء ثم سقوط مفاجئ.. كاميرا توثق لحظة اصطدام طائرة بأسلاك الضغط العالي",
+        "link": "https://www.aljazeera.net/misc/2026/4/22/%d9%88%d9%85%d8%b6%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1-%d8%ab%d9%85-%d8%b3%d9%82%d9%88%d8%b7-%d9%85%d9%81%d8%a7%d8%ac%d8%a6-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:54:11 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "حذّر المؤرخ الإسرائيلي المتخصص في شؤون الإبادة الجماعية عومير بارتوف من أن مسار إسرائيل يهدد مكانتها الأخلاقية ودعمها الدولي بعد أن أصبحت دولة مدمنة على العنف، وقال إنها اقترفت ..."
+        "description": "من خلف زجاج سيارة عابرة، تتحول سماء هادئة في كاليفورنيا إلى ومضة عمياء وسقوط مفاجئ لطائرة صغيرة تغرق الحي في العتمة وتترك أسباب الحادث معلقة في الهواء."
       },
       {
-        "title": "ملف اليورانيوم الإيراني يعرقل مفاوضات واشنطن وطهران",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d9%85%d9%84%d9%81-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a-%d9%8a%d8%b9%d8%b1%d9%82%d9%84?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:48:25 +0300",
+        "title": "فريدمان: هكذا تاهت إسرائيل وهكذا يمكن لترمب إنقاذ لبنان",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%b1%d9%8a%d8%af%d9%85%d8%a7%d9%86-%d9%87%d9%83%d8%b0%d8%a7-%d8%aa%d8%a7%d9%87%d8%aa-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d9%87%d9%83%d8%b0%d8%a7-%d9%8a%d9%85%d9%83%d9%86?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:49:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعد مطالبة الولايات المتحدة إيران بتسليم مخزونها من اليورانيوم المخصب بنسبة 60% من أهم الملفات الساخنة المطروحة على طاولة المفاوضات بين البلدين."
+        "description": "يرى فريدمان أن إسرائيل، بقيادة اليمين المتطرف، باتت تعتمد \"إستراتيجية المطرقة\" التي تحطم كل شيء دون بناء أي أفق سياسي، مما يهدد مستقبلها الإستراتيجي وعلاقاتها الدولية، بل وعلاقت..."
       },
       {
-        "title": "أكثر من 30 دولة تبحث في لندن إعادة فتح مضيق هرمز",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d9%81%d9%8a-%d9%84%d9%86%d8%af%d9%86-%d9%84%d8%a8%d8%ad%d8%ab-%d8%a5%d8%b9%d8%a7%d8%af%d8%a9-%d9%81%d8%aa%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:09:35 +0300",
+        "title": "السوق تفتقد الوضوح.. الذهب يرتفع والنفط يختبر هدنة أمريكا وإيران",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d8%a7%d9%84%d8%b3%d9%88%d9%82-%d8%aa%d9%81%d8%aa%d9%82%d8%af-%d8%a7%d9%84%d9%88%d8%b6%d9%88%d8%ad-%d8%a7%d9%84%d8%b0%d9%87%d8%a8-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%88%d8%a7%d9%84%d9%86%d9%81%d8%b7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:35:51 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أعلنت بريطانيا أنها ستستضيف عسكريين من نحو 30 بلدا، يومي الأربعاء والخميس، لمناقشة تشكيل مهمة بقيادة لندن وباريس لحماية الملاحة في مضيق هرمز."
+        "description": "ارتفع الذهب مع تراجع محدود للنفط عقب تمديد هدنة أمريكا وإيران، في ظل ترقب الأسواق لمسار المحادثات وتأثيرها على التضخم والفائدة، واستمرار اضطراب إمدادات الطاقة عبر مضيق هرمز."
       },
       {
-        "title": "كيف تنظر تل أبيب إلى تمديد وقف إطلاق النار مع إيران؟",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%8a%d8%af%d9%8a%d8%b9%d9%88%d8%aa-%d8%a3%d8%ad%d8%b1%d9%86%d9%88%d8%aa-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%84%d9%82-%d8%aa%d9%85%d8%af%d9%8a%d8%af-%d8%aa%d8%b1%d9%85%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:46:05 +0300",
+        "title": "بين الدعم والتحفظ والمعارضة.. انقسام أوروبي يحول دون تعليق اتفاق الشراكة مع إسرائيل",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%af%d8%b9%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d9%81%d8%b8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b1%d8%b6%d8%a9-%d8%a7%d9%86%d9%82%d8%b3%d8%a7%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:31:03 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تترقب تل أبيب بحذر قرار ترمب تمديد مهلة وقف إطلاق النار مع إيران دون سقف محدد، وتخشى استغلال طهران ذلك لكسب الوقت، في حين تواصل تحضيراتها العسكرية لسيناريو استئناف الحرب."
+        "description": "أقر دبلوماسيون أوروبيون بعدم توفر الإجماع اللازم لتعليق اتفاقية الشراكة مع إسرائيل، في ظل تمسك دول رئيسية، على رأسها ألمانيا وإيطاليا، برفض المضي في هذا الاتجاه في الوقت الراهن."
       },
       {
-        "title": "فايننشال تايمز: لهذا تراجع الحب الأمريكي لإسرائيل",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%a7%d9%8a%d9%86%d9%86%d8%b4%d8%a7%d9%84-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d9%84%d9%87%d8%b0%d8%a7-%d8%aa%d8%b1%d8%a7%d8%ac%d8%b9-%d8%a7%d9%84%d8%ad%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:44:04 +0300",
+        "title": "من النفط إلى الدواء.. كيف فجّرت الحرب أزمة صحية عالمية؟",
+        "link": "https://www.aljazeera.net/health/2026/4/22/%d9%85%d9%86-%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%af%d9%88%d8%a7%d8%a1-%d9%83%d9%8a%d9%81-%d9%81%d8%ac%d8%b1%d8%aa-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت صحيفة فايننشال تايمز إن التعاطف الأمريكي مع إسرائيل يتراجع تدريجيا منذ عام 1995 وزاد حدة في عهد نتنياهو، وهو ما قد يُدخل العلاقة طويلة الأمد بين أمريكا وإسرائيل في مرحلة أك..."
+        "description": "يُعد النفط والغاز المصدر الرئيسي للبتروكيماويات الداخلة في تصنيع معظم الأدوية والمستلزمات الطبية، كما تشكّل ممرات العبور في الشرق الأوسط ما بين 10% و20% من التجارة الدوائية."
       },
       {
-        "title": "واشنطن تراجع خريطة وجودها العسكري بعد ضربات طهران",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%82%d8%af-%d9%86%d8%ba%d9%8a%d8%b1-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d9%82%d9%88%d8%a7%d8%b9%d8%af%d9%86%d8%a7?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:59:48 +0300",
+        "title": "صحيفة: أمريكا توقف شحنات الدولار عن العراق وتطالب بتفكيك الفصائل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b5%d8%ad%d9%8a%d9%81%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d8%aa%d9%88%d9%82%d9%81-%d8%b4%d8%ad%d9%86%d8%a7%d8%aa-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:49 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أقرت وزارة الحرب الأمريكية بجهلها بحجم التكاليف النهائية اللازمة لإصلاح قواعدها العسكرية المتضررة في الشرق الأوسط جراء الحرب مع إيران، مشيرة إلى أنها قد تغيّر نمط بنائها وفقا له..."
+        "description": "ذكرت صحيفة وول ستريت جورنال أن إدارة الرئيس الأمريكي دونالد ترمب ‌علقت شحنات الدولار إلى العراق وجمدت برامج تعاون أمني معه، في إطار ضغوطها على بغداد من أجل تفكيك الفصائل المسلحة..."
       },
       {
-        "title": "\"سأظل معذبا بسبب ذلك\".. تاكر كارلسون يعتذر عن دعمه ترمب",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b3%d8%a3%d8%b8%d9%84-%d9%85%d8%b9%d8%b0%d8%a8%d8%a7-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b0%d9%84%d9%83-%d8%aa%d8%a7%d9%83%d8%b1-%d9%83%d8%a7%d8%b1%d9%84%d8%b3%d9%88%d9%86?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:47:33 +0300",
+        "title": "بتسيلم: الإبادة الجماعية أصبحت رسميا جزءا من سردية إسرائيل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b3%d9%8a%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d8%b9%d9%8a%d8%a9-%d8%a3%d8%b5%d8%a8%d8%ad%d8%aa-%d8%b1%d8%b3%d9%85%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:40 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "عبّر المذيع السابق في شبكة \"فوكس نيوز\" تاكر كارلسون عن ندمه لدعمه الرئيس الأمريكي دونالد ترمب خلال حملته الرئاسية عام 2024، قائلا إنه سيظل \"معذبا بسبب ذلك مدة طويلة\"."
+        "description": "أصبح اسم الحاخام الإسرائيلي المتطرف أفراهام زربيف مرادفا للتدمير المتعمد والمنهجي لغزة حسب منظمة \"بتسيلم\" الحقوقية الإسرائيلية، التي نددت بتكريم حكومة بنيامين نتنياهو له أمس الث..."
       },
       {
-        "title": "صدام الإرادات بهرمز.. شروط ترمب تصطدم بخطوط إيران الحمر",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%a7-%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:18:13 +0300",
+        "title": "الحرب في المنطقة تزيد نمو الصناعة العسكرية الأمريكية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d8%b2%d9%8a%d8%af-%d9%86%d9%85%d9%88-%d8%a7%d9%84%d8%b5%d9%86%d8%a7%d8%b9%d8%a9?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:05 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تتمسك واشنطن بنزع السلاح النووي وتغيير السلوك الإقليمي تحت ضغط الحصار، في حين تشترط طهران رفع القيود الاقتصادية والاعتراف بحقوقها السيادية لبدء التفاوض."
+        "description": "أفادت شركات الدفاع الأمريكية \"آر تي إكس\" و\"نورثروب غرومان\" و\"جنرال إلكتريك أيروسبايس\" بزيادة الطلب على المعدات العسكرية بسبب الحرب في المنطقة."
       },
       {
-        "title": "الأمم المتحدة: صعوبات تعترض عودة 4 ملايين نازح في السودان",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%b5%d8%b9%d9%88%d8%a8%d8%a7%d8%aa-%d8%aa%d8%b9%d8%aa%d8%b1%d8%b6?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:02:43 +0300",
+        "title": "في حادثة لافتة.. \"تشات جي بي تي\" أمام القضاء في قضية إطلاق نار بفلوريدا",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b6-%d8%aa%d8%b4%d8%a7%d8%aa-%d8%ac%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:04:57 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وسط تحديات معيشية قاسية، كشفت الأمم المتحدة عن عودة نحو 4 ملايين نازح سوداني طوعا إلى ديارهم، تزامنا مع استعادة الجيش السيطرة على مناطق واسعة في العاصمة الخرطوم."
+        "description": "تصنف القوانين الأمريكية أي مساعدة أو نصح لشخص ما بارتكاب جريمة \"تحريضا\" يتحمل صاحبها المسؤولية نفسها التي يتحمّلها الجاني، ومن هذا المنطلق تأتي ملاحقة \"تشات جي بي تي\"."
       },
       {
-        "title": "نيويورك تايمز: أوروبا وقصة الدور الضائع في حرب إيران",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%86%d9%8a%d9%88%d9%8a%d9%88%d8%b1%d9%83-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d8%a7-%d8%aa%d8%b7%d9%85%d8%ad-%d9%84%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:39:50 +0300",
+        "title": "الوقف الإسلامي.. هندسة الاستدامة قبل عصر المؤسسات",
+        "link": "https://www.aljazeera.net/encyclopedia/2026/4/22/%d8%a7%d9%84%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d9%82%d8%a8%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:23 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت نيويورك تايمز إن أوروبا تطمح للعب دور \"حارس القانون الدولي\" بشأن الأزمة الناجمة عن الحرب على إيران، غير أن التطورات المتسارعة سرعان ما قوضت هذا الطموح وأعادت التأكيد على ها..."
+        "description": "أحد أبرز الأدوات التي أسهمت في بناء البنية الاجتماعية والاقتصادية في الحضارة الإسلامية، فلم يقتصر دوره على العمل الخيري المباشر، وإنما شكل منظومة مستدامة لتمويل الخدمات العامة و..."
       },
       {
-        "title": "دروس حرب إيران.. 1.5 تريليون دولار لتطوير ترسانة أمريكا العسكرية",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%8a%d8%b9%d8%aa%d8%b2%d9%85-%d8%a5%d9%86%d9%81%d8%a7%d9%82-%d8%b9%d8%b4%d8%b1%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:34:05 +0300",
+        "title": "لماذا يتأخر تسليم طائرة الركاب الصينية \"سي 919″؟",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%aa%d8%a3%d8%ae%d8%b1-%d8%aa%d8%b3%d9%84%d9%8a%d9%85-%d8%b7%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d9%83%d8%a7%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعتزم وزارة الحرب الأمريكية إنفاق أكثر من 30 مليار دولار لشراء ذخائر أساسية، في مقدمتها صواريخ الاعتراض، عقب تراجع مخزوناتها إلى مستويات وُصفت بأنها حرجة بسبب الحرب مع إيران."
+        "description": "شركة الطائرات التجارية الصينية \"كوماك\" التي تنتج طائرة الركاب \"سي 919\" تواجه تحديات كبيرة، أبرزها استيراد المحركات من شركة أمريكية-فرنسية، فيما تصر على جودة عالية لطائراتها."
       },
       {
-        "title": "8 آلاف شخص ضحايا الهجرة في عام وأوروبا تتصدر قائمة المأساة",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b7%d8%b1%d9%82-%d8%a7%d9%84%d9%87%d8%ac%d8%b1%d8%a9-%d9%85%d8%b5%d8%b1%d8%b9-%d9%88%d9%81%d9%82%d8%af%d8%a7%d9%86-8-%d8%a2%d9%84%d8%a7%d9%81-%d8%b4%d8%ae%d8%b5-%d9%81%d9%8a-%d8%b9%d8%a7%d9%85?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:33:13 +0300",
+        "title": "نساء بحيرة فيكتوريا يكسرن المحظورات ويخضن غمار مهنة صيد الأسماك",
+        "link": "https://www.aljazeera.net/lifestyle/2026/4/22/%d9%86%d8%b3%d8%a7%d8%a1-%d8%a8%d8%ad%d9%8a%d8%b1%d8%a9-%d9%81%d9%8a%d9%83%d8%aa%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d9%83%d8%b3%d8%b1%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%b8%d9%88%d8%b1%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:36:28 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وثق تقرير للمنظمة الدولية للهجرة وفاة وفقدان نحو 8 آلاف شخص في طرق الهجرة بأنحاء العالم خلال العام الماضي، وتصدرت المسارات المؤدية إلى أوروبا قائمة الضحايا في حين شهدت الأمريكتا..."
+        "description": "نجحت نساء بحيرة فيكتوريا في كسر المحظورات الاجتماعية بامتهانهن الصيد لمواجهة التحديات الاقتصادية وتغير المناخ. تجربة ملهمة تحكيها رودا أكيتش ورفيقاتها."
       },
       {
-        "title": "تحركات أوروبية لتعليق اتفاقيات مع إسرائيل",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%aa%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d9%8a%d8%a9-%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d8%aa%d9%81%d8%a7%d9%82%d9%8a%d8%a7%d8%aa-%d9%85%d8%b9?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:09:52 +0300",
+        "title": "أين تذهب مليارات الفيفا؟",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d9%81%d9%8a%d9%81%d8%a7-%d8%a5%d9%86%d9%81%d8%a7%d9%86%d8%aa%d9%8a%d9%86%d9%88-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:15:04 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "في وقت يتواصل فيه الجدل داخل الاتحاد الأوروبي حول العلاقات مع إسرائيل، أكدت مسؤولة السياسة الخارجية كايا كالاس أنه لم يتوفر الدعم الكافي من الدول الأعضاء لتعليق اتفاق الشراكة مع..."
+        "description": "في ظل الطفرة المالية التي يقودها الاتحاد الدولي لكرة القدم، تتجدد الأسئلة حول مصير المليارات التي يدرها المونديال."
       },
       {
-        "title": "شاهد.. هكذا ردت جماهير ريال مدريد على إشارة فينيسيوس في ملعب البرنابيو",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%b1%d9%8a%d8%a7%d9%84-%d9%85%d8%af%d8%b1%d9%8a%d8%af-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%81%d9%8a%d9%86%d9%8a%d8%b3%d9%8a%d9%88%d8%b3-%d8%ac%d9%88%d9%86%d9%8a%d9%88%d8%b1?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:56:32 +0300",
+        "title": "واشنطن تنفي نقل نظام \"ثاد\" من كوريا الجنوبية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%aa%d9%86%d9%81%d9%8a-%d9%86%d9%82%d9%84-%d9%86%d8%b8%d8%a7%d9%85-%d8%ab%d8%a7%d8%af-%d9%85%d9%86-%d9%83%d9%88%d8%b1%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:06:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ما الذي فعلته جماهير ريال مدريد بعد إشارة فينيسيوس في البرنابيو؟"
+        "description": "بعد مرور نحو شهر على تصريحات مسؤولين أمريكيين بنقل أجزاء من نظام الدفاع الصاروخي \"ثاد\" من كوريا الجنوبية لاستخدامه في حرب الولايات المتحدة على إيران، نفى قائد عسكري أمريكي ذلك ق..."
       },
       {
-        "title": "روسيا توظف الذكاء الاصطناعي لفرض رقابة كاملة على مواطنيها",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%b1%d9%88%d8%b3%d9%8a%d8%a7-%d8%aa%d8%aa%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%b1%d9%82%d8%a7%d8%a8%d8%a9-%d8%b1%d9%82%d9%85%d9%8a%d8%a9-%d9%83%d8%a7%d9%85%d9%84%d8%a9-%d8%b9%d9%84%d9%89?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:38:28 +0300",
+        "title": "ترمب: إيران تنهار ماليا وتتأخر في دفع رواتب الجيش والشرطة",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b1%d9%85%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%aa%d9%86%d9%87%d8%a7%d8%b1-%d9%85%d8%a7%d9%84%d9%8a%d8%a7-%d9%88%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d9%81%d8%aa%d8%ad?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:05:37 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "بدأت روسيا مشروعا ضخما للرقابة الرقمية على المواطنين بتطبيق ضوابط صارمة ومُوجّهة على أداء الموظفين، تتضمن برامج تتبّع الوقت، والتقاط لقطات الشاشة، ومراقبة النشاط على الإنترنت، و..."
+        "description": "أكد الرئيس الأمريكي ترمب أن إيران تنهار ماليا وتطالب بفتح مضيق هرمز لإنقاذ اقتصادها من الحصار البحري. بينما يدرس تمديد إعفاءات شحن النفط لخفض تكاليف الوقود ومواجهة تداعيات الحرب..."
       },
       {
-        "title": "الأهلي السعودي يواجه ماتشيدا الياباني بنهائي أبطال آسيا للنخبة.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d9%85%d8%a7%d8%aa%d8%b4%d9%8a%d8%af%d8%a7-%d8%b2%d9%8a%d9%84%d9%81%d9%8a%d8%a7?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:26:18 +0300",
+        "title": "5 أيام حاسمة.. هل يتجاوز الإطار التنسيقي عراقيل اختيار رئيس الحكومة العراقية؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/5-%d8%a3%d9%8a%d8%a7%d9%85-%d8%ad%d8%a7%d8%b3%d9%85%d8%a9-%d9%87%d9%84-%d9%8a%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:46:15 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ماتشيدا زيلفيا يضرب موعدا مع الأهلي السعودي في نهائي دوري أبطال آسيا للنخبة."
+        "description": "لم يتبقَّ من المهلة المحددة لرئيس الجمهورية لتكليف مرشح الإطار التنسيقي بتشكيل الحكومة سوى أيام قليلة، ورغم ذلك فإن الخلافات المستمرة بين قوى الإطار تعرقل إنجاز هذا الاستحقاق."
       },
       {
-        "title": "اتهامات إيرانية بالمناورة.. ترمب يمدد وقف إطلاق النار ويتمسك بحصار الموانئ",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d8%aa%d9%87%d8%a7%d9%85%d8%a7%d8%aa-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%88%d8%b1%d8%a9-%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d9%85%d8%af%d8%af?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:21:08 +0300",
+        "title": "القصة الكاملة لرفع علم إسرائيل على كنيس بدمشق",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b1%d9%81%d8%b9-%d8%b9%d9%84%d9%85-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%b9%d9%84%d9%89?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:19:59 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قرر الرئيس الأمريكي دونالد ترمب تمديد الهدنة مع طهران استجابة لوساطة باكستانية، سعيا لمنح المفاوضات فرصة إضافية للنجاح، وفق قوله، رغم تمسكه باستمرار الحصار البحري الذي تعُده إير..."
+        "description": "صورة متداولة لرفع علم إسرائيل فوق كنيس في دمشق مفبركة بالذكاء الاصطناعي، التحقق يكشف تشوهات بصرية وغياب معالم حقيقية، في سياق حملات تضليل عن \"التطبيع\"."
       },
       {
-        "title": "مباراة الزمالك ضد بيراميدز في الدوري المصري.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%84%d9%83-%d8%a8%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d8%af%d8%b2-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 21:58:35 +0300",
+        "title": "كانت ذراعا لمخابرات الأسد.. أي دور للجان الأحياء في عهد أحمد الشرع؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%83%d8%a7%d9%86%d8%aa-%d8%b0%d8%b1%d8%a7%d8%b9%d8%a7-%d9%84%d9%85%d8%ae%d8%a7%d8%a8%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%b3%d8%af-%d9%81%d9%85%d8%a7-%d8%af%d9%88%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:17:55 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
+        "description": "يقول السوريون إن لجان الأحياء كانت أذرعًا لمخابرات نظام الأسد، ترصد حركة الناس عن قرب، فتوشي بهم وتوردهم المهالك والسجون. فأي مبرر لبقاء هذه اللجان في عهد أحمد الشرع؟"
       }
     ],
     "entertainment": [
       {
-        "title": "توقعات بانضمام روبيو لجولة المحادثات الثانية بين لبنان وإسرائيل",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d9%88%d9%82%d8%b9%d8%a7%d8%aa-%d8%a8%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%b1%d9%88%d8%a8%d9%8a%d9%88-%d9%84%d8%ac%d9%88%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:02:10 +0300",
+        "title": "أسواق التنبؤ تدخل نشرات الأخبار.. هل تتحول التغطية إلى مراهنة جماهيرية؟",
+        "link": "https://www.aljazeera.net/media/2026/4/22/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d8%aa%d9%86%d8%a8%d8%a4-%d8%aa%d8%af%d8%ae%d9%84-%d9%86%d8%b4%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%87%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:09 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تنطلق غدا الخميس في واشنطن جولة المحادثات الثانية بين لبنان وإسرائيل، وقال مسؤول أمريكي إنه يُتوقع أن ينضم وزير الخارجية ماركو روبيو إلى المفاوضات."
+        "description": "دخول أسواق التنبؤ إلى نشرات الأخبار يثير جدلا إزاء تأثيرها في الجمهور، خاصة كبار السن، وذلك وسط مخاوف من تحول التغطية إلى أداة تؤثر في الرأي العام لا مجرد تحليل."
       },
       {
-        "title": "رواسب اليورانيوم.. البصمة التي تمنح المفتشين مفاتيح أسرار المفاعلات",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%b1%d9%88%d8%a7%d8%b3%d8%a8-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a8%d8%b5%d9%85%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%85%d9%86%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:59:11 +0300",
+        "title": "أمن كأس العالم 2026.. رئيسة المكسيك تتعهد بحماية المونديال بعد هجوم الأهرامات الدامي",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%86-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d9%83%d8%b3%d9%8a%d9%83-%d8%a3%d9%87%d8%b1%d8%a7%d9%85%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:06 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "يمكن للمفتشين النوويين معرفة الكثير عن البرنامج النووي بناء على تعقب رواسب اليورانيوم في محيط منطقة التفتيش كاستنتاج نسبة التخصيب التي تم الوصول إليها وغيرها من المعلومات عن الب..."
+        "description": "قال مجلس الأمن المكسيكي إن حادث إطلاق نار خلف إصابة 13 شخصا بينهم طفلان يبلغان من العمر 13 و6 سنوات."
       },
       {
-        "title": "إسرائيل إلى أين؟ مؤرخ للإبادة الجماعية يفكك تحوّل الصهيونية",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d9%85%d8%a4%d8%b1%d8%ae-%d9%84%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:49:38 +0300",
+        "title": "ومضة في السماء ثم سقوط مفاجئ.. كاميرا توثق لحظة اصطدام طائرة بأسلاك الضغط العالي",
+        "link": "https://www.aljazeera.net/misc/2026/4/22/%d9%88%d9%85%d8%b6%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1-%d8%ab%d9%85-%d8%b3%d9%82%d9%88%d8%b7-%d9%85%d9%81%d8%a7%d8%ac%d8%a6-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:54:11 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "حذّر المؤرخ الإسرائيلي المتخصص في شؤون الإبادة الجماعية عومير بارتوف من أن مسار إسرائيل يهدد مكانتها الأخلاقية ودعمها الدولي بعد أن أصبحت دولة مدمنة على العنف، وقال إنها اقترفت ..."
+        "description": "من خلف زجاج سيارة عابرة، تتحول سماء هادئة في كاليفورنيا إلى ومضة عمياء وسقوط مفاجئ لطائرة صغيرة تغرق الحي في العتمة وتترك أسباب الحادث معلقة في الهواء."
       },
       {
-        "title": "ملف اليورانيوم الإيراني يعرقل مفاوضات واشنطن وطهران",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d9%85%d9%84%d9%81-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a-%d9%8a%d8%b9%d8%b1%d9%82%d9%84?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:48:25 +0300",
+        "title": "فريدمان: هكذا تاهت إسرائيل وهكذا يمكن لترمب إنقاذ لبنان",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%b1%d9%8a%d8%af%d9%85%d8%a7%d9%86-%d9%87%d9%83%d8%b0%d8%a7-%d8%aa%d8%a7%d9%87%d8%aa-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d9%87%d9%83%d8%b0%d8%a7-%d9%8a%d9%85%d9%83%d9%86?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:49:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعد مطالبة الولايات المتحدة إيران بتسليم مخزونها من اليورانيوم المخصب بنسبة 60% من أهم الملفات الساخنة المطروحة على طاولة المفاوضات بين البلدين."
+        "description": "يرى فريدمان أن إسرائيل، بقيادة اليمين المتطرف، باتت تعتمد \"إستراتيجية المطرقة\" التي تحطم كل شيء دون بناء أي أفق سياسي، مما يهدد مستقبلها الإستراتيجي وعلاقاتها الدولية، بل وعلاقت..."
       },
       {
-        "title": "أكثر من 30 دولة تبحث في لندن إعادة فتح مضيق هرمز",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d9%81%d9%8a-%d9%84%d9%86%d8%af%d9%86-%d9%84%d8%a8%d8%ad%d8%ab-%d8%a5%d8%b9%d8%a7%d8%af%d8%a9-%d9%81%d8%aa%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:09:35 +0300",
+        "title": "السوق تفتقد الوضوح.. الذهب يرتفع والنفط يختبر هدنة أمريكا وإيران",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d8%a7%d9%84%d8%b3%d9%88%d9%82-%d8%aa%d9%81%d8%aa%d9%82%d8%af-%d8%a7%d9%84%d9%88%d8%b6%d9%88%d8%ad-%d8%a7%d9%84%d8%b0%d9%87%d8%a8-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%88%d8%a7%d9%84%d9%86%d9%81%d8%b7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:35:51 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أعلنت بريطانيا أنها ستستضيف عسكريين من نحو 30 بلدا، يومي الأربعاء والخميس، لمناقشة تشكيل مهمة بقيادة لندن وباريس لحماية الملاحة في مضيق هرمز."
+        "description": "ارتفع الذهب مع تراجع محدود للنفط عقب تمديد هدنة أمريكا وإيران، في ظل ترقب الأسواق لمسار المحادثات وتأثيرها على التضخم والفائدة، واستمرار اضطراب إمدادات الطاقة عبر مضيق هرمز."
       },
       {
-        "title": "كيف تنظر تل أبيب إلى تمديد وقف إطلاق النار مع إيران؟",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%8a%d8%af%d9%8a%d8%b9%d9%88%d8%aa-%d8%a3%d8%ad%d8%b1%d9%86%d9%88%d8%aa-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%84%d9%82-%d8%aa%d9%85%d8%af%d9%8a%d8%af-%d8%aa%d8%b1%d9%85%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:46:05 +0300",
+        "title": "بين الدعم والتحفظ والمعارضة.. انقسام أوروبي يحول دون تعليق اتفاق الشراكة مع إسرائيل",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%af%d8%b9%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d9%81%d8%b8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b1%d8%b6%d8%a9-%d8%a7%d9%86%d9%82%d8%b3%d8%a7%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:31:03 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تترقب تل أبيب بحذر قرار ترمب تمديد مهلة وقف إطلاق النار مع إيران دون سقف محدد، وتخشى استغلال طهران ذلك لكسب الوقت، في حين تواصل تحضيراتها العسكرية لسيناريو استئناف الحرب."
+        "description": "أقر دبلوماسيون أوروبيون بعدم توفر الإجماع اللازم لتعليق اتفاقية الشراكة مع إسرائيل، في ظل تمسك دول رئيسية، على رأسها ألمانيا وإيطاليا، برفض المضي في هذا الاتجاه في الوقت الراهن."
       },
       {
-        "title": "فايننشال تايمز: لهذا تراجع الحب الأمريكي لإسرائيل",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%a7%d9%8a%d9%86%d9%86%d8%b4%d8%a7%d9%84-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d9%84%d9%87%d8%b0%d8%a7-%d8%aa%d8%b1%d8%a7%d8%ac%d8%b9-%d8%a7%d9%84%d8%ad%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:44:04 +0300",
+        "title": "من النفط إلى الدواء.. كيف فجّرت الحرب أزمة صحية عالمية؟",
+        "link": "https://www.aljazeera.net/health/2026/4/22/%d9%85%d9%86-%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%af%d9%88%d8%a7%d8%a1-%d9%83%d9%8a%d9%81-%d9%81%d8%ac%d8%b1%d8%aa-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت صحيفة فايننشال تايمز إن التعاطف الأمريكي مع إسرائيل يتراجع تدريجيا منذ عام 1995 وزاد حدة في عهد نتنياهو، وهو ما قد يُدخل العلاقة طويلة الأمد بين أمريكا وإسرائيل في مرحلة أك..."
+        "description": "يُعد النفط والغاز المصدر الرئيسي للبتروكيماويات الداخلة في تصنيع معظم الأدوية والمستلزمات الطبية، كما تشكّل ممرات العبور في الشرق الأوسط ما بين 10% و20% من التجارة الدوائية."
       },
       {
-        "title": "واشنطن تراجع خريطة وجودها العسكري بعد ضربات طهران",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%82%d8%af-%d9%86%d8%ba%d9%8a%d8%b1-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d9%82%d9%88%d8%a7%d8%b9%d8%af%d9%86%d8%a7?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:59:48 +0300",
+        "title": "صحيفة: أمريكا توقف شحنات الدولار عن العراق وتطالب بتفكيك الفصائل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b5%d8%ad%d9%8a%d9%81%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d8%aa%d9%88%d9%82%d9%81-%d8%b4%d8%ad%d9%86%d8%a7%d8%aa-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:49 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أقرت وزارة الحرب الأمريكية بجهلها بحجم التكاليف النهائية اللازمة لإصلاح قواعدها العسكرية المتضررة في الشرق الأوسط جراء الحرب مع إيران، مشيرة إلى أنها قد تغيّر نمط بنائها وفقا له..."
+        "description": "ذكرت صحيفة وول ستريت جورنال أن إدارة الرئيس الأمريكي دونالد ترمب ‌علقت شحنات الدولار إلى العراق وجمدت برامج تعاون أمني معه، في إطار ضغوطها على بغداد من أجل تفكيك الفصائل المسلحة..."
       },
       {
-        "title": "\"سأظل معذبا بسبب ذلك\".. تاكر كارلسون يعتذر عن دعمه ترمب",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b3%d8%a3%d8%b8%d9%84-%d9%85%d8%b9%d8%b0%d8%a8%d8%a7-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b0%d9%84%d9%83-%d8%aa%d8%a7%d9%83%d8%b1-%d9%83%d8%a7%d8%b1%d9%84%d8%b3%d9%88%d9%86?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:47:33 +0300",
+        "title": "بتسيلم: الإبادة الجماعية أصبحت رسميا جزءا من سردية إسرائيل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b3%d9%8a%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d8%b9%d9%8a%d8%a9-%d8%a3%d8%b5%d8%a8%d8%ad%d8%aa-%d8%b1%d8%b3%d9%85%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:40 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "عبّر المذيع السابق في شبكة \"فوكس نيوز\" تاكر كارلسون عن ندمه لدعمه الرئيس الأمريكي دونالد ترمب خلال حملته الرئاسية عام 2024، قائلا إنه سيظل \"معذبا بسبب ذلك مدة طويلة\"."
+        "description": "أصبح اسم الحاخام الإسرائيلي المتطرف أفراهام زربيف مرادفا للتدمير المتعمد والمنهجي لغزة حسب منظمة \"بتسيلم\" الحقوقية الإسرائيلية، التي نددت بتكريم حكومة بنيامين نتنياهو له أمس الث..."
       },
       {
-        "title": "صدام الإرادات بهرمز.. شروط ترمب تصطدم بخطوط إيران الحمر",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%a7-%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:18:13 +0300",
+        "title": "الحرب في المنطقة تزيد نمو الصناعة العسكرية الأمريكية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d8%b2%d9%8a%d8%af-%d9%86%d9%85%d9%88-%d8%a7%d9%84%d8%b5%d9%86%d8%a7%d8%b9%d8%a9?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:05 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تتمسك واشنطن بنزع السلاح النووي وتغيير السلوك الإقليمي تحت ضغط الحصار، في حين تشترط طهران رفع القيود الاقتصادية والاعتراف بحقوقها السيادية لبدء التفاوض."
+        "description": "أفادت شركات الدفاع الأمريكية \"آر تي إكس\" و\"نورثروب غرومان\" و\"جنرال إلكتريك أيروسبايس\" بزيادة الطلب على المعدات العسكرية بسبب الحرب في المنطقة."
       },
       {
-        "title": "الأمم المتحدة: صعوبات تعترض عودة 4 ملايين نازح في السودان",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%b5%d8%b9%d9%88%d8%a8%d8%a7%d8%aa-%d8%aa%d8%b9%d8%aa%d8%b1%d8%b6?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:02:43 +0300",
+        "title": "في حادثة لافتة.. \"تشات جي بي تي\" أمام القضاء في قضية إطلاق نار بفلوريدا",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b6-%d8%aa%d8%b4%d8%a7%d8%aa-%d8%ac%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:04:57 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وسط تحديات معيشية قاسية، كشفت الأمم المتحدة عن عودة نحو 4 ملايين نازح سوداني طوعا إلى ديارهم، تزامنا مع استعادة الجيش السيطرة على مناطق واسعة في العاصمة الخرطوم."
+        "description": "تصنف القوانين الأمريكية أي مساعدة أو نصح لشخص ما بارتكاب جريمة \"تحريضا\" يتحمل صاحبها المسؤولية نفسها التي يتحمّلها الجاني، ومن هذا المنطلق تأتي ملاحقة \"تشات جي بي تي\"."
       },
       {
-        "title": "نيويورك تايمز: أوروبا وقصة الدور الضائع في حرب إيران",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%86%d9%8a%d9%88%d9%8a%d9%88%d8%b1%d9%83-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d8%a7-%d8%aa%d8%b7%d9%85%d8%ad-%d9%84%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:39:50 +0300",
+        "title": "الوقف الإسلامي.. هندسة الاستدامة قبل عصر المؤسسات",
+        "link": "https://www.aljazeera.net/encyclopedia/2026/4/22/%d8%a7%d9%84%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d9%82%d8%a8%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:23 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت نيويورك تايمز إن أوروبا تطمح للعب دور \"حارس القانون الدولي\" بشأن الأزمة الناجمة عن الحرب على إيران، غير أن التطورات المتسارعة سرعان ما قوضت هذا الطموح وأعادت التأكيد على ها..."
+        "description": "أحد أبرز الأدوات التي أسهمت في بناء البنية الاجتماعية والاقتصادية في الحضارة الإسلامية، فلم يقتصر دوره على العمل الخيري المباشر، وإنما شكل منظومة مستدامة لتمويل الخدمات العامة و..."
       },
       {
-        "title": "دروس حرب إيران.. 1.5 تريليون دولار لتطوير ترسانة أمريكا العسكرية",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%8a%d8%b9%d8%aa%d8%b2%d9%85-%d8%a5%d9%86%d9%81%d8%a7%d9%82-%d8%b9%d8%b4%d8%b1%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:34:05 +0300",
+        "title": "لماذا يتأخر تسليم طائرة الركاب الصينية \"سي 919″؟",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%aa%d8%a3%d8%ae%d8%b1-%d8%aa%d8%b3%d9%84%d9%8a%d9%85-%d8%b7%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d9%83%d8%a7%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعتزم وزارة الحرب الأمريكية إنفاق أكثر من 30 مليار دولار لشراء ذخائر أساسية، في مقدمتها صواريخ الاعتراض، عقب تراجع مخزوناتها إلى مستويات وُصفت بأنها حرجة بسبب الحرب مع إيران."
+        "description": "شركة الطائرات التجارية الصينية \"كوماك\" التي تنتج طائرة الركاب \"سي 919\" تواجه تحديات كبيرة، أبرزها استيراد المحركات من شركة أمريكية-فرنسية، فيما تصر على جودة عالية لطائراتها."
       },
       {
-        "title": "8 آلاف شخص ضحايا الهجرة في عام وأوروبا تتصدر قائمة المأساة",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b7%d8%b1%d9%82-%d8%a7%d9%84%d9%87%d8%ac%d8%b1%d8%a9-%d9%85%d8%b5%d8%b1%d8%b9-%d9%88%d9%81%d9%82%d8%af%d8%a7%d9%86-8-%d8%a2%d9%84%d8%a7%d9%81-%d8%b4%d8%ae%d8%b5-%d9%81%d9%8a-%d8%b9%d8%a7%d9%85?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:33:13 +0300",
+        "title": "نساء بحيرة فيكتوريا يكسرن المحظورات ويخضن غمار مهنة صيد الأسماك",
+        "link": "https://www.aljazeera.net/lifestyle/2026/4/22/%d9%86%d8%b3%d8%a7%d8%a1-%d8%a8%d8%ad%d9%8a%d8%b1%d8%a9-%d9%81%d9%8a%d9%83%d8%aa%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d9%83%d8%b3%d8%b1%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%b8%d9%88%d8%b1%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:36:28 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وثق تقرير للمنظمة الدولية للهجرة وفاة وفقدان نحو 8 آلاف شخص في طرق الهجرة بأنحاء العالم خلال العام الماضي، وتصدرت المسارات المؤدية إلى أوروبا قائمة الضحايا في حين شهدت الأمريكتا..."
+        "description": "نجحت نساء بحيرة فيكتوريا في كسر المحظورات الاجتماعية بامتهانهن الصيد لمواجهة التحديات الاقتصادية وتغير المناخ. تجربة ملهمة تحكيها رودا أكيتش ورفيقاتها."
       },
       {
-        "title": "تحركات أوروبية لتعليق اتفاقيات مع إسرائيل",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%aa%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d9%8a%d8%a9-%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d8%aa%d9%81%d8%a7%d9%82%d9%8a%d8%a7%d8%aa-%d9%85%d8%b9?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:09:52 +0300",
+        "title": "أين تذهب مليارات الفيفا؟",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d9%81%d9%8a%d9%81%d8%a7-%d8%a5%d9%86%d9%81%d8%a7%d9%86%d8%aa%d9%8a%d9%86%d9%88-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:15:04 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "في وقت يتواصل فيه الجدل داخل الاتحاد الأوروبي حول العلاقات مع إسرائيل، أكدت مسؤولة السياسة الخارجية كايا كالاس أنه لم يتوفر الدعم الكافي من الدول الأعضاء لتعليق اتفاق الشراكة مع..."
+        "description": "في ظل الطفرة المالية التي يقودها الاتحاد الدولي لكرة القدم، تتجدد الأسئلة حول مصير المليارات التي يدرها المونديال."
       },
       {
-        "title": "شاهد.. هكذا ردت جماهير ريال مدريد على إشارة فينيسيوس في ملعب البرنابيو",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%b1%d9%8a%d8%a7%d9%84-%d9%85%d8%af%d8%b1%d9%8a%d8%af-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%81%d9%8a%d9%86%d9%8a%d8%b3%d9%8a%d9%88%d8%b3-%d8%ac%d9%88%d9%86%d9%8a%d9%88%d8%b1?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:56:32 +0300",
+        "title": "واشنطن تنفي نقل نظام \"ثاد\" من كوريا الجنوبية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%aa%d9%86%d9%81%d9%8a-%d9%86%d9%82%d9%84-%d9%86%d8%b8%d8%a7%d9%85-%d8%ab%d8%a7%d8%af-%d9%85%d9%86-%d9%83%d9%88%d8%b1%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:06:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ما الذي فعلته جماهير ريال مدريد بعد إشارة فينيسيوس في البرنابيو؟"
+        "description": "بعد مرور نحو شهر على تصريحات مسؤولين أمريكيين بنقل أجزاء من نظام الدفاع الصاروخي \"ثاد\" من كوريا الجنوبية لاستخدامه في حرب الولايات المتحدة على إيران، نفى قائد عسكري أمريكي ذلك ق..."
       },
       {
-        "title": "روسيا توظف الذكاء الاصطناعي لفرض رقابة كاملة على مواطنيها",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%b1%d9%88%d8%b3%d9%8a%d8%a7-%d8%aa%d8%aa%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%b1%d9%82%d8%a7%d8%a8%d8%a9-%d8%b1%d9%82%d9%85%d9%8a%d8%a9-%d9%83%d8%a7%d9%85%d9%84%d8%a9-%d8%b9%d9%84%d9%89?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:38:28 +0300",
+        "title": "ترمب: إيران تنهار ماليا وتتأخر في دفع رواتب الجيش والشرطة",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b1%d9%85%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%aa%d9%86%d9%87%d8%a7%d8%b1-%d9%85%d8%a7%d9%84%d9%8a%d8%a7-%d9%88%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d9%81%d8%aa%d8%ad?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:05:37 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "بدأت روسيا مشروعا ضخما للرقابة الرقمية على المواطنين بتطبيق ضوابط صارمة ومُوجّهة على أداء الموظفين، تتضمن برامج تتبّع الوقت، والتقاط لقطات الشاشة، ومراقبة النشاط على الإنترنت، و..."
+        "description": "أكد الرئيس الأمريكي ترمب أن إيران تنهار ماليا وتطالب بفتح مضيق هرمز لإنقاذ اقتصادها من الحصار البحري. بينما يدرس تمديد إعفاءات شحن النفط لخفض تكاليف الوقود ومواجهة تداعيات الحرب..."
       },
       {
-        "title": "الأهلي السعودي يواجه ماتشيدا الياباني بنهائي أبطال آسيا للنخبة.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d9%85%d8%a7%d8%aa%d8%b4%d9%8a%d8%af%d8%a7-%d8%b2%d9%8a%d9%84%d9%81%d9%8a%d8%a7?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:26:18 +0300",
+        "title": "5 أيام حاسمة.. هل يتجاوز الإطار التنسيقي عراقيل اختيار رئيس الحكومة العراقية؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/5-%d8%a3%d9%8a%d8%a7%d9%85-%d8%ad%d8%a7%d8%b3%d9%85%d8%a9-%d9%87%d9%84-%d9%8a%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:46:15 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ماتشيدا زيلفيا يضرب موعدا مع الأهلي السعودي في نهائي دوري أبطال آسيا للنخبة."
+        "description": "لم يتبقَّ من المهلة المحددة لرئيس الجمهورية لتكليف مرشح الإطار التنسيقي بتشكيل الحكومة سوى أيام قليلة، ورغم ذلك فإن الخلافات المستمرة بين قوى الإطار تعرقل إنجاز هذا الاستحقاق."
       },
       {
-        "title": "اتهامات إيرانية بالمناورة.. ترمب يمدد وقف إطلاق النار ويتمسك بحصار الموانئ",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d8%aa%d9%87%d8%a7%d9%85%d8%a7%d8%aa-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%88%d8%b1%d8%a9-%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d9%85%d8%af%d8%af?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:21:08 +0300",
+        "title": "القصة الكاملة لرفع علم إسرائيل على كنيس بدمشق",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b1%d9%81%d8%b9-%d8%b9%d9%84%d9%85-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%b9%d9%84%d9%89?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:19:59 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قرر الرئيس الأمريكي دونالد ترمب تمديد الهدنة مع طهران استجابة لوساطة باكستانية، سعيا لمنح المفاوضات فرصة إضافية للنجاح، وفق قوله، رغم تمسكه باستمرار الحصار البحري الذي تعُده إير..."
+        "description": "صورة متداولة لرفع علم إسرائيل فوق كنيس في دمشق مفبركة بالذكاء الاصطناعي، التحقق يكشف تشوهات بصرية وغياب معالم حقيقية، في سياق حملات تضليل عن \"التطبيع\"."
       },
       {
-        "title": "مباراة الزمالك ضد بيراميدز في الدوري المصري.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%84%d9%83-%d8%a8%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d8%af%d8%b2-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 21:58:35 +0300",
+        "title": "كانت ذراعا لمخابرات الأسد.. أي دور للجان الأحياء في عهد أحمد الشرع؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%83%d8%a7%d9%86%d8%aa-%d8%b0%d8%b1%d8%a7%d8%b9%d8%a7-%d9%84%d9%85%d8%ae%d8%a7%d8%a8%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%b3%d8%af-%d9%81%d9%85%d8%a7-%d8%af%d9%88%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:17:55 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
+        "description": "يقول السوريون إن لجان الأحياء كانت أذرعًا لمخابرات نظام الأسد، ترصد حركة الناس عن قرب، فتوشي بهم وتوردهم المهالك والسجون. فأي مبرر لبقاء هذه اللجان في عهد أحمد الشرع؟"
       }
     ],
     "health": [
       {
-        "title": "توقعات بانضمام روبيو لجولة المحادثات الثانية بين لبنان وإسرائيل",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d9%88%d9%82%d8%b9%d8%a7%d8%aa-%d8%a8%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%b1%d9%88%d8%a8%d9%8a%d9%88-%d9%84%d8%ac%d9%88%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:02:10 +0300",
+        "title": "أسواق التنبؤ تدخل نشرات الأخبار.. هل تتحول التغطية إلى مراهنة جماهيرية؟",
+        "link": "https://www.aljazeera.net/media/2026/4/22/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d8%aa%d9%86%d8%a8%d8%a4-%d8%aa%d8%af%d8%ae%d9%84-%d9%86%d8%b4%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%87%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:09 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تنطلق غدا الخميس في واشنطن جولة المحادثات الثانية بين لبنان وإسرائيل، وقال مسؤول أمريكي إنه يُتوقع أن ينضم وزير الخارجية ماركو روبيو إلى المفاوضات."
+        "description": "دخول أسواق التنبؤ إلى نشرات الأخبار يثير جدلا إزاء تأثيرها في الجمهور، خاصة كبار السن، وذلك وسط مخاوف من تحول التغطية إلى أداة تؤثر في الرأي العام لا مجرد تحليل."
       },
       {
-        "title": "رواسب اليورانيوم.. البصمة التي تمنح المفتشين مفاتيح أسرار المفاعلات",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%b1%d9%88%d8%a7%d8%b3%d8%a8-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a8%d8%b5%d9%85%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%85%d9%86%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:59:11 +0300",
+        "title": "أمن كأس العالم 2026.. رئيسة المكسيك تتعهد بحماية المونديال بعد هجوم الأهرامات الدامي",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%86-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d9%83%d8%b3%d9%8a%d9%83-%d8%a3%d9%87%d8%b1%d8%a7%d9%85%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:06 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "يمكن للمفتشين النوويين معرفة الكثير عن البرنامج النووي بناء على تعقب رواسب اليورانيوم في محيط منطقة التفتيش كاستنتاج نسبة التخصيب التي تم الوصول إليها وغيرها من المعلومات عن الب..."
+        "description": "قال مجلس الأمن المكسيكي إن حادث إطلاق نار خلف إصابة 13 شخصا بينهم طفلان يبلغان من العمر 13 و6 سنوات."
       },
       {
-        "title": "إسرائيل إلى أين؟ مؤرخ للإبادة الجماعية يفكك تحوّل الصهيونية",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d9%85%d8%a4%d8%b1%d8%ae-%d9%84%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:49:38 +0300",
+        "title": "ومضة في السماء ثم سقوط مفاجئ.. كاميرا توثق لحظة اصطدام طائرة بأسلاك الضغط العالي",
+        "link": "https://www.aljazeera.net/misc/2026/4/22/%d9%88%d9%85%d8%b6%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1-%d8%ab%d9%85-%d8%b3%d9%82%d9%88%d8%b7-%d9%85%d9%81%d8%a7%d8%ac%d8%a6-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:54:11 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "حذّر المؤرخ الإسرائيلي المتخصص في شؤون الإبادة الجماعية عومير بارتوف من أن مسار إسرائيل يهدد مكانتها الأخلاقية ودعمها الدولي بعد أن أصبحت دولة مدمنة على العنف، وقال إنها اقترفت ..."
+        "description": "من خلف زجاج سيارة عابرة، تتحول سماء هادئة في كاليفورنيا إلى ومضة عمياء وسقوط مفاجئ لطائرة صغيرة تغرق الحي في العتمة وتترك أسباب الحادث معلقة في الهواء."
       },
       {
-        "title": "ملف اليورانيوم الإيراني يعرقل مفاوضات واشنطن وطهران",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d9%85%d9%84%d9%81-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a-%d9%8a%d8%b9%d8%b1%d9%82%d9%84?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:48:25 +0300",
+        "title": "فريدمان: هكذا تاهت إسرائيل وهكذا يمكن لترمب إنقاذ لبنان",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%b1%d9%8a%d8%af%d9%85%d8%a7%d9%86-%d9%87%d9%83%d8%b0%d8%a7-%d8%aa%d8%a7%d9%87%d8%aa-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d9%87%d9%83%d8%b0%d8%a7-%d9%8a%d9%85%d9%83%d9%86?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:49:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعد مطالبة الولايات المتحدة إيران بتسليم مخزونها من اليورانيوم المخصب بنسبة 60% من أهم الملفات الساخنة المطروحة على طاولة المفاوضات بين البلدين."
+        "description": "يرى فريدمان أن إسرائيل، بقيادة اليمين المتطرف، باتت تعتمد \"إستراتيجية المطرقة\" التي تحطم كل شيء دون بناء أي أفق سياسي، مما يهدد مستقبلها الإستراتيجي وعلاقاتها الدولية، بل وعلاقت..."
       },
       {
-        "title": "أكثر من 30 دولة تبحث في لندن إعادة فتح مضيق هرمز",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d9%81%d9%8a-%d9%84%d9%86%d8%af%d9%86-%d9%84%d8%a8%d8%ad%d8%ab-%d8%a5%d8%b9%d8%a7%d8%af%d8%a9-%d9%81%d8%aa%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:09:35 +0300",
+        "title": "السوق تفتقد الوضوح.. الذهب يرتفع والنفط يختبر هدنة أمريكا وإيران",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d8%a7%d9%84%d8%b3%d9%88%d9%82-%d8%aa%d9%81%d8%aa%d9%82%d8%af-%d8%a7%d9%84%d9%88%d8%b6%d9%88%d8%ad-%d8%a7%d9%84%d8%b0%d9%87%d8%a8-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%88%d8%a7%d9%84%d9%86%d9%81%d8%b7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:35:51 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أعلنت بريطانيا أنها ستستضيف عسكريين من نحو 30 بلدا، يومي الأربعاء والخميس، لمناقشة تشكيل مهمة بقيادة لندن وباريس لحماية الملاحة في مضيق هرمز."
+        "description": "ارتفع الذهب مع تراجع محدود للنفط عقب تمديد هدنة أمريكا وإيران، في ظل ترقب الأسواق لمسار المحادثات وتأثيرها على التضخم والفائدة، واستمرار اضطراب إمدادات الطاقة عبر مضيق هرمز."
       },
       {
-        "title": "كيف تنظر تل أبيب إلى تمديد وقف إطلاق النار مع إيران؟",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%8a%d8%af%d9%8a%d8%b9%d9%88%d8%aa-%d8%a3%d8%ad%d8%b1%d9%86%d9%88%d8%aa-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%84%d9%82-%d8%aa%d9%85%d8%af%d9%8a%d8%af-%d8%aa%d8%b1%d9%85%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:46:05 +0300",
+        "title": "بين الدعم والتحفظ والمعارضة.. انقسام أوروبي يحول دون تعليق اتفاق الشراكة مع إسرائيل",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%af%d8%b9%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d9%81%d8%b8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b1%d8%b6%d8%a9-%d8%a7%d9%86%d9%82%d8%b3%d8%a7%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:31:03 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تترقب تل أبيب بحذر قرار ترمب تمديد مهلة وقف إطلاق النار مع إيران دون سقف محدد، وتخشى استغلال طهران ذلك لكسب الوقت، في حين تواصل تحضيراتها العسكرية لسيناريو استئناف الحرب."
+        "description": "أقر دبلوماسيون أوروبيون بعدم توفر الإجماع اللازم لتعليق اتفاقية الشراكة مع إسرائيل، في ظل تمسك دول رئيسية، على رأسها ألمانيا وإيطاليا، برفض المضي في هذا الاتجاه في الوقت الراهن."
       },
       {
-        "title": "فايننشال تايمز: لهذا تراجع الحب الأمريكي لإسرائيل",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%a7%d9%8a%d9%86%d9%86%d8%b4%d8%a7%d9%84-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d9%84%d9%87%d8%b0%d8%a7-%d8%aa%d8%b1%d8%a7%d8%ac%d8%b9-%d8%a7%d9%84%d8%ad%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:44:04 +0300",
+        "title": "من النفط إلى الدواء.. كيف فجّرت الحرب أزمة صحية عالمية؟",
+        "link": "https://www.aljazeera.net/health/2026/4/22/%d9%85%d9%86-%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%af%d9%88%d8%a7%d8%a1-%d9%83%d9%8a%d9%81-%d9%81%d8%ac%d8%b1%d8%aa-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت صحيفة فايننشال تايمز إن التعاطف الأمريكي مع إسرائيل يتراجع تدريجيا منذ عام 1995 وزاد حدة في عهد نتنياهو، وهو ما قد يُدخل العلاقة طويلة الأمد بين أمريكا وإسرائيل في مرحلة أك..."
+        "description": "يُعد النفط والغاز المصدر الرئيسي للبتروكيماويات الداخلة في تصنيع معظم الأدوية والمستلزمات الطبية، كما تشكّل ممرات العبور في الشرق الأوسط ما بين 10% و20% من التجارة الدوائية."
       },
       {
-        "title": "واشنطن تراجع خريطة وجودها العسكري بعد ضربات طهران",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%82%d8%af-%d9%86%d8%ba%d9%8a%d8%b1-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d9%82%d9%88%d8%a7%d8%b9%d8%af%d9%86%d8%a7?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:59:48 +0300",
+        "title": "صحيفة: أمريكا توقف شحنات الدولار عن العراق وتطالب بتفكيك الفصائل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b5%d8%ad%d9%8a%d9%81%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d8%aa%d9%88%d9%82%d9%81-%d8%b4%d8%ad%d9%86%d8%a7%d8%aa-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:49 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أقرت وزارة الحرب الأمريكية بجهلها بحجم التكاليف النهائية اللازمة لإصلاح قواعدها العسكرية المتضررة في الشرق الأوسط جراء الحرب مع إيران، مشيرة إلى أنها قد تغيّر نمط بنائها وفقا له..."
+        "description": "ذكرت صحيفة وول ستريت جورنال أن إدارة الرئيس الأمريكي دونالد ترمب ‌علقت شحنات الدولار إلى العراق وجمدت برامج تعاون أمني معه، في إطار ضغوطها على بغداد من أجل تفكيك الفصائل المسلحة..."
       },
       {
-        "title": "\"سأظل معذبا بسبب ذلك\".. تاكر كارلسون يعتذر عن دعمه ترمب",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b3%d8%a3%d8%b8%d9%84-%d9%85%d8%b9%d8%b0%d8%a8%d8%a7-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b0%d9%84%d9%83-%d8%aa%d8%a7%d9%83%d8%b1-%d9%83%d8%a7%d8%b1%d9%84%d8%b3%d9%88%d9%86?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:47:33 +0300",
+        "title": "بتسيلم: الإبادة الجماعية أصبحت رسميا جزءا من سردية إسرائيل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b3%d9%8a%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d8%b9%d9%8a%d8%a9-%d8%a3%d8%b5%d8%a8%d8%ad%d8%aa-%d8%b1%d8%b3%d9%85%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:40 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "عبّر المذيع السابق في شبكة \"فوكس نيوز\" تاكر كارلسون عن ندمه لدعمه الرئيس الأمريكي دونالد ترمب خلال حملته الرئاسية عام 2024، قائلا إنه سيظل \"معذبا بسبب ذلك مدة طويلة\"."
+        "description": "أصبح اسم الحاخام الإسرائيلي المتطرف أفراهام زربيف مرادفا للتدمير المتعمد والمنهجي لغزة حسب منظمة \"بتسيلم\" الحقوقية الإسرائيلية، التي نددت بتكريم حكومة بنيامين نتنياهو له أمس الث..."
       },
       {
-        "title": "صدام الإرادات بهرمز.. شروط ترمب تصطدم بخطوط إيران الحمر",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%a7-%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:18:13 +0300",
+        "title": "الحرب في المنطقة تزيد نمو الصناعة العسكرية الأمريكية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d8%b2%d9%8a%d8%af-%d9%86%d9%85%d9%88-%d8%a7%d9%84%d8%b5%d9%86%d8%a7%d8%b9%d8%a9?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:05 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تتمسك واشنطن بنزع السلاح النووي وتغيير السلوك الإقليمي تحت ضغط الحصار، في حين تشترط طهران رفع القيود الاقتصادية والاعتراف بحقوقها السيادية لبدء التفاوض."
+        "description": "أفادت شركات الدفاع الأمريكية \"آر تي إكس\" و\"نورثروب غرومان\" و\"جنرال إلكتريك أيروسبايس\" بزيادة الطلب على المعدات العسكرية بسبب الحرب في المنطقة."
       },
       {
-        "title": "الأمم المتحدة: صعوبات تعترض عودة 4 ملايين نازح في السودان",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%b5%d8%b9%d9%88%d8%a8%d8%a7%d8%aa-%d8%aa%d8%b9%d8%aa%d8%b1%d8%b6?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:02:43 +0300",
+        "title": "في حادثة لافتة.. \"تشات جي بي تي\" أمام القضاء في قضية إطلاق نار بفلوريدا",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b6-%d8%aa%d8%b4%d8%a7%d8%aa-%d8%ac%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:04:57 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وسط تحديات معيشية قاسية، كشفت الأمم المتحدة عن عودة نحو 4 ملايين نازح سوداني طوعا إلى ديارهم، تزامنا مع استعادة الجيش السيطرة على مناطق واسعة في العاصمة الخرطوم."
+        "description": "تصنف القوانين الأمريكية أي مساعدة أو نصح لشخص ما بارتكاب جريمة \"تحريضا\" يتحمل صاحبها المسؤولية نفسها التي يتحمّلها الجاني، ومن هذا المنطلق تأتي ملاحقة \"تشات جي بي تي\"."
       },
       {
-        "title": "نيويورك تايمز: أوروبا وقصة الدور الضائع في حرب إيران",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%86%d9%8a%d9%88%d9%8a%d9%88%d8%b1%d9%83-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d8%a7-%d8%aa%d8%b7%d9%85%d8%ad-%d9%84%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:39:50 +0300",
+        "title": "الوقف الإسلامي.. هندسة الاستدامة قبل عصر المؤسسات",
+        "link": "https://www.aljazeera.net/encyclopedia/2026/4/22/%d8%a7%d9%84%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d9%82%d8%a8%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:23 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت نيويورك تايمز إن أوروبا تطمح للعب دور \"حارس القانون الدولي\" بشأن الأزمة الناجمة عن الحرب على إيران، غير أن التطورات المتسارعة سرعان ما قوضت هذا الطموح وأعادت التأكيد على ها..."
+        "description": "أحد أبرز الأدوات التي أسهمت في بناء البنية الاجتماعية والاقتصادية في الحضارة الإسلامية، فلم يقتصر دوره على العمل الخيري المباشر، وإنما شكل منظومة مستدامة لتمويل الخدمات العامة و..."
       },
       {
-        "title": "دروس حرب إيران.. 1.5 تريليون دولار لتطوير ترسانة أمريكا العسكرية",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%8a%d8%b9%d8%aa%d8%b2%d9%85-%d8%a5%d9%86%d9%81%d8%a7%d9%82-%d8%b9%d8%b4%d8%b1%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:34:05 +0300",
+        "title": "لماذا يتأخر تسليم طائرة الركاب الصينية \"سي 919″؟",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%aa%d8%a3%d8%ae%d8%b1-%d8%aa%d8%b3%d9%84%d9%8a%d9%85-%d8%b7%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d9%83%d8%a7%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعتزم وزارة الحرب الأمريكية إنفاق أكثر من 30 مليار دولار لشراء ذخائر أساسية، في مقدمتها صواريخ الاعتراض، عقب تراجع مخزوناتها إلى مستويات وُصفت بأنها حرجة بسبب الحرب مع إيران."
+        "description": "شركة الطائرات التجارية الصينية \"كوماك\" التي تنتج طائرة الركاب \"سي 919\" تواجه تحديات كبيرة، أبرزها استيراد المحركات من شركة أمريكية-فرنسية، فيما تصر على جودة عالية لطائراتها."
       },
       {
-        "title": "8 آلاف شخص ضحايا الهجرة في عام وأوروبا تتصدر قائمة المأساة",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b7%d8%b1%d9%82-%d8%a7%d9%84%d9%87%d8%ac%d8%b1%d8%a9-%d9%85%d8%b5%d8%b1%d8%b9-%d9%88%d9%81%d9%82%d8%af%d8%a7%d9%86-8-%d8%a2%d9%84%d8%a7%d9%81-%d8%b4%d8%ae%d8%b5-%d9%81%d9%8a-%d8%b9%d8%a7%d9%85?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:33:13 +0300",
+        "title": "نساء بحيرة فيكتوريا يكسرن المحظورات ويخضن غمار مهنة صيد الأسماك",
+        "link": "https://www.aljazeera.net/lifestyle/2026/4/22/%d9%86%d8%b3%d8%a7%d8%a1-%d8%a8%d8%ad%d9%8a%d8%b1%d8%a9-%d9%81%d9%8a%d9%83%d8%aa%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d9%83%d8%b3%d8%b1%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%b8%d9%88%d8%b1%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:36:28 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وثق تقرير للمنظمة الدولية للهجرة وفاة وفقدان نحو 8 آلاف شخص في طرق الهجرة بأنحاء العالم خلال العام الماضي، وتصدرت المسارات المؤدية إلى أوروبا قائمة الضحايا في حين شهدت الأمريكتا..."
+        "description": "نجحت نساء بحيرة فيكتوريا في كسر المحظورات الاجتماعية بامتهانهن الصيد لمواجهة التحديات الاقتصادية وتغير المناخ. تجربة ملهمة تحكيها رودا أكيتش ورفيقاتها."
       },
       {
-        "title": "تحركات أوروبية لتعليق اتفاقيات مع إسرائيل",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%aa%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d9%8a%d8%a9-%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d8%aa%d9%81%d8%a7%d9%82%d9%8a%d8%a7%d8%aa-%d9%85%d8%b9?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:09:52 +0300",
+        "title": "أين تذهب مليارات الفيفا؟",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d9%81%d9%8a%d9%81%d8%a7-%d8%a5%d9%86%d9%81%d8%a7%d9%86%d8%aa%d9%8a%d9%86%d9%88-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:15:04 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "في وقت يتواصل فيه الجدل داخل الاتحاد الأوروبي حول العلاقات مع إسرائيل، أكدت مسؤولة السياسة الخارجية كايا كالاس أنه لم يتوفر الدعم الكافي من الدول الأعضاء لتعليق اتفاق الشراكة مع..."
+        "description": "في ظل الطفرة المالية التي يقودها الاتحاد الدولي لكرة القدم، تتجدد الأسئلة حول مصير المليارات التي يدرها المونديال."
       },
       {
-        "title": "شاهد.. هكذا ردت جماهير ريال مدريد على إشارة فينيسيوس في ملعب البرنابيو",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%b1%d9%8a%d8%a7%d9%84-%d9%85%d8%af%d8%b1%d9%8a%d8%af-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%81%d9%8a%d9%86%d9%8a%d8%b3%d9%8a%d9%88%d8%b3-%d8%ac%d9%88%d9%86%d9%8a%d9%88%d8%b1?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:56:32 +0300",
+        "title": "واشنطن تنفي نقل نظام \"ثاد\" من كوريا الجنوبية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%aa%d9%86%d9%81%d9%8a-%d9%86%d9%82%d9%84-%d9%86%d8%b8%d8%a7%d9%85-%d8%ab%d8%a7%d8%af-%d9%85%d9%86-%d9%83%d9%88%d8%b1%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:06:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ما الذي فعلته جماهير ريال مدريد بعد إشارة فينيسيوس في البرنابيو؟"
+        "description": "بعد مرور نحو شهر على تصريحات مسؤولين أمريكيين بنقل أجزاء من نظام الدفاع الصاروخي \"ثاد\" من كوريا الجنوبية لاستخدامه في حرب الولايات المتحدة على إيران، نفى قائد عسكري أمريكي ذلك ق..."
       },
       {
-        "title": "روسيا توظف الذكاء الاصطناعي لفرض رقابة كاملة على مواطنيها",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%b1%d9%88%d8%b3%d9%8a%d8%a7-%d8%aa%d8%aa%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%b1%d9%82%d8%a7%d8%a8%d8%a9-%d8%b1%d9%82%d9%85%d9%8a%d8%a9-%d9%83%d8%a7%d9%85%d9%84%d8%a9-%d8%b9%d9%84%d9%89?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:38:28 +0300",
+        "title": "ترمب: إيران تنهار ماليا وتتأخر في دفع رواتب الجيش والشرطة",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b1%d9%85%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%aa%d9%86%d9%87%d8%a7%d8%b1-%d9%85%d8%a7%d9%84%d9%8a%d8%a7-%d9%88%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d9%81%d8%aa%d8%ad?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:05:37 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "بدأت روسيا مشروعا ضخما للرقابة الرقمية على المواطنين بتطبيق ضوابط صارمة ومُوجّهة على أداء الموظفين، تتضمن برامج تتبّع الوقت، والتقاط لقطات الشاشة، ومراقبة النشاط على الإنترنت، و..."
+        "description": "أكد الرئيس الأمريكي ترمب أن إيران تنهار ماليا وتطالب بفتح مضيق هرمز لإنقاذ اقتصادها من الحصار البحري. بينما يدرس تمديد إعفاءات شحن النفط لخفض تكاليف الوقود ومواجهة تداعيات الحرب..."
       },
       {
-        "title": "الأهلي السعودي يواجه ماتشيدا الياباني بنهائي أبطال آسيا للنخبة.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d9%85%d8%a7%d8%aa%d8%b4%d9%8a%d8%af%d8%a7-%d8%b2%d9%8a%d9%84%d9%81%d9%8a%d8%a7?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:26:18 +0300",
+        "title": "5 أيام حاسمة.. هل يتجاوز الإطار التنسيقي عراقيل اختيار رئيس الحكومة العراقية؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/5-%d8%a3%d9%8a%d8%a7%d9%85-%d8%ad%d8%a7%d8%b3%d9%85%d8%a9-%d9%87%d9%84-%d9%8a%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:46:15 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ماتشيدا زيلفيا يضرب موعدا مع الأهلي السعودي في نهائي دوري أبطال آسيا للنخبة."
+        "description": "لم يتبقَّ من المهلة المحددة لرئيس الجمهورية لتكليف مرشح الإطار التنسيقي بتشكيل الحكومة سوى أيام قليلة، ورغم ذلك فإن الخلافات المستمرة بين قوى الإطار تعرقل إنجاز هذا الاستحقاق."
       },
       {
-        "title": "اتهامات إيرانية بالمناورة.. ترمب يمدد وقف إطلاق النار ويتمسك بحصار الموانئ",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d8%aa%d9%87%d8%a7%d9%85%d8%a7%d8%aa-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%88%d8%b1%d8%a9-%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d9%85%d8%af%d8%af?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:21:08 +0300",
+        "title": "القصة الكاملة لرفع علم إسرائيل على كنيس بدمشق",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b1%d9%81%d8%b9-%d8%b9%d9%84%d9%85-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%b9%d9%84%d9%89?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:19:59 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قرر الرئيس الأمريكي دونالد ترمب تمديد الهدنة مع طهران استجابة لوساطة باكستانية، سعيا لمنح المفاوضات فرصة إضافية للنجاح، وفق قوله، رغم تمسكه باستمرار الحصار البحري الذي تعُده إير..."
+        "description": "صورة متداولة لرفع علم إسرائيل فوق كنيس في دمشق مفبركة بالذكاء الاصطناعي، التحقق يكشف تشوهات بصرية وغياب معالم حقيقية، في سياق حملات تضليل عن \"التطبيع\"."
       },
       {
-        "title": "مباراة الزمالك ضد بيراميدز في الدوري المصري.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%84%d9%83-%d8%a8%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d8%af%d8%b2-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 21:58:35 +0300",
+        "title": "كانت ذراعا لمخابرات الأسد.. أي دور للجان الأحياء في عهد أحمد الشرع؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%83%d8%a7%d9%86%d8%aa-%d8%b0%d8%b1%d8%a7%d8%b9%d8%a7-%d9%84%d9%85%d8%ae%d8%a7%d8%a8%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%b3%d8%af-%d9%81%d9%85%d8%a7-%d8%af%d9%88%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:17:55 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
+        "description": "يقول السوريون إن لجان الأحياء كانت أذرعًا لمخابرات نظام الأسد، ترصد حركة الناس عن قرب، فتوشي بهم وتوردهم المهالك والسجون. فأي مبرر لبقاء هذه اللجان في عهد أحمد الشرع؟"
       }
     ],
     "science": [
       {
-        "title": "توقعات بانضمام روبيو لجولة المحادثات الثانية بين لبنان وإسرائيل",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d9%88%d9%82%d8%b9%d8%a7%d8%aa-%d8%a8%d8%a7%d9%86%d8%b6%d9%85%d8%a7%d9%85-%d8%b1%d9%88%d8%a8%d9%8a%d9%88-%d9%84%d8%ac%d9%88%d9%84%d8%a9-%d8%a7%d9%84%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 03:02:10 +0300",
+        "title": "أسواق التنبؤ تدخل نشرات الأخبار.. هل تتحول التغطية إلى مراهنة جماهيرية؟",
+        "link": "https://www.aljazeera.net/media/2026/4/22/%d8%a3%d8%b3%d9%88%d8%a7%d9%82-%d8%a7%d9%84%d8%aa%d9%86%d8%a8%d8%a4-%d8%aa%d8%af%d8%ae%d9%84-%d9%86%d8%b4%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%ae%d8%a8%d8%a7%d8%b1-%d9%87%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 08:03:09 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تنطلق غدا الخميس في واشنطن جولة المحادثات الثانية بين لبنان وإسرائيل، وقال مسؤول أمريكي إنه يُتوقع أن ينضم وزير الخارجية ماركو روبيو إلى المفاوضات."
+        "description": "دخول أسواق التنبؤ إلى نشرات الأخبار يثير جدلا إزاء تأثيرها في الجمهور، خاصة كبار السن، وذلك وسط مخاوف من تحول التغطية إلى أداة تؤثر في الرأي العام لا مجرد تحليل."
       },
       {
-        "title": "رواسب اليورانيوم.. البصمة التي تمنح المفتشين مفاتيح أسرار المفاعلات",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%b1%d9%88%d8%a7%d8%b3%d8%a8-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a8%d8%b5%d9%85%d8%a9-%d8%a7%d9%84%d8%aa%d9%8a-%d8%aa%d9%85%d9%86%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:59:11 +0300",
+        "title": "أمن كأس العالم 2026.. رئيسة المكسيك تتعهد بحماية المونديال بعد هجوم الأهرامات الدامي",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%86-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85-%d8%a7%d9%84%d9%85%d9%83%d8%b3%d9%8a%d9%83-%d8%a3%d9%87%d8%b1%d8%a7%d9%85%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:58:06 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "يمكن للمفتشين النوويين معرفة الكثير عن البرنامج النووي بناء على تعقب رواسب اليورانيوم في محيط منطقة التفتيش كاستنتاج نسبة التخصيب التي تم الوصول إليها وغيرها من المعلومات عن الب..."
+        "description": "قال مجلس الأمن المكسيكي إن حادث إطلاق نار خلف إصابة 13 شخصا بينهم طفلان يبلغان من العمر 13 و6 سنوات."
       },
       {
-        "title": "إسرائيل إلى أين؟ مؤرخ للإبادة الجماعية يفكك تحوّل الصهيونية",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%a5%d9%84%d9%89-%d8%a3%d9%8a%d9%86-%d9%85%d8%a4%d8%b1%d8%ae-%d9%84%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:49:38 +0300",
+        "title": "ومضة في السماء ثم سقوط مفاجئ.. كاميرا توثق لحظة اصطدام طائرة بأسلاك الضغط العالي",
+        "link": "https://www.aljazeera.net/misc/2026/4/22/%d9%88%d9%85%d8%b6%d8%a9-%d9%81%d9%8a-%d8%a7%d9%84%d8%b3%d9%85%d8%a7%d8%a1-%d8%ab%d9%85-%d8%b3%d9%82%d9%88%d8%b7-%d9%85%d9%81%d8%a7%d8%ac%d8%a6-%d9%83%d8%a7%d9%85%d9%8a%d8%b1%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:54:11 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "حذّر المؤرخ الإسرائيلي المتخصص في شؤون الإبادة الجماعية عومير بارتوف من أن مسار إسرائيل يهدد مكانتها الأخلاقية ودعمها الدولي بعد أن أصبحت دولة مدمنة على العنف، وقال إنها اقترفت ..."
+        "description": "من خلف زجاج سيارة عابرة، تتحول سماء هادئة في كاليفورنيا إلى ومضة عمياء وسقوط مفاجئ لطائرة صغيرة تغرق الحي في العتمة وتترك أسباب الحادث معلقة في الهواء."
       },
       {
-        "title": "ملف اليورانيوم الإيراني يعرقل مفاوضات واشنطن وطهران",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d9%85%d9%84%d9%81-%d8%a7%d9%84%d9%8a%d9%88%d8%b1%d8%a7%d9%86%d9%8a%d9%88%d9%85-%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a-%d9%8a%d8%b9%d8%b1%d9%82%d9%84?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:48:25 +0300",
+        "title": "فريدمان: هكذا تاهت إسرائيل وهكذا يمكن لترمب إنقاذ لبنان",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%b1%d9%8a%d8%af%d9%85%d8%a7%d9%86-%d9%87%d9%83%d8%b0%d8%a7-%d8%aa%d8%a7%d9%87%d8%aa-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d9%88%d9%87%d9%83%d8%b0%d8%a7-%d9%8a%d9%85%d9%83%d9%86?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:49:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعد مطالبة الولايات المتحدة إيران بتسليم مخزونها من اليورانيوم المخصب بنسبة 60% من أهم الملفات الساخنة المطروحة على طاولة المفاوضات بين البلدين."
+        "description": "يرى فريدمان أن إسرائيل، بقيادة اليمين المتطرف، باتت تعتمد \"إستراتيجية المطرقة\" التي تحطم كل شيء دون بناء أي أفق سياسي، مما يهدد مستقبلها الإستراتيجي وعلاقاتها الدولية، بل وعلاقت..."
       },
       {
-        "title": "أكثر من 30 دولة تبحث في لندن إعادة فتح مضيق هرمز",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%ad%d8%a7%d8%af%d8%ab%d8%a7%d8%aa-%d8%b9%d8%b3%d9%83%d8%b1%d9%8a%d8%a9-%d9%81%d9%8a-%d9%84%d9%86%d8%af%d9%86-%d9%84%d8%a8%d8%ad%d8%ab-%d8%a5%d8%b9%d8%a7%d8%af%d8%a9-%d9%81%d8%aa%d8%ad?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 02:09:35 +0300",
+        "title": "السوق تفتقد الوضوح.. الذهب يرتفع والنفط يختبر هدنة أمريكا وإيران",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d8%a7%d9%84%d8%b3%d9%88%d9%82-%d8%aa%d9%81%d8%aa%d9%82%d8%af-%d8%a7%d9%84%d9%88%d8%b6%d9%88%d8%ad-%d8%a7%d9%84%d8%b0%d9%87%d8%a8-%d9%8a%d8%b1%d8%aa%d9%81%d8%b9-%d9%88%d8%a7%d9%84%d9%86%d9%81%d8%b7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:35:51 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أعلنت بريطانيا أنها ستستضيف عسكريين من نحو 30 بلدا، يومي الأربعاء والخميس، لمناقشة تشكيل مهمة بقيادة لندن وباريس لحماية الملاحة في مضيق هرمز."
+        "description": "ارتفع الذهب مع تراجع محدود للنفط عقب تمديد هدنة أمريكا وإيران، في ظل ترقب الأسواق لمسار المحادثات وتأثيرها على التضخم والفائدة، واستمرار اضطراب إمدادات الطاقة عبر مضيق هرمز."
       },
       {
-        "title": "كيف تنظر تل أبيب إلى تمديد وقف إطلاق النار مع إيران؟",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%8a%d8%af%d9%8a%d8%b9%d9%88%d8%aa-%d8%a3%d8%ad%d8%b1%d9%86%d9%88%d8%aa-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d9%82%d9%84%d9%82-%d8%aa%d9%85%d8%af%d9%8a%d8%af-%d8%aa%d8%b1%d9%85%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:46:05 +0300",
+        "title": "بين الدعم والتحفظ والمعارضة.. انقسام أوروبي يحول دون تعليق اتفاق الشراكة مع إسرائيل",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d8%af%d8%b9%d9%85-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d9%81%d8%b8-%d9%88%d8%a7%d9%84%d9%85%d8%b9%d8%a7%d8%b1%d8%b6%d8%a9-%d8%a7%d9%86%d9%82%d8%b3%d8%a7%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:31:03 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تترقب تل أبيب بحذر قرار ترمب تمديد مهلة وقف إطلاق النار مع إيران دون سقف محدد، وتخشى استغلال طهران ذلك لكسب الوقت، في حين تواصل تحضيراتها العسكرية لسيناريو استئناف الحرب."
+        "description": "أقر دبلوماسيون أوروبيون بعدم توفر الإجماع اللازم لتعليق اتفاقية الشراكة مع إسرائيل، في ظل تمسك دول رئيسية، على رأسها ألمانيا وإيطاليا، برفض المضي في هذا الاتجاه في الوقت الراهن."
       },
       {
-        "title": "فايننشال تايمز: لهذا تراجع الحب الأمريكي لإسرائيل",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%81%d8%a7%d9%8a%d9%86%d9%86%d8%b4%d8%a7%d9%84-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d9%84%d9%87%d8%b0%d8%a7-%d8%aa%d8%b1%d8%a7%d8%ac%d8%b9-%d8%a7%d9%84%d8%ad%d8%a8?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 01:44:04 +0300",
+        "title": "من النفط إلى الدواء.. كيف فجّرت الحرب أزمة صحية عالمية؟",
+        "link": "https://www.aljazeera.net/health/2026/4/22/%d9%85%d9%86-%d8%a7%d9%84%d9%86%d9%81%d8%b7-%d8%a5%d9%84%d9%89-%d8%a7%d9%84%d8%af%d9%88%d8%a7%d8%a1-%d9%83%d9%8a%d9%81-%d9%81%d8%ac%d8%b1%d8%aa-%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:20:00 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت صحيفة فايننشال تايمز إن التعاطف الأمريكي مع إسرائيل يتراجع تدريجيا منذ عام 1995 وزاد حدة في عهد نتنياهو، وهو ما قد يُدخل العلاقة طويلة الأمد بين أمريكا وإسرائيل في مرحلة أك..."
+        "description": "يُعد النفط والغاز المصدر الرئيسي للبتروكيماويات الداخلة في تصنيع معظم الأدوية والمستلزمات الطبية، كما تشكّل ممرات العبور في الشرق الأوسط ما بين 10% و20% من التجارة الدوائية."
       },
       {
-        "title": "واشنطن تراجع خريطة وجودها العسكري بعد ضربات طهران",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%82%d8%af-%d9%86%d8%ba%d9%8a%d8%b1-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d9%82%d9%88%d8%a7%d8%b9%d8%af%d9%86%d8%a7?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:59:48 +0300",
+        "title": "صحيفة: أمريكا توقف شحنات الدولار عن العراق وتطالب بتفكيك الفصائل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b5%d8%ad%d9%8a%d9%81%d8%a9-%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d8%a7-%d8%aa%d9%88%d9%82%d9%81-%d8%b4%d8%ad%d9%86%d8%a7%d8%aa-%d8%a7%d9%84%d8%af%d9%88%d9%84%d8%a7%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:49 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "أقرت وزارة الحرب الأمريكية بجهلها بحجم التكاليف النهائية اللازمة لإصلاح قواعدها العسكرية المتضررة في الشرق الأوسط جراء الحرب مع إيران، مشيرة إلى أنها قد تغيّر نمط بنائها وفقا له..."
+        "description": "ذكرت صحيفة وول ستريت جورنال أن إدارة الرئيس الأمريكي دونالد ترمب ‌علقت شحنات الدولار إلى العراق وجمدت برامج تعاون أمني معه، في إطار ضغوطها على بغداد من أجل تفكيك الفصائل المسلحة..."
       },
       {
-        "title": "\"سأظل معذبا بسبب ذلك\".. تاكر كارلسون يعتذر عن دعمه ترمب",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b3%d8%a3%d8%b8%d9%84-%d9%85%d8%b9%d8%b0%d8%a8%d8%a7-%d8%a8%d8%b3%d8%a8%d8%a8-%d8%b0%d9%84%d9%83-%d8%aa%d8%a7%d9%83%d8%b1-%d9%83%d8%a7%d8%b1%d9%84%d8%b3%d9%88%d9%86?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:47:33 +0300",
+        "title": "بتسيلم: الإبادة الجماعية أصبحت رسميا جزءا من سردية إسرائيل",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b3%d9%8a%d9%84%d9%85-%d8%a7%d9%84%d8%a5%d8%a8%d8%a7%d8%af%d8%a9-%d8%a7%d9%84%d8%ac%d9%85%d8%a7%d8%b9%d9%8a%d8%a9-%d8%a3%d8%b5%d8%a8%d8%ad%d8%aa-%d8%b1%d8%b3%d9%85%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:06:40 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "عبّر المذيع السابق في شبكة \"فوكس نيوز\" تاكر كارلسون عن ندمه لدعمه الرئيس الأمريكي دونالد ترمب خلال حملته الرئاسية عام 2024، قائلا إنه سيظل \"معذبا بسبب ذلك مدة طويلة\"."
+        "description": "أصبح اسم الحاخام الإسرائيلي المتطرف أفراهام زربيف مرادفا للتدمير المتعمد والمنهجي لغزة حسب منظمة \"بتسيلم\" الحقوقية الإسرائيلية، التي نددت بتكريم حكومة بنيامين نتنياهو له أمس الث..."
       },
       {
-        "title": "صدام الإرادات بهرمز.. شروط ترمب تصطدم بخطوط إيران الحمر",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%85%d8%a7-%d8%ae%d8%b1%d9%8a%d8%b7%d8%a9-%d8%a7%d9%84%d8%b4%d8%b1%d9%88%d8%b7-%d8%a7%d9%84%d8%a3%d9%85%d8%b1%d9%8a%d9%83%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:18:13 +0300",
+        "title": "الحرب في المنطقة تزيد نمو الصناعة العسكرية الأمريكية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d8%b1%d8%a8-%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%b7%d9%82%d8%a9-%d8%aa%d8%b2%d9%8a%d8%af-%d9%86%d9%85%d9%88-%d8%a7%d9%84%d8%b5%d9%86%d8%a7%d8%b9%d8%a9?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:05:05 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تتمسك واشنطن بنزع السلاح النووي وتغيير السلوك الإقليمي تحت ضغط الحصار، في حين تشترط طهران رفع القيود الاقتصادية والاعتراف بحقوقها السيادية لبدء التفاوض."
+        "description": "أفادت شركات الدفاع الأمريكية \"آر تي إكس\" و\"نورثروب غرومان\" و\"جنرال إلكتريك أيروسبايس\" بزيادة الطلب على المعدات العسكرية بسبب الحرب في المنطقة."
       },
       {
-        "title": "الأمم المتحدة: صعوبات تعترض عودة 4 ملايين نازح في السودان",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a3%d9%85%d9%85-%d8%a7%d9%84%d9%85%d8%aa%d8%ad%d8%af%d8%a9-%d8%aa%d8%ad%d8%b0%d8%b1-%d9%85%d9%86-%d8%b5%d8%b9%d9%88%d8%a8%d8%a7%d8%aa-%d8%aa%d8%b9%d8%aa%d8%b1%d8%b6?traffic_source=rss",
-        "pubDate": "Wed, 22 Apr 2026 00:02:43 +0300",
+        "title": "في حادثة لافتة.. \"تشات جي بي تي\" أمام القضاء في قضية إطلاق نار بفلوريدا",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%85%d8%b9%d9%84%d9%88%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%b9%d8%a7%d9%85%d8%a9-%d9%88%d8%a7%d9%84%d8%aa%d8%ad%d8%b1%d9%8a%d8%b6-%d8%aa%d8%b4%d8%a7%d8%aa-%d8%ac%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 07:04:57 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وسط تحديات معيشية قاسية، كشفت الأمم المتحدة عن عودة نحو 4 ملايين نازح سوداني طوعا إلى ديارهم، تزامنا مع استعادة الجيش السيطرة على مناطق واسعة في العاصمة الخرطوم."
+        "description": "تصنف القوانين الأمريكية أي مساعدة أو نصح لشخص ما بارتكاب جريمة \"تحريضا\" يتحمل صاحبها المسؤولية نفسها التي يتحمّلها الجاني، ومن هذا المنطلق تأتي ملاحقة \"تشات جي بي تي\"."
       },
       {
-        "title": "نيويورك تايمز: أوروبا وقصة الدور الضائع في حرب إيران",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%86%d9%8a%d9%88%d9%8a%d9%88%d8%b1%d9%83-%d8%aa%d8%a7%d9%8a%d9%85%d8%b2-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d8%a7-%d8%aa%d8%b7%d9%85%d8%ad-%d9%84%d8%af%d9%88%d8%b1-%d8%a8%d8%a7%d9%84%d8%ad%d8%b1%d8%a8?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:39:50 +0300",
+        "title": "الوقف الإسلامي.. هندسة الاستدامة قبل عصر المؤسسات",
+        "link": "https://www.aljazeera.net/encyclopedia/2026/4/22/%d8%a7%d9%84%d9%88%d9%82%d9%81-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a-%d9%87%d9%86%d8%af%d8%b3%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d8%aa%d8%af%d8%a7%d9%85%d8%a9-%d9%82%d8%a8%d9%84?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:23 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قالت نيويورك تايمز إن أوروبا تطمح للعب دور \"حارس القانون الدولي\" بشأن الأزمة الناجمة عن الحرب على إيران، غير أن التطورات المتسارعة سرعان ما قوضت هذا الطموح وأعادت التأكيد على ها..."
+        "description": "أحد أبرز الأدوات التي أسهمت في بناء البنية الاجتماعية والاقتصادية في الحضارة الإسلامية، فلم يقتصر دوره على العمل الخيري المباشر، وإنما شكل منظومة مستدامة لتمويل الخدمات العامة و..."
       },
       {
-        "title": "دروس حرب إيران.. 1.5 تريليون دولار لتطوير ترسانة أمريكا العسكرية",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%a8%d9%86%d8%aa%d8%a7%d8%ba%d9%88%d9%86-%d9%8a%d8%b9%d8%aa%d8%b2%d9%85-%d8%a5%d9%86%d9%81%d8%a7%d9%82-%d8%b9%d8%b4%d8%b1%d8%a7%d8%aa?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:34:05 +0300",
+        "title": "لماذا يتأخر تسليم طائرة الركاب الصينية \"سي 919″؟",
+        "link": "https://www.aljazeera.net/ebusiness/2026/4/22/%d9%84%d9%85%d8%a7%d8%b0%d8%a7-%d9%8a%d8%aa%d8%a3%d8%ae%d8%b1-%d8%aa%d8%b3%d9%84%d9%8a%d9%85-%d8%b7%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b1%d9%83%d8%a7%d8%a8?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:44:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "تعتزم وزارة الحرب الأمريكية إنفاق أكثر من 30 مليار دولار لشراء ذخائر أساسية، في مقدمتها صواريخ الاعتراض، عقب تراجع مخزوناتها إلى مستويات وُصفت بأنها حرجة بسبب الحرب مع إيران."
+        "description": "شركة الطائرات التجارية الصينية \"كوماك\" التي تنتج طائرة الركاب \"سي 919\" تواجه تحديات كبيرة، أبرزها استيراد المحركات من شركة أمريكية-فرنسية، فيما تصر على جودة عالية لطائراتها."
       },
       {
-        "title": "8 آلاف شخص ضحايا الهجرة في عام وأوروبا تتصدر قائمة المأساة",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%b7%d8%b1%d9%82-%d8%a7%d9%84%d9%87%d8%ac%d8%b1%d8%a9-%d9%85%d8%b5%d8%b1%d8%b9-%d9%88%d9%81%d9%82%d8%af%d8%a7%d9%86-8-%d8%a2%d9%84%d8%a7%d9%81-%d8%b4%d8%ae%d8%b5-%d9%81%d9%8a-%d8%b9%d8%a7%d9%85?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:33:13 +0300",
+        "title": "نساء بحيرة فيكتوريا يكسرن المحظورات ويخضن غمار مهنة صيد الأسماك",
+        "link": "https://www.aljazeera.net/lifestyle/2026/4/22/%d9%86%d8%b3%d8%a7%d8%a1-%d8%a8%d8%ad%d9%8a%d8%b1%d8%a9-%d9%81%d9%8a%d9%83%d8%aa%d9%88%d8%b1%d9%8a%d8%a7-%d9%8a%d9%83%d8%b3%d8%b1%d9%86-%d8%a7%d9%84%d9%85%d8%ad%d8%b8%d9%88%d8%b1%d8%a7%d8%aa?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:36:28 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "وثق تقرير للمنظمة الدولية للهجرة وفاة وفقدان نحو 8 آلاف شخص في طرق الهجرة بأنحاء العالم خلال العام الماضي، وتصدرت المسارات المؤدية إلى أوروبا قائمة الضحايا في حين شهدت الأمريكتا..."
+        "description": "نجحت نساء بحيرة فيكتوريا في كسر المحظورات الاجتماعية بامتهانهن الصيد لمواجهة التحديات الاقتصادية وتغير المناخ. تجربة ملهمة تحكيها رودا أكيتش ورفيقاتها."
       },
       {
-        "title": "تحركات أوروبية لتعليق اتفاقيات مع إسرائيل",
-        "link": "https://www.aljazeera.net/video/2026/4/22/%d8%aa%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a3%d9%88%d8%b1%d9%88%d8%a8%d9%8a%d8%a9-%d9%84%d8%aa%d8%b9%d9%84%d9%8a%d9%82-%d8%a7%d8%aa%d9%81%d8%a7%d9%82%d9%8a%d8%a7%d8%aa-%d9%85%d8%b9?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 23:09:52 +0300",
+        "title": "أين تذهب مليارات الفيفا؟",
+        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a3%d9%85%d9%88%d8%a7%d9%84-%d8%a7%d9%84%d9%81%d9%8a%d9%81%d8%a7-%d8%a5%d9%86%d9%81%d8%a7%d9%86%d8%aa%d9%8a%d9%86%d9%88-%d9%83%d8%a3%d8%b3-%d8%a7%d9%84%d8%b9%d8%a7%d9%84%d9%85?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:15:04 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "في وقت يتواصل فيه الجدل داخل الاتحاد الأوروبي حول العلاقات مع إسرائيل، أكدت مسؤولة السياسة الخارجية كايا كالاس أنه لم يتوفر الدعم الكافي من الدول الأعضاء لتعليق اتفاق الشراكة مع..."
+        "description": "في ظل الطفرة المالية التي يقودها الاتحاد الدولي لكرة القدم، تتجدد الأسئلة حول مصير المليارات التي يدرها المونديال."
       },
       {
-        "title": "شاهد.. هكذا ردت جماهير ريال مدريد على إشارة فينيسيوس في ملعب البرنابيو",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%b1%d9%8a%d8%a7%d9%84-%d9%85%d8%af%d8%b1%d9%8a%d8%af-%d8%a5%d8%b4%d8%a7%d8%b1%d8%a9-%d9%81%d9%8a%d9%86%d9%8a%d8%b3%d9%8a%d9%88%d8%b3-%d8%ac%d9%88%d9%86%d9%8a%d9%88%d8%b1?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:56:32 +0300",
+        "title": "واشنطن تنفي نقل نظام \"ثاد\" من كوريا الجنوبية",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d9%88%d8%a7%d8%b4%d9%86%d8%b7%d9%86-%d8%aa%d9%86%d9%81%d9%8a-%d9%86%d9%82%d9%84-%d9%86%d8%b8%d8%a7%d9%85-%d8%ab%d8%a7%d8%af-%d9%85%d9%86-%d9%83%d9%88%d8%b1%d9%8a%d8%a7?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:06:17 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ما الذي فعلته جماهير ريال مدريد بعد إشارة فينيسيوس في البرنابيو؟"
+        "description": "بعد مرور نحو شهر على تصريحات مسؤولين أمريكيين بنقل أجزاء من نظام الدفاع الصاروخي \"ثاد\" من كوريا الجنوبية لاستخدامه في حرب الولايات المتحدة على إيران، نفى قائد عسكري أمريكي ذلك ق..."
       },
       {
-        "title": "روسيا توظف الذكاء الاصطناعي لفرض رقابة كاملة على مواطنيها",
-        "link": "https://www.aljazeera.net/politics/2026/4/22/%d8%b1%d9%88%d8%b3%d9%8a%d8%a7-%d8%aa%d8%aa%d8%ac%d9%87-%d9%86%d8%ad%d9%88-%d8%b1%d9%82%d8%a7%d8%a8%d8%a9-%d8%b1%d9%82%d9%85%d9%8a%d8%a9-%d9%83%d8%a7%d9%85%d9%84%d8%a9-%d8%b9%d9%84%d9%89?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:38:28 +0300",
+        "title": "ترمب: إيران تنهار ماليا وتتأخر في دفع رواتب الجيش والشرطة",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%aa%d8%b1%d9%85%d8%a8-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86-%d8%aa%d9%86%d9%87%d8%a7%d8%b1-%d9%85%d8%a7%d9%84%d9%8a%d8%a7-%d9%88%d8%aa%d8%b7%d8%a7%d9%84%d8%a8-%d8%a8%d9%81%d8%aa%d8%ad?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 06:05:37 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "بدأت روسيا مشروعا ضخما للرقابة الرقمية على المواطنين بتطبيق ضوابط صارمة ومُوجّهة على أداء الموظفين، تتضمن برامج تتبّع الوقت، والتقاط لقطات الشاشة، ومراقبة النشاط على الإنترنت، و..."
+        "description": "أكد الرئيس الأمريكي ترمب أن إيران تنهار ماليا وتطالب بفتح مضيق هرمز لإنقاذ اقتصادها من الحصار البحري. بينما يدرس تمديد إعفاءات شحن النفط لخفض تكاليف الوقود ومواجهة تداعيات الحرب..."
       },
       {
-        "title": "الأهلي السعودي يواجه ماتشيدا الياباني بنهائي أبطال آسيا للنخبة.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d8%b9%d9%88%d8%af%d9%8a-%d8%b6%d8%af-%d9%85%d8%a7%d8%aa%d8%b4%d9%8a%d8%af%d8%a7-%d8%b2%d9%8a%d9%84%d9%81%d9%8a%d8%a7?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:26:18 +0300",
+        "title": "5 أيام حاسمة.. هل يتجاوز الإطار التنسيقي عراقيل اختيار رئيس الحكومة العراقية؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/5-%d8%a3%d9%8a%d8%a7%d9%85-%d8%ad%d8%a7%d8%b3%d9%85%d8%a9-%d9%87%d9%84-%d9%8a%d8%aa%d8%ac%d8%a7%d9%88%d8%b2-%d8%a7%d9%84%d8%a5%d8%b7%d8%a7%d8%b1-%d8%a7%d9%84%d8%aa%d9%86%d8%b3%d9%8a%d9%82%d9%8a?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:46:15 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "ماتشيدا زيلفيا يضرب موعدا مع الأهلي السعودي في نهائي دوري أبطال آسيا للنخبة."
+        "description": "لم يتبقَّ من المهلة المحددة لرئيس الجمهورية لتكليف مرشح الإطار التنسيقي بتشكيل الحكومة سوى أيام قليلة، ورغم ذلك فإن الخلافات المستمرة بين قوى الإطار تعرقل إنجاز هذا الاستحقاق."
       },
       {
-        "title": "اتهامات إيرانية بالمناورة.. ترمب يمدد وقف إطلاق النار ويتمسك بحصار الموانئ",
-        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d8%aa%d9%87%d8%a7%d9%85%d8%a7%d8%aa-%d8%a5%d9%8a%d8%b1%d8%a7%d9%86%d9%8a%d8%a9-%d8%a8%d8%a7%d9%84%d9%85%d9%86%d8%a7%d9%88%d8%b1%d8%a9-%d8%aa%d8%b1%d9%85%d8%a8-%d9%8a%d9%85%d8%af%d8%af?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 22:21:08 +0300",
+        "title": "القصة الكاملة لرفع علم إسرائيل على كنيس بدمشق",
+        "link": "https://www.aljazeera.net/news/2026/4/22/%d8%a7%d9%84%d8%ad%d9%83%d9%88%d9%85%d8%a9-%d8%a7%d9%84%d8%b3%d9%88%d8%b1%d9%8a%d8%a9-%d8%aa%d8%b1%d9%81%d8%b9-%d8%b9%d9%84%d9%85-%d8%a5%d8%b3%d8%b1%d8%a7%d8%a6%d9%8a%d9%84-%d8%b9%d9%84%d9%89?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:19:59 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "قرر الرئيس الأمريكي دونالد ترمب تمديد الهدنة مع طهران استجابة لوساطة باكستانية، سعيا لمنح المفاوضات فرصة إضافية للنجاح، وفق قوله، رغم تمسكه باستمرار الحصار البحري الذي تعُده إير..."
+        "description": "صورة متداولة لرفع علم إسرائيل فوق كنيس في دمشق مفبركة بالذكاء الاصطناعي، التحقق يكشف تشوهات بصرية وغياب معالم حقيقية، في سياق حملات تضليل عن \"التطبيع\"."
       },
       {
-        "title": "مباراة الزمالك ضد بيراميدز في الدوري المصري.. الموعد والقنوات الناقلة",
-        "link": "https://www.aljazeera.net/sport/2026/4/22/%d8%a7%d9%84%d8%b2%d9%85%d8%a7%d9%84%d9%83-%d8%a8%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d8%af%d8%b2-%d8%a7%d9%84%d8%a3%d9%87%d9%84%d9%8a-%d8%a7%d9%84%d9%85%d8%b5%d8%b1%d9%8a?traffic_source=rss",
-        "pubDate": "Tue, 21 Apr 2026 21:58:35 +0300",
+        "title": "كانت ذراعا لمخابرات الأسد.. أي دور للجان الأحياء في عهد أحمد الشرع؟",
+        "link": "https://www.aljazeera.net/politics/2026/4/22/%d9%83%d8%a7%d9%86%d8%aa-%d8%b0%d8%b1%d8%a7%d8%b9%d8%a7-%d9%84%d9%85%d8%ae%d8%a7%d8%a8%d8%b1%d8%a7%d8%aa-%d8%a7%d9%84%d8%a3%d8%b3%d8%af-%d9%81%d9%85%d8%a7-%d8%af%d9%88%d8%b1?traffic_source=rss",
+        "pubDate": "Wed, 22 Apr 2026 05:17:55 +0300",
         "source": "الجزيرة نت",
         "image": "",
-        "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
+        "description": "يقول السوريون إن لجان الأحياء كانت أذرعًا لمخابرات نظام الأسد، ترصد حركة الناس عن قرب، فتوشي بهم وتوردهم المهالك والسجون. فأي مبرر لبقاء هذه اللجان في عهد أحمد الشرع؟"
       }
-    ],
-    "ai": []
+    ]
   },
   "hi": {
     "local": [
       {
-        "title": "On Pahalgam Attack Anniversary, Kashmiri Man Details How He Saved 11 Tourists",
-        "link": "https://www.ndtv.com/india-news/on-pahalgam-attack-anniversary-kashmiri-man-details-how-he-saved-11-tourists-pahalgam-terrorist-attack-jammu-kashmir-11390976#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:50:34 +0530",
+        "title": "UP Board Result Date And Time: Class 10, 12 Results To Be Out On April 23 At 4 PM",
+        "link": "https://www.ndtv.com/education/up-board-result-date-and-time-announced-class-10-12-results-to-be-out-on-april-23-11392199#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:44:33 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/r2ce0eq_nazakat-ali_625x300_22_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Nazakat heard the gunfire, but it initially seemed to him like an encounter between the army and terrorists, he told NDTV."
+        "image": "https://c.ndtvimg.com/2025-11/pe0u72n8_up-board-exams-2026_625x300_13_November_25.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "UP Board Result Date And Time: The UP Board Class 10 ( High School) and Class 12 (Intermediate) examinations 2026 results will be declared on April 23 at 4pm."
       },
       {
-        "title": "Uttarakhand Board Results 2026 Expected On April 25, Check Official Websites, Direct Link",
-        "link": "https://www.ndtv.com/education/uttarakhand-ubse-results-2026-expected-on-april-25-check-official-websites-direct-link-11391003#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:45:37 +0530",
+        "title": "CBSE Result Stress: What To Do While Waiting For Class 12 Scores?",
+        "link": "https://www.ndtv.com/education/cbse-result-stress-what-students-can-do-and-how-parents-can-support-while-waiting-for-class-12-scores-11392205#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:41:51 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/cb836edo_uttarakhand-board-result-2026-soon_625x300_18_April_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "UBSE UK Board Result 2026: This year, a total of 2,15,252 candidates appeared for the examinations, including 1,12,266 students in Class 10 and 1,02,986 in Class 12."
+        "image": "https://c.ndtvimg.com/2026-02/5ekhdf0g_exam-stress_625x300_09_February_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "CBSE Class 12 Result Stress: While results can bring anxiety for both students and parents, a supportive home environment plays a crucial role in helping children cope."
       },
       {
-        "title": "ICSE, ISC Result 2026: Official Clarifies No Announcement Today Amid Fake Notice",
-        "link": "https://www.ndtv.com/education/icse-isc-result-2026-official-clarifies-no-announcement-today-amid-fake-notice-11390988#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:36:03 +0530",
+        "title": "20,000-Vote Buffer: Amit Shah Sets Benchmark For Bengal Phase 2 Seats",
+        "link": "https://www.ndtv.com/india-news/amit-shah-sets-benchmark-for-bengal-phase-2-seats-20-000-vote-buffer-11392180#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:41:18 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/eoq6f36o_asd_625x300_22_April_26.jpeg",
-        "description": "ICSE, ISC Result 2026: CISCE has dismissed a viral notice claiming results will be declared on April 22 as fake, confirming no announcement today. The council is expected to rel..."
+        "image": "https://c.ndtvimg.com/2026-04/4mvtr0b4_amity-shah-bengal-meet-_625x300_22_April_26.jpeg",
+        "description": "The directive, said sources, follows a detailed assessment of the political and organisational situation on the ground."
       },
       {
-        "title": "3 Congress Workers Detained In Bhopal In Vasundhara Raje \"Fake Letter\" Row",
-        "link": "https://www.ndtv.com/india-news/3-congress-workers-detained-in-bhopal-in-vasundhara-raje-fake-letter-row-11390939#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:28:29 +0530",
+        "title": "IPS Association Slams BJP MLA, Demands Action Over Threats To Officer",
+        "link": "https://www.ndtv.com/india-news/ips-association-slams-madhya-pradesh-bjp-mla-pritam-lodhi-demands-action-over-threats-to-officer-11392198#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:41:02 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/iab2og7c_vasundhara-raje_625x300_12_April_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Theree Congress IT Cell workers were detained over the circulation of the disputed letter on social media."
+        "image": "https://c.ndtvimg.com/2022-08/i1fhj6d8_pritam-singh-lodhi_625x300_20_August_22.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "BJP MLA Pritam Lodhi's remarks on Karera SDOP spark outrage from IPS Association"
       },
       {
-        "title": "Second Maternity Leave Within 2 Years Can't Be Denied: Allahabad High Court",
-        "link": "https://www.ndtv.com/india-news/allahabad-high-court-says-second-maternity-leave-within-2-years-must-be-granted-11389805#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:06:51 +0530",
+        "title": "NEET UG 2026 Admit Card To Be Released On April 26, Exam Body NTA Issues Key Update",
+        "link": "https://www.ndtv.com/education/neet-ug-2026-admit-card-hall-ticket-to-be-out-on-april-26-nta-issues-key-update-11392123#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:27:31 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2024-04/938ujajo_maternity-dress_625x300_30_April_24.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Allahabad High Court rules second maternity leave cannot be denied within two years of first."
+        "image": "https://c.ndtvimg.com/2026-04/fb72207_neet-ug-2026-admit-card_625x300_22_April_26.jpeg",
+        "description": "NEET UG 2026 Admit Card: The NTA stated that the admit cards, carrying details of the exact examination centre, will be made available on the scheduled date."
       },
       {
-        "title": "5 Indore Cops Break Into Businessman's House, Steal Jewellery. Suspended",
-        "link": "https://www.ndtv.com/india-news/5-indore-cops-break-into-businessmans-house-steal-jewellery-suspended-11385915#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:06:10 +0530",
+        "title": "Opinion: Opinion | PM Modi's 'Jhalmuri' Moment: When The Snack Becomes The Story",
+        "link": "https://www.ndtv.com/opinion/opinion-pm-modis-jhalmuri-moment-when-the-snack-becomes-the-story-bengal-elections-west-bengal-elections-2026-11392057#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:12:22 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/5iv90qf4_indore-cops_625x300_22_April_26.jpeg",
-        "description": "Five Indore cops suspended for forced entry and theft of gold jewellery after formal complaint."
+        "image": "https://c.ndtvimg.com/2026-04/js1mdb4o_modi-jhalmuri-pti_625x300_22_April_26.jpeg",
+        "description": "While barnstorming in West Bengal, Prime Minister Narendra Modi, at a public stall in Jhargram, Purulia, ate jhalmuri."
       },
       {
-        "title": "India Should Aim To Achieve 100% Ethanol Blending: Nitin Gadkari",
-        "link": "https://www.ndtv.com/india-news/india-should-aim-to-achieve-100-ethanol-blending-nitin-gadkari-11390786#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 07:12:16 +0530",
+        "title": "'People Like You Can't Ride': Dalit Groom Dragged Off Horse, Thrashed In Madhya Pradesh",
+        "link": "https://www.ndtv.com/india-news/people-like-you-cant-ride-dalit-groom-dragged-off-horse-thrashed-in-madhya-pradeshs-damoh-11392005#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:01:25 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/ej5h58d4_e20-fuel_625x300_01_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Nitin Gadkari urges India to aim for 100 percent ethanol blending to reduce oil import dependence."
+        "image": "https://c.ndtvimg.com/2026-04/5bafpqjg_dalit-groom-mp_625x300_22_April_26.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738",
+        "description": "Seated on a horse, the groom was passing through the village in Damoh with his family when local strongmen allegedly took objection to his presence."
       },
       {
-        "title": "Mamata Banerjee Claims Poll Body Denied Her Meeting In Collin Lane Area",
-        "link": "https://www.ndtv.com/india-news/west-bengal-elections-mamata-banerjee-claims-poll-body-denied-her-meeting-in-collin-lane-area-11390661#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 05:29:06 +0530",
+        "title": "\"Why Be In Spotlight? Drop It\": TCS Official To Employee Over Sex Abuse Case",
+        "link": "https://www.ndtv.com/india-news/tata-consultancy-services-tcs-nashik-sexual-harassment-case-why-be-in-spotlight-drop-it-tcs-official-to-employee-11391895#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:50:51 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/iehds89s_mamata-banerjee_625x300_08_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "West Bengal Chief Minister Mamata Banerjee slammed the Election Commission of India (ECI), alleging that the commission denied her permission for a public meeting in the Collin ..."
+        "image": "https://c.ndtvimg.com/2026-04/lsm6s01o_tcs_625x300_08_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "Tata Consultancy Services, or TCS, India's biggest private-sector employer, maintains that it had not received any complaint through internal channels on the matter, underlining..."
       },
       {
-        "title": "SIR Impact On Bengal Polls: The Numbers Game With Rahul Kanwal",
-        "link": "https://www.ndtv.com/india-news/sir-impact-on-bengal-polls-the-numbers-game-with-rahul-kanwal-11390272#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 00:32:11 +0530",
+        "title": "CBSE 12th Result 2026 Soon: These Regions Recorded Over 90% Pass Rate Last Year",
+        "link": "https://www.ndtv.com/education/cbse-12th-result-2026-soon-these-regions-recorded-over-90-pass-percentage-last-year-11391918#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:41:56 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/pa5e17m8_bengal-numbers-_625x300_22_April_26.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738",
-        "description": "This time, the revision has taken around 89 lakh voters off the list, the number corresponding to roughly 11.6 per cent of the electorate."
+        "image": "https://c.ndtvimg.com/2026-04/d6cvmu0o_cbse-12th-result-2026_625x300_22_April_26.jpeg",
+        "description": "CBSE 12th Result 2026: As the evaluation process nears completion, students are advised to regularly check the official websites, DigiLocker, and the UMANG app for updates."
       },
       {
-        "title": "Case Ordered Against Karnataka Home Minister For Rs 500 Kabaddi 'Bet'",
-        "link": "https://www.ndtv.com/india-news/g-parameshwara-case-ordered-against-karnataka-home-minister-for-rs-500-kabaddi-bet-11390182#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 23:54:05 +0530",
+        "title": "After Extending Liquor Ban For Bengal, Poll Body's Next Move: No Motorbikes",
+        "link": "https://www.ndtv.com/india-news/after-extending-liquor-ban-for-bengal-poll-bodys-next-move-no-motorbikes-11389438#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:18:05 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2023-09/mpfue7c8_karnataka-home-minister-g-parameshwara-650_625x300_06_September_23.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "G Parameshwara had reportedly placed a friendly wager of Rs 500 with the district deputy commissioner."
+        "image": "https://i.ndtvimg.com/i/2016-05/kerala-assembly-poll-campaigning_650x400_61463235229.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "The Election Commission said its aim is to \"ensure free, fair, peaceful and violence-free elections\". To that end, the poll body had earlier doubled the duration of liquor ban i..."
       },
       {
-        "title": "2 Arrested For Terror Conspiracy Targeting Politicians Linked To RSS: Cops",
-        "link": "https://www.ndtv.com/india-news/2-arrested-for-terror-conspiracy-targeting-politicians-linked-to-rss-cops-11390134#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 23:39:05 +0530",
+        "title": "\"Must Be Hanged\": Meerut 'Blue Drum' Victim's Mother Breaks Down In Court",
+        "link": "https://www.ndtv.com/india-news/meerut-blue-drum-victim-saurabh-rajputs-mother-breaks-down-in-court-must-be-hanged-muskaan-sahil-meerut-blue-drum-murder-11391802#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:12:48 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/t3b9so5k_gujarat-ats-_625x300_21_April_26.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738",
-        "description": "The accused planned to create a terror network aimed at establishing \"Ghazwa-e-Hind\" (conquest of India), wage war against the country using RDX explosives, target political lea..."
+        "image": "https://c.ndtvimg.com/2026-04/jq8h5nec_meerut-blue-drum-case_625x300_22_April_26.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=738",
+        "description": "Saurabh Rajput's mother, Renu Devi, accused the police of failing to take any action against Muskaan's family."
       },
       {
-        "title": "\"Get Out of Here\": Angry Mumbai Woman Confronts State Minister At Rally",
-        "link": "https://www.ndtv.com/india-news/viral-video-get-out-of-here-angry-mumbai-woman-confronts-state-minister-at-rally-11390029#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 23:15:25 +0530",
+        "title": "In Noida Workers' Protest Probe, An 'X Storm' Social Media Group In Focus",
+        "link": "https://www.ndtv.com/noida-news/in-noida-workers-protest-probe-a-x-storm-social-media-group-in-focus-11391651#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:03:30 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/61jrtnqo_mumbai-woman-_625x300_21_April_26.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738",
-        "description": "Frustrated by the standstill, the woman left her vehicle, walked directly into the centre of the march, and engaged in a heated argument with police officers."
+        "image": "https://c.ndtvimg.com/2026-04/hq6v8ku_noida-protests_625x300_14_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "The group was created by Aditya Anand, who has been arrested, to share provocative videos, the investigation showed."
       },
       {
-        "title": "Madhya Pradesh Assembly's Special Session On Women's Quota Bill Next Week",
-        "link": "https://www.ndtv.com/india-news/madhya-pradesh-assemblys-special-session-on-womens-quota-bill-next-week-11389960#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 22:56:05 +0530",
+        "title": "Total Cost Of Studying In UK For Indians: Fees, Rent, Food, Visa Explained",
+        "link": "https://www.ndtv.com/education/total-cost-of-studying-in-uk-for-indians-fees-rent-food-visa-explained-11391655#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 11:55:42 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/l04hoj0g_madhya-pradesh-assembly_625x300_14_April_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "A special session of the Madhya Pradesh Legislative Assembly has been convened for April 27 to deliberate on issues related to 'Nari Shakti Vandan', with the Assembly Secretaria..."
+        "image": "https://c.ndtvimg.com/2026-04/te3fiv08_asdf_625x300_22_April_26.jpeg",
+        "description": "Study Abroad: With nearly 98,000 lakh Indian students in the UK, here's a clear breakdown of tuition fees, living costs, and visa fund requirements to help you understand the to..."
       },
       {
-        "title": "96-Hour Ban On Liquor Sale Imposed In Bengal For Polls, Trinamool Sees Red",
-        "link": "https://www.ndtv.com/india-news/west-bengal-assembly-elections-2026-bengal-polls-96-hour-ban-on-liquor-sale-imposed-in-bengal-for-polls-trinamool-congress-sees-red-11389597#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 22:33:11 +0530",
+        "title": "CBSE 12th Result 2026 Live Updates: Result Expected Next Week, What We Know So Far",
+        "link": "https://www.ndtv.com/education/cbse-12th-result-2026-live-cbse-board-direct-link-class-12-marksheets-download-cbse-nic-in-how-to-check-download-11391403#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 11:42:55 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2024-04/6qtgk04s_voting-generic-vote-generic_625x300_18_April_24.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "EC officials the state government, and not the poll panel, ordered the extension - a claim the ruling Trinamool Congress has denied."
+        "image": "https://c.ndtvimg.com/2026-04/takd812k_cbse-class-12-result-2026-live-updates_625x300_22_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "CBSE Class 12th Board Results Live Updates: The Class 12 board examinations for 2026 were conducted from February 17 to April 10. Following the exams, the board has been engaged..."
       },
       {
-        "title": "'Proposal' Turns Murder: Bengaluru Woman Blindfolds, Ties Up Boyfriend, Sets Him Afire",
-        "link": "https://www.ndtv.com/india-news/felt-ignored-bengaluru-woman-ties-up-boyfriend-sets-him-afire-watches-him-die-11388962#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 22:29:11 +0530",
+        "title": "Poll Body's New Order For Bengal Bans Outsiders From Hotels Ahead Of Polling",
+        "link": "https://www.ndtv.com/india-news/bengal-assembly-elections-2026-poll-body-bans-outsiders-from-hotels-in-bengal-ahead-of-polling-11391603#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 11:38:59 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/hqqb580c_bengaluru-murder_625x300_21_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Police said Prerna had been in a relationship with the man, Kiran, for over a year."
+        "image": "https://c.ndtvimg.com/2023-05/fq3vk1ig_hotel-generic_625x300_06_May_23.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "The restriction has come into force from 6 pm on Tuesday and will remain in place until the conclusion of polling on Wednesday."
       },
       {
-        "title": "\"Mallikarjun Kharge Brought Shame To Nation By Calling PM Modi A Terrorist\": Amit Shah",
-        "link": "https://www.ndtv.com/india-news/mallikarjun-kharge-brought-shame-to-nation-by-calling-pm-modi-a-terrorist-amit-shah-11389643#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 22:04:58 +0530",
+        "title": "CBSE Class 12 Result 2026 Soon: Check Expected Date, Past Trends, List Of Official Websites",
+        "link": "https://www.ndtv.com/education/cbse-board-class-12-result-2026-date-check-previous-release-dates-official-websites-passing-percentage-region-wise-data-11391228#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 11:14:43 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2024-09/hqh7mb1g_kharge-shah-split_625x300_30_September_24.jpg",
-        "description": ""
+        "image": "https://c.ndtvimg.com/2026-04/gf24u6pc_cbse-board-class-12-result-2026-date_625x300_22_April_26.jpeg",
+        "description": "CBSE Class 12 Result 2026 Date: The Class 12 board examinations for 2026 were conducted from February 17 to April 10. Following the exams, the board has been engaged in the eval..."
       },
       {
-        "title": "Woman Rejects Man's Proposal. He Slits Her Son's Throat, Stuffs Body In Blue Drum",
-        "link": "https://www.ndtv.com/india-news/madhya-pradesh-satna-woman-rejects-mans-proposal-he-slits-her-sons-throat-stuffs-body-in-blue-drum-11389613#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 22:04:56 +0530",
+        "title": "Assam HS Class 12 Result 2026: Likely To Be Released Soon, Says DigiLocker Notice",
+        "link": "https://www.ndtv.com/education/assam-hs-class-12-result-2026-likely-to-be-released-soon-says-digilocker-notice-11391230#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 09:58:09 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/fj33pq78_madhya-pradesh-murder-_625x300_21_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "The victim, Shivraj Rajak, a Class 5 student known as 'Badal', was alone at home when 45-year-old Mathura Rajak entered the house around 10:30 AM."
+        "image": "https://c.ndtvimg.com/2026-04/6oo6rk58_asd_625x300_22_April_26.jpeg",
+        "description": "Assam AHSEC HS Result: Assam HS Class 12 results are likely to be announced soon, with a DigiLocker notice hinting at an imminent release. Students may be able to check their pr..."
       },
       {
-        "title": "Delhi Government Issues Heatwave Advisory For Schools Amid Rising Temperatures",
-        "link": "https://www.ndtv.com/education/delhi-government-issues-heatwave-advisory-for-schools-amid-rising-temperatures-11389727#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 22:02:15 +0530",
+        "title": "\"India Will Never Bow To Terror\": PM Modi On Pahalgam Attack Anniversary",
+        "link": "https://www.ndtv.com/india-news/pm-modi-on-pahalgam-attack-anniversary-india-will-never-bow-to-terror-11391013#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 09:51:41 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/qq67r4q_-schools-have-been-temporarily-closed-due-to-severe-heatwave-conditions_625x300_20_April_26.png?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Delhi's Directorate of Education issued heatwave guidelines for all schools following IMD's yellow alert, focusing on hydration and safety measures."
+        "image": "https://c.ndtvimg.com/2025-12/e7bm15hg_-pahalgam-attack_625x300_15_December_25.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "PM Modi honors Pahalgam terror attack victims and vows India will never bow to terror"
       },
       {
-        "title": "\"Had 3 Seconds To Run\": Survivor Recounts Kerala Firecracker Factory Blast",
-        "link": "https://www.ndtv.com/india-news/kerala-firecracker-factory-blast-had-3-seconds-to-run-survivor-recounts-kerala-firecracker-factory-blast-11389716#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 22:00:48 +0530",
+        "title": "Congress Cancels Rahul Gandhi's Bengal Poll Visit, Blames Trinamool",
+        "link": "https://www.ndtv.com/india-news/congress-cancels-rahul-gandhis-bengal-poll-visit-blames-trinamool-11391087#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 09:25:21 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/a6mm48fs_kerala-firecracker-blast_625x300_21_April_26.png?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "In four days, Thiruvambadi was expected to light up the Thrissur sky, but disaster struck Kerala's cultural capital when the fireworks storage depot caught fire on Tuesday, kill..."
+        "image": "https://c.ndtvimg.com/2026-04/d16p9k1s_rahul-gandhi-ani-photo_625x300_22_April_26.jpeg",
+        "description": "The party alleged the local administration and police had acted on the \"behest of the Mamata Banerjee-led government\", and denied necessary permissions for the visit."
       },
       {
-        "title": "Top Court To Hear Plea Challenging Validity Of 2008 NIA Act, Issues Notice",
-        "link": "https://www.ndtv.com/india-news/top-court-to-hear-plea-challenging-validity-of-2008-nia-act-issues-notice-11389555#publisher=newsstand",
-        "pubDate": "Tue, 21 Apr 2026 21:22:07 +0530",
+        "title": "A Year After Pahalgam Attack, J&K's Strong Comeback In Investment, Startups, Tourism",
+        "link": "https://www.ndtv.com/india-news/a-year-after-pahalgam-attack-jammu-and-kashmirs-strong-comeback-in-investment-startups-tourism-11391053#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 09:05:49 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2024-07/ef9ofil8_supreme-court-generic_625x300_30_July_24.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "The Supreme Court on Tuesday sought responses from the Centre and others on a plea challenging the validity of the National Investigation Agency Act, 2008."
+        "image": "https://c.ndtvimg.com/2026-04/chup75n4_pahlagam-ani_625x300_22_April_26.jpeg",
+        "description": "Jammu and Kashmir is no longer defined only by the massive tourism it hosts. The Union Territory has become a hub for startups, too."
       }
     ],
     "top": [
       {
-        "title": "Trump Cites Asim Munir, Shehbaz Sharif's Request Behind Iran Truce. What Pakistan Gains",
-        "link": "https://www.ndtv.com/world-news/us-iran-ceasefire-trump-cites-asim-munir-shehbaz-sharifs-request-behind-iran-truce-what-pakistan-gains-11390892#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:54:47 +0530",
+        "title": "New Zealand Minister Slammed For Anti-India 'Butter Chicken Tsunami' Remark",
+        "link": "https://www.ndtv.com/world-news/new-zealand-minister-slammed-for-anti-india-butter-chicken-tsunami-remark-11390646#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:52:37 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2025-10/r633mm6g_munir-trump-rare-earth_625x300_01_October_25.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Behind Pakistan's frantic efforts to narrow differences between Iran and the US in its newfound role as global peacemaker is an attempt to recast its diplomatic standing and att..."
+        "image": "https://c.ndtvimg.com/2026-04/tscl7l4c_new-zealand-free-minister-shane-jones_625x300_22_April_26.jpeg",
+        "description": "A senior New Zealand minister has sparked outrage by deriding a planned free trade deal with India as..."
       },
       {
-        "title": "On Pahalgam Attack Anniversary, Kashmiri Man Details How He Saved 11 Tourists",
-        "link": "https://www.ndtv.com/india-news/on-pahalgam-attack-anniversary-kashmiri-man-details-how-he-saved-11-tourists-pahalgam-terrorist-attack-jammu-kashmir-11390976#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:50:34 +0530",
+        "title": "OpenAI's ChatGPT Accused Of Guiding Florida Shooter On Gun, Ammunition",
+        "link": "https://www.ndtv.com/world-news/openais-chatgpt-accused-of-guiding-florida-shooter-on-gun-ammunition-11390594#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:52:24 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/r2ce0eq_nazakat-ali_625x300_22_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Nazakat heard the gunfire, but it initially seemed to him like an encounter between the army and terrorists, he told NDTV."
+        "image": "https://c.ndtvimg.com/2026-04/av9l7vno_openai_625x300_02_April_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "Florida Attorney General James Uthmeier said on Tuesday the state was launching a criminal probe into OpenAI and its artificial intelligence app"
       },
       {
-        "title": "3 Congress Workers Detained In Bhopal In Vasundhara Raje \"Fake Letter\" Row",
-        "link": "https://www.ndtv.com/india-news/3-congress-workers-detained-in-bhopal-in-vasundhara-raje-fake-letter-row-11390939#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:28:29 +0530",
+        "title": "20,000 Vote Buffer: Amit Shah Sets Benchmark For Bengal Phase 2 Seats",
+        "link": "https://www.ndtv.com/india-news/amit-shah-sets-benchmark-for-bengal-phase-2-seats-20-000-vote-buffer-11392180#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:51:02 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/iab2og7c_vasundhara-raje_625x300_12_April_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Theree Congress IT Cell workers were detained over the circulation of the disputed letter on social media."
+        "image": "https://c.ndtvimg.com/2026-04/4mvtr0b4_amity-shah-bengal-meet-_625x300_22_April_26.jpeg",
+        "description": "The directive, said sources, follows a detailed assessment of the political and organisational situation on the ground."
       },
       {
-        "title": "Second Maternity Leave Within 2 Years Can't Be Denied: Allahabad High Court",
-        "link": "https://www.ndtv.com/india-news/allahabad-high-court-says-second-maternity-leave-within-2-years-must-be-granted-11389805#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:06:51 +0530",
+        "title": "Iran Fires At 2 Ships In Hormuz Hours After Trump's Ceasefire Announcement",
+        "link": "https://www.ndtv.com/world-news/iran-fires-at-ship-in-hormuz-hours-after-trumps-ceasefire-announcement-11391622#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:48:14 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2024-04/938ujajo_maternity-dress_625x300_30_April_24.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Allahabad High Court rules second maternity leave cannot be denied within two years of first."
+        "image": "https://c.ndtvimg.com/2026-04/2epb4f0o_strait-of-hormuz-closure_625x300_18_April_26.jpg",
+        "description": "Iran Fires At Ship In Hormuz Hours After Trump's Ceasefire Announcement"
       },
       {
-        "title": "US-Iran War Live Updates: Trump Announces Iran Ceasefire Extension Until Negotiations Conclude",
-        "link": "https://www.ndtv.com/world-news/donald-trump-us-iran-war-live-updates-strait-of-hormuz-chaos-peace-deal-israel-lebanon-hezbollah-ceasefire-11378272#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 08:03:15 +0530",
+        "title": "IPS Association Slams BJP MLA, Demands Action Over Threats To Officer",
+        "link": "https://www.ndtv.com/india-news/ips-association-slams-madhya-pradesh-bjp-mla-pritam-lodhi-demands-action-over-threats-to-officer-11392198#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:41:02 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/15686tps_tehran_625x300_21_April_26.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738",
-        "description": "US-Iran War, Ceasefire, Peace Talks Updates: The war is in its eighth week and has sent oil prices surging because of the closure of the Strait of Hormuz."
+        "image": "https://c.ndtvimg.com/2022-08/i1fhj6d8_pritam-singh-lodhi_625x300_20_August_22.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "BJP MLA Pritam Lodhi's remarks on Karera SDOP spark outrage from IPS Association"
       },
       {
-        "title": "Trump Extends Iran Ceasefire In A Big U-Turn, Says Hormuz Blockade To Continue",
-        "link": "https://www.ndtv.com/world-news/trump-says-extending-ceasefire-until-iranian-proposal-is-submitted-and-discussions-are-concluded-11390418#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 07:51:47 +0530",
+        "title": "Opinion: Opinion | PM Modi's 'Jhalmuri' Moment: When The Snack Becomes The Story",
+        "link": "https://www.ndtv.com/opinion/opinion-pm-modis-jhalmuri-moment-when-the-snack-becomes-the-story-bengal-elections-west-bengal-elections-2026-11392057#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:12:22 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://i.ndtvimg.com/i/2018-04/donald-trump-reuters_650x400_81522641277.jpg",
-        "description": "Trump says extending ceasefire until Iranian proposal is submitted and discussions are concluded"
+        "image": "https://c.ndtvimg.com/2026-04/js1mdb4o_modi-jhalmuri-pti_625x300_22_April_26.jpeg",
+        "description": "While barnstorming in West Bengal, Prime Minister Narendra Modi, at a public stall in Jhargram, Purulia, ate jhalmuri."
       },
       {
-        "title": "John Ternus To Lead Apple In The Age Of AI",
-        "link": "https://www.ndtv.com/world-news/john-ternus-to-lead-apple-in-the-age-of-ai-11390845#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 07:42:11 +0530",
+        "title": "North Korean Hackers Suspected Of $300 Million Crypto Heist",
+        "link": "https://www.ndtv.com/world-news/north-korean-hackers-suspected-of-300-million-crypto-heist-11392015#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:02:04 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/1ircdg8k_john-turnus-and-tim-cook_625x300_21_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "John Ternus, 50, will take over as Apple chief executive in September, with Tim Cook becoming executive chairman of the iPhone maker's board of directors."
+        "image": "https://c.ndtvimg.com/2026-03/aqhdgkp8_crypto_625x300_12_March_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "Digital currency news site CoinDesk said the heist on the vault of online investment tool KelpDAO on Saturday was 2026's biggest crypto exploit so far."
       },
       {
-        "title": "Stock Market Live News, Sensex Today: Markets Likely To See A Weak Start As US-Iran Talks Stall",
-        "link": "https://www.ndtv.com/business-news/stock-market-sensex-share-market-nifty-live-updates-today-22-april-oil-prices-donald-trump-us-iran-peace-talks-11390779#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 07:31:43 +0530",
+        "title": "'People Like You Can't Ride': Dalit Groom Dragged Off Horse, Thrashed In Madhya Pradesh",
+        "link": "https://www.ndtv.com/india-news/people-like-you-cant-ride-dalit-groom-dragged-off-horse-thrashed-in-madhya-pradeshs-damoh-11392005#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 13:01:25 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/3tjoh4c_stock-market-closing-today_625x300_21_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Stock Market, Sensex, Share Market, Nifty Live News:"
+        "image": "https://c.ndtvimg.com/2026-04/5bafpqjg_dalit-groom-mp_625x300_22_April_26.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738",
+        "description": "Seated on a horse, the groom was passing through the village in Damoh with his family when local strongmen allegedly took objection to his presence."
       },
       {
-        "title": "Delhi Government Issues SOP To Curb Tree Offences",
-        "link": "https://www.ndtv.com/delhi-news/delhi-government-issues-sop-to-curb-tree-offences-11384851#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 07:29:11 +0530",
+        "title": "'Iran Has Thousands Of Missiles To Continue War': Intel Belies Trump's Claim",
+        "link": "https://www.ndtv.com/world-news/us-iran-war-news-iran-has-thousands-of-missiles-to-continue-war-intel-belies-trumps-claim-11391982#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:57:11 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2024-03/dvqj6o0g_cutting-trees_625x300_01_March_24.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Delhi government issues SOP to prevent illegal tree felling and strengthen enforcement mechanisms."
+        "image": "https://c.ndtvimg.com/hf0l5si_iran-missiles-reuters_625x300_03_September_18.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=738",
+        "description": "Even before the ceasefire was declared, US President Donald Trump and his defence secretary, Pete Hegseth, had claimed the Iranian Air Force was \"wiped out\" and the Navy was \"at..."
       },
       {
-        "title": "Delhi Couple Kills Retired RBI Employee After He Refuses To Lend Money",
-        "link": "https://www.ndtv.com/delhi-news/delhi-couple-kills-retired-rbi-employee-after-he-refuses-to-lend-money-11384598#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 07:18:49 +0530",
+        "title": "\"Why Be In Spotlight? Drop It\": TCS Official To Employee Over Sex Abuse Case",
+        "link": "https://www.ndtv.com/india-news/tata-consultancy-services-tcs-nashik-sexual-harassment-case-why-be-in-spotlight-drop-it-tcs-official-to-employee-11391895#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:50:51 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2024-02/80ef0ba_delhi-police-generic_625x300_04_February_24.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "A couple was arrested in Delhi for stabbing a retired RBI employee after a money dispute."
+        "image": "https://c.ndtvimg.com/2026-04/lsm6s01o_tcs_625x300_08_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "Tata Consultancy Services, or TCS, India's biggest private-sector employer, maintains that it had not received any complaint through internal channels on the matter, underlining..."
       },
       {
-        "title": "India Should Aim To Achieve 100% Ethanol Blending: Nitin Gadkari",
-        "link": "https://www.ndtv.com/india-news/india-should-aim-to-achieve-100-ethanol-blending-nitin-gadkari-11390786#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 07:12:16 +0530",
+        "title": "Tamil Nadu Polls: D Jayakumar Eyes AIADMK Stronghold Lost In 2021",
+        "link": "https://www.ndtv.com/tamil-nadu-news/tamil-nadu-elections-2026-aiadmks-d-jayakumar-eyes-aiadmk-stronghold-lost-in-2021-11388339#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:45:22 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/ej5h58d4_e20-fuel_625x300_01_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Nitin Gadkari urges India to aim for 100 percent ethanol blending to reduce oil import dependence."
+        "image": "https://c.ndtvimg.com/2019-03/90goh0g_d-jayakumar_625x300_29_March_19.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "D Jayakumar has won five elections from Royapuram since 1991."
       },
       {
-        "title": "\"Misled Again\": Iran As Trump Claims Tehran To Execute 8 Women",
-        "link": "https://www.ndtv.com/world-news/iran-denies-execution-of-women-after-donald-trump-seeks-clemency-misled-once-again-by-fake-news-11390158#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 07:09:19 +0530",
+        "title": "Russian Apps \"Spying\" On VPN Users Amid Internet Crackdown: Report",
+        "link": "https://www.ndtv.com/world-news/russian-apps-spying-on-vpn-users-amid-internet-crackdown-report-11391214#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:32:02 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/r2o02v7o_iran-to-hang-eight-women_625x300_22_April_26.jpeg",
-        "description": "Iran's judiciary denied on Tuesday that eight women arrested over protests that shook the Islamic republic this year were at risk of execution, after US President Donald Trump u..."
+        "image": "https://c.ndtvimg.com/2026-04/50hqqvl_vpn_625x300_22_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "The investigation by RKS Global examined 30 widely used apps in Russia, including those run by T-Bank, Sberbank, Yandex and VKontakte."
       },
       {
-        "title": "Silent Salaries? Why Take-Home Stays Flat Despite CTC Rise After Appraisal",
-        "link": "https://www.ndtv.com/business-news/employee-salary-take-home-amount-ctc-hike-appraisal-new-labour-rules-wage-code-personal-finance-11387093#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 06:47:23 +0530",
+        "title": "After Extending Liquor Ban For Bengal, Poll Body's Next Move: No Motorbikes",
+        "link": "https://www.ndtv.com/india-news/after-extending-liquor-ban-for-bengal-poll-bodys-next-move-no-motorbikes-11389438#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:18:05 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/g4ovjr08_salary-employees-da-hike-pexels_625x300_17_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Even after a healthy appraisal and an uptick in CTC, the monthly take-home amount barely rises for many employees."
+        "image": "https://i.ndtvimg.com/i/2016-05/kerala-assembly-poll-campaigning_650x400_61463235229.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "The Election Commission said its aim is to \"ensure free, fair, peaceful and violence-free elections\". To that end, the poll body had earlier doubled the duration of liquor ban i..."
       },
       {
-        "title": "Mamata Banerjee Claims Poll Body Denied Her Meeting In Collin Lane Area",
-        "link": "https://www.ndtv.com/india-news/west-bengal-elections-mamata-banerjee-claims-poll-body-denied-her-meeting-in-collin-lane-area-11390661#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 05:29:06 +0530",
+        "title": "CDs Over Spotify, No Maps, Instagram: Americans On One-Month Digital Detox",
+        "link": "https://www.ndtv.com/world-news/cds-over-spotify-no-maps-instagram-americans-on-one-month-digital-detox-11391807#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:15:01 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/iehds89s_mamata-banerjee_625x300_08_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "West Bengal Chief Minister Mamata Banerjee slammed the Election Commission of India (ECI), alleging that the commission denied her permission for a public meeting in the Collin ..."
+        "image": "https://i.ndtvimg.com/i/2017-12/smartphone-addiction-in-teens_650x400_61512112906.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738",
+        "description": "Scientists have long been sounding the alarm, warning that cell phone addiction is associated with shortened attention spans and anxiety."
       },
       {
-        "title": "Hezbollah Says Attacked Israel In Response To Ceasefire Violations",
-        "link": "https://www.ndtv.com/world-news/iran-war-hezbollah-says-attacked-israel-in-response-to-ceasefire-violations-11390633#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 04:59:30 +0530",
+        "title": "\"Must Be Hanged\": Meerut 'Blue Drum' Victim's Mother Breaks Down In Court",
+        "link": "https://www.ndtv.com/india-news/meerut-blue-drum-victim-saurabh-rajputs-mother-breaks-down-in-court-must-be-hanged-muskaan-sahil-meerut-blue-drum-murder-11391802#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:12:48 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2024-11/f20pqih_israel-hezbollah-reuters_625x300_21_November_24.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "Hezbollah said it launched an attack on northern Israel on Tuesday in retaliation for what it said were Israeli violations of a 10-day ceasefire, the first such claim since the ..."
+        "image": "https://c.ndtvimg.com/2026-04/jq8h5nec_meerut-blue-drum-case_625x300_22_April_26.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=738",
+        "description": "Saurabh Rajput's mother, Renu Devi, accused the police of failing to take any action against Muskaan's family."
       },
       {
-        "title": "17-Year-Old Boy Allegedly Stabbed To Death In Delhi: Cops",
-        "link": "https://www.ndtv.com/delhi-news/17-year-old-boy-allegedly-stabbed-to-death-in-delhi-cops-11390630#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 04:53:05 +0530",
+        "title": "In Noida Workers' Protest Probe, An 'X Storm' Social Media Group In Focus",
+        "link": "https://www.ndtv.com/noida-news/in-noida-workers-protest-probe-a-x-storm-social-media-group-in-focus-11391651#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 12:03:30 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2022-12/0htt5beg_india-police-generic_625x300_23_December_22.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "A 17-year-old boy was allegedly stabbed to death by a group of assailants in the Mahindra Park area of northwest Delhi, police said on Tuesday."
+        "image": "https://c.ndtvimg.com/2026-04/hq6v8ku_noida-protests_625x300_14_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "The group was created by Aditya Anand, who has been arrested, to share provocative videos, the investigation showed."
       },
       {
-        "title": "US Sanctions Target Iranian Weapons, UAV Procurement Networks",
-        "link": "https://www.ndtv.com/world-news/iran-war-us-sanctions-target-iranian-weapons-uav-procurement-networks-11390580#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 04:08:02 +0530",
+        "title": "Indian Student Created MAGA \"Influencer\" With AI, Made Thousands Of Dollars",
+        "link": "https://www.ndtv.com/world-news/emily-hart-top-maga-influencer-turned-out-to-be-ai-was-created-by-indian-student-11391474#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 11:59:11 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-03/94brcr3s_scott-bessent_625x300_19_March_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "The action was announced by the US Department of the Treasury Office of Foreign Assets Control, which said those designated are based in Iran, Turkey, and the United Arab Emirates."
+        "image": "https://c.ndtvimg.com/2026-04/tf67h29_top-maga-ai-influencer_625x300_22_April_26.jpg?im=FitAndFill,algorithm=dnn,width=1200,height=738",
+        "description": "An aspiring orthopedic surgeon used generative AI tools to design everything - from the woman&#039;s face and body to her captions."
       },
       {
-        "title": "Iran Threatens To End Gulf Nations' Oil Production As Truce Deadline Nears",
-        "link": "https://www.ndtv.com/world-news/iran-threatens-to-end-gulf-nations-oil-production-as-truce-deadline-nears-11390376#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 03:22:57 +0530",
+        "title": "Who Is Umar Farooq Zahoor, Fraud-Accused Seen With JD Vance In Pakistan",
+        "link": "https://www.ndtv.com/world-news/who-is-umar-farooq-zahoor-fraud-accused-seen-with-jd-vance-in-pakistan-11391242#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 11:55:12 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/73fqa2u8_iran-war_625x300_22_April_26.jpeg",
-        "description": "Iran's Revolutionary Guards on Tuesday threatened to end oil production in the Middle East if the Islamic republic faced attacks launched from its Gulf neighbours' territory."
+        "image": "https://c.ndtvimg.com/2026-04/pulramj_umar-farooq_625x300_22_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "He has also presented himself as a whistleblower in a corruption case that allegedly led to the imprisonment of former Pakistani Prime Minister Imran Khan."
       },
       {
-        "title": "What To Know As Trump Extends Ceasefire In Iran War",
-        "link": "https://www.ndtv.com/world-news/iran-war-donald-trump-announced-that-the-ceasefire-would-be-extended-indefinitely-11390538#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 03:20:36 +0530",
+        "title": "Poll Body's New Order For Bengal Bans Outsiders From Hotels Ahead Of Polling",
+        "link": "https://www.ndtv.com/india-news/bengal-assembly-elections-2026-poll-body-bans-outsiders-from-hotels-in-bengal-ahead-of-polling-11391603#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 11:38:59 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/vfglqa18_trump-iran_650x400_01_April_26.jpg?im=FaceCrop,algorithm=dnn,width=1200,height=738",
-        "description": "President Donald Trump has announced an extension of the ceasefire in the Iran war, giving mediators additional time to arrange a new round of face-to-face talks between the US ..."
+        "image": "https://c.ndtvimg.com/2023-05/fq3vk1ig_hotel-generic_625x300_06_May_23.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "The restriction has come into force from 6 pm on Tuesday and will remain in place until the conclusion of polling on Wednesday."
       },
       {
-        "title": "2 CIA Officers Killed In Mexico Vehicle Crash After Anti-Drug Op: Report",
-        "link": "https://www.ndtv.com/world-news/2-cia-officers-killed-in-mexico-vehicle-crash-after-anti-drug-op-report-11390267#publisher=newsstand",
-        "pubDate": "Wed, 22 Apr 2026 00:24:30 +0530",
+        "title": "Delhi Mandates Citywide Rainwater Harvesting, Penalties For Non-Compliance",
+        "link": "https://www.ndtv.com/delhi-news/delhi-government-mandates-rainwater-harvesting-citywide-penalties-for-non-compliance-11391617#publisher=newsstand",
+        "pubDate": "Wed, 22 Apr 2026 11:34:37 +0530",
         "source": "NDTV News Search Records Found 1000",
-        "image": "https://c.ndtvimg.com/2026-04/odfk06jg_cia-generic_625x300_22_April_26.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
-        "description": "The CIA's involvement was confirmed on Tuesday by a US official and two people with knowledge of the crash."
+        "image": "https://c.ndtvimg.com/2026-01/9kqn5aho_delhi-rain-news_625x300_31_January_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1200,height=738",
+        "description": "Delhi mandates rainwater harvesting for buildings over 100 sqm to combat groundwater depletion."
       }
     ],
     "technology": [],
@@ -6412,8 +5451,7 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": [],
-    "ai": []
+    "science": []
   },
   "ru": {
     "local": [
@@ -7094,8 +6132,7 @@ window.NEWS_DATA = {
         "image": "https://icdn.lenta.ru/images/2026/04/06/18/20260406180443772/pic_ff3f68b7841d64db0e1079e2bd138c7b.jpg",
         "description": ""
       }
-    ],
-    "ai": []
+    ]
   },
   "it": {
     "local": [
@@ -7538,6 +6575,78 @@ window.NEWS_DATA = {
     ],
     "gaming": [
       {
+        "title": "Xbox Game Pass costa di meno e con Instant-Gaming risparmi ancora di più! #AD",
+        "link": "https://www.everyeye.it/notizie/xbox-game-pass-costa-instant-gaming-risparmi-pi-873408.html",
+        "pubDate": "Wed, 22 Apr 2026 10:17:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/xbox-game-pass-costa-instant-gaming-risparmi-piu-ad-v4-873408-800x600.webp",
+        "description": "Microsoft ha tagliato i prezzi di Xbox Game Pass dal 21 aprile 2026, con abbonamenti più convenienti e offerte limitate disponibili online. Dal 21 aprile 2026 Microsoft ha appen..."
+      },
+      {
+        "title": "5 giochi imperdibili che rendono PS5 un acquisto obbligato nel 2026",
+        "link": "https://www.everyeye.it/notizie/5-giochi-imperdibili-rendono-ps5-acquisto-obbligato-2026-871286.html",
+        "pubDate": "Wed, 22 Apr 2026 10:02:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/5-giochi-imperdibili-rendono-ps5-acquisto-obbligato-2026-v6-871286-800x600.webp",
+        "description": "Nonostante la delusione per i rincari, ci sono tanti motivi per comprare una PlayStation 5 nel 2026: ecco cinque giochi che ne giustificano l'acquisto A dispetto della delusione..."
+      },
+      {
+        "title": "Rivoluzione retrogaming? Neo Geo AES+ abbassa i prezzi e riporta la magia degli anni '90",
+        "link": "https://www.everyeye.it/notizie/rivoluzione-retrogaming-neo-geo-aes-abbassa-prezzi-riporta-magia-anni-90-873273.html",
+        "pubDate": "Wed, 22 Apr 2026 09:47:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/rivoluzione-retrogaming-neo-geo-aes-abbassa-prezzi-riporta-magia-anni-90-v4-873273-800x600.webp",
+        "description": "La riedizione della storica console SNK e relativi giochi potrebbe avere forti conseguenze sul collezionismo legato alla piattaforma di inizio anni '90. Come un fulmine a ciel s..."
+      },
+      {
+        "title": "Tre accessori indispensabili per la tua Steam Deck: proteggi e migliora la tua esperienza di gioco",
+        "link": "https://www.everyeye.it/notizie/tre-accessori-indispensabili-steam-deck-proteggi-migliora-esperienza-gioco-872355.html",
+        "pubDate": "Wed, 22 Apr 2026 09:44:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/tre-accessori-indispensabili-steam-deck-proteggi-migliora-esperienza-gioco-v4-872355-800x600.webp",
+        "description": "Tre accessori indispensabili per Steam Deck: case ergonomici Skull & Co. e Spigen e pellicola protettiva iVoler per lo schermo. Hai appena comprato una Steam Deck e sei alla ric..."
+      },
+      {
+        "title": "PlayStation 6 costerà davvero così tanto? Ecco le previsioni degli esperti",
+        "link": "https://www.everyeye.it/notizie/playstation-6-coster-davvero-cos-tanto-previsioni-esperti-870986.html",
+        "pubDate": "Wed, 22 Apr 2026 09:42:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/playstation-6-costera-davvero-tanto-previsioni-esperti-v5-870986-800x600.webp",
+        "description": "La prossima console Sony sarà quasi sicuramente la PlayStation più cara al lancio, ma il prezzo potrebbe essere più basso di quanto si possa pensare. Si continua a discutere del..."
+      },
+      {
+        "title": "Tomb Raider Legacy of Atlantis è stato rinviato a febbraio 2027?",
+        "link": "https://www.everyeye.it/notizie/tomb-raider-legacy-of-atlantis-rinviato-febbraio-2027-873374.html",
+        "pubDate": "Wed, 22 Apr 2026 09:01:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/tomb-raider-legacy-of-atlantis-rinviato-febbraio-2027-v4-873374-800x600.webp",
+        "description": "Tomb Raider Legacy of Atlantis sarebbe stato rinviato al 2027, con nuovo trailer e data d'uscita previsti a giugno durante la Summer Game Fest. Secondo il profilo Instagram Tomb..."
+      },
+      {
+        "title": "3 giochi che ho abbandonato a un passo dal finale",
+        "link": "https://www.everyeye.it/notizie/3-giochi-abbandonato-passo-finale-873364.html",
+        "pubDate": "Wed, 22 Apr 2026 08:40:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/3-giochi-abbandonato-passo-finale-v5-873364-800x600.webp",
+        "description": "Questi tre giochi mi hanno portato allo sfinimento, e li ho abbandonati ad un passo dal finale della loro storia principale. Non sempre videogiocare è un passatempo spensierato,..."
+      },
+      {
+        "title": "Giornata della Terra: 3 giochi che celebrano il nostro pianeta tra natura e tecnologia",
+        "link": "https://www.everyeye.it/notizie/giornata-terra-3-giochi-celebrano-pianeta-natura-tecnologia-873086.html",
+        "pubDate": "Wed, 22 Apr 2026 08:38:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/giornata-terra-3-giochi-celebrano-pianeta-natura-tecnologia-v5-873086-800x600.webp",
+        "description": "Oggi è la Giornata della Terra, e quindi quale miglior occasione se non questa per unire gaming e consapevolezza sul nostro meraviglioso pianeta? Terra, natura ed il nostro rapp..."
+      },
+      {
+        "title": "Assassin's Creed Black Flag Resynced: niente DLC e multiplayer, il gioco avrà una Collector's Edition",
+        "link": "https://www.everyeye.it/notizie/assassin-s-creed-black-flag-resynced-dlc-multiplayer-gioco-avr-collector-s-edition-873366.html",
+        "pubDate": "Wed, 22 Apr 2026 08:21:00 +0200",
+        "source": "Everyeye.it - Videogiochi",
+        "image": "https://images.everyeye.it/img-notizie/assassin-s-creed-black-flag-resynced-dlc-multiplayer-gioco-avra-collector-s-edition-v3-873366-800x600.webp",
+        "description": "Ubisoft svela il nuovo look di Barbanera in Assassin's Creed Black Flag Resynced: niente DLC originali né multiplayer, reveal il 23 aprile alle 18. In attesa del reveal ufficial..."
+      },
+      {
         "title": "PlayStation Portal: come riavviare o ripristinare il dispositivo portatile Sony",
         "link": "https://www.everyeye.it/notizie/playstation-portal-come-riavviare-ripristinare-dispositivo-portatile-sony-873347.html",
         "pubDate": "Wed, 22 Apr 2026 00:16:00 +0200",
@@ -7624,78 +6733,6 @@ window.NEWS_DATA = {
         "source": "Everyeye.it - Videogiochi",
         "image": "https://images.everyeye.it/img-notizie/la-collector-blue-prince-introvabile-trovare-edizione-fisica-ps5-v3-873308-800x600.webp",
         "description": "L'edizione fisica speciale di Blue Prince è andata esaurita, ma potrebbe interessarvi mettere in collezione l'edizione fisica base per PS5. Blue Prince è stata una delle sorpres..."
-      },
-      {
-        "title": "MotoGP 26: ecco cosa cambia nel nuovo capitolo in arrivo a fine mese",
-        "link": "https://www.everyeye.it/notizie/motogp-26-cosa-cambia-capitolo-arrivo-mese-873307.html",
-        "pubDate": "Tue, 21 Apr 2026 19:07:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-notizie/motogp-26-cosa-cambia-capitolo-arrivo-mese-v4-873307-800x600.webp",
-        "description": "MotoGP 26 arriva il 29 aprile con fisica di guida rinnovata, modalità Arcade/Pro, stagione 2026 completa e importanti novità per la Carriera. Manca ormai pochissimo all&#8217;us..."
-      },
-      {
-        "title": "Dopo The Last of Us e Death Stranding, Troy Baker vuole creare un gioco tutto suo",
-        "link": "https://www.everyeye.it/notizie/the-last-of-us-death-stranding-troy-baker-vuole-creare-gioco-suo-873298.html",
-        "pubDate": "Tue, 21 Apr 2026 18:46:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-notizie/dopo-the-last-of-us-death-stranding-troy-baker-vuole-creare-gioco-suo-v3-873298-800x600.webp",
-        "description": "L'attore di The Last of Us, Death Stranding e Uncharted ha raccontato di voler sviluppare un progetto videoludico personale. Dopo aver prestato volto, voce e presenza scenica ad..."
-      },
-      {
-        "title": "Shade mostra la collezione nerd dello studio di J-Ax: dove trovare i gadget dei Goonies",
-        "link": "https://www.everyeye.it/notizie/shade-mostra-collezione-nerd-studio-j-ax-trovare-gadget-goonies-873292.html",
-        "pubDate": "Tue, 21 Apr 2026 18:37:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-notizie/shade-mostra-collezione-nerd-studio-j-ax-trovare-gadget-goonies-v3-873292-800x600.webp",
-        "description": "Lo studio di J-Ax svela la sua passione nerd per gadget de \"I Goonies\", mostrati da Shade su Instagram. Alcuni prodotti hanno prezzi interessanti. È risaputo che il popolare rap..."
-      },
-      {
-        "title": "Xbox Game Pass costa di meno, Microsoft abbassa i prezzi ma toglie Call of Duty al day one",
-        "link": "https://www.everyeye.it/notizie/xbox-game-pass-costa-meno-microsoft-abbassa-prezzi-toglie-call-of-duty-day-one-873283.html",
-        "pubDate": "Tue, 21 Apr 2026 18:18:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-notizie/xbox-game-pass-costa-meno-microsoft-abbassa-prezzi-toglie-call-of-duty-day-one-v4-873283-800x600.webp",
-        "description": "Microsoft abbassa i prezzi di Xbox Game Pass, ma i nuovi titoli Call of Duty arriveranno un anno dopo il lancio sull'abbonamento. Microsoft ha annunciato un ritocco verso il bas..."
-      },
-      {
-        "title": "PlayStation Plus: arrivano oggi i nuovi giochi Extra e Premium da scaricare su PS5 e PS4",
-        "link": "https://www.everyeye.it/notizie/playstation-plus-arrivano-oggi-giochi-extra-premium-scaricare-ps5-ps4-873091.html",
-        "pubDate": "Tue, 21 Apr 2026 18:03:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-notizie/playstation-plus-arrivano-oggi-giochi-extra-premium-scaricare-ps5-ps4-v7-873091-800x600.webp",
-        "description": "Disponibili da oggi i nuovi giochi PS Plus Extra e Premium, tra cui titoli remastered, manageriali e un classico Wild Arms 4 per gli utenti Premium. Sono disponibili da oggi (ma..."
-      },
-      {
-        "title": "Microsoft Gaming verso nuovi tagli? Fino al 15% del personale sarebbe a rischio",
-        "link": "https://www.everyeye.it/notizie/microsoft-gaming-tagli-15-personale-rischio-873279.html",
-        "pubDate": "Tue, 21 Apr 2026 18:01:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-notizie/microsoft-gaming-tagli-15-personale-rischio-v6-873279-800x600.webp",
-        "description": "Un rumor parla di possibili licenziamenti del 15% in Xbox/Microsoft Gaming, ma nessuna conferma ufficiale al momento. Un nuovo rumor scuote il mondo Xbox e, più in generale, l&#..."
-      },
-      {
-        "title": "Lord of Hatred è la svolta che i fan di Diablo 4 aspettavano?",
-        "link": "https://www.everyeye.it/articoli/recensione-lord-of-hatred-svolta-fan-diablo-4-aspettavano-67036.html",
-        "pubDate": "Tue, 21 Apr 2026 18:00:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-articoli/lord-of-hatred-svolta-fan-diablo-4-aspettavano-recensione-v8-67036-800x600.webp",
-        "description": "Diablo IV cambia volto con Lord of Hatred: narrazione meno cupa, novità nelle classi, gameplay più veloce e endgame rinnovato, ma sfida ridotta."
-      },
-      {
-        "title": "Solo da Gamelife: approfitta ora dell'extravalutazione fino al 40% sui giochi usati #AD",
-        "link": "https://www.everyeye.it/notizie/gamelife-approfitta-extravalutazione-40-giochi-usati-873278.html",
-        "pubDate": "Tue, 21 Apr 2026 17:58:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-notizie/solo-gamelife-approfitta-dell-extravalutazione-40-giochi-usati-ad-v3-873278-800x600.webp",
-        "description": "Porta il tuo usato da Gamelife e ottieni una extravalutazione fino al 40% su qualsiasi gioco della tua collezione. Avete qualche gioco usato che non volete tenere in collezione?..."
-      },
-      {
-        "title": "Playdate: stop ai giochi con IA generativa, ma il dibattito resta aperto",
-        "link": "https://www.everyeye.it/notizie/playdate-stop-giochi-generativa-dibattito-resta-aperto-873263.html",
-        "pubDate": "Tue, 21 Apr 2026 17:20:00 +0200",
-        "source": "Everyeye.it - Videogiochi",
-        "image": "https://images.everyeye.it/img-notizie/playdate-stop-giochi-ia-generativa-dibattito-resta-aperto-v7-873263-800x600.webp",
-        "description": "Panic vieta giochi creati con IA generativa, promuovendo il lavoro umano e maggiore trasparenza sui titoli già pubblicati. Panic ha deciso di tracciare una linea molto chiara pe..."
       }
     ],
     "finance": [
@@ -8019,12 +7056,59 @@ window.NEWS_DATA = {
         "image": "",
         "description": "L’analisi effettuata dal Corriere della Sera e da iLMeteo.it sui dati 2024. L’analisi effettuata dal Corriere della Sera e da iLMeteo.it sui dati 2024."
       }
-    ],
-    "ai": []
+    ]
   },
   "nl": {
     "local": [
       {
+        "title": "Cricket verovert Eindhovense sportvelden: 'Wordt als religie gezien'",
+        "link": "https://nos.nl/l/2611530",
+        "pubDate": "Wed, 22 Apr 2026 10:27:23 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vijf.cdn.nos.nl/B/Y/C/X/J/j2LkkHikMir8FcaiX3yunnkwnuabk6rsK58JLi3/0x0x768x432-768x432.webp",
+        "description": "Op sportvelden in Eindhoven wordt niet alleen gevoetbald, gekorfbald of gehockeyd. Steeds vaker zijn er cricketspelers actief. De stad kent inmiddels vier clubs, met samen meer ..."
+      },
+      {
+        "title": "'Om misbruik aan te tonen diende rechter duizenden onzinnige Woo-verzoeken in'",
+        "link": "https://nos.nl/l/2611529",
+        "pubDate": "Wed, 22 Apr 2026 10:01:09 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/4/y/W/P/Z/ZKZjV2EPsgLv8TrCfEydMMcZj9vJPxjxs9AQMcJ/0x207x4000x2250-1024x576.webp",
+        "description": "Een rechter van de rechtbank Noord-Holland heeft duizenden Woo-verzoeken naar gemeenten gestuurd om te laten zien dat de Wet open overheid makkelijk te misbruiken is. Dat schrij..."
+      },
+      {
+        "title": "Vol stroomnet Utrecht is een bittere pil: 'Waardeloos dat dit nodig is'",
+        "link": "https://nos.nl/l/2611522",
+        "pubDate": "Wed, 22 Apr 2026 09:30:05 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/F/m/P/T/s/iHE4QYJpEctC4GqqUapkJraqQu7nxUgDQF1gASC/5x203x3984x2241-1024x576.webp",
+        "description": "\"Een bittere pil voor Utrecht\", noemt burgemeester Sharon Dijksma het volle stroomnet in haar stad. De voorzitter van de Nederlandse Vereniging Duurzame Energie vindt het \"waard..."
+      },
+      {
+        "title": "Kabinet onderzoekt of Kanye West toch geweigerd kan worden",
+        "link": "https://nos.nl/l/2611521",
+        "pubDate": "Wed, 22 Apr 2026 08:42:38 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://acht.cdn.nos.nl/A/e/G/Q/E/g2hYsHRT51AYgMJUykJW8o4ErJSbvJoLUQ5rjhh/417x209x3072x1728-1024x576.webp",
+        "description": "Het kabinet onderzoekt of rapper Kanye West, ook bekend als Ye, toch geweigerd kan worden. Minister Van den Brink van Asiel en Migratie laat bekijken of er \"aanknopingspunten\" z..."
+      },
+      {
+        "title": "Grote zorgen onder Nederlanders over persoonlijke financiën door oorlog in Midden-Oosten",
+        "link": "https://nos.nl/l/2611517",
+        "pubDate": "Wed, 22 Apr 2026 07:47:02 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://zeven.cdn.nos.nl/4/e/F/6/H/QG2CAkeeujy3mgjX7XHb6ReTEZvQ65G37AHATda/5x423x3984x2241-1024x576.webp",
+        "description": "De oorlog in het Midden-Oosten raakt inmiddels ook het vertrouwen van Nederlandse consumenten. Vanwege zorgen over stijgende prijzen, bijvoorbeeld aan de pomp, stellen steeds me..."
+      },
+      {
+        "title": "Wekdienst 22/4: Helm weer te zien in Roemenië • Kamerdebat compensatie energieprijzen",
+        "link": "https://nos.nl/l/2611513",
+        "pubDate": "Wed, 22 Apr 2026 06:26:43 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://een.cdn.nos.nl/6/w/c/u/s/2wdwkTdGv3dovcRFCKwg39wmWpf4ivFJTg7n9ie/0x0x1920x1080-1024x576.webp",
+        "description": "Goedemorgen! De gestolen Roemeense gouden helm en twee armbanden zijn weer te zien in een museum in Boekarest en in de Tweede Kamer is een debat over het door het kabinet aangek..."
+      },
+      {
         "title": "Trump verlengt eenzijdig bestand met Iran, geen nieuwe aanvallen gemeld",
         "link": "https://nos.nl/l/2611510",
         "pubDate": "Wed, 22 Apr 2026 05:16:34 +0200",
@@ -8045,7 +7129,7 @@ window.NEWS_DATA = {
         "link": "https://nos.nl/l/2611508",
         "pubDate": "Wed, 22 Apr 2026 03:11:37 +0200",
         "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/5/m/F/F/P/xBQ86apBfKoUWoigr6rRE5V6KGE7xBghd56s8SG/0x0x4000x2250-1024x576.webp",
+        "image": "https://vijf.cdn.nos.nl/A/V/H/E/d/7GVSRvKe7WhwBa1h9Hft5HAAf3XTCkyn8LJMMs7/0x488x2688x1512-1024x576.webp",
         "description": "Britse kinderen en jongeren onder de 18 zullen nooit in hun leven legaal sigaretten kunnen kopen. Een wet daarvoor is aangenomen door het Britse Lagerhuis en Hogerhuis. De Brits..."
       },
       {
@@ -8054,18 +7138,18 @@ window.NEWS_DATA = {
         "pubDate": "Wed, 22 Apr 2026 00:45:16 +0200",
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/8/Z/s/k/C/4dXM3daeQKrMsDL6Qn43xHLUwaw1QAXxWgSZvB9/0x207x4000x2250-1024x576.webp",
-        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor een vast bedrag per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, ..."
+        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor 49 euro per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, trein of..."
       },
       {
-        "title": "Opnieuw onrustig anti-azc-protest Loosdrecht, twee aanhoudingen",
+        "title": "Opnieuw onrustig asielprotest Loosdrecht, twee aanhoudingen",
         "link": "https://nos.nl/l/2611506",
         "pubDate": "Wed, 22 Apr 2026 00:17:42 +0200",
         "source": "NOS Nieuws",
-        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/172x87x1248x702-1024x576.webp",
+        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/64x169x1008x567-1008x567.webp",
         "description": "Voor de tweede avond op rij is er in Loosdrecht gedemonstreerd tegen de komst van een noodopvang voor asielzoekers. De Mobiele Eenheid heeft charges uitgevoerd, twee mensen zijn..."
       },
       {
-        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op universiteit Maastricht",
+        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op Universiteit Maastricht",
         "link": "https://nos.nl/l/2611505",
         "pubDate": "Tue, 21 Apr 2026 23:18:42 +0200",
         "source": "NOS Nieuws",
@@ -8135,58 +7219,58 @@ window.NEWS_DATA = {
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/B/E/P/a/t/iuJqmCLSmbkAv9VZLyXMB52omQgo1oeguSJdKqK/8x4x1088x612-1024x576.webp",
         "description": "Bij twee scherpe bochten tussen de zuidelijke en westelijke ringweg in Groningen neemt de provincie extra maatregelen om automobilisten te waarschuwen. Zo komen er betere waarsc..."
-      },
-      {
-        "title": "Nederlanders in Istanbul stierven net als Duits gezin door bestrijdingsmiddel",
-        "link": "https://nos.nl/l/2611476",
-        "pubDate": "Tue, 21 Apr 2026 18:45:11 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vijf.cdn.nos.nl/B/2/V/X/2/seXFEv1ahSS8r3QcaWHZA8RVyjpQgh11MRgf9WB/0x301x4000x2250-1024x576.webp",
-        "description": "De twee minderjarige Nederlandse broers die vorig jaar augustus dood werden gevonden in hun hotelkamer in Istanbul, zijn overleden aan vergiftiging door het bestrijdingsmiddel f..."
-      },
-      {
-        "title": "Proef met onderzoek naar verwurging levert veel meer aanvragen op dan verwacht",
-        "link": "https://nos.nl/l/2611471",
-        "pubDate": "Tue, 21 Apr 2026 18:33:03 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/7/N/Y/J/GmdiabZTMhySnBjredd6MjxKthcn9ADVQSHSYcA/75x81x3232x1818-1024x576.webp",
-        "description": "Forensisch artsen in Rotterdam krijgen veel meer aanvragen dan verwacht voor onderzoeken naar pogingen tot wurging. Sinds 1 december 2025 loopt er een proef waarbij de politie e..."
-      },
-      {
-        "title": "'Meer hulp nodig voor mensen met ernstige psychische aandoeningen'",
-        "link": "https://nos.nl/l/2611468",
-        "pubDate": "Tue, 21 Apr 2026 17:49:38 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vier.cdn.nos.nl/o/5/B/4/6/SR1PdmNHqvqxomRkV9T7W4TdYxDvYAv1RG3oDb/0x234x4000x2250-1024x576.webp",
-        "description": "Er is meer nodig om veiligheidsrisico's voor mensen met ernstige psychische klachten te verminderen. Dat concludeert de Onderzoeksraad voor Veiligheid (OVV) in een nieuw rapport..."
-      },
-      {
-        "title": "Nederlandse werkenden meest productief in 20 jaar, hoe kan dat?",
-        "link": "https://nos.nl/l/2611466",
-        "pubDate": "Tue, 21 Apr 2026 17:41:44 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/h/R/M/D/ijQDZsLSfrXu92N3C68c1fcxjpaQiGtguvYGxpt/7x198x2032x1143-1024x576.webp",
-        "description": "Het is cruciaal voor de economische groei en welvaart van een land: de arbeidsproductiviteit. Die geeft aan hoeveel werk je gedaan krijgt in een uur en dus hoe efficiënt dat wor..."
-      },
-      {
-        "title": "Partijen teleurgesteld over sneuvelen asielwet: 'een blamage' en 'diep triest'",
-        "link": "https://nos.nl/l/2611464",
-        "pubDate": "Tue, 21 Apr 2026 17:40:39 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/Y/h/m/Q/Z/gVR5U7ZEZGdxY2XjZKz9fqJ7NVQEin9doMnmKi/1130x654x1952x1098-1024x576.webp",
-        "description": "\"Een blamage\", \"diep triest\" en \"een verdrietige dag\": meerdere fractieleiders in de Tweede Kamer zijn teleurgesteld dat de asielnoodmaatregelenwet vandaag in de Eerste Kamer is..."
-      },
-      {
-        "title": "Ophokplicht voor pluimvee vervalt, behalve in Gelderse Vallei",
-        "link": "https://nos.nl/l/2611462",
-        "pubDate": "Tue, 21 Apr 2026 17:30:45 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/F/Z/Q/2/U/8AYRXA76QTT8e8y5Yuf6bmmH3DRNrCGr9TgGgfu/669x755x2640x1485-1024x576.webp",
-        "description": "De ophok- en afschermplicht die in verband met de vogelgriep gold voor pluimvee wordt in bijna het hele land ingetrokken. Alleen in de Gelderse Vallei, waar veel pluimveebedrijv..."
       }
     ],
     "top": [
       {
+        "title": "Cricket verovert Eindhovense sportvelden: 'Wordt als religie gezien'",
+        "link": "https://nos.nl/l/2611530",
+        "pubDate": "Wed, 22 Apr 2026 10:27:23 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vijf.cdn.nos.nl/B/Y/C/X/J/j2LkkHikMir8FcaiX3yunnkwnuabk6rsK58JLi3/0x0x768x432-768x432.webp",
+        "description": "Op sportvelden in Eindhoven wordt niet alleen gevoetbald, gekorfbald of gehockeyd. Steeds vaker zijn er cricketspelers actief. De stad kent inmiddels vier clubs, met samen meer ..."
+      },
+      {
+        "title": "'Om misbruik aan te tonen diende rechter duizenden onzinnige Woo-verzoeken in'",
+        "link": "https://nos.nl/l/2611529",
+        "pubDate": "Wed, 22 Apr 2026 10:01:09 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/4/y/W/P/Z/ZKZjV2EPsgLv8TrCfEydMMcZj9vJPxjxs9AQMcJ/0x207x4000x2250-1024x576.webp",
+        "description": "Een rechter van de rechtbank Noord-Holland heeft duizenden Woo-verzoeken naar gemeenten gestuurd om te laten zien dat de Wet open overheid makkelijk te misbruiken is. Dat schrij..."
+      },
+      {
+        "title": "Vol stroomnet Utrecht is een bittere pil: 'Waardeloos dat dit nodig is'",
+        "link": "https://nos.nl/l/2611522",
+        "pubDate": "Wed, 22 Apr 2026 09:30:05 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/F/m/P/T/s/iHE4QYJpEctC4GqqUapkJraqQu7nxUgDQF1gASC/5x203x3984x2241-1024x576.webp",
+        "description": "\"Een bittere pil voor Utrecht\", noemt burgemeester Sharon Dijksma het volle stroomnet in haar stad. De voorzitter van de Nederlandse Vereniging Duurzame Energie vindt het \"waard..."
+      },
+      {
+        "title": "Kabinet onderzoekt of Kanye West toch geweigerd kan worden",
+        "link": "https://nos.nl/l/2611521",
+        "pubDate": "Wed, 22 Apr 2026 08:42:38 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://acht.cdn.nos.nl/A/e/G/Q/E/g2hYsHRT51AYgMJUykJW8o4ErJSbvJoLUQ5rjhh/417x209x3072x1728-1024x576.webp",
+        "description": "Het kabinet onderzoekt of rapper Kanye West, ook bekend als Ye, toch geweigerd kan worden. Minister Van den Brink van Asiel en Migratie laat bekijken of er \"aanknopingspunten\" z..."
+      },
+      {
+        "title": "Grote zorgen onder Nederlanders over persoonlijke financiën door oorlog in Midden-Oosten",
+        "link": "https://nos.nl/l/2611517",
+        "pubDate": "Wed, 22 Apr 2026 07:47:02 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://zeven.cdn.nos.nl/4/e/F/6/H/QG2CAkeeujy3mgjX7XHb6ReTEZvQ65G37AHATda/5x423x3984x2241-1024x576.webp",
+        "description": "De oorlog in het Midden-Oosten raakt inmiddels ook het vertrouwen van Nederlandse consumenten. Vanwege zorgen over stijgende prijzen, bijvoorbeeld aan de pomp, stellen steeds me..."
+      },
+      {
+        "title": "Wekdienst 22/4: Helm weer te zien in Roemenië • Kamerdebat compensatie energieprijzen",
+        "link": "https://nos.nl/l/2611513",
+        "pubDate": "Wed, 22 Apr 2026 06:26:43 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://een.cdn.nos.nl/6/w/c/u/s/2wdwkTdGv3dovcRFCKwg39wmWpf4ivFJTg7n9ie/0x0x1920x1080-1024x576.webp",
+        "description": "Goedemorgen! De gestolen Roemeense gouden helm en twee armbanden zijn weer te zien in een museum in Boekarest en in de Tweede Kamer is een debat over het door het kabinet aangek..."
+      },
+      {
         "title": "Trump verlengt eenzijdig bestand met Iran, geen nieuwe aanvallen gemeld",
         "link": "https://nos.nl/l/2611510",
         "pubDate": "Wed, 22 Apr 2026 05:16:34 +0200",
@@ -8207,7 +7291,7 @@ window.NEWS_DATA = {
         "link": "https://nos.nl/l/2611508",
         "pubDate": "Wed, 22 Apr 2026 03:11:37 +0200",
         "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/5/m/F/F/P/xBQ86apBfKoUWoigr6rRE5V6KGE7xBghd56s8SG/0x0x4000x2250-1024x576.webp",
+        "image": "https://vijf.cdn.nos.nl/A/V/H/E/d/7GVSRvKe7WhwBa1h9Hft5HAAf3XTCkyn8LJMMs7/0x488x2688x1512-1024x576.webp",
         "description": "Britse kinderen en jongeren onder de 18 zullen nooit in hun leven legaal sigaretten kunnen kopen. Een wet daarvoor is aangenomen door het Britse Lagerhuis en Hogerhuis. De Brits..."
       },
       {
@@ -8216,18 +7300,18 @@ window.NEWS_DATA = {
         "pubDate": "Wed, 22 Apr 2026 00:45:16 +0200",
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/8/Z/s/k/C/4dXM3daeQKrMsDL6Qn43xHLUwaw1QAXxWgSZvB9/0x207x4000x2250-1024x576.webp",
-        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor een vast bedrag per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, ..."
+        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor 49 euro per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, trein of..."
       },
       {
-        "title": "Opnieuw onrustig anti-azc-protest Loosdrecht, twee aanhoudingen",
+        "title": "Opnieuw onrustig asielprotest Loosdrecht, twee aanhoudingen",
         "link": "https://nos.nl/l/2611506",
         "pubDate": "Wed, 22 Apr 2026 00:17:42 +0200",
         "source": "NOS Nieuws",
-        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/172x87x1248x702-1024x576.webp",
+        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/64x169x1008x567-1008x567.webp",
         "description": "Voor de tweede avond op rij is er in Loosdrecht gedemonstreerd tegen de komst van een noodopvang voor asielzoekers. De Mobiele Eenheid heeft charges uitgevoerd, twee mensen zijn..."
       },
       {
-        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op universiteit Maastricht",
+        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op Universiteit Maastricht",
         "link": "https://nos.nl/l/2611505",
         "pubDate": "Tue, 21 Apr 2026 23:18:42 +0200",
         "source": "NOS Nieuws",
@@ -8297,54 +7381,6 @@ window.NEWS_DATA = {
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/B/E/P/a/t/iuJqmCLSmbkAv9VZLyXMB52omQgo1oeguSJdKqK/8x4x1088x612-1024x576.webp",
         "description": "Bij twee scherpe bochten tussen de zuidelijke en westelijke ringweg in Groningen neemt de provincie extra maatregelen om automobilisten te waarschuwen. Zo komen er betere waarsc..."
-      },
-      {
-        "title": "Nederlanders in Istanbul stierven net als Duits gezin door bestrijdingsmiddel",
-        "link": "https://nos.nl/l/2611476",
-        "pubDate": "Tue, 21 Apr 2026 18:45:11 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vijf.cdn.nos.nl/B/2/V/X/2/seXFEv1ahSS8r3QcaWHZA8RVyjpQgh11MRgf9WB/0x301x4000x2250-1024x576.webp",
-        "description": "De twee minderjarige Nederlandse broers die vorig jaar augustus dood werden gevonden in hun hotelkamer in Istanbul, zijn overleden aan vergiftiging door het bestrijdingsmiddel f..."
-      },
-      {
-        "title": "Proef met onderzoek naar verwurging levert veel meer aanvragen op dan verwacht",
-        "link": "https://nos.nl/l/2611471",
-        "pubDate": "Tue, 21 Apr 2026 18:33:03 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/7/N/Y/J/GmdiabZTMhySnBjredd6MjxKthcn9ADVQSHSYcA/75x81x3232x1818-1024x576.webp",
-        "description": "Forensisch artsen in Rotterdam krijgen veel meer aanvragen dan verwacht voor onderzoeken naar pogingen tot wurging. Sinds 1 december 2025 loopt er een proef waarbij de politie e..."
-      },
-      {
-        "title": "'Meer hulp nodig voor mensen met ernstige psychische aandoeningen'",
-        "link": "https://nos.nl/l/2611468",
-        "pubDate": "Tue, 21 Apr 2026 17:49:38 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vier.cdn.nos.nl/o/5/B/4/6/SR1PdmNHqvqxomRkV9T7W4TdYxDvYAv1RG3oDb/0x234x4000x2250-1024x576.webp",
-        "description": "Er is meer nodig om veiligheidsrisico's voor mensen met ernstige psychische klachten te verminderen. Dat concludeert de Onderzoeksraad voor Veiligheid (OVV) in een nieuw rapport..."
-      },
-      {
-        "title": "Nederlandse werkenden meest productief in 20 jaar, hoe kan dat?",
-        "link": "https://nos.nl/l/2611466",
-        "pubDate": "Tue, 21 Apr 2026 17:41:44 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/h/R/M/D/ijQDZsLSfrXu92N3C68c1fcxjpaQiGtguvYGxpt/7x198x2032x1143-1024x576.webp",
-        "description": "Het is cruciaal voor de economische groei en welvaart van een land: de arbeidsproductiviteit. Die geeft aan hoeveel werk je gedaan krijgt in een uur en dus hoe efficiënt dat wor..."
-      },
-      {
-        "title": "Partijen teleurgesteld over sneuvelen asielwet: 'een blamage' en 'diep triest'",
-        "link": "https://nos.nl/l/2611464",
-        "pubDate": "Tue, 21 Apr 2026 17:40:39 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/Y/h/m/Q/Z/gVR5U7ZEZGdxY2XjZKz9fqJ7NVQEin9doMnmKi/1130x654x1952x1098-1024x576.webp",
-        "description": "\"Een blamage\", \"diep triest\" en \"een verdrietige dag\": meerdere fractieleiders in de Tweede Kamer zijn teleurgesteld dat de asielnoodmaatregelenwet vandaag in de Eerste Kamer is..."
-      },
-      {
-        "title": "Ophokplicht voor pluimvee vervalt, behalve in Gelderse Vallei",
-        "link": "https://nos.nl/l/2611462",
-        "pubDate": "Tue, 21 Apr 2026 17:30:45 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/F/Z/Q/2/U/8AYRXA76QTT8e8y5Yuf6bmmH3DRNrCGr9TgGgfu/669x755x2640x1485-1024x576.webp",
-        "description": "De ophok- en afschermplicht die in verband met de vogelgriep gold voor pluimvee wordt in bijna het hele land ingetrokken. Alleen in de Gelderse Vallei, waar veel pluimveebedrijv..."
       }
     ],
     "technology": [
@@ -8511,6 +7547,54 @@ window.NEWS_DATA = {
     ],
     "gaming": [
       {
+        "title": "Cricket verovert Eindhovense sportvelden: 'Wordt als religie gezien'",
+        "link": "https://nos.nl/l/2611530",
+        "pubDate": "Wed, 22 Apr 2026 10:27:23 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vijf.cdn.nos.nl/B/Y/C/X/J/j2LkkHikMir8FcaiX3yunnkwnuabk6rsK58JLi3/0x0x768x432-768x432.webp",
+        "description": "Op sportvelden in Eindhoven wordt niet alleen gevoetbald, gekorfbald of gehockeyd. Steeds vaker zijn er cricketspelers actief. De stad kent inmiddels vier clubs, met samen meer ..."
+      },
+      {
+        "title": "'Om misbruik aan te tonen diende rechter duizenden onzinnige Woo-verzoeken in'",
+        "link": "https://nos.nl/l/2611529",
+        "pubDate": "Wed, 22 Apr 2026 10:01:09 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/4/y/W/P/Z/ZKZjV2EPsgLv8TrCfEydMMcZj9vJPxjxs9AQMcJ/0x207x4000x2250-1024x576.webp",
+        "description": "Een rechter van de rechtbank Noord-Holland heeft duizenden Woo-verzoeken naar gemeenten gestuurd om te laten zien dat de Wet open overheid makkelijk te misbruiken is. Dat schrij..."
+      },
+      {
+        "title": "Vol stroomnet Utrecht is een bittere pil: 'Waardeloos dat dit nodig is'",
+        "link": "https://nos.nl/l/2611522",
+        "pubDate": "Wed, 22 Apr 2026 09:30:05 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/F/m/P/T/s/iHE4QYJpEctC4GqqUapkJraqQu7nxUgDQF1gASC/5x203x3984x2241-1024x576.webp",
+        "description": "\"Een bittere pil voor Utrecht\", noemt burgemeester Sharon Dijksma het volle stroomnet in haar stad. De voorzitter van de Nederlandse Vereniging Duurzame Energie vindt het \"waard..."
+      },
+      {
+        "title": "Kabinet onderzoekt of Kanye West toch geweigerd kan worden",
+        "link": "https://nos.nl/l/2611521",
+        "pubDate": "Wed, 22 Apr 2026 08:42:38 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://acht.cdn.nos.nl/A/e/G/Q/E/g2hYsHRT51AYgMJUykJW8o4ErJSbvJoLUQ5rjhh/417x209x3072x1728-1024x576.webp",
+        "description": "Het kabinet onderzoekt of rapper Kanye West, ook bekend als Ye, toch geweigerd kan worden. Minister Van den Brink van Asiel en Migratie laat bekijken of er \"aanknopingspunten\" z..."
+      },
+      {
+        "title": "Grote zorgen onder Nederlanders over persoonlijke financiën door oorlog in Midden-Oosten",
+        "link": "https://nos.nl/l/2611517",
+        "pubDate": "Wed, 22 Apr 2026 07:47:02 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://zeven.cdn.nos.nl/4/e/F/6/H/QG2CAkeeujy3mgjX7XHb6ReTEZvQ65G37AHATda/5x423x3984x2241-1024x576.webp",
+        "description": "De oorlog in het Midden-Oosten raakt inmiddels ook het vertrouwen van Nederlandse consumenten. Vanwege zorgen over stijgende prijzen, bijvoorbeeld aan de pomp, stellen steeds me..."
+      },
+      {
+        "title": "Wekdienst 22/4: Helm weer te zien in Roemenië • Kamerdebat compensatie energieprijzen",
+        "link": "https://nos.nl/l/2611513",
+        "pubDate": "Wed, 22 Apr 2026 06:26:43 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://een.cdn.nos.nl/6/w/c/u/s/2wdwkTdGv3dovcRFCKwg39wmWpf4ivFJTg7n9ie/0x0x1920x1080-1024x576.webp",
+        "description": "Goedemorgen! De gestolen Roemeense gouden helm en twee armbanden zijn weer te zien in een museum in Boekarest en in de Tweede Kamer is een debat over het door het kabinet aangek..."
+      },
+      {
         "title": "Trump verlengt eenzijdig bestand met Iran, geen nieuwe aanvallen gemeld",
         "link": "https://nos.nl/l/2611510",
         "pubDate": "Wed, 22 Apr 2026 05:16:34 +0200",
@@ -8531,7 +7615,7 @@ window.NEWS_DATA = {
         "link": "https://nos.nl/l/2611508",
         "pubDate": "Wed, 22 Apr 2026 03:11:37 +0200",
         "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/5/m/F/F/P/xBQ86apBfKoUWoigr6rRE5V6KGE7xBghd56s8SG/0x0x4000x2250-1024x576.webp",
+        "image": "https://vijf.cdn.nos.nl/A/V/H/E/d/7GVSRvKe7WhwBa1h9Hft5HAAf3XTCkyn8LJMMs7/0x488x2688x1512-1024x576.webp",
         "description": "Britse kinderen en jongeren onder de 18 zullen nooit in hun leven legaal sigaretten kunnen kopen. Een wet daarvoor is aangenomen door het Britse Lagerhuis en Hogerhuis. De Brits..."
       },
       {
@@ -8540,18 +7624,18 @@ window.NEWS_DATA = {
         "pubDate": "Wed, 22 Apr 2026 00:45:16 +0200",
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/8/Z/s/k/C/4dXM3daeQKrMsDL6Qn43xHLUwaw1QAXxWgSZvB9/0x207x4000x2250-1024x576.webp",
-        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor een vast bedrag per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, ..."
+        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor 49 euro per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, trein of..."
       },
       {
-        "title": "Opnieuw onrustig anti-azc-protest Loosdrecht, twee aanhoudingen",
+        "title": "Opnieuw onrustig asielprotest Loosdrecht, twee aanhoudingen",
         "link": "https://nos.nl/l/2611506",
         "pubDate": "Wed, 22 Apr 2026 00:17:42 +0200",
         "source": "NOS Nieuws",
-        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/172x87x1248x702-1024x576.webp",
+        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/64x169x1008x567-1008x567.webp",
         "description": "Voor de tweede avond op rij is er in Loosdrecht gedemonstreerd tegen de komst van een noodopvang voor asielzoekers. De Mobiele Eenheid heeft charges uitgevoerd, twee mensen zijn..."
       },
       {
-        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op universiteit Maastricht",
+        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op Universiteit Maastricht",
         "link": "https://nos.nl/l/2611505",
         "pubDate": "Tue, 21 Apr 2026 23:18:42 +0200",
         "source": "NOS Nieuws",
@@ -8621,57 +7705,17 @@ window.NEWS_DATA = {
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/B/E/P/a/t/iuJqmCLSmbkAv9VZLyXMB52omQgo1oeguSJdKqK/8x4x1088x612-1024x576.webp",
         "description": "Bij twee scherpe bochten tussen de zuidelijke en westelijke ringweg in Groningen neemt de provincie extra maatregelen om automobilisten te waarschuwen. Zo komen er betere waarsc..."
-      },
-      {
-        "title": "Nederlanders in Istanbul stierven net als Duits gezin door bestrijdingsmiddel",
-        "link": "https://nos.nl/l/2611476",
-        "pubDate": "Tue, 21 Apr 2026 18:45:11 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vijf.cdn.nos.nl/B/2/V/X/2/seXFEv1ahSS8r3QcaWHZA8RVyjpQgh11MRgf9WB/0x301x4000x2250-1024x576.webp",
-        "description": "De twee minderjarige Nederlandse broers die vorig jaar augustus dood werden gevonden in hun hotelkamer in Istanbul, zijn overleden aan vergiftiging door het bestrijdingsmiddel f..."
-      },
-      {
-        "title": "Proef met onderzoek naar verwurging levert veel meer aanvragen op dan verwacht",
-        "link": "https://nos.nl/l/2611471",
-        "pubDate": "Tue, 21 Apr 2026 18:33:03 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/7/N/Y/J/GmdiabZTMhySnBjredd6MjxKthcn9ADVQSHSYcA/75x81x3232x1818-1024x576.webp",
-        "description": "Forensisch artsen in Rotterdam krijgen veel meer aanvragen dan verwacht voor onderzoeken naar pogingen tot wurging. Sinds 1 december 2025 loopt er een proef waarbij de politie e..."
-      },
-      {
-        "title": "'Meer hulp nodig voor mensen met ernstige psychische aandoeningen'",
-        "link": "https://nos.nl/l/2611468",
-        "pubDate": "Tue, 21 Apr 2026 17:49:38 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vier.cdn.nos.nl/o/5/B/4/6/SR1PdmNHqvqxomRkV9T7W4TdYxDvYAv1RG3oDb/0x234x4000x2250-1024x576.webp",
-        "description": "Er is meer nodig om veiligheidsrisico's voor mensen met ernstige psychische klachten te verminderen. Dat concludeert de Onderzoeksraad voor Veiligheid (OVV) in een nieuw rapport..."
-      },
-      {
-        "title": "Nederlandse werkenden meest productief in 20 jaar, hoe kan dat?",
-        "link": "https://nos.nl/l/2611466",
-        "pubDate": "Tue, 21 Apr 2026 17:41:44 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/h/R/M/D/ijQDZsLSfrXu92N3C68c1fcxjpaQiGtguvYGxpt/7x198x2032x1143-1024x576.webp",
-        "description": "Het is cruciaal voor de economische groei en welvaart van een land: de arbeidsproductiviteit. Die geeft aan hoeveel werk je gedaan krijgt in een uur en dus hoe efficiënt dat wor..."
-      },
-      {
-        "title": "Partijen teleurgesteld over sneuvelen asielwet: 'een blamage' en 'diep triest'",
-        "link": "https://nos.nl/l/2611464",
-        "pubDate": "Tue, 21 Apr 2026 17:40:39 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/Y/h/m/Q/Z/gVR5U7ZEZGdxY2XjZKz9fqJ7NVQEin9doMnmKi/1130x654x1952x1098-1024x576.webp",
-        "description": "\"Een blamage\", \"diep triest\" en \"een verdrietige dag\": meerdere fractieleiders in de Tweede Kamer zijn teleurgesteld dat de asielnoodmaatregelenwet vandaag in de Eerste Kamer is..."
-      },
-      {
-        "title": "Ophokplicht voor pluimvee vervalt, behalve in Gelderse Vallei",
-        "link": "https://nos.nl/l/2611462",
-        "pubDate": "Tue, 21 Apr 2026 17:30:45 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/F/Z/Q/2/U/8AYRXA76QTT8e8y5Yuf6bmmH3DRNrCGr9TgGgfu/669x755x2640x1485-1024x576.webp",
-        "description": "De ophok- en afschermplicht die in verband met de vogelgriep gold voor pluimvee wordt in bijna het hele land ingetrokken. Alleen in de Gelderse Vallei, waar veel pluimveebedrijv..."
       }
     ],
     "finance": [
+      {
+        "title": "Grote zorgen onder Nederlanders over persoonlijke financiën door oorlog in Midden-Oosten",
+        "link": "https://nos.nl/l/2611517",
+        "pubDate": "Wed, 22 Apr 2026 07:47:02 +0200",
+        "source": "NOS Economie",
+        "image": "https://zeven.cdn.nos.nl/4/e/F/6/H/QG2CAkeeujy3mgjX7XHb6ReTEZvQ65G37AHATda/5x423x3984x2241-1024x576.webp",
+        "description": "De oorlog in het Midden-Oosten raakt inmiddels ook het vertrouwen van Nederlandse consumenten. Vanwege zorgen over stijgende prijzen, bijvoorbeeld aan de pomp, stellen steeds me..."
+      },
       {
         "title": "Lufthansa schrapt 20.000 vluchten vanwege brandstofprijzen",
         "link": "https://nos.nl/l/2611497",
@@ -8823,17 +7867,25 @@ window.NEWS_DATA = {
         "source": "NOS Economie",
         "image": "https://twee.cdn.nos.nl/E/Y/L/A/w/7fvnBBWip4QnmYi9PX6N1rVsvSiKfRHaZhor8fH/0x167x4000x2250-1024x576.webp",
         "description": "Persoonsgegevens van Nederlanders kunnen in handen komen van de Amerikanen, en dat houdt de politiek flink bezig. Het zegt veel over de veranderende relatie met de Verenigde Sta..."
-      },
-      {
-        "title": "Gaan schepen echt weer varen door de Straat van Hormuz, nu Iran dat toelaat?",
-        "link": "https://nos.nl/l/2610877",
-        "pubDate": "Fri, 17 Apr 2026 19:23:42 +0200",
-        "source": "NOS Economie",
-        "image": "https://een.cdn.nos.nl/9/6/k/f/t/wTcpdE5PzREmCZrRgLSPBpQayivCHdSEngev47d/0x0x4000x2250-1024x576.webp",
-        "description": "\"IRAN ZEGT DAT DE STRAAT VAN HORMUZ HELEMAAL OPEN IS\", schreef de Amerikaanse president Trump, zoals vaker helemaal in hoofdletters, op zijn platform Truth Social. Hij reageert ..."
       }
     ],
     "sports": [
+      {
+        "title": "Strijd om tweede plaats en spanning om handhaving: eredivisie gaat vanavond al verder",
+        "link": "https://nos.nl/l/2611518",
+        "pubDate": "Wed, 22 Apr 2026 08:00:18 +0200",
+        "source": "NOS Sport",
+        "image": "https://zes.cdn.nos.nl/4/3/m/k/x/UugfNvw1qdXcxY8XnUgufjwPSdDgTPdUxog7LD4/40x57x3136x1764-1024x576.webp",
+        "description": "De strijd om het kampioenschap is al beslist, maar in de laatste vier speelronden van de eredivisie staat nog veel op het spel. Vanavond gaat de competitie alweer verder met spe..."
+      },
+      {
+        "title": "Dest verwacht PSV na goed WK te verlaten: 'Wil me kunnen meten met de besten'",
+        "link": "https://nos.nl/l/2611511",
+        "pubDate": "Wed, 22 Apr 2026 05:56:38 +0200",
+        "source": "NOS Sport",
+        "image": "https://zeven.cdn.nos.nl/5/E/9/G/Q/NmcP61arhP1ZgxuHHrw1kY2w9r8S8UHk6QLT7PH/3x60x3536x1989-1024x576.webp",
+        "description": "Sergiño Dest verwacht komend seizoen niet meer voor PSV te voetballen. De flankspeler uit Almere hoopt deze zomer met de Verenigde Staten \"een geweldig WK\" te spelen, waarmee hi..."
+      },
       {
         "title": "Leicester City degradeert tien jaar na Premier League-titel naar derde niveau",
         "link": "https://nos.nl/l/2611504",
@@ -8864,7 +7916,7 @@ window.NEWS_DATA = {
         "pubDate": "Tue, 21 Apr 2026 18:56:21 +0200",
         "source": "NOS Sport",
         "image": "https://vijf.cdn.nos.nl/B/Z/G/y/M/N9zb85bdtuHFxXCux37cNA1HJyKXoqe8dA6qvbn/5x182x3200x1800-1024x576.webp",
-        "description": "Dat haar combinatie van shorttrack en langebaanschaatsen de komende jaren wordt voortgezet , voelt goed voor Suzanne Schulting. Ook zij had wel eens haar twijfels. Maar die laat..."
+        "description": "Dat haar combinatie van shorttrack en langebaanschaatsen de komende jaren wordt voortgezet , voelt goed voor Suzanne Schulting. Ook zij had weleens haar twijfels. Maar die laat ..."
       },
       {
         "title": "Arensman grijpt net naast ritzege bij aankomst bergop in Ronde van de Alpen ",
@@ -8977,26 +8029,58 @@ window.NEWS_DATA = {
         "source": "NOS Sport",
         "image": "https://twee.cdn.nos.nl/C/x/Y/G/r/k3CcKTAwTCXRLJhBs8nxwhn8TGxvqBFrV1KC4TC/6x218x2288x1287-1024x576.webp",
         "description": "Voetbalminnend Engeland lijkt het erover eens: Manchester City is na de zege op Arsenal van zondag de nieuwe titelfavoriet in de Premier League. Komende woensdag kan City op gel..."
-      },
-      {
-        "title": "Bekerwinst AZ mogelijk slecht nieuws voor Ajax met oog op Europese tickets",
-        "link": "https://nos.nl/l/2611205",
-        "pubDate": "Mon, 20 Apr 2026 10:06:13 +0200",
-        "source": "NOS Sport",
-        "image": "https://zes.cdn.nos.nl/A/W/J/Y/L/DaXhsREZYQEVFFLyRbm4jdihhW35qfeqtWMEegb/0x0x1920x1080-1024x576.webp",
-        "description": "In zekere zin was het gisteren dubbel feest in Alkmaar: met de winst van de KNVB-beker verdiende AZ niet alleen een tastbare trofee voor in de prijzenkast, maar ook een startbew..."
-      },
-      {
-        "title": "Nageeye gaat met 'eenzame tactiek' voor podiumplaats in marathon van Boston",
-        "link": "https://nos.nl/l/2611196",
-        "pubDate": "Mon, 20 Apr 2026 09:47:34 +0200",
-        "source": "NOS Sport",
-        "image": "https://twee.cdn.nos.nl/8/e/Y/P/s/ix1MzzzFDHip4SVMPbYnAq8zosxwQo88QAZom38/330x786x1392x783-1024x576.webp",
-        "description": "\"Hopelijk gaan jullie het niet vertalen naar het Engels\", zegt Abdi Nageeye met een grijns. In de minuten daarvoor deed Nederlands beste man op de marathon precies uit de doeken..."
       }
     ],
     "entertainment": [
       {
+        "title": "Cricket verovert Eindhovense sportvelden: 'Wordt als religie gezien'",
+        "link": "https://nos.nl/l/2611530",
+        "pubDate": "Wed, 22 Apr 2026 10:27:23 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vijf.cdn.nos.nl/B/Y/C/X/J/j2LkkHikMir8FcaiX3yunnkwnuabk6rsK58JLi3/0x0x768x432-768x432.webp",
+        "description": "Op sportvelden in Eindhoven wordt niet alleen gevoetbald, gekorfbald of gehockeyd. Steeds vaker zijn er cricketspelers actief. De stad kent inmiddels vier clubs, met samen meer ..."
+      },
+      {
+        "title": "'Om misbruik aan te tonen diende rechter duizenden onzinnige Woo-verzoeken in'",
+        "link": "https://nos.nl/l/2611529",
+        "pubDate": "Wed, 22 Apr 2026 10:01:09 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/4/y/W/P/Z/ZKZjV2EPsgLv8TrCfEydMMcZj9vJPxjxs9AQMcJ/0x207x4000x2250-1024x576.webp",
+        "description": "Een rechter van de rechtbank Noord-Holland heeft duizenden Woo-verzoeken naar gemeenten gestuurd om te laten zien dat de Wet open overheid makkelijk te misbruiken is. Dat schrij..."
+      },
+      {
+        "title": "Vol stroomnet Utrecht is een bittere pil: 'Waardeloos dat dit nodig is'",
+        "link": "https://nos.nl/l/2611522",
+        "pubDate": "Wed, 22 Apr 2026 09:30:05 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/F/m/P/T/s/iHE4QYJpEctC4GqqUapkJraqQu7nxUgDQF1gASC/5x203x3984x2241-1024x576.webp",
+        "description": "\"Een bittere pil voor Utrecht\", noemt burgemeester Sharon Dijksma het volle stroomnet in haar stad. De voorzitter van de Nederlandse Vereniging Duurzame Energie vindt het \"waard..."
+      },
+      {
+        "title": "Kabinet onderzoekt of Kanye West toch geweigerd kan worden",
+        "link": "https://nos.nl/l/2611521",
+        "pubDate": "Wed, 22 Apr 2026 08:42:38 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://acht.cdn.nos.nl/A/e/G/Q/E/g2hYsHRT51AYgMJUykJW8o4ErJSbvJoLUQ5rjhh/417x209x3072x1728-1024x576.webp",
+        "description": "Het kabinet onderzoekt of rapper Kanye West, ook bekend als Ye, toch geweigerd kan worden. Minister Van den Brink van Asiel en Migratie laat bekijken of er \"aanknopingspunten\" z..."
+      },
+      {
+        "title": "Grote zorgen onder Nederlanders over persoonlijke financiën door oorlog in Midden-Oosten",
+        "link": "https://nos.nl/l/2611517",
+        "pubDate": "Wed, 22 Apr 2026 07:47:02 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://zeven.cdn.nos.nl/4/e/F/6/H/QG2CAkeeujy3mgjX7XHb6ReTEZvQ65G37AHATda/5x423x3984x2241-1024x576.webp",
+        "description": "De oorlog in het Midden-Oosten raakt inmiddels ook het vertrouwen van Nederlandse consumenten. Vanwege zorgen over stijgende prijzen, bijvoorbeeld aan de pomp, stellen steeds me..."
+      },
+      {
+        "title": "Wekdienst 22/4: Helm weer te zien in Roemenië • Kamerdebat compensatie energieprijzen",
+        "link": "https://nos.nl/l/2611513",
+        "pubDate": "Wed, 22 Apr 2026 06:26:43 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://een.cdn.nos.nl/6/w/c/u/s/2wdwkTdGv3dovcRFCKwg39wmWpf4ivFJTg7n9ie/0x0x1920x1080-1024x576.webp",
+        "description": "Goedemorgen! De gestolen Roemeense gouden helm en twee armbanden zijn weer te zien in een museum in Boekarest en in de Tweede Kamer is een debat over het door het kabinet aangek..."
+      },
+      {
         "title": "Trump verlengt eenzijdig bestand met Iran, geen nieuwe aanvallen gemeld",
         "link": "https://nos.nl/l/2611510",
         "pubDate": "Wed, 22 Apr 2026 05:16:34 +0200",
@@ -9017,7 +8101,7 @@ window.NEWS_DATA = {
         "link": "https://nos.nl/l/2611508",
         "pubDate": "Wed, 22 Apr 2026 03:11:37 +0200",
         "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/5/m/F/F/P/xBQ86apBfKoUWoigr6rRE5V6KGE7xBghd56s8SG/0x0x4000x2250-1024x576.webp",
+        "image": "https://vijf.cdn.nos.nl/A/V/H/E/d/7GVSRvKe7WhwBa1h9Hft5HAAf3XTCkyn8LJMMs7/0x488x2688x1512-1024x576.webp",
         "description": "Britse kinderen en jongeren onder de 18 zullen nooit in hun leven legaal sigaretten kunnen kopen. Een wet daarvoor is aangenomen door het Britse Lagerhuis en Hogerhuis. De Brits..."
       },
       {
@@ -9026,18 +8110,18 @@ window.NEWS_DATA = {
         "pubDate": "Wed, 22 Apr 2026 00:45:16 +0200",
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/8/Z/s/k/C/4dXM3daeQKrMsDL6Qn43xHLUwaw1QAXxWgSZvB9/0x207x4000x2250-1024x576.webp",
-        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor een vast bedrag per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, ..."
+        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor 49 euro per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, trein of..."
       },
       {
-        "title": "Opnieuw onrustig anti-azc-protest Loosdrecht, twee aanhoudingen",
+        "title": "Opnieuw onrustig asielprotest Loosdrecht, twee aanhoudingen",
         "link": "https://nos.nl/l/2611506",
         "pubDate": "Wed, 22 Apr 2026 00:17:42 +0200",
         "source": "NOS Nieuws",
-        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/172x87x1248x702-1024x576.webp",
+        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/64x169x1008x567-1008x567.webp",
         "description": "Voor de tweede avond op rij is er in Loosdrecht gedemonstreerd tegen de komst van een noodopvang voor asielzoekers. De Mobiele Eenheid heeft charges uitgevoerd, twee mensen zijn..."
       },
       {
-        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op universiteit Maastricht",
+        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op Universiteit Maastricht",
         "link": "https://nos.nl/l/2611505",
         "pubDate": "Tue, 21 Apr 2026 23:18:42 +0200",
         "source": "NOS Nieuws",
@@ -9107,58 +8191,58 @@ window.NEWS_DATA = {
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/B/E/P/a/t/iuJqmCLSmbkAv9VZLyXMB52omQgo1oeguSJdKqK/8x4x1088x612-1024x576.webp",
         "description": "Bij twee scherpe bochten tussen de zuidelijke en westelijke ringweg in Groningen neemt de provincie extra maatregelen om automobilisten te waarschuwen. Zo komen er betere waarsc..."
-      },
-      {
-        "title": "Nederlanders in Istanbul stierven net als Duits gezin door bestrijdingsmiddel",
-        "link": "https://nos.nl/l/2611476",
-        "pubDate": "Tue, 21 Apr 2026 18:45:11 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vijf.cdn.nos.nl/B/2/V/X/2/seXFEv1ahSS8r3QcaWHZA8RVyjpQgh11MRgf9WB/0x301x4000x2250-1024x576.webp",
-        "description": "De twee minderjarige Nederlandse broers die vorig jaar augustus dood werden gevonden in hun hotelkamer in Istanbul, zijn overleden aan vergiftiging door het bestrijdingsmiddel f..."
-      },
-      {
-        "title": "Proef met onderzoek naar verwurging levert veel meer aanvragen op dan verwacht",
-        "link": "https://nos.nl/l/2611471",
-        "pubDate": "Tue, 21 Apr 2026 18:33:03 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/7/N/Y/J/GmdiabZTMhySnBjredd6MjxKthcn9ADVQSHSYcA/75x81x3232x1818-1024x576.webp",
-        "description": "Forensisch artsen in Rotterdam krijgen veel meer aanvragen dan verwacht voor onderzoeken naar pogingen tot wurging. Sinds 1 december 2025 loopt er een proef waarbij de politie e..."
-      },
-      {
-        "title": "'Meer hulp nodig voor mensen met ernstige psychische aandoeningen'",
-        "link": "https://nos.nl/l/2611468",
-        "pubDate": "Tue, 21 Apr 2026 17:49:38 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vier.cdn.nos.nl/o/5/B/4/6/SR1PdmNHqvqxomRkV9T7W4TdYxDvYAv1RG3oDb/0x234x4000x2250-1024x576.webp",
-        "description": "Er is meer nodig om veiligheidsrisico's voor mensen met ernstige psychische klachten te verminderen. Dat concludeert de Onderzoeksraad voor Veiligheid (OVV) in een nieuw rapport..."
-      },
-      {
-        "title": "Nederlandse werkenden meest productief in 20 jaar, hoe kan dat?",
-        "link": "https://nos.nl/l/2611466",
-        "pubDate": "Tue, 21 Apr 2026 17:41:44 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/h/R/M/D/ijQDZsLSfrXu92N3C68c1fcxjpaQiGtguvYGxpt/7x198x2032x1143-1024x576.webp",
-        "description": "Het is cruciaal voor de economische groei en welvaart van een land: de arbeidsproductiviteit. Die geeft aan hoeveel werk je gedaan krijgt in een uur en dus hoe efficiënt dat wor..."
-      },
-      {
-        "title": "Partijen teleurgesteld over sneuvelen asielwet: 'een blamage' en 'diep triest'",
-        "link": "https://nos.nl/l/2611464",
-        "pubDate": "Tue, 21 Apr 2026 17:40:39 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/Y/h/m/Q/Z/gVR5U7ZEZGdxY2XjZKz9fqJ7NVQEin9doMnmKi/1130x654x1952x1098-1024x576.webp",
-        "description": "\"Een blamage\", \"diep triest\" en \"een verdrietige dag\": meerdere fractieleiders in de Tweede Kamer zijn teleurgesteld dat de asielnoodmaatregelenwet vandaag in de Eerste Kamer is..."
-      },
-      {
-        "title": "Ophokplicht voor pluimvee vervalt, behalve in Gelderse Vallei",
-        "link": "https://nos.nl/l/2611462",
-        "pubDate": "Tue, 21 Apr 2026 17:30:45 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/F/Z/Q/2/U/8AYRXA76QTT8e8y5Yuf6bmmH3DRNrCGr9TgGgfu/669x755x2640x1485-1024x576.webp",
-        "description": "De ophok- en afschermplicht die in verband met de vogelgriep gold voor pluimvee wordt in bijna het hele land ingetrokken. Alleen in de Gelderse Vallei, waar veel pluimveebedrijv..."
       }
     ],
     "health": [
       {
+        "title": "Cricket verovert Eindhovense sportvelden: 'Wordt als religie gezien'",
+        "link": "https://nos.nl/l/2611530",
+        "pubDate": "Wed, 22 Apr 2026 10:27:23 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vijf.cdn.nos.nl/B/Y/C/X/J/j2LkkHikMir8FcaiX3yunnkwnuabk6rsK58JLi3/0x0x768x432-768x432.webp",
+        "description": "Op sportvelden in Eindhoven wordt niet alleen gevoetbald, gekorfbald of gehockeyd. Steeds vaker zijn er cricketspelers actief. De stad kent inmiddels vier clubs, met samen meer ..."
+      },
+      {
+        "title": "'Om misbruik aan te tonen diende rechter duizenden onzinnige Woo-verzoeken in'",
+        "link": "https://nos.nl/l/2611529",
+        "pubDate": "Wed, 22 Apr 2026 10:01:09 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/4/y/W/P/Z/ZKZjV2EPsgLv8TrCfEydMMcZj9vJPxjxs9AQMcJ/0x207x4000x2250-1024x576.webp",
+        "description": "Een rechter van de rechtbank Noord-Holland heeft duizenden Woo-verzoeken naar gemeenten gestuurd om te laten zien dat de Wet open overheid makkelijk te misbruiken is. Dat schrij..."
+      },
+      {
+        "title": "Vol stroomnet Utrecht is een bittere pil: 'Waardeloos dat dit nodig is'",
+        "link": "https://nos.nl/l/2611522",
+        "pubDate": "Wed, 22 Apr 2026 09:30:05 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/F/m/P/T/s/iHE4QYJpEctC4GqqUapkJraqQu7nxUgDQF1gASC/5x203x3984x2241-1024x576.webp",
+        "description": "\"Een bittere pil voor Utrecht\", noemt burgemeester Sharon Dijksma het volle stroomnet in haar stad. De voorzitter van de Nederlandse Vereniging Duurzame Energie vindt het \"waard..."
+      },
+      {
+        "title": "Kabinet onderzoekt of Kanye West toch geweigerd kan worden",
+        "link": "https://nos.nl/l/2611521",
+        "pubDate": "Wed, 22 Apr 2026 08:42:38 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://acht.cdn.nos.nl/A/e/G/Q/E/g2hYsHRT51AYgMJUykJW8o4ErJSbvJoLUQ5rjhh/417x209x3072x1728-1024x576.webp",
+        "description": "Het kabinet onderzoekt of rapper Kanye West, ook bekend als Ye, toch geweigerd kan worden. Minister Van den Brink van Asiel en Migratie laat bekijken of er \"aanknopingspunten\" z..."
+      },
+      {
+        "title": "Grote zorgen onder Nederlanders over persoonlijke financiën door oorlog in Midden-Oosten",
+        "link": "https://nos.nl/l/2611517",
+        "pubDate": "Wed, 22 Apr 2026 07:47:02 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://zeven.cdn.nos.nl/4/e/F/6/H/QG2CAkeeujy3mgjX7XHb6ReTEZvQ65G37AHATda/5x423x3984x2241-1024x576.webp",
+        "description": "De oorlog in het Midden-Oosten raakt inmiddels ook het vertrouwen van Nederlandse consumenten. Vanwege zorgen over stijgende prijzen, bijvoorbeeld aan de pomp, stellen steeds me..."
+      },
+      {
+        "title": "Wekdienst 22/4: Helm weer te zien in Roemenië • Kamerdebat compensatie energieprijzen",
+        "link": "https://nos.nl/l/2611513",
+        "pubDate": "Wed, 22 Apr 2026 06:26:43 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://een.cdn.nos.nl/6/w/c/u/s/2wdwkTdGv3dovcRFCKwg39wmWpf4ivFJTg7n9ie/0x0x1920x1080-1024x576.webp",
+        "description": "Goedemorgen! De gestolen Roemeense gouden helm en twee armbanden zijn weer te zien in een museum in Boekarest en in de Tweede Kamer is een debat over het door het kabinet aangek..."
+      },
+      {
         "title": "Trump verlengt eenzijdig bestand met Iran, geen nieuwe aanvallen gemeld",
         "link": "https://nos.nl/l/2611510",
         "pubDate": "Wed, 22 Apr 2026 05:16:34 +0200",
@@ -9179,7 +8263,7 @@ window.NEWS_DATA = {
         "link": "https://nos.nl/l/2611508",
         "pubDate": "Wed, 22 Apr 2026 03:11:37 +0200",
         "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/5/m/F/F/P/xBQ86apBfKoUWoigr6rRE5V6KGE7xBghd56s8SG/0x0x4000x2250-1024x576.webp",
+        "image": "https://vijf.cdn.nos.nl/A/V/H/E/d/7GVSRvKe7WhwBa1h9Hft5HAAf3XTCkyn8LJMMs7/0x488x2688x1512-1024x576.webp",
         "description": "Britse kinderen en jongeren onder de 18 zullen nooit in hun leven legaal sigaretten kunnen kopen. Een wet daarvoor is aangenomen door het Britse Lagerhuis en Hogerhuis. De Brits..."
       },
       {
@@ -9188,18 +8272,18 @@ window.NEWS_DATA = {
         "pubDate": "Wed, 22 Apr 2026 00:45:16 +0200",
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/8/Z/s/k/C/4dXM3daeQKrMsDL6Qn43xHLUwaw1QAXxWgSZvB9/0x207x4000x2250-1024x576.webp",
-        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor een vast bedrag per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, ..."
+        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor 49 euro per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, trein of..."
       },
       {
-        "title": "Opnieuw onrustig anti-azc-protest Loosdrecht, twee aanhoudingen",
+        "title": "Opnieuw onrustig asielprotest Loosdrecht, twee aanhoudingen",
         "link": "https://nos.nl/l/2611506",
         "pubDate": "Wed, 22 Apr 2026 00:17:42 +0200",
         "source": "NOS Nieuws",
-        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/172x87x1248x702-1024x576.webp",
+        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/64x169x1008x567-1008x567.webp",
         "description": "Voor de tweede avond op rij is er in Loosdrecht gedemonstreerd tegen de komst van een noodopvang voor asielzoekers. De Mobiele Eenheid heeft charges uitgevoerd, twee mensen zijn..."
       },
       {
-        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op universiteit Maastricht",
+        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op Universiteit Maastricht",
         "link": "https://nos.nl/l/2611505",
         "pubDate": "Tue, 21 Apr 2026 23:18:42 +0200",
         "source": "NOS Nieuws",
@@ -9269,58 +8353,58 @@ window.NEWS_DATA = {
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/B/E/P/a/t/iuJqmCLSmbkAv9VZLyXMB52omQgo1oeguSJdKqK/8x4x1088x612-1024x576.webp",
         "description": "Bij twee scherpe bochten tussen de zuidelijke en westelijke ringweg in Groningen neemt de provincie extra maatregelen om automobilisten te waarschuwen. Zo komen er betere waarsc..."
-      },
-      {
-        "title": "Nederlanders in Istanbul stierven net als Duits gezin door bestrijdingsmiddel",
-        "link": "https://nos.nl/l/2611476",
-        "pubDate": "Tue, 21 Apr 2026 18:45:11 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vijf.cdn.nos.nl/B/2/V/X/2/seXFEv1ahSS8r3QcaWHZA8RVyjpQgh11MRgf9WB/0x301x4000x2250-1024x576.webp",
-        "description": "De twee minderjarige Nederlandse broers die vorig jaar augustus dood werden gevonden in hun hotelkamer in Istanbul, zijn overleden aan vergiftiging door het bestrijdingsmiddel f..."
-      },
-      {
-        "title": "Proef met onderzoek naar verwurging levert veel meer aanvragen op dan verwacht",
-        "link": "https://nos.nl/l/2611471",
-        "pubDate": "Tue, 21 Apr 2026 18:33:03 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/7/N/Y/J/GmdiabZTMhySnBjredd6MjxKthcn9ADVQSHSYcA/75x81x3232x1818-1024x576.webp",
-        "description": "Forensisch artsen in Rotterdam krijgen veel meer aanvragen dan verwacht voor onderzoeken naar pogingen tot wurging. Sinds 1 december 2025 loopt er een proef waarbij de politie e..."
-      },
-      {
-        "title": "'Meer hulp nodig voor mensen met ernstige psychische aandoeningen'",
-        "link": "https://nos.nl/l/2611468",
-        "pubDate": "Tue, 21 Apr 2026 17:49:38 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vier.cdn.nos.nl/o/5/B/4/6/SR1PdmNHqvqxomRkV9T7W4TdYxDvYAv1RG3oDb/0x234x4000x2250-1024x576.webp",
-        "description": "Er is meer nodig om veiligheidsrisico's voor mensen met ernstige psychische klachten te verminderen. Dat concludeert de Onderzoeksraad voor Veiligheid (OVV) in een nieuw rapport..."
-      },
-      {
-        "title": "Nederlandse werkenden meest productief in 20 jaar, hoe kan dat?",
-        "link": "https://nos.nl/l/2611466",
-        "pubDate": "Tue, 21 Apr 2026 17:41:44 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/h/R/M/D/ijQDZsLSfrXu92N3C68c1fcxjpaQiGtguvYGxpt/7x198x2032x1143-1024x576.webp",
-        "description": "Het is cruciaal voor de economische groei en welvaart van een land: de arbeidsproductiviteit. Die geeft aan hoeveel werk je gedaan krijgt in een uur en dus hoe efficiënt dat wor..."
-      },
-      {
-        "title": "Partijen teleurgesteld over sneuvelen asielwet: 'een blamage' en 'diep triest'",
-        "link": "https://nos.nl/l/2611464",
-        "pubDate": "Tue, 21 Apr 2026 17:40:39 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/Y/h/m/Q/Z/gVR5U7ZEZGdxY2XjZKz9fqJ7NVQEin9doMnmKi/1130x654x1952x1098-1024x576.webp",
-        "description": "\"Een blamage\", \"diep triest\" en \"een verdrietige dag\": meerdere fractieleiders in de Tweede Kamer zijn teleurgesteld dat de asielnoodmaatregelenwet vandaag in de Eerste Kamer is..."
-      },
-      {
-        "title": "Ophokplicht voor pluimvee vervalt, behalve in Gelderse Vallei",
-        "link": "https://nos.nl/l/2611462",
-        "pubDate": "Tue, 21 Apr 2026 17:30:45 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/F/Z/Q/2/U/8AYRXA76QTT8e8y5Yuf6bmmH3DRNrCGr9TgGgfu/669x755x2640x1485-1024x576.webp",
-        "description": "De ophok- en afschermplicht die in verband met de vogelgriep gold voor pluimvee wordt in bijna het hele land ingetrokken. Alleen in de Gelderse Vallei, waar veel pluimveebedrijv..."
       }
     ],
     "science": [
       {
+        "title": "Cricket verovert Eindhovense sportvelden: 'Wordt als religie gezien'",
+        "link": "https://nos.nl/l/2611530",
+        "pubDate": "Wed, 22 Apr 2026 10:27:23 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vijf.cdn.nos.nl/B/Y/C/X/J/j2LkkHikMir8FcaiX3yunnkwnuabk6rsK58JLi3/0x0x768x432-768x432.webp",
+        "description": "Op sportvelden in Eindhoven wordt niet alleen gevoetbald, gekorfbald of gehockeyd. Steeds vaker zijn er cricketspelers actief. De stad kent inmiddels vier clubs, met samen meer ..."
+      },
+      {
+        "title": "'Om misbruik aan te tonen diende rechter duizenden onzinnige Woo-verzoeken in'",
+        "link": "https://nos.nl/l/2611529",
+        "pubDate": "Wed, 22 Apr 2026 10:01:09 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/4/y/W/P/Z/ZKZjV2EPsgLv8TrCfEydMMcZj9vJPxjxs9AQMcJ/0x207x4000x2250-1024x576.webp",
+        "description": "Een rechter van de rechtbank Noord-Holland heeft duizenden Woo-verzoeken naar gemeenten gestuurd om te laten zien dat de Wet open overheid makkelijk te misbruiken is. Dat schrij..."
+      },
+      {
+        "title": "Vol stroomnet Utrecht is een bittere pil: 'Waardeloos dat dit nodig is'",
+        "link": "https://nos.nl/l/2611522",
+        "pubDate": "Wed, 22 Apr 2026 09:30:05 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://vier.cdn.nos.nl/F/m/P/T/s/iHE4QYJpEctC4GqqUapkJraqQu7nxUgDQF1gASC/5x203x3984x2241-1024x576.webp",
+        "description": "\"Een bittere pil voor Utrecht\", noemt burgemeester Sharon Dijksma het volle stroomnet in haar stad. De voorzitter van de Nederlandse Vereniging Duurzame Energie vindt het \"waard..."
+      },
+      {
+        "title": "Kabinet onderzoekt of Kanye West toch geweigerd kan worden",
+        "link": "https://nos.nl/l/2611521",
+        "pubDate": "Wed, 22 Apr 2026 08:42:38 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://acht.cdn.nos.nl/A/e/G/Q/E/g2hYsHRT51AYgMJUykJW8o4ErJSbvJoLUQ5rjhh/417x209x3072x1728-1024x576.webp",
+        "description": "Het kabinet onderzoekt of rapper Kanye West, ook bekend als Ye, toch geweigerd kan worden. Minister Van den Brink van Asiel en Migratie laat bekijken of er \"aanknopingspunten\" z..."
+      },
+      {
+        "title": "Grote zorgen onder Nederlanders over persoonlijke financiën door oorlog in Midden-Oosten",
+        "link": "https://nos.nl/l/2611517",
+        "pubDate": "Wed, 22 Apr 2026 07:47:02 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://zeven.cdn.nos.nl/4/e/F/6/H/QG2CAkeeujy3mgjX7XHb6ReTEZvQ65G37AHATda/5x423x3984x2241-1024x576.webp",
+        "description": "De oorlog in het Midden-Oosten raakt inmiddels ook het vertrouwen van Nederlandse consumenten. Vanwege zorgen over stijgende prijzen, bijvoorbeeld aan de pomp, stellen steeds me..."
+      },
+      {
+        "title": "Wekdienst 22/4: Helm weer te zien in Roemenië • Kamerdebat compensatie energieprijzen",
+        "link": "https://nos.nl/l/2611513",
+        "pubDate": "Wed, 22 Apr 2026 06:26:43 +0200",
+        "source": "NOS Nieuws",
+        "image": "https://een.cdn.nos.nl/6/w/c/u/s/2wdwkTdGv3dovcRFCKwg39wmWpf4ivFJTg7n9ie/0x0x1920x1080-1024x576.webp",
+        "description": "Goedemorgen! De gestolen Roemeense gouden helm en twee armbanden zijn weer te zien in een museum in Boekarest en in de Tweede Kamer is een debat over het door het kabinet aangek..."
+      },
+      {
         "title": "Trump verlengt eenzijdig bestand met Iran, geen nieuwe aanvallen gemeld",
         "link": "https://nos.nl/l/2611510",
         "pubDate": "Wed, 22 Apr 2026 05:16:34 +0200",
@@ -9341,7 +8425,7 @@ window.NEWS_DATA = {
         "link": "https://nos.nl/l/2611508",
         "pubDate": "Wed, 22 Apr 2026 03:11:37 +0200",
         "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/5/m/F/F/P/xBQ86apBfKoUWoigr6rRE5V6KGE7xBghd56s8SG/0x0x4000x2250-1024x576.webp",
+        "image": "https://vijf.cdn.nos.nl/A/V/H/E/d/7GVSRvKe7WhwBa1h9Hft5HAAf3XTCkyn8LJMMs7/0x488x2688x1512-1024x576.webp",
         "description": "Britse kinderen en jongeren onder de 18 zullen nooit in hun leven legaal sigaretten kunnen kopen. Een wet daarvoor is aangenomen door het Britse Lagerhuis en Hogerhuis. De Brits..."
       },
       {
@@ -9350,18 +8434,18 @@ window.NEWS_DATA = {
         "pubDate": "Wed, 22 Apr 2026 00:45:16 +0200",
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/8/Z/s/k/C/4dXM3daeQKrMsDL6Qn43xHLUwaw1QAXxWgSZvB9/0x207x4000x2250-1024x576.webp",
-        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor een vast bedrag per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, ..."
+        "description": "Er komt komende zomer mogelijk een speciale kortingskaart voor het openbaar vervoer. Voor 49 euro per maand kunnen mensen dan drie maanden lang onbeperkt met bus, tram, trein of..."
       },
       {
-        "title": "Opnieuw onrustig anti-azc-protest Loosdrecht, twee aanhoudingen",
+        "title": "Opnieuw onrustig asielprotest Loosdrecht, twee aanhoudingen",
         "link": "https://nos.nl/l/2611506",
         "pubDate": "Wed, 22 Apr 2026 00:17:42 +0200",
         "source": "NOS Nieuws",
-        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/172x87x1248x702-1024x576.webp",
+        "image": "https://drie.cdn.nos.nl/5/V/y/S/z/zfa1KyfaU4537tin9RByX3TmsWqPvsx3EbFsAwT/64x169x1008x567-1008x567.webp",
         "description": "Voor de tweede avond op rij is er in Loosdrecht gedemonstreerd tegen de komst van een noodopvang voor asielzoekers. De Mobiele Eenheid heeft charges uitgevoerd, twee mensen zijn..."
       },
       {
-        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op universiteit Maastricht",
+        "title": "Letschert onder vuur om aanpak pro-Palestinaprotest op Universiteit Maastricht",
         "link": "https://nos.nl/l/2611505",
         "pubDate": "Tue, 21 Apr 2026 23:18:42 +0200",
         "source": "NOS Nieuws",
@@ -9431,1357 +8515,19 @@ window.NEWS_DATA = {
         "source": "NOS Nieuws",
         "image": "https://een.cdn.nos.nl/B/E/P/a/t/iuJqmCLSmbkAv9VZLyXMB52omQgo1oeguSJdKqK/8x4x1088x612-1024x576.webp",
         "description": "Bij twee scherpe bochten tussen de zuidelijke en westelijke ringweg in Groningen neemt de provincie extra maatregelen om automobilisten te waarschuwen. Zo komen er betere waarsc..."
-      },
-      {
-        "title": "Nederlanders in Istanbul stierven net als Duits gezin door bestrijdingsmiddel",
-        "link": "https://nos.nl/l/2611476",
-        "pubDate": "Tue, 21 Apr 2026 18:45:11 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vijf.cdn.nos.nl/B/2/V/X/2/seXFEv1ahSS8r3QcaWHZA8RVyjpQgh11MRgf9WB/0x301x4000x2250-1024x576.webp",
-        "description": "De twee minderjarige Nederlandse broers die vorig jaar augustus dood werden gevonden in hun hotelkamer in Istanbul, zijn overleden aan vergiftiging door het bestrijdingsmiddel f..."
-      },
-      {
-        "title": "Proef met onderzoek naar verwurging levert veel meer aanvragen op dan verwacht",
-        "link": "https://nos.nl/l/2611471",
-        "pubDate": "Tue, 21 Apr 2026 18:33:03 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/7/N/Y/J/GmdiabZTMhySnBjredd6MjxKthcn9ADVQSHSYcA/75x81x3232x1818-1024x576.webp",
-        "description": "Forensisch artsen in Rotterdam krijgen veel meer aanvragen dan verwacht voor onderzoeken naar pogingen tot wurging. Sinds 1 december 2025 loopt er een proef waarbij de politie e..."
-      },
-      {
-        "title": "'Meer hulp nodig voor mensen met ernstige psychische aandoeningen'",
-        "link": "https://nos.nl/l/2611468",
-        "pubDate": "Tue, 21 Apr 2026 17:49:38 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://vier.cdn.nos.nl/o/5/B/4/6/SR1PdmNHqvqxomRkV9T7W4TdYxDvYAv1RG3oDb/0x234x4000x2250-1024x576.webp",
-        "description": "Er is meer nodig om veiligheidsrisico's voor mensen met ernstige psychische klachten te verminderen. Dat concludeert de Onderzoeksraad voor Veiligheid (OVV) in een nieuw rapport..."
-      },
-      {
-        "title": "Nederlandse werkenden meest productief in 20 jaar, hoe kan dat?",
-        "link": "https://nos.nl/l/2611466",
-        "pubDate": "Tue, 21 Apr 2026 17:41:44 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://zeven.cdn.nos.nl/4/h/R/M/D/ijQDZsLSfrXu92N3C68c1fcxjpaQiGtguvYGxpt/7x198x2032x1143-1024x576.webp",
-        "description": "Het is cruciaal voor de economische groei en welvaart van een land: de arbeidsproductiviteit. Die geeft aan hoeveel werk je gedaan krijgt in een uur en dus hoe efficiënt dat wor..."
-      },
-      {
-        "title": "Partijen teleurgesteld over sneuvelen asielwet: 'een blamage' en 'diep triest'",
-        "link": "https://nos.nl/l/2611464",
-        "pubDate": "Tue, 21 Apr 2026 17:40:39 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/Y/h/m/Q/Z/gVR5U7ZEZGdxY2XjZKz9fqJ7NVQEin9doMnmKi/1130x654x1952x1098-1024x576.webp",
-        "description": "\"Een blamage\", \"diep triest\" en \"een verdrietige dag\": meerdere fractieleiders in de Tweede Kamer zijn teleurgesteld dat de asielnoodmaatregelenwet vandaag in de Eerste Kamer is..."
-      },
-      {
-        "title": "Ophokplicht voor pluimvee vervalt, behalve in Gelderse Vallei",
-        "link": "https://nos.nl/l/2611462",
-        "pubDate": "Tue, 21 Apr 2026 17:30:45 +0200",
-        "source": "NOS Nieuws",
-        "image": "https://een.cdn.nos.nl/F/Z/Q/2/U/8AYRXA76QTT8e8y5Yuf6bmmH3DRNrCGr9TgGgfu/669x755x2640x1485-1024x576.webp",
-        "description": "De ophok- en afschermplicht die in verband met de vogelgriep gold voor pluimvee wordt in bijna het hele land ingetrokken. Alleen in de Gelderse Vallei, waar veel pluimveebedrijv..."
       }
-    ],
-    "ai": []
+    ]
   },
   "tr": {
-    "local": [
-      {
-        "title": "Sel, fırtına, yağış, dolu... İçişleri Bakanlığından bazı iller için \"sarı\" kodlu uyarı",
-        "link": "https://www.hurriyet.com.tr/gundem/sel-firtina-yagis-dolu-icisleri-bakanligindan-bazi-iller-icin-sari-kodlu-uyari-43156192",
-        "pubDate": "Tue, 21 Apr 2026 15:35:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e799050c50728add7f19fa.jpg",
-        "description": "İçişleri Bakanlığı, kuvvetli ve gök gürültülü sağanak nedeniyle bazı iller için \"sarı\" kodlu meteorolojik uyarıda bulundu."
-      },
-      {
-        "title": "Fenerbahçe'de her şey 4 günde değişti: Bir son dakika şoku daha!",
-        "link": "https://www.hurriyet.com.tr/sporarena/fenerbahcede-her-sey-4-gunde-degisti-bir-son-dakika-soku-daha-43156288",
-        "pubDate": "Tue, 21 Apr 2026 20:59:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7e5147370607e7db390d5.jpg",
-        "description": "Süper Lig'de hafta sonu 90+7. dakikada kalesinde gördüğü golle Çaykur Rizespor ile 2-2 berabere kalarak lider Galatasaray'ın 4 puan gerisine düşen Fenerbahçe, deplasmanda Konyas..."
-      },
-      {
-        "title": "AKYAZI BELEDİYE BAŞKANLIĞI",
-        "link": "https://www.hurriyet.com.tr/resmi-ilanlar/akyazi-belediye-baskanligi-43155929",
-        "pubDate": "Tue, 21 Apr 2026 21:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75a362819415d8e0238d6.jpg",
-        "description": ""
-      },
-      {
-        "title": "Böcek Ailesi davasında bir isme tahliye",
-        "link": "https://www.hurriyet.com.tr/gundem/bocek-ailesi-davasi-basliyor-fatihte-otelde-zehirlenerek-hayatlarini-kaybetmislerdi-43155610",
-        "pubDate": "Tue, 21 Apr 2026 14:21:12 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e71b292819415d8e0236c1.jpg",
-        "description": "İstanbul Fatih'te kaldıkları otelde fenalaşarak hastaneye kaldırılan ve ardından da hayatlarını kaybeden 4 kişilik Böcek ailesinin şüpheli ölümleriyle ilgili dava başladı. İlk d..."
-      },
-      {
-        "title": "'Estetikli' dediler, dünyanın en güzel kadını seçildi",
-        "link": "https://www.hurriyet.com.tr/kelebek/stil/estetikli-dediler-dunyanin-en-guzel-kadini-secildi-43156117",
-        "pubDate": "Tue, 21 Apr 2026 13:57:38 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7810a7370607e7db38f94.jpg",
-        "description": "Her yel geleneksel olarak belirlenen 'Dünyanın en güzel kadını' bir kez daha açıklandı..."
-      },
-      {
-        "title": "FETÖ firarisi eski emniyet müdürü Hayati Başdağ İstanbul'da yakalandı",
-        "link": "https://www.hurriyet.com.tr/gundem/feto-firarisi-eski-emniyet-muduru-hayati-basdag-istanbulda-yakalandi-43155988",
-        "pubDate": "Tue, 21 Apr 2026 11:53:56 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e76551131f7a66514094d2.jpg",
-        "description": "FETÖ/PDY silahlı terör örgütüne yönelik yürütülen soruşturmada, hakkında birçok suçtan yakalama kararı bulunan eski emniyet müdürü Hayati Başdağ İstanbul'da yakalandı. Fatih'te ..."
-      },
-      {
-        "title": "Ambargo, enerji krizi ve Marco Rubio: ABD'nin yeni hedefi Küba'da rejim değişikliği mi?",
-        "link": "https://www.hurriyet.com.tr/dunya/ambargo-enerji-krizi-ve-marco-rubio-abdnin-yeni-hedefi-kubada-rejim-degisikligi-mi-43155262",
-        "pubDate": "Tue, 21 Apr 2026 06:05:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e639194812f38ad161ef41.jpg",
-        "description": "Trump \"Kucağıma düştü\" dedi, Dışişleri Bakanı Rubio ise Beyaz Saray'a bastırıyor... 10 yıl aradan sonra Küba'ya giden ilk ABD heyeti, masaya siyasi reformları ve Starlink uydula..."
-      },
-      {
-        "title": "Zayıflama ameliyatı gerçeği: Tam 57 kilo verdi ama yaşadıkları şaşırttı… ‘Kimse bu detayları anlatmıyor’",
-        "link": "https://www.hurriyet.com.tr/aile/galeri-zayiflama-ameliyati-gercegi-tam-57-kilo-verdi-ama-yasadiklari-sasirtti-kimse-bu-detaylari-anlatmiyor-43145601",
-        "pubDate": "Tue, 21 Apr 2026 05:38:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d4d8c6fd0cf081c7fd1e37.jpg",
-        "description": "İngiltere’den Türkiye’ye uzanan bir zayıflama hikâyesi, “hızlı çözüm” algısını yerle bir etti. 57 kilo veren 44 yaşındaki Charlene Buchanan, zayıflama ameliyatı sonrası yaşadığı..."
-      },
-      {
-        "title": "Haliç’e yeni pencere açılıyor",
-        "link": "https://www.hurriyet.com.tr/gundem/halice-yeni-pencere-aciliyor-43155532",
-        "pubDate": "Tue, 21 Apr 2026 04:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e6a6c80c50728add7f14e1.jpg",
-        "description": "İçinden deniz geçen, yedi tepeli şehir olarak bilinen ve dünyanın en çok ziyaret edilen şehirlerinden biri olarak 2025’te 19 milyona yakın turist ağırlayan İstanbul, yakında yen..."
-      },
-      {
-        "title": "Apple'da bir dönem sona erdi... Tim Cook görevini bırakıyor",
-        "link": "https://www.hurriyet.com.tr/dunya/appleda-bir-donem-sona-erdi-tim-cook-gorevini-birakiyor-43155525",
-        "pubDate": "Mon, 20 Apr 2026 21:50:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e69fa07370607e7db38a1d.jpg",
-        "description": "Apple, Üst Düzey Yöneticisi (CEO) Tim Cook'un 1 Eylül 2026 itibarıyla şirketin yönetim kurulu başkanı olacağını, yerine de şirkette Donanım Mühendisliğinden Sorumlu Kıdemli Başk..."
-      },
-      {
-        "title": "Deniz Kuvvetlerinin milli uçak gemisi gelecek yıl mavi sularla buluşmaya hazırlanıyor",
-        "link": "https://www.hurriyet.com.tr/gundem/deniz-kuvvetlerinin-milli-ucak-gemisi-gelecek-yil-mavi-sularla-bulusmaya-hazirlaniyor-43155482",
-        "pubDate": "Mon, 20 Apr 2026 19:32:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e67f3c0c50728add7f13c1.jpg",
-        "description": "Deniz Kuvvetleri Komutanı Oramiral Ercüment Tatlıoğlu, Türk Deniz Kuvvetlerinin çok güçlü bir filosu bulunduğunu belirterek, \"Şu anda milli uçak gemimizi yapıyoruz. Milli uçak g..."
-      },
-      {
-        "title": "17 bıçak darbesiyle ölümün eşiğinden döndü… Havva’nın sesine kulak verin",
-        "link": "https://www.hurriyet.com.tr/gundem/17-bicak-darbesiyle-olumun-esiginden-dondu-havvanin-sesine-kulak-verin-43155529",
-        "pubDate": "Tue, 21 Apr 2026 04:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e6a4870c50728add7f14cd.jpg",
-        "description": "Hakkında uzaklaştırma kararı bulunan eşi M.Ç. tarafından çocuğunun gözü önünde 17 bıçak darbesiyle ağır yaralanan Havva Ç. tutuklanan eşinin en ağır cezayı almasını istedi."
-      },
-      {
-        "title": "‘Benim hakkım daha fazla’ tartışması: Apartmanlarda otopark krizi! Nasıl bir yol izlenmeli? ‘Çok önemli bir detay atlanıyor’",
-        "link": "https://www.hurriyet.com.tr/gundem/benim-hakkim-daha-fazla-tartismasi-apartmanlarda-otopark-krizi-nasil-bir-yol-izlenmeli-cok-onemli-bir-detay-atlaniyor-43150624",
-        "pubDate": "Mon, 20 Apr 2026 03:18:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de0345131f7a66514073da.jpg",
-        "description": "İstanbul’da apartman otoparklarında sessiz bir gerilim giderek büyüyor. Birden fazla araca sahip bazı site sakinleri, ortak alan kullanımını fiilen değiştiriyor. Komşular arasın..."
-      },
-      {
-        "title": "Pankreas kanserinde umut veren gelişme: Yeni ilaç yaşam süresini uzattı",
-        "link": "https://www.hurriyet.com.tr/aile/galeri-pankreas-kanserinde-umut-veren-gelisme-yeni-ilac-yasam-suresini-uzatti-43151891",
-        "pubDate": "Mon, 20 Apr 2026 09:28:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dfa0be7370607e7db3743f.jpg",
-        "description": "ABD’de geliştirilen yeni bir ilaç, pankreas kanseri tedavisinde dikkat çekici sonuçlar verdi. Elraglusib adlı deneysel ilacın kemoterapiyle birlikte kullanılması, ileri evre pan..."
-      },
-      {
-        "title": "BEŞİKTAŞ BELEDİYESİ BASIN YAYIN VE HALKLA İLİŞKİLER MD.",
-        "link": "https://www.hurriyet.com.tr/resmi-ilanlar/besiktas-belediyesi-basin-yayin-ve-halkla-iliskiler-md-43156050",
-        "pubDate": "Tue, 21 Apr 2026 21:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7722e2819415d8e023971.jpg",
-        "description": ""
-      },
-      {
-        "title": "17 yaşındaki Fatma Koçak'ın ölümünde korkunç gerçek 12 yıl sonra ortaya çıktı! Annesi ve üvey kardeşi tutuklandı",
-        "link": "https://www.hurriyet.com.tr/gundem/17-yasindaki-fatma-kocakin-olumunde-korkunc-gercek-12-yil-sonra-ortaya-cikti-annesi-ve-uvey-kardesi-tutuklandi-43156037",
-        "pubDate": "Tue, 21 Apr 2026 12:37:07 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e76f344812f38ad161f111.jpg",
-        "description": "Adıyaman'ın Besni ilçesinde 2014 yılında karnına tek kurşun sıkılmış halde bulunan ve intihar ettiği öne sürülen 17 yaşındaki Fatma Koçak'ın öz annesi ve üvey kardeşi tarafından..."
-      },
-      {
-        "title": "18 ilde yasa dışı bahis ve dolandırıcılık suçlarına yönelik operasyon",
-        "link": "https://www.hurriyet.com.tr/gundem/18-ilde-yasa-disi-bahis-ve-dolandiricilik-suclarina-yonelik-operasyon-43155998",
-        "pubDate": "Tue, 21 Apr 2026 12:04:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e767a54812f38ad161f0fa.jpg",
-        "description": "İçişleri Bakanlığı'ndan yapılan açıklamaya göre 18 il merkezli nitelikli dolandırıcılık be yasa dışı bahis operasyonlarında 127 şüpheli gözaltına alındı."
-      },
-      {
-        "title": "İsrailli bakanların kullandığı araç Filistinli çocuğu ezerek öldürdü",
-        "link": "https://www.hurriyet.com.tr/dunya/israilli-bakanlarin-kullandigi-arac-filistinli-cocugu-ezerek-oldurdu-43155950",
-        "pubDate": "Tue, 21 Apr 2026 11:22:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75dbf0c50728add7f18c6.jpg",
-        "description": "Batı Şeria'da bisikletiyle okuluna giden bir çocuk, İsrailli bakanlara tahsis edilmiş bir aracın altında kalarak hayatını kaybetti. Olayla ilgili soruşturma başlatılırken, aracı..."
-      },
-      {
-        "title": "Ukrayna lideri Zelenski'den 'Türkiye ile birlikte daha güçlü AB' vurgusu",
-        "link": "https://www.hurriyet.com.tr/dunya/ukrayna-lideri-zelenskiden-turkiye-ile-birlikte-daha-guclu-ab-vurgusu-43155944",
-        "pubDate": "Tue, 21 Apr 2026 11:09:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75ae80c50728add7f1894.jpg",
-        "description": "Ukrayna Devlet Başkanı Volodimir Zelenski, Avrupa Birliği'nin (AB) Türkiye, Ukrayna, Norveç ve İngiltere ile daha güçlü birlik haline gelebileceğini belirtti."
-      },
-      {
-        "title": "Ermenistan Başbakanı Paşinyan, anayasada Karabağ değişikliği istedi",
-        "link": "https://www.hurriyet.com.tr/dunya/ermenistan-basbakani-pasinyan-anayasada-karabag-degisikligi-istedi-43155935",
-        "pubDate": "Tue, 21 Apr 2026 11:02:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e759070c50728add7f1888.jpg",
-        "description": "Ermenistan Başbakanı Nikol Paşinyan, anayasanın Karabağ ile ilgili maddesi nedeniyle değiştirilmesi gerektiğini belirtti. Ermenistan anayasasında Karabağ'ın Ermenistan'a ilhak e..."
-      }
-    ],
-    "top": [
-      {
-        "title": "Sel, fırtına, yağış, dolu... İçişleri Bakanlığından bazı iller için \"sarı\" kodlu uyarı",
-        "link": "https://www.hurriyet.com.tr/gundem/sel-firtina-yagis-dolu-icisleri-bakanligindan-bazi-iller-icin-sari-kodlu-uyari-43156192",
-        "pubDate": "Tue, 21 Apr 2026 15:35:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e799050c50728add7f19fa.jpg",
-        "description": "İçişleri Bakanlığı, kuvvetli ve gök gürültülü sağanak nedeniyle bazı iller için \"sarı\" kodlu meteorolojik uyarıda bulundu."
-      },
-      {
-        "title": "Fenerbahçe'de her şey 4 günde değişti: Bir son dakika şoku daha!",
-        "link": "https://www.hurriyet.com.tr/sporarena/fenerbahcede-her-sey-4-gunde-degisti-bir-son-dakika-soku-daha-43156288",
-        "pubDate": "Tue, 21 Apr 2026 20:59:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7e5147370607e7db390d5.jpg",
-        "description": "Süper Lig'de hafta sonu 90+7. dakikada kalesinde gördüğü golle Çaykur Rizespor ile 2-2 berabere kalarak lider Galatasaray'ın 4 puan gerisine düşen Fenerbahçe, deplasmanda Konyas..."
-      },
-      {
-        "title": "AKYAZI BELEDİYE BAŞKANLIĞI",
-        "link": "https://www.hurriyet.com.tr/resmi-ilanlar/akyazi-belediye-baskanligi-43155929",
-        "pubDate": "Tue, 21 Apr 2026 21:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75a362819415d8e0238d6.jpg",
-        "description": ""
-      },
-      {
-        "title": "Böcek Ailesi davasında bir isme tahliye",
-        "link": "https://www.hurriyet.com.tr/gundem/bocek-ailesi-davasi-basliyor-fatihte-otelde-zehirlenerek-hayatlarini-kaybetmislerdi-43155610",
-        "pubDate": "Tue, 21 Apr 2026 14:21:12 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e71b292819415d8e0236c1.jpg",
-        "description": "İstanbul Fatih'te kaldıkları otelde fenalaşarak hastaneye kaldırılan ve ardından da hayatlarını kaybeden 4 kişilik Böcek ailesinin şüpheli ölümleriyle ilgili dava başladı. İlk d..."
-      },
-      {
-        "title": "'Estetikli' dediler, dünyanın en güzel kadını seçildi",
-        "link": "https://www.hurriyet.com.tr/kelebek/stil/estetikli-dediler-dunyanin-en-guzel-kadini-secildi-43156117",
-        "pubDate": "Tue, 21 Apr 2026 13:57:38 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7810a7370607e7db38f94.jpg",
-        "description": "Her yel geleneksel olarak belirlenen 'Dünyanın en güzel kadını' bir kez daha açıklandı..."
-      },
-      {
-        "title": "FETÖ firarisi eski emniyet müdürü Hayati Başdağ İstanbul'da yakalandı",
-        "link": "https://www.hurriyet.com.tr/gundem/feto-firarisi-eski-emniyet-muduru-hayati-basdag-istanbulda-yakalandi-43155988",
-        "pubDate": "Tue, 21 Apr 2026 11:53:56 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e76551131f7a66514094d2.jpg",
-        "description": "FETÖ/PDY silahlı terör örgütüne yönelik yürütülen soruşturmada, hakkında birçok suçtan yakalama kararı bulunan eski emniyet müdürü Hayati Başdağ İstanbul'da yakalandı. Fatih'te ..."
-      },
-      {
-        "title": "Ambargo, enerji krizi ve Marco Rubio: ABD'nin yeni hedefi Küba'da rejim değişikliği mi?",
-        "link": "https://www.hurriyet.com.tr/dunya/ambargo-enerji-krizi-ve-marco-rubio-abdnin-yeni-hedefi-kubada-rejim-degisikligi-mi-43155262",
-        "pubDate": "Tue, 21 Apr 2026 06:05:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e639194812f38ad161ef41.jpg",
-        "description": "Trump \"Kucağıma düştü\" dedi, Dışişleri Bakanı Rubio ise Beyaz Saray'a bastırıyor... 10 yıl aradan sonra Küba'ya giden ilk ABD heyeti, masaya siyasi reformları ve Starlink uydula..."
-      },
-      {
-        "title": "Zayıflama ameliyatı gerçeği: Tam 57 kilo verdi ama yaşadıkları şaşırttı… ‘Kimse bu detayları anlatmıyor’",
-        "link": "https://www.hurriyet.com.tr/aile/galeri-zayiflama-ameliyati-gercegi-tam-57-kilo-verdi-ama-yasadiklari-sasirtti-kimse-bu-detaylari-anlatmiyor-43145601",
-        "pubDate": "Tue, 21 Apr 2026 05:38:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d4d8c6fd0cf081c7fd1e37.jpg",
-        "description": "İngiltere’den Türkiye’ye uzanan bir zayıflama hikâyesi, “hızlı çözüm” algısını yerle bir etti. 57 kilo veren 44 yaşındaki Charlene Buchanan, zayıflama ameliyatı sonrası yaşadığı..."
-      },
-      {
-        "title": "Haliç’e yeni pencere açılıyor",
-        "link": "https://www.hurriyet.com.tr/gundem/halice-yeni-pencere-aciliyor-43155532",
-        "pubDate": "Tue, 21 Apr 2026 04:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e6a6c80c50728add7f14e1.jpg",
-        "description": "İçinden deniz geçen, yedi tepeli şehir olarak bilinen ve dünyanın en çok ziyaret edilen şehirlerinden biri olarak 2025’te 19 milyona yakın turist ağırlayan İstanbul, yakında yen..."
-      },
-      {
-        "title": "Apple'da bir dönem sona erdi... Tim Cook görevini bırakıyor",
-        "link": "https://www.hurriyet.com.tr/dunya/appleda-bir-donem-sona-erdi-tim-cook-gorevini-birakiyor-43155525",
-        "pubDate": "Mon, 20 Apr 2026 21:50:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e69fa07370607e7db38a1d.jpg",
-        "description": "Apple, Üst Düzey Yöneticisi (CEO) Tim Cook'un 1 Eylül 2026 itibarıyla şirketin yönetim kurulu başkanı olacağını, yerine de şirkette Donanım Mühendisliğinden Sorumlu Kıdemli Başk..."
-      },
-      {
-        "title": "Deniz Kuvvetlerinin milli uçak gemisi gelecek yıl mavi sularla buluşmaya hazırlanıyor",
-        "link": "https://www.hurriyet.com.tr/gundem/deniz-kuvvetlerinin-milli-ucak-gemisi-gelecek-yil-mavi-sularla-bulusmaya-hazirlaniyor-43155482",
-        "pubDate": "Mon, 20 Apr 2026 19:32:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e67f3c0c50728add7f13c1.jpg",
-        "description": "Deniz Kuvvetleri Komutanı Oramiral Ercüment Tatlıoğlu, Türk Deniz Kuvvetlerinin çok güçlü bir filosu bulunduğunu belirterek, \"Şu anda milli uçak gemimizi yapıyoruz. Milli uçak g..."
-      },
-      {
-        "title": "17 bıçak darbesiyle ölümün eşiğinden döndü… Havva’nın sesine kulak verin",
-        "link": "https://www.hurriyet.com.tr/gundem/17-bicak-darbesiyle-olumun-esiginden-dondu-havvanin-sesine-kulak-verin-43155529",
-        "pubDate": "Tue, 21 Apr 2026 04:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e6a4870c50728add7f14cd.jpg",
-        "description": "Hakkında uzaklaştırma kararı bulunan eşi M.Ç. tarafından çocuğunun gözü önünde 17 bıçak darbesiyle ağır yaralanan Havva Ç. tutuklanan eşinin en ağır cezayı almasını istedi."
-      },
-      {
-        "title": "‘Benim hakkım daha fazla’ tartışması: Apartmanlarda otopark krizi! Nasıl bir yol izlenmeli? ‘Çok önemli bir detay atlanıyor’",
-        "link": "https://www.hurriyet.com.tr/gundem/benim-hakkim-daha-fazla-tartismasi-apartmanlarda-otopark-krizi-nasil-bir-yol-izlenmeli-cok-onemli-bir-detay-atlaniyor-43150624",
-        "pubDate": "Mon, 20 Apr 2026 03:18:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de0345131f7a66514073da.jpg",
-        "description": "İstanbul’da apartman otoparklarında sessiz bir gerilim giderek büyüyor. Birden fazla araca sahip bazı site sakinleri, ortak alan kullanımını fiilen değiştiriyor. Komşular arasın..."
-      },
-      {
-        "title": "Pankreas kanserinde umut veren gelişme: Yeni ilaç yaşam süresini uzattı",
-        "link": "https://www.hurriyet.com.tr/aile/galeri-pankreas-kanserinde-umut-veren-gelisme-yeni-ilac-yasam-suresini-uzatti-43151891",
-        "pubDate": "Mon, 20 Apr 2026 09:28:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dfa0be7370607e7db3743f.jpg",
-        "description": "ABD’de geliştirilen yeni bir ilaç, pankreas kanseri tedavisinde dikkat çekici sonuçlar verdi. Elraglusib adlı deneysel ilacın kemoterapiyle birlikte kullanılması, ileri evre pan..."
-      },
-      {
-        "title": "BEŞİKTAŞ BELEDİYESİ BASIN YAYIN VE HALKLA İLİŞKİLER MD.",
-        "link": "https://www.hurriyet.com.tr/resmi-ilanlar/besiktas-belediyesi-basin-yayin-ve-halkla-iliskiler-md-43156050",
-        "pubDate": "Tue, 21 Apr 2026 21:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7722e2819415d8e023971.jpg",
-        "description": ""
-      },
-      {
-        "title": "17 yaşındaki Fatma Koçak'ın ölümünde korkunç gerçek 12 yıl sonra ortaya çıktı! Annesi ve üvey kardeşi tutuklandı",
-        "link": "https://www.hurriyet.com.tr/gundem/17-yasindaki-fatma-kocakin-olumunde-korkunc-gercek-12-yil-sonra-ortaya-cikti-annesi-ve-uvey-kardesi-tutuklandi-43156037",
-        "pubDate": "Tue, 21 Apr 2026 12:37:07 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e76f344812f38ad161f111.jpg",
-        "description": "Adıyaman'ın Besni ilçesinde 2014 yılında karnına tek kurşun sıkılmış halde bulunan ve intihar ettiği öne sürülen 17 yaşındaki Fatma Koçak'ın öz annesi ve üvey kardeşi tarafından..."
-      },
-      {
-        "title": "18 ilde yasa dışı bahis ve dolandırıcılık suçlarına yönelik operasyon",
-        "link": "https://www.hurriyet.com.tr/gundem/18-ilde-yasa-disi-bahis-ve-dolandiricilik-suclarina-yonelik-operasyon-43155998",
-        "pubDate": "Tue, 21 Apr 2026 12:04:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e767a54812f38ad161f0fa.jpg",
-        "description": "İçişleri Bakanlığı'ndan yapılan açıklamaya göre 18 il merkezli nitelikli dolandırıcılık be yasa dışı bahis operasyonlarında 127 şüpheli gözaltına alındı."
-      },
-      {
-        "title": "İsrailli bakanların kullandığı araç Filistinli çocuğu ezerek öldürdü",
-        "link": "https://www.hurriyet.com.tr/dunya/israilli-bakanlarin-kullandigi-arac-filistinli-cocugu-ezerek-oldurdu-43155950",
-        "pubDate": "Tue, 21 Apr 2026 11:22:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75dbf0c50728add7f18c6.jpg",
-        "description": "Batı Şeria'da bisikletiyle okuluna giden bir çocuk, İsrailli bakanlara tahsis edilmiş bir aracın altında kalarak hayatını kaybetti. Olayla ilgili soruşturma başlatılırken, aracı..."
-      },
-      {
-        "title": "Ukrayna lideri Zelenski'den 'Türkiye ile birlikte daha güçlü AB' vurgusu",
-        "link": "https://www.hurriyet.com.tr/dunya/ukrayna-lideri-zelenskiden-turkiye-ile-birlikte-daha-guclu-ab-vurgusu-43155944",
-        "pubDate": "Tue, 21 Apr 2026 11:09:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75ae80c50728add7f1894.jpg",
-        "description": "Ukrayna Devlet Başkanı Volodimir Zelenski, Avrupa Birliği'nin (AB) Türkiye, Ukrayna, Norveç ve İngiltere ile daha güçlü birlik haline gelebileceğini belirtti."
-      },
-      {
-        "title": "Ermenistan Başbakanı Paşinyan, anayasada Karabağ değişikliği istedi",
-        "link": "https://www.hurriyet.com.tr/dunya/ermenistan-basbakani-pasinyan-anayasada-karabag-degisikligi-istedi-43155935",
-        "pubDate": "Tue, 21 Apr 2026 11:02:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e759070c50728add7f1888.jpg",
-        "description": "Ermenistan Başbakanı Nikol Paşinyan, anayasanın Karabağ ile ilgili maddesi nedeniyle değiştirilmesi gerektiğini belirtti. Ermenistan anayasasında Karabağ'ın Ermenistan'a ilhak e..."
-      }
-    ],
-    "technology": [
-      {
-        "title": "Apple’ın yeni patronu kim? Tim Cook sonrası dönemin adı John Ternus",
-        "link": "https://www.hurriyet.com.tr/teknoloji/applein-yeni-patronu-kim-tim-cook-sonrasi-donemin-adi-john-ternus-43156169",
-        "pubDate": "Tue, 21 Apr 2026 14:47:55 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e78d66131f7a66514095a4.jpg",
-        "description": "Apple’da Tim Cook dönemi 1 Eylül 2026’da kapanırken, şirketin yeni CEO’su John Ternus olacak. Uzun yıllardır Apple içinde yükselen Ternus, özellikle donanım tarafındaki rolüyle ..."
-      },
-      {
-        "title": "Beynin garip oyunu: Müziği renk, kelimeyi tat olarak algılıyorlar",
-        "link": "https://www.hurriyet.com.tr/teknoloji/beynin-garip-oyunu-muzigi-renk-kelimeyi-tat-olarak-algiliyorlar-43155868",
-        "pubDate": "Tue, 21 Apr 2026 09:53:51 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e74925131f7a665140946a.jpg",
-        "description": "Bazı insanlar bir kelimeyi duyduğunda tat alıyor, bazılarıysa müzik dinlerken renkler görüyor. Bilimde “sinestezi” olarak bilinen bu ilginç nörolojik özellik, beynin duyuları al..."
-      },
-      {
-        "title": "Burun spreyi farelerde hafızayı geri getirdi",
-        "link": "https://www.hurriyet.com.tr/teknoloji/burun-spreyi-farelerde-hafizayi-geri-getirdi-43155855",
-        "pubDate": "Tue, 21 Apr 2026 09:50:13 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e74847131f7a6651409462.jpg",
-        "description": "ABD’de geliştirilen deneysel bir burun spreyi, yaşlanan farelerde hafıza kaybını azaltan sonuçlar verdi. Bilim insanları, beyin iltihabını hedef alan bu yöntemin gelecekte insan..."
-      },
-      {
-        "title": "Akıllı saatler her şeyi doğru bilmiyor olabilir",
-        "link": "https://www.hurriyet.com.tr/teknoloji/akilli-saatler-her-seyi-dogru-bilmiyor-olabilir-43155846",
-        "pubDate": "Tue, 21 Apr 2026 09:44:38 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e746fc131f7a665140945a.jpg",
-        "description": "Kalori hesabından uyku skoruna, toparlanma puanından VO₂ max verisine kadar akıllı saatlerin sunduğu birçok sağlık ölçümü tahmine dayanıyor. Uzmanlara göre bu cihazlar genel eği..."
-      },
-      {
-        "title": "Ay’da ateş testi başlıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/ayda-ates-testi-basliyor-43155842",
-        "pubDate": "Tue, 21 Apr 2026 09:40:07 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e745c2131f7a6651409452.jpg",
-        "description": "NASA, gelecekte Ay’da kurulacak insanlı üsler için en büyük risklerden birine karşı harekete geçti. Kurum, Ay yüzeyinde malzemelerin nasıl yandığını test ederek düşük yerçekimin..."
-      },
-      {
-        "title": "Creator Connect 2026 etkinliği yapıldı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/creator-connect-2026-etkinligi-yapildi-43153205",
-        "pubDate": "Fri, 17 Apr 2026 11:52:44 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e21f092819415d8e022423.jpg",
-        "description": "Creator Connect 2026 etkinliği ASUS ProArt ve NVIDIA’nın ortak çalışması olarak gerçekleşti ve etkinlikte dijital sanatın ve içerik üretiminin geleceği masaya yatırıldı."
-      },
-      {
-        "title": "ABD’nin Ay için nükleer planı ortaya çıktı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/uzay/abdnin-ay-icin-nukleer-plani-ortaya-cikti-43152351",
-        "pubDate": "Thu, 16 Apr 2026 09:31:33 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e0ac097370607e7db37626.jpg",
-        "description": "NASA’nın Ay’a dönüş programı yeni bir aşamaya girerken, ABD yönetimi de uzun süreli Ay görevleri için nükleer enerjiye dayalı yeni yol haritasını devreye aldı. Yeni plana göre N..."
-      },
-      {
-        "title": "Memeli atalarımız yumurtlamış olabilir",
-        "link": "https://www.hurriyet.com.tr/teknoloji/memeli-atalarimiz-yumurtlamis-olabilir-43152297",
-        "pubDate": "Thu, 16 Apr 2026 08:50:40 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e0a1757370607e7db375fe.jpg",
-        "description": "Bilim insanları, memelilerin çok eski atalarının yumurtladığını uzun süredir düşünüyordu ancak bunu doğrudan gösteren fosil kanıtı bir türlü bulunamamıştı. Yaklaşık 250 milyon y..."
-      },
-      {
-        "title": "Karanlık madde bilmecesinde kara delik iddiası",
-        "link": "https://www.hurriyet.com.tr/teknoloji/memeli-atalarimiz-yumurtlamis-olabilir-43152287",
-        "pubDate": "Thu, 16 Apr 2026 08:40:46 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e09ffe7370607e7db375f6.jpg",
-        "description": "Evreni bir arada tutan ama ne olduğu hâlâ çözülemeyen karanlık maddeye dair dikkat çekici bir teori ortaya atıldı. Yeni araştırmaya göre Büyük Patlama’dan da önce oluşmuş çok es..."
-      },
-      {
-        "title": "Kireçlenme için tek iğne umudu",
-        "link": "https://www.hurriyet.com.tr/teknoloji/kireclenme-icin-tek-igne-umudu-43151134",
-        "pubDate": "Tue, 14 Apr 2026 16:27:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de6af2131f7a66514077df.jpg",
-        "description": "Osteoartritte eklem kıkırdağını onarmayı hedefleyen yeni bir enjeksiyon yöntemi, hayvan deneylerinde birkaç hafta içinde dikkat çekici sonuçlar verdi. Araştırmacılar, vücudun ke..."
-      },
-      {
-        "title": "Take Off Samarkand 2026, 3-4 Haziran’da gerçekleşecek",
-        "link": "https://www.hurriyet.com.tr/teknoloji/take-off-samarkand-2026-3-4-haziranda-gerceklesecek-43150984",
-        "pubDate": "Tue, 14 Apr 2026 13:19:54 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de3e044812f38ad161d886.jpg",
-        "description": "Girişimcilik ve teknoloji dünyasının önde gelen buluşma noktalarından biri olan Take Off Girişim Zirvesi, 2026 yılında Semerkant’ta yapılacak. 3–4 Haziran tarihlerinde Özbekista..."
-      },
-      {
-        "title": "Sıvılar kırılabiliyormuş: Ama nasıl?",
-        "link": "https://www.hurriyet.com.tr/teknoloji/sivilar-kirilabiliyormus-ama-nasil-43150841",
-        "pubDate": "Tue, 14 Apr 2026 10:35:52 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de182b131f7a66514074a5.jpg",
-        "description": "ABD’li araştırmacılar, basit sıvıların da belirli bir kritik gerilim noktasında katılar gibi çatlayıp kırılabildiğini ortaya koydu. Fizik dünyasında şaşkınlık yaratan bu bulgu, ..."
-      },
-      {
-        "title": "Jet Luck’ta kazananlar belli oldu",
-        "link": "https://www.hurriyet.com.tr/teknoloji/jet-luckta-kazananlar-belli-oldu-43149988",
-        "pubDate": "Mon, 13 Apr 2026 09:26:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dcb6d74812f38ad161d03a.jpg",
-        "description": "Halkbank’ın girişimcilere yönelik olarak düzenlediği Jet Luck yarışmasının finali İstanbul Finans Merkezi Halkbank Kuleleri’nde gerçekleştirildi."
-      },
-      {
-        "title": "DENEYAP Türkiye 2026 e-sınav süreci başlıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/deneyap-turkiye-2026-e-sinav-sureci-basliyor-43149860",
-        "pubDate": "Mon, 13 Apr 2026 07:29:04 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dc9b224812f38ad161cf87.jpg",
-        "description": "Türkiye’nin teknoloji odaklı insan kaynağını erken yaşta keşfetmeyi ve geliştirmeyi amaçlayan DENEYAP Türkiye Projesi kapsamında yürütülen 2026 yılı Öğrenci Seçme Süreci, E-Sına..."
-      },
-      {
-        "title": "Yapay zeka kullanımı artıyor, ortalama 5 uygulama kullanılıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/yapay-zeka-kullanimi-artiyor-ortalama-5-uygulama-kullaniliyor-43148012",
-        "pubDate": "Fri, 10 Apr 2026 09:49:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8c7b24812f38ad161c269.jpg",
-        "description": "Yapılan bir araştırmaya göre Türkiye’de kullanıcılar ortalama 5 farklı yapay zekâ uygulaması kullanıyor. Araştırmaya katılanların yüzde 79’u, teknolojinin günlük işleri basitleş..."
-      },
-      {
-        "title": "İki dev kara delik çarpışacak: Neden önemli?",
-        "link": "https://www.hurriyet.com.tr/teknoloji/iki-dev-kara-delik-carpisacak-neden-onemli-43147971",
-        "pubDate": "Fri, 10 Apr 2026 09:23:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8c214131f7a6651405b92.jpg",
-        "description": "Gökbilimciler, evrenin en büyük bilmecelerinden biri olan süper kütleli kara deliklerin nasıl bu kadar büyüdüğüne dair şimdiye kadarki en güçlü kanıtlardan birine ulaştı. Dünya’..."
-      },
-      {
-        "title": "Artemis 2 Ay'da çarpışmalara tanık oldu!",
-        "link": "https://www.hurriyet.com.tr/teknoloji/ayin-karanlik-yuzunde-dehset-anlari-artemis-2-ekibi-carpismalari-canli-gordu-43147955",
-        "pubDate": "Fri, 10 Apr 2026 09:10:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8be08131f7a6651405b6f.jpg",
-        "description": "Ay yüzeyinde peş peşe görülen bu ani ışık patlamaları, uzay yolculuğunun görkemli olduğu kadar tehlikeli yüzünü de ortaya koydu. Uzmanlara göre astronotların tanıklık ettiği bu ..."
-      },
-      {
-        "title": "Araştırma sonucu: İsim veriliyor, yeni teknoloji için değiştiriliyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/arastirma-sonucu-isim-veriliyor-yeni-teknoloji-icin-degistiriliyor-43147356",
-        "pubDate": "Thu, 09 Apr 2026 13:20:45 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d7a7ab595eaed10ce288ac.jpg",
-        "description": "\"Süpürge Kullanım Alışkanlıkları Araştırması\", tüketicilerin ilginç tercihlerini ortaya koydu. Araştırma sonuçlarına göre kullanıcılar süpürgelerine isim veriyor ve arızalandığı..."
-      },
-      {
-        "title": "Katlanabilir iPhone netleşiyor: Apple’ın en pahalı telefonu için geri sayım başladı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/katlanabilir-iphone-netlesiyor-applein-en-pahali-telefonu-icin-geri-sayim-basladi-43147037",
-        "pubDate": "Thu, 09 Apr 2026 08:22:51 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d761aa171b20e71bc7535e.jpg",
-        "description": "Apple’ın uzun süredir beklenen katlanabilir iPhone modeliyle ilgili sızıntılar netleşmeye başladı. Ortaya çıkan maket görseller, cihazın tasarımının son aşamaya yaklaştığını gös..."
-      },
-      {
-        "title": "Bilim insanlarından uyarı: Dünya artık insanlara yetmiyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/bilim-insanlarindan-uyari-dunya-artik-insanlara-yetmiyor-43147013",
-        "pubDate": "Thu, 09 Apr 2026 08:07:47 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d75e17171b20e71bc7532b.jpg",
-        "description": "Yeni bir araştırma, Dünya’nın mevcut tüketim alışkanlıklarıyla bugünkü insan nüfusunu bile uzun vadede sürdürülebilir biçimde taşıyamadığını ortaya koydu. Çalışmaya göre gezegen..."
-      }
-    ],
-    "gaming": [
-      {
-        "title": "Apple’ın yeni patronu kim? Tim Cook sonrası dönemin adı John Ternus",
-        "link": "https://www.hurriyet.com.tr/teknoloji/applein-yeni-patronu-kim-tim-cook-sonrasi-donemin-adi-john-ternus-43156169",
-        "pubDate": "Tue, 21 Apr 2026 14:47:55 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e78d66131f7a66514095a4.jpg",
-        "description": "Apple’da Tim Cook dönemi 1 Eylül 2026’da kapanırken, şirketin yeni CEO’su John Ternus olacak. Uzun yıllardır Apple içinde yükselen Ternus, özellikle donanım tarafındaki rolüyle ..."
-      },
-      {
-        "title": "Beynin garip oyunu: Müziği renk, kelimeyi tat olarak algılıyorlar",
-        "link": "https://www.hurriyet.com.tr/teknoloji/beynin-garip-oyunu-muzigi-renk-kelimeyi-tat-olarak-algiliyorlar-43155868",
-        "pubDate": "Tue, 21 Apr 2026 09:53:51 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e74925131f7a665140946a.jpg",
-        "description": "Bazı insanlar bir kelimeyi duyduğunda tat alıyor, bazılarıysa müzik dinlerken renkler görüyor. Bilimde “sinestezi” olarak bilinen bu ilginç nörolojik özellik, beynin duyuları al..."
-      },
-      {
-        "title": "Burun spreyi farelerde hafızayı geri getirdi",
-        "link": "https://www.hurriyet.com.tr/teknoloji/burun-spreyi-farelerde-hafizayi-geri-getirdi-43155855",
-        "pubDate": "Tue, 21 Apr 2026 09:50:13 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e74847131f7a6651409462.jpg",
-        "description": "ABD’de geliştirilen deneysel bir burun spreyi, yaşlanan farelerde hafıza kaybını azaltan sonuçlar verdi. Bilim insanları, beyin iltihabını hedef alan bu yöntemin gelecekte insan..."
-      },
-      {
-        "title": "Akıllı saatler her şeyi doğru bilmiyor olabilir",
-        "link": "https://www.hurriyet.com.tr/teknoloji/akilli-saatler-her-seyi-dogru-bilmiyor-olabilir-43155846",
-        "pubDate": "Tue, 21 Apr 2026 09:44:38 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e746fc131f7a665140945a.jpg",
-        "description": "Kalori hesabından uyku skoruna, toparlanma puanından VO₂ max verisine kadar akıllı saatlerin sunduğu birçok sağlık ölçümü tahmine dayanıyor. Uzmanlara göre bu cihazlar genel eği..."
-      },
-      {
-        "title": "Ay’da ateş testi başlıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/ayda-ates-testi-basliyor-43155842",
-        "pubDate": "Tue, 21 Apr 2026 09:40:07 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e745c2131f7a6651409452.jpg",
-        "description": "NASA, gelecekte Ay’da kurulacak insanlı üsler için en büyük risklerden birine karşı harekete geçti. Kurum, Ay yüzeyinde malzemelerin nasıl yandığını test ederek düşük yerçekimin..."
-      },
-      {
-        "title": "Creator Connect 2026 etkinliği yapıldı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/creator-connect-2026-etkinligi-yapildi-43153205",
-        "pubDate": "Fri, 17 Apr 2026 11:52:44 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e21f092819415d8e022423.jpg",
-        "description": "Creator Connect 2026 etkinliği ASUS ProArt ve NVIDIA’nın ortak çalışması olarak gerçekleşti ve etkinlikte dijital sanatın ve içerik üretiminin geleceği masaya yatırıldı."
-      },
-      {
-        "title": "ABD’nin Ay için nükleer planı ortaya çıktı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/uzay/abdnin-ay-icin-nukleer-plani-ortaya-cikti-43152351",
-        "pubDate": "Thu, 16 Apr 2026 09:31:33 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e0ac097370607e7db37626.jpg",
-        "description": "NASA’nın Ay’a dönüş programı yeni bir aşamaya girerken, ABD yönetimi de uzun süreli Ay görevleri için nükleer enerjiye dayalı yeni yol haritasını devreye aldı. Yeni plana göre N..."
-      },
-      {
-        "title": "Memeli atalarımız yumurtlamış olabilir",
-        "link": "https://www.hurriyet.com.tr/teknoloji/memeli-atalarimiz-yumurtlamis-olabilir-43152297",
-        "pubDate": "Thu, 16 Apr 2026 08:50:40 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e0a1757370607e7db375fe.jpg",
-        "description": "Bilim insanları, memelilerin çok eski atalarının yumurtladığını uzun süredir düşünüyordu ancak bunu doğrudan gösteren fosil kanıtı bir türlü bulunamamıştı. Yaklaşık 250 milyon y..."
-      },
-      {
-        "title": "Karanlık madde bilmecesinde kara delik iddiası",
-        "link": "https://www.hurriyet.com.tr/teknoloji/memeli-atalarimiz-yumurtlamis-olabilir-43152287",
-        "pubDate": "Thu, 16 Apr 2026 08:40:46 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e09ffe7370607e7db375f6.jpg",
-        "description": "Evreni bir arada tutan ama ne olduğu hâlâ çözülemeyen karanlık maddeye dair dikkat çekici bir teori ortaya atıldı. Yeni araştırmaya göre Büyük Patlama’dan da önce oluşmuş çok es..."
-      },
-      {
-        "title": "Kireçlenme için tek iğne umudu",
-        "link": "https://www.hurriyet.com.tr/teknoloji/kireclenme-icin-tek-igne-umudu-43151134",
-        "pubDate": "Tue, 14 Apr 2026 16:27:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de6af2131f7a66514077df.jpg",
-        "description": "Osteoartritte eklem kıkırdağını onarmayı hedefleyen yeni bir enjeksiyon yöntemi, hayvan deneylerinde birkaç hafta içinde dikkat çekici sonuçlar verdi. Araştırmacılar, vücudun ke..."
-      },
-      {
-        "title": "Take Off Samarkand 2026, 3-4 Haziran’da gerçekleşecek",
-        "link": "https://www.hurriyet.com.tr/teknoloji/take-off-samarkand-2026-3-4-haziranda-gerceklesecek-43150984",
-        "pubDate": "Tue, 14 Apr 2026 13:19:54 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de3e044812f38ad161d886.jpg",
-        "description": "Girişimcilik ve teknoloji dünyasının önde gelen buluşma noktalarından biri olan Take Off Girişim Zirvesi, 2026 yılında Semerkant’ta yapılacak. 3–4 Haziran tarihlerinde Özbekista..."
-      },
-      {
-        "title": "Sıvılar kırılabiliyormuş: Ama nasıl?",
-        "link": "https://www.hurriyet.com.tr/teknoloji/sivilar-kirilabiliyormus-ama-nasil-43150841",
-        "pubDate": "Tue, 14 Apr 2026 10:35:52 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de182b131f7a66514074a5.jpg",
-        "description": "ABD’li araştırmacılar, basit sıvıların da belirli bir kritik gerilim noktasında katılar gibi çatlayıp kırılabildiğini ortaya koydu. Fizik dünyasında şaşkınlık yaratan bu bulgu, ..."
-      },
-      {
-        "title": "Jet Luck’ta kazananlar belli oldu",
-        "link": "https://www.hurriyet.com.tr/teknoloji/jet-luckta-kazananlar-belli-oldu-43149988",
-        "pubDate": "Mon, 13 Apr 2026 09:26:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dcb6d74812f38ad161d03a.jpg",
-        "description": "Halkbank’ın girişimcilere yönelik olarak düzenlediği Jet Luck yarışmasının finali İstanbul Finans Merkezi Halkbank Kuleleri’nde gerçekleştirildi."
-      },
-      {
-        "title": "DENEYAP Türkiye 2026 e-sınav süreci başlıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/deneyap-turkiye-2026-e-sinav-sureci-basliyor-43149860",
-        "pubDate": "Mon, 13 Apr 2026 07:29:04 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dc9b224812f38ad161cf87.jpg",
-        "description": "Türkiye’nin teknoloji odaklı insan kaynağını erken yaşta keşfetmeyi ve geliştirmeyi amaçlayan DENEYAP Türkiye Projesi kapsamında yürütülen 2026 yılı Öğrenci Seçme Süreci, E-Sına..."
-      },
-      {
-        "title": "Yapay zeka kullanımı artıyor, ortalama 5 uygulama kullanılıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/yapay-zeka-kullanimi-artiyor-ortalama-5-uygulama-kullaniliyor-43148012",
-        "pubDate": "Fri, 10 Apr 2026 09:49:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8c7b24812f38ad161c269.jpg",
-        "description": "Yapılan bir araştırmaya göre Türkiye’de kullanıcılar ortalama 5 farklı yapay zekâ uygulaması kullanıyor. Araştırmaya katılanların yüzde 79’u, teknolojinin günlük işleri basitleş..."
-      },
-      {
-        "title": "İki dev kara delik çarpışacak: Neden önemli?",
-        "link": "https://www.hurriyet.com.tr/teknoloji/iki-dev-kara-delik-carpisacak-neden-onemli-43147971",
-        "pubDate": "Fri, 10 Apr 2026 09:23:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8c214131f7a6651405b92.jpg",
-        "description": "Gökbilimciler, evrenin en büyük bilmecelerinden biri olan süper kütleli kara deliklerin nasıl bu kadar büyüdüğüne dair şimdiye kadarki en güçlü kanıtlardan birine ulaştı. Dünya’..."
-      },
-      {
-        "title": "Artemis 2 Ay'da çarpışmalara tanık oldu!",
-        "link": "https://www.hurriyet.com.tr/teknoloji/ayin-karanlik-yuzunde-dehset-anlari-artemis-2-ekibi-carpismalari-canli-gordu-43147955",
-        "pubDate": "Fri, 10 Apr 2026 09:10:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8be08131f7a6651405b6f.jpg",
-        "description": "Ay yüzeyinde peş peşe görülen bu ani ışık patlamaları, uzay yolculuğunun görkemli olduğu kadar tehlikeli yüzünü de ortaya koydu. Uzmanlara göre astronotların tanıklık ettiği bu ..."
-      },
-      {
-        "title": "Araştırma sonucu: İsim veriliyor, yeni teknoloji için değiştiriliyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/arastirma-sonucu-isim-veriliyor-yeni-teknoloji-icin-degistiriliyor-43147356",
-        "pubDate": "Thu, 09 Apr 2026 13:20:45 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d7a7ab595eaed10ce288ac.jpg",
-        "description": "\"Süpürge Kullanım Alışkanlıkları Araştırması\", tüketicilerin ilginç tercihlerini ortaya koydu. Araştırma sonuçlarına göre kullanıcılar süpürgelerine isim veriyor ve arızalandığı..."
-      },
-      {
-        "title": "Katlanabilir iPhone netleşiyor: Apple’ın en pahalı telefonu için geri sayım başladı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/katlanabilir-iphone-netlesiyor-applein-en-pahali-telefonu-icin-geri-sayim-basladi-43147037",
-        "pubDate": "Thu, 09 Apr 2026 08:22:51 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d761aa171b20e71bc7535e.jpg",
-        "description": "Apple’ın uzun süredir beklenen katlanabilir iPhone modeliyle ilgili sızıntılar netleşmeye başladı. Ortaya çıkan maket görseller, cihazın tasarımının son aşamaya yaklaştığını gös..."
-      },
-      {
-        "title": "Bilim insanlarından uyarı: Dünya artık insanlara yetmiyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/bilim-insanlarindan-uyari-dunya-artik-insanlara-yetmiyor-43147013",
-        "pubDate": "Thu, 09 Apr 2026 08:07:47 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d75e17171b20e71bc7532b.jpg",
-        "description": "Yeni bir araştırma, Dünya’nın mevcut tüketim alışkanlıklarıyla bugünkü insan nüfusunu bile uzun vadede sürdürülebilir biçimde taşıyamadığını ortaya koydu. Çalışmaya göre gezegen..."
-      }
-    ],
-    "finance": [
-      {
-        "title": "Sosyal medyaya ve doğum iznine yönelik düzenlemeleri de içeren kanun teklifinin komisyon görüşmeleri ertelendi",
-        "link": "https://www.hurriyet.com.tr/ekonomi/sosyal-medyaya-ve-dogum-iznine-yonelik-duzenlemeleri-de-iceren-kanun-teklifinin-komisyon-gorusmeleri-ertelendi-43127192",
-        "pubDate": "Thu, 12 Mar 2026 11:19:46 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69b2a14d6076c3848807f8ff.jpg",
-        "description": "Sosyal medyaya ve doğum iznine yönelik düzenlemeleri de içeren Sosyal Hizmetler Kanunu ve Bazı Kanunlarda Değişiklik Yapılması Hakkında Kanun Teklifi'nin TBMM Sağlık, Aile, Çalı..."
-      },
-      {
-        "title": "Cumhurbaşkanı Yardımcısı Yılmaz'dan ekonomi değerlendirmesi",
-        "link": "https://www.hurriyet.com.tr/ekonomi/cumhurbaskani-yardimcisi-yilmazdan-ekonomi-degerlendirmesi-42914657",
-        "pubDate": "Thu, 14 Aug 2025 18:56:36 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/689e3161ce6d01db486037c2.jpg",
-        "description": "Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, Türkiye ekonomisinde finansal istikrar ve dezenflasyon sürecindeki olumlu gelişmeleri değerlendirdi. Yılmaz, Türkiye Cumhuriyet Merkez Ba..."
-      },
-      {
-        "title": "Vodafone uydu üzerinden mobil iletişim çalışmalarına hız verdi",
-        "link": "https://www.hurriyet.com.tr/ekonomi/vodafone-uydu-uzerinden-mobil-iletisim-calismalarina-hiz-verdi-42728153",
-        "pubDate": "Fri, 14 Mar 2025 07:52:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/67d3df5a0906cb5bcba52565.jpg",
-        "description": "Vodafone ve AST SpaceMobile, uydu üzerinden mobil iletişim alanında iki yeni işbirliğine imza attı. İki şirket, Málaga Üniversitesi işbirliğiyle yeni bir uzay ve kara tabanlı mo..."
-      },
-      {
-        "title": "İnşaat seramikleri sektörünün ihracata katkısı arttı",
-        "link": "https://www.hurriyet.com.tr/ekonomi/insaat-seramikleri-sektorunun-ihracata-katkisi-artti-42700013",
-        "pubDate": "Wed, 19 Feb 2025 10:15:29 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/67b5af3f081656cd3743793b.jpg",
-        "description": "Türkiye Seramik Federasyonu'nun hazırladığı İhracat Katkı Endeksi 2024 yılı ikinci yarı sonuçlarına göre, inşaat seramikleri sektörü yılı 12,89 puanla en yüksek ihracat katkı or..."
-      },
-      {
-        "title": "Türk kadın girişimci diasporasının izinde.... KAGİDER’in 2025 yol haritasında küresel güçlenme var",
-        "link": "https://www.hurriyet.com.tr/ekonomi/turk-kadin-girisimci-diasporasinin-izinde-kagiderin-2025-yol-haritasinda-kuresel-guclenme-var-42653772",
-        "pubDate": "Fri, 10 Jan 2025 04:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/67802964e864eb4a70509225.jpg",
-        "description": "KAGİDER, dünyanın dört bir yanındaki kadın girişimci ve expatların bir araya geldiği bir Global Kadın Girişimciler Platformu kurma hazırlığında. Türk kadın girişimci diasporasın..."
-      },
-      {
-        "title": "Milliyet Executive ile İhracatın Yeni Yıldızları",
-        "link": "https://www.hurriyet.com.tr/ekonomi/milliyet-executive-ile-ihracatin-yeni-yildizlari-42581927",
-        "pubDate": "Tue, 05 Nov 2024 10:45:19 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/6729f73a34788b4b5d36df88.jpg",
-        "description": "İş dünyasına dair haberleri ve yenilikleri modern bir perspektifle okurlarıyla buluşturan Milliyet Executive’in 35. sayısı, yarın raflarda yerini alıyor."
-      },
-      {
-        "title": "Roberto Righi: Türkiye’ye güveniyor ve yatırım yapıyoruz",
-        "link": "https://www.hurriyet.com.tr/ekonomi/roberto-righi-turkiyeye-guveniyor-ve-yatirim-yapiyoruz-42555412",
-        "pubDate": "Mon, 07 Oct 2024 07:33:50 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/67038ed64a080f6ae9d47143.jpg",
-        "description": "Pirelli’den ayrılarak bağımsız bir şirket haline gelen endüstriyel ve ticari lastik üreticisi Prometeon, ilk kez kendi ismini kullandığı, Kocaeli’nde üretilen Serie 02 lastikler..."
-      },
-      {
-        "title": "Yasa dışı bahis ve suç gelirlerinin aklanmasına karşı mücadele... Bakan Şimşek: Tümüyle engellemeye kararlıyız",
-        "link": "https://www.hurriyet.com.tr/ekonomi/yasa-disi-bahis-ve-suc-gelirlerinin-aklanmasina-karsi-mucadele-42554788",
-        "pubDate": "Sun, 06 Oct 2024 09:55:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/67025e89230b261722a0b8b8.jpg",
-        "description": "Hazine ve Maliye Bakanlığı, suç gelirlerinin aklanmasının önlenmesi açısından da önem taşıyan yasa dışı bahis ve kumarla mücadelesini kesintisiz sürdürürken Mali Suçları Araştır..."
-      },
-      {
-        "title": "Türkiye Petrolleri Anonim Ortaklığına Edirne'de bir saha için petrol arama ruhsatı verildi",
-        "link": "https://www.hurriyet.com.tr/ekonomi/turkiye-petrolleri-anonim-ortakligina-edirnede-bir-saha-icin-petrol-arama-ruhsati-verildi-42554622",
-        "pubDate": "Sun, 06 Oct 2024 06:53:51 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/670233fb230b261722a0b7e9.jpg",
-        "description": "Türkiye Petrolleri Anonim Ortaklığına (TPAO) Edirne'deki bir saha için petrol arama ruhsatı verildi."
-      },
-      {
-        "title": "Trafikte 'Xenon far' terörü",
-        "link": "https://www.hurriyet.com.tr/ekonomi/trafikte-xenon-far-teroru-42554588",
-        "pubDate": "Sun, 06 Oct 2024 04:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/670201ec5e4bd54688ce7553.jpg",
-        "description": "Trafikte sürücüyü ‘kör eden’ LED farlarla ilgili, sosyal medyada neredeyse her gün yeni bir şikâyet başlığı açılıyor. Denetimlere rağmen halk arasında ‘LED Xenon’ olarak adlandı..."
-      },
-      {
-        "title": "Bakan Uraloğlu: Lacivert yol, büyük bir fırsat sunmaktadır",
-        "link": "https://www.hurriyet.com.tr/ekonomi/bakan-uraloglu-lacivert-yol-buyuk-bir-firsat-sunmaktadir-42552636",
-        "pubDate": "Thu, 03 Oct 2024 14:00:27 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fea36c8d6c337651fcb435.jpg",
-        "description": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, \"Orta koridorun devamında Türkiye'den geçen hatların kapasitelerinin artırılması için ciddi yatırımlar planladık.\" dedi."
-      },
-      {
-        "title": "TCMB Başkanı Karahan'dan faiz mesajı",
-        "link": "https://www.hurriyet.com.tr/ekonomi/tcmb-baskani-karahandan-faiz-mesaji-42552459",
-        "pubDate": "Thu, 03 Oct 2024 12:11:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe89d48d6c337651fcb302.jpg",
-        "description": "TCMB Başkanı Fatih Karahan, TBMM Plan ve Bütçe Komisyonu'nda sunum yaptı. Karahan para politikasına ilişkin olarak \"Para politikasındaki kararlı duruşumuzu devam ettireceğiz. Yı..."
-      },
-      {
-        "title": "Yılmaz: Dezenflasyon sürecini tesis etmeye devam ediyoruz",
-        "link": "https://www.hurriyet.com.tr/ekonomi/yilmaz-dezenflasyon-surecini-tesis-etmeye-devam-ediyoruz-42552393",
-        "pubDate": "Thu, 03 Oct 2024 11:39:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe82688d6c337651fcb2b9.jpg",
-        "description": "Cumhrubaşkanı Yardımcısı Cevdet Yılmaz \"Programımıza duyulan güvenin neticesinde dezenflasyon sürecini tesis etmeye devam ediyoruz\" dedi."
-      },
-      {
-        "title": "Son dakika... Merkez Bankası'nın rezervlerinde rekor",
-        "link": "https://www.hurriyet.com.tr/ekonomi/son-dakika-merkez-bankasi-rezervlerini-acikladi-42551793",
-        "pubDate": "Thu, 03 Oct 2024 11:30:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe0fcb150fcfbcd7c8d5c0.jpg",
-        "description": "Türkiye Cumhuriyet Merkez Bankası haftalık rezervlerini açıkladı. Merkez'in rezervleri 998 milyon dolar yükseldi. Böylece rezervler 157.3 milyar dolarla tarihi rekor kırdı."
-      },
-      {
-        "title": "Kredilerde artış sürüyor",
-        "link": "https://www.hurriyet.com.tr/ekonomi/kredilerde-artis-suruyor-42552366",
-        "pubDate": "Thu, 03 Oct 2024 11:19:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe7d9a8d6c337651fcb278.jpg",
-        "description": "BDDK'nın verilerine göre kredi ve kredi kartı kullanımındaki artış hızla devam ediyor."
-      },
-      {
-        "title": "Bakan Uraloğlu'ndan 12 yeni iç hat müjdesi",
-        "link": "https://www.hurriyet.com.tr/ekonomi/bakan-uraloglundan-12-yeni-ic-hat-mujdesi-42552357",
-        "pubDate": "Thu, 03 Oct 2024 11:11:44 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe7bde8d6c337651fcb24d.jpg",
-        "description": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, havayolu firmalarıyla gerçekleştirilen toplantının ardından açıklamalarda bulunarak, “İç hatlarda, karayolu veya tren ile en az ..."
-      },
-      {
-        "title": "KKM'de düşüşe devam",
-        "link": "https://www.hurriyet.com.tr/ekonomi/kkmde-dususe-devam-42551792",
-        "pubDate": "Thu, 03 Oct 2024 11:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe0f42150fcfbcd7c8d5b4.jpg",
-        "description": "Kur korumalı TL mevduat ve katılma hesaplarındaki düşüş devam etti."
-      },
-      {
-        "title": "Avrupa'da ÜFE yükseldi",
-        "link": "https://www.hurriyet.com.tr/ekonomi/avrupada-ufe-yukseldi-42552247",
-        "pubDate": "Thu, 03 Oct 2024 10:06:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe6c8b8d6c337651fcb16f.jpg",
-        "description": "Euro Bölgesi'nde Üretici Fiyat Endeksi (ÜFE), ağustosta aylık bazda yüzde 0,6 arttı."
-      },
-      {
-        "title": "İstanbul Havalimanı Avrupa'nın en yoğunu",
-        "link": "https://www.hurriyet.com.tr/ekonomi/istanbul-havalimani-avrupanin-en-yogunu-42552243",
-        "pubDate": "Thu, 03 Oct 2024 10:04:34 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe6c308d6c337651fcb161.jpg",
-        "description": "İstanbul Havalimanı, 23-29 Eylül'ü kapsayan dönemde günlük ortalama 1438 uçuşla Avrupa'nın en yoğun havalimanı oldu."
-      },
-      {
-        "title": "Bakan Bolat: 4 ayda enflasyon yüzde 26.5 düştü",
-        "link": "https://www.hurriyet.com.tr/ekonomi/bakan-bolat-4-ayda-enflasyon-yuzde-26-5-dustu-42552234",
-        "pubDate": "Thu, 03 Oct 2024 10:01:40 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/66fe6b788d6c337651fcb157.jpg",
-        "description": "Ticaret Bakanı Ömer Bolat, enflasyon oranının 4 ayda yüzde 26.5 düştüğünü belirterek, “TÜFE aylık yüzde 2.97, yılık bazda ise yüzde 49.38 olarak gerçekleşti. Son 3 yıldan bu yan..."
-      }
-    ],
-    "sports": [
-      {
-        "title": "Ertan Torunoğulları: 'Lehimize olsaydı VAR devreye girer miydi?'",
-        "link": "https://www.hurriyet.com.tr/sporarena/ertan-torunogullari-lehimize-olsaydi-var-devreye-girer-miydi-43156383",
-        "pubDate": "Tue, 21 Apr 2026 22:16:44 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7f7267370607e7db39168.jpg",
-        "description": "Ziraat Türkiye Kupası Çeyrek Final müsabakasında TÜMOSAN Konyaspor'a uzatma bölümünde penaltıdan yediği golle 1-0 mağlup olan Fenerbahçe'de yönetim kurulu üyesi Ertan Torunoğull..."
-      },
-      {
-        "title": "İlhan Palut: 'İmdadımıza yetişen bir penaltıydı!'",
-        "link": "https://www.hurriyet.com.tr/sporarena/ilhan-palut-imdadimiza-yetisen-bir-penaltiydi-43156382",
-        "pubDate": "Tue, 21 Apr 2026 22:13:38 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7f6917370607e7db3915c.jpg",
-        "description": "Ziraat Türkiye Kupası Çeyrek Final müsabakasında sahasında Fenerbahçe'yi 1-0 mağlup ederek adını yarı finale yazdıran TÜMOSAN Konyaspor'da teknik direktör İlhan Palut, yeşil bey..."
-      },
-      {
-        "title": "TBF Başkanı Hidayet Türkoğlu, FIBA Hall of Fame 2026 ödülünü aldı!",
-        "link": "https://www.hurriyet.com.tr/sporarena/tbf-baskani-hidayet-turkoglu-fiba-hall-of-fame-2026-odulunu-aldi-43156361",
-        "pubDate": "Tue, 21 Apr 2026 21:27:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7ebd17370607e7db3910d.jpg",
-        "description": "Türkiye Basketbol Federasyonu Başkanı Hidayet Türkoğlu, FIBA tarafından FIBA Hall of Fame 2026 listesine dahil edilmesinin ardından düzenlenen törende ödülünü FIBA Başkanı Şeyh ..."
-      },
-      {
-        "title": "Hakan Çalhanoğlu'nun şovu Inter'i finale taşıdı!",
-        "link": "https://www.hurriyet.com.tr/sporarena/hakan-calhanoglunun-sovu-interi-finale-tasidi-43156351",
-        "pubDate": "Tue, 21 Apr 2026 21:25:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7eb3d7370607e7db39102.jpg",
-        "description": "Inter, İtalya Kupası yarı final maçında sahasında Como'yu 2-0 geriden gelerek 3-2 mağlup etti ve finale yükseldi."
-      },
-      {
-        "title": "Ferdi Kadıoğlu attı, Brighton, Chelsea'yi farklı geçti!",
-        "link": "https://www.hurriyet.com.tr/sporarena/ferdi-kadioglu-atti-brighton-chelseayi-farkli-gecti-43156347",
-        "pubDate": "Tue, 21 Apr 2026 21:19:26 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7e9c67370607e7db390fa.jpg",
-        "description": "Brighton, İngiltere Premier Lig'in 34. haftasında Ferdi Kadıoğlu'nun gol attığı maçta Chelsea'yi 3-0 mağlup etti."
-      },
-      {
-        "title": "Tedesco'dan Galatasaray ve Asensio açıklaması!",
-        "link": "https://www.hurriyet.com.tr/sporarena/tedescodan-galatasaray-ve-asensio-aciklamasi-43156343",
-        "pubDate": "Tue, 21 Apr 2026 21:14:49 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7e8c87370607e7db390ea.jpg",
-        "description": "Fenerbahçe Teknik Direktörü Domenico Tedesco, Ziraat Türkiye Kupası çeyrek final maçında Konyaspor'a elendikleri maçın ardından açıklamalarda bulundu."
-      },
-      {
-        "title": "Fenerbahçe'de her şey 4 günde değişti: Bir son dakika şoku daha!",
-        "link": "https://www.hurriyet.com.tr/sporarena/fenerbahcede-her-sey-4-gunde-degisti-bir-son-dakika-soku-daha-43156288",
-        "pubDate": "Tue, 21 Apr 2026 20:59:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7e5147370607e7db390d5.jpg",
-        "description": "Süper Lig'de hafta sonu 90+7. dakikada kalesinde gördüğü golle Çaykur Rizespor ile 2-2 berabere kalarak lider Galatasaray'ın 4 puan gerisine düşen Fenerbahçe, deplasmanda Konyas..."
-      },
-      {
-        "title": "İsmail Yüksek: 'Tek kelimeyle rezillik!'",
-        "link": "https://www.hurriyet.com.tr/sporarena/ismail-yuksek-tek-kelimeyle-rezillik-43156332",
-        "pubDate": "Tue, 21 Apr 2026 20:37:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7df907370607e7db390c5.jpg",
-        "description": "Fenerbahçe'de İsmail Yüksek ve Fred, Ziraat Türkiye Kupası'nda Konyaspor'a elendikleri maçın ardından açıklamalarda bulundu."
-      },
-      {
-        "title": "Gaziantep FK, yeni teknik direktörünü duyurdu!",
-        "link": "https://www.hurriyet.com.tr/sporarena/gaziantep-fk-yeni-teknik-direktorunu-duyurdu-43156272",
-        "pubDate": "Tue, 21 Apr 2026 18:49:25 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7c6a37370607e7db3909a.jpg",
-        "description": "Gaziantep FK, Rumen teknik adam Mirel Radoi ile prensipte anlaştı."
-      },
-      {
-        "title": "VAR kayıtları açıklandı: Galatasaray'ın golü neden iptal edildi? İşte o diyaloglar...",
-        "link": "https://www.hurriyet.com.tr/sporarena/var-kayitlari-aciklandi-galatasarayin-golu-neden-iptal-edildi-iste-o-diyaloglar-43156242",
-        "pubDate": "Tue, 21 Apr 2026 17:28:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7b6757370607e7db39060.jpg",
-        "description": "Trendyol Süper Lig'de 30. haftanın VAR kayıtları yayınlandı. Türkiye Futbol Federasyonu Merkez Hakem Kurulu, kayıtları YouTube üzerinden yayına verdi."
-      },
-      {
-        "title": "Domenico Tedesco: 'Ayağa kalkmak için bir fırsat!'",
-        "link": "https://www.hurriyet.com.tr/sporarena/domenico-tedesco-ayaga-kalkmak-icin-bir-firsat-43156238",
-        "pubDate": "Tue, 21 Apr 2026 17:22:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7b1cc7370607e7db39045.jpg",
-        "description": "Fenerbahçe Teknik Direktörü Domenico Tedesco, Ziraat Türkiye Kupası çeyrek finalinde oynayacakları Konyaspor mücadelesi öncesi açıklamalarda bulundu."
-      },
-      {
-        "title": "A Milli Kadın Basketbol Takımı'nın 2026 Dünya Kupası'ndaki rakipleri belli oldu!",
-        "link": "https://www.hurriyet.com.tr/sporarena/a-milli-kadin-basketbol-takiminin-2026-dunya-kupasindaki-rakipleri-belli-oldu-43156234",
-        "pubDate": "Tue, 21 Apr 2026 17:13:02 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7b01c7370607e7db3903d.jpg",
-        "description": "Ay-yıldızlı takım, Almanya'nın başkenti Berlin'de 4-13 Eylül'de düzenlenecek kupada C Grubu'nda Avustralya, Belçika ve Porto Riko ile karşılaşacak."
-      },
-      {
-        "title": "Hollanda'da ilginç olay: Hakem, maçın ortasında telefonla konuştu!",
-        "link": "https://www.hurriyet.com.tr/sporarena/hollandada-ilginc-olay-hakem-macin-ortasinda-telefonla-konustu-43156189",
-        "pubDate": "Tue, 21 Apr 2026 15:25:43 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e796f67370607e7db3901b.jpg",
-        "description": "Hollanda'da oynanan AZ Alkmaar-NEC Nijmegen kupa finalinde (KNVB Beker), maçın hakemi gelen telefona cevap verdi."
-      },
-      {
-        "title": "Trabzonspor, Ruslan Malinovskyi transferini bitirmek üzere",
-        "link": "https://www.hurriyet.com.tr/sporarena/trabzonspor-ruslan-malinovskyi-transferini-bitirmek-uzere-43156149",
-        "pubDate": "Tue, 21 Apr 2026 14:42:20 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e78cc00c50728add7f19d2.jpg",
-        "description": "Trabzonspor, Genoa forması giyen Ukraynalı orta saha oyuncusu Ruslan Malinovskyi'yi kadrosuna katmak üzere."
-      },
-      {
-        "title": "Beşiktaş ve Fenerbahçe'ye Lukaku müjdesi! Napoli'de deprem",
-        "link": "https://www.hurriyet.com.tr/sporarena/besiktas-ve-fenerbahceye-lukaku-mujdesi-napolide-deprem-43156073",
-        "pubDate": "Tue, 21 Apr 2026 13:38:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e77da40c50728add7f19a7.jpg",
-        "description": "Beşiktaş ve Fenerbahçe'nin transfer listesinde yer alan Romelu Lukaku'ya dair Napoli kulübünde olay yaratan karar alındı."
-      },
-      {
-        "title": "A Milli Kadın Futbol Takımı 7 basamak birden yükseldi!",
-        "link": "https://www.hurriyet.com.tr/sporarena/a-milli-kadin-futbol-takimi-7-basamak-birden-yukseldi-43156069",
-        "pubDate": "Tue, 21 Apr 2026 12:55:43 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e773c92819415d8e023983.jpg",
-        "description": "A Milli Kadın Futbol Takımı, FIFA dünya sıralamasında 7 basamak yükselerek 51. sıraya çıktı."
-      },
-      {
-        "title": "Arsenal, 16'lık yeteneğe imza attırdı",
-        "link": "https://www.hurriyet.com.tr/sporarena/arsenal-16lik-yetenege-imza-attirdi-43156046",
-        "pubDate": "Tue, 21 Apr 2026 12:39:22 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e76fe40c50728add7f196a.jpg",
-        "description": "Premier Lig ekibi Arsenal, 16 yaşındaki İngiliz stoper Marli Salmon ile sözleşme imzaladı."
-      },
-      {
-        "title": "Trabzonspor'dan Fenerbahçeli oyuncuya resmi teklif! Bedelsiz transfer olabilir",
-        "link": "https://www.hurriyet.com.tr/sporarena/trabzonspordan-fenerbahceli-oyuncuya-resmi-teklif-bedelsiz-transfer-olabilir-43156034",
-        "pubDate": "Tue, 21 Apr 2026 12:38:12 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e76fae2819415d8e023959.jpg",
-        "description": "Süper Lig'de sezonun sona ermesine 4 hafta kala takımlar transfer çalışmalarına hız verirken, ezeli rakipler arasında sürpriz bir transfer gerçekleşebilir. İşte detaylar..."
-      },
-      {
-        "title": "Galatasaray-Gençlerbirliği maçının hakemi belli oldu",
-        "link": "https://www.hurriyet.com.tr/sporarena/galatasaray-genclerbirligi-macinin-hakemi-belli-oldu-43156007",
-        "pubDate": "Tue, 21 Apr 2026 12:12:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7698f0c50728add7f1955.jpg",
-        "description": "Galatasaray ve Gençlerbirliği'nin Ziraat Türkiye Kupası çeyrek finalinde oynayacağı mücadelenin hakemi açıklandı."
-      },
-      {
-        "title": "Galatasaray'a 700 milyon dolarlık dev gelir!",
-        "link": "https://www.hurriyet.com.tr/sporarena/galatasaraya-700-milyon-dolarlik-dev-gelir-43155960",
-        "pubDate": "Tue, 21 Apr 2026 11:45:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e763442819415d8e023908.jpg",
-        "description": "Finansal sorunlara çözüm olarak gayrimenkul projeleriyle gelir oluşturma ve buna bağlı tesisleşme çalışmasına girişen Galatasaray, Riva ikinci etap ve Florya'dan 700 milyon dola..."
-      }
-    ],
+    "local": [],
+    "top": [],
+    "technology": [],
+    "gaming": [],
+    "finance": [],
+    "sports": [],
     "entertainment": [],
-    "health": [
-      {
-        "title": "Sel, fırtına, yağış, dolu... İçişleri Bakanlığından bazı iller için \"sarı\" kodlu uyarı",
-        "link": "https://www.hurriyet.com.tr/gundem/sel-firtina-yagis-dolu-icisleri-bakanligindan-bazi-iller-icin-sari-kodlu-uyari-43156192",
-        "pubDate": "Tue, 21 Apr 2026 15:35:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e799050c50728add7f19fa.jpg",
-        "description": "İçişleri Bakanlığı, kuvvetli ve gök gürültülü sağanak nedeniyle bazı iller için \"sarı\" kodlu meteorolojik uyarıda bulundu."
-      },
-      {
-        "title": "Fenerbahçe'de her şey 4 günde değişti: Bir son dakika şoku daha!",
-        "link": "https://www.hurriyet.com.tr/sporarena/fenerbahcede-her-sey-4-gunde-degisti-bir-son-dakika-soku-daha-43156288",
-        "pubDate": "Tue, 21 Apr 2026 20:59:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7e5147370607e7db390d5.jpg",
-        "description": "Süper Lig'de hafta sonu 90+7. dakikada kalesinde gördüğü golle Çaykur Rizespor ile 2-2 berabere kalarak lider Galatasaray'ın 4 puan gerisine düşen Fenerbahçe, deplasmanda Konyas..."
-      },
-      {
-        "title": "AKYAZI BELEDİYE BAŞKANLIĞI",
-        "link": "https://www.hurriyet.com.tr/resmi-ilanlar/akyazi-belediye-baskanligi-43155929",
-        "pubDate": "Tue, 21 Apr 2026 21:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75a362819415d8e0238d6.jpg",
-        "description": ""
-      },
-      {
-        "title": "Böcek Ailesi davasında bir isme tahliye",
-        "link": "https://www.hurriyet.com.tr/gundem/bocek-ailesi-davasi-basliyor-fatihte-otelde-zehirlenerek-hayatlarini-kaybetmislerdi-43155610",
-        "pubDate": "Tue, 21 Apr 2026 14:21:12 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e71b292819415d8e0236c1.jpg",
-        "description": "İstanbul Fatih'te kaldıkları otelde fenalaşarak hastaneye kaldırılan ve ardından da hayatlarını kaybeden 4 kişilik Böcek ailesinin şüpheli ölümleriyle ilgili dava başladı. İlk d..."
-      },
-      {
-        "title": "'Estetikli' dediler, dünyanın en güzel kadını seçildi",
-        "link": "https://www.hurriyet.com.tr/kelebek/stil/estetikli-dediler-dunyanin-en-guzel-kadini-secildi-43156117",
-        "pubDate": "Tue, 21 Apr 2026 13:57:38 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7810a7370607e7db38f94.jpg",
-        "description": "Her yel geleneksel olarak belirlenen 'Dünyanın en güzel kadını' bir kez daha açıklandı..."
-      },
-      {
-        "title": "FETÖ firarisi eski emniyet müdürü Hayati Başdağ İstanbul'da yakalandı",
-        "link": "https://www.hurriyet.com.tr/gundem/feto-firarisi-eski-emniyet-muduru-hayati-basdag-istanbulda-yakalandi-43155988",
-        "pubDate": "Tue, 21 Apr 2026 11:53:56 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e76551131f7a66514094d2.jpg",
-        "description": "FETÖ/PDY silahlı terör örgütüne yönelik yürütülen soruşturmada, hakkında birçok suçtan yakalama kararı bulunan eski emniyet müdürü Hayati Başdağ İstanbul'da yakalandı. Fatih'te ..."
-      },
-      {
-        "title": "Ambargo, enerji krizi ve Marco Rubio: ABD'nin yeni hedefi Küba'da rejim değişikliği mi?",
-        "link": "https://www.hurriyet.com.tr/dunya/ambargo-enerji-krizi-ve-marco-rubio-abdnin-yeni-hedefi-kubada-rejim-degisikligi-mi-43155262",
-        "pubDate": "Tue, 21 Apr 2026 06:05:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e639194812f38ad161ef41.jpg",
-        "description": "Trump \"Kucağıma düştü\" dedi, Dışişleri Bakanı Rubio ise Beyaz Saray'a bastırıyor... 10 yıl aradan sonra Küba'ya giden ilk ABD heyeti, masaya siyasi reformları ve Starlink uydula..."
-      },
-      {
-        "title": "Zayıflama ameliyatı gerçeği: Tam 57 kilo verdi ama yaşadıkları şaşırttı… ‘Kimse bu detayları anlatmıyor’",
-        "link": "https://www.hurriyet.com.tr/aile/galeri-zayiflama-ameliyati-gercegi-tam-57-kilo-verdi-ama-yasadiklari-sasirtti-kimse-bu-detaylari-anlatmiyor-43145601",
-        "pubDate": "Tue, 21 Apr 2026 05:38:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d4d8c6fd0cf081c7fd1e37.jpg",
-        "description": "İngiltere’den Türkiye’ye uzanan bir zayıflama hikâyesi, “hızlı çözüm” algısını yerle bir etti. 57 kilo veren 44 yaşındaki Charlene Buchanan, zayıflama ameliyatı sonrası yaşadığı..."
-      },
-      {
-        "title": "Haliç’e yeni pencere açılıyor",
-        "link": "https://www.hurriyet.com.tr/gundem/halice-yeni-pencere-aciliyor-43155532",
-        "pubDate": "Tue, 21 Apr 2026 04:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e6a6c80c50728add7f14e1.jpg",
-        "description": "İçinden deniz geçen, yedi tepeli şehir olarak bilinen ve dünyanın en çok ziyaret edilen şehirlerinden biri olarak 2025’te 19 milyona yakın turist ağırlayan İstanbul, yakında yen..."
-      },
-      {
-        "title": "Apple'da bir dönem sona erdi... Tim Cook görevini bırakıyor",
-        "link": "https://www.hurriyet.com.tr/dunya/appleda-bir-donem-sona-erdi-tim-cook-gorevini-birakiyor-43155525",
-        "pubDate": "Mon, 20 Apr 2026 21:50:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e69fa07370607e7db38a1d.jpg",
-        "description": "Apple, Üst Düzey Yöneticisi (CEO) Tim Cook'un 1 Eylül 2026 itibarıyla şirketin yönetim kurulu başkanı olacağını, yerine de şirkette Donanım Mühendisliğinden Sorumlu Kıdemli Başk..."
-      },
-      {
-        "title": "Deniz Kuvvetlerinin milli uçak gemisi gelecek yıl mavi sularla buluşmaya hazırlanıyor",
-        "link": "https://www.hurriyet.com.tr/gundem/deniz-kuvvetlerinin-milli-ucak-gemisi-gelecek-yil-mavi-sularla-bulusmaya-hazirlaniyor-43155482",
-        "pubDate": "Mon, 20 Apr 2026 19:32:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e67f3c0c50728add7f13c1.jpg",
-        "description": "Deniz Kuvvetleri Komutanı Oramiral Ercüment Tatlıoğlu, Türk Deniz Kuvvetlerinin çok güçlü bir filosu bulunduğunu belirterek, \"Şu anda milli uçak gemimizi yapıyoruz. Milli uçak g..."
-      },
-      {
-        "title": "17 bıçak darbesiyle ölümün eşiğinden döndü… Havva’nın sesine kulak verin",
-        "link": "https://www.hurriyet.com.tr/gundem/17-bicak-darbesiyle-olumun-esiginden-dondu-havvanin-sesine-kulak-verin-43155529",
-        "pubDate": "Tue, 21 Apr 2026 04:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e6a4870c50728add7f14cd.jpg",
-        "description": "Hakkında uzaklaştırma kararı bulunan eşi M.Ç. tarafından çocuğunun gözü önünde 17 bıçak darbesiyle ağır yaralanan Havva Ç. tutuklanan eşinin en ağır cezayı almasını istedi."
-      },
-      {
-        "title": "‘Benim hakkım daha fazla’ tartışması: Apartmanlarda otopark krizi! Nasıl bir yol izlenmeli? ‘Çok önemli bir detay atlanıyor’",
-        "link": "https://www.hurriyet.com.tr/gundem/benim-hakkim-daha-fazla-tartismasi-apartmanlarda-otopark-krizi-nasil-bir-yol-izlenmeli-cok-onemli-bir-detay-atlaniyor-43150624",
-        "pubDate": "Mon, 20 Apr 2026 03:18:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de0345131f7a66514073da.jpg",
-        "description": "İstanbul’da apartman otoparklarında sessiz bir gerilim giderek büyüyor. Birden fazla araca sahip bazı site sakinleri, ortak alan kullanımını fiilen değiştiriyor. Komşular arasın..."
-      },
-      {
-        "title": "Pankreas kanserinde umut veren gelişme: Yeni ilaç yaşam süresini uzattı",
-        "link": "https://www.hurriyet.com.tr/aile/galeri-pankreas-kanserinde-umut-veren-gelisme-yeni-ilac-yasam-suresini-uzatti-43151891",
-        "pubDate": "Mon, 20 Apr 2026 09:28:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dfa0be7370607e7db3743f.jpg",
-        "description": "ABD’de geliştirilen yeni bir ilaç, pankreas kanseri tedavisinde dikkat çekici sonuçlar verdi. Elraglusib adlı deneysel ilacın kemoterapiyle birlikte kullanılması, ileri evre pan..."
-      },
-      {
-        "title": "BEŞİKTAŞ BELEDİYESİ BASIN YAYIN VE HALKLA İLİŞKİLER MD.",
-        "link": "https://www.hurriyet.com.tr/resmi-ilanlar/besiktas-belediyesi-basin-yayin-ve-halkla-iliskiler-md-43156050",
-        "pubDate": "Tue, 21 Apr 2026 21:00:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e7722e2819415d8e023971.jpg",
-        "description": ""
-      },
-      {
-        "title": "17 yaşındaki Fatma Koçak'ın ölümünde korkunç gerçek 12 yıl sonra ortaya çıktı! Annesi ve üvey kardeşi tutuklandı",
-        "link": "https://www.hurriyet.com.tr/gundem/17-yasindaki-fatma-kocakin-olumunde-korkunc-gercek-12-yil-sonra-ortaya-cikti-annesi-ve-uvey-kardesi-tutuklandi-43156037",
-        "pubDate": "Tue, 21 Apr 2026 12:37:07 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e76f344812f38ad161f111.jpg",
-        "description": "Adıyaman'ın Besni ilçesinde 2014 yılında karnına tek kurşun sıkılmış halde bulunan ve intihar ettiği öne sürülen 17 yaşındaki Fatma Koçak'ın öz annesi ve üvey kardeşi tarafından..."
-      },
-      {
-        "title": "18 ilde yasa dışı bahis ve dolandırıcılık suçlarına yönelik operasyon",
-        "link": "https://www.hurriyet.com.tr/gundem/18-ilde-yasa-disi-bahis-ve-dolandiricilik-suclarina-yonelik-operasyon-43155998",
-        "pubDate": "Tue, 21 Apr 2026 12:04:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e767a54812f38ad161f0fa.jpg",
-        "description": "İçişleri Bakanlığı'ndan yapılan açıklamaya göre 18 il merkezli nitelikli dolandırıcılık be yasa dışı bahis operasyonlarında 127 şüpheli gözaltına alındı."
-      },
-      {
-        "title": "İsrailli bakanların kullandığı araç Filistinli çocuğu ezerek öldürdü",
-        "link": "https://www.hurriyet.com.tr/dunya/israilli-bakanlarin-kullandigi-arac-filistinli-cocugu-ezerek-oldurdu-43155950",
-        "pubDate": "Tue, 21 Apr 2026 11:22:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75dbf0c50728add7f18c6.jpg",
-        "description": "Batı Şeria'da bisikletiyle okuluna giden bir çocuk, İsrailli bakanlara tahsis edilmiş bir aracın altında kalarak hayatını kaybetti. Olayla ilgili soruşturma başlatılırken, aracı..."
-      },
-      {
-        "title": "Ukrayna lideri Zelenski'den 'Türkiye ile birlikte daha güçlü AB' vurgusu",
-        "link": "https://www.hurriyet.com.tr/dunya/ukrayna-lideri-zelenskiden-turkiye-ile-birlikte-daha-guclu-ab-vurgusu-43155944",
-        "pubDate": "Tue, 21 Apr 2026 11:09:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e75ae80c50728add7f1894.jpg",
-        "description": "Ukrayna Devlet Başkanı Volodimir Zelenski, Avrupa Birliği'nin (AB) Türkiye, Ukrayna, Norveç ve İngiltere ile daha güçlü birlik haline gelebileceğini belirtti."
-      },
-      {
-        "title": "Ermenistan Başbakanı Paşinyan, anayasada Karabağ değişikliği istedi",
-        "link": "https://www.hurriyet.com.tr/dunya/ermenistan-basbakani-pasinyan-anayasada-karabag-degisikligi-istedi-43155935",
-        "pubDate": "Tue, 21 Apr 2026 11:02:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e759070c50728add7f1888.jpg",
-        "description": "Ermenistan Başbakanı Nikol Paşinyan, anayasanın Karabağ ile ilgili maddesi nedeniyle değiştirilmesi gerektiğini belirtti. Ermenistan anayasasında Karabağ'ın Ermenistan'a ilhak e..."
-      }
-    ],
-    "science": [
-      {
-        "title": "Apple’ın yeni patronu kim? Tim Cook sonrası dönemin adı John Ternus",
-        "link": "https://www.hurriyet.com.tr/teknoloji/applein-yeni-patronu-kim-tim-cook-sonrasi-donemin-adi-john-ternus-43156169",
-        "pubDate": "Tue, 21 Apr 2026 14:47:55 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e78d66131f7a66514095a4.jpg",
-        "description": "Apple’da Tim Cook dönemi 1 Eylül 2026’da kapanırken, şirketin yeni CEO’su John Ternus olacak. Uzun yıllardır Apple içinde yükselen Ternus, özellikle donanım tarafındaki rolüyle ..."
-      },
-      {
-        "title": "Beynin garip oyunu: Müziği renk, kelimeyi tat olarak algılıyorlar",
-        "link": "https://www.hurriyet.com.tr/teknoloji/beynin-garip-oyunu-muzigi-renk-kelimeyi-tat-olarak-algiliyorlar-43155868",
-        "pubDate": "Tue, 21 Apr 2026 09:53:51 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e74925131f7a665140946a.jpg",
-        "description": "Bazı insanlar bir kelimeyi duyduğunda tat alıyor, bazılarıysa müzik dinlerken renkler görüyor. Bilimde “sinestezi” olarak bilinen bu ilginç nörolojik özellik, beynin duyuları al..."
-      },
-      {
-        "title": "Burun spreyi farelerde hafızayı geri getirdi",
-        "link": "https://www.hurriyet.com.tr/teknoloji/burun-spreyi-farelerde-hafizayi-geri-getirdi-43155855",
-        "pubDate": "Tue, 21 Apr 2026 09:50:13 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e74847131f7a6651409462.jpg",
-        "description": "ABD’de geliştirilen deneysel bir burun spreyi, yaşlanan farelerde hafıza kaybını azaltan sonuçlar verdi. Bilim insanları, beyin iltihabını hedef alan bu yöntemin gelecekte insan..."
-      },
-      {
-        "title": "Akıllı saatler her şeyi doğru bilmiyor olabilir",
-        "link": "https://www.hurriyet.com.tr/teknoloji/akilli-saatler-her-seyi-dogru-bilmiyor-olabilir-43155846",
-        "pubDate": "Tue, 21 Apr 2026 09:44:38 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e746fc131f7a665140945a.jpg",
-        "description": "Kalori hesabından uyku skoruna, toparlanma puanından VO₂ max verisine kadar akıllı saatlerin sunduğu birçok sağlık ölçümü tahmine dayanıyor. Uzmanlara göre bu cihazlar genel eği..."
-      },
-      {
-        "title": "Ay’da ateş testi başlıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/ayda-ates-testi-basliyor-43155842",
-        "pubDate": "Tue, 21 Apr 2026 09:40:07 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e745c2131f7a6651409452.jpg",
-        "description": "NASA, gelecekte Ay’da kurulacak insanlı üsler için en büyük risklerden birine karşı harekete geçti. Kurum, Ay yüzeyinde malzemelerin nasıl yandığını test ederek düşük yerçekimin..."
-      },
-      {
-        "title": "Creator Connect 2026 etkinliği yapıldı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/creator-connect-2026-etkinligi-yapildi-43153205",
-        "pubDate": "Fri, 17 Apr 2026 11:52:44 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e21f092819415d8e022423.jpg",
-        "description": "Creator Connect 2026 etkinliği ASUS ProArt ve NVIDIA’nın ortak çalışması olarak gerçekleşti ve etkinlikte dijital sanatın ve içerik üretiminin geleceği masaya yatırıldı."
-      },
-      {
-        "title": "ABD’nin Ay için nükleer planı ortaya çıktı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/uzay/abdnin-ay-icin-nukleer-plani-ortaya-cikti-43152351",
-        "pubDate": "Thu, 16 Apr 2026 09:31:33 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e0ac097370607e7db37626.jpg",
-        "description": "NASA’nın Ay’a dönüş programı yeni bir aşamaya girerken, ABD yönetimi de uzun süreli Ay görevleri için nükleer enerjiye dayalı yeni yol haritasını devreye aldı. Yeni plana göre N..."
-      },
-      {
-        "title": "Memeli atalarımız yumurtlamış olabilir",
-        "link": "https://www.hurriyet.com.tr/teknoloji/memeli-atalarimiz-yumurtlamis-olabilir-43152297",
-        "pubDate": "Thu, 16 Apr 2026 08:50:40 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e0a1757370607e7db375fe.jpg",
-        "description": "Bilim insanları, memelilerin çok eski atalarının yumurtladığını uzun süredir düşünüyordu ancak bunu doğrudan gösteren fosil kanıtı bir türlü bulunamamıştı. Yaklaşık 250 milyon y..."
-      },
-      {
-        "title": "Karanlık madde bilmecesinde kara delik iddiası",
-        "link": "https://www.hurriyet.com.tr/teknoloji/memeli-atalarimiz-yumurtlamis-olabilir-43152287",
-        "pubDate": "Thu, 16 Apr 2026 08:40:46 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69e09ffe7370607e7db375f6.jpg",
-        "description": "Evreni bir arada tutan ama ne olduğu hâlâ çözülemeyen karanlık maddeye dair dikkat çekici bir teori ortaya atıldı. Yeni araştırmaya göre Büyük Patlama’dan da önce oluşmuş çok es..."
-      },
-      {
-        "title": "Kireçlenme için tek iğne umudu",
-        "link": "https://www.hurriyet.com.tr/teknoloji/kireclenme-icin-tek-igne-umudu-43151134",
-        "pubDate": "Tue, 14 Apr 2026 16:27:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de6af2131f7a66514077df.jpg",
-        "description": "Osteoartritte eklem kıkırdağını onarmayı hedefleyen yeni bir enjeksiyon yöntemi, hayvan deneylerinde birkaç hafta içinde dikkat çekici sonuçlar verdi. Araştırmacılar, vücudun ke..."
-      },
-      {
-        "title": "Take Off Samarkand 2026, 3-4 Haziran’da gerçekleşecek",
-        "link": "https://www.hurriyet.com.tr/teknoloji/take-off-samarkand-2026-3-4-haziranda-gerceklesecek-43150984",
-        "pubDate": "Tue, 14 Apr 2026 13:19:54 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de3e044812f38ad161d886.jpg",
-        "description": "Girişimcilik ve teknoloji dünyasının önde gelen buluşma noktalarından biri olan Take Off Girişim Zirvesi, 2026 yılında Semerkant’ta yapılacak. 3–4 Haziran tarihlerinde Özbekista..."
-      },
-      {
-        "title": "Sıvılar kırılabiliyormuş: Ama nasıl?",
-        "link": "https://www.hurriyet.com.tr/teknoloji/sivilar-kirilabiliyormus-ama-nasil-43150841",
-        "pubDate": "Tue, 14 Apr 2026 10:35:52 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69de182b131f7a66514074a5.jpg",
-        "description": "ABD’li araştırmacılar, basit sıvıların da belirli bir kritik gerilim noktasında katılar gibi çatlayıp kırılabildiğini ortaya koydu. Fizik dünyasında şaşkınlık yaratan bu bulgu, ..."
-      },
-      {
-        "title": "Jet Luck’ta kazananlar belli oldu",
-        "link": "https://www.hurriyet.com.tr/teknoloji/jet-luckta-kazananlar-belli-oldu-43149988",
-        "pubDate": "Mon, 13 Apr 2026 09:26:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dcb6d74812f38ad161d03a.jpg",
-        "description": "Halkbank’ın girişimcilere yönelik olarak düzenlediği Jet Luck yarışmasının finali İstanbul Finans Merkezi Halkbank Kuleleri’nde gerçekleştirildi."
-      },
-      {
-        "title": "DENEYAP Türkiye 2026 e-sınav süreci başlıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/deneyap-turkiye-2026-e-sinav-sureci-basliyor-43149860",
-        "pubDate": "Mon, 13 Apr 2026 07:29:04 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69dc9b224812f38ad161cf87.jpg",
-        "description": "Türkiye’nin teknoloji odaklı insan kaynağını erken yaşta keşfetmeyi ve geliştirmeyi amaçlayan DENEYAP Türkiye Projesi kapsamında yürütülen 2026 yılı Öğrenci Seçme Süreci, E-Sına..."
-      },
-      {
-        "title": "Yapay zeka kullanımı artıyor, ortalama 5 uygulama kullanılıyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/yapay-zeka-kullanimi-artiyor-ortalama-5-uygulama-kullaniliyor-43148012",
-        "pubDate": "Fri, 10 Apr 2026 09:49:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8c7b24812f38ad161c269.jpg",
-        "description": "Yapılan bir araştırmaya göre Türkiye’de kullanıcılar ortalama 5 farklı yapay zekâ uygulaması kullanıyor. Araştırmaya katılanların yüzde 79’u, teknolojinin günlük işleri basitleş..."
-      },
-      {
-        "title": "İki dev kara delik çarpışacak: Neden önemli?",
-        "link": "https://www.hurriyet.com.tr/teknoloji/iki-dev-kara-delik-carpisacak-neden-onemli-43147971",
-        "pubDate": "Fri, 10 Apr 2026 09:23:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8c214131f7a6651405b92.jpg",
-        "description": "Gökbilimciler, evrenin en büyük bilmecelerinden biri olan süper kütleli kara deliklerin nasıl bu kadar büyüdüğüne dair şimdiye kadarki en güçlü kanıtlardan birine ulaştı. Dünya’..."
-      },
-      {
-        "title": "Artemis 2 Ay'da çarpışmalara tanık oldu!",
-        "link": "https://www.hurriyet.com.tr/teknoloji/ayin-karanlik-yuzunde-dehset-anlari-artemis-2-ekibi-carpismalari-canli-gordu-43147955",
-        "pubDate": "Fri, 10 Apr 2026 09:10:00 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d8be08131f7a6651405b6f.jpg",
-        "description": "Ay yüzeyinde peş peşe görülen bu ani ışık patlamaları, uzay yolculuğunun görkemli olduğu kadar tehlikeli yüzünü de ortaya koydu. Uzmanlara göre astronotların tanıklık ettiği bu ..."
-      },
-      {
-        "title": "Araştırma sonucu: İsim veriliyor, yeni teknoloji için değiştiriliyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/arastirma-sonucu-isim-veriliyor-yeni-teknoloji-icin-degistiriliyor-43147356",
-        "pubDate": "Thu, 09 Apr 2026 13:20:45 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d7a7ab595eaed10ce288ac.jpg",
-        "description": "\"Süpürge Kullanım Alışkanlıkları Araştırması\", tüketicilerin ilginç tercihlerini ortaya koydu. Araştırma sonuçlarına göre kullanıcılar süpürgelerine isim veriyor ve arızalandığı..."
-      },
-      {
-        "title": "Katlanabilir iPhone netleşiyor: Apple’ın en pahalı telefonu için geri sayım başladı",
-        "link": "https://www.hurriyet.com.tr/teknoloji/katlanabilir-iphone-netlesiyor-applein-en-pahali-telefonu-icin-geri-sayim-basladi-43147037",
-        "pubDate": "Thu, 09 Apr 2026 08:22:51 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d761aa171b20e71bc7535e.jpg",
-        "description": "Apple’ın uzun süredir beklenen katlanabilir iPhone modeliyle ilgili sızıntılar netleşmeye başladı. Ortaya çıkan maket görseller, cihazın tasarımının son aşamaya yaklaştığını gös..."
-      },
-      {
-        "title": "Bilim insanlarından uyarı: Dünya artık insanlara yetmiyor",
-        "link": "https://www.hurriyet.com.tr/teknoloji/bilim-insanlarindan-uyari-dunya-artik-insanlara-yetmiyor-43147013",
-        "pubDate": "Thu, 09 Apr 2026 08:07:47 Z",
-        "source": "Hürriyet",
-        "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d75e17171b20e71bc7532b.jpg",
-        "description": "Yeni bir araştırma, Dünya’nın mevcut tüketim alışkanlıklarıyla bugünkü insan nüfusunu bile uzun vadede sürdürülebilir biçimde taşıyamadığını ortaya koydu. Çalışmaya göre gezegen..."
-      }
-    ],
-    "ai": []
+    "health": [],
+    "science": []
   },
   "id": {
     "local": [],
@@ -10792,7 +8538,6 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": [],
-    "ai": []
+    "science": []
   }
 };
