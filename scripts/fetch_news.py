@@ -11,17 +11,17 @@ import re
 # Multi-Language RSS Feed Registry (15 languages)
 # ─────────────────────────────────────────────────────────────
 LANG_FEEDS = {
-    "en": {
-        "local":         "https://news.yahoo.com/rss/world",
-        "top":           "https://news.yahoo.com/rss/",
-        "technology":    "https://techcrunch.com/feed/",
-        "gaming":        "https://feeds.feedburner.com/ign/news",
-        "finance":       "https://finance.yahoo.com/news/rss",
-        "sports":        "https://www.espn.com/espn/rss/news",
-        "entertainment": "https://abcnews.go.com/abcnews/entertainmentheadlines",
-        "health":        "https://news.yahoo.com/rss/health",
-        "science":       "https://news.yahoo.com/rss/science",
-        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
+        "en": {
+        "local":         "https://news.google.com/rss/search?q=local+news&hl=en-US&gl=US&ceid=US:en",
+        "top":           "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en",
+        "technology":    "https://news.google.com/rss/search?q=technology&hl=en-US&gl=US&ceid=US:en",
+        "gaming":        "https://news.google.com/rss/search?q=gaming&hl=en-US&gl=US&ceid=US:en",
+        "finance":       "https://news.google.com/rss/search?q=finance&hl=en-US&gl=US&ceid=US:en",
+        "sports":        "https://news.google.com/rss/search?q=sports&hl=en-US&gl=US&ceid=US:en",
+        "entertainment": "https://news.google.com/rss/search?q=entertainment&hl=en-US&gl=US&ceid=US:en",
+        "health":        "https://news.google.com/rss/search?q=health&hl=en-US&gl=US&ceid=US:en",
+        "science":       "https://news.google.com/rss/search?q=science&hl=en-US&gl=US&ceid=US:en",
+        "ai":            "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en"
     },
     "ja": {
         "local":         "https://news.yahoo.co.jp/rss/topics/domestic.xml",

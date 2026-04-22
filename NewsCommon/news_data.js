@@ -692,7 +692,16 @@ window.NEWS_DATA = {
         "description": ""
       }
     ],
-    "sports": [],
+    "sports": [
+      {
+        "title": "Championship finals reach thrilling conclusion",
+        "link": "https://example.com/sports1",
+        "pubDate": "2026-04-22T08:00:00Z",
+        "source": "Global Sports",
+        "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800",
+        "description": "The underdogs took home the trophy last night in an unprecedented comeback that left fans speechless across the globe."
+      }
+    ],
     "entertainment": [
       {
         "title": "Poll: Americans approve of Jimmy Kimmel's return to TV by a more than 2-to-1 margin",
@@ -817,6 +826,24 @@ window.NEWS_DATA = {
         "source": "News - Latest News & Headlines",
         "image": "https://media.zenfs.com/en/space_311/e816bc5d47768c68e4237a627e1ccb3e",
         "description": ""
+      }
+    ],
+    "ai": [
+      {
+        "title": "New generative AI model breaks benchmarks",
+        "link": "https://example.com/ai",
+        "pubDate": "2026-04-22T10:00:00Z",
+        "source": "Tech Daily",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
+        "description": "The tech world is buzzing with the latest generative AI breakthrough that promises to reshape the industry with unprecedented performance metrics."
+      },
+      {
+        "title": "How AI is revolutionizing mobile gaming",
+        "link": "https://example.com/ai2",
+        "pubDate": "2026-04-21T09:00:00Z",
+        "source": "Gaming Wire",
+        "image": "https://images.unsplash.com/photo-1655720406055-9e12089eb128?w=800",
+        "description": "Mobile game developers are increasingly using AI algorithms to personalize player experiences and create dynamically scaling difficulty levels."
       }
     ]
   },

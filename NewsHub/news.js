@@ -228,19 +228,26 @@ function renderNews() {
     docs.forEach((a, i) => {
         const img = a.image || `https://images.unsplash.com/photo-1495020689067-958852a7765e?w=800`;
         html += `
-        <div class="snap-card">
-            <div class="snap-bg-wrap"><img class="snap-bg-blur" src="${img}"><img class="snap-bg-img" src="${img}"></div>
-            <div class="snap-overlay"></div>
-            <div class="snap-content">
-                <div class="snap-meta"><span class="snap-source">${L.source}${a.source}</span><span class="snap-date">${formatDate(a.pubDate)}</span></div>
-                <h2 class="snap-title">${a.title}</h2>
-                ${currentLang !== 'en' ? `<p class="snap-title-native hidden" id="t-n-${i}"></p>` : ''}
-                <p class="snap-desc">${a.description || ''}</p>
-                <a href="${a.link}" target="_blank" class="read-btn">${L.read}</a>
+        <div class="feed-card" data-link="${a.link}">
+            <div class="feed-meta"><span class="feed-source">${a.source || 'News'}</span><span class="feed-date">• ${formatDate(a.pubDate)}</span></div>
+            <h2 class="feed-title">${a.title}</h2>
+            ${currentLang !== 'en' ? `<h2 class="feed-title-native hidden" id="t-n-${i}"></h2>` : ''}
+            <div class="feed-body">
+                <div class="feed-desc-col">
+                    <p class="feed-desc">${a.description || ''}</p>
+                </div>
+                <img class="feed-img" src="${img}">
+            </div>
+            <div class="feed-footer">
+                <span class="read-link">${L.read}</span>
+                <button class="share-btn" data-title="${encodeURIComponent(a.title)}" data-link="${a.link}">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                    Share
+                </button>
             </div>
         </div>`;
     });
-    feed.innerHTML = html || `<div class="snap-card">${L.no_news}</div>`;
+    feed.innerHTML = html || `<div class="feed-card" style="padding:40px; text-align:center; color:#888;">${L.no_news}</div>`;
 
     if (currentLang !== 'en') {
         docs.forEach((a, i) => {
@@ -251,43 +258,30 @@ function renderNews() {
     }
 }
 
-// ─── Swipe Detection (Categories) ─────────────────────────
-let touchStartX = 0;
-let touchEndX   = 0;
-let touchStartTime = 0;
-
-feed.addEventListener('touchstart', e => {
-    touchStartX = e.changedTouches[0].screenX;
-    touchStartTime = Date.now();
-}, { passive: true });
-
-feed.addEventListener('touchend', e => {
-    touchEndX = e.changedTouches[0].screenX;
-    const duration = Date.now() - touchStartTime;
-    handleHorizontalSwipe(duration);
-}, { passive: true });
-
-function handleHorizontalSwipe(duration) {
-    if (duration > 500) return;
-    const diff = touchEndX - touchStartX;
-    const threshold = 80;
-    
-    if (Math.abs(diff) < threshold) return;
-    
-    const categories = ['local','top','finance','sports','entertainment','technology','health','gaming','science','ai'];
-    let idx = categories.indexOf(currentCategory);
-    
-    if (diff < 0) {
-        idx = (idx + 1) % categories.length;
-    } else {
-        idx = (idx - 1 + categories.length) % categories.length;
+// ─── Events ───────────────────────────────────────────────
+feed.addEventListener('click', e => {
+    const shareBtn = e.target.closest('.share-btn');
+    if (shareBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        const title = decodeURIComponent(shareBtn.getAttribute('data-title'));
+        const url = shareBtn.getAttribute('data-link');
+        if (navigator.share) {
+            navigator.share({ title: title, url: url }).catch(() => {});
+        } else {
+            navigator.clipboard.writeText(url);
+            const originalHTML = shareBtn.innerHTML;
+            shareBtn.innerHTML = 'Copied!';
+            setTimeout(() => shareBtn.innerHTML = originalHTML, 2000);
+        }
+        return;
     }
     
-    const nextCat = categories[idx];
-    const btn = document.querySelector(`.cat-btn[data-type="${nextCat}"]`);
-    if (btn) btn.click();
-}
-
+    const card = e.target.closest('.feed-card');
+    if (card) {
+        window.open(card.getAttribute('data-link'), '_blank');
+    }
+});
 // ─── Ads ──────────────────────────────────────────────────
 // Ads are loaded via <script defer src="../ads.js"> in index.html
 
@@ -301,14 +295,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Trigger ad system
     if (typeof window.prepSystem === 'function') window.prepSystem();
 
-    // Hide swipe hint on first scroll
-    const swipeHint = document.getElementById('swipe-hint');
-    if (swipeHint) {
-        feed.addEventListener('scroll', () => {
-            swipeHint.style.opacity = '0';
-            setTimeout(() => swipeHint.remove(), 500);
-        }, { once: true });
-    }
+    // Swipe hint logic removed
 
     const activeBtn = document.querySelector('.cat-btn.active');
     if (activeBtn) activeBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
