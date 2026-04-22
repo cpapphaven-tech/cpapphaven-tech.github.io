@@ -17,10 +17,11 @@ LANG_FEEDS = {
         "technology":    "https://techcrunch.com/feed/",
         "gaming":        "https://feeds.feedburner.com/ign/news",
         "finance":       "https://finance.yahoo.com/news/rss",
-        "sports":        "https://sports.yahoo.com/rss/",
-        "entertainment": "https://news.yahoo.com/rss/entertainment",
+        "sports":        "https://www.espn.com/espn/rss/news",
+        "entertainment": "https://abcnews.go.com/abcnews/entertainmentheadlines",
         "health":        "https://news.yahoo.com/rss/health",
-        "science":       "https://news.yahoo.com/rss/science"
+        "science":       "https://news.yahoo.com/rss/science",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "ja": {
         "local":         "https://news.yahoo.co.jp/rss/topics/domestic.xml",
@@ -31,7 +32,8 @@ LANG_FEEDS = {
         "sports":        "https://news.yahoo.co.jp/rss/topics/sports.xml",
         "entertainment": "https://news.yahoo.co.jp/rss/topics/entertainment.xml",
         "health":        "https://news.yahoo.co.jp/rss/topics/science.xml",
-        "science":       "https://news.yahoo.co.jp/rss/topics/science.xml"
+        "science":       "https://news.yahoo.co.jp/rss/topics/science.xml",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "de": {
         "local":         "https://www.tagesschau.de/xml/rss2/",
@@ -42,7 +44,8 @@ LANG_FEEDS = {
         "sports":        "https://www.sport1.de/news.rss",
         "entertainment": "https://www.stern.de/kultur/rss.xml",
         "health":        "https://www.apotheken-umschau.de/feeds/news.xml",
-        "science":       "https://www.wissenschaft.de/feed/"
+        "science":       "https://www.wissenschaft.de/feed/",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "fr": {
         "local":         "https://www.lemonde.fr/rss/une.xml",
@@ -53,7 +56,8 @@ LANG_FEEDS = {
         "sports":        "https://www.lequipe.fr/rss/actu_rss.xml",
         "entertainment": "https://www.allocine.fr/rss/news.xml",
         "health":        "https://www.pourquoidocteur.fr/rss/articles.rss",
-        "science":       "https://www.futura-sciences.com/rss/actualites.rss"
+        "science":       "https://www.futura-sciences.com/rss/actualites.rss",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "es": {
         "local":         "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada",
@@ -64,7 +68,8 @@ LANG_FEEDS = {
         "sports":        "https://as.com/rss/tags/ultimas_noticias.xml",
         "entertainment": "https://www.formulatv.com/rss/noticias.xml",
         "health":        "https://www.infosalus.com/rss/portada.xml",
-        "science":       "https://www.agenciasinc.es/rss/noticias"
+        "science":       "https://www.agenciasinc.es/rss/noticias",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "pt": {
         "top":           "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
@@ -74,7 +79,8 @@ LANG_FEEDS = {
         "sports":        "https://www.globoesporte.globo.com/index.rss",
         "entertainment": "https://feeds.folha.uol.com.br/ilustrada/rss091.xml",
         "health":        "https://saude.abril.com.br/feed/",
-        "science":       "https://exame.com/tecnologia/feed/"
+        "science":       "https://exame.com/tecnologia/feed/",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "zh": {
         "top":           "https://feeds.bbci.co.uk/zhongwen/simp/rss.xml",
@@ -84,7 +90,8 @@ LANG_FEEDS = {
         "sports":        "https://feeds.bbci.co.uk/zhongwen/simp/sport/rss.xml",
         "entertainment": "https://feeds.bbci.co.uk/zhongwen/simp/entertainment_and_arts/rss.xml",
         "health":        "https://feeds.bbci.co.uk/zhongwen/simp/health/rss.xml",
-        "science":       "https://feeds.bbci.co.uk/zhongwen/simp/science_and_environment/rss.xml"
+        "science":       "https://feeds.bbci.co.uk/zhongwen/simp/science_and_environment/rss.xml",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "ko": {
         "top":           "https://www.yonhapnews.co.kr/RSS/major.xml",
@@ -94,7 +101,8 @@ LANG_FEEDS = {
         "sports":        "https://www.yonhapnews.co.kr/RSS/sports.xml",
         "entertainment": "https://www.yonhapnews.co.kr/RSS/entertainment.xml",
         "health":        "https://www.yonhapnews.co.kr/RSS/health.xml",
-        "science":       "https://www.yonhapnews.co.kr/RSS/science.xml"
+        "science":       "https://www.yonhapnews.co.kr/RSS/science.xml",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "ar": {
         "top":           "https://www.aljazeera.net/aljazeerarss/a2/b2",
@@ -104,7 +112,8 @@ LANG_FEEDS = {
         "sports":        "https://www.aljazeera.net/aljazeerarss/a2/b13",
         "entertainment": "https://www.aljazeera.net/aljazeerarss/a2/b2",
         "health":        "https://www.aljazeera.net/aljazeerarss/a2/b9",
-        "science":       "https://www.aljazeera.net/aljazeerarss/a2/b10"
+        "science":       "https://www.aljazeera.net/aljazeerarss/a2/b10",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "hi": {
         "local":         "https://feeds.feedburner.com/ndtvnews-india-news",
@@ -115,7 +124,8 @@ LANG_FEEDS = {
         "sports":        "https://feeds.feedburner.com/ndtv/sports",
         "entertainment": "https://feeds.feedburner.com/ndtv/entertainment",
         "health":        "https://feeds.feedburner.com/ndtv/health",
-        "science":       "https://feeds.feedburner.com/ndtv/science"
+        "science":       "https://feeds.feedburner.com/ndtv/science",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "ru": {
         "local":         "https://lenta.ru/rss/articles",
@@ -126,7 +136,8 @@ LANG_FEEDS = {
         "sports":        "https://lenta.ru/rss/articles/sport",
         "entertainment": "https://lenta.ru/rss/articles/culture",
         "health":        "https://lenta.ru/rss/articles/medicine",
-        "science":       "https://lenta.ru/rss/articles/science"
+        "science":       "https://lenta.ru/rss/articles/science",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "it": {
         "local":         "https://www.corriere.it/rss/homepage.xml",
@@ -137,7 +148,8 @@ LANG_FEEDS = {
         "sports":        "https://www.corriere.it/rss/sport.xml",
         "entertainment": "https://www.corriere.it/rss/spettacoli.xml",
         "health":        "https://www.corriere.it/rss/salute.xml",
-        "science":       "https://www.corriere.it/rss/scienze.xml"
+        "science":       "https://www.corriere.it/rss/scienze.xml",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "nl": {
         "local":         "https://feeds.nos.nl/nosnieuwsalgemeen",
@@ -148,7 +160,8 @@ LANG_FEEDS = {
         "sports":        "https://feeds.nos.nl/nossportalgemeen",
         "entertainment": "https://feeds.nos.nl/nosnieuwsalgemeen",
         "health":        "https://feeds.nos.nl/nosnieuwsalgemeen",
-        "science":       "https://feeds.nos.nl/nosnieuwsalgemeen"
+        "science":       "https://feeds.nos.nl/nosnieuwsalgemeen",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "tr": {
         "local":         "https://www.hurriyet.com.tr/rss/anasayfa",
@@ -159,7 +172,8 @@ LANG_FEEDS = {
         "sports":        "https://www.hurriyet.com.tr/rss/spor",
         "entertainment": "https://www.hurriyet.com.tr/rss/cumartesi",
         "health":        "https://www.hurriyet.com.tr/rss/anasayfa",
-        "science":       "https://www.hurriyet.com.tr/rss/teknoloji"
+        "science":       "https://www.hurriyet.com.tr/rss/teknoloji",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     },
     "id": {
         "local":         "https://rss.kompas.com/nasional",
@@ -170,7 +184,8 @@ LANG_FEEDS = {
         "sports":        "https://rss.kompas.com/bola",
         "entertainment": "https://rss.kompas.com/entertainment",
         "health":        "https://rss.kompas.com/health",
-        "science":       "https://rss.kompas.com/tekno"
+        "science":       "https://rss.kompas.com/tekno",
+        "ai":            "https://techcrunch.com/category/artificial-intelligence/feed/"
     }
 }
 

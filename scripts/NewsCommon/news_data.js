@@ -1,4 +1,4 @@
-// Auto-generated multinational news — 2026-04-19T08:54:57.243768Z
+// Auto-generated multinational news — 2026-04-22T08:12:21.358354Z
 // Languages: en, ja, de, fr, es, pt, zh, ko, ar, hi, ru, it, nl, tr, id
 window.NEWS_DATA = {
   "en": {
@@ -10,7 +10,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "ja": {
     "local": [],
@@ -21,7 +22,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "de": {
     "local": [],
@@ -32,7 +34,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "fr": {
     "local": [],
@@ -43,7 +46,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "es": {
     "local": [],
@@ -54,7 +58,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "pt": {
     "top": [],
@@ -64,7 +69,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "zh": {
     "top": [],
@@ -74,7 +80,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "ko": {
     "top": [],
@@ -84,7 +91,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "ar": {
     "top": [],
@@ -94,7 +102,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "hi": {
     "local": [],
@@ -105,7 +114,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "ru": {
     "local": [],
@@ -116,7 +126,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "it": {
     "local": [],
@@ -127,7 +138,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "nl": {
     "local": [],
@@ -138,7 +150,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "tr": {
     "local": [],
@@ -149,7 +162,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "id": {
     "local": [],
@@ -160,6 +174,7 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   }
 };

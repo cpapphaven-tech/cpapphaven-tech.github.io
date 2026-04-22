@@ -692,47 +692,24 @@ window.NEWS_DATA = {
         "description": ""
       }
     ],
-    "sports": [],
+    "sports": [
+      {
+        "title": "Local team wins championship",
+        "link": "https://example.com/sports-news",
+        "pubDate": "2026-04-22T00:00:00Z",
+        "source": "Sports Feed",
+        "image": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800",
+        "description": "In an amazing comeback, they won the match."
+      }
+    ],
     "entertainment": [
       {
-        "title": "Poll: Americans approve of Jimmy Kimmel's return to TV by a more than 2-to-1 margin",
-        "link": "https://www.yahoo.com/entertainment/tv/article/poll-americans-approve-of-jimmy-kimmels-return-to-tv-by-a-more-than-2-to-1-margin-183746388.html",
-        "pubDate": "2025-09-30T18:37:46Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-09/23139e11-9e17-11f0-96c6-70f4b908e44e",
-        "description": ""
-      },
-      {
-        "title": "Trump calls Sydney Sweeney's American Eagle 'good jeans' campaign the 'HOTTEST’ ad out there, driving up the company's stock",
-        "link": "https://www.yahoo.com/entertainment/celebrity/article/trump-calls-sydney-sweeneys-american-eagle-good-jeans-campaign-the-hottest-ad-out-there-driving-up-the-companys-stock-221428273.html",
-        "pubDate": "2025-07-31T22:14:28Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-08/ec51b290-6ed2-11f0-9bf7-aee5e8ae402d",
-        "description": ""
-      },
-      {
-        "title": "Hulk Hogan's roles as movie star, media crusader and MAGA hypeman had a major impact outside of the ring",
-        "link": "https://www.yahoo.com/entertainment/celebrity/article/hulk-hogans-roles-as-movie-star-media-crusader-and-maga-hypeman-had-a-major-impact-outside-of-the-ring-184345886.html",
-        "pubDate": "2025-07-24T18:43:45Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-07/a51dc900-68b4-11f0-bdfd-5ceac011739a",
-        "description": ""
-      },
-      {
-        "title": "China is taking aim at American movies over Trump's tariffs. Here's why that poses a big risk to Hollywood.",
-        "link": "https://www.yahoo.com/news/china-is-taking-aim-at-american-movies-over-trumps-tariffs-heres-why-that-poses-a-big-risk-to-hollywood-194753887.html",
-        "pubDate": "2025-04-10T19:47:53Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-04/af9d2420-163e-11f0-adff-7bad0e0832a1",
-        "description": ""
-      },
-      {
-        "title": "How COVID changed America, in 12 charts",
-        "link": "https://www.yahoo.com/news/how-covid-changed-america-in-12-charts-163056855.html",
-        "pubDate": "2025-03-10T16:30:56Z",
-        "source": "News - Latest News & Headlines",
-        "image": "https://s.yimg.com/os/creatr-uploaded-images/2025-03/0db6e560-fdb6-11ef-a7bf-2a91abf82b77",
-        "description": ""
+        "title": "New block-buster movie shatters records",
+        "link": "https://example.com/movie-news",
+        "pubDate": "2026-04-22T00:00:00Z",
+        "source": "Entertainment Weekly",
+        "image": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800",
+        "description": "The opening weekend was the biggest in history."
       }
     ],
     "health": [
@@ -817,6 +794,16 @@ window.NEWS_DATA = {
         "source": "News - Latest News & Headlines",
         "image": "https://media.zenfs.com/en/space_311/e816bc5d47768c68e4237a627e1ccb3e",
         "description": ""
+      }
+    ],
+    "ai": [
+      {
+        "title": "AI model creates new possibilities for productivity",
+        "link": "https://example.com/ai-news",
+        "pubDate": "2026-04-22T00:00:00Z",
+        "source": "Tech News",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
+        "description": "A new generative AI model has been released."
       }
     ]
   },
@@ -1510,7 +1497,8 @@ window.NEWS_DATA = {
         "image": "",
         "description": ""
       }
-    ]
+    ],
+    "ai": []
   },
   "de": {
     "local": [
@@ -2165,7 +2153,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "fr": {
     "local": [
@@ -3110,7 +3099,8 @@ window.NEWS_DATA = {
       }
     ],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "es": {
     "local": [
@@ -3629,7 +3619,8 @@ window.NEWS_DATA = {
       }
     ],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "pt": {
     "top": [
@@ -4444,7 +4435,8 @@ window.NEWS_DATA = {
         "description": "Nova regra busca acabar com engano gerado por produtos \"sabor chocolate\" e não impede que alimentos com alto teor de cacau sejam vendidos"
       }
     ],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "zh": {
     "top": [
@@ -4776,7 +4768,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "ko": {
     "top": [],
@@ -4786,7 +4779,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "ar": {
     "top": [
@@ -6084,7 +6078,8 @@ window.NEWS_DATA = {
         "image": "",
         "description": "صدام مرتقب.. الزمالك يواجه بيراميدز ضمن منافسات مجموعة التتويج بالدوري المصري"
       }
-    ]
+    ],
+    "ai": []
   },
   "hi": {
     "local": [
@@ -6417,7 +6412,8 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   },
   "ru": {
     "local": [
@@ -7098,7 +7094,8 @@ window.NEWS_DATA = {
         "image": "https://icdn.lenta.ru/images/2026/04/06/18/20260406180443772/pic_ff3f68b7841d64db0e1079e2bd138c7b.jpg",
         "description": ""
       }
-    ]
+    ],
+    "ai": []
   },
   "it": {
     "local": [
@@ -8022,7 +8019,8 @@ window.NEWS_DATA = {
         "image": "",
         "description": "L’analisi effettuata dal Corriere della Sera e da iLMeteo.it sui dati 2024. L’analisi effettuata dal Corriere della Sera e da iLMeteo.it sui dati 2024."
       }
-    ]
+    ],
+    "ai": []
   },
   "nl": {
     "local": [
@@ -9482,7 +9480,8 @@ window.NEWS_DATA = {
         "image": "https://een.cdn.nos.nl/F/Z/Q/2/U/8AYRXA76QTT8e8y5Yuf6bmmH3DRNrCGr9TgGgfu/669x755x2640x1485-1024x576.webp",
         "description": "De ophok- en afschermplicht die in verband met de vogelgriep gold voor pluimvee wordt in bijna het hele land ingetrokken. Alleen in de Gelderse Vallei, waar veel pluimveebedrijv..."
       }
-    ]
+    ],
+    "ai": []
   },
   "tr": {
     "local": [
@@ -10781,7 +10780,8 @@ window.NEWS_DATA = {
         "image": "https://image.hurimg.com/i/hurriyet/90/620x350/69d75e17171b20e71bc7532b.jpg",
         "description": "Yeni bir araştırma, Dünya’nın mevcut tüketim alışkanlıklarıyla bugünkü insan nüfusunu bile uzun vadede sürdürülebilir biçimde taşıyamadığını ortaya koydu. Çalışmaya göre gezegen..."
       }
-    ]
+    ],
+    "ai": []
   },
   "id": {
     "local": [],
@@ -10792,6 +10792,7 @@ window.NEWS_DATA = {
     "sports": [],
     "entertainment": [],
     "health": [],
-    "science": []
+    "science": [],
+    "ai": []
   }
 };
