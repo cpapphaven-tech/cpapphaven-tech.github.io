@@ -172,3 +172,37 @@ body, html {
     font-weight: 800;
     color: #fff;
 }
+
+/* Banner Ad Area */
+#bottom-ad {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 900;
+    border-top: 1px solid #333;
+}
+
+/* Adsterra Banner - Right Side Bottom (Desktop Only) */
+#adsterra-banner {
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    right: 10px;
+    transform: none;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
+    }
+}
