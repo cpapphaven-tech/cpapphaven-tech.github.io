@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-layer">
+            <div class="header">
+                <div class="logo">Tic Tac Toe</div>
+                <div class="controls">
+                    <button id="btn-pvp" class="btn active">1 vs 1</button>
+                    <button id="btn-pva" class="btn">vs AI</button>
+                </div>
+            </div>
+            
+            <div class="status-bar">
+                <div id="status-text">Player X's Turn</div>
+                <button id="btn-restart" class="btn small">Restart</button>
+            </div>
+
+            <div class="board-wrapper">
+                <div id="board" class="board">
+                    <!-- 9 cells generated via JS -->
+                </div>
+                <div id="win-line"></div>
+            </div>
+
+            <div id="score-board">
+                <div class="score-card">
+                    <div class="score-label">Player X</div>
+                    <div id="score-x" class="score-val">0</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-label">Draws</div>
+                    <div id="score-draw" class="score-val">0</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-label">Player O</div>
+                    <div id="score-o" class="score-val">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
