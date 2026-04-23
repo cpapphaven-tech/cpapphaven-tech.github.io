@@ -229,21 +229,35 @@ function renderNews() {
         const img = a.image || `https://images.unsplash.com/photo-1495020689067-958852a7765e?w=800`;
         html += `
         <div class="feed-card" data-link="${a.link}">
-            <div class="feed-meta"><span class="feed-source">${a.source || 'News'}</span><span class="feed-date">• ${formatDate(a.pubDate)}</span></div>
-            <h2 class="feed-title">${a.title}</h2>
-            ${currentLang !== 'en' ? `<h2 class="feed-title-native hidden" id="t-n-${i}"></h2>` : ''}
-            <div class="feed-body">
-                <div class="feed-desc-col">
-                    <p class="feed-desc">${a.description || ''}</p>
+            <div class="feed-card-header">
+                <div class="pub-logo">${(a.source || 'N').charAt(0)}</div>
+                <div class="pub-info">
+                    <span class="pub-name">${a.source || 'News'}</span>
                 </div>
-                <img class="feed-img" src="${img}">
+                <div class="pub-menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/></svg>
+                </div>
+            </div>
+            <div class="feed-img" style="background-image: url('${img}')"></div>
+            <div class="feed-body">
+                <h2 class="feed-title">${a.title}</h2>
+                ${currentLang !== 'en' ? `<h2 class="feed-title-native hidden" id="t-n-${i}"></h2>` : ''}
+                <p class="feed-desc">${a.description || ''}</p>
             </div>
             <div class="feed-footer">
-                <span class="read-link">${L.read}</span>
-                <button class="share-btn" data-title="${encodeURIComponent(a.title)}" data-link="${a.link}">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                    Share
-                </button>
+                <div class="footer-left">
+                    <span class="feed-date">${formatDate(a.pubDate)}</span>
+                    <span class="dot-separator">•</span>
+                    <span class="feed-source-small">${a.source || 'News'}</span>
+                </div>
+                <div class="footer-right">
+                    <button class="icon-btn heart-btn">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </button>
+                    <button class="icon-btn share-btn" data-title="${encodeURIComponent(a.title)}" data-link="${a.link}">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                    </button>
+                </div>
             </div>
         </div>`;
     });
@@ -274,6 +288,14 @@ feed.addEventListener('click', e => {
             shareBtn.innerHTML = 'Copied!';
             setTimeout(() => shareBtn.innerHTML = originalHTML, 2000);
         }
+        return;
+    }
+
+    const heartBtn = e.target.closest('.heart-btn');
+    if (heartBtn) {
+        e.preventDefault();
+        e.stopPropagation();
+        heartBtn.classList.toggle('liked');
         return;
     }
     
