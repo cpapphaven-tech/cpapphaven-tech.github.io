@@ -181,7 +181,6 @@
 
     function createMobileHint() {
         if (window.innerWidth <= 1024) return;
-        if (sessionStorage.getItem('pmg_mobile_hint_closed')) return;
         if (document.getElementById('pmg-mobile-hint')) return;
 
         // Dynamic QR code for current game
@@ -190,29 +189,16 @@
 
         const hint = document.createElement('div');
         hint.id = 'pmg-mobile-hint';
+        hint.title = "Scan to play on mobile";
         hint.innerHTML = `
-            <div class="pmg-mobile-hint-header">
-                <h4>Switch to Mobile</h4>
-                <button class="pmg-mobile-close" title="Dismiss">&times;</button>
+            <div class="pmg-mobile-qr-placeholder">
+                <img src="${qrApi}" alt="Scan QR Code to play on mobile" loading="lazy">
             </div>
-            <div class="pmg-mobile-hint-body">
-                <div class="pmg-mobile-qr-placeholder" title="Scan to play on mobile">
-                    <img src="${qrApi}" alt="Scan QR Code to play on mobile" loading="lazy">
-                </div>
-                <div class="pmg-mobile-text">
-                    <strong>Play on the Go!</strong>
-                    Scan to continue this game on your phone.
-                </div>
+            <div class="pmg-mobile-text-mini">
+                Play on Mobile
             </div>
         `;
         document.body.appendChild(hint);
-
-        hint.querySelector('.pmg-mobile-close').onclick = () => {
-            hint.style.transform = 'translateY(100px)';
-            hint.style.opacity = '0';
-            sessionStorage.setItem('pmg_mobile_hint_closed', 'true');
-            setTimeout(() => hint.remove(), 300);
-        };
     }
 
     // Initialize when DOM ready
