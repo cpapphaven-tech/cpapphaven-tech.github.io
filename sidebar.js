@@ -54,6 +54,7 @@
         { name: "🔡 Word Search Puzzle", path: "WordSearch/index.html", icon: "img/wordsrarch200.png", tip: "Word" },
         { name: "🐦 Flappy Rise Bird", path: "FlappyRise/index.html", icon: "assets/flappy200.png", tip: "Arcade" },
         { name: "⚽ Striker League Soccer", path: "StrikerLeague/index.html", icon: "img/striker200.png", tip: "Sports" },
+        { name: "⛷️ SkiFree Classic", path: "SkiFree/index.html", icon: "SkiFree/yeti-big.png", tip: "Retro" },
     ];
 
     function createSidebar() {
@@ -74,7 +75,6 @@
 
         if (isMobile) {
             console.log('📱 PMG Sidebar: Hidden for mobile.');
-            addMobileHomeButton();
             return;
         }
 
@@ -126,21 +126,14 @@
         document.body.appendChild(container);
         document.body.appendChild(toggleBtn);
 
-        // Open by Default Logic
+        // Open by Default Logic - Always open on desktop
         const isDesktop = window.innerWidth > 760;
-        const startOpen = document.body && document.body.classList.contains('pmg-sidebar-start-open');
-        const startClosed = document.body && document.body.classList.contains('pmg-sidebar-start-closed');
 
-        if (startOpen || (isDesktop && !startClosed)) {
+        if (isDesktop) {
             container.classList.add('open');
             document.body.classList.add('pmg-sidebar-open');
             toggleBtn.style.left = '280px';
             toggleBtn.innerHTML = '←';
-
-            // If we are starting open on mobile, ensure CSS doesn't hide us
-            if (!isDesktop && startOpen) {
-                document.body.classList.add('pmg-sidebar-mobile-enable');
-            }
         }
 
         renderGames(games);

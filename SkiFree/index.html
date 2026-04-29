@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <!-- SEO Titles and Descriptions -->
+    <title>SkiFree Online – Play the Classic Retro Skiing Game Free | PlayMix Games</title>
+    <meta name="description" content="Play SkiFree online for free! Dodge trees, jump ramps, and escape the infamous Abominable Snow Monster in this HTML5 port of the classic 90s skiing arcade game.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="skifree online, play skifree free, retro skiing game, abominable snow monster, classic windows game, pc retro games, ski free browser game, juegos retro, jeux rétro, レトロゲーム">
+    
+    <link rel="canonical" href="https://playmixgames.in/SkiFree/index.html">
+    <meta property="og:title" content="SkiFree Online – Play the Classic Retro Skiing Game Free">
+    <meta property="og:description" content="Dodge trees, jump ramps, and escape the infamous Abominable Snow Monster in this HTML5 port of the classic 90s skiing arcade game.">
+    <meta property="og:url" content="https://playmixgames.in/SkiFree/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SkiFree Classic",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Play the classic SkiFree game online. Ski down a snowy mountain, avoid obstacles like trees and rocks, and escape the Abominable Snow Monster.",
+      "url": "https://playmixgames.in/SkiFree/index.html"
+    }
+    </script>
+
+    <link rel="stylesheet" href="../loader.css">
+    
+    <!-- SkiFree original CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/skifree.css">
+    
+    <script src="../sidebar.js"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
+
+    <!-- Firebase Analytics -->
+    <script type="module" src="../analytics.js"></script>
+
+    <!-- Load Ads Script -->
+    <script src="../ads.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+        
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+            overscroll-behavior-y: none;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .game-title {
+            color: white;
+            font-size: 20px;
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        /* Fix double-shift by removing game-container / game-wrapper conflicts */
+        .skifree-outer-wrapper {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            height: calc(100vh - 60px);
+            box-sizing: border-box;
+        }
+
+        /* We will use #game-container so sidebar.js transforms it smoothly, but NOT wrapper */
+        #game-container {
+            width: 100%;
+            max-width: 800px;
+            height: 100%;
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        #skifree-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+            touch-action: none;
+            outline: none;
+        }
+
+        /* SEO Section Styling */
+        .seo-section { background:#040910; padding:60px 20px; border-top:1px solid rgba(129,140,248,0.15); font-family: 'Outfit', sans-serif; color: #fff;}
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.03); border:1px solid rgba(129,140,248,0.12); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#818cf8; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #818cf8; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#a0a0c0; line-height:1.7; margin-bottom:10px; }
+        .seo-card ul { padding-left:20px; }
+        
+        .license-box { background:rgba(129,140,248,0.04); border:1px solid rgba(129,140,248,0.15); border-radius:10px; padding:20px; font-size:0.85rem; color:#888; line-height:1.6; }
+        .license-box a { color:#818cf8; text-decoration: none; font-weight: bold; }
+        .license-box a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .skifree-outer-wrapper {
+                padding: 0;
+                height: calc(100vh - 60px);
+            }
+            #game-container {
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading slopes...</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">⛷️ SkiFree Classic</h1>
+        <div class="score-display" style="text-align: right; color: white; font-weight: bold;">
+            <div id="current-score">Score: 0</div>
+            <div id="high-score" style="font-size: 0.8em; color: #a0a0c0;">Best: 0</div>
+        </div>
+    </header>
+
+    <!-- Outer Wrapper avoids #game-wrapper ID to prevent CSS double shift with sidebar -->
+    <div class="skifree-outer-wrapper">
+        <div id="game-container">
+            <div id="game-ui" style="position: absolute; top: 15px; left: 15px; z-index: 10; font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: bold; color: #1e3c72; text-shadow: 1px 1px 0px white, -1px -1px 0px white, 1px -1px 0px white, -1px 1px 0px white; pointer-events: none;">
+                <div id="overlay-score">Score: 0</div>
+                <div id="overlay-high-score" style="font-size: 0.9rem; color: #d32f2f;">Best: 0</div>
+            </div>
+            <canvas id="skifree-canvas" tabindex="0"></canvas>
+        </div>
+    </div>
+
+    <!-- Banner Ad Container -->
+    <div id="banner-ad-container" style="text-align: center; margin: 20px auto; max-width: 728px;">
+        <div id="banner-ad"></div>
+    </div>
+
+    <!-- Game Script -->
+    <script src="dist/skifree.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+            
+            // Focus canvas to catch keyboard events
+            const canvas = document.getElementById('skifree-canvas');
+            if (canvas) {
+                canvas.focus();
+                canvas.addEventListener('click', () => canvas.focus());
+
+                // Prevent default scrolling when swiping/dragging on the game area (Mobile)
+                canvas.addEventListener('touchmove', (e) => {
+                    e.preventDefault();
+                }, { passive: false });
+
+                // Prevent default scrolling when using Arrow Keys or Space (Desktop)
+                window.addEventListener('keydown', (e) => {
+                    if(["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(e.key)){
+                        e.preventDefault();
+                    }
+                }, { passive: false });
+            }
+        });
+
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+    <!-- SEO & Info Section -->
+    <section class="seo-section" aria-label="About SkiFree">
+        <div class="seo-inner">
+            
+            <div class="seo-card">
+                <h2 style="font-size:1.6rem;margin:0 0 16px;color:#818cf8;border:none;padding:0;">⛷️ SkiFree Online – Play the Classic Retro Game</h2>
+                <p>Welcome to <strong>SkiFree Classic</strong>! Relive the nostalgia of the iconic 1991 Windows game directly in your browser. Steer your skier down the infinite snowy slopes, avoid trees, rocks, dogs, and other obstacles.</p>
+                <p>Hit ramps for sick aerial jumps and try to cover as much distance as possible. But watch out—once you go far enough, the infamous <strong>Abominable Snow Monster</strong> will come chasing after you. Can you outrun him?</p>
+            </div>
+
+            <div class="seo-card">
+                <h2>🎮 How to Play</h2>
+                <ul>
+                    <li><strong>Controls:</strong> Use the <strong>Arrow Keys</strong> to steer left, right, up (slow down), and down (speed up).</li>
+                    <li><strong>Jumping:</strong> Hit ramps to fly over obstacles.</li>
+                    <li><strong>Mobile/Touch:</strong> Tap and hold the sides of the screen or swipe to guide your skier.</li>
+                    <li><strong>The Yeti:</strong> The Yeti runs faster than you! Use jumps and precise turns to outmaneuver him as long as you can.</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>📝 License &amp; Credits</h2>
+                <div class="license-box">
+                    <p><strong>SkiFree.js</strong> is a JavaScript/HTML5 port of the classic SkiFree game originally created by <strong>Chris Pirih</strong> in 1991.</p>
+                    <p>This open-source HTML5 port was created by <a href="https://github.com/basicallydan/skifree.js" target="_blank" rel="noopener">Dan Hough</a>.</p>
+                    <p>Licensed under the <strong>MIT License</strong>. All original game concepts belong to Chris Pirih.</p>
+                    <p>&copy; 2026 PlayMix Games. Brought to you for free, instant browser play.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
