@@ -248,6 +248,27 @@
         }
 
         #modal-btn:active { transform: scale(0.95); }
+
+        /* ── ADSTERRA BOTTOM AD (320×50) ── */
+        /* portal-style.css is not loaded inside the iframe, so we
+           replicate the essential rule here so ads.js can display it */
+        #bottom-ad,
+        .pmg-bottom-ad {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 50px;
+            z-index: 9999;
+            display: block;
+        }
+
+        /* Give the scrollable grid area clearance so the ad never
+           covers the bottom row of numbers */
+        #game-area {
+            padding-bottom: 60px;
+        }
     </style>
 </head>
 <body>
@@ -282,5 +303,11 @@
 
     <script src="../ads.js"></script>
     <script src="game.js"></script>
+    <script>
+        // Trigger Adsterra bottom-banner injection from ads.js
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
 </body>
 </html>
