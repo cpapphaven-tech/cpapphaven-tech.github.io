@@ -27,6 +27,7 @@
         { name: "👾 Galaxy Space Shooter", path: "GalaxyAssault/index.html", icon: "assets/aleign200.png", tip: "Action" },
         { name: "🍉 Fruit Splash Match 3", path: "FruitSplash/index.html", icon: "assets/fruits200.png", tip: "Puzzle" },
         { name: "🔢 Merge Numbers 2048", path: "MergeNumbers/game.html", icon: "img/mergenumber200.png", tip: "Puzzle" },
+        { name: "🧩 NumMatch Logic", path: "NumMatch/index.html", icon: "assets/numberballoon200.png", tip: "Logic" },
         { name: "🧩 Block Puzzle Dash", path: "BlockPuzzle/game.html", icon: "img/blockpuzzle200.png", tip: "Puzzle" },
         { name: "⚽ Football 3D Kick", path: "Football3D/index.html", icon: "img/football200.png", tip: "Sports" },
         { name: "🏐 Volleyball Arena 3D", path: "VolleyballArena/index.html", icon: "assets/volley200.png", tip: "Sports" },

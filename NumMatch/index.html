@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>NumMatch - Logic Puzzle | PlayMixGames</title>
+    <meta name="description" content="Match pairs of numbers or numbers that add up to 10 to clear the board! A relaxing and addictive logic puzzle game. Play NumMatch online for free.">
+    
+    <meta name="keywords" content="nummatch, number match, logic puzzle, ten crush, brain training, math puzzle, juego de números, jeu de nombres, 数字パズル">
+    
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ナムマッチ - ロジックパズル">
+    <meta name="twitter:description:ja" content="10になるペアを見つけてボードをクリアしよう！無料で遊べるリラックスできるロジックパズル。">
+    
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="NumMatch - Rompecabezas Lógico">
+    <meta name="twitter:description:es" content="¡Encuentra pares que sumen 10 para despejar el tablero! Un juego de números relajante y gratuito.">
+    
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="NumMatch - Puzzle Logique">
+    <meta name="twitter:description:fr" content="Trouvez des paires qui font 10 pour vider le plateau ! Un jeu de logique relaxant.">
+
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/NumMatch/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/NumMatch/index.html" />
+    <meta property="og:title" content="NumMatch - Logic Puzzle Free Online Game">
+    <meta property="og:description" content="Play NumMatch online for free. Clear the board by finding matching pairs and sums of 10.">
+    <meta property="og:url" content="https://playmixgames.in/NumMatch/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/NumMatch/index.html" />
+    
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #4facfe;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(79, 172, 254, 0.1);
+            border-top-color: #4facfe;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pmgPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.98); }
+        }
+
+        @keyframes pmgFill {
+            0% { width: 0%; }
+            100% { width: 95%; }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        /* SEO Game Info Section Styling */
+        #game-info {
+            background: #111827;
+            padding: 40px 20px;
+            text-align: left;
+            color: #9ca3af;
+        }
+
+        #game-info h2 {
+            font-size: 2rem;
+            color: #4facfe;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #game-info h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+
+        #game-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #game-info ul {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.8;
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        #game-info li {
+            margin-bottom: 8px;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "NumMatch",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Play NumMatch online for free. Clear the board by finding matching pairs and sums of 10."
+    }
+    </script>
+    <script defer src="../sidebar.js"></script>
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Generating Puzzle...</p>
+    </div>
+    
+    <main>
+        <iframe id="game-frame" src="game.html" title="NumMatch Logic Puzzle" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <section id="game-info">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2>🧩 About NumMatch - Logic Puzzle</h2>
+            <p><strong>NumMatch</strong> is the perfect relaxing number puzzle game. If you enjoy Sudoku, Ten Crush, Crossword puzzles, or classic number matching mechanics, you will love training your logic and concentration skills with this beautifully crafted web experience!</p>
+            <p>Immerse yourself in the world of math and pattern recognition. Solve the daily puzzles to train your brain, boost your math skills, and relax after a long day.</p>
+
+            <h3>🎮 How to Play</h3>
+            <ul>
+                <li>The goal is to clear all numbers from the board.</li>
+                <li>Find pairs of identical numbers (e.g., <strong>1 & 1</strong>, <strong>7 & 7</strong>) or pairs that add up to <strong>10</strong> (e.g., <strong>6 & 4</strong>, <strong>3 & 7</strong>).</li>
+                <li>Pairs can be cleared vertically, horizontally, or diagonally—provided there are no other un-cleared numbers blocking their path.</li>
+                <li>You can also match the last number of a row with the first number of the next row.</li>
+                <li>When there are no more matches, press <strong>➕ Add</strong> to generate extra numbers.</li>
+                <li>If you're ever stuck, use the <strong>💡 Hint</strong> button to reveal a valid move.</li>
+            </ul>
+
+            <h3>❓ Frequently Asked Questions (FAQ)</h3>
+            <p><strong style="color:#fff;">Is NumMatch free to play?</strong><br>Yes! You can play NumMatch logic puzzle completely free directly in your web browser with no download required.</p>
+            <p><strong style="color:#fff;">Does it work on mobile phones?</strong><br>Absolutely. The grid is fully responsive and optimized for scrolling on touchscreens. A QR code is provided on desktop browsers so you can quickly switch to mobile!</p>
+            <p><strong style="color:#fff;">How do I win?</strong><br>You win a level when all numbers on the board have been cleared. Clearing entire rows at once is a great strategy as it shrinks the board.</p>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>
