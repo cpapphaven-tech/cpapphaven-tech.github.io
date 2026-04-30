@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey}, body:JSON.stringify({ timestamp: new Date().toISOString(), url: location.href, referrer: document.referrer, userAgent: navigator.userAgent, loadStage:"pre-init" }), keepalive:true });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>2-Choice Personality Test – Fast & Addictive Quiz | PlayMix Games</title>
+    <meta name="description" content="Take our 2-choice personality test! Discover your gaming personality type in under 60 seconds. Fun, fast, and addictive online quiz to know yourself better.">
+    
+    <meta name="keywords" content="2 choice personality test, fast personality test online, fun quiz to know yourself, personality quiz, gaming personality, strategist or action taker">
+    
+    <link rel="canonical" href="https://playmixgames.in/PersonalityTest/index.html">
+    <meta property="og:title" content="2-Choice Personality Test – Fast & Addictive Quiz | PlayMix Games">
+    <meta property="og:description" content="Discover your gaming personality type in under 60 seconds. Are you a Strategist, Action Taker, or Creative? Play now!">
+    <meta property="og:url" content="https://playmixgames.in/PersonalityTest/index.html">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "2-Choice Personality Test",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "A fast-paced 2-choice personality test to discover your gaming archetype.",
+      "url": "https://playmixgames.in/PersonalityTest/index.html"
+    }
+    </script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+
+        *, *::before, *::after { box-sizing:border-box; }
+        body, html { margin:0; padding:0; width:100%; min-height:100vh; overflow-x:hidden; background:#0f172a; font-family:'Outfit',sans-serif; color:#fff; }
+
+        /* Loader */
+        #pmg-loader { position:fixed; inset:0; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0f172a; transition:opacity 0.5s; }
+        #pmg-loader.hidden { opacity:0; pointer-events:none; }
+        .pmg-brand { font-size:1.5rem; font-weight:900; color:#4d79ff; letter-spacing:2px; text-transform:uppercase; margin-bottom:28px; text-shadow:0 0 20px rgba(77,121,255,0.5); animation:pulse 2s infinite; }
+        .pmg-spinner { width:50px; height:50px; border:4px solid rgba(77,121,255,0.15); border-top-color:#4d79ff; border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:18px; }
+        .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; }
+        .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,#4d79ff,#a78bfa); animation:fill 5s ease forwards; }
+        .pmg-tip { font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:14px; }
+        @keyframes spin  { to{transform:rotate(360deg);} }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+        @keyframes fill  { 0%{width:0%} 100%{width:92%} }
+
+        /* iframe */
+        #game-frame { width:100%; height:100vh; border:none; display:block; opacity:0; transition:opacity 0.5s; }
+        #game-frame.visible { opacity:1; }
+
+        /* SEO Section */
+        .seo-section { background:#0a0f1e; padding:60px 20px; border-top:1px solid rgba(77,121,255,0.15); }
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.03); border:1px solid rgba(77,121,255,0.12); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#4d79ff; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #4d79ff; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#94a3b8; line-height:1.7; margin-bottom:10px; }
+        .seo-card ul { padding-left:20px; }
+        .faq-q { color:#e2e8f0; font-weight:700; margin:16px 0 6px; }
+        .faq-a { color:#94a3b8; line-height:1.6; margin-bottom:18px; }
+        .license-box { background:rgba(77,121,255,0.04); border:1px solid rgba(77,121,255,0.15); border-radius:10px; padding:20px; font-size:0.85rem; color:#888; line-height:1.6; }
+        .topic-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); gap:10px; margin-top:12px; }
+        .topic-tag { background:rgba(77,121,255,0.1); border:1px solid rgba(77,121,255,0.2); border-radius:8px; padding:8px 12px; font-size:0.85rem; color:#4d79ff; text-align:center; font-weight:700; }
+    </style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Preparing your personality profile...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="2-Choice Personality Test" allow="autoplay;"></iframe>
+    </main>
+
+    <section class="seo-section" aria-label="About the Personality Test">
+        <div class="seo-inner">
+
+            <div class="seo-card">
+                <h1 style="font-size:1.6rem;margin:0 0 16px;color:#4d79ff;">2-Choice Personality Test – Know Your Gaming Type</h1>
+                <p>Welcome to the <strong>2-Choice Personality Test</strong>, the fastest and most addictive way to discover your inner gaming archetype! In under 60 seconds, you'll answer 10 simple A/B questions designed to map your decision-making style, energy levels, and tactical preferences.</p>
+                <p>Are you a cold, calculating <strong>Strategist</strong>? A high-energy <strong>Action Taker</strong>? Or perhaps a <strong>Chill Player</strong> who just goes with the flow? This quiz isn't just about fun—it helps you find the perfect games for your style on PlayMix.</p>
+                <div class="topic-grid">
+                    <div class="topic-tag">🎯 Strategist</div>
+                    <div class="topic-tag">⚡ Action Taker</div>
+                    <div class="topic-tag">🧠 Analyzer</div>
+                    <div class="topic-tag">🎨 Creative</div>
+                    <div class="topic-tag">😌 Chill Player</div>
+                    <div class="topic-tag">⏱️ 60-Sec Quiz</div>
+                </div>
+            </div>
+
+            <div class="seo-card">
+                <h2>Why Take the 2-Choice Personality Test?</h2>
+                <ul>
+                    <li><strong>Fast & Simple:</strong> No complicated questions. Just pick A or B and move on.</li>
+                    <li><strong>Accurate Results:</strong> Based on 5 core personality types relevant to gaming and decision making.</li>
+                    <li><strong>Personalized Recommendations:</strong> Once you find your type, we'll suggest the best free online games for you.</li>
+                    <li><strong>Shareable Fun:</strong> Show your friends who you really are with the instant share button.</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>Frequently Asked Questions</h2>
+
+                <p class="faq-q">How long does the test take?</p>
+                <p class="faq-a">Most users complete the 2-choice personality test in about 60–90 seconds. It's designed to be fast and intuitive.</p>
+
+                <p class="faq-q">What are the 5 personality types?</p>
+                <p class="faq-a">The types are Strategist (planner), Action Taker (impulsive), Analyzer (logical), Creative (imaginative), and Chill Player (relaxed).</p>
+
+                <p class="faq-q">Can I retake the quiz?</p>
+                <p class="faq-a">Absolutely! If you feel like your mood has changed or you want to see other types, just hit the "Try Again" button.</p>
+
+                <p class="faq-q">Is this a real psychological test?</p>
+                <p class="faq-a">It's a fun, engaging quiz designed for entertainment and game discovery. While it reflects real traits, it's meant to be a lighthearted way to explore your preferences.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame  = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+            frame.onload = function () { frame.classList.add('visible'); loader.classList.add('hidden'); };
+            document.addEventListener("DOMContentLoaded", function () { if (typeof prepSystem === "function") prepSystem(); });
+        })();
+    </script>
+</body>
+</html>

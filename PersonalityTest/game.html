@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Test Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --accent-primary: #4d79ff;
+            --accent-secondary: #a78bfa;
+            --text-color: #f8fafc;
+            --text-dim: #94a3b8;
+            --success: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        #app {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .screen {
+            display: none;
+            flex-direction: column;
+            gap: 24px;
+            animation: fadeIn 0.4s ease-out forwards;
+        }
+
+        .screen.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Start Screen */
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient(135deg, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+
+        .hero-subtitle {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            padding: 16px 32px;
+            border-radius: 16px;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(77, 121, 255, 0.3);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(77, 121, 255, 0.4);
+        }
+
+        /* Quiz UI */
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            transition: width 0.3s ease;
+        }
+
+        .question-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 32px;
+            line-height: 1.3;
+        }
+
+        .options-grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .option-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-card:hover {
+            border-color: var(--accent-primary);
+            background: rgba(77, 121, 255, 0.1);
+        }
+
+        .option-card:active {
+            transform: scale(0.98);
+        }
+
+        .option-label {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.9rem;
+            color: var(--accent-primary);
+            flex-shrink: 0;
+        }
+
+        .option-content {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Result Page */
+        .result-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 32px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .result-badge {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .result-type {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-primary);
+            font-weight: 900;
+            margin-bottom: 8px;
+        }
+
+        .result-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+
+        .result-desc {
+            color: var(--text-dim);
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .recommendation {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 32px;
+        }
+
+        .recommendation h4 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--accent-secondary);
+            margin-bottom: 12px;
+        }
+
+        .game-link {
+            display: inline-block;
+            color: white;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            margin: 4px;
+            transition: all 0.2s;
+        }
+
+        .game-link:hover {
+            background: var(--accent-primary);
+        }
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: white;
+        }
+
+        /* Pulse for countdown */
+        .countdown {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2rem; }
+            .result-card { padding: 30px 20px; }
+            .action-buttons { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <!-- Start Screen -->
+    <div id="screen-start" class="screen active">
+        <div style="text-align: center; margin-bottom: 24px;">
+            <span style="font-size: 4rem;">🧠</span>
+        </div>
+        <h1 class="hero-title">Who are you truly?</h1>
+        <p class="hero-subtitle">Take this fast 60-second quiz to discover your gaming personality type.</p>
+        <button class="btn" onclick="startQuiz()">Start Test</button>
+        <p class="countdown">10 quick A/B questions</p>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="screen-quiz" class="screen">
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <p id="question-count" style="text-align: center; font-size: 0.8rem; color: var(--text-dim); margin-bottom: 8px;">Question 1 of 10</p>
+        <h2 id="question-text" class="question-text">When starting something new:</h2>
+        <div class="options-grid">
+            <div class="option-card" onclick="handleAnswer('A')">
+                <div class="option-label">A</div>
+                <div id="option-a" class="option-content">Plan everything first</div>
+            </div>
+            <div class="option-card" onclick="handleAnswer('B')">
+                <div class="option-label">B</div>
+                <div id="option-b" class="option-content">Just start and figure it out</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="screen-loading" class="screen">
+        <div style="text-align: center; padding: 40px;">
+            <div class="hero-title">Analyzing...</div>
+            <p class="hero-subtitle">Mapping your neural pathways</p>
+            <div style="width: 100%; height: 4px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
+                <div style="height: 100%; background: var(--accent-primary); animation: load 1.5s ease-in-out infinite;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="screen-result" class="screen">
+        <div class="result-card">
+            <div id="result-badge" class="result-badge">🎯</div>
+            <div class="result-type">You are a</div>
+            <h2 id="result-title" class="result-title">Strategist</h2>
+            <p id="result-desc" class="result-desc">You think before acting. You prefer smart decisions over fast ones. You enjoy planning and winning through logic.</p>
+            
+            <div class="recommendation">
+                <h4>Best for you</h4>
+                <div id="game-recommendations">
+                    <a href="../Chess/index.html" class="game-link" target="_parent">Chess</a>
+                    <a href="../Sudoku/index.html" class="game-link" target="_parent">Sudoku</a>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn" onclick="shareResult()">Share Result</button>
+                <button class="btn btn-outline" onclick="location.reload()">Try Again</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        {
+            q: "When starting something new:",
+            a: { text: "Plan everything first", types: ["Strategist", "Analyzer"] },
+            b: { text: "Just start and figure it out", types: ["Action Taker"] }
+        },
+        {
+            q: "In a challenging game:",
+            a: { text: "Focus on strategy", types: ["Strategist"] },
+            b: { text: "Focus on action", types: ["Action Taker"] }
+        },
+        {
+            q: "How do you spend free time?",
+            a: { text: "Learn something new", types: ["Analyzer", "Creative"] },
+            b: { text: "Relax or have fun", types: ["Chill Player"] }
+        },
+        {
+            q: "In a team setting:",
+            a: { text: "Lead and organize", types: ["Strategist"] },
+            b: { text: "Follow and support", types: ["Chill Player"] }
+        },
+        {
+            q: "Decision making style:",
+            a: { text: "Think deeply", types: ["Analyzer"] },
+            b: { text: "Go with gut", types: ["Action Taker", "Creative"] }
+        },
+        {
+            q: "Ideal workspace:",
+            a: { text: "Organized and clean", types: ["Analyzer", "Strategist"] },
+            b: { text: "Messy and inspirational", types: ["Creative"] }
+        },
+        {
+            q: "Goal setting style:",
+            a: { text: "Long-term milestones", types: ["Strategist"] },
+            b: { text: "Short-term wins", types: ["Action Taker"] }
+        },
+        {
+            q: "Problem solving approach:",
+            a: { text: "Logical deduction", types: ["Analyzer"] },
+            b: { text: "Out-of-the-box ideas", types: ["Creative"] }
+        },
+        {
+            q: "Social energy:",
+            a: { text: "Small group, deep talks", types: ["Analyzer"] },
+            b: { text: "Big party, high energy", types: ["Action Taker", "Chill Player"] }
+        },
+        {
+            q: "Travel style:",
+            a: { text: "Detailed itinerary", types: ["Strategist"] },
+            b: { text: "Wander aimlessly", types: ["Chill Player", "Creative"] }
+        }
+    ];
+
+    const typesData = {
+        "Strategist": {
+            badge: "🎯",
+            desc: "You think before acting. You prefer smart decisions over fast ones. You enjoy planning and winning through logic.",
+            games: ["Chess", "Sudoku", "Ludo"]
+        },
+        "Action Taker": {
+            badge: "⚡",
+            desc: "Fast, impulsive, and energetic. You thrive in high-pressure situations where split-second decisions matter most.",
+            games: ["RetroRacer", "FlappyRise", "GalaxyAssault"]
+        },
+        "Analyzer": {
+            badge: "🧠",
+            desc: "Logical and detail-focused. You love breaking down complex problems into small, manageable pieces.",
+            games: ["NumMatch", "DailyMathEquator", "WaterSort3D"]
+        },
+        "Creative": {
+            badge: "🎨",
+            desc: "Imaginative and idea-driven. You see patterns where others see chaos and love expressing yourself uniquely.",
+            games: ["WordSearch", "WordCrossword", "ColorMatch"]
+        },
+        "Chill Player": {
+            badge: "😌",
+            desc: "Relaxed and easy-going. You play for the experience and the joy of the journey, not just the destination.",
+            games: ["Solitaire", "DoodleJump", "Pool"]
+        }
+    };
+
+    let currentQuestion = 0;
+    let scores = {
+        "Strategist": 0,
+        "Action Taker": 0,
+        "Analyzer": 0,
+        "Creative": 0,
+        "Chill Player": 0
+    };
+
+    function startQuiz() {
+        showScreen('screen-quiz');
+        updateQuestion();
+    }
+
+    function updateQuestion() {
+        const q = questions[currentQuestion];
+        document.getElementById('question-text').innerText = q.q;
+        document.getElementById('option-a').innerText = q.a.text;
+        document.getElementById('option-b').innerText = q.b.text;
+        document.getElementById('question-count').innerText = `Question ${currentQuestion + 1} of ${questions.length}`;
+        document.getElementById('progress-bar').style.width = `${((currentQuestion) / questions.length) * 100}%`;
+    }
+
+    function handleAnswer(option) {
+        const q = questions[currentQuestion];
+        const selected = option === 'A' ? q.a : q.b;
+        
+        selected.types.forEach(type => scores[type]++);
+
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            updateQuestion();
+        } else {
+            showResult();
+        }
+    }
+
+    function showResult() {
+        showScreen('screen-loading');
+        
+        setTimeout(() => {
+            let maxScore = -1;
+            let resultType = "Strategist";
+
+            for (const type in scores) {
+                if (scores[type] > maxScore) {
+                    maxScore = scores[type];
+                    resultType = type;
+                }
+            }
+
+            const data = typesData[resultType];
+            document.getElementById('result-badge').innerText = data.badge;
+            document.getElementById('result-title').innerText = resultType;
+            document.getElementById('result-desc').innerText = data.desc;
+            
+            const gamesContainer = document.getElementById('game-recommendations');
+            gamesContainer.innerHTML = '';
+            data.games.forEach(game => {
+                const link = document.createElement('a');
+                link.href = `../${game}/index.html`;
+                link.className = 'game-link';
+                link.target = '_parent';
+                link.innerText = game;
+                gamesContainer.appendChild(link);
+            });
+
+            showScreen('screen-result');
+        }, 2000);
+    }
+
+    function showScreen(id) {
+        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+
+    function shareResult() {
+        const type = document.getElementById('result-title').innerText;
+        const badge = document.getElementById('result-badge').innerText;
+        const text = `I’m a ${type} ${badge} – what are you? Try the 2-Choice Personality Test on PlayMix!`;
+        
+        if (navigator.share) {
+            navigator.share({
+                title: 'My Personality Type',
+                text: text,
+                url: window.parent.location.href
+            });
+        } else {
+            const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(window.parent.location.href)}`;
+            window.open(url, '_blank');
+        }
+    }
+</script>
+
+<style>
+    @keyframes load {
+        0% { transform: translateX(-100%); }
+        100% { transform: translateX(100%); }
+    }
+</style>
+
+</body>
+</html>
