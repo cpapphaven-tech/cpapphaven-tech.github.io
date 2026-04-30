@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey}, body:JSON.stringify({ timestamp: new Date().toISOString(), url: location.href, referrer: document.referrer, userAgent: navigator.userAgent, loadStage:"pre-init" }), keepalive:true });
+        })();
+    </script>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Anime Archetype Test – Which Anime Character Are You? | PlayMix Games</title>
+    <meta name="description" content="Discover your anime archetype with our 2-choice quiz! Are you a Shonen Hero, a Quiet Genius, or an Anti-Hero? Fast, fun, and addictive anime personality test.">
+    <meta name="keywords" content="anime archetype test, which anime character are you, anime personality quiz, shonen hero or anti-hero, fun anime quiz online">
+    <link rel="canonical" href="https://playmixgames.in/AnimeArchetype/index.html">
+    <meta property="og:title" content="Anime Archetype Test – Find Your Anime Soul | PlayMix Games">
+    <meta property="og:description" content="Which classic anime trope defines your soul? Find out in 60 seconds. Are you the Hero or the Rival? Play now!">
+    <meta property="og:url" content="https://playmixgames.in/AnimeArchetype/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://playmixgames.in/img/192.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anime Archetype Test – Which Character Role Are You?">
+    <meta name="twitter:description" content="Are you the Hero or the Rival? Find your anime archetype in 60 seconds.">
+    <meta name="twitter:image" content="https://playmixgames.in/img/192.png">
+    <meta name="theme-color" content="#450a0a">
+    <script type="application/ld+json">
+    { "@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Anime Archetype Test", "applicationCategory": "EducationalGame", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "description": "An interactive 2-choice quiz to find your anime archetype and character trope.", "url": "https://playmixgames.in/AnimeArchetype/index.html" }
+    </script>
+    <script type="module" src="../analytics.js"></script><script src="../ads.js"></script><script defer src="../sidebar.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+        *, *::before, *::after { box-sizing:border-box; }
+        body, html { margin:0; padding:0; width:100%; min-height:100vh; overflow-x:hidden; background:#450a0a; font-family:'Outfit',sans-serif; color:#fff; }
+        #pmg-loader { position:fixed; inset:0; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#450a0a; transition:opacity 0.5s; }
+        #pmg-loader.hidden { opacity:0; pointer-events:none; }
+        .pmg-brand { font-size:1.5rem; font-weight:900; color:#ef4444; letter-spacing:2px; text-transform:uppercase; margin-bottom:28px; text-shadow:0 0 20px rgba(239,68,68,0.5); animation:pulse 2s infinite; }
+        .pmg-spinner { width:50px; height:50px; border:4px solid rgba(239,68,68,0.15); border-top-color:#ef4444; border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:18px; }
+        .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; }
+        .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,#ef4444,#f87171); animation:fill 5s ease forwards; }
+        .pmg-tip { font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:14px; }
+        @keyframes spin  { to{transform:rotate(360deg);} }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+        @keyframes fill  { 0%{width:0%} 100%{width:92%} }
+        #game-frame { width:100%; height:100vh; border:none; display:block; opacity:0; transition:opacity 0.5s; }
+        #game-frame.visible { opacity:1; }
+        .seo-section { background:#2a0505; padding:60px 20px; border-top:1px solid rgba(239, 68, 68, 0.15); }
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.03); border:1px solid rgba(239, 68, 68, 0.12); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#ef4444; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #ef4444; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#fecaca; line-height:1.7; margin-bottom:10px; }
+        .topic-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); gap:10px; margin-top:12px; }
+        .topic-tag { background:rgba(239, 68, 68, 0.1); border:1px solid rgba(239, 68, 68, 0.2); border-radius:8px; padding:8px 12px; font-size:0.85rem; color:#ef4444; text-align:center; font-weight:700; }
+    </style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Awakening your inner power...</p>
+    </div>
+    <main><iframe id="game-frame" title="Anime Archetype Test" allow="autoplay;"></iframe></main>
+    <section class="seo-section" aria-label="About the Anime Quiz">
+        <div class="seo-inner">
+            <div class="seo-card">
+                <h1 style="font-size:1.6rem;margin:0 0 16px;color:#ef4444;">Anime Archetype Test – Find Your Anime Persona</h1>
+                <p>Ever wondered which character role you would play in an anime? The <strong>Anime Archetype Test</strong> is a fun, addictive 2-choice quiz that maps your personality to classic anime tropes. Whether you're the hero who never gives up or the mysterious rival working in the shadows, find your true anime self today.</p>
+                <div class="topic-grid">
+                    <div class="topic-tag">🔥 Shonen Hero</div><div class="topic-tag">🧠 Quiet Genius</div><div class="topic-tag">🌑 Anti-Hero</div><div class="topic-tag">🛡️ Supporting Pillar</div><div class="topic-tag">⚔️ Anime Tropes</div><div class="topic-tag">⏱️ 60-Sec Quiz</div>
+                </div>
+            </div>
+            <div class="seo-card">
+                <h2>Unlock Your Potential</h2>
+                <ul>
+                    <li><strong>Fast & Engaging:</strong> 10 questions to find your archetype.</li>
+                    <li><strong>Share with Friends:</strong> See who in your friend group is the Hero and who is the Rival.</li>
+                    <li><strong>Game Recommendations:</strong> Get suggested games based on your anime fighting style.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        (function () {
+            const frame  = document.getElementById('game-frame'); const loader = document.getElementById('pmg-loader');
+            const urlParams = new URLSearchParams(window.location.search); const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId); frame.onload = function () { frame.classList.add('visible'); loader.classList.add('hidden'); };
+            document.addEventListener("DOMContentLoaded", function () { if (typeof prepSystem === "function") prepSystem(); });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey}, body:JSON.stringify({ timestamp: new Date().toISOString(), url: location.href, referrer: document.referrer, userAgent: navigator.userAgent, loadStage:"pre-init" }), keepalive:true });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AI Readiness Quiz – What's Your AI Persona? | PlayMix Games</title>
+    <meta name="description" content="Take the AI Readiness Quiz to discover your AI persona. Are you a Prompter, Automator, or Visionary? Fast 2-choice test for the AI revolution.">
+    
+    <meta name="keywords" content="AI readiness quiz, AI personality test, artificial intelligence persona, prompter or automator, AI future quiz, technology readiness">
+    
+    <link rel="canonical" href="https://playmixgames.in/AIReadiness/index.html">
+    <meta property="og:title" content="AI Readiness Quiz – Discover Your AI Persona | PlayMix Games">
+    <meta property="og:description" content="How ready are you for the AI revolution? Find your AI persona in 60 seconds. Are you a master Prompter or a Visionary? Play now!">
+    <meta property="og:url" content="https://playmixgames.in/AIReadiness/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://playmixgames.in/img/192.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Readiness Quiz – What's Your AI Persona?">
+    <meta name="twitter:description" content="Are you a Prompter, Automator, or Visionary? Find out in 60 seconds.">
+    <meta name="twitter:image" content="https://playmixgames.in/img/192.png">
+    <meta name="theme-color" content="#020617">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AI Readiness Quiz",
+      "applicationCategory": "EducationalGame",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "An interactive 2-choice quiz to measure your readiness and persona for the AI age.",
+      "url": "https://playmixgames.in/AIReadiness/index.html"
+    }
+    </script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+        *, *::before, *::after { box-sizing:border-box; }
+        body, html { margin:0; padding:0; width:100%; min-height:100vh; overflow-x:hidden; background:#020617; font-family:'Outfit',sans-serif; color:#fff; }
+
+        #pmg-loader { position:fixed; inset:0; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#020617; transition:opacity 0.5s; }
+        #pmg-loader.hidden { opacity:0; pointer-events:none; }
+        .pmg-brand { font-size:1.5rem; font-weight:900; color:#38bdf8; letter-spacing:2px; text-transform:uppercase; margin-bottom:28px; text-shadow:0 0 20px rgba(56,189,248,0.5); animation:pulse 2s infinite; }
+        .pmg-spinner { width:50px; height:50px; border:4px solid rgba(56,189,248,0.15); border-top-color:#38bdf8; border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:18px; }
+        .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; }
+        .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,#38bdf8,#818cf8); animation:fill 5s ease forwards; }
+        .pmg-tip { font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:14px; }
+        @keyframes spin  { to{transform:rotate(360deg);} }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+        @keyframes fill  { 0%{width:0%} 100%{width:92%} }
+
+        #game-frame { width:100%; height:100vh; border:none; display:block; opacity:0; transition:opacity 0.5s; }
+        #game-frame.visible { opacity:1; }
+
+        .seo-section { background:#010413; padding:60px 20px; border-top:1px solid rgba(56,189,248,0.15); }
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.03); border:1px solid rgba(56,189,248,0.12); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#38bdf8; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #38bdf8; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#94a3b8; line-height:1.7; margin-bottom:10px; }
+        .topic-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); gap:10px; margin-top:12px; }
+        .topic-tag { background:rgba(56,189,248,0.1); border:1px solid rgba(56,189,248,0.2); border-radius:8px; padding:8px 12px; font-size:0.85rem; color:#38bdf8; text-align:center; font-weight:700; }
+    </style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Analyzing your AI compatibility...</p>
+    </div>
+
+    <main><iframe id="game-frame" title="AI Readiness Quiz" allow="autoplay;"></iframe></main>
+
+    <section class="seo-section" aria-label="About the AI Quiz">
+        <div class="seo-inner">
+            <div class="seo-card">
+                <h1 style="font-size:1.6rem;margin:0 0 16px;color:#38bdf8;">AI Readiness Quiz – What's Your AI Persona?</h1>
+                <p>Are you ready for the age of Artificial Intelligence? The <strong>AI Readiness Quiz</strong> is a fast, 2-choice interactive test designed to help you understand your relationship with modern technology. Whether you are an early adopter or a cautious observer, this quiz will map your style to one of four key personas.</p>
+                <div class="topic-grid">
+                    <div class="topic-tag">💬 The Prompter</div>
+                    <div class="topic-tag">⚙️ The Automator</div>
+                    <div class="topic-tag">🔮 The Visionary</div>
+                    <div class="topic-tag">🧘 The Humanist</div>
+                    <div class="topic-tag">🤖 AI Ethics</div>
+                    <div class="topic-tag">⏱️ 60-Sec Test</div>
+                </div>
+            </div>
+
+            <div class="seo-card">
+                <h2>Why Take the AI Readiness Test?</h2>
+                <ul>
+                    <li><strong>Discover Your Strength:</strong> Learn if you're better at prompting, automation, or high-level strategy.</li>
+                    <li><strong>Future-Proofing:</strong> Understanding your stance on AI is the first step in adapting to the future of work.</li>
+                    <li><strong>Fast & Fun:</strong> No complex technical jargon. Just simple A/B choices based on your preferences.</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>Frequently Asked Questions</h2>
+                <p class="faq-q">Do I need to know how to code?</p>
+                <p class="faq-a">Not at all! This quiz is about your mindset and approach to using AI tools in daily life, not your technical skills.</p>
+                <p class="faq-q">What tools are covered?</p>
+                <p class="faq-a">We look at general AI concepts including LLMs, automation tools, and the ethical implications of AI integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame  = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+            frame.onload = function () { frame.classList.add('visible'); loader.classList.add('hidden'); };
+            document.addEventListener("DOMContentLoaded", function () { if (typeof prepSystem === "function") prepSystem(); });
+        })();
+    </script>
+</body>
+</html>
