@@ -76,6 +76,25 @@
         .seo-card p, .seo-card li { color:#94a3b8; line-height:1.7; margin-bottom:10px; }
         .topic-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); gap:10px; margin-top:12px; }
         .topic-tag { background:rgba(251,191,36,0.05); border:1px solid rgba(251,191,36,0.1); border-radius:8px; padding:8px 12px; font-size:0.85rem; color:#fbbf24; text-align:center; font-weight:700; }
+
+        /* Bottom Ad */
+        #bottom-ad {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 50px;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,0.5);
+        }
+        
+        @media (max-height: 600px) {
+            #game-frame { height: calc(100vh - 50px); }
+        }
     </style>
 </head>
 <body>
@@ -89,6 +108,8 @@
     <main>
         <iframe id="game-frame" title="Highway Rush Game" allow="autoplay;"></iframe>
     </main>
+
+    <div id="bottom-ad"></div>
 
     <section class="seo-section" aria-label="About Highway Rush">
         <div class="seo-inner">
@@ -121,8 +142,24 @@
             const loader = document.getElementById('pmg-loader');
             const urlParams = new URLSearchParams(window.location.search);
             const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            
+            // Safety timeout: hide loader after 5s regardless of frame load
+            const safetyTimeout = setTimeout(() => {
+                loader.classList.add('hidden');
+                frame.classList.add('visible');
+            }, 5000);
+
             frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
-            frame.onload = function () { frame.classList.add('visible'); loader.classList.add('hidden'); };
+            frame.onload = function () { 
+                clearTimeout(safetyTimeout);
+                frame.classList.add('visible'); 
+                loader.classList.add('hidden'); 
+                
+                // Initialize Ads
+                if (window.prepSystem) {
+                    window.prepSystem();
+                }
+            };
         })();
     </script>
 </body>
