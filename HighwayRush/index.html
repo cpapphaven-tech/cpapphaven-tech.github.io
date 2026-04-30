@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey}, body:JSON.stringify({ timestamp: new Date().toISOString(), url: location.href, referrer: document.referrer, userAgent: navigator.userAgent, loadStage:"pre-init" }), keepalive:true });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Highway Rush: Traffic Dodge – Free Online Racing Game | PlayMix Games</title>
+    <meta name="description" content="Play Highway Rush: Traffic Dodge! A classic arcade racing game. Dodge traffic cones and other cars on the busy highway. How far can you go?">
+    
+    <meta name="keywords" content="highway rush, traffic dodge, road theme game, arcade racing, car dodging game, free highway racer, playmix games">
+    
+    <link rel="canonical" href="https://playmixgames.in/HighwayRush/index.html">
+    <meta property="og:title" content="Highway Rush: Traffic Dodge – Classic Arcade Racing | PlayMix Games">
+    <meta property="og:description" content="Survive the rush hour! Dodge obstacles and traffic in this addictive highway racer. Set your new high score record now.">
+    <meta property="og:url" content="https://playmixgames.in/HighwayRush/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://playmixgames.in/img/192.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Highway Rush: Traffic Dodge">
+    <meta name="twitter:description" content="Classic arcade highway racing game. Dodge traffic now!">
+    <meta name="twitter:image" content="https://playmixgames.in/img/192.png">
+
+    <meta name="theme-color" content="#166534">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Highway Rush: Traffic Dodge",
+      "applicationCategory": "RacingGame",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "A classic road-themed arcade racing game where players dodge traffic on a highway.",
+      "url": "https://playmixgames.in/HighwayRush/index.html"
+    }
+    </script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+
+        *, *::before, *::after { box-sizing:border-box; }
+        body, html { margin:0; padding:0; width:100%; min-height:100vh; overflow-x:hidden; background:#222; font-family:'Outfit',sans-serif; color:#fff; }
+
+        /* Loader */
+        #pmg-loader { position:fixed; inset:0; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#222; transition:opacity 0.5s; }
+        #pmg-loader.hidden { opacity:0; pointer-events:none; }
+        .pmg-brand { font-size:1.5rem; font-weight:900; color:#fbbf24; letter-spacing:2px; text-transform:uppercase; margin-bottom:28px; text-shadow:0 0 20px rgba(251,191,36,0.3); animation:pulse 2s infinite; }
+        .pmg-spinner { width:50px; height:50px; border:4px solid rgba(251,191,36,0.15); border-top-color:#fbbf24; border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:18px; }
+        .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; }
+        .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,#fbbf24,#f59e0b); animation:fill 5s ease forwards; }
+        @keyframes spin  { to{transform:rotate(360deg);} }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+        @keyframes fill  { 0%{width:0%} 100%{width:92%} }
+
+        /* iframe */
+        #game-frame { width:100%; height:100vh; border:none; display:block; opacity:0; transition:opacity 0.5s; }
+        #game-frame.visible { opacity:1; }
+
+        /* SEO Section */
+        .seo-section { background:#111; padding:60px 20px; border-top:1px solid rgba(251,191,36,0.2); }
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.02); border:1px solid rgba(251,191,36,0.1); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#fbbf24; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #fbbf24; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#94a3b8; line-height:1.7; margin-bottom:10px; }
+        .topic-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px,1fr)); gap:10px; margin-top:12px; }
+        .topic-tag { background:rgba(251,191,36,0.05); border:1px solid rgba(251,191,36,0.1); border-radius:8px; padding:8px 12px; font-size:0.85rem; color:#fbbf24; text-align:center; font-weight:700; }
+    </style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;margin-top:10px;">Starting Engines...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="Highway Rush Game" allow="autoplay;"></iframe>
+    </main>
+
+    <section class="seo-section" aria-label="About Highway Rush">
+        <div class="seo-inner">
+            <div class="seo-card">
+                <h1 style="font-size:1.8rem;margin:0 0 16px;color:#fbbf24;">Highway Rush: Traffic Dodge</h1>
+                <p>Prepare for the ultimate road challenge. <strong>Highway Rush: Traffic Dodge</strong> is a high-speed arcade game where you navigate a busy highway. Dodge traffic cones, avoid obstacles, and keep your red sports car on the asphalt to set the highest possible distance record.</p>
+                <div class="topic-grid">
+                    <div class="topic-tag">🛣️ Road Theme</div>
+                    <div class="topic-tag">🏎️ Sports Car</div>
+                    <div class="topic-tag">🚧 Traffic Dodge</div>
+                    <div class="topic-tag">🏁 High Score</div>
+                    <div class="topic-tag">🕹️ Arcade Classic</div>
+                </div>
+            </div>
+
+            <div class="seo-card">
+                <h2>Game Instructions</h2>
+                <ul>
+                    <li><strong>Pilot:</strong> Drag your finger or mouse to steer the red car.</li>
+                    <li><strong>Avoid:</strong> Stay clear of orange cones and blue traffic vehicles.</li>
+                    <li><strong>Goal:</strong> Drive as far as possible without crashing!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame  = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+            frame.onload = function () { frame.classList.add('visible'); loader.classList.add('hidden'); };
+        })();
+    </script>
+</body>
+</html>
