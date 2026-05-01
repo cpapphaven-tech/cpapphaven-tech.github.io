@@ -20,11 +20,9 @@ function init() {
 }
 
 function renderCategories() {
-    const themesGrid = document.getElementById('themes-grid');
-    const continentsGrid = document.getElementById('continents-grid');
+    const countriesGrid = document.getElementById('countries-grid');
     
-    themesGrid.innerHTML = '';
-    continentsGrid.innerHTML = '';
+    countriesGrid.innerHTML = '';
 
     CATEGORIES.forEach(cat => {
         const div = document.createElement('div');
@@ -36,11 +34,7 @@ function renderCategories() {
             <div class="cat-count">${cat.places.length} Places</div>
         `;
         
-        if (cat.type === 'theme') {
-            themesGrid.appendChild(div);
-        } else {
-            continentsGrid.appendChild(div);
-        }
+        countriesGrid.appendChild(div);
     });
 }
 
