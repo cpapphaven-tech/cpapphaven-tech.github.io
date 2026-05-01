@@ -212,7 +212,7 @@
             z-index: 50; /* Needs to be on top of everything */
             background: #000;
         }
-        #pano { width: 100%; height: 100%; position: absolute; top: 0; left: 0; }
+        #sv-iframe { width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0; }
         
         #viewer-loader {
             position: absolute; inset: 0; z-index: 500;
@@ -291,7 +291,7 @@
 
     <!-- VIEW 3: Street View Player -->
     <div id="viewer-view" class="view-section hidden">
-        <div id="pano"></div>
+        <iframe id="sv-iframe" src="about:blank" allowfullscreen></iframe>
         
         <div id="viewer-loader">
             <div class="loader-ring"></div>
@@ -315,12 +315,6 @@
     <div class="pmg-bottom-ad" id="bottom-ad"></div>
 </div>
 
-<script>
-    function initMap() {
-        window.googleMapsLoaded = true;
-    }
-</script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXJtEPqYLL3nXNvoJvPwyQFIDQEMjR0gw&callback=initMap"></script>
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>
