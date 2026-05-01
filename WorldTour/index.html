@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>World Tour — Interactive Street View Explorer</title>
+    <link rel="icon" type="image/png" href="../img/192.png">
+    <meta name="description" content="Take a virtual world tour. Explore thousands of famous places, historical landmarks, and nature views in 360-degree interactive Street View.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+    <!-- Deferred Analytics and Ads -->
+    <script defer src="../analytics.js" type="module"></script>
+    <script defer src="../ads.js"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --bg: #0a0e1a;
+            --surface: #111827;
+            --surface-hover: #1f2937;
+            --accent: #3b82f6; 
+            --accent2: #8b5cf6;
+            --text: #f1f5f9; 
+            --muted: #9ca3af; 
+            --border: rgba(255,255,255,0.08);
+        }
+        html, body { 
+            height: 100%; 
+            font-family: 'Outfit', sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            overflow: hidden; 
+        }
+
+        #app { 
+            display: flex; 
+            flex-direction: column; 
+            height: 100dvh; 
+            position: relative;
+        }
+
+        /* Header */
+        #header {
+            position: relative; z-index: 1000;
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 14px;
+            background: rgba(10,14,26,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0; min-height: 56px;
+        }
+        .nav-btn {
+            width: 38px; height: 38px; border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid var(--border);
+            color: var(--text); text-decoration: none;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; transition: background 0.2s; flex-shrink: 0; cursor: pointer;
+        }
+        .nav-btn:hover { background: rgba(255,255,255,0.16); }
+        
+        #header-title { display: flex; flex-direction: column; flex-grow: 1; min-width: 0; }
+        #header-title h1 {
+            font-size: 1rem; font-weight: 900;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        #breadcrumb {
+            font-size: 0.65rem; color: var(--muted); font-weight: 600;
+            letter-spacing: 0.3px; margin-top: 1px;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+        #stats-badge {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            padding: 5px 12px; border-radius: 20px;
+            font-size: 0.7rem; font-weight: 900;
+            text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0;
+        }
+
+        /* Views */
+        .view-section {
+            flex-grow: 1;
+            overflow-y: auto;
+            position: absolute;
+            top: 56px; /* Header height */
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg);
+            transition: transform 0.3s cubic-bezier(0.34,1.2,0.64,1), opacity 0.3s;
+            z-index: 10;
+        }
+        .view-section.hidden {
+            transform: translateX(100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+        .view-section.active {
+            transform: translateX(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Home View (Categories) */
+        #home-view { padding: 20px; padding-bottom: 80px; }
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(139,92,246,0.2));
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-banner::after {
+            content: "🌎";
+            position: absolute;
+            right: -20px;
+            bottom: -30px;
+            font-size: 8rem;
+            opacity: 0.1;
+        }
+        .hero-banner h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 8px; }
+        .hero-banner p { font-size: 0.9rem; color: var(--text); opacity: 0.8; }
+        
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .category-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        }
+        .category-card:hover { background: var(--surface-hover); transform: translateY(-3px); border-color: var(--accent); }
+        .cat-icon { font-size: 2.5rem; margin-bottom: 12px; }
+        .cat-name { font-weight: 800; font-size: 0.9rem; margin-bottom: 4px; }
+        .cat-count { font-size: 0.7rem; color: var(--accent); font-weight: 700; background: rgba(59,130,246,0.1); padding: 2px 8px; border-radius: 10px;}
+
+        /* List View (Places in Category) */
+        #list-view { padding: 0; display: flex; flex-direction: column; }
+        .search-bar-container {
+            padding: 15px 20px;
+            background: rgba(17,24,39,0.9);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            border-bottom: 1px solid var(--border);
+        }
+        #place-search {
+            width: 100%;
+            padding: 12px 16px 12px 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.05);
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Outfit', sans-serif;
+            outline: none;
+            transition: all 0.2s;
+        }
+        #place-search:focus { border-color: var(--accent); background: rgba(0,0,0,0.2); }
+        .search-icon { position: absolute; left: 35px; top: 50%; transform: translateY(-50%); opacity: 0.5; }
+
+        .places-list { padding: 10px 20px 80px; }
+        .place-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .place-item:hover { background: var(--surface-hover); border-color: var(--accent); transform: translateX(5px); }
+        .place-icon { font-size: 1.8rem; background: rgba(255,255,255,0.05); width: 50px; height: 50px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;}
+        .place-details { flex-grow: 1; }
+        .place-name { font-weight: 800; font-size: 1.05rem; margin-bottom: 4px; }
+        .place-country { font-size: 0.75rem; color: var(--muted); display: flex; align-items: center; gap: 4px;}
+        .place-action { font-size: 1.2rem; color: var(--accent); }
+
+        /* Viewer View (Street View Player) */
+        #viewer-view {
+            z-index: 50; /* Needs to be on top of everything */
+            background: #000;
+        }
+        #sv-iframe { width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0; }
+        
+        #viewer-loader {
+            position: absolute; inset: 0; z-index: 500;
+            background: var(--bg); display: flex; flex-direction: column;
+            align-items: center; justify-content: center; gap: 16px;
+            pointer-events: none; transition: opacity 0.5s;
+        }
+        #viewer-loader.hidden { opacity: 0; }
+        .loader-ring {
+            width: 50px; height: 50px; border: 4px solid rgba(255,255,255,0.1);
+            border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;
+        }
+
+        /* Player Controls Bottom Bar */
+        #player-controls {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            padding: 15px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            display: flex; justify-content: center; z-index: 100; pointer-events: none;
+        }
+        .controls-wrapper {
+            display: flex; align-items: center; gap: 15px;
+            background: rgba(17, 24, 39, 0.85); backdrop-filter: blur(12px);
+            padding: 10px 20px; border-radius: 50px; border: 1px solid var(--border);
+            pointer-events: auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .control-btn {
+            background: rgba(255,255,255,0.1); border: none; color: #fff;
+            font-size: 1.5rem; cursor: pointer; width: 40px; height: 40px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+        }
+        .control-btn:hover { background: rgba(255,255,255,0.2); transform: scale(1.05); }
+        .location-info { display: flex; flex-direction: column; align-items: center; min-width: 140px; text-align: center; }
+        .location-name { font-weight: 800; font-size: 0.95rem; }
+        .location-country { font-size: 0.7rem; color: var(--accent); text-transform: uppercase; font-weight: 700; }
+
+        /* Adsterra Containers */
+        .pmg-side-ad { position: fixed; top: 50%; right: 0; transform: translateY(-50%); z-index: 9000; width: 160px; min-height: 600px; display: flex; align-items: center; justify-content: center; }
+        .pmg-bottom-ad { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 9001; width: 320px; height: 50px; }
+        @media (max-width: 1024px) { .pmg-side-ad { display: none !important; } }
+    </style>
+</head>
+<body>
+<div id="app">
+    <header id="header">
+        <button id="nav-back-btn" class="nav-btn" onclick="navigateBack()" title="Back">←</button>
+        <div id="header-title">
+            <h1 id="header-h1">🗺️ World Tour</h1>
+            <div id="breadcrumb">Explore the World</div>
+        </div>
+        <div id="stats-badge">Top 50 Places</div>
+    </header>
+
+    <!-- VIEW 1: Categories Home -->
+    <div id="home-view" class="view-section active">
+        <div class="hero-banner">
+            <h2>The Ultimate Virtual World Tour</h2>
+            <p>Select a category below to instantly drop into stunning 360° Street Views of the most iconic places on Earth.</p>
+        </div>
+
+        <div class="section-title">📂 Thematic Collections</div>
+        <div class="category-grid" id="themes-grid">
+            <!-- Rendered via JS -->
+        </div>
+
+        <div class="section-title">🌍 Explore By Continent</div>
+        <div class="category-grid" id="continents-grid">
+            <!-- Rendered via JS -->
+        </div>
+    </div>
+
+    <!-- VIEW 2: Places List -->
+    <div id="list-view" class="view-section hidden">
+        <div class="search-bar-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="place-search" placeholder="Search places in this category..." oninput="filterPlaces()">
+        </div>
+        <div class="places-list" id="places-container">
+            <!-- Rendered via JS -->
+        </div>
+    </div>
+
+    <!-- VIEW 3: Street View Player -->
+    <div id="viewer-view" class="view-section hidden">
+        <iframe id="sv-iframe" src="about:blank" allowfullscreen></iframe>
+        
+        <div id="viewer-loader">
+            <div class="loader-ring"></div>
+            <div id="loader-text">Loading spectacular view...</div>
+        </div>
+
+        <div id="player-controls">
+            <div class="controls-wrapper">
+                <button class="control-btn" onclick="prevLocation()" title="Previous Place">◀</button>
+                <div class="location-info">
+                    <div class="location-name" id="current-name">Eiffel Tower</div>
+                    <div class="location-country" id="current-country">France</div>
+                </div>
+                <button class="control-btn" onclick="nextLocation()" title="Next Place">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adsterra Containers -->
+    <div class="pmg-side-ad" id="adsterra-banner"></div>
+    <div class="pmg-bottom-ad" id="bottom-ad"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
