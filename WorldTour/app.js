@@ -12,8 +12,9 @@ const headerH1 = document.getElementById('header-h1');
 const breadcrumb = document.getElementById('breadcrumb');
 const searchInput = document.getElementById('place-search');
 const placesContainer = document.getElementById('places-container');
-const iframe = document.getElementById('sv-iframe');
 const loader = document.getElementById('viewer-loader');
+
+let panorama;
 
 function init() {
     renderCategories();
@@ -89,9 +90,7 @@ function filterPlaces() {
 }
 
 function buildUrl(loc) {
-    if (loc.pb) {
-        return `https://www.google.com/maps/embed?pb=${loc.pb}`;
-    }
+    // Left for legacy compatibility if ever needed
     const heading = loc.heading || 0;
     const pitch = loc.pitch || 0;
     return `https://www.google.com/maps?layer=c&cbll=${loc.lat},${loc.lng}&cbp=0,${heading},0,0,${pitch}&output=svembed`;
@@ -122,7 +121,45 @@ function loadCurrentIndex() {
     document.getElementById('current-country').textContent = place.country;
     
     loader.classList.remove('hidden');
-    iframe.src = buildUrl(place);
+    
+    if (!window.googleMapsLoaded) {
+        setTimeout(loadCurrentIndex, 500); // Retry if not loaded yet
+        return;
+    }
+
+    const svOptions = {
+        position: { lat: place.lat, lng: place.lng },
+        pov: { heading: place.heading || 0, pitch: place.pitch || 0 },
+        zoom: 1,
+        addressControl: false,
+        linksControl: true,
+        panControl: true,
+        enableCloseButton: false,
+        showRoadLabels: false,
+        source: google.maps.StreetViewSource.OUTDOOR // FORCES official street view instead of photospheres!
+    };
+    
+    // Safety fallback: if Google API fails or takes too long, hide loader so errors are visible
+    setTimeout(() => loader.classList.add('hidden'), 2500);
+
+    if (!panorama) {
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById("pano"),
+            svOptions
+        );
+        
+        panorama.addListener('status_changed', function() {
+            if (panorama.getStatus() === 'OK') {
+                setTimeout(() => loader.classList.add('hidden'), 300);
+            } else if (panorama.getStatus() === 'ZERO_RESULTS') {
+                // Fallback if outdoor isn't available
+                panorama.setOptions({ source: google.maps.StreetViewSource.DEFAULT });
+            }
+        });
+        
+    } else {
+        panorama.setOptions(svOptions);
+    }
 }
 
 function nextLocation() {
@@ -140,7 +177,6 @@ function prevLocation() {
 function navigateBack() {
     if (currentLevel === 'viewer') {
         currentLevel = 'list';
-        iframe.src = 'about:blank'; // Stop loading
         
         headerH1.textContent = `${currentCategory.icon} ${currentCategory.name}`;
         breadcrumb.textContent = `World Tour → ${currentCategory.name}`;
@@ -167,14 +203,6 @@ function navigateBack() {
         window.location.href = '../index.html';
     }
 }
-
-iframe.onload = () => {
-    if (currentLevel === 'viewer') {
-        setTimeout(() => {
-            loader.classList.add('hidden');
-        }, 300);
-    }
-};
 
 window.addEventListener('DOMContentLoaded', () => {
     init();
