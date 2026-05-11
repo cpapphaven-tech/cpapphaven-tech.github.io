@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Family Tree! - Logic Puzzles | PlayMix Games</title>
+    <meta name="description" content="Play Family Tree! - Logic Puzzles online. Boost your IQ, train your focus, and elevate your memory. Unlock the intricate branches of different families with the help of clues.">
+    <meta name="keywords" content="family tree puzzle, logic puzzles, brain games, iq test, word puzzles, genealogy game, puzzle solving, playmix games">
+    <link rel="canonical" href="https://playmixgames.in/FamilyTree/">
+    
+    <!-- Open Graph for SEO -->
+    <meta property="og:title" content="Family Tree! - Logic Puzzles | PlayMix Games">
+    <meta property="og:description" content="Play the ultimate brain puzzle game and boost your IQ! Unlock the intricate branches of different families with the help of clues.">
+    <meta property="og:url" content="https://playmixgames.in/FamilyTree/">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+</head>
+<body class="pmg-sidebar-start-open">
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <main class="game-main">
+        <div id="game-wrapper">
+            
+            <a href="../index.html" class="back-btn" style="position: absolute; top: 15px; left: 15px; z-index: 1000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">← Back</a>
+
+            <div id="ui-overlay">
+                <div id="score-board">
+                    <span class="hud-item highlight-pill blue">Level: <span id="level-display">1</span></span>
+                    <span class="hud-item highlight-pill yellow" id="reset-btn" style="cursor:pointer;" onclick="resetLevel()">Reset Level</span>
+                </div>
+            </div>
+
+            <div id="game-container">
+                <div class="level-title-container">
+                    <h2 id="level-title">Level 1</h2>
+                    <p id="level-desc">Place the founders</p>
+                </div>
+
+                <div id="tree-area">
+                    <svg id="tree-lines"></svg>
+                    <div id="tree-nodes"></div>
+                </div>
+
+                <div id="clues-area">
+                    <h3 class="section-title">Clues</h3>
+                    <ul id="clues-list"></ul>
+                </div>
+
+                <div id="bank-area">
+                    <h3 class="section-title">Characters (Tap to Select)</h3>
+                    <div id="character-bank"></div>
+                </div>
+            </div>
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="overlay">
+                <div class="overlay-box">
+                    <h2 style="color: #4ade80; font-size: 2.5rem; margin-top: 0;">Family Tree!</h2>
+                    <h3 style="color: #fff; margin-bottom: 15px;">Logic Puzzles</h3>
+                    <p style="margin-bottom: 20px; font-size: 1rem; line-height: 1.5;">
+                        Read the clues carefully. Tap a character, then tap an empty slot in the family tree to place them. Uncover the hidden histories!
+                    </p>
+                    <button id="start-btn" class="pmg-btn" onclick="startGame()">PLAY NOW</button>
+                </div>
+            </div>
+
+            <!-- Level Complete Screen -->
+            <div id="level-complete-screen" class="overlay hidden">
+                <div class="overlay-box">
+                    <h2 style="color: #fde047; font-size: 2.5rem; margin-top: 0;">Perfect!</h2>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem;">You solved the family tree!</p>
+                    <button id="next-level-btn" class="pmg-btn" onclick="nextLevel()">NEXT LEVEL</button>
+                </div>
+            </div>
+
+            <!-- Game Complete Screen -->
+            <div id="game-complete-screen" class="overlay hidden">
+                <div class="overlay-box">
+                    <h2 style="color: #c084fc; font-size: 2.5rem; margin-top: 0;">Congratulations!</h2>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem;">You unlocked all family secrets and boosted your IQ!</p>
+                    <button class="pmg-btn" onclick="location.reload()">PLAY AGAIN</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section class="game-info" style="text-align: center;">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play Family Tree!</h2>
+                <div class="info-content">
+                    <p>Put your logic and deductive reasoning to the test:</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><strong>Read the Clues:</strong> Carefully analyze the hints provided. They will tell you relationships, genders, or exact positions.</li>
+                        <li><strong>Select and Place:</strong> Tap a character portrait at the bottom to select them, then tap an empty slot in the tree to assign them.</li>
+                        <li><strong>Correct Mistakes:</strong> Tap an already placed character in the tree to return them to the bank.</li>
+                        <li><strong>Level Up:</strong> Successfully completing a tree unlocks the next, more complex family puzzle.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>About the Game</h2>
+                <div class="info-content">
+                    <p>Family Tree! Logic Puzzles is a brain-training game that challenges your critical thinking. Reconstruct the lineage of generations, piece together the word clues, and watch your IQ soar as the trees grow more intricate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="game.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+</body>
+</html>

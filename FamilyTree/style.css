@@ -1,0 +1,277 @@
+:root {
+    --bg-dark: #0f172a;
+    --panel-bg: #1e293b;
+    --accent-blue: #3b82f6;
+    --accent-green: #10b981;
+    --accent-purple: #8b5cf6;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255,255,255,0.1);
+    --node-size: 60px;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+
+#game-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+    max-height: 850px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    display: flex;
+    gap: 10px;
+}
+
+.highlight-pill {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+.highlight-pill.blue { background: #3b82f6; color: white; }
+.highlight-pill.yellow { background: #eab308; color: #000; }
+
+#game-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 15px 15px 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.level-title-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#level-title { margin: 0; font-size: 1.8rem; color: #fde047; font-weight: 800; }
+#level-desc { margin: 5px 0 0 0; color: var(--text-muted); font-size: 0.95rem; }
+
+#tree-area {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+#tree-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.tree-line {
+    stroke: #475569;
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+
+#tree-nodes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.tree-node {
+    position: absolute;
+    width: var(--node-size);
+    height: var(--node-size);
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    background: #334155;
+    border: 2px dashed #64748b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.tree-node.filled {
+    border-style: solid;
+    border-color: #94a3b8;
+}
+
+.character-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    user-select: none;
+}
+.char-name-label {
+    position: absolute;
+    bottom: -20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    white-space: nowrap;
+    background: rgba(0,0,0,0.6);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    margin: 0 0 10px 0;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#clues-area {
+    background: var(--panel-bg);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+}
+#clues-list {
+    margin: 0;
+    padding: 0;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    list-style: none;
+}
+#clues-list li {
+    margin-bottom: 8px;
+}
+
+#bank-area {
+    background: var(--panel-bg);
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+#character-bank {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.bank-char-wrapper {
+    position: relative;
+    width: var(--node-size);
+    height: var(--node-size);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.bank-char-wrapper:hover {
+    transform: translateY(-2px);
+}
+.bank-char-wrapper.selected {
+    outline: 3px solid #fde047;
+    outline-offset: 2px;
+    box-shadow: 0 0 15px rgba(253, 224, 71, 0.5);
+    transform: scale(1.05);
+}
+.bank-char-wrapper.used {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+.overlay.hidden {
+    display: none;
+}
+.overlay-box {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 90%;
+    width: 400px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.pmg-btn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: inherit;
+}
+.pmg-btn:hover {
+    transform: scale(1.05);
+}
+
+@media(max-width: 600px) {
+    :root {
+        --node-size: 50px;
+    }
+    #game-container { padding-top: 50px; }
+    .highlight-pill { padding: 6px 12px; font-size: 0.8rem; }
+    #level-title { font-size: 1.5rem; }
+    #tree-area { height: 260px; }
+    .char-name-label { font-size: 0.65rem; bottom: -16px; }
+}
+
+@media (min-width: 601px) {
+    /* Fix double-translation and overflow when sidebar is open */
+    body.pmg-sidebar-open #game-wrapper {
+        transform: none !important;
+        margin-left: 280px !important;
+        width: calc(100% - 280px) !important;
+    }
+    body.pmg-sidebar-open #game-container {
+        transform: none !important;
+    }
+    body.pmg-sidebar-open .back-btn {
+        left: 15px !important;
+    }
+}
