@@ -54,9 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calculateSizes() {
-        const padding = 10;
-        const maxBoardWidth = Math.min(window.innerWidth - 40, 500 - 40); // 40 is max-width minus padding
-        boardSize = maxBoardWidth;
+        // Calculate max width accounting for window width and height 
+        // Leaves ~250px for the header, controls, and bottom ad
+        const maxBoardSize = Math.min(
+            window.innerWidth - 40, 
+            500 - 40, 
+            window.innerHeight - 260
+        );
+        
+        boardSize = Math.max(maxBoardSize, 200); // minimum 200px
         tileSize = boardSize / size;
         
         boardEl.style.width = `${boardSize}px`;
