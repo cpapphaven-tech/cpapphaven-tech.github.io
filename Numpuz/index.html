@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Numpuz: Number Puzzle Games | PlayMixGames</title>
+    <meta name="description" content="Numpuz is a classic logic puzzle game. Tap and move the wood number blocks, challenge your brainpower, have fun and enjoy number games!">
+    
+    <meta name="keywords" content="numpuz, number puzzle games, classic puzzle, sliding puzzle, logic game, brain training">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/Numpuz/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/Numpuz/index.html" />
+    <meta property="og:title" content="Numpuz: Number Puzzle Games Free Online">
+    <meta property="og:description" content="Play Numpuz online for free. Slide numbered blocks into order in this classic brain teaser puzzle game.">
+    <meta property="og:url" content="https://playmixgames.in/Numpuz/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/Numpuz/index.html" />
+    
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #2b1d14;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #2b1d14;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #d2a679;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(210, 166, 121, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(210, 166, 121, 0.1);
+            border-top-color: #d2a679;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #d2a679, #e6c299);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pmgPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.98); }
+        }
+
+        @keyframes pmgFill {
+            0% { width: 0%; }
+            100% { width: 95%; }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        /* SEO Game Info Section Styling */
+        #game-info {
+            background: #1a110a;
+            padding: 40px 20px;
+            text-align: left;
+            color: #c9b09a;
+        }
+
+        #game-info h2 {
+            font-size: 2rem;
+            color: #d2a679;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #game-info h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+
+        #game-info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #game-info ul {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            line-height: 1.8;
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        #game-info li {
+            margin-bottom: 8px;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Numpuz: Number Puzzle Games",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Play Numpuz online for free. Slide numbered blocks into order in this classic brain teaser puzzle game."
+    }
+    </script>
+    <script defer src="../sidebar.js"></script>
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Numpuz...</p>
+    </div>
+    
+    <main>
+        <iframe id="game-frame" src="game.html" title="Numpuz Logic Puzzle" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <section id="game-info">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2>🧩 About Numpuz: Number Puzzle Games</h2>
+            <p><strong>Numpuz</strong> is one of the most beloved classic puzzle brain games. Tap and move the wood number blocks, enjoy the magic of logic puzzles, coordinate your eyes, hands and brain. Challenge your logic and brainpower, have fun and enjoy number games!</p>
+
+            <h3>🎮 How to Play Numpuz?</h3>
+            <p>Numpuz puzzle brain games consist of a frame of number blocks in random order, with one tile missing. The object of the logic puzzles are to place the number blocks in order by making sliding moves that use the empty space. Endless challenge of puzzle brain games that will test your logical thinking and iq limits.</p>
+
+            <h3>✨ Features</h3>
+            <ul>
+                <li><strong>6 difficulties</strong> of logic puzzles (3x3 to 8x8 modes) to choose from</li>
+                <li><strong>Wooden retro style</strong> of user interface in number games</li>
+                <li><strong>Simple to control</strong>, hard to master logic puzzles</li>
+                <li><strong>Timer function</strong>: record your playtime</li>
+                <li><strong>Realistic animation</strong> and tiles sliding</li>
+                <li><strong>No wifi needed</strong>, play anytime anywhere</li>
+            </ul>
+
+            <h3>❓ 6 Different Sizes</h3>
+            <ul>
+                <li><strong>3 х 3 (8 tiles)</strong> – for number puzzle beginners.</li>
+                <li><strong>4 х 4 (15 tiles)</strong> – classical slide puzzle mode.</li>
+                <li><strong>5 х 5 (24 tiles)</strong> – for those who like to think.</li>
+                <li><strong>6 х 6 (35 tiles)</strong> – complex mode for veterans.</li>
+                <li><strong>7 х 7 (48 tiles)</strong> – difficult level to challenge.</li>
+                <li><strong>8 х 8 (63 tiles)</strong> – design for master players.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>
