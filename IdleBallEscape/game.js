@@ -25,6 +25,8 @@ let ball = {
     r: 6
 };
 
+let lastTapTime = 0;
+
 let rings = [];
 let particles = [];
 let floatingTexts = [];
@@ -35,11 +37,23 @@ const jumpPower = 8;
 
 function initLevel() {
     rings = [];
-    let numRings = 3 + level; // Add more layers
+    // Start easy, gradually increase layers
+    let numRings = Math.min(12, 1 + Math.ceil(level * 0.6)); 
+    
+    // Dynamic ring spacing to fit ANY mobile screen size perfectly
+    let maxAllowedRadius = (Math.min(width, height) / 2) - 20; 
+    let innerRadius = 50;
+    let availableSpace = maxAllowedRadius - innerRadius;
+    let ringGap = numRings > 1 ? availableSpace / (numRings - 1) : 40;
+    if (ringGap > 45) ringGap = 45; 
+    let ringThickness = Math.max(8, Math.min(15, ringGap * 0.6));
+
     for(let i=0; i<numRings; i++) {
-        // Space them out slightly to be compact on mobile screens
-        let radius = 60 + i * 35;
-        let numSegments = 3 + i * 2;
+        let radius = innerRadius + i * ringGap;
+        // Make fewer segments in early levels to be easier
+        let numSegments = 2 + Math.floor(level * 0.5) + i; 
+        if (numSegments < 3) numSegments = 3;
+        
         let segments = [];
         let baseHue = (level * 40 + i * 20) % 360;
         for(let s=0; s<numSegments; s++) {
@@ -50,10 +64,11 @@ function initLevel() {
         }
         rings.push({
             radius: radius,
-            thickness: 15,
+            thickness: ringThickness,
             segments: segments,
             rotation: Math.random() * Math.PI,
-            rotationSpeed: (i % 2 === 0 ? 1 : -1) * (0.005 + Math.random()*0.005 + level*0.001)
+            // Slower rotation in early levels
+            rotationSpeed: (i % 2 === 0 ? 1 : -1) * (0.003 + Math.random()*0.003 + (level*0.0005))
         });
     }
     
@@ -62,8 +77,8 @@ function initLevel() {
     ball.vx = 0;
     ball.vy = 0;
     
-    // Allow 10 taps in first level, increase slightly in later levels
-    maxTaps = 9 + level; 
+    // Generous taps for early levels, scaling up
+    maxTaps = 12 + Math.floor(level * 1.5) + (numRings * 2); 
     tapsLeft = maxTaps; 
     
     gameState = 'playing';
@@ -104,15 +119,26 @@ function tap() {
     tapsLeft--;
     updateUI();
     
-    createFloatingText(ball.x, ball.y - 15, "-1 TAP", "#ef4444");
+    let now = Date.now();
+    let isDoubleTap = (now - lastTapTime < 350);
+    lastTapTime = now;
+    
+    if (isDoubleTap) {
+        createFloatingText(ball.x, ball.y - 20, "DOUBLE TAP!", "#facc15");
+        createParticles(ball.x, ball.y, '#facc15', 5);
+    } else {
+        createFloatingText(ball.x, ball.y - 15, "-1 TAP", "#ef4444");
+    }
     
     let dx = ball.x - cx;
     let dy = ball.y - cy;
     let dist = Math.hypot(dx, dy) || 1;
     let outX = dx / dist;
     let outY = dy / dist;
-    ball.vx += outX * jumpPower * 0.4;
-    ball.vy += outY * jumpPower * 0.4;
+    
+    let multiplier = isDoubleTap ? 1.6 : 1.0;
+    ball.vx += outX * jumpPower * 0.4 * multiplier;
+    ball.vy += outY * jumpPower * 0.4 * multiplier;
     createParticles(ball.x, ball.y, '#fff', 2);
 }
 
