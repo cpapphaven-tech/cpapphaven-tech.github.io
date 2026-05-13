@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Idle Ball Escape: Smash Rings | Play Online | PlayMixGames</title>
+    <meta name="description" content="Idle Ball Escape is a relaxing casual game. Guide a bouncing ball inside a rotating ring maze. Tap to jump, use gentle gravity, and break each ring!">
+    
+    <meta name="keywords" content="idle ball escape, smash rings, idle breakout, soft clicker, simple fun, bouncing ball, casual game, relaxing games">
+    
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="pmg-sidebar-start-open">
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Preparing the Rings...</p>
+    </div>
+
+    <a href="../index.html" class="back-btn">← Back</a>
+
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="ui-layer">
+            <div id="hud-top">
+                <div class="hud-level">LEVEL <span id="level-display">1</span></div>
+                <div class="hud-taps-center">Remaining Taps: <span id="taps-display">10</span></div>
+                <div class="hud-instruction">Tap anywhere to escape!</div>
+            </div>
+
+            <div id="start-screen" class="screen">
+                <div class="game-title">
+                    <span class="title-primary">BALL</span><br>
+                    <span class="title-secondary">ESCAPE</span>
+                </div>
+                <div class="subtitle" style="line-height: 1.6;">
+                    Make the ball escape the rings.<br>
+                    Tap to jump and smash the walls!
+                </div>
+                <button class="pmg-btn" id="start-btn">TAP TO PLAY</button>
+            </div>
+            
+            <div id="level-screen" class="screen hidden" style="background: rgba(11,15,25,0.7); backdrop-filter: blur(5px);">
+                <div class="game-title">
+                    <span class="title-primary">LEVEL CLEARED</span>
+                </div>
+                <div class="subtitle">NEXT MAZE READY</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Information Section -->
+    <section class="game-info" style="position: relative; z-index: 1; background: #0b0f19; padding-top: 50px;">
+        <div class="info-container" style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #4ade80; margin-bottom: 20px; font-family: 'Outfit', sans-serif; font-size: 1.5rem;">Relaxing Ball Escape</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <p>Ball Escape is a relaxing and easy-to-play casual game designed for simple fun anytime. If you enjoy smooth ball games and calming progression, this puzzle game is perfect for quick sessions and stress-free entertainment.</p>
+                </div>
+            </div>
+
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #4ade80; margin-bottom: 20px; font-family: 'Outfit', sans-serif; font-size: 1.5rem;">Satisfying Ring Smashing</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <p>In this smooth and minimalist ball game, you guide a small bouncing ball inside a rotating ring maze. Just tap to jump, use gentle gravity, and break each ring to complete your satisfying ball escape 🌀 The controls are simple and intuitive — anyone can instantly control ball movement. Every jumping ball impact feels smooth and realistic.</p>
+                </div>
+            </div>
+
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #4ade80; margin-bottom: 20px; font-family: 'Outfit', sans-serif; font-size: 1.5rem;">Limited Taps Puzzle</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <p>Think carefully! You have a limited number of taps to break the rings and escape. Aim your jumps strategically to shatter multiple rings in a single launch. It’s simple, rewarding, and designed for comfortable casual gameplay.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</body>
+</html>
