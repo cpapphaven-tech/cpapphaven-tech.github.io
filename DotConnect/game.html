@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dot Connect Puzzle | Addictive Brain Game | PlayMixGames</title>
+    <meta name="description" content="Connect lines of dots, relax with fun puzzles, and match the colors in this addictive logic puzzle game inspired by Two Dots.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="dot connect, connect dots, two dots game, puzzle game, カラーマッチ, 点をつなぐ, 脳トレ, coincidencia de color, conectar puntos, correspondance des couleurs">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ドットコネクト - 点をつなぐパズル">
+    <meta name="twitter:description:ja" content="点をつなぎ、色を合わせる楽しいパズルでリラックスしましょう。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Dot Connect - Conectar Puntos">
+    <meta name="twitter:description:es" content="Conecta líneas de puntos, relájate con rompecabezas divertidos y combina los colores.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Dot Connect - Reliez les Points">
+    <meta name="twitter:description:fr" content="Reliez les lignes de points et associez les couleurs dans ce jeu amusant.">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/DotConnect/game.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/DotConnect/game.html" />
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    
+    <link rel="manifest" href="manifest.json">
+    <script defer src="../sidebar.js"></script>
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+    </script>
+
+    <meta property="og:title" content="Dot Connect Game Online Free - Connect the Dots | PlayMix Games">
+    <meta property="og:description"
+        content="Play the popular Dot Connect dots game online for free. Connect and merge same color dots to reach the target score. No download required.">
+    <meta property="og:url" content="https://playmixgames.in/DotConnect/game.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/DotConnect/game.html" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Dot Connect",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Play the popular Dot Connect dots game online for free. Connect and merge same color dots to reach the target score. No download required."
+    }
+    </script>
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Dot Connect...</p>
+    </div>
+
+    <main class="game-container">
+        <h1 style="display: none;">Dot Connect Dots Game</h1>
+        <div id="game-ui">
+
+            <div id="merge-demo" class="merge-demo hidden">
+                <div class="demo-box">
+                    <div class="demo-tiles">
+                        <div class="tile"></div>
+                        <div class="arrow">→</div>
+                        <div class="tile"></div>
+                        <div class="arrow">→</div>
+                        <div class="tile result"></div>
+                    </div>
+                    <p>Connect same colored dots!</p>
+                </div>
+            </div>
+
+            <!-- HUD: Level | Timer | Score/Target -->
+            <div id="hud">
+                <div class="hud-cell">
+                    <div id="level-num" class="hud-big">1</div>
+                    <div class="hud-label">LEVEL</div>
+                </div>
+                <div class="hud-cell hud-timer-wrap">
+                    <div id="timer-num" class="hud-big timer-ok">60</div>
+                    <div class="hud-label">SECS</div>
+                    <div id="timer-bar-bg">
+                        <div id="timer-bar"></div>
+                    </div>
+                </div>
+                <div class="hud-cell">
+                    <div id="score-display" class="hud-big">0</div>
+                    <div id="target-label" class="hud-label">TARGET: 150</div>
+                    <div id="score-bar-bg">
+                        <div id="score-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level Complete Overlay -->
+            <div id="level-complete" class="overlay hidden">
+                <div class="overlay-inner lc-inner">
+                    <div class="lc-stars">⭐⭐⭐</div>
+                    <h2 id="lc-title">LEVEL 1<br>COMPLETE!</h2>
+                    <div id="lc-score" class="lc-score-line">Score: 150</div>
+                    <div id="lc-next" class="lc-next-badge">LEVEL 2 →</div>
+                </div>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div id="game-over" class="overlay hidden">
+                <div class="overlay-inner">
+                    <h2 id="result-title">TIME'S UP!</h2>
+                    <div id="result-level" class="go-lvl">Reached Level <span id="go-level-num">1</span></div>
+                    <div class="go-score-wrap">
+                        <div id="result-score" class="go-score">0</div>
+                        <div id="result-best" class="go-best">BEST: 0</div>
+                    </div>
+                    <button id="restart-btn" class="primary-btn">🔄 Play Again</button>
+                    <button id="bonus-btn" class="bonus-btn">🎁 Watch Ad &amp; +30 Secs</button>
+                    <div id="game-over-scroller"></div>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <section class="game-description">
+            <h2>About Dot Connect</h2>
+            <p>Play free online Dot Connect game. Connect lines of Dots, relax with fun puzzles, and test your brain in this captivating game about making connections! Connect dots of the same color vertically or horizontally to eliminate them and score points.</p>
+            <p>Find your flow and connect the colors across unlimited brain-teasing adventures. Every level brings a higher target score, but you only have 60 seconds!</p>
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Connect:</strong> Touch &amp; drag through adjacent same-colored dots (up, down, left, right).</li>
+                <li><strong>Match:</strong> Connect at least 2 dots to eliminate them.</li>
+                <li><strong>Make a Square:</strong> Connect dots into a closed loop to eliminate ALL dots of that color from the board!</li>
+                <li><strong>Level Up:</strong> Hit the target score before 60 seconds run out.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links"><a href="../index.html">Home</a><a href="../privacy.html">Privacy Policy</a></div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text"><span class="cookie-icon">🍪</span><span>We use cookies &amp; tracking for ads. <a
+                        href="../privacy.html" target="_blank" style="color:#f59e0b;text-decoration:underline;">Learn
+                        more</a></span></div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () { var l = document.getElementById('pmg-loader'); if (l) { var f = l.querySelector('.pmg-bar-fill'); if (f) f.style.width = '100%'; setTimeout(function () { l.classList.add('hidden'); }, 400); } });
+    </script>
+</body>
+
+</html>
