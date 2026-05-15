@@ -243,7 +243,8 @@ function showExplanation(msg){
   document.querySelectorAll('.explanation-box').forEach(e=>e.remove());
   const b=document.createElement('div');
   b.className='explanation-box'; b.textContent=msg;
-  document.body.appendChild(b);
+  const target = document.getElementById('main-area') || document.body;
+  target.appendChild(b);
   setTimeout(()=>b.remove(),3000);
 }
 
