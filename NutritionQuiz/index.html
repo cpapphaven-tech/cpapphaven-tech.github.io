@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            fetch(endpoint, { method:"POST", headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey}, body:JSON.stringify({ timestamp: new Date().toISOString(), url: location.href, referrer: document.referrer, userAgent: navigator.userAgent, loadStage:"pre-init" }), keepalive:true });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nutrition Quiz – Guess Food Macros | Free Health Knowledge Game | PlayMix Games</title>
+    <meta name="description" content="Test your nutrition knowledge! Guess the correct calories, carbs, protein and fat for fruits, vegetables, grains and more. A fun free health quiz game for all ages.">
+    <meta name="keywords" content="nutrition quiz, food macros quiz, calorie quiz, health quiz game, nutrition knowledge test, food nutrition facts, healthy eating game">
+    <link rel="canonical" href="https://playmixgames.in/NutritionQuiz/index.html">
+    <meta property="og:title" content="Nutrition Quiz – Guess Food Macros | PlayMix Games">
+    <meta property="og:description" content="How well do you know your food nutrition? Guess calories, carbs, protein & fat for 30+ foods in this addictive free quiz game!">
+    <meta property="og:url" content="https://playmixgames.in/NutritionQuiz/index.html">
+    <meta property="og:type" content="website">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/NutritionQuiz/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/NutritionQuiz/index.html">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Nutrition Quiz – Guess Food Macros",
+      "applicationCategory": "EducationalGame",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "A free educational quiz where you guess the macronutrient values of common foods. Learn nutrition while having fun!",
+      "url": "https://playmixgames.in/NutritionQuiz/index.html"
+    }
+    </script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+        *, *::before, *::after { box-sizing:border-box; }
+        body, html { margin:0; padding:0; width:100%; min-height:100vh; overflow-x:hidden; background:#030d06; font-family:'Outfit',sans-serif; color:#fff; }
+        #pmg-loader { position:fixed; inset:0; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#030d06; transition:opacity 0.5s; }
+        #pmg-loader.hidden { opacity:0; pointer-events:none; }
+        .pmg-brand { font-size:1.5rem; font-weight:900; color:#4ade80; letter-spacing:2px; text-transform:uppercase; margin-bottom:28px; text-shadow:0 0 20px rgba(74,222,128,0.5); animation:pulse 2s infinite; }
+        .pmg-spinner { width:50px; height:50px; border:4px solid rgba(74,222,128,0.15); border-top-color:#4ade80; border-radius:50%; animation:spin 0.8s linear infinite; margin-bottom:18px; }
+        .pmg-bar-track { width:200px; height:4px; background:rgba(255,255,255,0.05); border-radius:10px; overflow:hidden; }
+        .pmg-bar-fill { height:100%; width:0%; background:linear-gradient(90deg,#4ade80,#34d399); animation:fill 5s ease forwards; }
+        .pmg-tip { font-size:0.8rem; color:rgba(255,255,255,0.3); margin-top:14px; }
+        @keyframes spin  { to{transform:rotate(360deg);} }
+        @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+        @keyframes fill  { 0%{width:0%} 100%{width:92%} }
+        #game-frame { width:100%; height:100vh; border:none; display:block; opacity:0; transition:opacity 0.5s; }
+        #game-frame.visible { opacity:1; }
+        .seo-section { background:#020a04; padding:60px 20px; border-top:1px solid rgba(74,222,128,0.15); }
+        .seo-inner { max-width:860px; margin:0 auto; display:grid; gap:40px; }
+        .seo-card { background:rgba(255,255,255,0.03); border:1px solid rgba(74,222,128,0.12); border-radius:16px; padding:30px; }
+        .seo-card h2 { color:#4ade80; font-size:1.4rem; margin:0 0 16px; border-left:4px solid #4ade80; padding-left:14px; }
+        .seo-card p, .seo-card li { color:#a0a0c0; line-height:1.7; margin-bottom:10px; }
+        .seo-card ul { padding-left:20px; }
+        .faq-q { color:#e2e8f0; font-weight:700; margin:16px 0 6px; }
+        .faq-a { color:#a0a0c0; line-height:1.6; margin-bottom:18px; }
+        .topic-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:10px; margin-top:12px; }
+        .topic-tag { background:rgba(74,222,128,0.1); border:1px solid rgba(74,222,128,0.2); border-radius:8px; padding:8px 12px; font-size:0.85rem; color:#86efac; text-align:center; font-weight:700; }
+    </style>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading nutrition questions...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="Nutrition Quiz – Guess Food Macros" allow="autoplay;"></iframe>
+    </main>
+
+    <section class="seo-section" aria-label="About Nutrition Quiz">
+        <div class="seo-inner">
+
+            <div class="seo-card">
+                <h1 style="font-size:1.6rem;margin:0 0 16px;color:#4ade80;">Nutrition Quiz – Test Your Food Knowledge Free Online</h1>
+                <p>Welcome to <strong>Nutrition Quiz</strong> — the most fun way to learn about food macronutrients! For each food item shown, choose the closest correct values for <strong>carbohydrates, protein, fat and calories</strong>. With 30+ questions across fruits, vegetables, grains and proteins, every session teaches you something new about healthy eating.</p>
+                <p>Whether you're a fitness enthusiast, a student, or simply curious about what's in your food, this game makes nutrition facts stick in a way textbooks never could!</p>
+                <div class="topic-grid">
+                    <div class="topic-tag">🍎 Fruits</div>
+                    <div class="topic-tag">🥦 Vegetables</div>
+                    <div class="topic-tag">🌾 Grains</div>
+                    <div class="topic-tag">🥩 Proteins</div>
+                    <div class="topic-tag">🍗 Chicken</div>
+                    <div class="topic-tag">🥚 Eggs & Dairy</div>
+                    <div class="topic-tag">🫘 Legumes</div>
+                    <div class="topic-tag">🌰 Nuts & Seeds</div>
+                </div>
+            </div>
+
+            <div class="seo-card">
+                <h2>How to Play</h2>
+                <ul>
+                    <li><strong>Read the food item</strong> displayed (e.g., "Banana 100g").</li>
+                    <li><strong>Choose the closest macros</strong> from 4 options (Carbs · Protein · Fat · Calories).</li>
+                    <li><strong>Timer:</strong> You have 30 seconds per question — think fast!</li>
+                    <li><strong>Green = Correct</strong> — earn points and advance.</li>
+                    <li><strong>Red = Wrong</strong> — the game ends, but you can retry!</li>
+                    <li><strong>Level Up</strong> every 8 correct answers for bigger point multipliers.</li>
+                    <li><strong>Use Lifelines:</strong> ✂️ 50:50, ⏭️ Skip, or ⚡ Double Points!</li>
+                </ul>
+            </div>
+
+            <div class="seo-card">
+                <h2>Frequently Asked Questions</h2>
+                <p class="faq-q">Are the nutrition values accurate?</p>
+                <p class="faq-a">Yes! All values are based on standard nutritional databases (USDA/NIN) per 100g serving. The quiz uses approximate rounded values to make them recognisable and educational.</p>
+                <p class="faq-q">Is this game free?</p>
+                <p class="faq-a">100% free — no login, no download, no subscription. Just open and play!</p>
+                <p class="faq-q">Who is this quiz for?</p>
+                <p class="faq-a">Anyone! Great for fitness enthusiasts, dieters, students studying nutrition, parents teaching kids about healthy eating, and anyone who wants to make smarter food choices.</p>
+                <p class="faq-q">Does it work on mobile?</p>
+                <p class="faq-a">Yes, fully optimised for mobile phones and tablets with touch-friendly controls.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame  = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+            frame.onload = function () { frame.classList.add('visible'); loader.classList.add('hidden'); };
+            document.addEventListener("DOMContentLoaded", function () { if (typeof prepSystem === "function") prepSystem(); });
+        })();
+    </script>
+</body>
+</html>

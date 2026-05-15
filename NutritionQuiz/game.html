@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Nutrition Quiz</title>
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+    </div>
+
+    <div id="toast"></div>
+
+    <div id="game-wrapper">
+
+        <!-- Header -->
+        <div class="game-header">
+            <a href="../index.html" class="back-btn">← Back</a>
+            <div class="header-center">
+                <div class="header-title">🥗 Nutrition Quiz</div>
+                <div class="header-sub" id="level-display">Level 1 · Q1</div>
+            </div>
+            <div class="score-badge">
+                <div class="score-label">Score</div>
+                <div class="score-val" id="score-val">0</div>
+            </div>
+        </div>
+
+        <!-- Main Area -->
+        <div id="main-area">
+
+            <!-- Food emoji + timer row -->
+            <div style="display:flex;align-items:center;justify-content:space-between;width:100%;flex-shrink:0;">
+                <div>
+                    <div class="topic-badge" id="topic-badge">Fruits 🍓</div>
+                    <div id="food-display" style="font-size:3.5rem;margin-top:6px;">🍎</div>
+                </div>
+                <div class="timer-container">
+                    <svg class="timer-ring" viewBox="0 0 100 100">
+                        <circle class="timer-bg" cx="50" cy="50" r="44"/>
+                        <circle class="timer-arc" id="timer-arc" cx="50" cy="50" r="44"/>
+                    </svg>
+                    <div class="timer-text" id="timer-text">30</div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="question-card" id="question-card">
+                <div class="question-number" id="q-number">LEVEL 1 · Q1</div>
+                <div class="question-text" id="question-text">Loading...</div>
+                <div class="nutrition-hint">Choose the closest correct macronutrient values</div>
+            </div>
+
+            <!-- Options -->
+            <div class="options-grid" id="options-grid">
+                <button class="option-btn" id="opt-A"><span class="opt-label">A</span><span class="opt-text" id="opt-A-text"></span></button>
+                <button class="option-btn" id="opt-B"><span class="opt-label">B</span><span class="opt-text" id="opt-B-text"></span></button>
+                <button class="option-btn" id="opt-C"><span class="opt-label">C</span><span class="opt-text" id="opt-C-text"></span></button>
+                <button class="option-btn" id="opt-D"><span class="opt-label">D</span><span class="opt-text" id="opt-D-text"></span></button>
+            </div>
+
+            <!-- Lifelines -->
+            <div class="lifelines">
+                <button class="lifeline-btn" id="ll-5050">✂️<span>50:50</span></button>
+                <button class="lifeline-btn" id="ll-skip">⏭️<span>Skip</span></button>
+                <button class="lifeline-btn" id="ll-double">⚡<span>2×pts</span></button>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="full-screen-overlay">
+            <div class="overlay-box">
+                <div class="overlay-icon">🥗</div>
+                <h1 class="overlay-title">Nutrition Quiz</h1>
+                <p class="overlay-sub">Test your nutrition knowledge! Guess the correct macronutrients (carbs, protein, fat & calories) for fruits, vegetables, grains & proteins. Learn while you play!</p>
+                <div class="prize-preview">📈 Points per correct answer: <strong>+100 × Level</strong></div>
+                <button class="pmg-btn pmg-btn-primary" id="start-btn">🥦 Start Quiz!</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="full-screen-overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon" id="go-icon">🥗</div>
+                <h1 class="overlay-title" id="go-title">Quiz Over!</h1>
+                <div class="prize-won" id="prize-won">Score: 0</div>
+                <p class="overlay-sub" id="go-sub"></p>
+                <div class="final-stats">
+                    <div class="fstat"><div class="fstat-val" id="fstat-qs">0</div><div class="fstat-lbl">Answered</div></div>
+                    <div class="fstat"><div class="fstat-val" id="fstat-acc">0%</div><div class="fstat-lbl">Accuracy</div></div>
+                    <div class="fstat"><div class="fstat-val" id="fstat-best">0</div><div class="fstat-lbl">Best Score</div></div>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="retry-btn">🔄 Try Again</button>
+                <a href="../index.html" class="pmg-btn pmg-btn-outline" style="margin-top:10px;">🏠 More Games</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', () => { const l = document.getElementById('pmg-loader'); if(l) l.classList.add('hidden'); });
+        document.addEventListener('DOMContentLoaded', () => { if(typeof prepSystem==='function') prepSystem(); });
+    </script>
+</body>
+</html>
