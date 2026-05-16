@@ -306,29 +306,70 @@ document.getElementById("next-level-btn").addEventListener("click", () => {
     startLevel();
 });
 
-document.getElementById("hint-btn").addEventListener("click", () => {
-    if (targetWordIndex >= currentWords.length) return;
-    
-    const target = currentWords[targetWordIndex];
-    
-    // Find the word in the grid to give a hint
+function findWordInGrid(target) {
+    const dirs = [ [0, 1], [1, 0], [1, 1], [-1, 1], [0, -1], [-1, 0], [-1, -1], [1, -1] ];
     for (let r = 0; r < GRID_SIZE; r++) {
         for (let c = 0; c < GRID_SIZE; c++) {
             if (grid[r][c] === target[0]) {
-                const element = document.querySelector(`.cell[data-row="${r}"][data-col="${c}"]`);
-                if (element && !element.classList.contains("found")) {
-                    element.style.animation = "pulse 1s";
-                    setTimeout(() => element.style.animation = "", 1000);
-                    // Minimal hint: just pulse the first letter
-                    // Add point penalty
-                    score = Math.max(0, score - 5);
-                    updateScore();
-                    return;
+                for(let dir of dirs) {
+                    let match = true;
+                    let currR = r, currC = c;
+                    for (let i = 1; i < target.length; i++) {
+                        currR += dir[0];
+                        currC += dir[1];
+                        if (currR < 0 || currR >= GRID_SIZE || currC < 0 || currC >= GRID_SIZE || grid[currR][currC] !== target[i]) {
+                            match = false;
+                            break;
+                        }
+                    }
+                    if (match) return {r, c};
                 }
             }
         }
     }
+    return null;
+}
+
+document.getElementById("hint-btn").addEventListener("click", () => {
+    if (targetWordIndex >= currentWords.length) return;
+    
+    const target = currentWords[targetWordIndex];
+    const targetRev = target.split('').reverse().join('');
+    
+    // Find the actual word in the grid to give a hint
+    const loc = findWordInGrid(target) || findWordInGrid(targetRev);
+    
+    if (loc) {
+        const element = document.querySelector(`.cell[data-row="${loc.r}"][data-col="${loc.c}"]`);
+        if (element && !element.classList.contains("found")) {
+            // Flash the starting letter
+            const origBg = element.style.backgroundColor;
+            const origTransform = element.style.transform;
+            element.style.backgroundColor = "#ef4444"; // Highlight red
+            element.style.transform = "scale(1.2)";
+            
+            setTimeout(() => {
+                element.style.backgroundColor = origBg;
+                element.style.transform = origTransform;
+            }, 1000);
+            
+            // Add point penalty
+            score = Math.max(0, score - 5);
+            updateScore();
+        }
+    }
 });
+
+function showTutorial() {
+    const tutorialDemo = document.getElementById("tutorial-demo");
+    if (tutorialDemo) {
+        tutorialDemo.classList.remove("hidden");
+        setTimeout(() => {
+            tutorialDemo.classList.add("hidden");
+        }, 3000);
+    }
+}
 
 // Initialize
 initGame();
+showTutorial();

@@ -14,8 +14,10 @@
     <script src="../ads.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            if(typeof loadSocialBarAd === 'function') loadSocialBarAd();
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
         });
     </script>
 </head>
@@ -42,11 +44,25 @@
 
     <!-- Game Container -->
     <div id="game-container">
+        <!-- Tutorial Demo -->
+        <div id="tutorial-demo" class="tutorial-demo hidden">
+            <div class="demo-box">
+                <div class="demo-tiles">
+                    <div class="tile">F</div>
+                    <div class="tile">I</div>
+                    <div class="tile">N</div>
+                    <div class="tile">D</div>
+                </div>
+                <p>Drag letters to find words</p>
+            </div>
+        </div>
+
         <!-- Target Word Display -->
         <div id="target-display">
             <div id="target-label">Find this word</div>
             <div id="target-word">START</div>
         </div>
+
 
         <!-- The Grid -->
         <div id="word-grid-container">
