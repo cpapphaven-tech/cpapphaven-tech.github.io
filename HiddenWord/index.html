@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Hidden Word Finder | PlayMixGames</title>
+    <meta name="description"
+        content="Find the hidden word specified in the header from the grid of letters! A fun and challenging word search game.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="hidden word, spell word, word search, vocabulary puzzle, brain game">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/HiddenWord/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/HiddenWord/index.html" />
+    <style>
+        /* CRITICAL: Minimal Shell Styles for Instant Render */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #4facfe;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(79, 172, 254, 0.1);
+            border-top-color: #4facfe;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pmgPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes pmgFill {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 95%;
+            }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+    </style>
+    <script defer src="../sidebar.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <meta property="og:title" content="Hidden Word Finder - Play Word Puzzle Games | PlayMix Games">
+    <meta property="og:description" content="Find the hidden word specified in the header from the grid. Improve your spelling and vocabulary!">
+    <meta property="og:url" content="https://playmixgames.in/HiddenWord/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/HiddenWord/index.html" />
+</head>
+
+<body>
+    <!-- Persistent Fast-Loading Shell -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+
+    <!-- The actual game is requested in background -->
+    <main>
+        <iframe id="game-frame" title="Hidden Word Game" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <section class="seo-content"
+        style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #4facfe;">Features of Hidden Word Finder</h2>
+        <ul style="padding-left: 20px;">
+            <li>Dynamic word finding mechanics</li>
+            <li>Train your brain and improve vocabulary</li>
+            <li>Works perfectly on mobile and desktop</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Why Play on PlayMix Games?</h2>
+        <ul style="padding-left: 20px;">
+            <li>Zero cost, 100% free puzzles</li>
+            <li>No installation or download required</li>
+            <li>Smooth performance in any browser</li>
+            <li>Modern, clean game design</li>
+        </ul>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const startTime = Date.now();
+
+            frame.onload = function () {
+                const loadTime = Date.now() - startTime;
+                const delay = Math.max(1000 - loadTime, 200);
+
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>
