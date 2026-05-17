@@ -87,28 +87,31 @@ body.as-body {
 .as-header-search {
     flex: 1;
     position: relative;
-    max-width: 400px;
+    min-width: 0; /* allow flex shrink */
 }
 
 .as-header-search input {
     width: 100%;
-    background: var(--as-bg3);
-    border: none;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 10px;
-    padding: 8px 12px 8px 34px;
-    color: var(--as-text);
+    padding: 9px 12px 9px 34px;
+    color: #ffffff;
     font-size: 0.9rem;
     font-family: var(--as-font);
     outline: none;
-    transition: background 0.2s;
+    transition: background 0.2s, border-color 0.2s;
+    -webkit-text-fill-color: #ffffff;
 }
 
 .as-header-search input::placeholder {
-    color: var(--as-text3);
+    color: rgba(255,255,255,0.55);
+    opacity: 1;
 }
 
 .as-header-search input:focus {
-    background: rgba(255,255,255,0.12);
+    background: rgba(255,255,255,0.2);
+    border-color: var(--as-blue);
 }
 
 .as-header-search-icon {
@@ -140,6 +143,23 @@ body.as-body {
 .as-header-nav a:hover {
     color: var(--as-blue);
     background: rgba(10,132,255,0.1);
+}
+
+/* Mobile header: hide desktop tabs below 480px to avoid crowding */
+@media (max-width: 479px) {
+    .as-desktop-tabs {
+        display: none;
+    }
+    .as-header-logo {
+        font-size: 1.1rem;
+    }
+}
+
+/* Desktop: cap search width */
+@media (min-width: 768px) {
+    .as-header-search {
+        max-width: 400px;
+    }
 }
 
 /* ── TAB BAR (bottom - iOS style) ────────────────── */
