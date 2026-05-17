@@ -56,6 +56,7 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Crossmath",        genre: "Math",     icon: "",                                 href: "Crossmath/game.html",            badge: "new",  emoji: "➕" },
         { name: "Hidden Word",      genre: "Word",     icon: "",                                 href: "HiddenWord/index.html",          badge: "new",  emoji: "🔎" },
         { name: "Dot Connect",      genre: "Puzzle",   icon: "",                                 href: "DotConnect/index.html",          badge: "new",  emoji: "🔴" },
         { name: "Merge Numbers",    genre: "Puzzle",   icon: "assets/mergenumber200.png",        href: "MergeNumbers/game.html",         badge: "",     emoji: "🔢" },

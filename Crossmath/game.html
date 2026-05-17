@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Crossmath® - Math Puzzle Games | PlayMixGames</title>
+    <meta name="description" content="The BEST FREE math crossword puzzle games for you! Relax and train your brain with number puzzles! Play the game anywhere, anytime!">
+    
+    <meta name="keywords" content="crossmath, math puzzle, crossword, math crossword, number puzzle, logic game, brain training, free math game, cross math, sudoku alternative">
+    
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <script defer src="../sidebar.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')" onerror="console.error('❌ Supabase failed to load')"></script>
+
+    <meta property="og:title" content="Crossmath® - Math Puzzle Games | PlayMixGames">
+    <meta property="og:description" content="The BEST FREE math crossword puzzle games for you! Relax and train your brain with number puzzles!">
+    <meta property="og:url" content="https://playmixgames.in/Crossmath/game.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/Crossmath/game.html" />
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading Crossmath...</p>
+    </div>
+
+    <main class="game-container">
+        <h1 style="display: none;">Crossmath® - Math Puzzle Games</h1>
+        <div id="game-ui">
+            
+            <div id="top-bar">
+                <div class="hud-item">
+                    <span class="hud-label">LEVEL</span>
+                    <span id="level-display" class="hud-value">1</span>
+                </div>
+                <div class="hud-controls">
+                    <button id="undo-btn" class="icon-btn" title="Undo">↩️</button>
+                    <button id="hint-btn" class="icon-btn" title="Hint (Ad)">💡</button>
+                    <button id="theme-btn" class="icon-btn" title="Toggle Dark Mode">🌙</button>
+                </div>
+            </div>
+
+            <div id="board-container">
+                <div id="crossmath-board"></div>
+            </div>
+
+            <div id="bank-container">
+                <div id="number-bank"></div>
+            </div>
+            
+            <!-- Messages / Feedback overlay -->
+            <div id="feedback-message" class="hidden"></div>
+
+            <!-- Level Complete Overlay -->
+            <div id="level-complete" class="overlay hidden">
+                <div class="overlay-inner">
+                    <div class="lc-stars">⭐⭐⭐</div>
+                    <h2>LEVEL <span id="lc-level-num">1</span> COMPLETE!</h2>
+                    <p class="lc-msg">Great job sharpening your brain!</p>
+                    <button id="next-level-btn" class="primary-btn">Next Level ➡️</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="game-description">
+            <h2>About Crossmath® - Math Puzzle Games</h2>
+            <p>The BEST FREE math crossword puzzle games for you! Relax and train your brain with number puzzles! Play the game anywhere, anytime!</p>
+            <p>Cross Math Crossword Puzzles Game is more challenging than it looks! This engaging number puzzle game tests your math skills with a series of brain-teasing equations. Solve crossmath puzzles and crossword puzzles using addition, subtraction, multiplication, and division while sharpening your logic and critical thinking.</p>
+            
+            <h3>Why Play Crossmath?</h3>
+            <p>Each number game level offers a new math crossword challenge, making it a fun and rewarding way to train your brain. With a variety of math puzzles, difficulty levels, and logic challenges, this math crossword puzzle game offers the perfect way to test and improve your math skills. Get ready to play, think, and solve your way through exciting math game and crossword puzzles game challenges!</p>
+            
+            <h3>Features & Highlights</h3>
+            <ul>
+                <li><strong>Unlimited Undos:</strong> Made a math mistake? No worries, just one click to undo it!</li>
+                <li><strong>Dark Mode:</strong> Enable Dark Mode setting for a better viewing experience at bedtime. Now you can focus on the math puzzle game without straining your eyes!</li>
+                <li><strong>Multiple Difficulties:</strong> Choose Math Difficulty Levels: Easy, Medium, Hard, and Expert.</li>
+                <li><strong>Endless Logic Fun:</strong> Play daily to challenge your math logic skills. Quick brain training exercises disguised as fun grid puzzles!</li>
+            </ul>
+            
+            <p>With all these features, this math crossword number puzzle game is sure to provide you with hours of number puzzle fun and engaging math challenges. With this challenging number puzzle game, you can quickly master logic skills and become a math master in no time!</p>
+            <p>Enjoy the math puzzle games and train your brain now! Cross Math Puzzle Game is the perfect way to test your problem-solving skills while having fun. So what are you waiting for? Give this math crossword puzzle game a try today!</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links"><a href="../index.html">Home</a><a href="../privacy.html">Privacy Policy</a></div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () { 
+            if (typeof prepSystem === "function") prepSystem();
+            
+            var l = document.getElementById('pmg-loader'); 
+            if (l) { 
+                var f = l.querySelector('.pmg-bar-fill'); 
+                if (f) f.style.width = '100%'; 
+                setTimeout(function () { l.classList.add('hidden'); }, 400); 
+            } 
+        });
+    </script>
+</body>
+</html>
