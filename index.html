@@ -133,6 +133,7 @@
   <p>January 26, 2026: All Games Enhanced with Dynamic Ads. Every third game completion now rewards ads, plus banner ads at the bottom of every game for a mobile-app-like experience!</p>
   <p>January 24, 2026: Color Match 3D Joined the Library! We've just launched our newest reaction-based puzzler.</p>
   <p>January 20, 2026: Multi-Device Synchronization. Our core engine has been updated to support seamless high-DPI scaling for the new generation of mobile browsers.</p>
+  <h3 style="margin-top: 20px; font-weight: 800; color: #4facfe;">Total Games Available: <span id="real-games-count">Loading...</span></h3>
 </section>
 
 <!-- Native ad -->
@@ -386,6 +387,14 @@ window.onSearch = function(val) {
 document.addEventListener('DOMContentLoaded', () => {
   renderFeatured();
   renderSections();
+  
+  // Calculate and display real total games count
+  const allItems = window.PMG_DATA.sections.flatMap(s => s.items);
+  const totalCountEl = document.getElementById('real-games-count');
+  if (totalCountEl) totalCountEl.textContent = allItems.length;
+  
+  const searchInput = document.getElementById('global-search');
+  if (searchInput) searchInput.placeholder = `Search ${allItems.length} games…`;
 
   // Cache buster for old service workers
   if ('serviceWorker' in navigator) {
