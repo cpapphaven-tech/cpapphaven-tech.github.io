@@ -114,7 +114,7 @@ window.PMG_DATA = {
       id: "reels",
       title: "Wisdom & Reels",
       more: false,
-      tab: "reels",
+      tab: "games",
       items: [
         { name: "Knowledge Reels",  genre: "Facts",    icon: "",                                 href: "KnowledgeReels/index.html",      badge: "trend",emoji: "📱" },
         { name: "Life Skills",      genre: "Growth",   icon: "",                                 href: "LifeSkillsReels/index.html",     badge: "new",  emoji: "💡" },

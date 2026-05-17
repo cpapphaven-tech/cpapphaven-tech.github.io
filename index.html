@@ -57,10 +57,9 @@
 <header class="as-header">
   <a href="index.html" class="as-header-logo">PlayMix</a>
 
-  <!-- Desktop tabs -->
+  <!-- Only Games tab in header now; Wisdom moved to category pills -->
   <div class="as-desktop-tabs" id="desktop-tabs">
     <button class="as-desktop-tab-btn active" onclick="switchTab('games',this)" id="dtab-games">🎮 Games</button>
-    <button class="as-desktop-tab-btn" onclick="switchTab('reels',this)" id="dtab-reels">📜 Wisdom</button>
   </div>
 
   <div class="as-header-search">
@@ -102,6 +101,7 @@
       <button class="as-category-pill" onclick="filterCategory('puzzle',this)">Puzzle</button>
       <button class="as-category-pill" onclick="filterCategory('board',this)">Board</button>
       <button class="as-category-pill" onclick="filterCategory('quiz',this)">Quiz</button>
+      <button class="as-category-pill" onclick="filterCategory('wisdom',this)">📜 Wisdom</button>
     </div>
 
     <!-- Game sections (rendered by JS) -->
@@ -263,6 +263,7 @@ const CATEGORY_MAP = {
   puzzle: ['puzzle'],
   board:  ['board'],
   quiz:   ['quiz'],
+  wisdom: ['reels'],
 };
 
 function getTopItemsForCategory(cat) {
@@ -343,7 +344,7 @@ window.filterCategory = function(cat, btn) {
   const title = document.getElementById('top-charts-title');
   if (!list) return;
 
-  const labels = { all:'🏆 Top Charts', action:'🎮 Top Action', sports:'⚽ Top Sports', puzzle:'🧩 Top Puzzles', board:'♟ Top Board Games', quiz:'🧠 Top Quizzes' };
+  const labels = { all:'🏆 Top Charts', action:'🎮 Top Action', sports:'⚽ Top Sports', puzzle:'🧩 Top Puzzles', board:'♟ Top Board Games', quiz:'🧠 Top Quizzes', wisdom:'📜 Top Wisdom' };
   if (title) title.textContent = labels[cat] || '🏆 Top Charts';
 
   const items = getTopItemsForCategory(cat);
