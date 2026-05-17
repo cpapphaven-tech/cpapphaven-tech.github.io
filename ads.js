@@ -138,6 +138,23 @@ function _executeSystemSync(hardSync = false) {
             </html>
         `);
         doc.close();
+
+        // 📱 Robust Mobile Pinning (Bypasses all CSS viewport bugs and caching issues)
+        if (window.visualViewport) {
+            const pinBottomAd = () => {
+                if (window.innerWidth <= 768) {
+                    bottomContainer.style.bottom = 'auto';
+                    // Pin strictly to the visual bottom minus 50px height
+                    bottomContainer.style.top = Math.max(0, (window.visualViewport.height - 50)) + 'px';
+                } else {
+                    bottomContainer.style.top = 'auto';
+                    bottomContainer.style.bottom = '0';
+                }
+            };
+            window.visualViewport.addEventListener('resize', pinBottomAd);
+            window.visualViewport.addEventListener('scroll', pinBottomAd);
+            pinBottomAd(); // Fire initially
+        }
     }
 
 }

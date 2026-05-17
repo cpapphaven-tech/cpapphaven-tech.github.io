@@ -16,7 +16,8 @@
         const link = document.createElement('link');
         link.id = cssId;
         link.rel = 'stylesheet';
-        link.href = prefix + 'portal-style.css';
+        // Add cache buster to force mobile devices to download updated CSS
+        link.href = prefix + 'portal-style.css?v=' + Date.now();
         document.head.appendChild(link);
     }
 
