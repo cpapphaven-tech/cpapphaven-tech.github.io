@@ -81,21 +81,34 @@ function loadSocialBarAd() {
 function _executeSystemSync(hardSync = false) {
     if (!shouldLoadAds()) return;
 
+    // 🚀 CRITICAL FIX: Inject the ad into the parent/top document, NOT the iframe!
+    // This ensures the ad sticks to the actual device screen and doesn't scroll away when the user scrolls the page.
+    let targetDoc;
+    let targetWindow;
+    try {
+        targetDoc = window.top ? window.top.document : document;
+        targetWindow = window.top ? window.top : window;
+    } catch(e) {
+        // Fallback for cross-origin iframes (should not happen on playmix)
+        targetDoc = document;
+        targetWindow = window;
+    }
+
     // Skip bottom ads for NewsHub and WeatherMap as requested
-    const isExcludedPage = location.pathname.includes('/NewsHub/') || location.pathname.includes('/WeatherMap/');
+    const isExcludedPage = targetWindow.location.pathname.includes('/NewsHub/') || targetWindow.location.pathname.includes('/WeatherMap/');
 
     // 1. Create containers if missing
-    let bottomAd = document.getElementById('bottom-ad');
+    let bottomAd = targetDoc.getElementById('bottom-ad');
     if (!bottomAd && !isExcludedPage) {
-        bottomAd = document.createElement('div');
+        bottomAd = targetDoc.createElement('div');
         bottomAd.id = 'bottom-ad';
         bottomAd.className = 'pmg-bottom-ad';
-        document.body.appendChild(bottomAd);
+        targetDoc.body.appendChild(bottomAd);
     }
 
     if (hardSync) {
         console.log("🔄 Syncing UI components...");
-        const sideBanner = document.getElementById('adsterra-banner');
+        const sideBanner = targetDoc.getElementById('adsterra-banner');
         if (sideBanner) {
             sideBanner.dataset.loaded = "";
             sideBanner.innerHTML = "";
@@ -107,11 +120,11 @@ function _executeSystemSync(hardSync = false) {
     }
 
     // A. Bottom Unit
-    const bottomContainer = document.getElementById("bottom-ad");
+    const bottomContainer = targetDoc.getElementById("bottom-ad");
     if (bottomContainer && !bottomContainer.dataset.loaded && !isExcludedPage) {
         bottomContainer.dataset.loaded = "true";
         
-        const iframe = document.createElement('iframe');
+        const iframe = targetDoc.createElement('iframe');
         iframe.style.width = "320px";
         iframe.style.height = "50px";
         iframe.style.border = "none";
@@ -119,11 +132,13 @@ function _executeSystemSync(hardSync = false) {
         iframe.scrolling = "no";
         bottomContainer.appendChild(iframe);
 
-        const doc = iframe.contentWindow.document;
-        doc.open();
-        doc.write(`
+        const htmlContent = `
+            <!DOCTYPE html>
             <html>
-            <body style="margin:0;padding:0;background:transparent;display:flex;justify-content:center;align-items:center;">
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            </head>
+            <body style="margin:0;padding:0;background:transparent;display:flex;justify-content:center;align-items:center;overflow:hidden;">
                 <script>
                     atOptions = {
                         'key' : 'de617c07128b585ef939154460e6858f',
@@ -136,13 +151,21 @@ function _executeSystemSync(hardSync = false) {
                 <script src="https://www.highperformanceformat.com/de617c07128b585ef939154460e6858f/invoke.js"></script>
             </body>
             </html>
-        `);
-        doc.close();
+        `;
 
-        // 📱 Robust Mobile Pinning (Bypasses all CSS viewport bugs and caching issues)
-        if (window.visualViewport) {
+        if ('srcdoc' in iframe) {
+            iframe.srcdoc = htmlContent;
+        } else {
+            const doc = iframe.contentWindow.document;
+            doc.open();
+            doc.write(htmlContent);
+            doc.close();
+        }
+
+        // 📱 Robust Mobile Pinning on Parent Document
+        if (targetWindow.visualViewport) {
             const pinBottomAd = () => {
-                if (window.innerWidth <= 768) {
+                if (targetWindow.innerWidth <= 768) {
                     bottomContainer.style.bottom = 'auto';
                     // Pin strictly to the visual bottom minus 50px height
                     bottomContainer.style.top = Math.max(0, (window.visualViewport.height - 50)) + 'px';
