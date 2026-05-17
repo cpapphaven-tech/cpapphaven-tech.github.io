@@ -64,7 +64,7 @@
 
   <div class="as-header-search">
     <span class="as-header-search-icon">🔍</span>
-    <input type="text" id="global-search" placeholder="Search 100+ games…" autocomplete="off" oninput="onSearch(this.value)">
+    <input type="text" id="global-search" placeholder="Search games…" autocomplete="off" oninput="onSearch(this.value)">
   </div>
 </header>
 
@@ -392,9 +392,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const allItems = window.PMG_DATA.sections.flatMap(s => s.items);
   const totalCountEl = document.getElementById('real-games-count');
   if (totalCountEl) totalCountEl.textContent = allItems.length;
-  
-  const searchInput = document.getElementById('global-search');
-  if (searchInput) searchInput.placeholder = `Search ${allItems.length} games…`;
 
   // Cache buster for old service workers
   if ('serviceWorker' in navigator) {
