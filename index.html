@@ -1,1395 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Early Tracking Script -->
-    <script>
-        (function () {
-            const startTime = Date.now();
-            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
-            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Online Games at PlayMixGames - Play Now!</title>
+<meta name="description" content="Discover free online games, high-fidelity 3D web games. Instant play, no downloads. Play Stack 3D, Striker League and more at PlayMixGames.">
+<link rel="icon" type="image/png" href="img/192.png">
+<link rel="canonical" href="https://playmixgames.in/"/>
+<link rel="alternate" hreflang="en" href="https://playmixgames.in/"/>
+<meta property="og:title" content="Free Online Games at PlayMixGames - Play Now!">
+<meta property="og:description" content="Discover free online games. Instant play, no downloads required.">
+<meta property="og:url" content="https://playmixgames.in/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"PlayMixGames","url":"https://playmixgames.in/","potentialAction":{"@type":"SearchAction","target":"https://playmixgames.in/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
 
-            const urlParams = new URLSearchParams(window.location.search);
-            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+<!-- Early tracking -->
+<script>
+(function(){
+  const anonKey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+  const ep="https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+  const p=new URLSearchParams(window.location.search);
+  const d={timestamp:new Date(Date.now()+19800000).toISOString().replace('Z','+05:30'),url:location.href,referrer:document.referrer,userAgent:navigator.userAgent,screen:{width:screen.width,height:screen.height},loadStage:"pre-init",placement_id:p.get('utm_content')||p.get('placementid')};
+  const send=s=>{d.loadStage=s;d.timestamp=new Date(Date.now()+19800000).toISOString().replace('Z','+05:30');fetch(ep,{method:"POST",headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey},body:JSON.stringify(d),keepalive:true});};
+  send("pre-init");
+  window.addEventListener("pagehide",()=>{if(!window.FIREBASE_INITIALIZED)send("early-exit");});
+})();
+</script>
 
-            const hitData = {
-                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
-                url: location.href,
-                referrer: document.referrer,
-                userAgent: navigator.userAgent,
-                screen: { width: screen.width, height: screen.height },
-                loadStage: "pre-init",
-                placement_id: placementId
-            };
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="appstore-style.css">
+<link rel="stylesheet" href="loader.css">
 
-            const sendHit = (stage) => {
-                hitData.loadStage = stage;
-                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
-
-                if (stage === "early-exit") {
-                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
-                }
-
-                fetch(endpoint, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "apikey": anonKey,
-                        "Authorization": "Bearer " + anonKey
-                    },
-                    body: JSON.stringify(hitData),
-                    keepalive: true
-                });
-            };
-
-            sendHit("pre-init");
-
-            window.addEventListener("pagehide", function () {
-                if (!window.FIREBASE_INITIALIZED) {
-                    sendHit("early-exit");
-                }
-            });
-        })();
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Online Games at PlayMixGames - Play Now!</title>
-    <link rel="icon" type="image/png" href="img/192.png">
-
-    <!-- Preconnect to critical origins BEFORE any blocking requests -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-
-    <!-- Fonts with display=swap to prevent FOIT -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap"></noscript>
-
-    <link rel="stylesheet" href="portal-style.css">
-    <link rel="stylesheet" href="loader.css">
-
-    <meta name="description" content="Discover free online games, high-fidelity 3D web games. Instant play, no downloads required. Play Stack 3D and more at PlayMixGames.">
-
-    <!-- AdSense: async + low priority so it never blocks LCP -->
-    <script async fetchpriority="low" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
-
-    <!-- Analytics and ads deferred so they never block parse -->
-    <script defer src="./analytics.js" type="module"></script>
-    <script defer src="ads.js"></script>
-
-    <!-- Load Ads Using Professional Control System -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            if (typeof prepSystem === "function") {
-                prepSystem();
-            }
-        });
-    </script>
-
-    <!-- Google tag (gtag.js) - deferred to avoid blocking -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-17908156906');
-    </script>
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
-
-
-    <link rel="alternate" hreflang="en" href="https://playmixgames.in/" />
-    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/" />
-    <link rel="canonical" href="https://playmixgames.in/" />
-
-    <meta property="og:title" content="Free Online Games at PlayMixGames - Play Now!">
-    <meta property="og:description" content="Discover free online games, high-fidelity 3D web games. Instant play, no downloads required. Play Stack 3D and more at PlayMixGames.">
-    <meta property="og:url" content="https://playmixgames.in/">
-    <meta property="og:type" content="website">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "PlayMixGames",
-      "url": "https://playmixgames.in/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://playmixgames.in/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
+<script async fetchpriority="low" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
+<script defer src="./analytics.js" type="module"></script>
+<script defer src="ads.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded',()=>{if(typeof prepSystem==="function")prepSystem();});
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17908156906');
+</script>
+<script defer src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
 </head>
 
-<body class="portal-index ignore-pmg-sidebar">
-    <!-- ===== PlayMixGames Universal Loader ===== -->
-    <div id="pmg-loader">
-        <div class="pmg-brand">PlayMixGames</div>
-        <div class="pmg-spinner"></div>
-        <div class="pmg-bar-track">
-            <div class="pmg-bar-fill"></div>
-        </div>
-        <p class="pmg-tip">Finding the best games for you…</p>
+<body class="as-body portal-index ignore-pmg-sidebar">
+
+<!-- LOADER -->
+<div id="pmg-loader">
+  <div class="pmg-brand">PlayMixGames</div>
+  <div class="pmg-spinner"></div>
+  <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+  <p class="pmg-tip">Loading games…</p>
+</div>
+
+<!-- HEADER -->
+<header class="as-header">
+  <a href="index.html" class="as-header-logo">PlayMix</a>
+
+  <!-- Desktop tabs -->
+  <div class="as-desktop-tabs" id="desktop-tabs">
+    <button class="as-desktop-tab-btn active" onclick="switchTab('games',this)" id="dtab-games">🎮 Games</button>
+    <button class="as-desktop-tab-btn" onclick="switchTab('reels',this)" id="dtab-reels">📜 Wisdom</button>
+  </div>
+
+  <div class="as-header-search">
+    <span class="as-header-search-icon">🔍</span>
+    <input type="text" id="global-search" placeholder="Search 100+ games…" autocomplete="off" oninput="onSearch(this.value)">
+  </div>
+
+  <nav class="as-header-nav">
+    <a href="about.html">About</a>
+    <a href="contact.html">Support</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<main id="main-content">
+
+  <!-- SEARCH RESULTS (hidden unless searching) -->
+  <div id="search-results" class="as-search-results">
+    <div class="as-section" style="padding-top:12px;">
+      <div class="as-section-header">
+        <span class="as-section-title" id="search-results-title">Results</span>
+      </div>
     </div>
-    <!-- ========================================= -->
-    <header>
-        <a href="index.html" class="logo">PlayMixGames</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Support</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Featured Games Section - MOVED TO TOP -->
-    <section class="game-grid">
-        <div class="grid-header"
-            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; flex-wrap: wrap; gap: 20px;">
-            <h2 class="section-title" style="margin-bottom: 0;">Play Now - Choose Your Popular Game</h2>
-
-            <div class="search-container"
-                style="display: flex; align-items: center; gap: 15px; flex-grow: 1; justify-content: flex-end;">
-                <button id="tab-btn-games" onclick="switchPortalTab('games')" style="
-                position: relative; z-index: 1;
-                background: rgba(255,255,255,0.1); border: none;
-                color: #fff; font-family: 'Outfit', sans-serif;
-                font-size: 0.95rem; font-weight: 700;
-                padding: 10px 28px; border-radius: 12px;
-                cursor: pointer; display: flex; align-items: center; gap: 8px;
-                transition: all 0.2s;
-                white-space: nowrap;
-            ">
-                🎮 Games
-                <span id="tab-count-games" style="
-                    background: rgba(255,255,255,0.15);
-                    color: #fff; font-size: 0.7rem; font-weight: 800;
-                    padding: 2px 8px; border-radius: 20px;
-                    min-width: 24px; text-align: center;
-                ">0</span>
-            </button>
-
-            <button id="tab-btn-reels" onclick="switchPortalTab('reels')" style="
-                position: relative; z-index: 1;
-                background: none; border: none;
-                color: rgba(255,255,255,0.55); font-family: 'Outfit', sans-serif;
-                font-size: 0.95rem; font-weight: 700;
-                padding: 10px 28px; border-radius: 12px;
-                cursor: pointer; display: flex; align-items: center; gap: 8px;
-                transition: color 0.2s;
-                white-space: nowrap;
-            ">
-                📜 Wisdom
-                <span id="tab-count-reels" style="
-                    background: rgba(255,255,255,0.1);
-                    color: rgba(255,255,255,0.6); font-size: 0.7rem; font-weight: 800;
-                    padding: 2px 8px; border-radius: 20px;
-                    min-width: 24px; text-align: center;
-                ">0</span>
-            </button>
-
-            <button id="tab-btn-news" onclick="switchPortalTab('news')" style="
-                position: relative; z-index: 1;
-                background: none; border: none;
-                color: rgba(255,255,255,0.55); font-family: 'Outfit', sans-serif;
-                font-size: 0.95rem; font-weight: 700;
-                padding: 10px 28px; border-radius: 12px;
-                cursor: pointer; display: flex; align-items: center; gap: 8px;
-                transition: color 0.2s;
-                white-space: nowrap;
-            ">
-                🌐 Discover
-                <span id="tab-count-news" style="
-                    background: rgba(255,255,255,0.1);
-                    color: rgba(255,255,255,0.6); font-size: 0.7rem; font-weight: 800;
-                    padding: 2px 8px; border-radius: 20px;
-                    min-width: 24px; text-align: center;
-                ">0</span>
-            </button>
-        </div>
-                <div style="position: relative; width: 300px; max-width: 100%;">
-                    <input type="text" id="game-search" placeholder="Search games..." style="
-                        width: 100%;
-                        background: rgba(255, 255, 255, 0.08);
-                        border: 1px solid rgba(255, 255, 255, 0.15);
-                        padding: 10px 15px 10px 40px;
-                        border-radius: 12px;
-                        color: white;
-                        font-size: 0.95rem;
-                        outline: none;
-                        transition: all 0.3s;
-                    " onfocus="this.style.borderColor='var(--pmg-accent)'; this.style.boxShadow='0 0 15px rgba(77, 121, 255, 0.3)';"
-                        onblur="this.style.borderColor='rgba(255, 255, 255, 0.15)'; this.style.boxShadow='none';">
-                    <span
-                        style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); opacity: 0.5;">🔍</span>
-                </div>
-            </div>
-        </div>
-        <div class="grid" id="main-game-grid">
-
-            <!-- Hidden Word Finder - NEW -->
-            <a href="HiddenWord/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#064e3b,#022c22);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(74,222,128,0.6);">🔎</div>
-                <div class="card-info">
-                    <h3>🔎 Hidden Word Finder – Puzzle</h3>
-                    <p><strong>Find the words!</strong> Connect the letters to find the hidden target words in the grid. Improve your vocabulary and spelling skills!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#4ade80,#34d399);color:#000;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-            <!-- Daily News Hub Card
-            <a href="NewsHub/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#1e3a8a,#1e1b4b);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(59,130,246,0.5);">📰</div>
-                <div class="card-info">
-                    <h3>📰 Daily Digest – Tech & Gaming News</h3>
-                    <p><strong>Stay Informed!</strong> Get the latest global headlines curated daily. Read top stories in gaming, technology, and finance directly on Playmix.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 Updated Daily</span>
-                </div>
-            </a> -->
-
-            <!-- Highway Rush Card -->
-            <a href="HighwayRush/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/highwayrushcar200.png" alt="Highway Rush: Traffic Dodge" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>🏎️ Highway Rush: Traffic Dodge</h3>
-                    <p><strong>Master the Road!</strong> Navigate your sports car through busy highway traffic. Dodge cones and obstacles in this classic arcade road challenge.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#fbbf24,#f59e0b);color:#000;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 Trending</span>
-                </div>
-            </a>
-
-            <!-- Weather Map Card -->
-            <!-- <a href="WeatherMap/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#0c4a6e,#164e63,#134e4a);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(34,211,238,0.6);">🌍</div>
-                <div class="card-info">
-                    <h3>🌡️ Global Weather Map – Interactive Explorer</h3>
-                    <p><strong>Explore Global Climate!</strong> Advanced interactive map with major cities average temperatures. Drill down from Country → State → City with live rain &amp; snow tracking.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#0891b2,#0d9488);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔴 Live Data</span>
-                </div>
-            </a> -->
-
-            <!-- World Tour Card -->
-            <!-- <a href="WorldTour/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#065f46,#047857);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(52,211,153,0.6);">🗺️</div>
-                <div class="card-info">
-                    <h3>🗺️ World Tour – Interactive Street View</h3>
-                    <p><strong>Explore Famous Places!</strong> Take a virtual world tour. See the Eiffel Tower, Taj Mahal, Colosseum, and more in fully immersive 360-degree interactive Street View.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#10b981,#34d399);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🆕 New</span>
-                </div>
-            </a> -->
-
-            <!-- Personality Test Card -->
-            <a href="PersonalityTest/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#1e293b,#0f172a);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(77, 121, 255, 0.5);">🧠</div>
-                <div class="card-info">
-                    <h3>🧠 2-Choice Personality Test – Who Are You?</h3>
-                    <p><strong>Fast & Addictive!</strong> Discover your gaming personality type in under 60 seconds. Are you a Strategist, Action Taker, or Creative? Play now!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#4d79ff,#a78bfa);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 Trending</span>
-                </div>
-            </a>
-
-            <!-- AI Readiness Card -->
-            <a href="AIReadiness/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#020617,#1e293b);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(56, 189, 248, 0.5);">🤖</div>
-                <div class="card-info">
-                    <h3>🤖 AI Readiness Quiz – Your AI Persona</h3>
-                    <p><strong>Are you Ready?</strong> Find out how you'll thrive in the AI revolution. Are you a Prompter, Automator, or Visionary? Take the 60-second test!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#38bdf8,#818cf8);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🆕 New</span>
-                </div>
-            </a>
-
-            <!-- Travel Destiny Card -->
-            <a href="TravelDestiny/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#064e3b,#065f46);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(16, 185, 129, 0.5);">✈️</div>
-                <div class="card-info">
-                    <h3>✈️ Travel Destiny Quiz – Your Next Trip</h3>
-                    <p><strong>Plan Your Escape!</strong> Where should you actually travel next? Discover your perfect destination based on your unique travel style.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#10b981,#34d399);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🆕 New</span>
-                </div>
-            </a>
-
-            <!-- Anime Archetype Card -->
-            <a href="AnimeArchetype/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#450a0a,#7f1d1d);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(239, 68, 68, 0.5);">🗡️</div>
-                <div class="card-info">
-                    <h3>🗡️ Anime Archetype Test – Who Are You?</h3>
-                    <p><strong>Find Your Troop!</strong> Which classic anime trope defines your soul? Are you the Shonen Hero or the mysterious Anti-Hero? Reveal it now!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#ef4444,#f87171);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🆕 New</span>
-                </div>
-            </a>
-
-            <!-- Leadership Style Card -->
-            <a href="LeadershipStyle/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#1e1b4b,#312e81);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(99, 102, 241, 0.5);">👑</div>
-                <div class="card-info">
-                    <h3>👑 Leadership Style Quiz – Lead the Way</h3>
-                    <p><strong>Level Up Your Team!</strong> Discover your professional leading edge. Are you a Commander, Coach, or Visionary leader? Fast & insightful.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#6366f1,#818cf8);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🆕 New</span>
-                </div>
-            </a>
-
-            <!-- Hidden Talent Card -->
-            <a href="HiddenTalent/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#1e1b4b,#312e81);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(167, 139, 250, 0.5);">✨</div>
-                <div class="card-info">
-                    <h3>✨ Hidden Talent Test – Your Superpower</h3>
-                    <p><strong>Reveal the Secret!</strong> What is your hidden superpower in daily life? Discover your core cognitive strengths in under 60 seconds.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#a78bfa,#c084fc);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🆕 New</span>
-                </div>
-            </a>
-
-            <!-- Knowledge Reels -->
-            <a href="KnowledgeReels/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#1e1b4b,#0f172a);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(56,189,248,0.6);">📱</div>
-                <div class="card-info">
-                    <h3>🧠 Knowledge Reels – Daily Facts Shorts</h3>
-                    <p><strong>Infinite Learning!</strong> Swipe through mind-blowing general knowledge facts, space facts, and human biology secrets in our new endless Reel viewer!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#0ea5e9,#38bdf8);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 Trending</span>
-                </div>
-            </a>
-
-            <!-- Life Skills Reels -->
-            <a href="LifeSkillsReels/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#4c0519,#2e1065);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(244,114,182,0.6);">💡</div>
-                <div class="card-info">
-                    <h3>💡 Life Skills Reels – Personal Growth</h3>
-                    <p><strong>Optimize Your Life!</strong> Endlessly scroll through actionable life hacks, productivity secrets, and communication techniques to become your best self.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#ec4899,#8b5cf6);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Football Knowledge Reels -->
-            <a href="FootballReels/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#064e3b,#022c22);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(74,222,128,0.6);">⚽</div>
-                <div class="card-info">
-                    <h3>⚽ Football Reels – Legendary Facts</h3>
-                    <p><strong>Are you a true fan?</strong> Swipe through mind-blowing football history, player records, and legendary world cup moments in this ultimate trivia reel.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#4ade80,#34d399);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Fitness & Self-Improvement Reels -->
-            <a href="FitnessReels/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#1a2e05,#0d1f02);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(132,204,22,0.6);">💪</div>
-                <div class="card-info">
-                    <h3>💪 Fitness Reels – Workout Hacks</h3>
-                    <p><strong>Level up your health!</strong> Discover science-backed fat loss tips, gym secrets, and discipline-building strategies in this infinite fitness loop.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#84cc16,#4d7c0f);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Wellness Reels -->
-            <a href="WellnessReels/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#1e3a8a,#0f172a);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 20px rgba(59,130,246,0.6);">🧘</div>
-                <div class="card-info">
-                    <h3>🧘 Wellness Reels – Mental Health</h3>
-                    <p><strong>Mindset & Psychology!</strong> Endlessly scroll through relatable mental health frameworks, anxiety relief tips, and self-care strategies.</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#3b82f6,#2563eb);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Archery Master - NEW -->
-            <a href="ArcheryMaster/index.html" class="game-card">
-                 <div class="card-img">
-                    <img src="assets/Archeryshooting200.png" alt="Archery Bow Shooting Game" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>🏹 Archery Bow Shooting Game – Free Slingshot</h3>
-                    <p><strong>Hit the bullseye!</strong> Aim your bow, time your shot perfectly, and advance through unlimited levels of increasing wind, speed, and precision challenges.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#c084fc,#818cf8); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Flappy Rise - NEW -->
-            <a href="FlappyRise/index.html" class="game-card">
-              <div class="card-img">
-                    <img src="assets/Flappyrisebird200.png" alt="Flappy Rise Bird" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                  <div class="card-info">
-                    <h3>🐦 Flappy Rise Bird – Play Infinite Flight Game Free</h3>
-                    <p><strong>Arcade Physics Fun!</strong> Experience the ultimate test of reflexes. Tap to fly through obstacles in this addictive, high-speed bird flight adventure.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#0ea5e9,#2563eb); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 Top Game</span>
-                </div>
-            </a>
-
-            <!-- Idle Ball Escape - NEW -->
-            <a href="IdleBallEscape/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#0b0f19,#1e293b);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(74, 222, 128, 0.5);">🌀</div>
-                <div class="card-info">
-                    <h3>🌀 Idle Ball Escape – Smash Rings</h3>
-                    <p><strong>Smash to Escape!</strong> Guide the ball out of the rotating ring maze. Tap to jump and break the rings before you run out of taps in this relaxing arcade puzzle.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#4ade80,#34d399); color: #000; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Dot Connect - NEW -->
-            <a href="DotConnect/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#0a0a18,#1e1e3f);display:flex;align-items:center;justify-content:center;font-size:4.5rem;text-shadow:0 0 25px rgba(239, 68, 68, 0.5);">🔴</div>
-                <div class="card-info">
-                    <h3>🔴 Dot Connect – Color Match Puzzle</h3>
-                    <p><strong>Connect the Colors!</strong> Link same-colored dots to clear them. Clear the board, reach the target score, and beat the clock in this relaxing brain puzzle!</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#ef4444,#f87171); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Numpuz - NEW -->
-            <a href="Numpuz/index.html" class="game-card">
-               <div class="card-img">
-                    <img src="assets/numberpuzzlenumpad200.png" alt="Numpuz: Number Puzzle Games" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                  <div class="card-info">
-                    <h3>🧩 Numpuz: Number Puzzle Games</h3>
-                    <p><strong>Classic Logic Game!</strong> Slide the numbered wooden blocks into order. Train your brain with 6 different grid sizes from 3x3 to 8x8 in this addictive puzzle.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#d2a679,#e6c299); color: #000; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Tic Tac Toe - NEW -->
-            <a href="TicTacToe/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/Tictactoe200.png" alt="Tic Tac Toe" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                 <div class="card-info">
-                    <h3>❌⭕ Tic Tac Toe – Classic Puzzle Game</h3>
-                    <p><strong>Unbeatable AI!</strong> Play the classic game of Xs and Os. Challenge a friend in 1 vs 1 mode or test your logic against the unbeatable Minimax AI.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#6366f1,#818cf8); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Solitaire - NEW -->
-            <a href="Solitaire/index.html" class="game-card">
-              <div class="card-img">
-                    <img src="assets/solitaire200.png" alt="Klondike Solitaire" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                  <div class="card-info">
-                    <h3>♠️ Klondike Solitaire – Classic Card Game</h3>
-                    <p><strong>Master the deck!</strong> Relax with the timeless classic. Build foundation piles by suit from Ace to King in this smooth, mobile-optimized card adventure.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#3b82f6,#2563eb); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 Hot</span>
-                </div>
-            </a>
-
-            <!-- Striker League - NEW -->
-            <a href="StrikerLeague/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/Strikerleague200.png" alt="Striker League" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>⚽ Striker League – Ultimate Soccer Mastery</h3>
-                    <p><strong>Lead your team!</strong> Tactical 2D football action. Choose your formation, time your shots, and outsmart the AI to claim the championship cup.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#10b981,#34d399); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 Fresh</span>
-                </div>
-            </a>
-
-            <!--  Smile Bounce -->
-            <a href="DoodleJump/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/doodlejump200.png" alt="Neon Pacman Endless Maze" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>😊 Doodle Jump Game – Hop Endless Platforms Free</h3>
-                    <p><strong>Smiley Doodle Jump Game!</strong></p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#d100ff,#00f2fe); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Retro Racer 3D -->
-            <a href="RetroRacer/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/carrace200.png" alt="Neon Pacman Endless Maze" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>🏎️ Car Racer 3D – Free Neon Speed Racing Game</h3>
-                    <p><strong>Neon High-Speed Action!</strong> Experience blazing fast, pseudo-3D outrun style racing in a beautiful Synthwave universe.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#d100ff,#00f2fe); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-            <!-- Neon Pacman Arcade -->
-            <a href="NeonPacman/game.html" class="game-card">
-                  <div class="card-img">
-                    <img src="assets/pacman200.png" alt="Neon Pacman Endless Maze" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>👾 Neon Pac-Man – Classic Ghost Maze Arcade Game</h3>
-                    <p><strong>Electric Arcade Action!</strong> Dodge cyber ghosts and chomp glowing neon dots in this modern reboot of the legendary maze-chomping game!</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#ff00ff,#00ffff); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-            <!-- Health Hero Trivia -->
-            <a href="HealthHeroTrivia/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/healthhro200.png" alt="Health Hero Trivia" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>🏥 Health Hero Trivia – Wellness Quiz</h3>
-                    <p><strong>Level up your health!</strong> Answer questions on nutrition, sleep, and first-aid. Unlimited levels with healthy takeaways after every answer!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#10b981,#14b8a6);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- English Grammar Quiz -->
-            <a href="EnglishGrammarQuiz/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/Englishgrammquiz200.png" alt="English Grammar Quiz" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>📚 English Grammar Quiz – Learn English Free</h3>
-                    <p><strong>Improve your English!</strong> Fun 4-option MCQ quiz on tenses, articles, prepositions &amp; more. Unlimited levels with instant explanations after every answer!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#818cf8,#06b6d4);color:#fff;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Nutrition Quiz -->
-            <a href="NutritionQuiz/index.html" class="game-card">
-                <div class="card-img" style="background:linear-gradient(135deg,#030d06,#0a2e18);display:flex;align-items:center;justify-content:center;font-size:4.5rem;">🥗</div>
-                <div class="card-info">
-                    <h3>🥗 Nutrition Quiz – Guess Food Macros</h3>
-                    <p><strong>Know your food!</strong> Guess the correct carbs, protein, fat &amp; calories for bananas, eggs, chicken &amp; more. A fun health quiz for all ages!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#4ade80,#34d399);color:#030d06;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-
-
-            <!-- Daily Math Equator -->
-            <a href="DailyMathEquator/index.html" class="game-card">
-                 <div class="card-img">
-                    <img src="assets/Mathlearningquiz200.png" alt="Math Learning Quiz" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>🔢 Math Learning Quiz – Brain Training MCQ Game</h3>
-                    <p><strong>Brain training daily!</strong> Guess the hidden math equation in 6 tries. Green tiles, yellow tiles – Nerdle-style logic puzzle with new equation every day!</p>
-                    <span style="display:inline-block;background:linear-gradient(90deg,#f59e0b,#ef4444);color:#000;font-weight:bold;padding:4px 12px;border-radius:15px;font-size:0.75em;margin-top:8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Typing Speed Test -->
-            <a href="TypingSpeedTest/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/typingtest200.png" alt="WPM Typing Speed Test" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>⌨️ WPM Typing Speed Test</h3>
-                    <p><strong>Learn to type fast!</strong> Shoot down falling words to protect your base and measure your real-time WPM in this addictive educational arcade game.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#4ade80,#34d399); color: #000; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Word Crossword -->
-            <a href="WordCrossword/index.html" class="game-card">
-                  <div class="card-img">
-                    <img src="assets/wordcrossword200.png" alt="Word Crossword" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🔤 Word Crossword Puzzle – Free Brain Vocabulary Game</h3>
-                    <p><strong>Connect the letters!</strong> Form words in this modern, neon word puzzle. Train your brain and find bonus words!</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#4facfe,#00f2fe); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Pool Master -->
-            <a href="Pool/index.html" class="game-card">
-                  <div class="card-img">
-                    <img src="assets/pool200.png" alt="Pool Master" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🎱 8 Ball Pool Online – Free Billiards Game</h3>
-                    <p><strong>Realistic 8-Ball Pool!</strong> Challenge the AI or a friend in this smooth physics billiards game. Pocket all your balls and sink the 8-ball to win!</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#10b981,#34d399); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-            
-            <!-- Neon Slicer 3D -->
-            <a href="NeonSlicer/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/ninja200.png" alt="Balloon Ninja" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>💎 Balloon Ninja Slice – Fruit Cutting Arcade Game</h3>
-                    <p><strong>Slash the gems!</strong> Swipe your blade to slice flying neon geometries and dodge bombs in this stunning high-speed 3D arcade hit.</p>
-                    <span style="display: inline-block; background: #ff3366; color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 Trending</span>
-                </div>
-            </a>
-
-            <!-- Crossy Road Neon -->
-            <a href="CrossyRoad/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/crossroad200.png" alt="Crossy Road" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-
-                <div class="card-info">
-                    <h3>🐔 Crossy Road Hop – Dodge Traffic Arcade Game</h3>
-                    <p><strong>Hop through the traffic!</strong> Navigate across neon streets and dodge high-speed vehicles in this gorgeous 3D voxel arcade hopper!</p>
-                    <span style="display: inline-block; background: #ff3366; color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Trending</span>
-                </div>
-            </a>
-
-             <!-- Merge Numbers 2248 -->
-            <a href="MergeNumbers/game.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/mergenumber200.png" alt="Merge Numbers 2248" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🔢 Merge Numbers 2048 – Math Puzzle Brain Game</h3>
-                    <p><strong>Connect &amp; merge!</strong> Drag through same-number blocks in any of 8 directions to
-                        merge them. Chain longer for bonus points — how high can you go?</p>
-                    <span
-                        style="display: inline-block; background: #f59e0b; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px; color:#000;">Play</span>
-                </div>
-            </a>
-
-             <!-- Game 13: Fruit Splash -->
-            <a href="FruitSplash/index.html" class="game-card">
-                     <div class="card-img">
-                    <img src="assets/fruits200.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🍉 Fruit Splash Match 3 – Pop Fruit Puzzle Game</h3>
-                    <p><strong>Match 3 Puzzle!</strong> Swipe and match juicy fruits to score big points. Beat the clock and advance through levels in this fresh and vibrant brain-teaser.</p>
-                    <span
-                        style="display: inline-block; background: #eab308; color: #000; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
- <!-- Game 14: Neon Snake -->
-            <a href="NeonSnake/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/snake200.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🐍 Classic Neon Snake – Play Snake Game Online Free</h3>
-                    <p><strong>Classic Arcade Action!</strong> Guide the glowing snake to collect food, hit your target score, and avoid the arena walls in this thrilling countdown mode.</p>
-                    <span
-                        style="display: inline-block; background: #4ade80; color: #000; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-        <!-- Game 15: Alien Highway -->
-            <a href="GalaxyAssault/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/aleign200.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>👾 Galaxy Space Shooter – Alien Defense Arcade Game</h3>
-                    <p><strong>One miss = Game Over!</strong> Aliens race down the highway at you. Shoot them ALL before they get through — like Alien Shooter meets the road!</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#f43f5e,#8b5cf6); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- Number Balloon Shooter -->
-            <a href="NumberBalloonShooter/index.html" class="game-card">
-                  <div class="card-img">
-                    <img src="assets/numberballoon200.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🎈 Math Balloon Pop – Number Shooting Puzzle Game</h3>
-                    <p><strong>Pop the Values!</strong> Shoot mathematical balloons falling from the sky to reach your target score before the 60s timer ends!</p>
-                    <span
-                        style="display: inline-block; background: #3b82f6; color: #fff; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">New</span>
-                </div>
-            </a>
-            <!-- Volleyball Arena -->
-            <a href="VolleyballArena/index.html" class="game-card">
-                 <div class="card-img">
-                    <img src="assets/volley200.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🏐 Volleyball Arena 3D – Spike & Block Sports Game</h3>
-                    <p><strong>Spike & Block!</strong> Control your player with the pointer and battle against the AI in this floaty 10-round beach volleyball duel.</p>
-                    <span
-                        style="display: inline-block; background: #ff9800; color: #000; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">New</span>
-                </div>
-            </a>
-            
-            <!-- Tennis Arcade -->
-            <a href="Tennis/game.html" class="game-card">
-                  <div class="card-img">
-                    <img src="assets/Tennis200.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🎾 Tennis Master 3D – Online Sports Tournament Game</h3>
-                    <p><strong>Fast-paced Volleys!</strong> Test your reflexes against the AI champion in this arcade tennis duel.</p>
-                    <span
-                        style="display: inline-block; background: #4ade80; color: #000; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">New</span>
-                </div>
-            </a>
-
-             <!-- Game 9: Air Hockey 3D -->
-            <a href="AirHockey3D/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/airhockey200.png" alt="Air Hockey 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🏑 Air Hockey 3D Neon – Puck Sports Arcade Game</h3>
-                    <p><strong>Fast-paced neon sports!</strong> Challenge smart AI in this classic arcade game
-                        reimagined in 3D. First to 7 goals wins!</p>
-                    <span
-                        style="display: inline-block; background: #00f2fe; color: #fff; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-            
-            <!-- Game 8: Water Sort 3D -->
-            <a href="WaterSort3D/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/watersort3d.png" alt="Water Sort 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🧪 Water Sort Puzzle – Relaxing Color Flask Game</h3>
-                    <p><strong>Sort the colors!</strong> Addictive puzzle game. Pour colored water into tubes until each
-                        tube holds one color. Relaxing and brain-teasing!</p>
-                    <span
-                        style="display: inline-block; background: #4facfe; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-             <!-- Stack 3D -->
-            <a href="Stack3D/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/stack3d.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-
-                <div class="card-info">
-                    <h3>🧱 Stack 3D – Build Tower Physics Puzzle Game</h3>
-                    <p><strong>Build towers to the sky!</strong> Test your timing and precision in this beautiful 3D
-                        physics puzzler. Tap to drop blocks and stack them higher without falling!</p>
-                    <span
-                        style="display: inline-block; background: #4d79ff; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-
-            <!-- Bowling 3D -->
-            <a href="Bowling/game.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/Bowling200.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-
-                <div class="card-info">
-                    <h3>🎳 Bowling Strike 3D – Realistic Pin Sports Game</h3>
-                    <p><strong>Realistic Physics!</strong> Challenge the AI opponent to 10 rounds of classic 3D bowling action.</p>
-                    <span
-                        style="display: inline-block; background: #00e5ff; color: #000; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Updated</span>
-                </div>
-            </a>
-
-             <!-- Game 4: Helix Bounce -->
-            <a href="HelixBounce/index.html" class="game-card">
-                <div class="card-img" style="
-
-    background-image: url('assets/helixbounce.png');
-    background-size: contain;
-    background-position: center;
-"></div>
-                <div class="card-info">
-                    <h3>🧬 Helix Bounce – Drop Ball Rotating Platform Game</h3>
-                    <p><strong>Navigate rotating platforms!</strong> Rotate the helix tower to guide the ball through
-                        gaps. Avoid red zones and descend as deep as possible!</p>
-                    <span
-                        style="display: inline-block; background: #cc00cc; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- Stick Duel Battle -->
-            <a href="StickDuel/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/stckduels.png" alt="Stickman Neon Warriors" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-
-
-                <div class="card-info">
-                    <h3>⚔️ Stickman Warriors Duel – Ragdoll Fighting Game</h3>
-                    <p><strong>Epic Zero-G Flight Combat!</strong> Battle through neon sectors with futuristic weapons.
-                        Master the flight and defeat the Elite AI.</p>
-                    <span
-                        style="display: inline-block; background: #a855f7; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">New</span>
-                </div>
-            </a>
-
-            <!-- Table Tennis World Tour -->
-            <a href="TableTennis/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/table_tennis_icon.png" alt="Table Tennis World Tour" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🏓 Table Tennis World Tour</h3>
-                    <p><strong>Realistic Ping Pong!</strong> Challenge smart AI in this 3D perspective table tennis
-                        game. Smash, spin, and outplay your opponent to win the championship!</p>
-                    <span
-                        style="display: inline-block; background: #22c55e; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">New</span>
-                </div>
-            </a>
-
-            <!-- Cricket Master -->
-            <a href="CricketMaster/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/cricket_master_icon.png" alt="Cricket Master World Cup" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🏏 Cricket Master: World Cup</h3>
-                    <p><strong>Professional Batting Duel!</strong> Step onto the pitch and hit huge sixes in this
-                        intense 2D cricket challenge.</p>
-                    <span
-                        style="display: inline-block; background: #4d79ff; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">New</span>
-                </div>
-            </a>
-
-            <!-- Head Football -->
-            <a href="HeadFootball/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/head_football_icon.png" alt="Head Football" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>⚽ Head Football</h3>
-                    <p><strong>1v1 Football Action!</strong> Face off against smart AI in this fast-paced head football
-                        game. Jump and kick to score goals in this fan favorite.</p>
-                    <span
-                        style="display: inline-block; background: #4facfe; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-           
-
-            <!-- Brick Breaker -->
-            <a href="BrickBreaker/game.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/brickbreaker200.png" alt="Brick Breaker" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🧱 Brick Breaker</h3>
-                    <p><strong>Smash every brick!</strong> Control the paddle, bounce the ball and destroy all the
-                        colorful bricks. Classic arcade action with smooth 2D physics and multiple levels!</p>
-                    <span
-                        style="display: inline-block; background: #ff3399; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-           
-            
-
-
-            <!-- Block Puzzle Dash -->
-            <a href="BlockPuzzle/game.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/block_puzzle_thumbnail_1772348265891.png" alt="Block Puzzle Dash" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🧩 Block Puzzle Dash</h3>
-                    <p><strong>Train your brain!</strong> Clear rows and columns to score. Reach the target in 60
-                        seconds to level up. Unlimited levels of glassy, glowing cube-matching fun!</p>
-                    <span
-                        style="display: inline-block; background: #a855f7; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- New Game: Football 3D -->
-            <a href="Football3D/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/football3d.png" alt="Football 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>Football 3D</h3>
-                    <p><strong>Perfect your strike!</strong> Swipe to kick the ball and beat the moving goalkeeper.
-                        Challenge yourself to score as many goals as you can in this addictive 3D sports game!</p>
-                    <span
-                        style="display: inline-block; background: #4caf50; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- New Game: Basketball 3D -->
-            <a href="Basketball3D/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/basketball3d.png" alt="Basketball 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>Basketball 3D</h3>
-                    <p><strong>Master the perfect shot!</strong> Swipe to shoot hoops and aim for the global
-                        leaderboard. The more you score, the more the hoop moves to challenge your skills!</p>
-                    <span
-                        style="display: inline-block; background: #e65100; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-           
-
-
-            <!-- Game 3: Color Match 3D -->
-            <a href="ColorMatch/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/colormatch.png" alt="Color Match 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>Color Match 3D</h3>
-                    <p><strong>Fast reaction game!</strong> Tap the 3D cubes that match the target color before time
-                        runs out. Simple concept, challenging gameplay!</p>
-                    <span
-                        style="display: inline-block; background: #ffcc00; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px; color: #000;">Play</span>
-                </div>
-            </a>
-
-            <!-- Game 6: Sushi Match 3D -->
-            <a href="SushiMatch/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/sushimatch3d.png" alt="Sushi Match 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>寿司マッチ3D - Sushi Match</h3>
-                    <p><strong>Match delicious sushi!</strong> Test your memory in this addictive Japanese-themed 3D
-                        puzzle. Find matching sushi pairs before time runs out. Beautiful cherry blossom aesthetics!</p>
-                    <span
-                        style="display: inline-block; background: #c8102e; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- Game 7: Burger Stack 3D -->
-            <a href="BurgerStack/index.html" class="game-card">
-                <div class="card-img" style="
-    background: linear-gradient(135deg, #ff6b35, #d32f2f);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-">🍔</div>
-                <div class="card-info">
-                    <h3>🍔 Burger Stack 3D</h3>
-                    <p><strong>Stack the ultimate burger!</strong> Tap to drop ingredients and build the tallest burger
-                        tower. Perfect timing = perfect stacks! Addictive gameplay for all ages!</p>
-                    <span
-                        style="display: inline-block; background: #ff6b35; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- SkiFree Classic -->
-            <a href="SkiFree/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/Skyfigame200.png" alt="SkiFree Classic" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>⛷️ SkiFree Classic</h3>
-                    <p><strong>Retro skiing adventure!</strong> Dodge trees, jump ramps, and escape the Snow Monster in this classic arcade hit. Pure nostalgic fun!</p>
-                    <span
-                        style="display: inline-block; background: #29b6f6; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px; color: #fff;">Play</span>
-                </div>
-            </a>
-
-            
-
-            <!-- Game 9: Bottle Shoot 3D -->
-            <a href="BottleShoot3D/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/bottle200.png" alt="Bottle Shoot 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🍾 Bottle Shoot 3D</h3>
-                    <p><strong>Slingshot physics!</strong> Pull back the rubber band and knock down the glass bottles.
-                        Outsmart the AI in this challenging 3D physics game!</p>
-                    <span
-                        style="display: inline-block; background: #ff3366; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play
-                        vs AI</span>
-                </div>
-            </a>
-
-            <!-- Game: Pocket Golf vs AI -->
-            <a href="PocketGolf/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/pocket_golf_icon.png" alt="Pocket Golf vs AI" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>⛳ Pocket Golf vs AI</h3>
-                    <p><strong>Precision Golf Duel!</strong> Aim, set power, and sink the ball with fewer strokes than the smart AI. Navigate through walls and avoid dangerous spikes!</p>
-                    <span
-                        style="display: inline-block; background: #27ae60; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play vs AI</span>
-                </div>
-            </a>
-
-           
-
-
-            <!-- Game 9: Sudoku -->
-            <a href="Sudoku/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/sudoku200.png" alt="Sudoku" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🧩 Sudoku</h3>
-                    <p><strong>Classic Logic Puzzle!</strong> Unlimited levels of brain-teasing Sudoku. Fill the 9x9
-                        grid so every row, column, and box contains digits 1-9.</p>
-                    <span
-                        style="display: inline-block; background: #4facfe; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- Game 10: Word Search Explorer -->
-            <a href="WordSearch/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/wordsrarch200.png" alt="Word Search" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🔍 Word Search</h3>
-                    <p><strong>Find hidden words!</strong> Explore themes like Animals, Space, and Sports in this
-                        colorful puzzle. Swipe letters to connect words and train your brain!</p>
-                    <span
-                        style="display: inline-block; background: #FF5E62; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- Game 11: Ludo Master -->
-            <a href="Ludo/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/ludo200.png" alt="Ludo Master" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🎲 Ludo Master</h3>
-                    <p><strong>Classic Board Game!</strong> Play Ludo against smart AI opponents. Roll the dice,
-                        strategize your moves, and race your tokens to home. 2 or 4 player modes available!</p>
-                    <span
-                        style="display: inline-block; background: #f42c2c; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- Game 12: Bubble Shooter 3D -->
-            <a href="BubbleShooter/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/bubble_shooter.png" alt="Bubble Shooter 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>Bubble Shooter 3D</h3>
-                    <p><strong>Classic Arcade Fun!</strong> Aim and shoot bubbles to match 3 or more of the same color.
-                        Clear the board and master the levels in this beautiful 3D version!</p>
-                    <span
-                        style="display: inline-block; background: #2196f3; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-            <!-- NumMatch Logic Puzzle -->
-            <a href="NumMatch/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/numberballoon200.png" alt="NumMatch Logic Puzzle" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>🔢 NumMatch – Logic Number Puzzle Game</h3>
-                    <p><strong>Match numbers to clear the board!</strong> Find pairs equal to each other or summing to 10. A relaxing brain-training puzzle that grows harder each level!</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#4facfe,#00f2fe); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-            <!-- Family Tree Logic Puzzles -->
-            <a href="FamilyTree/index.html" class="game-card">
-                <div class="card-img">
-                    <img src="assets/familytree200.png" alt="Family Tree" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;background:#050510;">
-                </div>
-                <div class="card-info">
-                    <h3>🌳 Family Tree! – Logic Puzzles</h3>
-                    <p><strong>Boost your IQ!</strong> Flex your brain, train your focus, and elevate your memory. Unlock the intricate branches of different families with the help of clues.</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#10b981,#34d399); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">🔥 New</span>
-                </div>
-            </a>
-
-       
-
-        
-
-        <!-- Game 16: Chess Master -->
-            <a href="Chess/index.html" class="game-card">
-                 <div class="card-img">
-                    <img src="assets/chess200.png" alt="Stack 3D" loading="lazy" decoding="async" width="200" height="200" style="width:100%;height:100%;object-fit:contain;">
-                </div>
-                <div class="card-info">
-                    <h3>♟ Chess Master</h3>
-                    <p><strong>Classic Chess!</strong> Play vs AI or challenge a friend. Full rules — castling, en passant, promotion. Neon dark themed board, mobile friendly!</p>
-                    <span style="display: inline-block; background: linear-gradient(90deg,#4d79ff,#a78bfa); color: #fff; font-weight: bold; padding: 4px 12px; border-radius: 15px; font-size: 0.75em; margin-top: 8px;">Play</span>
-                </div>
-            </a>
-
-        </div>
+    <div class="as-list-section" id="search-results-list"></div>
+  </div>
+
+  <!-- GAMES TAB -->
+  <div id="tab-games" class="as-tab-panel active">
+
+    <!-- Featured hero carousel -->
+    <section style="padding-top:16px;">
+      <div class="as-section-header as-section">
+        <span class="as-section-title">🔥 Featured</span>
+      </div>
+      <div class="as-featured-scroll" id="featured-scroll"></div>
+      <div class="as-dots" id="featured-dots"></div>
     </section>
 
-    <section class="hero">
-        <h1>Welcome to free online games at PlayMix - Discover the Best Mix Game Collection Online for Non-Stop Gaming Fun.</h1>
-        <p>PlayMix Games is a free online game platform featuring casual popular games that run in your browser. No
-            downloads, no installs — just fun and fast gameplay you can enjoy on any device. Your Ultimate Mix Game
-            Destination for Fun, Action, and Endless Entertainment!</p>
-        <p>Explore our growing collection, from stacking challenges to matching puzzles, and discover new games added
-            regularly. We specialize in bringing console-grade physics and visuals directly to your browser using
-            cutting-edge WebGL technology.</p>
+    <!-- Category filter pills -->
+    <div class="as-category-bar" id="category-bar">
+      <button class="as-category-pill active" onclick="filterCategory('all',this)">All</button>
+      <button class="as-category-pill" onclick="filterCategory('action',this)">Action</button>
+      <button class="as-category-pill" onclick="filterCategory('sports',this)">Sports</button>
+      <button class="as-category-pill" onclick="filterCategory('puzzle',this)">Puzzle</button>
+      <button class="as-category-pill" onclick="filterCategory('board',this)">Board</button>
+      <button class="as-category-pill" onclick="filterCategory('quiz',this)">Quiz</button>
+    </div>
 
-        <p>Our mission is to provide instant-play experiences that require no downloads or installations, working
-            seamlessly across desktop, tablet, and mobile devices.</p>
+    <!-- Game sections (rendered by JS) -->
+    <div id="games-sections"></div>
 
-        <p>Each game in our collection is hand-crafted with a focus on smooth performance and addictive logic. From the
-            timing-based precision of <em>Stack 3D</em> to the tactical maneuvering of <em>Traffic Jam</em>, we offer a
-            diverse range of puzzles and arcade challenges. Our platform is built using pure JavaScript and Three.js,
-            ensuring that you get the fastest load times and the most responsive controls available on the modern web.
-        </p>
+  </div>
 
-        <div class="tech-stack"
-            style="margin-top: 40px; padding: 30px; border-left: 4px solid var(--accent-color); background: var(--card-bg);">
-            <h2 style="font-size: 1.5rem; margin-bottom: 15px;">Advanced WebGL Technology</h2>
-            <p>We leverage the latest browser capabilities to provide hardware-accelerated 3D graphics. Unlike
-                traditional browser games that rely on heavy plugins, PlayMixGames runs directly on your GPU through
-                WebGL 2.0. This allows for realistic lighting, complex physics simulations, and a high-frame-rate
-                experience that was previously only possible in native desktop software.</p>
+  <!-- REELS TAB -->
+  <div id="tab-reels" class="as-tab-panel">
+    <div id="reels-sections" style="padding-top:16px;"></div>
+  </div>
+
+</main>
+
+<!-- BOTTOM TAB BAR removed per user request -->
+
+<!-- SEO content — original preserved for Google indexing -->
+<section class="as-seo">
+  <h1>Welcome to free online games at PlayMix - Discover the Best Mix Game Collection Online for Non-Stop Gaming Fun.</h1>
+  <p>PlayMix Games is a free online game platform featuring casual popular games that run in your browser. No downloads, no installs — just fun and fast gameplay you can enjoy on any device. Your Ultimate Mix Game Destination for Fun, Action, and Endless Entertainment!</p>
+  <p>Explore our growing collection, from stacking challenges to matching puzzles, and discover new games added regularly. We specialize in bringing console-grade physics and visuals directly to your browser using cutting-edge WebGL technology.</p>
+  <p>Our mission is to provide instant-play experiences that require no downloads or installations, working seamlessly across desktop, tablet, and mobile devices.</p>
+  <p>Each game in our collection is hand-crafted with a focus on smooth performance and addictive logic. From the timing-based precision of <em>Stack 3D</em> to the tactical maneuvering of <em>Traffic Jam</em>, we offer a diverse range of puzzles and arcade challenges. Our platform is built using pure JavaScript and Three.js, ensuring that you get the fastest load times and the most responsive controls available on the modern web.</p>
+  <h2>Advanced WebGL Technology</h2>
+  <p>We leverage the latest browser capabilities to provide hardware-accelerated 3D graphics. Unlike traditional browser games that rely on heavy plugins, PlayMixGames runs directly on your GPU through WebGL 2.0. This allows for realistic lighting, complex physics simulations, and a high-frame-rate experience that was previously only possible in native desktop software.</p>
+  <h2>Commitment to Fair Gaming</h2>
+  <p>At PlayMixGames, we are committed to providing a clean, distraction-free environment. Every game is tested for accessibility and performance across various hardware configurations, from high-end workstations to entry-level mobile devices.</p>
+  <h2>Latest Updates</h2>
+  <p>January 26, 2026: All Games Enhanced with Dynamic Ads. Every third game completion now rewards ads, plus banner ads at the bottom of every game for a mobile-app-like experience!</p>
+  <p>January 24, 2026: Color Match 3D Joined the Library! We've just launched our newest reaction-based puzzler.</p>
+  <p>January 20, 2026: Multi-Device Synchronization. Our core engine has been updated to support seamless high-DPI scaling for the new generation of mobile browsers.</p>
+</section>
+
+<!-- Native ad -->
+<section style="max-width:1200px;margin:24px auto;padding:0 16px;">
+  <div id="container-63208462c4f9ec6018b4ea2e1903489d"></div>
+</section>
+
+<!-- Footer -->
+<footer class="as-footer">
+  <div class="as-footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="as-footer-copy">© 2026 PlayMixGames. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="games-data.js"></script>
+<script>
+// ═══════════════════════════════════════════════════
+//  App Store UI Renderer
+// ═══════════════════════════════════════════════════
+
+let activeTab = 'games';
+let activeCategory = 'all';
+
+const BADGE_MAP = {
+  new:     '<span class="as-badge as-badge-new">✦ New</span>',
+  hot:     '<span class="as-badge as-badge-hot">🔥 Hot</span>',
+  trend:   '<span class="as-badge as-badge-trend">📈 Trending</span>',
+  updated: '<span class="as-badge as-badge-updated">↑ Updated</span>',
+  '':      ''
+};
+
+function iconHTML(item, size) {
+  const r = size === 'sm' ? 'as-small-card-icon' : 'as-list-icon';
+  if (item.icon) return `<div class="${r}"><img src="${item.icon}" alt="${item.name}" loading="lazy" onerror="this.parentElement.innerHTML='<span style=font-size:2rem>${item.emoji||'🎮'}</span>'"></div>`;
+  return `<div class="${r}"><span style="font-size:${size==='sm'?'2.4':'1.6'}rem">${item.emoji||'🎮'}</span></div>`;
+}
+
+// ── Featured carousel ──────────────────────────────
+function renderFeatured() {
+  const scroll = document.getElementById('featured-scroll');
+  const dots   = document.getElementById('featured-dots');
+  if (!scroll) return;
+  const data = window.PMG_DATA.featured;
+
+  scroll.innerHTML = data.map((f,i) => `
+    <a href="${f.href}" class="as-featured-card" id="fc-${i}">
+      <div class="as-featured-bg" style="background:${f.gradient};"></div>
+      <div class="as-featured-overlay"></div>
+      <div class="as-featured-content">
+        <div class="as-featured-tag">${f.tag}</div>
+        <div class="as-featured-name">${f.emoji ? f.emoji+' ' : ''}${f.name}</div>
+        <div class="as-featured-desc">${f.desc}</div>
+        <span class="as-get-btn">Play Free</span>
+      </div>
+    </a>
+  `).join('');
+
+  dots.innerHTML = data.map((_,i)=>`<div class="as-dot${i===0?' active':''}" id="dot-${i}"></div>`).join('');
+
+  // Dot update on scroll
+  let ticking = false;
+  scroll.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const w = scroll.clientWidth;
+      const idx = Math.round(scroll.scrollLeft / w);
+      dots.querySelectorAll('.as-dot').forEach((d,i) => d.classList.toggle('active', i===idx));
+      ticking = false;
+    });
+  });
+}
+
+// ── Horizontal scroll section ──────────────────────
+function renderSection(sec) {
+  return `
+    <div class="as-section">
+      <div class="as-section-header">
+        <span class="as-section-title">${sec.title}</span>
+      </div>
+    </div>
+    <div class="as-row-scroll">
+      ${sec.items.map(item => `
+        <a href="${item.href}" class="as-small-card">
+          ${iconHTML(item,'sm')}
+          <div class="as-small-card-name">${item.name}</div>
+          <div class="as-small-card-genre">${item.genre}${item.badge ? ' · '+BADGE_MAP[item.badge] : ''}</div>
+        </a>
+      `).join('')}
+    </div>
+    <div class="as-divider"></div>
+  `;
+}
+
+// ── List-style top chart ───────────────────────────
+function renderTopList(items, limit) {
+  return items.slice(0, limit).map((item, i) => `
+    <a href="${item.href}" class="as-list-item">
+      <span class="as-list-rank">${i+1}</span>
+      ${iconHTML(item,'list')}
+      <div class="as-list-info">
+        <div class="as-list-name">${item.name}</div>
+        <div class="as-list-genre">${item.genre}</div>
+        <div class="as-list-rating">
+          <span class="as-list-stars">★★★★★</span>
+          <span>Free</span>
         </div>
+      </div>
+      <div class="as-list-action">
+        <button class="as-play-btn">PLAY</button>
+      </div>
+    </a>
+  `).join('');
+}
 
-        <div class="mission-growth" style="margin-top: 30px;">
-            <h2 style="font-size: 1.5rem; margin-bottom: 15px;">Commitment to Fair Gaming</h2>
-            <p>At PlayMixGames, we are committed to providing a clean, distraction-free environment. Every game is
-                tested for accessibility and performance across various hardware configurations, from high-end
-                workstations to entry-level mobile devices. We believe that professional gaming should be inclusive and
-                accessible to everyone with a browser.</p>
+// ── Render all sections ────────────────────────────
+// Category → section ids mapping for Top Charts filtering
+const CATEGORY_MAP = {
+  all:    ['action','sports','puzzle','board','quiz'],
+  action: ['action'],
+  sports: ['sports'],
+  puzzle: ['puzzle'],
+  board:  ['board'],
+  quiz:   ['quiz'],
+};
+
+function getTopItemsForCategory(cat) {
+  const data = window.PMG_DATA.sections;
+  const ids = CATEGORY_MAP[cat] || CATEGORY_MAP['all'];
+  const items = [];
+  ids.forEach(id => {
+    const sec = data.find(s => s.id === id);
+    if (sec) items.push(...sec.items);
+  });
+  return items;
+}
+
+function renderSections() {
+  const data = window.PMG_DATA.sections;
+  const gamesSections = data.filter(s => s.tab === 'games');
+  const reelsSections = data.filter(s => s.tab === 'reels');
+
+  // Games tab
+  const gEl = document.getElementById('games-sections');
+  if (gEl) {
+    const topItems = getTopItemsForCategory('all');
+    let html = `
+      <div class="as-section" style="margin-top:24px;">
+        <div class="as-section-header">
+          <span class="as-section-title" id="top-charts-title">🏆 Top Charts</span>
         </div>
-    </section>
+      </div>
+      <div class="as-list-section" id="top-charts-list">${renderTopList(topItems, 10)}</div>
+      <div class="as-divider"></div>
+    `;
+    html += gamesSections.map(s => renderSection(s)).join('');
+    gEl.innerHTML = html;
+  }
 
-    <section class="updates" style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px;">Latest
-            Updates</h2>
-        <div class="update-item" style="margin-bottom: 20px;">
-            <p style="color: var(--accent-color); font-size: 0.8rem; text-transform: uppercase;">January 26, 2026</p>
-            <h3 style="font-size: 1.1rem;">All Games Enhanced with Dynamic Ads</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Every third game completion now rewards ads, plus banner ads at
-                the bottom of every game for a mobile-app-like experience!</p>
-        </div>
-        <div class="update-item" style="margin-bottom: 20px;">
-            <p style="color: var(--accent-color); font-size: 0.8rem; text-transform: uppercase;">January 24, 2026</p>
-            <h3 style="font-size: 1.1rem;">Color Match 3D Joined the Library!</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">We've just launched our newest reaction-based puzzler. Test your
-                focus and see if you can top the global charts!</p>
-        </div>
-        <div class="update-item">
-            <p style="color: var(--accent-color); font-size: 0.8rem; text-transform: uppercase;">January 20, 2026</p>
-            <h3 style="font-size: 1.1rem;">Multi-Device Synchronization</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Our core engine has been updated to support seamless high-DPI
-                scaling for the new generation of mobile browsers.</p>
-        </div>
-    </section>
+  // Reels tab
+  const rEl = document.getElementById('reels-sections');
+  if (rEl) {
+    rEl.innerHTML = reelsSections.map(s => renderSection(s)).join('');
+  }
+}
 
-    <!-- Adsterra Native Banner Ad -->
-    <section style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-        <div id="container-63208462c4f9ec6018b4ea2e1903489d"></div>
-    </section>
+// ── Tab switching ──────────────────────────────────
+window.switchTab = function(tab, btnEl, mobBtnId) {
+  activeTab = tab;
 
-    <footer>
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="terms.html">Terms of Service</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <p class="copyright">&copy; 2026 PlayMixGames. All rights reserved. <span id="app-version"
-                style="opacity: 0.5; font-size: 0.7em;"></span></p>
-    </footer>
+  // Show/hide panels
+  document.querySelectorAll('.as-tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-'+tab)?.classList.add('active');
 
-    <!-- Service Worker Cleanup Script (Fixes Firefox/Chrome Caching Issues) -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(function (registrations) {
-                for (let registration of registrations) {
-                    registration.unregister();
-                    console.log('Old Service Worker Unregistered');
-                }
-            });
-        }
+  // Desktop tabs
+  document.querySelectorAll('.as-desktop-tab-btn').forEach(b => b.classList.remove('active'));
+  if (btnEl) btnEl.classList.add('active');
+  else document.getElementById('dtab-'+tab)?.classList.add('active');
 
-        // Clear all caches to force the new Portal UI
-        if ('caches' in window) {
-            caches.keys().then(function (names) {
-                for (let name of names) caches.delete(name);
-                console.log('Old Game Caches Cleared');
-            });
-        }
+  // Mobile tab bar
+  document.querySelectorAll('.as-tab-btn').forEach(b => b.classList.remove('active'));
+  if (mobBtnId) document.getElementById(mobBtnId)?.classList.add('active');
+  else document.getElementById('mob-'+tab)?.classList.add('active');
 
-        // NOTE: Removed hard-reload sessionStorage hack - it was hurting performance
-        // by forcing an extra full page reload on every fresh visit.
-    </script>
-    <script>
-        const NEWS_KEYWORDS = [
-            'News', 'WeatherMap', 'WorldTour', 'PersonalityTest', 'AIReadiness', 'TravelDestiny', 'AnimeArchetype', 'LeadershipStyle', 'HiddenTalent'
-        ];
-        const REELS_KEYWORDS = [
-            'Reels'
-        ];
+  // Clear search
+  const si = document.getElementById('global-search');
+  if (si) si.value = '';
+  document.getElementById('search-results')?.classList.remove('active');
+  document.getElementById('tab-games')?.classList.toggle('active', tab==='games');
+  document.getElementById('tab-reels')?.classList.toggle('active', tab==='reels');
+};
 
-        let activeTab = 'games'; // default
+// ── Category filter — updates Top Charts list only ──
+window.filterCategory = function(cat, btn) {
+  activeCategory = cat;
+  // Update active pill
+  document.querySelectorAll('.as-category-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
 
-        function getCardType(card) {
-            const href = card.getAttribute('href') || '';
-            if (NEWS_KEYWORDS.some(k => href.includes(k))) return 'news';
-            if (REELS_KEYWORDS.some(k => href.includes(k))) return 'reels';
-            return 'games';
-        }
+  // Re-render only the Top Charts list with filtered items
+  const list  = document.getElementById('top-charts-list');
+  const title = document.getElementById('top-charts-title');
+  if (!list) return;
 
-        // ── Slider positioning ────────────────────────────────────
-        function positionSlider(tab) {
-            const bar    = document.getElementById('pmg-tab-bar');
-            const btnG   = document.getElementById('tab-btn-games');
-            const btnR   = document.getElementById('tab-btn-reels');
-            const btnN   = document.getElementById('tab-btn-news');
-            const slider = document.getElementById('pmg-tab-slider');
-            if (!slider || !bar) return;
-            
-            let btn;
-            if (tab === 'games') btn = btnG;
-            else if (tab === 'reels') btn = btnR;
-            else btn = btnN;
+  const labels = { all:'🏆 Top Charts', action:'🎮 Top Action', sports:'⚽ Top Sports', puzzle:'🧩 Top Puzzles', board:'♟ Top Board Games', quiz:'🧠 Top Quizzes' };
+  if (title) title.textContent = labels[cat] || '🏆 Top Charts';
 
-            const barRect = bar.getBoundingClientRect();
-            const btnRect = btn.getBoundingClientRect();
+  const items = getTopItemsForCategory(cat);
+  list.innerHTML = renderTopList(items, 10);
+};
 
-            // Set width and left based on active button
-            slider.style.width = btnRect.width + 'px';
-            slider.style.left  = (btnRect.left - barRect.left) + 'px';
-        }
+// ── Search ─────────────────────────────────────────
+window.onSearch = function(val) {
+  const q = val.trim().toLowerCase();
+  const searchWrap = document.getElementById('search-results');
+  const list = document.getElementById('search-results-list');
+  const title = document.getElementById('search-results-title');
+  const mainContent = document.getElementById('tab-games');
+  const reelsContent = document.getElementById('tab-reels');
 
-        window.switchPortalTab = function (tab) {
-            activeTab = tab;
+  if (!q) {
+    searchWrap.classList.remove('active');
+    mainContent.classList.toggle('active', activeTab==='games');
+    reelsContent.classList.toggle('active', activeTab==='reels');
+    return;
+  }
 
-            const btns = {
-                games:  document.getElementById('tab-btn-games'),
-                reels:  document.getElementById('tab-btn-reels'),
-                news:   document.getElementById('tab-btn-news')
-            };
-            const cnts = {
-                games:  document.getElementById('tab-count-games'),
-                reels:  document.getElementById('tab-count-reels'),
-                news:   document.getElementById('tab-count-news')
-            };
-            const searchInput = document.getElementById('game-search');
+  searchWrap.classList.add('active');
+  mainContent.classList.remove('active');
+  reelsContent.classList.remove('active');
 
-            // Reset all
-            Object.keys(btns).forEach(key => {
-                if (!btns[key]) return;
-                const active = (key === tab);
-                btns[key].style.color = active ? '#fff' : 'rgba(255,255,255,0.5)';
-                if (cnts[key]) {
-                    cnts[key].style.background = active ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)';
-                    cnts[key].style.color = active ? '#fff' : 'rgba(255,255,255,0.45)';
-                }
-            });
+  const all = window.PMG_DATA.sections.flatMap(s => s.items);
+  const results = all.filter(item =>
+    item.name.toLowerCase().includes(q) || item.genre.toLowerCase().includes(q)
+  );
 
-            positionSlider(tab);
+  title.textContent = results.length ? `Results for "${val}"` : 'No results found';
+  list.innerHTML = results.length
+    ? renderTopList(results, 20)
+    : `<div class="as-search-empty"><div class="icon">🔍</div><h3>No games found</h3><p>Try a different keyword</p></div>`;
+};
 
-            // Clear search when switching tabs
-            if (searchInput) {
-                searchInput.value = '';
-                let placeholder = 'Search 100+ games...';
-                if (tab === 'reels') placeholder = 'Search wisdom & facts...';
-                if (tab === 'news') placeholder = 'Search news & weather...';
-                searchInput.setAttribute('placeholder', placeholder);
-            }
+// ── Init ───────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  renderFeatured();
+  renderSections();
 
-            // Update section title
-            const title = document.querySelector('.section-title');
-            if (title) {
-                if (tab === 'games') title.textContent = '🎮 Play Now – Choose Your Game';
-                else if (tab === 'reels') title.textContent = '📜 Wisdom – Discover Secrets';
-                else title.textContent = '🌐 Discover – News & Weather';
-            }
+  // Cache buster for old service workers
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister()));
+  }
+  if ('caches' in window) {
+    caches.keys().then(names => names.forEach(n => caches.delete(n)));
+  }
+});
 
-            applyFilter('');
-        };
-
-        function applyFilter(query) {
-            const gameGrid = document.getElementById('main-game-grid');
-            if (!gameGrid) return;
-            const allCards = gameGrid.querySelectorAll('.game-card');
-            
-            let visibleCount = 0;
-            allCards.forEach(card => {
-                const type = getCardType(card);
-                
-                // 1) Match tab
-                const matchesTab = (type === activeTab);
-
-                // 2) Match search
-                const titleText  = (card.querySelector('h3')?.innerText || '').toLowerCase();
-                const descText   = (card.querySelector('p')?.innerText || '').toLowerCase();
-                const matchesSearch = !query || titleText.includes(query) || descText.includes(query);
-
-                if (matchesTab && matchesSearch) {
-                    card.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-
-            // Update global "Total Games Available" header counter depending on tab
-            const countDisplay = document.getElementById('total-games-count');
-            if (countDisplay) countDisplay.innerText = visibleCount;
-
-            // Handle Empty State
-            let emptyMsg = document.getElementById('search-empty-msg');
-            if (visibleCount === 0) {
-                if (!emptyMsg) {
-                    emptyMsg = document.createElement('div');
-                    emptyMsg.id = 'search-empty-msg';
-                    emptyMsg.style.gridColumn = '1 / -1';
-                    emptyMsg.style.textAlign = 'center';
-                    emptyMsg.style.padding = '100px 20px';
-                    emptyMsg.style.color = 'rgba(255,255,255,0.4)';
-                    emptyMsg.innerHTML = `
-                        <div style="font-size: 3rem; margin-bottom: 20px;">🔍</div>
-                        <h3>No results found for "${query}"</h3>
-                        <p>Try a different keyword.</p>
-                    `;
-                    gameGrid.appendChild(emptyMsg);
-                } else {
-                    emptyMsg.querySelector('h3').innerText = `No results found for "${query}"`;
-                }
-            } else {
-                if (emptyMsg) emptyMsg.remove();
-            }
-            
-            // Re-trigger layout calculation
-            positionSlider(activeTab);
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const gameGrid  = document.getElementById('main-game-grid');
-            const allCards  = gameGrid.querySelectorAll('.game-card');
-            const searchInput = document.getElementById('game-search');
-            
-            const cntG = document.getElementById('tab-count-games');
-            const cntR = document.getElementById('tab-count-reels');
-            const cntN = document.getElementById('tab-count-news');
-            
-            // Tab Setups
-            if (cntN) cntN.innerText = "Daily";
-            
-            let gamesCount = 0;
-            let reelsCount = 0;
-            allCards.forEach(card => { 
-                const cType = getCardType(card);
-                if(cType === 'games') gamesCount++; 
-                if(cType === 'reels') reelsCount++;
-            });
-            if (cntG) cntG.innerText = gamesCount;
-            if (cntR) cntR.innerText = reelsCount;
-
-            // Tie search input
-            if (searchInput) {
-                searchInput.addEventListener('input', (e) => {
-                    applyFilter(e.target.value.toLowerCase().trim());
-                });
-            }
-
-            // Window resize reflow slider
-            window.addEventListener('resize', () => {
-                positionSlider(activeTab);
-            });
-
-            // Kick off
-            switchPortalTab('games');
-        });
-    </script>
-    <script>
-        window.addEventListener('load', function () {
-            var loader = document.getElementById('pmg-loader');
-            if (loader) {
-                var fill = loader.querySelector('.pmg-bar-fill');
-                if (fill) fill.style.width = '100%';
-                setTimeout(function () { loader.classList.add('hidden'); }, 300);
-            }
-        });
-    </script>
+window.addEventListener('load', () => {
+  const loader = document.getElementById('pmg-loader');
+  if (loader) {
+    const fill = loader.querySelector('.pmg-bar-fill');
+    if (fill) fill.style.width = '100%';
+    setTimeout(() => loader.classList.add('hidden'), 300);
+  }
+});
+</script>
 </body>
-
 </html>
