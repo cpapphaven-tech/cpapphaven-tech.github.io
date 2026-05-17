@@ -89,7 +89,6 @@ function _executeSystemSync(hardSync = false) {
         targetDoc = window.top ? window.top.document : document;
         targetWindow = window.top ? window.top : window;
     } catch(e) {
-        // Fallback for cross-origin iframes (should not happen on playmix)
         targetDoc = document;
         targetWindow = window;
     }
@@ -160,23 +159,6 @@ function _executeSystemSync(hardSync = false) {
             doc.open();
             doc.write(htmlContent);
             doc.close();
-        }
-
-        // 📱 Robust Mobile Pinning on Parent Document
-        if (targetWindow.visualViewport) {
-            const pinBottomAd = () => {
-                if (targetWindow.innerWidth <= 768) {
-                    bottomContainer.style.bottom = 'auto';
-                    // Pin strictly to the visual bottom minus 50px height
-                    bottomContainer.style.top = Math.max(0, (window.visualViewport.height - 50)) + 'px';
-                } else {
-                    bottomContainer.style.top = 'auto';
-                    bottomContainer.style.bottom = '0';
-                }
-            };
-            window.visualViewport.addEventListener('resize', pinBottomAd);
-            window.visualViewport.addEventListener('scroll', pinBottomAd);
-            pinBottomAd(); // Fire initially
         }
     }
 
