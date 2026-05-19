@@ -103,12 +103,6 @@
 
     <script type="module" src="../analytics.js"></script>
     <script src="../ads.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            if(typeof prepSystem === 'function') prepSystem();
-        });
-    </script>
 </head>
 <body>
     <!-- ===== PlayMixGames Universal Loader ===== -->
@@ -223,6 +217,9 @@
         </div>
     </section>
 
+    <!-- Bottom Ad Container -->
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
     <script src="game.js"></script>
     <script>
         window.addEventListener('load', function () {
@@ -232,6 +229,10 @@
                 if (fill) fill.style.width = '100%';
                 setTimeout(function () { loader.classList.add('hidden'); }, 300);
             }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
         });
     </script>
 </body>

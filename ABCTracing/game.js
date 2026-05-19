@@ -271,8 +271,5 @@ function showSuccess() {
 }
 
 // Support functions globally for ads/analytics
-window.prepSystem = function() {
-    console.log("Game Prepped");
-}
 
 window.onload = init;
