@@ -1,11 +1,9 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
-    { name: "Hidden Word Finder", tag: "🔥 New Game", desc: "Drag to connect letters and spell the hidden word!", href: "HiddenWord/index.html", gradient: "linear-gradient(135deg,#064e3b,#4ade80,#064e3b)", icon: "🔎", badge: "new" },
-    { name: "Dot Connect Puzzle", tag: "🎮 Top Rated", desc: "Link same-colored dots to clear the board before time runs out!", href: "DotConnect/index.html", gradient: "linear-gradient(135deg,#0a0a18,#3b82f6,#8b5cf6)", icon: "🔵", badge: "hot" },
-    { name: "Striker League Soccer", tag: "⚽ Sports Pick", desc: "Tactical 2D football — outsmart the AI and lift the trophy!", href: "StrikerLeague/index.html", gradient: "linear-gradient(135deg,#052e16,#10b981,#34d399)", icon: "⚽", badge: "trend" },
-    { name: "Balloon Ninja Slice", tag: "🔥 Trending", desc: "Swipe to slash flying balloons and dodge the bombs!", href: "NeonSlicer/index.html", gradient: "linear-gradient(135deg,#1a0533,#bf5af2,#ff453a)", icon: "🗡️", badge: "hot" },
-    { name: "Highway Rush", tag: "🏎️ Fast & Fun", desc: "Dodge traffic at breakneck speed on a neon highway!", href: "HighwayRush/index.html", gradient: "linear-gradient(135deg,#1c0a00,#ff9f0a,#ff453a)", icon: "🏎️", badge: "trend" },
+     { name: "Word Crossword", tag: "🔥 New Game", desc: "Master the Modern Word Crossword!", href: "WordCrossword/index.html", gradient: "linear-gradient(135deg,#064e3b,#4ade80,#064e3b)", icon: "🔎", badge: "new", image: "img/wordcrossword600.png" },
+    { name: "Crossy Road", tag: "🏎️ Fast & Fun", desc: "Navigate the sunny roads and collect number balloons", href: "CrossyRoad/index.html", gradient: "linear-gradient(135deg,#1c0a00,#ff9f0a,#ff453a)", icon: "🏎️", badge: "trend", image: "img/crossroad600.png" },
+    { name: "Balloon Ninja Slice", tag: "🔥 Trending", desc: "Swipe to slash flying balloons and dodge the bombs!", href: "NeonSlicer/index.html", gradient: "linear-gradient(135deg,#1a0533,#bf5af2,#ff453a)", icon: "🗡️", badge: "hot", image: "img/ninja600.png" },
   ],
 
   // Sections rendered as horizontal scroll rows

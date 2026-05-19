@@ -184,18 +184,23 @@ function renderFeatured() {
   if (!scroll) return;
   const data = window.PMG_DATA.featured;
 
-  scroll.innerHTML = data.map((f,i) => `
-    <a href="${f.href}" class="as-featured-card" id="fc-${i}">
-      <div class="as-featured-bg" style="background:${f.gradient};"></div>
-      <div class="as-featured-overlay"></div>
-      <div class="as-featured-content">
-        <div class="as-featured-tag">${f.tag}</div>
-        <div class="as-featured-name">${f.emoji ? f.emoji+' ' : ''}${f.name}</div>
-        <div class="as-featured-desc">${f.desc}</div>
-        <span class="as-get-btn">Play Free</span>
-      </div>
-    </a>
-  `).join('');
+  scroll.innerHTML = data.map((f,i) => {
+    const bgStyle = f.image 
+      ? `background: url(${f.image}) center/cover no-repeat;` 
+      : `background: ${f.gradient};`;
+    return `
+      <a href="${f.href}" class="as-featured-card" id="fc-${i}">
+        <div class="as-featured-bg" style="${bgStyle}"></div>
+        <div class="as-featured-overlay"></div>
+        <div class="as-featured-content">
+          <div class="as-featured-tag">${f.tag}</div>
+          <div class="as-featured-name">${f.emoji ? f.emoji+' ' : ''}${f.name}</div>
+          <div class="as-featured-desc">${f.desc}</div>
+          <span class="as-get-btn">Play Free</span>
+        </div>
+      </a>
+    `;
+  }).join('');
 
   dots.innerHTML = data.map((_,i)=>`<div class="as-dot${i===0?' active':''}" id="dot-${i}"></div>`).join('');
 
