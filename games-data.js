@@ -107,6 +107,7 @@ window.PMG_DATA = {
         { name: "Health Hero",      genre: "Quiz",     icon: "assets/healthhro200.png",          href: "HealthHeroTrivia/index.html",    badge: "new",  emoji: "🏥" },
         { name: "English Grammar",  genre: "Learning", icon: "assets/Englishgrammquiz200.png",   href: "EnglishGrammarQuiz/index.html",  badge: "new",  emoji: "📚" },
         { name: "Nutrition Quiz",   genre: "Health",   icon: "",                                 href: "NutritionQuiz/index.html",       badge: "new",  emoji: "🥗" },
+        { name: "ABC Tracing",      genre: "Learning", icon: "",                                 href: "ABCTracing/index.html",          badge: "new",  emoji: "✍️" },
         { name: "Math Quiz",        genre: "Learning", icon: "assets/Mathlearningquiz200.png",   href: "DailyMathEquator/index.html",    badge: "new",  emoji: "🔢" },
         { name: "Typing Speed",     genre: "Skill",    icon: "assets/typingtest200.png",         href: "TypingSpeedTest/index.html",     badge: "new",  emoji: "⌨️" },
       ]

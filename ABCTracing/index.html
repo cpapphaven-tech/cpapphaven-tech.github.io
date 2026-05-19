@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ABC Tracing - Learn to Write ABC & Numbers | PlayMixGames</title>
+    <meta name="description" content="Learn to write uppercase & lowercase English alphabet letters, numbers 1-10, and simple words (animals, fruits, family) with this fun educational tracing game.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="abc tracing, learn to write, alphabet tracing, uppercase and lowercase, tracing words, preschool game, kids educational game">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ABCトレイシング - 子供向け教育ゲーム">
+    <meta name="twitter:description:ja" content="英語のアルファベット（大文字・小文字）、1〜10の数字、簡単な単語の書き方を学べる楽しい教育ゲーム。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Trazado ABC - Juego educativo para niños">
+    <meta name="twitter:description:es" content="Aprende a escribir el alfabeto en mayúsculas y minúsculas, números y palabras con este divertido juego.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Traçage ABC - Jeu éducatif pour enfants">
+    <meta name="twitter:description:fr" content="Apprenez à écrire l'alphabet en majuscules et minuscules, les chiffres et des mots avec ce jeu.">
+
+    <meta property="og:title" content="ABC Tracing - Learn to Write ABC & Numbers">
+    <meta property="og:description" content="Learn to write uppercase & lowercase English alphabet letters, numbers 1-10, and simple words (animals, fruits, family) with this fun educational tracing game.">
+    <meta property="og:url" content="https://playmixgames.in/ABCTracing/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/ABCTracing/index.html" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ABC Tracing",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Learn to write uppercase & lowercase English alphabet letters, numbers 1-10, and simple words (animals, fruits, family) with this fun educational tracing game."
+    }
+    </script>
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script src="../sidebar.js"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if(typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</head>
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">ABC Tracing</h1>
+        <div class="level-display">
+            <span id="current-mode">ABC</span>
+        </div>
+    </header>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        
+        <!-- Main Menu -->
+        <div id="main-menu" class="screen active">
+            <div class="menu-buttons">
+                <button class="menu-btn" data-target="abc-upper-select">🔠 Upper ABC</button>
+                <button class="menu-btn" data-target="abc-lower-select">🔡 Lower abc</button>
+                <button class="menu-btn" data-target="num-select">🔢 123s</button>
+                <button class="menu-btn" data-target="word-select">📝 Words</button>
+            </div>
+            <div class="character-mascot">✏️</div>
+        </div>
+
+        <!-- ABC Upper Selection -->
+        <div id="abc-upper-select" class="screen">
+            <div class="grid-container" id="abc-upper-grid"></div>
+            <button class="back-to-menu">⬅ Back</button>
+        </div>
+
+        <!-- ABC Lower Selection -->
+        <div id="abc-lower-select" class="screen">
+            <div class="grid-container" id="abc-lower-grid"></div>
+            <button class="back-to-menu">⬅ Back</button>
+        </div>
+
+        <!-- Num Selection -->
+        <div id="num-select" class="screen">
+            <div class="grid-container" id="num-grid"></div>
+            <button class="back-to-menu">⬅ Back</button>
+        </div>
+
+        <!-- Word Selection -->
+        <div id="word-select" class="screen">
+            <div class="grid-container word-grid-container" id="word-grid"></div>
+            <button class="back-to-menu">⬅ Back</button>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="gameplay-screen" class="screen">
+            <div class="game-header">
+                <button id="back-to-select" class="icon-btn">⬅</button>
+                <div id="current-letter-display">A</div>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="drawing-canvas"></canvas>
+                <div id="guidance-overlay"></div>
+                <div id="feedback-message"></div>
+            </div>
+
+            <div class="word-association" id="word-association">
+                A is for Apple 🍎
+            </div>
+
+            <div class="controls">
+                <button id="clear-btn" class="control-btn">🧹 Clear</button>
+                <button id="finish-btn" class="control-btn primary">Finish ➡</button>
+            </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div id="success-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 10px;">Great Job!</h1>
+                <p style="color: #666; margin-bottom: 20px;">You learned <span id="success-letter">A</span>!</p>
+                <div class="stars" style="font-size: 3rem; margin-bottom: 20px;">⭐ ⭐ ⭐</div>
+                <button id="next-letter-btn" class="game-btn">Next Letter</button>
+                <button id="replay-btn" class="game-btn secondary">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEO: About Game & How to Play Section -->
+    <section id="game-info" style="background: #f8f9fa; padding: 40px 20px; margin-top: 40px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; color: #333; margin-bottom: 20px;">✍️ About ABC Tracing</h2>
+            <p style="font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 30px;">
+                Play ABC Tracing, the perfect educational game for preschoolers to practice handwriting! Watch your toddler learn and evolve with this fun, intuitive, and highly interactive web app.
+                Master writing the entire English alphabet (both uppercase ABC and lowercase abc), numbers 1-10, and begin tracing full words categorized into animals, fruits, and family.
+            </p>
+
+            <h3 style="font-size: 1.5rem; color: #333; margin-bottom: 15px;">🎮 How to Play</h3>
+            <ul style="font-size: 1rem; color: #555; text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+                <li>✅ <strong>Select Category:</strong> Choose from Uppercase Letters, Lowercase Letters, Numbers, or Words.</li>
+                <li>✅ <strong>Trace:</strong> Follow the dashed outline using your finger (on mobile) or mouse to draw the shape.</li>
+                <li>✅ <strong>Learn & Associate:</strong> Each letter comes with a fun word association to build vocabulary (e.g., "A is for Apple 🍎").</li>
+                <li>✅ <strong>Complete Words:</strong> Challenge yourself by tracing full words like "CAT", "BANANA", or "MOM"!</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+</html>
