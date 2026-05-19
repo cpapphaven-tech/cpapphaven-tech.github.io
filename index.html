@@ -186,7 +186,7 @@ function renderFeatured() {
 
   scroll.innerHTML = data.map((f,i) => {
     const bgStyle = f.image 
-      ? `background: url(${f.image}) center/cover no-repeat;` 
+      ? `background: url(${f.image}) center/100% 100% no-repeat;` 
       : `background: ${f.gradient};`;
     return `
       <a href="${f.href}" class="as-featured-card" id="fc-${i}">
