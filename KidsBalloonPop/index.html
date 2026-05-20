@@ -128,7 +128,7 @@
 
     .hud-pill span.val { color: #ff6b9d; font-size: 1.2rem; }
 
-    #sound-btn, #lang-btn {
+    #sound-btn {
       background: rgba(255,255,255,0.85);
       border: none;
       border-radius: 50%;
@@ -138,6 +138,22 @@
       box-shadow: 0 3px 10px rgba(0,0,0,0.12);
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
+    }
+
+    #lang-btn {
+      background: rgba(255,255,255,0.85);
+      border: none;
+      border-radius: 50px;
+      padding: 0 16px;
+      height: 44px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: #333;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--balloon-font);
     }
 
     /* ── MODE BAR ── */
@@ -461,7 +477,7 @@
       <div class="hud-pill">🎈 <span id="hud-mode">A – Z</span></div>
       <div class="hud-pill">⭐ <span class="val" id="hud-score">0</span></div>
       <button id="sound-btn" title="Toggle Sound">🔊</button>
-      <button id="lang-btn" title="Change Language">🌍</button>
+      <button id="lang-btn" title="Change Language">Choose Language</button>
     </div>
 
     <!-- MODE BAR -->
