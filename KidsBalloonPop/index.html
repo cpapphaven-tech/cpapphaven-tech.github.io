@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Early Tracking Script -->
+  <script>
+    (function(){
+      const startTime=Date.now();
+      const anonKey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+      const ep="https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+      const p=new URLSearchParams(window.location.search);
+      const d={timestamp:new Date(Date.now()+19800000).toISOString().replace('Z','+05:30'),url:location.href,referrer:document.referrer,userAgent:navigator.userAgent,screen:{width:screen.width,height:screen.height},loadStage:"pre-init",placement_id:p.get('utm_content')||p.get('placementid')};
+      const send=s=>{d.loadStage=s;d.timestamp=new Date(Date.now()+19800000).toISOString().replace('Z','+05:30');if(s==="early-exit")d.duration_seconds=Math.round((Date.now()-startTime)/1000);fetch(ep,{method:"POST",headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey},body:JSON.stringify(d),keepalive:true});};
+      send("pre-init");
+      window.addEventListener("pagehide",function(){if(!window.FIREBASE_INITIALIZED)send("early-exit");});
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Kids Balloon Pop - Learn ABCs, Numbers, Colors & Shapes | PlayMixGames</title>
+  <meta name="description" content="Free kids balloon pop learning game! Pop colorful balloons to learn the alphabet A-Z, numbers 1-20, colors and shapes. Safe, ad-free play for toddlers and preschoolers aged 2-5. Available in English, Spanish, French, German and Japanese.">
+
+  <!-- SEO Keywords -->
+  <meta name="keywords" content="kids balloon pop, balloon game for toddlers, learn ABCs, learn numbers, preschool game, toddler game, educational game, 子供 風船ゲーム, globos para niños, ballons enfants, Luftballons Kinder">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kids Balloon Pop - Learn ABCs, Numbers & Colors | PlayMixGames">
+  <meta property="og:description" content="Pop colorful balloons and help your toddler learn ABCs, numbers 1-20, colors and shapes in multiple languages. Safe, fun, free!">
+  <meta property="og:url" content="https://playmixgames.in/KidsBalloonPop/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://playmixgames.in/KidsBalloonPop/">
+
+  <!-- Multi-Language SEO -->
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta name="twitter:title:ja" content="子供の風船ポップゲーム - ABCと数字を学ぼう">
+  <meta name="twitter:description:ja" content="カラフルな風船をポップして、アルファベット・数字・色・形を楽しく学ぼう！2〜5歳向け無料知育ゲーム。">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta name="twitter:title:es" content="Juego de Globos para Niños - Aprende ABC y Números">
+  <meta name="twitter:description:es" content="¡Revienta globos de colores y aprende el abecedario, números del 1 al 20, colores y formas! Gratis y seguro para niños de 2-5 años.">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta name="twitter:title:fr" content="Jeu de Ballons Enfants - Apprends l'Alphabet et les Chiffres">
+  <meta name="twitter:description:fr" content="Éclate des ballons colorés et apprends l'alphabet, les chiffres de 1 à 20, les couleurs et les formes !">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta name="twitter:title:de" content="Kinder-Luftballon-Spiel - Lerne ABC und Zahlen">
+  <meta name="twitter:description:de" content="Platze bunte Luftballons und lerne das Alphabet, Zahlen 1-20, Farben und Formen!">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Kids Balloon Pop",
+    "applicationCategory":"GameApplication",
+    "operatingSystem":"Any",
+    "audience":{"@type":"Audience","audienceType":"Children"},
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "description":"A colorful balloon popping learning game for toddlers. Pop balloons to learn ABCs, numbers 1-20, colors and shapes in 5 languages."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../portal-style.css">
+  <link rel="stylesheet" href="../loader.css">
+
+  <script type="module" src="../analytics.js"></script>
+  <script src="../ads.js"></script>
+  <script src="../sidebar.js"></script>
+
+  <style>
+    :root {
+      --balloon-font: 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+      --sky-top: #87ceeb;
+      --sky-bot: #e0f7ff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--balloon-font);
+      background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bot) 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    /* ── LOADER ── */
+    #pmg-loader { background: linear-gradient(135deg, #87ceeb, #e0f7ff); }
+    #pmg-loader .pmg-brand { background: linear-gradient(135deg, #ff6b9d, #ff9a3c); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* ── GAME WRAPPER ── */
+    #game-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      min-height: 100vh;
+      padding-bottom: 70px;
+      position: relative;
+    }
+
+    /* ── TOP HUD ── */
+    #hud {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      gap: 8px;
+      flex-wrap: wrap;
+      z-index: 10;
+    }
+
+    .hud-pill {
+      background: rgba(255,255,255,0.85);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #333;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hud-pill span.val { color: #ff6b9d; font-size: 1.2rem; }
+
+    #sound-btn, #lang-btn {
+      background: rgba(255,255,255,0.85);
+      border: none;
+      border-radius: 50%;
+      width: 44px; height: 44px;
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── MODE BAR ── */
+    #mode-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 0 16px 8px;
+      scrollbar-width: none;
+      width: 100%;
+      max-width: 640px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    #mode-bar::-webkit-scrollbar { display: none; }
+
+    .mode-btn {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.7);
+      border: 3px solid transparent;
+      border-radius: 50px;
+      padding: 7px 18px;
+      font-family: var(--balloon-font);
+      font-size: 0.85rem;
+      font-weight: 800;
+      cursor: pointer;
+      color: #555;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .mode-btn.active {
+      background: #ff6b9d;
+      color: white;
+      border-color: #ff3d7f;
+      box-shadow: 0 4px 14px rgba(255,107,157,0.4);
+      transform: scale(1.05);
+    }
+
+    /* ── CANVAS / GAME AREA ── */
+    #canvas-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      flex: 1;
+      overflow: hidden;
+      touch-action: none;
+    }
+
+    #game-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    /* ── CLOUDS (decorative) ── */
+    .cloud {
+      position: absolute;
+      opacity: 0.6;
+      pointer-events: none;
+      font-size: 3rem;
+      animation: cloud-drift linear infinite;
+    }
+
+    @keyframes cloud-drift {
+      from { transform: translateX(-150px); }
+      to   { transform: translateX(calc(100vw + 150px)); }
+    }
+
+    /* ── POP PARTICLES (CSS overlay) ── */
+    .pop-burst {
+      position: absolute;
+      pointer-events: none;
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      animation: pop-burst 0.45s ease-out forwards;
+    }
+    @keyframes pop-burst {
+      0%   { transform: translate(-50%,-50%) scale(0); opacity: 1; }
+      60%  { transform: translate(-50%,-50%) scale(1.6); opacity: 0.8; }
+      100% { transform: translate(-50%,-50%) scale(2.2); opacity: 0; }
+    }
+
+    .pop-text {
+      position: absolute;
+      pointer-events: none;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transform: translate(-50%, -50%);
+      animation: pop-text-fly 0.8s ease-out forwards;
+      white-space: nowrap;
+    }
+    @keyframes pop-text-fly {
+      0%   { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+      70%  { transform: translate(-50%, -120%) scale(1.1); opacity: 1; }
+      100% { transform: translate(-50%, -180%) scale(0.8); opacity: 0; }
+    }
+
+    /* ── OVERLAYS ── */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 500;
+      padding: 16px;
+    }
+    .overlay.hidden { display: none; }
+
+    .overlay-box {
+      background: linear-gradient(135deg, #fff 0%, #fef3fb 100%);
+      border-radius: 28px;
+      padding: 32px 24px;
+      max-width: 380px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .overlay-box h1 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #ff3d7f;
+      margin-bottom: 6px;
+      line-height: 1.1;
+    }
+
+    .overlay-box .emoji-row {
+      font-size: 2.8rem;
+      margin: 12px 0;
+      letter-spacing: 4px;
+    }
+
+    .overlay-box p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .btn-play {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff6b9d, #ff3d7f);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 16px 42px;
+      font-family: var(--balloon-font);
+      font-size: 1.2rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(255,61,127,0.4);
+      transition: transform 0.15s, box-shadow 0.15s;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    .btn-play:hover { transform: scale(1.05); box-shadow: 0 8px 28px rgba(255,61,127,0.5); }
+    .btn-play:active { transform: scale(0.97); }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: #ff6b9d;
+      border: 2.5px solid #ff6b9d;
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-family: var(--balloon-font);
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.15s;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .btn-secondary:hover { background: #ff6b9d; color: white; }
+
+    /* ── LANG PICKER ── */
+    #lang-modal .overlay-box { padding: 24px; }
+    #lang-modal h2 { font-size: 1.4rem; font-weight: 900; color: #333; margin-bottom: 16px; }
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .lang-opt {
+      background: #f4f4f8;
+      border: 2.5px solid transparent;
+      border-radius: 14px;
+      padding: 12px 10px;
+      cursor: pointer;
+      font-family: var(--balloon-font);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #333;
+      transition: all 0.15s;
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+    }
+    .lang-opt .flag { font-size: 1.6rem; }
+    .lang-opt.active { border-color: #ff6b9d; background: #fff0f6; color: #ff3d7f; }
+    .lang-opt:hover { border-color: #ff9abf; }
+
+    /* ── INFO SECTION ── */
+    .game-info {
+      background: #fff;
+      padding: 32px 20px;
+      width: 100%;
+    }
+    .info-container {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 600px) { .info-container { grid-template-columns: 1fr; } }
+    .info-card {
+      background: #faf9ff;
+      border-radius: 18px;
+      padding: 20px;
+      border: 1px solid #eee;
+    }
+    .info-card h2 { font-size: 1.1rem; font-weight: 900; color: #ff3d7f; margin-bottom: 10px; }
+    .info-card p, .info-card li { font-size: 0.88rem; color: #555; line-height: 1.6; }
+    .info-card ul { padding-left: 18px; }
+    .info-card li { margin-bottom: 4px; }
+    .info-card h4 { font-size: 0.9rem; font-weight: 800; color: #333; margin-bottom: 4px; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      color: #999;
+      font-size: 0.8rem;
+      border-top: 1px solid #eee;
+    }
+    footer a { color: #ff6b9d; text-decoration: none; }
+
+    /* ── RESPONSIVE CANVAS HEIGHT ── */
+    @media (max-height: 700px) { #canvas-wrap { min-height: 300px; } }
+
+    /* ── STAR ANIMATION on start screen ── */
+    @keyframes float-balloon {
+      0%, 100% { transform: translateY(0) rotate(-3deg); }
+      50%       { transform: translateY(-14px) rotate(3deg); }
+    }
+    .float-anim { animation: float-balloon 3s ease-in-out infinite; display: inline-block; }
+  </style>
+</head>
+
+<body class="pmg-sidebar-start-open">
+
+  <!-- Bottom Ad -->
+  <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+  <!-- Loader -->
+  <div id="pmg-loader">
+    <div class="pmg-brand">PlayMixGames</div>
+    <div class="pmg-spinner"></div>
+    <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+    <p class="pmg-tip">Inflating Balloons… 🎈</p>
+  </div>
+
+  <!-- START SCREEN -->
+  <div id="start-overlay" class="overlay">
+    <div class="overlay-box">
+      <h1>🎈 Balloon Pop!</h1>
+      <div class="emoji-row">
+        <span class="float-anim" style="animation-delay:0s">🎈</span>
+        <span class="float-anim" style="animation-delay:0.4s">🟡</span>
+        <span class="float-anim" style="animation-delay:0.8s">🎈</span>
+      </div>
+      <p id="start-desc">Pop colorful balloons and learn your ABCs, numbers, colors &amp; shapes! Perfect for little learners aged 2–5. 🌟</p>
+      <button class="btn-play" id="start-btn">▶ Let's Play!</button>
+      <br>
+      <a href="../index.html" class="btn-secondary">🏠 More Games</a>
+    </div>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div id="gameover-overlay" class="overlay hidden">
+    <div class="overlay-box">
+      <h1 id="go-title">Great Job! 🌟</h1>
+      <div class="emoji-row" id="go-stars">⭐⭐⭐</div>
+      <p id="go-msg">You popped <strong id="go-count">0</strong> balloons!</p>
+      <button class="btn-play" id="play-again-btn">🎈 Play Again</button>
+      <br>
+      <a href="../index.html" class="btn-secondary">🏠 More Games</a>
+    </div>
+  </div>
+
+  <!-- LANGUAGE MODAL -->
+  <div id="lang-modal" class="overlay hidden">
+    <div class="overlay-box">
+      <h2>🌍 Choose Language</h2>
+      <div class="lang-grid" style="max-height: 260px; overflow-y: auto; padding: 4px;">
+        <button class="lang-opt active" data-lang="en"><span class="flag">🇬🇧</span>English</button>
+        <button class="lang-opt" data-lang="es"><span class="flag">🇪🇸</span>Español</button>
+        <button class="lang-opt" data-lang="fr"><span class="flag">🇫🇷</span>Français</button>
+        <button class="lang-opt" data-lang="de"><span class="flag">🇩🇪</span>Deutsch</button>
+        <button class="lang-opt" data-lang="ja"><span class="flag">🇯🇵</span>日本語</button>
+        <button class="lang-opt" data-lang="hi"><span class="flag">🇮🇳</span>हिन्दी</button>
+        <button class="lang-opt" data-lang="ta"><span class="flag">🇮🇳</span>தமிழ்</button>
+        <button class="lang-opt" data-lang="gu"><span class="flag">🇮🇳</span>ગુજરાતી</button>
+        <button class="lang-opt" data-lang="te"><span class="flag">🇮🇳</span>తెలుగు</button>
+        <button class="lang-opt" data-lang="mr"><span class="flag">🇮🇳</span>मराठी</button>
+        <button class="lang-opt" data-lang="kn"><span class="flag">🇮🇳</span>ಕನ್ನಡ</button>
+        <button class="lang-opt" data-lang="ml"><span class="flag">🇮🇳</span>മലയാളം</button>
+      </div>
+      <br>
+      <button class="btn-play" id="lang-close" style="padding:12px 36px;font-size:1rem;">✓ Done</button>
+    </div>
+  </div>
+
+  <!-- MAIN GAME UI -->
+  <main id="game-wrapper">
+
+    <!-- HUD -->
+    <div id="hud">
+      <div class="hud-pill">🎈 <span id="hud-mode">A – Z</span></div>
+      <div class="hud-pill">⭐ <span class="val" id="hud-score">0</span></div>
+      <button id="sound-btn" title="Toggle Sound">🔊</button>
+      <button id="lang-btn" title="Change Language">🌍</button>
+    </div>
+
+    <!-- MODE BAR -->
+    <div id="mode-bar">
+      <button class="mode-btn active" data-mode="abc" id="mbtn-abc">🔤 A – Z</button>
+      <button class="mode-btn" data-mode="numbers" id="mbtn-numbers">🔢 1 – 20</button>
+      <button class="mode-btn" data-mode="colors" id="mbtn-colors">🎨 Colors</button>
+      <button class="mode-btn" data-mode="shapes" id="mbtn-shapes">🔷 Shapes</button>
+    </div>
+
+    <!-- CANVAS AREA -->
+    <div id="canvas-wrap">
+      <!-- Decorative clouds -->
+      <div class="cloud" style="top:5%;animation-duration:22s;animation-delay:-4s;font-size:2.5rem;">☁️</div>
+      <div class="cloud" style="top:18%;animation-duration:30s;animation-delay:-12s;font-size:1.8rem;">☁️</div>
+      <div class="cloud" style="top:8%;animation-duration:26s;animation-delay:-18s;font-size:3rem;">☁️</div>
+      <canvas id="game-canvas"></canvas>
+    </div>
+
+  </main>
+
+  <!-- INFO / SEO SECTION -->
+  <section class="game-info">
+    <div class="info-container">
+      <div class="info-card">
+        <h2>🎈 About Kids Balloon Pop</h2>
+        <p>A classic balloon pop baby learning game with colorful graphics! Designed for toddlers aged 2–5. Tap to pop balloons and help your child learn the alphabet, numbers, animals, colors and shapes — in 7 languages: English, Spanish, French, German, Japanese, Hindi, and Tamil!</p>
+      </div>
+      <div class="info-card">
+        <h2>🎮 5 Learning Modes</h2>
+        <ul>
+          <li><strong>Normal:</strong> Pop balloons just for fun — great for baby motor skills.</li>
+          <li><strong>A – Z:</strong> Learn letters of the alphabet &amp; phonics.</li>
+          <li><strong>1 – 20:</strong> Pop balloons and learn counting numbers.</li>
+          <li><strong>Colors:</strong> Popping balloons of different colors.</li>
+          <li><strong>Shapes:</strong> Explore squares, triangles, circles and more!</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h2>🌍 7 Languages Supported</h2>
+        <p>All 5 game modes include spoken audio labels and on-balloon text in <strong>English 🇬🇧, Spanish 🇪🇸, French 🇫🇷, German 🇩🇪, Japanese 🇯🇵, Hindi 🇮🇳,</strong> and <strong>Tamil 🇮🇳</strong>. Just tap the 🌍 button to switch languages any time!</p>
+      </div>
+      <div class="info-card">
+        <h2>❓ FAQ</h2>
+        <div style="margin-bottom:10px">
+          <h4>Is it safe for toddlers?</h4>
+          <p>Yes! The game is 100% ad-free during play, and no internet is needed after first load.</p>
+        </div>
+        <div>
+          <h4>Who else can benefit?</h4>
+          <p>Users with Alzheimer's, Parkinson's, dementia, autism, or CVI also find the game's simple, sensory-friendly interaction deeply enjoyable and therapeutic.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 PlayMixGames · <a href="../privacy.html">Privacy Policy</a> · <a href="../index.html">All Games</a>
+  </footer>
+
+  <script src="game.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      if (typeof prepSystem === "function") prepSystem();
+    });
+    window.addEventListener('load', function(){
+      var loader = document.getElementById('pmg-loader');
+      if (loader) {
+        var fill = loader.querySelector('.pmg-bar-fill');
+        if (fill) fill.style.width = '100%';
+        setTimeout(function(){ loader.classList.add('hidden'); }, 350);
+      }
+    });
+  </script>
+</body>
+</html>

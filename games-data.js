@@ -21,6 +21,7 @@ window.PMG_DATA = {
         { name: "Flappy Rise Bird", genre: "Arcade",   icon: "assets/Flappyrisebird200.png",     href: "FlappyRise/index.html",          badge: "hot",     emoji: "🐦" },
         { name: "Doodle Jump",      genre: "Platform", icon: "assets/doodlejump200.png",         href: "DoodleJump/index.html",          badge: "new",     emoji: "😊" },
         { name: "Idle Ball Escape", genre: "Casual",   icon: "",                                 href: "IdleBallEscape/index.html",      badge: "new",     emoji: "🌀" },
+        { name: "Kids Balloon Pop", genre: "Kids",     icon: "",                                 href: "KidsBalloonPop/index.html",      badge: "new",     emoji: "🎈" },
         { name: "Brick Breaker",    genre: "Classic",  icon: "assets/brickbreaker200.png",       href: "BrickBreaker/game.html",         badge: "",        emoji: "🧱" },
         { name: "Bubble Shooter",   genre: "Arcade",   icon: "assets/bubble_shooter.png",        href: "BubbleShooter/index.html",       badge: "",        emoji: "🔵" },
       ]
@@ -106,6 +107,7 @@ window.PMG_DATA = {
         { name: "English Grammar",  genre: "Learning", icon: "assets/Englishgrammquiz200.png",   href: "EnglishGrammarQuiz/index.html",  badge: "new",  emoji: "📚" },
         { name: "Nutrition Quiz",   genre: "Health",   icon: "",                                 href: "NutritionQuiz/index.html",       badge: "new",  emoji: "🥗" },
         { name: "ABC Tracing",      genre: "Learning", icon: "",                                 href: "ABCTracing/index.html",          badge: "new",  emoji: "✍️" },
+        { name: "Balloon Pop Kids", genre: "Learning", icon: "",                                 href: "KidsBalloonPop/index.html",      badge: "new",  emoji: "🎈" },
         { name: "Math Quiz",        genre: "Learning", icon: "assets/Mathlearningquiz200.png",   href: "DailyMathEquator/index.html",    badge: "new",  emoji: "🔢" },
         { name: "Typing Speed",     genre: "Skill",    icon: "assets/typingtest200.png",         href: "TypingSpeedTest/index.html",     badge: "new",  emoji: "⌨️" },
       ]
