@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Simply Draw - Learn to Draw | PlayMixGames</title>
+    <meta name="description" content="Learn and practice drawing beautiful sketches. Enjoy customized learning journeys and video-like trace-along sessions to master your drawing skills.">
+    
+    <meta name="keywords" content="learn to draw, simply draw, drawing game, trace and draw, sketch practice, educational drawing">
+    
+    <meta property="og:title" content="Simply Draw - Learn to Draw">
+    <meta property="og:description" content="Learn and practice drawing beautiful sketches. Enjoy customized learning journeys and video-like trace-along sessions to master your drawing skills.">
+    <meta property="og:url" content="https://playmixgames.in/SimplyDraw/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/SimplyDraw/index.html" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Simply Draw",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Learn and practice drawing beautiful sketches. Enjoy customized learning journeys and video-like trace-along sessions to master your drawing skills."
+    }
+    </script>
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script src="../sidebar.js"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
+
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+</head>
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading canvas...</p>
+    </div>
+    <!-- ========================================= -->
+    
+    <!-- Header -->
+    <header>
+        <a href="../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">Simply Draw</h1>
+        <div class="level-display">
+            <span id="current-mode">Select Path</span>
+        </div>
+    </header>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        
+        <!-- Main Menu -->
+        <div id="main-menu" class="screen active">
+            <div class="welcome-text">
+                <h2>Your Custom Learning Journey</h2>
+                <p>Choose a category to start mastering new drawing skills.</p>
+            </div>
+            <div class="menu-buttons">
+                <button class="menu-btn premium-btn" data-target="category-select" data-category="basics">
+                    <span class="btn-icon">📐</span> Basic Shapes
+                </button>
+                <button class="menu-btn premium-btn" data-target="category-select" data-category="objects">
+                    <span class="btn-icon">☕</span> Everyday Objects
+                </button>
+                <button class="menu-btn premium-btn" data-target="category-select" data-category="animals">
+                    <span class="btn-icon">🐱</span> Animals
+                </button>
+                <button class="menu-btn premium-btn" data-target="category-select" data-category="nature">
+                    <span class="btn-icon">🌿</span> Nature
+                </button>
+            </div>
+        </div>
+
+        <!-- Category Selection -->
+        <div id="category-select" class="screen">
+            <div class="category-header">
+                <h2 id="category-title">Select a Drawing</h2>
+            </div>
+            <div class="grid-container" id="drawing-grid"></div>
+            <button class="back-to-menu back-btn-large">⬅ Back to Menu</button>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="gameplay-screen" class="screen">
+            <div class="game-header">
+                <button id="back-to-select" class="icon-btn">⬅</button>
+                <div id="current-drawing-display">Drawing</div>
+                <button id="hint-btn" class="icon-btn">💡</button>
+            </div>
+            
+            <div class="canvas-container">
+                <canvas id="drawing-canvas"></canvas>
+                <canvas id="tracing-canvas"></canvas>
+                <div id="drawing-hint" class="hidden">Trace the faint lines to complete the drawing!</div>
+            </div>
+
+            <div class="controls">
+                <div class="tool-picker">
+                    <button class="tool-btn active" data-color="#333333" style="background-color: #333333;"></button>
+                    <button class="tool-btn" data-color="#e74c3c" style="background-color: #e74c3c;"></button>
+                    <button class="tool-btn" data-color="#3498db" style="background-color: #3498db;"></button>
+                    <button class="tool-btn" data-color="#2ecc71" style="background-color: #2ecc71;"></button>
+                    <button class="tool-btn" data-color="#f1c40f" style="background-color: #f1c40f;"></button>
+                </div>
+                <div class="action-buttons">
+                    <button id="clear-btn" class="control-btn">🧹 Clear</button>
+                    <button id="finish-btn" class="control-btn primary">Submit ➡</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Screen -->
+        <div id="success-screen" class="overlay-screen hidden">
+            <div class="screen-content success-card">
+                <h2>Masterpiece Created!</h2>
+                <p>You successfully drew <span id="success-drawing-name" class="highlight">an Apple</span>!</p>
+                <div class="art-frame">
+                    <canvas id="result-canvas"></canvas>
+                </div>
+                <div class="stars">⭐ ⭐ ⭐</div>
+                <div class="success-buttons">
+                    <button id="next-drawing-btn" class="game-btn primary">Next Drawing</button>
+                    <button id="replay-btn" class="game-btn secondary">Draw Again</button>
+                    <button id="home-btn" class="game-btn secondary">Main Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEO Section -->
+    <section id="game-info" class="seo-section">
+        <div class="seo-content">
+            <h2>🎨 About Simply Draw</h2>
+            <p>
+                Simply Draw makes creating art a very calming and fun experience. The app inspires you to draw your own way and gives you a personalized path that teaches you exactly what you’re interested in. It’s truly the best way to learn and develop your drawing skills.
+            </p>
+
+            <h3>🖌️ Features</h3>
+            <ul>
+                <li><strong>Customized Journey:</strong> Learn to draw what interests you!</li>
+                <li><strong>Trace & Learn:</strong> Easy-to-follow tracing paths that act like video tutorials made by professional artists.</li>
+                <li><strong>At Your Own Pace:</strong> Learn at your own time, mastering new drawing skills day by day.</li>
+                <li><strong>Beautiful Colors:</strong> Enjoy a vibrant palette to make your sketches stand out.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Bottom Ad Container -->
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+</body>
+</html>
