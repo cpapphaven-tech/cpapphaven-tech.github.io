@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+            sendHit("pre-init");
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>All in Hole: Black Hole Games - Satisfying Eat & Grow Puzzle | PlayMixGames</title>
+    <meta name="description"
+        content="Slide a tiny hole, devour small objects to grow, and use playful physics to gobble every target treat. An oddly satisfying black-hole puzzle game!">
+
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="black hole game, eat and grow, puzzle game, satisfying physics, hole game, オールインホール, ブラックホールゲーム, agujero negro juego, tout dans le trou, jeu trou noir">
+
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="オールインホール - ブラックホールパズルゲーム">
+    <meta name="twitter:description:ja" content="小さな穴をスライドさせて物を飲み込み、成長してターゲットを食べよう！不思議な満足感のブラックホールパズル。">
+
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="All in Hole - Juego del Agujero Negro">
+    <meta name="twitter:description:es" content="Desliza un agujero, devora objetos para crecer, ¡y engulle cada objetivo! Un puzzle de agujero negro satisfactorio.">
+
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="All in Hole - Jeu du Trou Noir">
+    <meta name="twitter:description:fr" content="Glissez un trou, dévorez des objets pour grandir, et engloutissez chaque cible ! Un puzzle de trou noir satisfaisant.">
+
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/AllInHole/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/AllInHole/index.html" />
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; min-height: 100vh;
+            overflow-x: hidden; overflow-y: auto;
+            background: #0a0a2e;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        #pmg-loader {
+            position: fixed; inset: 0; z-index: 99999;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            background: #0a0a2e; transition: opacity 0.5s ease;
+        }
+        #pmg-loader.hidden { opacity: 0; pointer-events: none; }
+        .pmg-brand {
+            font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; color: #a855f7;
+            text-transform: uppercase; margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(168,85,247,0.4); animation: pmgPulse 2s infinite;
+        }
+        .pmg-spinner {
+            width: 50px; height: 50px; border: 4px solid rgba(168,85,247,0.1);
+            border-top-color: #a855f7; border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite; margin-bottom: 20px;
+        }
+        .pmg-bar-track { width: 200px; height: 4px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+        .pmg-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg,#7c3aed,#a855f7); animation: pmgFill 5s cubic-bezier(0.1,0,0.1,1) forwards; }
+        .pmg-tip { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 15px; }
+        @keyframes pmgSpin { to { transform: rotate(360deg); } }
+        @keyframes pmgPulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(0.98); } }
+        @keyframes pmgFill { 0% { width: 0%; } 100% { width: 95%; } }
+        #game-frame { width: 100%; height: 100vh; border: none; display: block; opacity: 0; transition: opacity 0.5s ease; }
+        #game-frame.visible { opacity: 1; }
+    </style>
+
+    <meta property="og:title" content="All in Hole: Black Hole Games - Free Puzzle Game | PlayMix Games">
+    <meta property="og:description" content="Play free All in Hole black hole puzzle game online. Slide, eat, grow, and swallow targets. No download required.">
+    <meta property="og:url" content="https://playmixgames.in/AllInHole/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/AllInHole/index.html" />
+    <script defer src="../sidebar.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "All in Hole: Black Hole Games",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Play free All in Hole black hole puzzle game online. No download required. Slide, eat, grow, and swallow targets."
+    }
+    </script>
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+
+    <iframe id="game-frame" title="All in Hole: Black Hole Games" allow="autoplay; fullscreen; gamepad"></iframe>
+
+    <!-- SEO: Why Play Section -->
+    <section class="seo-content" style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #a855f7;">Why Play on PlayMix Games?</h2>
+        <ul style="padding-left: 20px;">
+            <li>100% free with no hidden charges whatsoever</li>
+            <li>Play instantly in your browser (HTML5 Canvas)</li>
+            <li>Fully optimized for touch devices and mobile screens</li>
+            <li>No intrusive account logins needed</li>
+        </ul>
+
+        <h2 style="color: #a855f7;">Frequently Asked Questions</h2>
+        <p><strong>Is All in Hole free to play?</strong> Yes, you can play unlimited times for free.</p>
+        <p><strong>Does it run on mobile phones?</strong> Yes, the game is fully optimized for phones and tablets.</p>
+        <p><strong>What is the goal of the game?</strong> Drag the black hole to eat only the glowing target treats while avoiding wrong items. Eat enough targets to complete each level!</p>
+        <p><strong>How many levels are there?</strong> There are 10 progressively challenging levels with different food targets.</p>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+
+            const loader = document.getElementById('pmg-loader');
+            let start = Date.now();
+
+            frame.onload = function () {
+                if (!frame.src || frame.src === "" || frame.src === window.location.href) return;
+                const delay = Math.max(800 - (Date.now() - start), 100);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    start = Date.now();
+                    frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+                }, 50);
+            });
+        })();
+    </script>
+
+    <!-- SEO: About Game & How to Play Section -->
+    <section id="game-info" style="background: #0a0a2e; padding: 40px 20px; margin-top: 40px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; color: #a855f7; margin-bottom: 20px;">🕳️ About All in Hole</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 30px;">
+                All in Hole is the oddly satisfying black-hole puzzle where you guide Molly the mole on a snack-swallowing adventure. Slide a tiny hole, devour small objects to grow, and use playful physics to gobble every target treat. Whether you're here to zen out or chase trophies, All in Hole serves up quick, colorful levels that feel great to master.
+            </p>
+
+            <h3 style="font-size: 1.5rem; color: #fbbf24; margin-bottom: 15px;">🎮 How to Play</h3>
+            <ul style="font-size: 1rem; color: rgba(255,255,255,0.6); text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+                <li>✅ Drag to move the black hole across the play area</li>
+                <li>✅ Only eat the golden glowing target treats — avoid everything else!</li>
+                <li>✅ Eating a wrong item ends your run immediately</li>
+                <li>✅ Swallow enough targets to complete each level</li>
+                <li>✅ Plan your route carefully to avoid danger</li>
+            </ul>
+
+            <h3 style="font-size: 1.5rem; color: #10b981; margin-bottom: 15px;">💡 Tips from Molly</h3>
+            <p style="font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 60px;">
+                <strong style="color: #10b981;">Look ahead:</strong> plan a clean route so you don't touch the wrong items.<br>
+                <strong style="color: #10b981;">Patience:</strong> wait for the right targets to come close to your hole.<br>
+                <strong style="color: #10b981;">Prioritize:</strong> gulp the light targets first, then the big ones.
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

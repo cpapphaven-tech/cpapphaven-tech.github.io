@@ -73,6 +73,7 @@ window.PMG_DATA = {
         { name: "Color Match",      genre: "Reaction", icon: "assets/colormatch.png",            href: "ColorMatch/index.html",          badge: "",     emoji: "🎨" },
         { name: "Helix Bounce",     genre: "Arcade",   icon: "assets/helixbounce.png",           href: "HelixBounce/index.html",         badge: "",     emoji: "🧬" },
         { name: "Stack 3D",         genre: "Physics",  icon: "assets/stack3d.png",               href: "Stack3D/index.html",             badge: "",     emoji: "🧱" },
+        { name: "All in Hole",      genre: "Puzzle",   icon: "",                                 href: "AllInHole/index.html",           badge: "new",  emoji: "🕳️" },
       ]
     },
     {
