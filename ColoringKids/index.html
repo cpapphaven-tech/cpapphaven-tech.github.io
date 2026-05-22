@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Early Tracking Script -->
+  <script>
+    (function(){
+      const startTime=Date.now();
+      const anonKey="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+      const ep="https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+      const p=new URLSearchParams(window.location.search);
+      const d={timestamp:new Date(Date.now()+19800000).toISOString().replace('Z','+05:30'),url:location.href,referrer:document.referrer,userAgent:navigator.userAgent,screen:{width:screen.width,height:screen.height},loadStage:"pre-init",placement_id:p.get('utm_content')||p.get('placementid')};
+      const send=s=>{d.loadStage=s;d.timestamp=new Date(Date.now()+19800000).toISOString().replace('Z','+05:30');if(s==="early-exit")d.duration_seconds=Math.round((Date.now()-startTime)/1000);fetch(ep,{method:"POST",headers:{"Content-Type":"application/json","apikey":anonKey,"Authorization":"Bearer "+anonKey},body:JSON.stringify(d),keepalive:true});};
+      send("pre-init");
+      window.addEventListener("pagehide",function(){if(!window.FIREBASE_INITIALIZED)send("early-exit");});
+    })();
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Coloring for Kids 2–6 – Draw, Color & Paint | PlayMixGames</title>
+  <meta name="description" content="Free coloring game for kids aged 2–6! Color cute animals, dinosaurs, cars, and ocean pictures on white templates with black outlines, or enjoy free draw mode. Safe, ad-free, works offline.">
+
+  <meta name="keywords" content="coloring for kids, kids drawing game, painting for toddlers, coloring book, preschool art, toddler coloring, animal coloring, dinosaur coloring, kids art game, painting game 2 year old">
+
+  <meta property="og:title" content="Coloring for Kids 2–6 – Draw & Paint | PlayMixGames">
+  <meta property="og:description" content="Color cute animals, dinos, cars and more on white templates with black outlines, or free draw. Safe & ad-free coloring fun for toddlers aged 2–6.">
+  <meta property="og:url" content="https://playmixgames.in/ColoringKids/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://playmixgames.in/ColoringKids/">
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Coloring for Kids 2-6",
+    "applicationCategory":"GameApplication",
+    "operatingSystem":"Any",
+    "audience":{"@type":"Audience","audienceType":"Children"},
+    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+    "description":"Free coloring and drawing game for kids aged 2-6. Color animals, dinosaurs, cars, and ocean creatures on white templates with black outlines, plus freeform drawing."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../portal-style.css">
+  <link rel="stylesheet" href="../loader.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
+  <script type="module" src="../analytics.js"></script>
+  <script src="../ads.js"></script>
+  <script src="../sidebar.js"></script>
+</head>
+<body class="pmg-sidebar-start-open">
+
+  <div id="pmg-loader">
+    <div class="pmg-brand">PlayMixGames</div>
+    <div class="pmg-spinner"></div>
+    <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+    <p class="pmg-tip">🎨 Mixing Colors…</p>
+  </div>
+
+  <header>
+    <a href="../index.html" class="back-btn">← PlayMixGames</a>
+    <h1 class="game-title">🎨 Coloring for Kids</h1>
+    <div class="header-actions">
+      <span class="level-display" id="header-mode">Color</span>
+      <button class="icon-btn-header" id="btn-sound-home" title="Toggle Sound">🔊</button>
+    </div>
+  </header>
+
+  <div id="game-container">
+
+    <!-- HOME -->
+    <div id="screen-home" class="screen active">
+      <div class="mode-strip">
+        <button class="mode-pill active" data-mode="color" id="mpill-color">🖌️ Color</button>
+        <button class="mode-pill" data-mode="free" id="mpill-free">🌈 Free Draw</button>
+      </div>
+
+      <div class="category-row">
+        <span class="cat-label">Theme:</span>
+        <div class="cat-chips">
+          <button class="cat-chip active" data-cat="animals" id="chip-animals">🐾 Animals</button>
+          <button class="cat-chip" data-cat="dinos" id="chip-dinos">🦕 Dinos</button>
+          <button class="cat-chip" data-cat="cars" id="chip-cars">🚗 Cars</button>
+          <button class="cat-chip" data-cat="ocean" id="chip-ocean">🌊 Ocean</button>
+          <button class="cat-chip" data-cat="fantasy" id="chip-fantasy">🦄 Fantasy</button>
+        </div>
+      </div>
+
+      <div class="picture-grid" id="picture-grid"></div>
+    </div>
+
+    <!-- COLOR CANVAS -->
+    <div id="screen-canvas" class="screen">
+      <div class="game-header">
+        <button class="icon-btn" id="btn-back-home">⬅</button>
+        <div id="canvas-title" class="canvas-title-text">Cat</div>
+        <div class="canvas-hud-right">
+          <button class="icon-btn" id="btn-undo" title="Undo">↩️</button>
+          <button class="icon-btn" id="btn-clear" title="Clear">🗑️</button>
+          <button class="icon-btn" id="btn-sound-canvas" title="Sound">🔊</button>
+          <button class="icon-btn" id="btn-done" title="Done">✅</button>
+        </div>
+      </div>
+
+      <div id="canvas-wrap" class="canvas-area">
+        <canvas id="bg-canvas"></canvas>
+        <canvas id="color-canvas"></canvas>
+        <div id="confetti-container"></div>
+      </div>
+
+      <div id="palette-panel">
+        <div id="color-swatches" class="swatch-row"></div>
+        <div id="tool-row" class="tool-row">
+          <button class="tool-btn active" data-tool="brush" id="tbtn-brush" title="Brush">🖌️</button>
+          <button class="tool-btn" data-tool="fill" id="tbtn-fill" title="Fill">🪣</button>
+          <button class="tool-btn" data-tool="eraser" id="tbtn-eraser" title="Eraser">🧹</button>
+          <input type="range" id="brush-size" min="3" max="40" value="12" title="Brush Size">
+        </div>
+      </div>
+    </div>
+
+    <!-- FREE DRAW -->
+    <div id="screen-free" class="screen">
+      <div class="game-header">
+        <button class="icon-btn" id="btn-free-back">⬅</button>
+        <div id="free-title" class="canvas-title-text">Free Draw</div>
+        <div class="canvas-hud-right">
+          <button class="icon-btn" id="btn-free-undo">↩️</button>
+          <button class="icon-btn" id="btn-free-clear">🗑️</button>
+          <button class="icon-btn" id="btn-free-done">✅</button>
+        </div>
+      </div>
+
+      <div id="free-canvas-wrap" class="canvas-area">
+        <canvas id="free-canvas"></canvas>
+      </div>
+
+      <div id="free-palette-panel">
+        <div id="free-color-swatches" class="swatch-row"></div>
+        <div id="free-tool-row" class="tool-row">
+          <button class="tool-btn active" data-ftool="brush" id="ftbtn-brush">🖌️</button>
+          <button class="tool-btn" data-ftool="eraser" id="ftbtn-eraser">🧹</button>
+          <input type="range" id="free-brush-size" min="3" max="60" value="14">
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div id="success-overlay" class="overlay hidden">
+      <div class="success-box">
+        <div class="success-emoji" id="success-emoji">🌟</div>
+        <h2 class="success-title">Amazing!</h2>
+        <p class="success-msg" id="success-msg">You colored it beautifully!</p>
+        <div class="success-stars">⭐ ⭐ ⭐</div>
+        <button class="btn-big" id="btn-next-pic">🖌️ Next Picture</button>
+        <button class="btn-big secondary" id="btn-color-again">🔄 Color Again</button>
+        <a href="../index.html" class="btn-big secondary">🏠 More Games</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+  <section id="game-info" class="seo-section">
+    <div class="seo-content">
+      <h2>🎨 About Coloring for Kids</h2>
+      <p>A magical coloring book for toddlers aged 2–6! Color adorable animals, mighty dinosaurs, speedy cars, and ocean creatures on clean white templates, or doodle freely on a blank canvas. Completely safe and ad-free during play!</p>
+
+      <h3>🎮 2 Creative Modes</h3>
+      <ul>
+        <li><strong>🖌️ Color:</strong> Fill picture sections with your chosen colors on white templates with black outlines.</li>
+        <li><strong>🌈 Free Draw:</strong> Paint and doodle anything you can imagine!</li>
+      </ul>
+
+      <h3>🌟 5 Themes</h3>
+      <ul>
+        <li>🐾 <strong>Animals</strong> – Cat, Dog, Lion, Elephant & more</li>
+        <li>🦕 <strong>Dinosaurs</strong> – T-Rex, Stegosaurus, Triceratops & more</li>
+        <li>🚗 <strong>Cars</strong> – Race car, Truck, Rocket & more</li>
+        <li>🌊 <strong>Ocean</strong> – Fish, Dolphin, Whale, Octopus & more</li>
+        <li>🦄 <strong>Fantasy</strong> – Unicorn, Dragon, Castle & more</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="game.js"></script>
+  <script>
+    window.addEventListener('load', function(){
+      var loader = document.getElementById('pmg-loader');
+      if (loader) {
+        var fill = loader.querySelector('.pmg-bar-fill');
+        if (fill) fill.style.width = '100%';
+        setTimeout(function(){ loader.classList.add('hidden'); }, 350);
+      }
+    });
+    document.addEventListener("DOMContentLoaded", function(){
+      if (typeof prepSystem === "function") prepSystem();
+    });
+  </script>
+</body>
+</html>

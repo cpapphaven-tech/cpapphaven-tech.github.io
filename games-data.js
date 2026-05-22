@@ -22,6 +22,7 @@ window.PMG_DATA = {
         { name: "Doodle Jump",      genre: "Platform", icon: "assets/doodlejump200.png",         href: "DoodleJump/index.html",          badge: "new",     emoji: "😊" },
         { name: "Idle Ball Escape", genre: "Casual",   icon: "",                                 href: "IdleBallEscape/index.html",      badge: "new",     emoji: "🌀" },
         { name: "Kids Balloon Pop", genre: "Kids",     icon: "",                                 href: "KidsBalloonPop/index.html",      badge: "new",     emoji: "🎈" },
+        { name: "Coloring for Kids", genre: "Kids",    icon: "",                                 href: "ColoringKids/index.html",        badge: "new",     emoji: "🎨" },
         { name: "Brick Breaker",    genre: "Classic",  icon: "assets/brickbreaker200.png",       href: "BrickBreaker/game.html",         badge: "",        emoji: "🧱" },
         { name: "Bubble Shooter",   genre: "Arcade",   icon: "assets/bubble_shooter.png",        href: "BubbleShooter/index.html",       badge: "",        emoji: "🔵" },
       ]
@@ -108,6 +109,7 @@ window.PMG_DATA = {
         { name: "Nutrition Quiz",   genre: "Health",   icon: "",                                 href: "NutritionQuiz/index.html",       badge: "new",  emoji: "🥗" },
         { name: "ABC Tracing",      genre: "Learning", icon: "",                                 href: "ABCTracing/index.html",          badge: "new",  emoji: "✍️" },
         { name: "Simply Draw",      genre: "Learning", icon: "",                                 href: "SimplyDraw/index.html",          badge: "new",  emoji: "🎨" },
+        { name: "Coloring for Kids", genre: "Learning", icon: "",                                href: "ColoringKids/index.html",        badge: "new",  emoji: "🖍️" },
         { name: "Balloon Pop Kids", genre: "Learning", icon: "",                                 href: "KidsBalloonPop/index.html",      badge: "new",  emoji: "🎈" },
         { name: "Math Quiz",        genre: "Learning", icon: "assets/Mathlearningquiz200.png",   href: "DailyMathEquator/index.html",    badge: "new",  emoji: "🔢" },
         { name: "Typing Speed",     genre: "Skill",    icon: "assets/typingtest200.png",         href: "TypingSpeedTest/index.html",     badge: "new",  emoji: "⌨️" },
