@@ -224,7 +224,14 @@ header {
 }
 .pic-card:active { transform: scale(0.97); }
 
-.pic-emoji { font-size: 2rem; line-height: 1; }
+.pic-thumb {
+  width: 72px;
+  height: 72px;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid #eee;
+  background: #fff;
+}
 .pic-name {
   font-size: 0.7rem;
   font-weight: 800;
@@ -515,7 +522,7 @@ header {
   .picture-grid { max-height: 48vh; }
   .canvas-area { max-height: 280px; }
   .swatch { width: 26px; height: 26px; }
-  .pic-emoji { font-size: 1.75rem; }
+  .pic-thumb { width: 60px; height: 60px; }
 }
 
 @media (min-width: 601px) {
