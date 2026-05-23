@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Hidden Objects Game</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    
+    <!-- Load external dependencies -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script defer src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+</head>
+
+<body>
+    <!-- ===== Game Container ===== -->
+    <div id="game-container">
+        
+        <!-- Top Bar -->
+        <header id="top-bar">
+            <div class="header-left">
+                <span class="stat-label">Level:</span>
+                <span id="level-num" class="stat-value">1/3</span>
+            </div>
+            <div class="header-center">
+                <div class="timer-container">
+                    <i class="fa-regular fa-clock"></i>
+                    <span id="timer-val">02:00</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <span class="stat-label">Score:</span>
+                <span id="score-val" class="stat-value">0</span>
+                <button id="hint-btn" class="hint-btn">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <span id="hint-count">3</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <div id="play-area">
+            <div id="game-board">
+                <!-- Background image and absolute positioned items will be dynamically injected here -->
+            </div>
+        </div>
+
+        <!-- Target Bar -->
+        <footer id="target-bar">
+            <div class="target-title">Find these items:</div>
+            <div id="target-list">
+                <!-- Dynamic target items to find will be injected here -->
+            </div>
+        </footer>
+
+        <!-- Overlays -->
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-screen active">
+            <div class="glass-card">
+                <h1>🔍 MYSTERY FINDER</h1>
+                <p class="subtitle">Find all the hidden items in the scene before time runs out!</p>
+                <div class="rules-card">
+                    <p><i class="fa-solid fa-circle-info"></i> Tapping incorrect areas deducts <strong>5 seconds</strong>!</p>
+                    <p><i class="fa-solid fa-lightbulb"></i> Use Hints if you get stuck.</p>
+                </div>
+                <button id="start-btn" class="game-btn btn-primary">Start Game</button>
+                <p style="font-size: 0.75rem; margin-top: 20px; color: rgba(255, 255, 255, 0.3);">Based on open-source code by Vlad Gumerov (MIT License)</p>
+            </div>
+        </div>
+
+        <!-- Level Complete Screen -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="glass-card">
+                <h2 class="success-title">🎉 LEVEL CLEAR!</h2>
+                <p id="level-clear-msg">You found all items!</p>
+                <div class="star-rating" id="stars-container">
+                    <i class="fa-solid fa-star star active"></i>
+                    <i class="fa-solid fa-star star active"></i>
+                    <i class="fa-solid fa-star star active"></i>
+                </div>
+                <div class="score-breakdown">
+                    <p>Time Bonus: <span id="time-bonus-val">+0</span></p>
+                    <p>Total Score: <span id="level-score-val">0</span></p>
+                </div>
+                <button id="next-lvl-btn" class="game-btn btn-primary">Next Level <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="glass-card">
+                <h2 class="fail-title">⏰ TIME'S UP!</h2>
+                <p>Don't worry, train your eyes and try again!</p>
+                <div class="score-breakdown">
+                    <p>Final Score: <span id="fail-score-val">0</span></p>
+                </div>
+                <button id="restart-btn" class="game-btn btn-primary">Play Again <i class="fa-solid fa-rotate-left"></i></button>
+            </div>
+        </div>
+
+        <!-- Game Win / Complete Screen -->
+        <div id="game-win-screen" class="overlay-screen hidden">
+            <div class="glass-card">
+                <h2 class="win-title">🏆 GRAND CHAMPION!</h2>
+                <p>Amazing! You cleared all the mystery scenes!</p>
+                <div class="star-rating">
+                    <i class="fa-solid fa-trophy trophy-gold"></i>
+                </div>
+                <div class="score-breakdown">
+                    <p>Final Score: <span id="win-score-val">0</span></p>
+                </div>
+                <button id="win-restart-btn" class="game-btn btn-primary">Play Again <i class="fa-solid fa-rotate-left"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Adsterra Bottom Ad Container -->
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <script src="game.js"></script>
+    <script>
+        // Init system ads
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') {
+                prepSystem();
+            }
+        });
+    </script>
+</body>
+
+</html>

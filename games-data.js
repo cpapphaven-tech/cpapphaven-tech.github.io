@@ -66,6 +66,7 @@ window.PMG_DATA = {
         { name: "NumMatch",         genre: "Logic",    icon: "assets/numberballoon200.png",      href: "NumMatch/index.html",            badge: "new",  emoji: "🔢" },
         { name: "Sudoku Daily",     genre: "Logic",    icon: "assets/sudoku200.png",             href: "Sudoku/index.html",              badge: "",     emoji: "🧩" },
         { name: "Word Search",      genre: "Word",     icon: "assets/wordsrarch200.png",         href: "WordSearch/index.html",          badge: "",     emoji: "🔍" },
+        { name: "Hidden Objects",   genre: "Puzzle",   icon: "assets/hiddenobjects.png",         href: "HiddenObjects/index.html",       badge: "new",  emoji: "🔎" },
         { name: "Word Crossword",   genre: "Word",     icon: "assets/wordcrossword200.png",      href: "WordCrossword/index.html",       badge: "new",  emoji: "🔤" },
         { name: "Tic Tac Toe",      genre: "Classic",  icon: "assets/Tictactoe200.png",          href: "TicTacToe/index.html",           badge: "new",  emoji: "❌" },
         { name: "Solitaire",        genre: "Cards",    icon: "assets/solitaire200.png",          href: "Solitaire/index.html",           badge: "hot",  emoji: "♠️" },
