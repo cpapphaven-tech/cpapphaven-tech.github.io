@@ -278,7 +278,7 @@
     // Replace global click/touch listeners with directional taps
     document.addEventListener('click', function(e) {
         var target = e.target;
-        if (target === canvas || target.closest && (target.closest('#play-area') || target.closest('#game-container'))) {
+        if (target === canvas || (target.closest && target.closest('#play-area'))) {
             handleTapAt(e.clientX, e.clientY);
         }
     });
@@ -287,7 +287,7 @@
         if (!e.touches || e.touches.length === 0) return;
         var t = e.touches[0];
         var target = e.target;
-        if (target === canvas || target.closest && (target.closest('#play-area') || target.closest('#game-container'))) {
+        if (target === canvas || (target.closest && target.closest('#play-area'))) {
             e.preventDefault();
             handleTapAt(t.clientX, t.clientY);
         }
