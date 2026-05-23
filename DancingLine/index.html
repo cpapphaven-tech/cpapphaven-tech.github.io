@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "apikey": anonKey, "Authorization": "Bearer " + anonKey },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+            sendHit("pre-init");
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) { sendHit("early-exit"); } else { sendHit("normal-exit"); }
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Dancing Line - Music Game | Free Rhythm Arcade Game | PlayMixGames</title>
+    <meta name="description" content="Guide an ever-growing Line through multiple environments. Tap to turn, avoid obstacles, and follow the beat! Test your reflexes and rhythm skills.">
+
+    <!-- Multi-Language SEO -->
+    <meta name="keywords" content="dancing line, music game, rhythm game, tap to turn, arcade, ダンシングライン, リズムゲーム, línea de baile, juego de ritmo, ligne de danse, jeu de rythme">
+
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ダンシングライン - ミュージックゲーム">
+    <meta name="twitter:description:ja" content="成長し続けるラインを導き、タップで曲がり、障害物を避けよう！リズムゲームの決定版。">
+
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Dancing Line - Juego de Música">
+    <meta name="twitter:description:es" content="Guía una línea en crecimiento a través de múltiples entornos. ¡Toca para girar, evita obstáculos y sigue el ritmo!">
+
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Dancing Line - Jeu de Musique">
+    <meta name="twitter:description:fr" content="Guide une ligne qui grandit à travers plusieurs environnements. Tapez pour tourner, évitez les obstacles et suivez le rythme !">
+
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/DancingLine/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/DancingLine/index.html" />
+    <style>
+        body, html { margin: 0; padding: 0; width: 100%; min-height: 100vh; overflow-x: hidden; overflow-y: auto; background: #0a0a1a; font-family: 'Segoe UI', system-ui, sans-serif; }
+        #pmg-loader { position: fixed; inset: 0; z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #0a0a1a; transition: opacity 0.5s ease; }
+        #pmg-loader.hidden { opacity: 0; pointer-events: none; }
+        .pmg-brand { font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; color: #00f2fe; text-transform: uppercase; margin-bottom: 30px; text-shadow: 0 0 20px rgba(0,242,254,0.4); animation: pmgPulse 2s infinite; }
+        .pmg-spinner { width: 50px; height: 50px; border: 4px solid rgba(0,242,254,0.1); border-top-color: #00f2fe; border-radius: 50%; animation: pmgSpin 0.8s linear infinite; margin-bottom: 20px; }
+        .pmg-bar-track { width: 200px; height: 4px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+        .pmg-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg,#00f2fe,#4facfe); animation: pmgFill 5s cubic-bezier(0.1,0,0.1,1) forwards; }
+        .pmg-tip { font-size: 0.8rem; color: rgba(255,255,255,0.3); margin-top: 15px; }
+        @keyframes pmgSpin { to { transform: rotate(360deg); } }
+        @keyframes pmgPulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(0.98); } }
+        @keyframes pmgFill { 0% { width: 0%; } 100% { width: 95%; } }
+        #game-frame { width: 100%; height: 100vh; border: none; display: block; opacity: 0; transition: opacity 0.5s ease; }
+        #game-frame.visible { opacity: 1; }
+    </style>
+    <meta property="og:title" content="Dancing Line - Music Game | Free Rhythm Arcade">
+    <meta property="og:description" content="Play Dancing Line - Music Game online for free. Tap to turn, avoid obstacles, follow the music!">
+    <meta property="og:url" content="https://playmixgames.in/DancingLine/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/DancingLine/index.html" />
+    <script defer src="../sidebar.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Dancing Line - Music Game",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Play Dancing Line - Music Game online for free. Tap to turn, avoid obstacles, follow the music!"
+    }
+    </script>
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+
+    <iframe id="game-frame" title="Dancing Line - Music Game" allow="autoplay; fullscreen; gamepad"></iframe>
+
+    <!-- SEO: Why Play Section -->
+    <section class="seo-content" style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #00f2fe;">Why Play on PlayMix Games?</h2>
+        <ul style="padding-left: 20px;">
+            <li>100% free with no hidden charges whatsoever</li>
+            <li>Play instantly in your browser (HTML5 Canvas)</li>
+            <li>Fully optimized for touch devices and mobile screens</li>
+            <li>No intrusive account logins needed</li>
+        </ul>
+
+        <h2 style="color: #00f2fe;">Frequently Asked Questions</h2>
+        <p><strong>Is Dancing Line free to play?</strong> Yes, you can play unlimited times for free.</p>
+        <p><strong>Does it run on mobile phones?</strong> Yes, the game is fully optimized for phones and tablets.</p>
+        <p><strong>How do you play?</strong> Tap the screen to make your line turn right. Avoid obstacles and collect gems to score points!</p>
+        <p><strong>How many levels are there?</strong> There are 5 unique worlds: Dawn, Neon City, Aurora, Lava World, and Galaxy.</p>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            const loader = document.getElementById('pmg-loader');
+            let start = Date.now();
+            frame.onload = function () {
+                if (!frame.src || frame.src === "" || frame.src === window.location.href) return;
+                const delay = Math.max(800 - (Date.now() - start), 100);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    start = Date.now();
+                    frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+                }, 50);
+            });
+        })();
+    </script>
+
+    <!-- SEO: About Game & How to Play -->
+    <section id="game-info" style="background: #0a0a1a; padding: 40px 20px; margin-top: 40px; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; color: #00f2fe; margin-bottom: 20px;">🎵 About Dancing Line</h2>
+            <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 30px;">
+                Dancing Line combines fast-paced gameplay with a carefully selected soundtrack to create an experience like no other. Featuring different worlds of increasing difficulty, each one paints a unique picture and evokes different emotions. The key is to not only watch for obstacles and traps, but also play to the music. Listen to the beat and the melody, and after a short while you will find yourself doing better and better.
+            </p>
+
+            <h3 style="font-size: 1.5rem; color: #fbbf24; margin-bottom: 15px;">🎮 How to Play</h3>
+            <ul style="font-size: 1rem; color: rgba(255,255,255,0.6); text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+                <li>✅ Tap the screen to make your line turn right</li>
+                <li>✅ Follow the path — avoid the red obstacles at all costs!</li>
+                <li>✅ Collect glowing gems along the way for points</li>
+                <li>✅ Listen to the music — the beat helps you time your turns</li>
+                <li>✅ Complete each level by collecting enough gems</li>
+            </ul>
+
+            <h3 style="font-size: 1.5rem; color: #4facfe; margin-bottom: 15px;">✨ Game Features</h3>
+            <ul style="font-size: 1rem; color: rgba(255,255,255,0.6); text-align: left; display: inline-block; line-height: 2; margin-bottom: 60px;">
+                <li>🎵 Original background music with beat-based gameplay</li>
+                <li>🌍 Multiple levels of increasing difficulty with their own stories</li>
+                <li>👆 Very simple practice mode with only one finger tap</li>
+                <li>🎶 Music is the key to guide you through each world</li>
+                <li>💎 Collect gems and unlock new environments</li>
+            </ul>
+
+            <h3 style="font-size: 1.5rem; color: #10b981; margin-bottom: 15px;">💡 Tips</h3>
+            <p style="font-size: 1rem; color: rgba(255,255,255,0.6); line-height: 1.6; margin-bottom: 60px;">
+                <strong style="color: #10b981;">Listen to the beat:</strong> the music tempo matches your movement speed.<br>
+                <strong style="color: #10b981;">Look ahead:</strong> plan your turns before you reach obstacles.<br>
+                <strong style="color: #10b981;">Tap in rhythm:</strong> turning on the beat feels natural and smooth.
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

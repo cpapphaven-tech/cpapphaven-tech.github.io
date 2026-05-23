@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Dancing Line - Music Game | Rhythm Arcade | PlayMixGames</title>
+    <meta name="description" content="Guide an ever-growing Line through multiple environments. Tap to turn, avoid obstacles, and follow the music beat!">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // loadSocialBarAd();
+        });
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00f2fe">
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <span class="header-stat stat-level" id="hdr-level">Dawn</span>
+        </div>
+        <div class="header-center">
+            <h1 class="game-title">DANCING LINE</h1>
+        </div>
+        <div class="header-right">
+            <span class="header-stat stat-score" id="hdr-score">✦ 0</span>
+        </div>
+    </header>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <div id="play-area">
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-content">
+                <h1>🎵 DANCING LINE</h1>
+                <p class="subtitle">Tap to turn! Follow the beat and avoid obstacles!</p>
+                <p style="color: #fbbf24; font-size: 0.85rem; margin-bottom: 16px;" id="best-menu">Best: 0</p>
+                <button id="start-btn" class="game-btn btn-start">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Level Complete -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h2 style="color: #10b981;">🎉 LEVEL CLEAR!</h2>
+                <p>Level <span id="completed-level">1</span> Complete</p>
+                <div class="stars-container">
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                </div>
+                <p>Score: <span id="level-score">0</span></p>
+                <button id="next-level-btn" class="game-btn btn-next">Next Level ➜</button>
+            </div>
+        </div>
+
+        <!-- Game Over -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h2 id="game-over-title" style="color: #ff3366;">💥 CRASH!</h2>
+                <div class="final-score-val" id="final-score">0</div>
+                <p class="best-score-val">Best: <span id="best-score">0</span></p>
+                <button id="restart-btn" class="game-btn btn-restart">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+
+    <script src="game.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

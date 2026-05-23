@@ -25,6 +25,7 @@ window.PMG_DATA = {
         { name: "Coloring for Kids", genre: "Kids",    icon: "",                                 href: "ColoringKids/index.html",        badge: "new",     emoji: "🎨" },
         { name: "Brick Breaker",    genre: "Classic",  icon: "assets/brickbreaker200.png",       href: "BrickBreaker/game.html",         badge: "",        emoji: "🧱" },
         { name: "Bubble Shooter",   genre: "Arcade",   icon: "assets/bubble_shooter.png",        href: "BubbleShooter/index.html",       badge: "",        emoji: "🔵" },
+        { name: "Dancing Line",     genre: "Rhythm",   icon: "",                                 href: "DancingLine/index.html",         badge: "new",     emoji: "🎵" },
       ]
     },
     {
