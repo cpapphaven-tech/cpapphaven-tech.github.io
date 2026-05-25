@@ -17,11 +17,11 @@ const messageOverlay = document.getElementById('message-overlay');
 const messageTitle = document.getElementById('message-title');
 const gameOverScreen = document.getElementById('game-over-screen');
 const restartBtn = document.getElementById('restart-btn');
+const resetBtn = document.getElementById('reset-btn');
 
 let engine, render, runner;
 let ball = null;
 let targets = [];
-let obstacles = [];
 let isDragging = false;
 let dragStart = null;
 let hasShot = false;
@@ -72,52 +72,49 @@ function playNote(noteIndex) {
 
 // --- Level Design ---
 // Coords are percentages (0 to 100) to allow responsive resizing
-// type: 'target' or 'obstacle'
+// type: 'target'
 const levels = [
-    // Level 1: Simple straight bounce
+    // Level 1: Single Target (Tutorial)
     {
         ballStart: { x: 50, y: 80 },
         entities: [
-            { type: 'target', x: 50, y: 20, w: 20, h: 5, angle: 0 }
+            { type: 'target', x: 50, y: 40, w: 20, h: 20, angle: 0 }
         ]
     },
-    // Level 2: Angle bounce
-    {
-        ballStart: { x: 20, y: 80 },
-        entities: [
-            { type: 'target', x: 80, y: 40, w: 5, h: 20, angle: 0 },
-            { type: 'obstacle', x: 50, y: 10, w: 40, h: 5, angle: 0 }
-        ]
-    },
-    // Level 3: Multiple targets
+    // Level 2: The Funnel (2 Targets)
     {
         ballStart: { x: 50, y: 80 },
         entities: [
-            { type: 'target', x: 20, y: 40, w: 5, h: 20, angle: 0 },
-            { type: 'target', x: 80, y: 40, w: 5, h: 20, angle: 0 },
-            { type: 'obstacle', x: 50, y: 10, w: 30, h: 5, angle: 0 }
+            { type: 'target', x: 30, y: 40, w: 15, h: 50, angle: 0 },
+            { type: 'target', x: 70, y: 40, w: 15, h: 50, angle: 0 }
         ]
     },
-    // Level 4: Bounce off obstacle
+    // Level 3: Funnel with Roof (3 Targets)
     {
         ballStart: { x: 50, y: 90 },
         entities: [
-            { type: 'target', x: 20, y: 50, w: 5, h: 20, angle: 0 },
-            { type: 'obstacle', x: 50, y: 50, w: 20, h: 5, angle: -Math.PI / 4 }
+            { type: 'target', x: 30, y: 45, w: 15, h: 60, angle: 0 },
+            { type: 'target', x: 70, y: 45, w: 15, h: 60, angle: 0 },
+            { type: 'target', x: 50, y: 10, w: 55, h: 15, angle: 0 }
         ]
     },
-    // Level 5: The box
+    // Level 4: Zig-Zag Vertical (3 Targets)
     {
-        ballStart: { x: 50, y: 50 },
+        ballStart: { x: 50, y: 90 },
         entities: [
-            { type: 'target', x: 20, y: 20, w: 5, h: 10, angle: 0 },
-            { type: 'target', x: 80, y: 20, w: 5, h: 10, angle: 0 },
-            { type: 'target', x: 20, y: 80, w: 5, h: 10, angle: 0 },
-            { type: 'target', x: 80, y: 80, w: 5, h: 10, angle: 0 },
-            { type: 'obstacle', x: 50, y: 10, w: 80, h: 5, angle: 0 },
-            { type: 'obstacle', x: 50, y: 90, w: 80, h: 5, angle: 0 },
-            { type: 'obstacle', x: 10, y: 50, w: 5, h: 80, angle: 0 },
-            { type: 'obstacle', x: 90, y: 50, w: 5, h: 80, angle: 0 },
+            { type: 'target', x: 20, y: 60, w: 15, h: 30, angle: 0 },
+            { type: 'target', x: 80, y: 40, w: 15, h: 30, angle: 0 },
+            { type: 'target', x: 20, y: 20, w: 15, h: 30, angle: 0 }
+        ]
+    },
+    // Level 5: The Double Funnel (4 Targets)
+    {
+        ballStart: { x: 50, y: 90 },
+        entities: [
+            { type: 'target', x: 35, y: 55, w: 15, h: 30, angle: 0 },
+            { type: 'target', x: 65, y: 55, w: 15, h: 30, angle: 0 },
+            { type: 'target', x: 35, y: 20, w: 15, h: 30, angle: 0 },
+            { type: 'target', x: 65, y: 20, w: 15, h: 30, angle: 0 }
         ]
     }
 ];
@@ -175,22 +172,6 @@ function init() {
                 ctx.restore();
             }
         });
-        
-        obstacles.forEach(o => {
-            ctx.font = "bold 12px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif";
-            ctx.fillStyle = "#888888";
-            ctx.textAlign = "center";
-            ctx.textBaseline = "middle";
-            ctx.save();
-            ctx.translate(o.position.x, o.position.y);
-            ctx.rotate(o.angle);
-            const w = o.bounds.max.x - o.bounds.min.x;
-            const h = o.bounds.max.y - o.bounds.min.y;
-            if (w > 40 || h > 40) {
-                ctx.fillText("WALL", 0, 0);
-            }
-            ctx.restore();
-        });
 
         if (isDragging && dragStart && !hasShot) {
             drawTrajectory(ctx);
@@ -212,6 +193,12 @@ function init() {
         currentLevel = 0;
         loadLevel(currentLevel);
     });
+
+    if (resetBtn) {
+        resetBtn.addEventListener('click', () => {
+            loadLevel(currentLevel);
+        });
+    }
 }
 
 function loadLevel(levelIndex) {
@@ -228,7 +215,6 @@ function loadLevel(levelIndex) {
     const height = render.options.height;
     
     targets = [];
-    obstacles = [];
     targetsHit = 0;
     hasShot = false;
     isDragging = false;
@@ -264,7 +250,7 @@ function loadLevel(levelIndex) {
             restitution: 1.0,
             friction: 0,
             render: {
-                fillStyle: ent.type === 'target' ? COLOR_TARGET : COLOR_OBSTACLE
+                fillStyle: COLOR_TARGET
             }
         });
         
@@ -273,8 +259,6 @@ function loadLevel(levelIndex) {
         
         if (ent.type === 'target') {
             targets.push(body);
-        } else {
-            obstacles.push(body);
         }
         
         World.add(engine.world, body);
@@ -396,6 +380,16 @@ function hitTarget(targetBody) {
     targetsHit++;
     
     playNote(targetsHit - 1);
+
+    // Check win condition immediately
+    if (targetsHit === targets.length) {
+        Events.off(engine, 'beforeUpdate', checkGameState);
+        showMessage("CLEARED!", COLOR_TARGET_HIT);
+        setTimeout(() => {
+            currentLevel++;
+            loadLevel(currentLevel);
+        }, 1500);
+    }
 }
 
 function checkGameState() {
@@ -405,26 +399,17 @@ function checkGameState() {
     const height = render.options.height;
     const margin = 50; // allow it to go slightly off screen before resetting
     
-    // Check if ball is completely off screen
-    if (ball.position.x < -margin || ball.position.x > width + margin ||
-        ball.position.y < -margin || ball.position.y > height + margin) {
+    // Check if ball is completely off screen and we haven't won yet
+    if (targetsHit < targets.length && (ball.position.x < -margin || ball.position.x > width + margin ||
+        ball.position.y < -margin || ball.position.y > height + margin)) {
         
         Events.off(engine, 'beforeUpdate', checkGameState);
         
-        if (targetsHit === targets.length) {
-            // Level cleared
-            showMessage("CLEARED!", COLOR_TARGET_HIT);
-            setTimeout(() => {
-                currentLevel++;
-                loadLevel(currentLevel);
-            }, 1500);
-        } else {
-            // Failed
-            showMessage("TRY AGAIN", COLOR_BALL);
-            setTimeout(() => {
-                loadLevel(currentLevel);
-            }, 1000);
-        }
+        // Failed
+        showMessage("TRY AGAIN", COLOR_BALL);
+        setTimeout(() => {
+            loadLevel(currentLevel);
+        }, 1000);
     }
 }
 
