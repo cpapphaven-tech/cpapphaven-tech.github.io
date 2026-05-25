@@ -200,7 +200,12 @@
                 var f = l.querySelector('.pmg-bar-fill'); 
                 if (f) f.style.width = '100%'; 
                 setTimeout(function () { l.classList.add('hidden'); }, 400); 
-            } 
+            }
+            
+            // Initialize bottom ad (ads.js)
+            if (typeof prepSystem === "function") {
+                setTimeout(function () { prepSystem(); }, 600);
+            }
         });
     </script>
 </body>
