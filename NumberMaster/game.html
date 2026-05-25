@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <title>Number Master: Run, Merge & Grow | PlayMixGames</title>
+    <meta name="description" content="Swipe to collect numbers, grow your value, and break through walls! Dodge saws, avoid red threat numbers, and aim for the highest score. Free hyper-casual math runner game.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="number master, run and merge, number game, merge numbers, math runner, hyper casual, obstacle course, number collect, free online game, playmix games">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/NumberMaster/game.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/NumberMaster/game.html" />
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    
+    <link rel="manifest" href="manifest.json">
+    <script defer src="../sidebar.js"></script>
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+    </script>
+
+    <meta property="og:title" content="Number Master: Run, Merge & Grow | PlayMix Games">
+    <meta property="og:description" content="Collect green numbers to grow, dodge red threats and saws, then break through walls to reach your target!">
+    <meta property="og:url" content="https://playmixgames.in/NumberMaster/game.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/NumberMaster/game.html" />
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Number Master...</p>
+    </div>
+
+    <main class="game-container">
+        <h1 style="display: none;">Number Master: Run, Merge & Grow</h1>
+        <div id="game-ui">
+
+            <!-- HUD: Level | Current Number | Target -->
+            <div id="hud">
+                <div class="hud-cell">
+                    <div id="level-num" class="hud-big">1</div>
+                    <div class="hud-label">LEVEL</div>
+                </div>
+                <div class="hud-cell">
+                    <div id="current-number-display" class="hud-big" style="color: #3b82f6;">1</div>
+                    <div class="hud-label">YOUR NUMBER</div>
+                </div>
+                <div class="hud-cell">
+                    <div id="target-display" class="hud-big" style="color: #f59e0b;">0</div>
+                    <div class="hud-label">TARGET</div>
+                </div>
+            </div>
+
+            <!-- Start Menu Overlay -->
+            <div id="start-menu" class="overlay">
+                <div class="overlay-inner">
+                    <h2>NUMBER MASTER</h2>
+                    <p style="margin: 10px 0; font-size: 13px;">
+                        🟢 Collect green numbers to grow<br>
+                        🔴 Avoid red numbers (they hurt!)<br>
+                        🟣 Purple numbers subtract your value<br>
+                        ⚙️ Saws will end the game<br>
+                        🧱 Break walls to clear the level
+                    </p>
+                    <p style="color: #fbbf24; font-size: 12px; margin-top: 5px;">
+                        TARGET shows the total wall value needed
+                    </p>
+                    <button id="start-btn" class="primary-btn">Tap to Start</button>
+                </div>
+            </div>
+
+            <!-- Level Complete Overlay -->
+            <div id="level-complete" class="overlay hidden">
+                <div class="overlay-inner lc-inner">
+                    <div class="lc-stars">⭐⭐⭐</div>
+                    <h2 id="lc-title">LEVEL 1<br>CLEARED!</h2>
+                    <div id="lc-score" class="lc-score-line">Score: 0</div>
+                    <div id="lc-player-value" class="lc-score-line" style="font-size: 18px; color: #3b82f6;">Final Number: 0</div>
+                    <div id="lc-next" class="lc-next-badge">LEVEL 2 →</div>
+                    <button id="next-level-btn" class="primary-btn" style="margin-top: 15px;">Next Level</button>
+                </div>
+            </div>
+
+            <!-- Game Over Overlay -->
+            <div id="game-over" class="overlay hidden">
+                <div class="overlay-inner">
+                    <h2 id="result-title">GAME OVER!</h2>
+                    <div id="result-reason" style="margin-bottom: 10px; color: #ef4444; font-weight: bold;">You hit a larger number!</div>
+                    <div id="result-level" class="go-lvl">Reached Level <span id="go-level-num">1</span></div>
+                    <div class="go-score-wrap">
+                        <div id="result-score" class="go-score">0</div>
+                    </div>
+                    <button id="restart-btn" class="primary-btn">🔄 Play Again</button>
+                    <div id="game-over-scroller"></div>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <section class="game-description">
+            <h2>About Number Master: Run, Merge & Grow</h2>
+            <p>Swipe left and right to move your blue number through an endless course. <strong>Collect green numbers</strong> to grow your value — they are always ≤ your current number so they're always safe to absorb.</p>
+            <p><strong>Avoid red threat numbers</strong> — they stay dangerous forever and will drain your value and score if you hit them. <strong>Purple minus numbers</strong> also subtract from your progress. <strong>Saws</strong> end the game instantly!</p>
+            <p>At the end of each level, <strong>break through walls</strong> using your accumulated number. The <strong>TARGET</strong> in the HUD shows the total wall value you need to clear the level.</p>
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Swipe:</strong> Move left or right to navigate the lanes.</li>
+                <li><strong>🟢 Green:</strong> Collect these to grow your number value.</li>
+                <li><strong>🔴 Red:</strong> Avoid these — they steal your value and score.</li>
+                <li><strong>🟣 Purple:</strong> Avoid these minus numbers too.</li>
+                <li><strong>⚙️ Saws:</strong> Game over on contact.</li>
+                <li><strong>🧱 Walls:</strong> At the goal, break them if your number is big enough!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links"><a href="../index.html">Home</a><a href="../privacy.html">Privacy Policy</a></div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () { 
+            var l = document.getElementById('pmg-loader'); 
+            if (l) { 
+                var f = l.querySelector('.pmg-bar-fill'); 
+                if (f) f.style.width = '100%'; 
+                setTimeout(function () { l.classList.add('hidden'); }, 400); 
+            } 
+        });
+    </script>
+</body>
+
+</html>
