@@ -1,7 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
-    { name: "Number Master", tag: "🆕 New Game", desc: "Collect numbers, dodge threats, break walls!", href: "NumberMaster/game.html", gradient: "linear-gradient(135deg,#0f172a,#3b82f6,#10b981)", icon: "🔢", badge: "new", image: "" },
+    { name: "Marble Sort", tag: "🆕 New Game", desc: "Drop marbles, ride the belt, sort by color!", href: "MarbleSort/game.html", gradient: "linear-gradient(135deg,#1a0a2e,#a855f7,#ec4899)", icon: "🔮", badge: "new", image: "" },
+    { name: "Number Master", tag: "🔢 Brain Game", desc: "Collect numbers, dodge threats, break walls!", href: "NumberMaster/game.html", gradient: "linear-gradient(135deg,#0f172a,#3b82f6,#10b981)", icon: "🔢", badge: "new", image: "" },
     { name: "Crossy Road", tag: "🏎️ Fast & Fun", desc: "Navigate the sunny roads and collect number balloons", href: "CrossyRoad/index.html", gradient: "linear-gradient(135deg,#1c0a00,#ff9f0a,#ff453a)", icon: "🏎️", badge: "trend", image: "img/crossroad600.png" },
     { name: "Balloon Ninja Slice", tag: "🔥 Trending", desc: "Swipe to slash flying balloons and dodge the bombs!", href: "NeonSlicer/index.html", gradient: "linear-gradient(135deg,#1a0533,#bf5af2,#ff453a)", icon: "🗡️", badge: "hot", image: "img/ninja600.png" },
     { name: "Word Crossword", tag: "🔥 New Game", desc: "Master the Modern Word Crossword!", href: "WordCrossword/index.html", gradient: "linear-gradient(135deg,#064e3b,#4ade80,#064e3b)", icon: "🔎", badge: "new", image: "img/wordcrossword600.png" },
@@ -59,6 +60,7 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Marble Sort",      genre: "Puzzle",   icon: "",                                 href: "MarbleSort/game.html",           badge: "new",  emoji: "🔮" },
         { name: "Crossmath",        genre: "Math",     icon: "",                                 href: "Crossmath/game.html",            badge: "new",  emoji: "➕" },
         { name: "Hidden Word",      genre: "Word",     icon: "",                                 href: "HiddenWord/index.html",          badge: "new",  emoji: "🔎" },
         { name: "Dot Connect",      genre: "Puzzle",   icon: "",                                 href: "DotConnect/index.html",          badge: "new",  emoji: "🔴" },
