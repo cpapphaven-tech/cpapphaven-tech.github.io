@@ -244,6 +244,33 @@
         // ── Replenish boxes when completed (after brief delay) ──
         replenishBoxes();
 
+        // ── Auto-pack marbles into boxes ──
+        const pad = 10;
+        const bX  = pad;
+        const bW  = canvas.width - pad * 2;
+        const slotW = bW / BELT_SLOTS;
+
+        for (let i = 0; i < BELT_SLOTS; i++) {
+            const slot = state.belt[i];
+            if (!slot) continue;
+            
+            const rawX  = bX + slotW * (i + 0.5) + state.beltOffset * slotW;
+            const x = bX + ((rawX - bX) % bW + bW) % bW;
+            
+            // Check against boxes
+            for (let b = 0; b < state.boxes.length; b++) {
+                const box = state.boxes[b];
+                if (!box.completed && box.slots.length < BOX_SLOTS && box.color === slot.color) {
+                    const r = getBoxRect(b);
+                    // Check if marble is very close to box center
+                    if (Math.abs(x - r.cx) < 5) {
+                        packIntoBox(b, i);
+                        break; // Packed this marble, stop checking boxes for it
+                    }
+                }
+            }
+        }
+        
         // ── Refill trays that ran out ──
         refillEmptyTrays();
     }
@@ -348,26 +375,16 @@
     // ─────────────────────────────────────────────────────────
     //  PACK into box
     // ─────────────────────────────────────────────────────────
-    function packIntoBox(boxIdx) {
+    function packIntoBox(boxIdx, slotIdx) {
         const box = state.boxes[boxIdx];
         if (!box || box.completed || box.slots.length >= BOX_SLOTS) return;
 
-        // Find nearest matching marble on belt (by position, favour rightmost which is about to fall off)
-        let foundSlot = -1;
-        for (let i = BELT_SLOTS - 1; i >= 0; i--) {
-            if (state.belt[i] && state.belt[i].color === box.color) {
-                foundSlot = i;
-                break;
-            }
-        }
-
-        if (foundSlot === -1) {
-            showToast('No ' + box.color + ' marble on belt!');
+        if (slotIdx === undefined || slotIdx === -1) {
             return;
         }
 
         // Pack it
-        state.belt[foundSlot] = null;
+        state.belt[slotIdx] = null;
         box.slots.push(box.color);
         box.bounceAnim = 1;
 
@@ -575,12 +592,24 @@
                 continue;
             }
 
+            // Tap indicator
+            ctx.fillStyle = 'rgba(255,255,255,0.45)';
+            ctx.font = `bold ${Math.round(r.h * 0.16)}px Outfit, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'top';
+            ctx.fillText('TAP', r.cx, r.y + 6);
+
             // Draw stacked marbles (max 4 visible)
             const visibleCount = Math.min(tray.marbles.length, 4);
-            const marbleSpacing = Math.min((r.h - MARBLE_R * 2) / (visibleCount), MARBLE_R * 2.1);
             const baseY = r.y + r.h - MARBLE_R - 8;
+            // TAP text ends around r.y + 24. We want the top of the top marble (my - MARBLE_R) to be below that.
+            // So my must be >= r.y + 28 + MARBLE_R.
+            const topMargin = r.y + 28 + MARBLE_R; 
+            const maxStackHeight = Math.max(0, baseY - topMargin);
+            const marbleSpacing = Math.min(maxStackHeight / Math.max(1, visibleCount - 1), MARBLE_R * 1.8);
 
-            for (let m = 0; m < visibleCount; m++) {
+            // Draw from top to bottom so bottom marble is in front
+            for (let m = visibleCount - 1; m >= 0; m--) {
                 const marble = tray.marbles[m];
                 const my     = baseY - m * marbleSpacing;
                 const col    = getColor(marble.color);
@@ -591,21 +620,14 @@
             if (tray.marbles.length > 4) {
                 ctx.fillStyle = 'rgba(0,0,0,0.55)';
                 ctx.beginPath();
-                ctx.arc(r.cx, r.y + 14, 12, 0, Math.PI * 2);
+                ctx.arc(r.cx, r.y + Math.round(r.h * 0.16) + 16, 12, 0, Math.PI * 2);
                 ctx.fill();
                 ctx.fillStyle = '#fff';
                 ctx.font = 'bold 11px Outfit, sans-serif';
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
-                ctx.fillText('+' + (tray.marbles.length - 4), r.cx, r.y + 14);
+                ctx.fillText('+' + (tray.marbles.length - 4), r.cx, r.y + Math.round(r.h * 0.16) + 16);
             }
-
-            // Tap indicator
-            ctx.fillStyle = 'rgba(255,255,255,0.45)';
-            ctx.font = `bold ${Math.round(r.h * 0.16)}px Outfit, sans-serif`;
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'top';
-            ctx.fillText('TAP', r.cx, r.y + 5);
         }
     }
 
@@ -738,13 +760,6 @@
                         ctx.stroke();
                     }
                 }
-
-                // TAP hint
-                ctx.fillStyle = 'rgba(255,255,255,0.3)';
-                ctx.font = `${Math.round(r.h * 0.13)}px Outfit, sans-serif`;
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'bottom';
-                ctx.fillText('TAP TO PACK', r.cx, r.y + r.h - 4);
             }
 
             ctx.restore();
@@ -850,14 +865,14 @@
             }
         }
 
-        // Check boxes (bottom portion)
-        for (let b = 0; b < state.boxes.length; b++) {
-            const r = getBoxRect(b);
-            if (x >= r.x && x <= r.x + r.w && y >= r.y && y <= r.y + r.h) {
-                packIntoBox(b);
-                return;
-            }
-        }
+        // Check boxes (bottom portion) - Disabled since auto-pack is now active
+        // for (let b = 0; b < state.boxes.length; b++) {
+        //     const r = getBoxRect(b);
+        //     if (x >= r.x && x <= r.x + r.w && y >= r.y && y <= r.y + r.h) {
+        //         packIntoBox(b);
+        //         return;
+        //     }
+        // }
     }
 
     // ─────────────────────────────────────────────────────────
@@ -879,7 +894,7 @@
                     const hasBeltMarble = state.belt.some(s => s && s.color === topColor);
                     if (hasBeltMarble) {
                         state.hintBox  = b;
-                        showToast(`Pack ${topColor} marble into box!`);
+                        showToast(`Wait for ${topColor} marble to pass!`);
                         return;
                     } else {
                         state.hintTray = i;
