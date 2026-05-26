@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "apikey": anonKey, "Authorization": "Bearer " + anonKey },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+            sendHit("pre-init");
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) sendHit("early-exit");
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <title>Jewel Sort: Sparkle Color Puzzle | PlayMixGames</title>
+    <meta name="description" content="Drop sparkling gemstones from trays, watch them ride the conveyor belt, and sort them into matching treasure crates. Play Jewel Sort: Sparkle Color Puzzle game online for free!">
+    <meta name="keywords" content="jewel sort, gemstone sorting, diamond puzzle, crystal sort game, color puzzle, free online game, playmix games">
+
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/JewelSort/game.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/JewelSort/game.html" />
+
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <link rel="manifest" href="manifest.json">
+    <script defer src="../sidebar.js"></script>
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <meta property="og:title" content="Jewel Sort: Sparkle Color Puzzle | PlayMix Games">
+    <meta property="og:description" content="Drop sparkling gemstones, ride the conveyor belt, and sort them by color into matching treasure boxes. Don't let the belt overflow!">
+    <meta property="og:url" content="https://playmixgames.in/JewelSort/game.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/JewelSort/game.html" />
+</head>
+
+<body>
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Jewel Sort...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="game-header">
+        <a href="../index.html" class="back-link">← PlayMixGames</a>
+        <span class="header-title">💎 Jewel Sort</span>
+        <span class="header-level">LV <span id="header-level-num">1</span></span>
+    </header>
+
+    <main>
+        <div id="game-wrapper">
+            <h1 style="display:none;">Jewel Sort: Sparkle Color Puzzle Game</h1>
+
+            <!-- HUD -->
+            <div id="hud">
+                <div class="hud-card">
+                    <div class="hud-value" id="hud-level">1</div>
+                    <div class="hud-label">LEVEL</div>
+                </div>
+                <div class="hud-card">
+                    <div class="hud-value" id="hud-score">0</div>
+                    <div class="hud-label">SCORE</div>
+                </div>
+                <div class="hud-card">
+                    <div class="hud-value" id="hud-boxes">0</div>
+                    <div class="hud-label">PACKED</div>
+                </div>
+            </div>
+
+            <!-- Canvas -->
+            <div id="game-canvas-wrap">
+                <canvas id="game-canvas"></canvas>
+            </div>
+
+            <!-- Controls -->
+            <div id="game-controls">
+                <button class="ctrl-btn" id="restart-btn">🔄 Restart</button>
+                <button class="ctrl-btn" id="hint-btn">💡 Hint</button>
+            </div>
+        </div>
+
+        <!-- ===== OVERLAYS ===== -->
+
+        <!-- Start Menu -->
+        <div id="overlay-start" class="ms-overlay">
+            <div class="ms-panel">
+                <h2>Jewel Sort</h2>
+                <p class="subtitle">Gemstone Color Puzzle – Sort & Pack!</p>
+                <ul class="instructions">
+                    <li>💎 <span>Tap a tray above to drop its gemstone onto the conveyor belt</span></li>
+                    <li>🔄 <span>Gemstones ride the circular conveyor belt – it keeps moving!</span></li>
+                    <li>📦 <span>Gemstones automatically drop into matching color boxes underneath</span></li>
+                    <li>✅ <span>Fill all 3 slots in a box with matching colors to complete it</span></li>
+                    <li>⚠️ <span>If the belt is full with no match available, you lose!</span></li>
+                </ul>
+                <button class="primary-btn" id="start-btn">▶ Tap to Play</button>
+            </div>
+        </div>
+
+        <!-- Level Complete -->
+        <div id="overlay-complete" class="ms-overlay hidden">
+            <div class="ms-panel">
+                <div class="stars-row">⭐⭐⭐</div>
+                <h2>Level Clear!</h2>
+                <div class="lc-next" id="lc-next-badge">NEXT: LEVEL 2</div>
+                <div class="score-badge">
+                    Score
+                    <span class="big-num" id="lc-score">0</span>
+                </div>
+                <button class="primary-btn" id="next-level-btn">Next Level →</button>
+                <button class="secondary-btn" id="lc-restart-btn">🔄 Play Again</button>
+            </div>
+        </div>
+
+        <!-- Game Over -->
+        <div id="overlay-gameover" class="ms-overlay hidden">
+            <div class="ms-panel">
+                <h2>Oh No!</h2>
+                <p class="subtitle" id="go-reason">The belt is overloaded!</p>
+                <div class="score-badge">
+                    Score
+                    <span class="big-num" id="go-score">0</span>
+                </div>
+                <button class="primary-btn" id="retry-btn">🔄 Try Again</button>
+                <button class="secondary-btn" id="go-home-btn">🏠 Home</button>
+            </div>
+        </div>
+
+        <!-- Toast -->
+        <div id="ms-toast" class="ms-toast"></div>
+
+        <!-- SEO Section -->
+        <section class="game-info-section">
+            <h2>💎 About Jewel Sort: Sparkle Color Puzzle</h2>
+            <p>Jewel Sort is a relaxing yet strategic color puzzle game. Drop sparkling precious gemstones from trays above, watch them land on the ever-moving circular conveyor belt, and guide them into the matching color treasure crates below. With only 3 slots per crate, every drop counts!</p>
+            <p>As levels progress, more colors and trays are introduced, making the puzzle increasingly tricky. Calm ASMR-style physics and sparkling jewel animations make this the perfect stress-relief game.</p>
+
+            <h3>🎮 How to Play</h3>
+            <ul>
+                <li>💎 <strong>Tap a tray</strong> at the top to drop a gemstone onto the conveyor</li>
+                <li>🔄 <strong>Conveyor keeps moving</strong> – plan ahead before dropping!</li>
+                <li>📦 <strong>Auto-Pack:</strong> Gemstones will automatically drop into matching color crates as they pass underneath</li>
+                <li>✅ <strong>Complete crates</strong> – fill all 3 slots with the same color</li>
+                <li>⚠️ <strong>Don't overfill</strong> – if belt is full with no matches, you lose!</li>
+            </ul>
+
+            <h3>🏆 Tips & Tricks</h3>
+            <ul>
+                <li>📌 Check which crates are partially filled before dropping gemstones</li>
+                <li>🧠 Think 2-3 moves ahead – the belt moves constantly</li>
+                <li>⚡ Drop gemstones strategically to avoid overflowing the belt</li>
+                <li>🎯 Try to complete a crate efficiently to earn bonus points</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">© 2026 PlayMixGames.</p>
+    </footer>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var l = document.getElementById('pmg-loader');
+            if (l) {
+                var f = l.querySelector('.pmg-bar-fill');
+                if (f) f.style.width = '100%';
+                setTimeout(function () { l.classList.add('hidden'); }, 400);
+            }
+            if (typeof prepSystem === "function") {
+                setTimeout(function () { prepSystem(); }, 600);
+            }
+        });
+    </script>
+</body>
+
+</html>

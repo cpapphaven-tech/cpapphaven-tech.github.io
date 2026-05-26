@@ -66,6 +66,11 @@ window.PMG_DATA = {
       tab: "games",
       items: [
         { name: "Marble Sort",      genre: "Puzzle",   icon: "",                                 href: "MarbleSort/game.html",           badge: "new",  emoji: "🔮" },
+        { name: "Ball Sort",        genre: "Puzzle",   icon: "",                                 href: "BallSort/game.html",             badge: "new",  emoji: "⚽" },
+        { name: "Candy Sort",       genre: "Puzzle",   icon: "",                                 href: "CandySort/game.html",            badge: "new",  emoji: "🍬" },
+        { name: "Egg Sort",         genre: "Puzzle",   icon: "",                                 href: "EggSort/game.html",             badge: "new",  emoji: "🥚" },
+        { name: "Fruit Sort",       genre: "Puzzle",   icon: "",                                 href: "FruitSort/game.html",            badge: "new",  emoji: "🍎" },
+        { name: "Jewel Sort",       genre: "Puzzle",   icon: "",                                 href: "JewelSort/game.html",            badge: "new",  emoji: "💎" },
         { name: "Crossmath",        genre: "Math",     icon: "",                                 href: "Crossmath/game.html",            badge: "new",  emoji: "➕" },
         { name: "Hidden Word",      genre: "Word",     icon: "",                                 href: "HiddenWord/index.html",          badge: "new",  emoji: "🔎" },
         { name: "Dot Connect",      genre: "Puzzle",   icon: "",                                 href: "DotConnect/index.html",          badge: "new",  emoji: "🔴" },
