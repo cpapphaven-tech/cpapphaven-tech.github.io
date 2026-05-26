@@ -748,4 +748,24 @@
     <loc>https://playmixgames.in/VeggieSmash/index.html</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://playmixgames.in/MarbleBlast/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/GemShooter/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/CandyBubblePop/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/PlanetShooter/index.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/VirusShooter/index.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>

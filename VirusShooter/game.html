@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Virus Shooter - Microscopic Hexa Puzzle!</title>
+    <meta name="description" content="Aim and match 3 colors to burst all the viruss! A classic satisfying arcade puzzle. Play Virus Shooter for free and clear endless levels.">
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Project Scripts -->
+    <script src="../ads.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+
+    <!-- Cookie Consent Script -->
+    <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+                console.log('✅ Cookie consent accepted');
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+                console.log('❌ Cookie consent declined');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script src="../sidebar.js"></script>
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2196f3">
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                if (window.DEV_MODE) {
+                    return;
+                }
+                //loadSocialBarAd();
+            }, 2000);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+
+    <header id="mobile-header">
+        <h1>Virus Shooter 3D</h1>
+    </header>
+
+
+
+    <div id="game-wrapper">
+        <canvas id="game-canvas"></canvas>
+        <!-- UI Overlay -->
+        <div id="ui-container">
+            <div id="score-container">
+                <h1 id="score">0</h1>
+            </div>
+
+            <div id="level-container">
+                <div id="level-display">Level: <span id="level">1</span></div>
+                <div id="timer-display"><span id="timer">60</span>s</div>
+            </div>
+
+            <div id="main-menu" class="overlay">
+                <h2 id="title">BUBBLE SHOOTER 3D</h2>
+                <p id="prompt">🦠 Match 3 or more colors to clear them!</p>
+                <button id="start-btn">START GAME</button>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <h2 id="game-over-title">GAME OVER!</h2>
+                <p>Points: <span id="final-score">0</span></p>
+                <p>Best: <span id="best-score">0</span></p>
+
+                <button id="restart-btn">Try Again</button>
+
+                <!-- Scroller Retired -->
+
+            </div>
+
+            <div id="level-complete" class="overlay hidden">
+                <h2>CONGRATULATIONS!</h2>
+                <p>Level <span id="completed-level">1</span> Cleared!</p>
+                <p>Score: <span id="level-score">0</span></p>
+                <button id="next-level-btn">NEXT LEVEL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-icon">🍪</span>
+                <span>We use cookies & tracking for ads. <a href="../privacy.html" target="_blank"
+                        style="color: #ff9800; text-decoration: underline;">Learn more</a></span>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- BOTTOM BANNER AD -->
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

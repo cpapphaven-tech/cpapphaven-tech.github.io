@@ -27,6 +27,11 @@ window.PMG_DATA = {
         { name: "Coloring for Kids", genre: "Kids",    icon: "",                                 href: "ColoringKids/index.html",        badge: "new",     emoji: "🎨" },
         { name: "Brick Breaker",    genre: "Classic",  icon: "assets/brickbreaker200.png",       href: "BrickBreaker/game.html",         badge: "",        emoji: "🧱" },
         { name: "Bubble Shooter",   genre: "Arcade",   icon: "assets/bubble_shooter.png",        href: "BubbleShooter/index.html",       badge: "",        emoji: "🔵" },
+        { name: "Marble Blast",     genre: "Arcade",   icon: "",                                 href: "MarbleBlast/index.html",         badge: "new",     emoji: "🔮" },
+        { name: "Gem Shooter",      genre: "Arcade",   icon: "",                                 href: "GemShooter/index.html",          badge: "new",     emoji: "💎" },
+        { name: "Candy Bubble Pop", genre: "Arcade",   icon: "",                                 href: "CandyBubblePop/index.html",      badge: "new",     emoji: "🍬" },
+        { name: "Planet Shooter",   genre: "Arcade",   icon: "",                                 href: "PlanetShooter/index.html",       badge: "new",     emoji: "🪐" },
+        { name: "Virus Shooter",    genre: "Arcade",   icon: "",                                 href: "VirusShooter/index.html",        badge: "new",     emoji: "🦠" },
         { name: "Number Master",    genre: "Arcade",   icon: "",                                 href: "NumberMaster/game.html",         badge: "new",     emoji: "🔢" },
         { name: "Dancing Line",     genre: "Rhythm",   icon: "",                                 href: "DancingLine/index.html",         badge: "new",     emoji: "🎵" },
       ]
