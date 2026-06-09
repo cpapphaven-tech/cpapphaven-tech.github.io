@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "apikey": anonKey, "Authorization": "Bearer " + anonKey },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+            sendHit("pre-init");
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) sendHit("early-exit");
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <title>Knife Hit Game Online | Play Knife Throw Arcade Free | PlayMixGames</title>
+    <meta name="description" content="Play Knife Hit online for free! Throw sharp knives into rotating target logs, slice juicy apples to score points, and avoid hitting other knives. High-speed casual reaction game.">
+    <meta name="keywords" content="knife hit game online, play knife throw arcade, knife target game free, knife hit free, slice fruits game, throw knives, playmix games">
+
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/KnifeHit/game.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/KnifeHit/game.html" />
+
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <link rel="manifest" href="manifest.json">
+    <script defer src="../sidebar.js"></script>
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <meta property="og:title" content="Knife Hit Game Online | Play Knife Throw Arcade Free | PlayMix Games">
+    <meta property="og:description" content="Throw knives, hit the rotating log, and splash apples! A fun, highly addictive casual reaction arcade puzzle.">
+    <meta property="og:url" content="https://playmixgames.in/KnifeHit/game.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/KnifeHit/game.html" />
+</head>
+
+<body>
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Knife Hit...</p>
+    </div>
+
+    <!-- Header -->
+    <header class="game-header">
+        <a href="../index.html" class="back-link">← PlayMixGames</a>
+        <span class="header-title">🎯 Knife Hit</span>
+        <span class="header-level">STAGE <span id="header-level-num">1</span></span>
+    </header>
+
+    <main>
+        <div id="game-wrapper">
+            <h1 style="display:none;">Knife Hit: Throw Knives Target Arcade Game</h1>
+
+            <!-- HUD -->
+            <div id="hud">
+                <div class="hud-card">
+                    <div class="hud-value" id="hud-level">1</div>
+                    <div class="hud-label">STAGE</div>
+                </div>
+                <div class="hud-card">
+                    <div class="hud-value" id="hud-knives">0</div>
+                    <div class="hud-label">KNIVES LEFT</div>
+                </div>
+                <div class="hud-card">
+                    <div class="hud-value" id="hud-score">0</div>
+                    <div class="hud-label">SCORE</div>
+                </div>
+            </div>
+
+            <!-- Canvas Wrapper -->
+            <div id="game-canvas-wrap">
+                <canvas id="game-canvas"></canvas>
+            </div>
+
+            <!-- Controls -->
+            <div id="game-controls">
+                <button class="ctrl-btn" id="restart-btn">🔄 Restart</button>
+            </div>
+        </div>
+
+        <!-- ===== OVERLAYS ===== -->
+
+        <!-- Start Menu -->
+        <div id="overlay-start" class="ms-overlay">
+            <div class="ms-panel">
+                <h2>Knife Hit</h2>
+                <p class="subtitle">Arcade Target Throw – Hit & Destroy!</p>
+                <ul class="instructions">
+                    <li>🎯 <span>Tap anywhere on the screen to throw a knife at the rotating log</span></li>
+                    <li>🍎 <span>Slash apples on the log to score big bonus points</span></li>
+                    <li>🚫 <span>Do NOT hit any other knives already embedded in the log</span></li>
+                    <li>🏁 <span>Embed all your knives to clear the stage and proceed</span></li>
+                    <li>🌀 <span>Warning: The log changes direction and speeds up dynamically!</span></li>
+                </ul>
+                <button class="primary-btn" id="start-btn">▶ Tap to Throw</button>
+            </div>
+        </div>
+
+        <!-- Level Complete (Stage Clear) -->
+        <div id="overlay-complete" class="ms-overlay hidden">
+            <div class="ms-panel">
+                <div class="stars-row">⭐⭐⭐</div>
+                <h2>Stage Clear!</h2>
+                <div class="lc-next" id="lc-next-badge">NEXT: STAGE 2</div>
+                <div class="score-badge">
+                    Score
+                    <span class="big-num" id="lc-score">0</span>
+                </div>
+                <button class="primary-btn" id="next-level-btn">Next Stage →</button>
+            </div>
+        </div>
+
+        <!-- Game Over -->
+        <div id="overlay-gameover" class="ms-overlay hidden">
+            <div class="ms-panel">
+                <h2>Game Over!</h2>
+                <p class="subtitle" id="go-reason">You hit another knife!</p>
+                <div class="score-badge">
+                    Score
+                    <span class="big-num" id="go-score">0</span>
+                </div>
+                
+                <!-- Cross-promotion container -->
+                <div id="gameover-scroller"></div>
+                
+                <button class="primary-btn" id="retry-btn">🔄 Try Again</button>
+                <button class="secondary-btn" id="go-home-btn">🏠 Home</button>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div id="ms-toast" class="ms-toast"></div>
+
+        <!-- SEO Content Section -->
+        <section class="game-info-section">
+            <h2>🎯 About Knife Hit: Target Throw Arcade</h2>
+            <p>Knife Hit is a thrilling reaction-based arcade game designed to test your reflexes and timing. Tap to throw sharp knives directly into the center rotating wooden targets. The target log spins at variable speeds and changes direction unexpectedly, demanding complete concentration and precise execution.</p>
+            <p>Your objective is to embed a specific number of knives into the log. If you throw a knife and it strikes another blade already embedded, the log will reject it and trigger a Game Over. Along the way, slash juicy apples to score extra points and set high score records.</p>
+
+            <h3>🎮 How to Play</h3>
+            <ul>
+                <li>🎯 <strong>Tap the screen</strong> to launch a knife straight upwards.</li>
+                <li>🌀 <strong>Read the target:</strong> Anticipate the log's acceleration, deceleration, and random reverses.</li>
+                <li>🍎 <strong>Slash apples:</strong> Target apples on the rotating wooden log for high-score bonuses.</li>
+                <li>🚫 <strong>Avoid clashes:</strong> Never let a thrown knife collide with existing pins or knives on the log.</li>
+                <li>🏆 <strong>Finish the set:</strong> Successfully stick all your available knives to shatter the log and advance!</li>
+            </ul>
+
+            <h3>🏆 Tips & Tricks</h3>
+            <ul>
+                <li>📌 <strong>Wait for the pattern:</strong> Watch the log for one full rotation to learn its current speed cycle.</li>
+                <li>⚡ <strong>Group them tight:</strong> Place your knives close to each other when the log is slow to save space for later throws.</li>
+                <li>🧠 <strong>Stay calm:</strong> Panic-clicking leads to mistakes. Take your time to target open gaps.</li>
+                <li>🎯 <strong>Expect the snap:</strong> In higher stages, logs will snap-reverse directions very quickly.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">© 2026 PlayMixGames.</p>
+    </footer>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var l = document.getElementById('pmg-loader');
+            if (l) {
+                var f = l.querySelector('.pmg-bar-fill');
+                if (f) f.style.width = '100%';
+                setTimeout(function () { l.classList.add('hidden'); }, 400);
+            }
+            if (typeof prepSystem === "function") {
+                setTimeout(function () { prepSystem(); }, 600);
+            }
+        });
+    </script>
+</body>
+
+</html>

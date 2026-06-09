@@ -1,6 +1,7 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Knife Hit", tag: "🎯 Trending", desc: "Throw knives, hit the target, slice apples!", href: "KnifeHit/game.html", gradient: "linear-gradient(135deg,#1e1b4b,#f59e0b,#ef4444)", icon: "🎯", badge: "new", image: "" },
     { name: "Marble Sort", tag: "🆕 New Game", desc: "Drop marbles, ride the belt, sort by color!", href: "MarbleSort/game.html", gradient: "linear-gradient(135deg,#1a0a2e,#a855f7,#ec4899)", icon: "🔮", badge: "new", image: "" },
     { name: "Number Master", tag: "🔢 Brain Game", desc: "Collect numbers, dodge threats, break walls!", href: "NumberMaster/game.html", gradient: "linear-gradient(135deg,#0f172a,#3b82f6,#10b981)", icon: "🔢", badge: "new", image: "" },
     { name: "Crossy Road", tag: "🏎️ Fast & Fun", desc: "Navigate the sunny roads and collect number balloons", href: "CrossyRoad/index.html", gradient: "linear-gradient(135deg,#1c0a00,#ff9f0a,#ff453a)", icon: "🏎️", badge: "trend", image: "img/crossroad600.png" },
@@ -16,6 +17,7 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Knife Hit",        genre: "Arcade",   icon: "",                                 href: "KnifeHit/game.html",             badge: "new",     emoji: "🎯" },
         { name: "Balloon Ninja",    genre: "Arcade",   icon: "assets/ninja200.png",             href: "NeonSlicer/index.html",          badge: "hot",     emoji: "🗡️" },
         { name: "Highway Rush",     genre: "Racing",   icon: "assets/highwayrushcar200.png",     href: "HighwayRush/index.html",         badge: "trend",   emoji: "🏎️" },
         { name: "Crossy Road Hop",  genre: "Arcade",   icon: "assets/crossroad200.png",          href: "CrossyRoad/index.html",          badge: "",        emoji: "🐔" },

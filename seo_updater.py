@@ -129,6 +129,10 @@ games_seo = {
     "ArcheryMaster": {
         "title": "Archery Master Bow Physics | Play 2D Slingshot Shooter Game",
         "description": "Draw your bow, factor the wind, and release! Step into the Archery Master arena in this realistic physics-based slingshot target game."
+    },
+    "KnifeHit": {
+        "title": "Knife Hit Game Online | Play Knife Throw Arcade Free",
+        "description": "Play Knife Hit online for free! Throw sharp knives into rotating target logs, slice juicy apples to score points, and avoid hitting other knives. High-speed casual reaction game."
     }
 }
 
