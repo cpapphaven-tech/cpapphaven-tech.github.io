@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <title>Snakes and Ladders Online | Play Classic Snake Board Game Free | PlayMixGames</title>
+    <meta name="description" content="Roll the dice, climb the ladders, and slide down the snakes! Play the ultimate Snakes and Ladders board game online. Try 2-player local multiplayer or challenge our smart AI.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="snakes and ladders, snake board game, roll the dice, ladders game, snakes and ladders online, ヘビとハシゴ, クラシックボードゲーム, サイコロゲーム, serpientes y escaleras, juego de mesa clásico, serpents et échelles, jeu de dés">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="スネーク＆ラダー - クラシックボードゲーム">
+    <meta name="twitter:description:ja" content="サイコロを振ってハシゴを登り、ヘビを避けましょう！古典的なスネーク＆ラダー（ヘビとハシゴ）ボードゲームを無料でプレイ。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Serpientes y Escaleras - Juego de mesa clásico">
+    <meta name="twitter:description:es" content="¡Tira los dados, sube por las escaleras y esquiva las serpientes! Juega gratis a Serpientes y Escaleras en línea.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Serpents et Échelles - Jeu de société classique">
+    <meta name="twitter:description:fr" content="Lancez le dé, grimpez aux échelles et évitez les serpents ! Jouez gratuitement en ligne au jeu Serpents et Échelles.">
+    
+    <meta property="og:title" content="Snakes and Ladders Online | PlayMixGames">
+    <meta property="og:description" content="Play Snakes and Ladders online free — challenge the AI or play local 2-player with a friend! Touch friendly and responsive design.">
+    <meta property="og:url" content="https://playmixgames.in/SnakesAndLadders/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/SnakesAndLadders/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Snakes and Ladders",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Free online Snakes and Ladders board game. Play vs AI or local 2-player mode. Interactive 3D dice, animated movements, and mobile responsive board."
+    }
+    </script>
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- Ad slots -->
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <!-- Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Loading game...</p>
+    </div>
+
+    <!-- Back Button -->
+    <a href="../index.html" class="back-btn" style="position:fixed;top:15px;left:15px;z-index:10000;color:white;text-decoration:none;font-size:1.1rem;font-weight:700;background:rgba(0,0,0,0.55);padding:7px 14px;border-radius:20px;backdrop-filter:blur(5px);">← Back</a>
+
+    <main id="game-wrapper" aria-label="Snakes and Ladders Board Game">
+
+        <!-- MODE SELECTION SCREEN -->
+        <div id="modeScreen" class="mode-screen">
+            <div class="mode-box">
+                <div class="game-icon-banner">🎲</div>
+                <h1>Snakes & Ladders</h1>
+                <p class="mode-sub">Choose your game mode</p>
+                <div class="mode-buttons">
+                    <button type="button" id="vsAiBtn" class="mode-btn mode-btn-primary">
+                        <span class="mode-icon">🤖</span>
+                        <span>
+                            <strong>Play vs AI</strong>
+                            <small>Challenge the Computer</small>
+                        </span>
+                    </button>
+                    <button type="button" id="vsFriendBtn" class="mode-btn">
+                        <span class="mode-icon">👥</span>
+                        <span>
+                            <strong>2 Players</strong>
+                            <small>Play local with a friend</small>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- GAME SCREEN -->
+        <div id="gameScreen" class="game-screen hidden">
+            <!-- HUD Panel -->
+            <div class="game-hud">
+                <div class="hud-left">
+                    <span class="hud-logo">🎲 Snakes & Ladders</span>
+                    <span class="mode-badge" id="modeBadge">Vs AI</span>
+                </div>
+                <div class="hud-right">
+                    <div id="turnLabel" class="turn-label">Your Turn</div>
+                    <button type="button" id="changeModeBtn" class="hud-btn">Menu</button>
+                </div>
+            </div>
+
+            <!-- Player Panels (Portrait Side-by-Side) -->
+            <div class="players-bar">
+                <div class="player-panel active" id="player1Panel">
+                    <div class="player-avatar" style="background: #3b82f6;">🔵</div>
+                    <div class="player-info">
+                        <span class="player-name">Player 1</span>
+                        <span class="player-pos">Tile: <strong id="p1PosVal">1</strong></span>
+                    </div>
+                </div>
+                <div class="player-panel" id="player2Panel">
+                    <div class="player-avatar" id="p2Avatar" style="background: #ef4444;">🔴</div>
+                    <div class="player-info">
+                        <span class="player-name" id="p2NameVal">AI Opponent</span>
+                        <span class="player-pos">Tile: <strong id="p2PosVal">1</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Board Container -->
+            <div class="board-container">
+                <div class="board-ratio-box">
+                    <canvas id="boardCanvas"></canvas>
+                    <div id="tokensContainer">
+                        <!-- Player tokens dynamically updated by JS -->
+                        <div class="token-pin token-p1" id="tokenP1" style="display:none;"></div>
+                        <div class="token-pin token-p2" id="tokenP2" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Control Bar (Dice & Roll Info) -->
+            <div class="control-bar">
+                <div class="dice-section">
+                    <div class="dice-wrapper">
+                        <!-- 3D Dice -->
+                        <div id="dice3d" class="dice-cube show-1">
+                            <div class="face front">1</div>
+                            <div class="face back">6</div>
+                            <div class="face right">3</div>
+                            <div class="face left">4</div>
+                            <div class="face top">5</div>
+                            <div class="face bottom">2</div>
+                        </div>
+                    </div>
+                    <button type="button" id="rollBtn" class="roll-btn">ROLL DICE</button>
+                </div>
+                <div id="gameMessage" class="game-message">Roll the dice to start!</div>
+            </div>
+        </div>
+
+        <!-- GAME OVER OVERLAY -->
+        <div id="gameOverOverlay" class="game-over-overlay hidden">
+            <div class="game-over-box">
+                <div class="game-over-icon" id="gameOverIcon">🏆</div>
+                <h2 id="gameOverTitle">Victory!</h2>
+                <p id="gameOverMessage">Player 1 wins the match!</p>
+                
+                <!-- More Games Scroller container -->
+                <div id="game-over-more-games" class="more-games-scroller-container"></div>
+                
+                <button type="button" id="playAgainBtn" class="play-again-btn">Play Again</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Info Sections -->
+    <section class="game-info" style="margin-top:70px;">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Classic Snakes & Ladders rules with smooth graphics:</p>
+                    <ul>
+                        <li><strong>Roll:</strong> Click the "ROLL DICE" button to roll the 3D dice.</li>
+                        <li><strong>Movement:</strong> Your token moves forward step-by-step by the value rolled.</li>
+                        <li><strong>Ladders:</strong> Land on the bottom of a ladder to climb up to its top.</li>
+                        <li><strong>Snakes:</strong> Land on the head of a snake and you'll slide down to its tail.</li>
+                        <li><strong>Roll 6 Bonus:</strong> Roll a 6 to get a bonus roll! Be careful, a maximum of two consecutive 6s gives you bonus turns.</li>
+                        <li><strong>Goal:</strong> Reach exactly Tile 100 to win the match. If your roll is too high, your token bounces back from 100!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-card">
+                <h2>About Snakes and Ladders</h2>
+                <div class="info-content">
+                    <p>Enjoy the timeless board game classic, also known as Chutes and Ladders or Ludo's companion. Beautifully designed for PlayMix, this game features an animated canvas-rendered board with curved detailed snakes, shaded ladders, interactive 3D dice rolling physics, and custom audio synthesis.</p>
+                    <p>Fully optimized for mobile touchscreens, tablets, and desktop displays with responsive aspect ratio locking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align:center;padding:20px;background:#050510;color:#555;font-size:0.85rem;">
+        &copy; 2026 PlayMix Games. All rights reserved.
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 350);
+            }
+        });
+    </script>
+    <script defer src="game.js"></script>
+</body>
+</html>
