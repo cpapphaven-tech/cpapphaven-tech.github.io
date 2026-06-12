@@ -94,6 +94,7 @@ window.PMG_DATA = {
         { name: "Chess Master",     genre: "Board",    icon: "assets/chess200.png",              href: "Chess/index.html",               badge: "",     emoji: "♟" },
         { name: "Ludo Classic",     genre: "Board",    icon: "assets/ludo200.png",               href: "Ludo/index.html",                badge: "",     emoji: "🎲" },
         { name: "Snakes & Ladders", genre: "Board",    icon: "",                                 href: "SnakesAndLadders/index.html",    badge: "new",  emoji: "🎲" },
+        { name: "Backgammon Classic", genre: "Board",  icon: "",                                 href: "Backgammon/index.html",          badge: "new",  emoji: "🎲" },
         { name: "Neon Pac-Man",     genre: "Classic",  icon: "assets/pacman200.png",             href: "NeonPacman/game.html",           badge: "new",  emoji: "👾" },
         { name: "Neon Snake",       genre: "Classic",  icon: "assets/snake200.png",              href: "NeonSnake/index.html",           badge: "",     emoji: "🐍" },
         { name: "SkiFree Classic",  genre: "Retro",    icon: "assets/Skyfigame200.png",          href: "SkiFree/index.html",             badge: "",     emoji: "⛷️" },
