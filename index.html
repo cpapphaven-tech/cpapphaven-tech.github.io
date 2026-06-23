@@ -184,7 +184,7 @@ function renderFeatured() {
   const scroll = document.getElementById('featured-scroll');
   const dots   = document.getElementById('featured-dots');
   if (!scroll) return;
-  const data = window.PMG_DATA.featured;
+  const data = window.PMG_DATA.featured.filter(f => f.image && f.image.trim() !== '');
 
   scroll.innerHTML = data.map((f,i) => {
     const bgStyle = f.image 
