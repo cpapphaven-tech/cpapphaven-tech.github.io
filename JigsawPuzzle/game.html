@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json", "apikey": anonKey, "Authorization": "Bearer " + anonKey },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+            sendHit("pre-init");
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) sendHit("early-exit");
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <title>Premium Jigsaw Puzzle Game | Drag & Snap | PlayMixGames</title>
+    <meta name="description" content="Play free online Jigsaw Puzzle games! Pick beautiful photos or cool abstract vector images, choose your difficulty, and match interlocking pieces in this premium canvas game.">
+    <meta name="keywords" content="jigsaw puzzle, puzzle game, interlocking pieces, drag and snap, browser jigsaw, brain game, casual puzzle, free online game, playmix games">
+
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/JigsawPuzzle/game.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/JigsawPuzzle/game.html" />
+
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+
+    <script defer type="module" src="../analytics.js"></script>
+    <script defer src="../ads.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <link rel="manifest" href="manifest.json">
+    <script defer src="../sidebar.js"></script>
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <meta property="og:title" content="Premium Jigsaw Puzzle Game | PlayMix Games">
+    <meta property="og:description" content="Select from gorgeous art categories and assemble pieces with realistic locking physics. Play free on mobile or desktop!">
+    <meta property="og:url" content="https://playmixgames.in/JigsawPuzzle/game.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/JigsawPuzzle/game.html" />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Jigsaw Puzzle Royale",
+      "description": "Premium jigsaw puzzle game on PlayMixGames! Drag, snap, and assemble beautiful jigsaw puzzles.",
+      "url": "https://playmixgames.in/JigsawPuzzle/game.html",
+      "image": "https://playmixgames.in/img/192.png",
+      "genre": [
+        "Puzzle",
+        "Casual"
+      ],
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayMixGames",
+        "url": "https://playmixgames.in"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "ratingCount": "298",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Shuffling puzzle pieces...</p>
+    </div>
+
+    <!-- Header compatible with standard portals -->
+    <header class="game-header">
+        <a href="../index.html" class="back-link">← PlayMixGames</a>
+        <span class="header-title">🧩 Jigsaw Puzzle</span>
+        <span class="header-difficulty" id="difficulty-badge">EASY</span>
+    </header>
+
+    <main>
+        <div id="game-wrapper">
+            <h1 style="display:none;">Jigsaw Puzzle Online Game</h1>
+
+            <!-- HUD Display -->
+            <div id="hud">
+                <div class="hud-card">
+                    <div class="hud-value glow-cyan" id="hud-timer">00:00</div>
+                    <div class="hud-label">TIMER</div>
+                </div>
+                <div class="hud-card">
+                    <div class="hud-value glow-purple" id="hud-placed">0/9</div>
+                    <div class="hud-label">PROGRESS</div>
+                </div>
+                <div class="hud-card">
+                    <div class="hud-value glow-rose" id="hud-score">0</div>
+                    <div class="hud-label">SCORE</div>
+                </div>
+            </div>
+
+            <!-- Canvas Board -->
+            <div id="game-canvas-wrap">
+                <canvas id="game-canvas" width="600" height="600"></canvas>
+            </div>
+
+            <!-- Piece Tray scrollable dock -->
+            <div id="tray-container">
+                <div class="tray-header">
+                    <span>PIECES PILE</span>
+                    <span id="tray-hint">Tap a piece to select</span>
+                </div>
+                <div id="piece-tray">
+                    <!-- Dynamic piece cards will be generated here -->
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div id="game-controls">
+                <button class="ctrl-btn" id="hint-btn">💡 Hint</button>
+                <button class="ctrl-btn" id="pause-btn">⏸ Pause</button>
+            </div>
+        </div>
+
+        <!-- ===== OVERLAYS ===== -->
+
+        <!-- Start Menu & Options Selector -->
+        <div id="overlay-menu" class="overlay">
+            <div class="overlay-content">
+                <h2>Jigsaw Puzzle</h2>
+                <p class="subtitle">Select difficulty & style to play</p>
+
+                <div class="size-selector-row">
+                    <button class="size-btn active" data-size="3">EASY (3x3)</button>
+                    <button class="size-btn" data-size="4">MEDIUM (4x4)</button>
+                    <button class="size-btn" data-size="5">HARD (5x5)</button>
+                </div>
+
+                <div class="selector-grid">
+                    <div class="selector-card selected" data-category="space">
+                        <canvas id="canvas-preview-space"></canvas>
+                        <div class="selector-label">Deep Space</div>
+                    </div>
+                    <div class="selector-card" data-category="forest">
+                        <canvas id="canvas-preview-forest"></canvas>
+                        <div class="selector-label">Magic Forest</div>
+                    </div>
+                    <div class="selector-card" data-category="neon">
+                        <canvas id="canvas-preview-neon"></canvas>
+                        <div class="selector-label">Neon City</div>
+                    </div>
+                    <div class="selector-card" data-category="animals">
+                        <canvas id="canvas-preview-animals"></canvas>
+                        <div class="selector-label">Cute Animals</div>
+                    </div>
+                </div>
+
+                <button class="primary-btn" id="start-btn">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Pause Menu Overlay -->
+        <div id="overlay-pause" class="overlay hidden">
+            <div class="overlay-content">
+                <h2>Game Paused</h2>
+                <p class="subtitle">Take a breather!</p>
+                <button class="primary-btn" id="resume-btn">Resume</button>
+                <button class="secondary-btn" id="pause-restart-btn">🔄 Restart</button>
+                <button class="secondary-btn" id="pause-menu-btn">🏠 Main Menu</button>
+            </div>
+        </div>
+
+        <!-- Level Complete / Solved Overlay -->
+        <div id="overlay-complete" class="overlay hidden">
+            <div class="overlay-content">
+                <div class="stars-row">⭐⭐⭐</div>
+                <h2>Puzzle Solved!</h2>
+                <p class="subtitle">Outstanding assembly work!</p>
+                
+                <div class="stats-summary">
+                    <div class="summary-item">
+                        <div class="summary-val" id="lc-time">00:00</div>
+                        <div class="summary-lbl">Time Taken</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-val" id="lc-score">0</div>
+                        <div class="summary-lbl">Final Score</div>
+                    </div>
+                </div>
+
+                <button class="primary-btn" id="next-btn">Play Again</button>
+                <button class="secondary-btn" id="menu-btn">Main Menu</button>
+            </div>
+        </div>
+
+        <!-- Toast Messages -->
+        <div id="ms-toast" class="ms-toast"></div>
+
+        <!-- SEO Content Section -->
+        <section class="game-info-section">
+            <h2>🧩 About Jigsaw Puzzle Royale</h2>
+            <p>Assemble interlocking shapes of high-definition cosmic scenes, fantasy woodlands, glowing retro city grids, and adorable animal faces. Jigsaw Puzzle Royale delivers a relaxing yet highly satisfying mechanical layout featuring automatic piece snapping, 3D piece shadows, and custom-sliced vector tabs.</p>
+            <p>Adjust your challenge from a quick 9-piece grid up to a highly challenging 25-piece grid. Play completely offline with high-fidelity canvas procedurally generated fallback scenes, or connect online to pull vivid high-resolution graphics.</p>
+
+            <h3>🎮 How to Play</h3>
+            <ul>
+                <li>🎯 <strong>Select</strong> a category and grid size to generate your custom puzzle.</li>
+                <li>📦 <strong>Tap</strong> any piece in the tray container at the bottom to select it.</li>
+                <li>🖱️ <strong>Drag</strong> on the board to move the selected piece.</li>
+                <li>⚡ <strong>Snap:</strong> Position the piece close to its original target location. When close enough, it will automatically snap lock into place.</li>
+                <li>💡 <strong>Hint:</strong> Use the Hint button to briefly overlay a faint template of the completed puzzle image on the board.</li>
+            </ul>
+
+            <h3>🏆 Tips for Success</h3>
+            <ul>
+                <li>🔍 Try activating the Hint mode if you're unsure of where a specific detail lies.</li>
+                <li>🚀 Place edge pieces first. They have flat borders on at least one edge, making them easier to position.</li>
+                <li>⏰ Speed counts! Complete the puzzle faster to maximize your high score bonus.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Bottom Fixed Ad Banner Container -->
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">© 2026 PlayMixGames.</p>
+    </footer>
+
+    <!-- Main Game Logic Script -->
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var l = document.getElementById('pmg-loader');
+            if (l) {
+                var f = l.querySelector('.pmg-bar-fill');
+                if (f) f.style.width = '100%';
+                setTimeout(function () { l.classList.add('hidden'); }, 400);
+            }
+            if (typeof prepSystem === "function") {
+                setTimeout(function () { prepSystem(); }, 600);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -83,6 +83,7 @@ window.PMG_DATA = {
         { name: "Stack 3D",         genre: "Physics",  icon: "assets/stack3d.png",               href: "Stack3D/index.html",             badge: "",     emoji: "🧱" },
         { name: "All in Hole",      genre: "Puzzle",   icon: "",                                 href: "AllInHole/index.html",           badge: "new",  emoji: "🕳️" },
         { name: "Zen Bounce",       genre: "Puzzle",   icon: "",                                 href: "ZenBounce/index.html",           badge: "new",  emoji: "⚪" },
+        { name: "Jigsaw Puzzle",    genre: "Puzzle",   icon: "",                                 href: "JigsawPuzzle/game.html",          badge: "new",  emoji: "🧩" },
       ]
     },
     {
