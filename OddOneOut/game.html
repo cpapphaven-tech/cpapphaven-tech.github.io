@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) sendHit("early-exit");
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Odd One Out – Brain Puzzle Game | Find the Difference | PlayMixGames</title>
+    <meta name="description" content="Play Odd One Out – the ultimate brain puzzle! Find the emoji, color or shape that doesn't belong. 12 progressive levels, streak bonuses, and addictive gameplay. Free online!">
+
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="odd one out, find the difference, brain puzzle, spot the odd, emoji game, color puzzle, shape puzzle, mind games, casual puzzle">
+
+    <!-- Multi-Language -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="fr_FR">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Odd One Out – Brain Puzzle Game | PlayMixGames">
+    <meta property="og:description" content="Find the emoji, color or shape that doesn't belong. 12 progressive levels with streak bonuses!">
+    <meta property="og:url" content="https://playmixgames.in/OddOneOut/game.html">
+    <meta property="og:type" content="website">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/OddOneOut/game.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/OddOneOut/game.html" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../loader.css">
+    <script src="../sidebar.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script src="../ads.js"></script>
+
+    <!-- Cookie Consent -->
+    <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="../icons/icon-192x192.png">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+
+    <!-- Feedback Toast -->
+    <div id="feedback-toast"></div>
+
+    <!-- ===== MAIN MENU OVERLAY ===== -->
+    <div id="main-menu" class="overlay">
+        <div class="overlay-card">
+            <span class="overlay-icon">🧩</span>
+            <h2>ODD ONE OUT</h2>
+            <p>Find the emoji, color, or shape that doesn't belong. Beat the clock and build your streak!</p>
+
+            <div class="how-to-steps">
+                <div class="how-to-step">
+                    <div class="step-num">1</div>
+                    <div class="step-text">Look at the grid — one item is different from all others</div>
+                </div>
+                <div class="how-to-step">
+                    <div class="step-num">2</div>
+                    <div class="step-text">Tap the odd one out as fast as you can</div>
+                </div>
+                <div class="how-to-step">
+                    <div class="step-num">3</div>
+                    <div class="step-text">Build streaks for bonus points. Wrong taps cost 5 seconds!</div>
+                </div>
+            </div>
+
+            <div style="font-size:0.8rem; color: rgba(255,255,255,0.4); margin-bottom: 16px;">
+                🏆 Best Score: <strong id="menu-best" style="color:#fbbf24;">0</strong>
+            </div>
+
+            <button class="btn-primary" id="start-btn">▶ Start Game</button>
+        </div>
+    </div>
+
+    <!-- ===== LEVEL UP OVERLAY ===== -->
+    <div id="level-up-screen" class="overlay hidden">
+        <div class="overlay-card">
+            <span class="overlay-icon">🚀</span>
+            <h2>LEVEL UP!</h2>
+            <p>Amazing! Get ready for level <strong id="lu-level" style="color:#fbbf24;"></strong></p>
+            <button class="btn-primary" id="next-level-btn">Continue →</button>
+        </div>
+    </div>
+
+    <!-- ===== GAME OVER OVERLAY ===== -->
+    <div id="game-over" class="overlay hidden">
+        <div class="overlay-card">
+            <span class="overlay-icon">⏰</span>
+            <h2>TIME'S UP!</h2>
+            <p>Great effort! Here's how you did:</p>
+            <div class="overlay-stats">
+                <div class="overlay-stat">
+                    <div class="overlay-stat-label">Score</div>
+                    <div class="overlay-stat-value" id="final-score">0</div>
+                </div>
+                <div class="overlay-stat">
+                    <div class="overlay-stat-label">Level</div>
+                    <div class="overlay-stat-value" id="final-level">1</div>
+                </div>
+                <div class="overlay-stat">
+                    <div class="overlay-stat-label">Best Score</div>
+                    <div class="overlay-stat-value" id="best-score-val">0</div>
+                </div>
+                <div class="overlay-stat" id="new-best-badge" style="background: rgba(251,191,36,0.15); border-color: rgba(251,191,36,0.4);">
+                    <div class="overlay-stat-label">Status</div>
+                    <div class="overlay-stat-value" style="font-size:1rem; color:#fbbf24;">🏆 New Best!</div>
+                </div>
+            </div>
+            <button class="btn-primary" id="restart-btn">🔄 Play Again</button>
+            <button class="btn-secondary" onclick="window.location.href='../index.html'">🏠 Home</button>
+        </div>
+    </div>
+
+    <!-- ===== GAME MAIN ===== -->
+    <main class="game-container" role="main">
+        <h1>Odd One Out 🧩</h1>
+
+        <div id="game-ui">
+            <!-- Stats Row -->
+            <div id="top-bar">
+                <div class="stat-box">
+                    <div class="stat-label">Score</div>
+                    <div class="stat-value" id="score-value">0</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Time</div>
+                    <div class="stat-value" id="timer-value">60</div>
+                </div>
+            </div>
+
+            <!-- Streak & Level -->
+            <div style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:10px;">
+                <div id="streak-bar" style="display:flex; gap:5px;"></div>
+                <div id="level-badge">
+                    <span class="level-text">Level</span>
+                    <span class="level-number" id="level-num">1</span>
+                </div>
+            </div>
+
+            <!-- Timer Progress Bar -->
+            <div id="progress-bar-wrap">
+                <div id="progress-bar-fill"></div>
+            </div>
+
+            <!-- Category hint -->
+            <div id="category-hint">Find the one that does NOT belong</div>
+
+            <!-- Tile Grid -->
+            <div id="grid-area">
+                <div id="tile-grid" class="grid-4"></div>
+            </div>
+
+            <!-- Bottom Ad Banner -->
+            <div id="ad-banner" aria-label="Advertisement">
+                <ins class="adsbygoogle"
+                    style="display:block; width:100%; height:60px;"
+                    data-ad-client="ca-pub-6129521314653726"
+                    data-ad-slot="auto"
+                    data-ad-format="horizontal"
+                    data-full-width-responsive="true">
+                </ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+        </div>
+
+        <!-- Cookie Consent Banner -->
+        <div id="cookie-consent" class="cookie-banner hidden">
+            <div class="cookie-content">
+                <div class="cookie-text">
+                    <span class="cookie-icon">🍪</span>
+                    <span>We use cookies &amp; tracking for ads. <a href="../privacy.html" target="_blank"
+                            style="color:#a78bfa; text-decoration: underline;">Learn more</a></span>
+                </div>
+                <div class="cookie-buttons">
+                    <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                    <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Description Section -->
+        <section class="game-description" aria-label="About Odd One Out Game">
+            <h2>About Odd One Out</h2>
+            <p>Odd One Out is a fast-paced brain puzzle game that challenges your pattern recognition and visual perception. Each round presents a grid of emojis, colors, or shapes — and one sneaky item doesn't belong!</p>
+
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Scan the grid:</strong> Quickly identify the one item that's different from all others.</li>
+                <li><strong>Tap it:</strong> Touch the odd one out before time runs out.</li>
+                <li><strong>Build streaks:</strong> Consecutive correct answers multiply your points!</li>
+                <li><strong>Be careful:</strong> Wrong taps cost you 5 precious seconds.</li>
+            </ul>
+
+            <h3>Game Modes & Difficulty</h3>
+            <p>The game features 12 progressive levels with three puzzle types: Emoji (find the unrelated emoji), Color (spot the different shade), and Shape (identify the mismatched geometric form). Grids grow from a 2×2 up to a 5×5 challenge.</p>
+
+            <h3>Scoring</h3>
+            <p>Each correct answer earns 10 points. Build a streak to earn bonus points — a 5× streak earns 30 points per correct answer! Wrong answers deduct points and reduce your time, so accuracy matters.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../privacy.html">Privacy Policy</a>
+            <a href="../terms.html">Terms of Service</a>
+            <a href="../contact.html">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2026 PlayMixGames. <span id="app-version" style="opacity: 0.5; font-size: 0.7em;"></span></p>
+    </footer>
+
+    <script src="game.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>
