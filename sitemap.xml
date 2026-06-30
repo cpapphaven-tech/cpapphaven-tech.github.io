@@ -748,6 +748,17 @@
     <priority>0.9</priority>
   </url>
 
+   <url>
+    <loc>https://playmixgames.in/OddOneOut/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/OddOneOut/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/OddOneOut/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/OddOneOut/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/OddOneOut/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/OddOneOut/index.html" />
+    <priority>0.9</priority>
+  </url>
+
+
   <!-- Other Pages -->
   <url>
     <loc>https://playmixgames.in/about.html</loc>
