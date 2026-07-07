@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Play Minesweeper Free Online | PlayMixGames</title>
+    <meta name="description" content="Play classic Minesweeper online for free! Enjoy standard difficulty levels (Easy, Medium, Hard), clean design, and smooth controls on mobile or desktop.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="minesweeper online, free minesweeper, play minesweeper, classic minesweeper, brain puzzle, minigame">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="マインスイーパ - 無料オンラインゲーム">
+    <meta name="twitter:description:ja" content="無料でオンラインのマインスイーパをプレイ！イージー、ミディアム、ハードの難易度を選択し、モバイルやPCでスムーズに操作できます。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Buscaminas - Juego Gratis Online">
+    <meta name="twitter:description:es" content="¡Juega gratis al clásico Buscaminas en línea! Disfruta de los niveles de dificultad estándar, diseño limpio y controles fluidos en móvil o computadora.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Démineur - Jeu en ligne gratuit">
+    <meta name="twitter:description:fr" content="Jouez gratuitement au jeu classique du Démineur en ligne ! Choisissez les niveaux Facile, Moyen, Difficile, avec des commandes fluides sur mobile et PC.">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/Minesweeper/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/Minesweeper/index.html" />
+    
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #4facfe;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(79, 172, 254, 0.1);
+            border-top-color: #4facfe;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pmgPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.98); }
+        }
+
+        @keyframes pmgFill {
+            0% { width: 0%; }
+            100% { width: 95%; }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+    </style>
+    <script defer src="../sidebar.js"></script>
+
+    <meta property="og:title" content="Play Minesweeper Free Online | PlayMixGames">
+    <meta property="og:description" content="Play classic Minesweeper online for free! Enjoy standard difficulty levels (Easy, Medium, Hard), clean design, and smooth controls on mobile or desktop.">
+    <meta property="og:url" content="https://playmixgames.in/Minesweeper/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/Minesweeper/index.html" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Play Minesweeper Free Online",
+      "description": "Play classic Minesweeper online for free! Enjoy standard difficulty levels (Easy, Medium, Hard), clean design, and smooth controls on mobile or desktop.",
+      "url": "https://playmixgames.in/Minesweeper/index.html",
+      "image": "https://playmixgames.in/assets/minesweeper200.png",
+      "genre": [
+        "Classic",
+        "Puzzle",
+        "Casual",
+        "Logic"
+      ],
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayMixGames",
+        "url": "https://playmixgames.in"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "ratingCount": "245",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Mines...</p>
+    </div>
+    <main>
+        <iframe id="game-frame" title="Minesweeper Game" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+    <section class="seo-content" style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #4facfe;">How to Play Minesweeper</h2>
+        <ul style="padding-left: 20px;">
+            <li>Select a difficulty level: Easy (9x9 with 10 mines), Medium (16x16 with 40 mines), or Hard (16x30 with 99 mines).</li>
+            <li>Click or tap on any square to reveal it. The first click will always be safe!</li>
+            <li>The numbers displayed on revealed squares represent how many mines are adjacent to that square (horizontally, vertically, and diagonally).</li>
+            <li>Use the numbers to deduce where the hidden mines are located.</li>
+            <li>To place a flag on a suspected mine, switch to <strong>Flag Mode</strong> using the toggle button, or long-press the tile on mobile (right-click on desktop).</li>
+            <li>Reveal all non-mine squares to win the game! If you click on a mine, it will explode and the game will be over.</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Features</h2>
+        <ul style="padding-left: 20px;">
+            <li>Classic Windows Minesweeper rules with a beautiful, modern neon look.</li>
+            <li><strong>First-Click Safety</strong> guarantee: You'll never hit a mine on your first turn.</li>
+            <li>Optimized for touchscreens: Mobile-friendly controls, including a dedicated flag toggle button and long-press actions.</li>
+            <li>Web Audio API sound effects for synthesized audio feedback.</li>
+            <li>Instant play inside your browser, no downloads or registrations required.</li>
+        </ul>
+    </section>
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+</html>

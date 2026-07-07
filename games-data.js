@@ -75,6 +75,7 @@ window.PMG_DATA = {
         { name: "Hidden Objects",   genre: "Puzzle",   icon: "assets/hiddenobjects.png",         href: "HiddenObjects/index.html",       badge: "new",  emoji: "🔎" },
         { name: "Word Crossword",   genre: "Word",     icon: "assets/wordcrossword200.png",      href: "WordCrossword/index.html",       badge: "new",  emoji: "🔤" },
         { name: "Tic Tac Toe",      genre: "Classic",  icon: "assets/Tictactoe200.png",          href: "TicTacToe/index.html",           badge: "new",  emoji: "❌" },
+        { name: "Minesweeper",      genre: "Puzzle",   icon: "assets/minesweeper200.png",        href: "Minesweeper/index.html",         badge: "new",  emoji: "💣" },
         { name: "Solitaire",        genre: "Cards",    icon: "assets/solitaire200.png",          href: "Solitaire/index.html",           badge: "hot",  emoji: "♠️" },
         { name: "Water Sort",       genre: "Puzzle",   icon: "assets/watersort3d.png",           href: "WaterSort3D/index.html",         badge: "",     emoji: "🧪" },
         { name: "Fruit Splash",     genre: "Match-3",  icon: "assets/fruits200.png",             href: "FruitSplash/index.html",         badge: "",     emoji: "🍉" },
