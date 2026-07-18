@@ -505,8 +505,17 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
     <script type="module" src="../analytics.js"></script>
     <script defer src="../ads.js"></script>
+    <script>document.addEventListener('DOMContentLoaded',function(){{if(typeof prepSystem==="function")prepSystem();}});</script>
 
     <style>
+        body.as-body {{
+            background: #0f111a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 70px;
+            font-family: 'Outfit', sans-serif;
+        }}
         .blog-content {{
             max-width: 800px;
             margin: 100px auto 40px;
@@ -880,6 +889,7 @@ def generate_blog_index(games):
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726" crossorigin="anonymous"></script>
     <script type="module" src="../analytics.js"></script>
     <script defer src="../ads.js"></script>
+    <script>document.addEventListener('DOMContentLoaded',function(){{if(typeof prepSystem==="function")prepSystem();}});</script>
 
     <style>
         body.blog-index {{
