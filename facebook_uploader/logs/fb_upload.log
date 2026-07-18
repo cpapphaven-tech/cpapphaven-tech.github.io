@@ -1,0 +1,513 @@
+2026-07-08 08:05:51  INFO      [__main__:113]  Limiting to first 3 video(s).
+2026-07-08 08:05:51  INFO      [__main__:116]  Discovered 3 video files to process.
+2026-07-08 08:05:51  INFO      [uploader.csv_reader:140]  Loaded 81 CSV rows from '/Users/gauravpurohit/Documents/GP/Playmix/videos.csv'.
+2026-07-08 08:05:51  INFO      [fb_uploader.tracker:36]  No existing FB tracker file found. Starting fresh.
+2026-07-08 08:05:51  INFO      [__main__:124]  Loaded tracker. 0 video(s) already scheduled.
+2026-07-08 08:05:51  DEBUG     [uploader.video_utils:35]  Probing video metadata for: 8_Ball_Pool_short.mp4
+2026-07-08 08:05:51  INFO      [uploader.video_utils:86]  Probed '8_Ball_Pool_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:05:51  INFO      [__main__:167]    Title     : Play 8 Ball Pool Online Free! 🎱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-08 07:00:00 (Unix: 1783474200)
+  Auto-gen  : False
+2026-07-08 08:05:51  DEBUG     [uploader.video_utils:35]  Probing video metadata for: ABC_Tracing_short.mp4
+2026-07-08 08:05:51  INFO      [uploader.video_utils:86]  Probed 'ABC_Tracing_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-08 08:05:51  INFO      [__main__:167]    Title     : Play ABC Tracing Online Free! ✍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-08 21:00:00 (Unix: 1783524600)
+  Auto-gen  : False
+2026-07-08 08:05:51  DEBUG     [uploader.video_utils:35]  Probing video metadata for: AI_Readiness_short.mp4
+2026-07-08 08:05:51  INFO      [uploader.video_utils:86]  Probed 'AI_Readiness_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:05:51  INFO      [__main__:167]    Title     : Play AI Readiness Online Free! 🤖 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-09 07:00:00 (Unix: 1783560600)
+  Auto-gen  : False
+2026-07-08 08:05:51  INFO      [__main__:219]  Execution done. Scheduled=0, Skipped=0, Failed=0
+2026-07-08 08:06:07  INFO      [__main__:113]  Limiting to first 3 video(s).
+2026-07-08 08:06:07  INFO      [__main__:116]  Discovered 3 video files to process.
+2026-07-08 08:06:07  INFO      [uploader.csv_reader:140]  Loaded 81 CSV rows from '/Users/gauravpurohit/Documents/GP/Playmix/videos.csv'.
+2026-07-08 08:06:07  INFO      [fb_uploader.tracker:36]  No existing FB tracker file found. Starting fresh.
+2026-07-08 08:06:07  INFO      [__main__:124]  Loaded tracker. 0 video(s) already scheduled.
+2026-07-08 08:06:07  DEBUG     [uploader.video_utils:35]  Probing video metadata for: 8_Ball_Pool_short.mp4
+2026-07-08 08:06:07  INFO      [uploader.video_utils:86]  Probed '8_Ball_Pool_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:06:07  INFO      [fb_uploader.api:35]  Schedule for 2026-07-08 07:00 is in the past/too soon. Auto-bumping to: 2026-07-08 08:21:07 (Unix: 1783479067)
+2026-07-08 08:06:07  INFO      [__main__:167]    Title     : Play 8 Ball Pool Online Free! 🎱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-08 08:21:07 (Unix: 1783479067)
+  Auto-gen  : False
+2026-07-08 08:06:07  DEBUG     [uploader.video_utils:35]  Probing video metadata for: ABC_Tracing_short.mp4
+2026-07-08 08:06:07  INFO      [uploader.video_utils:86]  Probed 'ABC_Tracing_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-08 08:06:07  INFO      [__main__:167]    Title     : Play ABC Tracing Online Free! ✍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-08 21:00:00 (Unix: 1783524600)
+  Auto-gen  : False
+2026-07-08 08:06:07  DEBUG     [uploader.video_utils:35]  Probing video metadata for: AI_Readiness_short.mp4
+2026-07-08 08:06:07  INFO      [uploader.video_utils:86]  Probed 'AI_Readiness_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:06:07  INFO      [__main__:167]    Title     : Play AI Readiness Online Free! 🤖 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-09 07:00:00 (Unix: 1783560600)
+  Auto-gen  : False
+2026-07-08 08:06:07  INFO      [__main__:219]  Execution done. Scheduled=0, Skipped=0, Failed=0
+2026-07-08 08:06:14  INFO      [__main__:116]  Discovered 81 video files to process.
+2026-07-08 08:06:14  INFO      [uploader.csv_reader:140]  Loaded 81 CSV rows from '/Users/gauravpurohit/Documents/GP/Playmix/videos.csv'.
+2026-07-08 08:06:14  INFO      [fb_uploader.tracker:36]  No existing FB tracker file found. Starting fresh.
+2026-07-08 08:06:14  INFO      [__main__:124]  Loaded tracker. 0 video(s) already scheduled.
+2026-07-08 08:06:14  DEBUG     [uploader.video_utils:35]  Probing video metadata for: 8_Ball_Pool_short.mp4
+2026-07-08 08:06:14  INFO      [uploader.video_utils:86]  Probed '8_Ball_Pool_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:06:14  INFO      [fb_uploader.api:35]  Schedule for 2026-07-08 07:00 is in the past/too soon. Auto-bumping to: 2026-07-08 08:21:14 (Unix: 1783479074)
+2026-07-08 08:06:14  INFO      [__main__:167]    Title     : Play 8 Ball Pool Online Free! 🎱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-08 08:21:14 (Unix: 1783479074)
+  Auto-gen  : False
+2026-07-08 08:06:14  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for '8_Ball_Pool_short.mp4'
+2026-07-08 08:06:14  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:15  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:15  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AH2P3lrYimjIENE2JDy_z6s'}
+2026-07-08 08:06:15  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:15  DEBUG     [uploader.video_utils:35]  Probing video metadata for: ABC_Tracing_short.mp4
+2026-07-08 08:06:15  INFO      [uploader.video_utils:86]  Probed 'ABC_Tracing_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-08 08:06:15  INFO      [__main__:167]    Title     : Play ABC Tracing Online Free! ✍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-08 21:00:00 (Unix: 1783524600)
+  Auto-gen  : False
+2026-07-08 08:06:15  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'ABC_Tracing_short.mp4'
+2026-07-08 08:06:15  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:16  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:16  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'Au7ZpOdNcH-gBJ2bq0nYg6R'}
+2026-07-08 08:06:16  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:16  DEBUG     [uploader.video_utils:35]  Probing video metadata for: AI_Readiness_short.mp4
+2026-07-08 08:06:16  INFO      [uploader.video_utils:86]  Probed 'AI_Readiness_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:06:16  INFO      [__main__:167]    Title     : Play AI Readiness Online Free! 🤖 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-09 07:00:00 (Unix: 1783560600)
+  Auto-gen  : False
+2026-07-08 08:06:16  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'AI_Readiness_short.mp4'
+2026-07-08 08:06:16  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:17  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:17  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A2p3B9AHtpJL8rCfHtL1JJH'}
+2026-07-08 08:06:17  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:17  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Air_Hockey_3D_short.mp4
+2026-07-08 08:06:17  INFO      [uploader.video_utils:86]  Probed 'Air_Hockey_3D_short.mp4': 1080x1920, 20.1s, vertical=True, short=True
+2026-07-08 08:06:17  INFO      [__main__:167]    Title     : Play Air Hockey 3D Online Free! 🏑 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-09 21:00:00 (Unix: 1783611000)
+  Auto-gen  : False
+2026-07-08 08:06:17  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Air_Hockey_3D_short.mp4'
+2026-07-08 08:06:17  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:17  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:17  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AwIoqr9EKrLs0lAfoHFnIf7'}
+2026-07-08 08:06:17  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:17  DEBUG     [uploader.video_utils:35]  Probing video metadata for: All_in_Hole_short.mp4
+2026-07-08 08:06:17  INFO      [uploader.video_utils:86]  Probed 'All_in_Hole_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:06:17  INFO      [__main__:167]    Title     : Play All in Hole Online Free! 🕳️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-10 07:00:00 (Unix: 1783647000)
+  Auto-gen  : False
+2026-07-08 08:06:17  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'All_in_Hole_short.mp4'
+2026-07-08 08:06:17  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:18  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:18  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A76yHgDpfuxlMN_uuSGdXnA'}
+2026-07-08 08:06:18  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:18  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Anime_Archetype_short.mp4
+2026-07-08 08:06:18  INFO      [uploader.video_utils:86]  Probed 'Anime_Archetype_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:06:18  INFO      [__main__:167]    Title     : Play Anime Archetype Online Free! 🗡️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-10 21:00:00 (Unix: 1783697400)
+  Auto-gen  : False
+2026-07-08 08:06:18  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Anime_Archetype_short.mp4'
+2026-07-08 08:06:18  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:18  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:18  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AEdW79ORxg_Wf3IRhJ1pplp'}
+2026-07-08 08:06:18  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:18  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Archery_Master_short.mp4
+2026-07-08 08:06:18  INFO      [uploader.video_utils:86]  Probed 'Archery_Master_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-08 08:06:18  INFO      [__main__:167]    Title     : Play Archery Master Online Free! 🏹 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-11 07:00:00 (Unix: 1783733400)
+  Auto-gen  : False
+2026-07-08 08:06:18  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Archery_Master_short.mp4'
+2026-07-08 08:06:18  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:18  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:18  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'ARlzLmogOlFP_yUYpkRGgF7'}
+2026-07-08 08:06:18  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:18  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Backgammon_Classic_short.mp4
+2026-07-08 08:06:19  INFO      [uploader.video_utils:86]  Probed 'Backgammon_Classic_short.mp4': 1080x1920, 19.9s, vertical=True, short=True
+2026-07-08 08:06:19  INFO      [__main__:167]    Title     : Play Backgammon Classic Online Free! 🎲 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-11 21:00:00 (Unix: 1783783800)
+  Auto-gen  : False
+2026-07-08 08:06:19  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Backgammon_Classic_short.mp4'
+2026-07-08 08:06:19  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:19  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:19  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'ACYc9uyBvYrmLgHwzsHHAqW'}
+2026-07-08 08:06:19  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:19  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Balloon_Ninja_Slice_short.mp4
+2026-07-08 08:06:19  INFO      [uploader.video_utils:86]  Probed 'Balloon_Ninja_Slice_short.mp4': 1080x1920, 19.7s, vertical=True, short=True
+2026-07-08 08:06:19  INFO      [__main__:167]    Title     : Play Balloon Ninja Slice Online Free! 🗡️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-12 07:00:00 (Unix: 1783819800)
+  Auto-gen  : False
+2026-07-08 08:06:19  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Balloon_Ninja_Slice_short.mp4'
+2026-07-08 08:06:19  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:19  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:19  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AjWkagHQF846934CIVrFHuw'}
+2026-07-08 08:06:19  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:19  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Basketball_3D_short.mp4
+2026-07-08 08:06:19  INFO      [uploader.video_utils:86]  Probed 'Basketball_3D_short.mp4': 1080x1920, 19.8s, vertical=True, short=True
+2026-07-08 08:06:19  INFO      [__main__:167]    Title     : Play Basketball 3D Online Free! 🏀 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-12 21:00:00 (Unix: 1783870200)
+  Auto-gen  : False
+2026-07-08 08:06:19  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Basketball_3D_short.mp4'
+2026-07-08 08:06:19  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:20  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:20  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A2ox-1bQ54Ac4gGFPJRPHZG'}
+2026-07-08 08:06:20  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:20  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Block_Puzzle_short.mp4
+2026-07-08 08:06:20  INFO      [uploader.video_utils:86]  Probed 'Block_Puzzle_short.mp4': 1080x1920, 19.8s, vertical=True, short=True
+2026-07-08 08:06:20  INFO      [__main__:167]    Title     : Play Block Puzzle Online Free! 🧩 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-13 07:00:00 (Unix: 1783906200)
+  Auto-gen  : False
+2026-07-08 08:06:20  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Block_Puzzle_short.mp4'
+2026-07-08 08:06:20  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:20  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:20  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AqkqR8f89bMo4oAuvuck36P'}
+2026-07-08 08:06:20  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:20  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Bottle_Shoot_short.mp4
+2026-07-08 08:06:21  INFO      [uploader.video_utils:86]  Probed 'Bottle_Shoot_short.mp4': 1080x1920, 20.5s, vertical=True, short=True
+2026-07-08 08:06:21  INFO      [__main__:167]    Title     : Play Bottle Shoot Online Free! 🍾 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-13 21:00:00 (Unix: 1783956600)
+  Auto-gen  : False
+2026-07-08 08:06:21  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Bottle_Shoot_short.mp4'
+2026-07-08 08:06:21  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:21  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:21  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AaaVvuZN5YCWDKxGITjsI1p'}
+2026-07-08 08:06:21  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:21  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Bowling_Strike_short.mp4
+2026-07-08 08:06:21  INFO      [uploader.video_utils:86]  Probed 'Bowling_Strike_short.mp4': 1080x1920, 21.1s, vertical=True, short=True
+2026-07-08 08:06:21  INFO      [__main__:167]    Title     : Play Bowling Strike Online Free! 🎳 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-14 07:00:00 (Unix: 1783992600)
+  Auto-gen  : False
+2026-07-08 08:06:21  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Bowling_Strike_short.mp4'
+2026-07-08 08:06:21  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:21  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:21  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AYoq6XOX9s79ccuN8zwDV3l'}
+2026-07-08 08:06:21  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:21  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Brick_Breaker_short.mp4
+2026-07-08 08:06:21  INFO      [uploader.video_utils:86]  Probed 'Brick_Breaker_short.mp4': 1080x1920, 20.3s, vertical=True, short=True
+2026-07-08 08:06:21  INFO      [__main__:167]    Title     : Play Brick Breaker Online Free! 🧱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-14 21:00:00 (Unix: 1784043000)
+  Auto-gen  : False
+2026-07-08 08:06:21  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Brick_Breaker_short.mp4'
+2026-07-08 08:06:21  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:22  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:22  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'Ahu3Y0D1xN1glemAjfma-pB'}
+2026-07-08 08:06:22  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:22  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Bubble_Shooter_short.mp4
+2026-07-08 08:06:22  INFO      [uploader.video_utils:86]  Probed 'Bubble_Shooter_short.mp4': 1080x1920, 20.0s, vertical=True, short=True
+2026-07-08 08:06:22  INFO      [__main__:167]    Title     : Play Bubble Shooter Online Free! 🔵 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-15 07:00:00 (Unix: 1784079000)
+  Auto-gen  : False
+2026-07-08 08:06:22  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Bubble_Shooter_short.mp4'
+2026-07-08 08:06:22  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:22  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:22  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AIH-SzKt1HhQOgeaJ5Hr1kF'}
+2026-07-08 08:06:22  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:22  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Burger_Stack_short.mp4
+2026-07-08 08:06:22  INFO      [uploader.video_utils:86]  Probed 'Burger_Stack_short.mp4': 1080x1920, 20.7s, vertical=True, short=True
+2026-07-08 08:06:22  INFO      [__main__:167]    Title     : Play Burger Stack Online Free! 🍔 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-15 21:00:00 (Unix: 1784129400)
+  Auto-gen  : False
+2026-07-08 08:06:22  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Burger_Stack_short.mp4'
+2026-07-08 08:06:22  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:23  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:23  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AOWuUoMeVxMJ_ZVi9EYqBak'}
+2026-07-08 08:06:23  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:23  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Car_Racer_3D_short.mp4
+2026-07-08 08:06:23  INFO      [uploader.video_utils:86]  Probed 'Car_Racer_3D_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:06:23  INFO      [__main__:167]    Title     : Play Car Racer 3D Online Free! 🏎️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-16 07:00:00 (Unix: 1784165400)
+  Auto-gen  : False
+2026-07-08 08:06:23  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Car_Racer_3D_short.mp4'
+2026-07-08 08:06:23  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:23  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:23  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A5uQ2JLUxcgVbMqjhW2ZvXd'}
+2026-07-08 08:06:23  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:23  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Chess_Master_short.mp4
+2026-07-08 08:06:23  INFO      [uploader.video_utils:86]  Probed 'Chess_Master_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:06:23  INFO      [__main__:167]    Title     : Play Chess Master Online Free! ♟️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-16 21:00:00 (Unix: 1784215800)
+  Auto-gen  : False
+2026-07-08 08:06:23  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Chess_Master_short.mp4'
+2026-07-08 08:06:23  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:24  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:24  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A7hVKg9zf8joX4YhbV8Dfm2'}
+2026-07-08 08:06:24  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:24  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Color_Match_short.mp4
+2026-07-08 08:06:24  INFO      [uploader.video_utils:86]  Probed 'Color_Match_short.mp4': 1080x1920, 20.4s, vertical=True, short=True
+2026-07-08 08:06:24  INFO      [__main__:167]    Title     : Play Color Match Online Free! 🎨 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-17 07:00:00 (Unix: 1784251800)
+  Auto-gen  : False
+2026-07-08 08:06:24  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Color_Match_short.mp4'
+2026-07-08 08:06:24  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:24  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:24  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AFaUoxZe1t11cPBrYvJG-Vh'}
+2026-07-08 08:06:24  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:24  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Coloring_for_Kids_short.mp4
+2026-07-08 08:06:24  INFO      [uploader.video_utils:86]  Probed 'Coloring_for_Kids_short.mp4': 1080x1920, 20.0s, vertical=True, short=True
+2026-07-08 08:06:24  INFO      [__main__:167]    Title     : Play Coloring for Kids Online Free! 🖍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-17 21:00:00 (Unix: 1784302200)
+  Auto-gen  : False
+2026-07-08 08:06:24  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Coloring_for_Kids_short.mp4'
+2026-07-08 08:06:24  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:25  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:25  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AlYmT85besXAUOTl7Wp0bvB'}
+2026-07-08 08:06:25  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:25  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Cricket_Master_short.mp4
+2026-07-08 08:06:25  INFO      [uploader.video_utils:86]  Probed 'Cricket_Master_short.mp4': 1080x1920, 19.8s, vertical=True, short=True
+2026-07-08 08:06:25  INFO      [__main__:167]    Title     : Play Cricket Master Online Free! 🏏 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-18 07:00:00 (Unix: 1784338200)
+  Auto-gen  : False
+2026-07-08 08:06:25  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Cricket_Master_short.mp4'
+2026-07-08 08:06:25  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:25  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:25  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AmLNMFymCT_EDxlX3odG3-7'}
+2026-07-08 08:06:25  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:25  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Crossmath_short.mp4
+2026-07-08 08:06:25  INFO      [uploader.video_utils:86]  Probed 'Crossmath_short.mp4': 1080x1920, 31.2s, vertical=True, short=True
+2026-07-08 08:06:25  INFO      [__main__:167]    Title     : Play Crossmath Online Free! ➕ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-18 21:00:00 (Unix: 1784388600)
+  Auto-gen  : False
+2026-07-08 08:06:25  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Crossmath_short.mp4'
+2026-07-08 08:06:25  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:26  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:26  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A6gTWac5uY2TLA2wk3vMA1G'}
+2026-07-08 08:06:26  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:26  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Crossy_Road_short.mp4
+2026-07-08 08:06:26  INFO      [uploader.video_utils:86]  Probed 'Crossy_Road_short.mp4': 1080x1920, 19.7s, vertical=True, short=True
+2026-07-08 08:06:26  INFO      [__main__:167]    Title     : Play Crossy Road Online Free! 🐔 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-19 07:00:00 (Unix: 1784424600)
+  Auto-gen  : False
+2026-07-08 08:06:26  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Crossy_Road_short.mp4'
+2026-07-08 08:06:26  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:06:27  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:06:27  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A7hLV0iwb9Nkyxbqg1091l5'}
+2026-07-08 08:06:27  ERROR     [__main__:201]    ❌  Upload failed.
+2026-07-08 08:06:27  DEBUG     [uploader.video_utils:35]  Probing video metadata for: Dancing_Line_short.mp4
+2026-07-08 08:06:27  INFO      [uploader.video_utils:86]  Probed 'Dancing_Line_short.mp4': 1080x1920, 19.5s, vertical=True, short=True
+2026-07-08 08:06:27  INFO      [__main__:167]    Title     : Play Dancing Line Online Free! 🎵 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : 2026-07-19 21:00:00 (Unix: 1784475000)
+  Auto-gen  : False
+2026-07-08 08:06:27  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'Dancing_Line_short.mp4'
+2026-07-08 08:06:27  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:13:46  INFO      [__main__:119]  Limiting to first 2 video(s).
+2026-07-08 08:13:46  INFO      [__main__:122]  Discovered 2 video files to process.
+2026-07-08 08:13:46  INFO      [uploader.csv_reader:140]  Loaded 81 CSV rows from '/Users/gauravpurohit/Documents/GP/Playmix/videos.csv'.
+2026-07-08 08:13:46  INFO      [fb_uploader.tracker:36]  No existing FB tracker file found. Starting fresh.
+2026-07-08 08:13:46  INFO      [__main__:130]  Loaded tracker. 0 video(s) already scheduled.
+2026-07-08 08:13:46  DEBUG     [uploader.video_utils:35]  Probing video metadata for: 8_Ball_Pool_short.mp4
+2026-07-08 08:13:47  INFO      [uploader.video_utils:86]  Probed '8_Ball_Pool_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:13:47  INFO      [fb_uploader.api:35]  Schedule for 2026-07-08 07:00 is in the past/too soon. Auto-bumping to: 2026-07-08 08:28:47 (Unix: 1783479527)
+2026-07-08 08:13:47  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-08 08:13:47  INFO      [__main__:178]    Title     : Play 8 Ball Pool Online Free! 🎱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-08 08:13:47  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for '8_Ball_Pool_short.mp4'
+2026-07-08 08:13:47  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:13:47  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:13:47  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AvFRs8xp9CEmKUTpp468dph'}
+2026-07-08 08:13:47  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-08 08:13:47  DEBUG     [uploader.video_utils:35]  Probing video metadata for: ABC_Tracing_short.mp4
+2026-07-08 08:13:47  INFO      [uploader.video_utils:86]  Probed 'ABC_Tracing_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-08 08:13:47  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-08 08:13:47  INFO      [__main__:178]    Title     : Play ABC Tracing Online Free! ✍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-08 08:13:47  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'ABC_Tracing_short.mp4'
+2026-07-08 08:13:47  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:13:47  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:13:47  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A-x4ouPl4o-e23NerVDKHl_'}
+2026-07-08 08:13:47  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-08 08:13:47  INFO      [__main__:230]  Execution done. Scheduled=0, Skipped=0, Failed=2
+2026-07-08 08:16:27  INFO      [__main__:119]  Limiting to first 2 video(s).
+2026-07-08 08:16:27  INFO      [__main__:122]  Discovered 2 video files to process.
+2026-07-08 08:16:27  INFO      [uploader.csv_reader:140]  Loaded 81 CSV rows from '/Users/gauravpurohit/Documents/GP/Playmix/videos.csv'.
+2026-07-08 08:16:27  INFO      [fb_uploader.tracker:36]  No existing FB tracker file found. Starting fresh.
+2026-07-08 08:16:27  INFO      [__main__:130]  Loaded tracker. 0 video(s) already scheduled.
+2026-07-08 08:16:27  DEBUG     [uploader.video_utils:35]  Probing video metadata for: 8_Ball_Pool_short.mp4
+2026-07-08 08:16:27  INFO      [uploader.video_utils:86]  Probed '8_Ball_Pool_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:16:27  INFO      [fb_uploader.api:35]  Schedule for 2026-07-08 07:00 is in the past/too soon. Auto-bumping to: 2026-07-08 08:31:27 (Unix: 1783479687)
+2026-07-08 08:16:27  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-08 08:16:27  INFO      [__main__:178]    Title     : Play 8 Ball Pool Online Free! 🎱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-08 08:16:27  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for '8_Ball_Pool_short.mp4'
+2026-07-08 08:16:27  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:16:28  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:16:28  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'Av2U3Ao0NKXw1uh-wL1BiLA'}
+2026-07-08 08:16:28  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-08 08:16:28  DEBUG     [uploader.video_utils:35]  Probing video metadata for: ABC_Tracing_short.mp4
+2026-07-08 08:16:28  INFO      [uploader.video_utils:86]  Probed 'ABC_Tracing_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-08 08:16:28  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-08 08:16:28  INFO      [__main__:178]    Title     : Play ABC Tracing Online Free! ✍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-08 08:16:28  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'ABC_Tracing_short.mp4'
+2026-07-08 08:16:28  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:16:28  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:16:28  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'A7MnLE27ElXxowcdi_NZ8OC'}
+2026-07-08 08:16:28  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-08 08:16:28  INFO      [__main__:230]  Execution done. Scheduled=0, Skipped=0, Failed=2
+2026-07-08 08:20:33  INFO      [__main__:119]  Limiting to first 2 video(s).
+2026-07-08 08:20:33  INFO      [__main__:122]  Discovered 2 video files to process.
+2026-07-08 08:20:33  INFO      [uploader.csv_reader:140]  Loaded 81 CSV rows from '/Users/gauravpurohit/Documents/GP/Playmix/videos.csv'.
+2026-07-08 08:20:33  INFO      [fb_uploader.tracker:36]  No existing FB tracker file found. Starting fresh.
+2026-07-08 08:20:33  INFO      [__main__:130]  Loaded tracker. 0 video(s) already scheduled.
+2026-07-08 08:20:33  DEBUG     [uploader.video_utils:35]  Probing video metadata for: 8_Ball_Pool_short.mp4
+2026-07-08 08:20:33  INFO      [uploader.video_utils:86]  Probed '8_Ball_Pool_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:20:33  INFO      [fb_uploader.api:35]  Schedule for 2026-07-08 07:00 is in the past/too soon. Auto-bumping to: 2026-07-08 08:35:33 (Unix: 1783479933)
+2026-07-08 08:20:33  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-08 08:20:33  INFO      [__main__:178]    Title     : Play 8 Ball Pool Online Free! 🎱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-08 08:20:33  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for '8_Ball_Pool_short.mp4'
+2026-07-08 08:20:33  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:20:33  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:20:33  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AcBKdW18O2bNQMCSI9KEiRW'}
+2026-07-08 08:20:33  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-08 08:20:33  DEBUG     [uploader.video_utils:35]  Probing video metadata for: ABC_Tracing_short.mp4
+2026-07-08 08:20:33  INFO      [uploader.video_utils:86]  Probed 'ABC_Tracing_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-08 08:20:33  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-08 08:20:33  INFO      [__main__:178]    Title     : Play ABC Tracing Online Free! ✍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-08 08:20:33  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'ABC_Tracing_short.mp4'
+2026-07-08 08:20:33  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:20:34  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:20:34  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'Am5iLlXRGtF3nR5fvl998c2'}
+2026-07-08 08:20:34  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-08 08:20:34  INFO      [__main__:230]  Execution done. Scheduled=0, Skipped=0, Failed=2
+2026-07-08 08:34:43  INFO      [__main__:119]  Limiting to first 2 video(s).
+2026-07-08 08:34:43  INFO      [__main__:122]  Discovered 2 video files to process.
+2026-07-08 08:34:43  INFO      [uploader.csv_reader:140]  Loaded 81 CSV rows from '/Users/gauravpurohit/Documents/GP/Playmix/videos.csv'.
+2026-07-08 08:34:43  INFO      [fb_uploader.tracker:36]  No existing FB tracker file found. Starting fresh.
+2026-07-08 08:34:43  INFO      [__main__:130]  Loaded tracker. 0 video(s) already scheduled.
+2026-07-08 08:34:43  DEBUG     [uploader.video_utils:35]  Probing video metadata for: 8_Ball_Pool_short.mp4
+2026-07-08 08:34:43  INFO      [uploader.video_utils:86]  Probed '8_Ball_Pool_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-08 08:34:43  INFO      [fb_uploader.api:35]  Schedule for 2026-07-08 07:00 is in the past/too soon. Auto-bumping to: 2026-07-08 08:49:43 (Unix: 1783480783)
+2026-07-08 08:34:43  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-08 08:34:43  INFO      [__main__:178]    Title     : Play 8 Ball Pool Online Free! 🎱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-08 08:34:43  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for '8_Ball_Pool_short.mp4'
+2026-07-08 08:34:43  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:34:44  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:34:44  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'ASBPrTi6eSmbG0QOE4YLdmK'}
+2026-07-08 08:34:44  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-08 08:34:44  DEBUG     [uploader.video_utils:35]  Probing video metadata for: ABC_Tracing_short.mp4
+2026-07-08 08:34:44  INFO      [uploader.video_utils:86]  Probed 'ABC_Tracing_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-08 08:34:44  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-08 08:34:44  INFO      [__main__:178]    Title     : Play ABC Tracing Online Free! ✍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-08 08:34:44  INFO      [fb_uploader.api:65]  Phase 1: Initializing Reels upload for 'ABC_Tracing_short.mp4'
+2026-07-08 08:34:44  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-08 08:34:44  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/video_reels HTTP/1.1" 403 214
+2026-07-08 08:34:44  ERROR     [fb_uploader.api:76]  Failed to start upload session: {'message': '(#200) Subject does not have permission to post videos on this target, due to lack of pages_manage_posts permission.', 'type': 'OAuthException', 'code': 200, 'fbtrace_id': 'AaOOyDCDSgXvC6liEPmTVGa'}
+2026-07-08 08:34:44  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-08 08:34:44  INFO      [__main__:230]  Execution done. Scheduled=0, Skipped=0, Failed=2
+2026-07-11 11:12:15  INFO      [__main__:119]  Limiting to first 2 video(s).
+2026-07-11 11:12:15  INFO      [__main__:122]  Discovered 2 video files to process.
+2026-07-11 11:12:15  INFO      [uploader.csv_reader:140]  Loaded 81 CSV rows from '/Users/gauravpurohit/Documents/GP/Playmix/videos.csv'.
+2026-07-11 11:12:15  INFO      [fb_uploader.tracker:36]  No existing FB tracker file found. Starting fresh.
+2026-07-11 11:12:15  INFO      [__main__:130]  Loaded tracker. 0 video(s) already scheduled.
+2026-07-11 11:12:15  DEBUG     [uploader.video_utils:35]  Probing video metadata for: 8_Ball_Pool_short.mp4
+2026-07-11 11:12:16  INFO      [uploader.video_utils:86]  Probed '8_Ball_Pool_short.mp4': 1080x1920, 19.6s, vertical=True, short=True
+2026-07-11 11:12:16  INFO      [fb_uploader.api:32]  Schedule for 2026-07-08 07:00 is in the past/too soon. Auto-bumping to: 2026-07-11 11:27:16 (Unix: 1783749436)
+2026-07-11 11:12:16  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-11 11:12:16  INFO      [__main__:178]    Title     : Play 8 Ball Pool Online Free! 🎱 #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-11 11:12:16  INFO      [fb_uploader.api:84]  Will publish Reel immediately.
+2026-07-11 11:12:16  INFO      [fb_uploader.api:91]  Uploading '8_Ball_Pool_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:12:16  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:12:17  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:12:17  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:42:17 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'AkX2v_1OGFj6N27Zz3hNthg'}
+2026-07-11 11:12:17  WARNING   [fb_uploader.api:127]  Retrying in 2.0s (attempt 1/5)...
+2026-07-11 11:12:19  INFO      [fb_uploader.api:91]  Uploading '8_Ball_Pool_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:12:19  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:12:20  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:12:20  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:42:20 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'AgwSTZr-33Wi5jmmSZDwUz3'}
+2026-07-11 11:12:20  WARNING   [fb_uploader.api:127]  Retrying in 4.3s (attempt 2/5)...
+2026-07-11 11:12:24  INFO      [fb_uploader.api:91]  Uploading '8_Ball_Pool_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:12:24  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:12:25  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:12:25  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:42:25 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'Ao2hqO_tYneTT0Va-ODHFim'}
+2026-07-11 11:12:25  WARNING   [fb_uploader.api:127]  Retrying in 8.3s (attempt 3/5)...
+2026-07-11 11:12:33  INFO      [fb_uploader.api:91]  Uploading '8_Ball_Pool_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:12:33  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:12:34  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:12:34  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:42:34 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'Ar24gHoMEl844C-z9hGfw_E'}
+2026-07-11 11:12:34  WARNING   [fb_uploader.api:127]  Retrying in 16.5s (attempt 4/5)...
+2026-07-11 11:12:51  INFO      [fb_uploader.api:91]  Uploading '8_Ball_Pool_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:12:51  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:12:52  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:12:52  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:42:52 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'A6E-UZ1-uv_PcNb4mMb7O4K'}
+2026-07-11 11:12:52  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-11 11:12:52  DEBUG     [uploader.video_utils:35]  Probing video metadata for: ABC_Tracing_short.mp4
+2026-07-11 11:12:52  INFO      [uploader.video_utils:86]  Probed 'ABC_Tracing_short.mp4': 1080x1920, 21.0s, vertical=True, short=True
+2026-07-11 11:12:52  INFO      [fb_uploader.api:32]  Schedule for 2026-07-08 21:00 is in the past/too soon. Auto-bumping to: 2026-07-11 11:27:52 (Unix: 1783749472)
+2026-07-11 11:12:52  INFO      [__main__:166]    --now flag: overriding schedule to publish immediately.
+2026-07-11 11:12:52  INFO      [__main__:178]    Title     : Play ABC Tracing Online Free! ✍️ #Shorts
+  Dimensions: 1080x1920
+  Scheduled : Immediate (Unix: None)
+  Auto-gen  : False
+2026-07-11 11:12:52  INFO      [fb_uploader.api:84]  Will publish Reel immediately.
+2026-07-11 11:12:52  INFO      [fb_uploader.api:91]  Uploading 'ABC_Tracing_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:12:52  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:12:53  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:12:53  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:42:53 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'AgtBg8tGxMUUH-eCJBRXUJJ'}
+2026-07-11 11:12:53  WARNING   [fb_uploader.api:127]  Retrying in 2.4s (attempt 1/5)...
+2026-07-11 11:12:55  INFO      [fb_uploader.api:91]  Uploading 'ABC_Tracing_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:12:55  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:12:56  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:12:56  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:42:56 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'A5kU4LmQBEc72bH2lUYDPeO'}
+2026-07-11 11:12:56  WARNING   [fb_uploader.api:127]  Retrying in 4.6s (attempt 2/5)...
+2026-07-11 11:13:01  INFO      [fb_uploader.api:91]  Uploading 'ABC_Tracing_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:13:01  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:13:02  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:13:02  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:43:01 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'AaTz5xTI53DoK-4EHbGEXr4'}
+2026-07-11 11:13:02  WARNING   [fb_uploader.api:127]  Retrying in 8.2s (attempt 3/5)...
+2026-07-11 11:13:10  INFO      [fb_uploader.api:91]  Uploading 'ABC_Tracing_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:13:10  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:13:11  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:13:11  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:43:11 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'AwDFjimOPuCm72C981M7zed'}
+2026-07-11 11:13:11  WARNING   [fb_uploader.api:127]  Retrying in 16.5s (attempt 4/5)...
+2026-07-11 11:13:27  INFO      [fb_uploader.api:91]  Uploading 'ABC_Tracing_short.mp4' to /1170260676175105/videos ...
+2026-07-11 11:13:27  DEBUG     [urllib3.connectionpool:1049]  Starting new HTTPS connection (1): graph.facebook.com:443
+2026-07-11 11:13:28  DEBUG     [urllib3.connectionpool:544]  https://graph.facebook.com:443 "POST /v19.0/1170260676175105/videos HTTP/1.1" 400 256
+2026-07-11 11:13:28  ERROR     [fb_uploader.api:122]  Upload failed: {'message': 'Error validating access token: Session has expired on Tuesday, 07-Jul-26 22:00:00 PDT. The current time is Friday, 10-Jul-26 22:43:28 PDT.', 'type': 'OAuthException', 'code': 190, 'error_subcode': 463, 'fbtrace_id': 'AuuoZLyoZRvkqpAiFvQcy-v'}
+2026-07-11 11:13:28  ERROR     [__main__:212]    ❌  Upload failed.
+2026-07-11 11:13:28  INFO      [__main__:230]  Execution done. Scheduled=0, Skipped=0, Failed=2

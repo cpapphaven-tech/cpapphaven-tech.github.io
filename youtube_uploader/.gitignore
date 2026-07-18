@@ -1,0 +1,23 @@
+# Google API credentials — NEVER commit these
+client_secrets.json
+token.json
+
+# Upload tracker — preserve between deployments
+# uploaded.json  ← Keep this commented; you DO want to commit tracker to avoid re-uploads
+
+# Python environment
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# Logs
+logs/
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
