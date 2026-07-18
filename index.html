@@ -37,7 +37,6 @@
 <script defer src="./analytics.js" type="module"></script>
 <script defer src="ads.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded',()=>{if(typeof prepSystem==="function")prepSystem();});
   window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17908156906');
 </script>
 <script defer src="https://www.googletagmanager.com/gtag/js?id=AW-17908156906"></script>
@@ -416,6 +415,8 @@ window.addEventListener('load', () => {
     if (fill) fill.style.width = '100%';
     setTimeout(() => loader.classList.add('hidden'), 300);
   }
+  // Activate Adsterra sticky bottom ad (ads.js is fully loaded by now)
+  if (typeof prepSystem === 'function') prepSystem();
 });
 </script>
 </body>
