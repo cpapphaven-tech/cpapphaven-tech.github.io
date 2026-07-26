@@ -1,6 +1,7 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Geometry Jump", tag: "🔥 New Game", desc: "Jump, dash, and fly your cube through rhythm spikes!", href: "GeometryDash/game.html", gradient: "linear-gradient(135deg,#06b6d4,#a855f7,#ec4899)", icon: "🔺", badge: "new", image: "" },
     { name: "Knife Hit", tag: "🎯 Trending", desc: "Throw knives, hit the target, slice apples!", href: "KnifeHit/game.html", gradient: "linear-gradient(135deg,#1e1b4b,#f59e0b,#ef4444)", icon: "🎯", badge: "new", image: "" },
     { name: "Marble Sort", tag: "🆕 New Game", desc: "Drop marbles, ride the belt, sort by color!", href: "MarbleSort/game.html", gradient: "linear-gradient(135deg,#1a0a2e,#a855f7,#ec4899)", icon: "🔮", badge: "new", image: "" },
     { name: "Number Master", tag: "🔢 Brain Game", desc: "Collect numbers, dodge threats, break walls!", href: "NumberMaster/game.html", gradient: "linear-gradient(135deg,#0f172a,#3b82f6,#10b981)", icon: "🔢", badge: "new", image: "" },
@@ -17,6 +18,7 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Geometry Jump",    genre: "Action",   icon: "",                                 href: "GeometryDash/game.html",         badge: "new",     emoji: "🔺" },
         { name: "Knife Hit",        genre: "Arcade",   icon: "",                                 href: "KnifeHit/game.html",             badge: "new",     emoji: "🎯" },
         { name: "Balloon Ninja",    genre: "Arcade",   icon: "assets/ninja200.png",             href: "NeonSlicer/index.html",          badge: "hot",     emoji: "🗡️" },
         { name: "Highway Rush",     genre: "Racing",   icon: "assets/highwayrushcar200.png",     href: "HighwayRush/index.html",         badge: "trend",   emoji: "🏎️" },
