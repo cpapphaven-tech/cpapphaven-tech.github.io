@@ -6,6 +6,17 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- 2048 Game -->
+  <url>
+    <loc>https://playmixgames.in/Game2048/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/Game2048/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/Game2048/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/Game2048/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/Game2048/index.html" />
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
   <url>
     <loc>https://playmixgames.in/NewsHub/about-newshub.html</loc>
     <priority>0.5</priority>

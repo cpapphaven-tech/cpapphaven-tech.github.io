@@ -1,6 +1,7 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "2048", tag: "🔥 Most Popular", desc: "Slide & merge tiles to reach the legendary 2048!", href: "Game2048/index.html", gradient: "linear-gradient(135deg,#1a0a2e,#f5a623,#e040fb)", icon: "🔢", badge: "hot", image: "" },
     { name: "Geometry Jump", tag: "🔥 New Game", desc: "Jump, dash, and fly your cube through rhythm spikes!", href: "GeometryDash/game.html", gradient: "linear-gradient(135deg,#06b6d4,#a855f7,#ec4899)", icon: "🔺", badge: "new", image: "" },
     { name: "Knife Hit", tag: "🎯 Trending", desc: "Throw knives, hit the target, slice apples!", href: "KnifeHit/game.html", gradient: "linear-gradient(135deg,#1e1b4b,#f59e0b,#ef4444)", icon: "🎯", badge: "new", image: "" },
     { name: "Marble Sort", tag: "🆕 New Game", desc: "Drop marbles, ride the belt, sort by color!", href: "MarbleSort/game.html", gradient: "linear-gradient(135deg,#1a0a2e,#a855f7,#ec4899)", icon: "🔮", badge: "new", image: "" },
@@ -64,6 +65,7 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "2048",             genre: "Puzzle",   icon: "",                                 href: "Game2048/index.html",            badge: "hot",  emoji: "🔢" },
         { name: "Marble Sort",      genre: "Puzzle",   icon: "",                                 href: "MarbleSort/game.html",           badge: "new",  emoji: "🔮" },
         { name: "Crossmath",        genre: "Math",     icon: "",                                 href: "Crossmath/game.html",            badge: "new",  emoji: "➕" },
         { name: "Hidden Word",      genre: "Word",     icon: "",                                 href: "HiddenWord/index.html",          badge: "new",  emoji: "🔎" },
