@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Tetris Game Online - Free Classic Block Puzzle</title>
+    <meta name="description" content="Play the classic Tetris game free online! Stack falling blocks, clear lines, and score high in this addictive retro puzzle game. No download required.">
+    <meta name="keywords" content="tetris, tetris game, play tetris online, block puzzle, classic tetris, free tetris">
+    <link rel="canonical" href="https://playmixgames.in/Tetris/index.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tetris Game Online - Free Classic Block Puzzle">
+    <meta property="og:description" content="Play the classic Tetris game free online! Stack falling blocks, clear lines, and score high.">
+    <meta property="og:url" content="https://playmixgames.in/Tetris/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://playmixgames.in/assets/tetris_banner.png">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Portal Styles & Icons -->
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Game Specific Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Tetris",
+      "description": "Play the classic Tetris game free online. Stack blocks and clear lines.",
+      "url": "https://playmixgames.in/Tetris/index.html",
+      "genre": ["Puzzle", "Arcade"],
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="portal-index">
+    
+    <!-- Main Header -->
+    <header class="top-nav">
+        <a href="../index.html" class="nav-logo">
+            <span class="logo-emoji">🎮</span>
+            <div class="logo-text">
+                <h1>PlayMix</h1>
+                <span>Games</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <button class="nav-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="nav-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu (Injected by script) -->
+    <div id="sidebar-container"></div>
+
+    <main class="game-container">
+        <!-- Game Header -->
+        <div class="game-header">
+            <div class="game-info">
+                <div class="game-icon-box">🧩</div>
+                <div class="game-title">
+                    <h2>Tetris</h2>
+                    <span class="game-tag">Puzzle Classic</span>
+                </div>
+            </div>
+            <div class="game-actions">
+                <button class="action-btn share-btn" aria-label="Share">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- The Game Viewport -->
+        <div class="game-viewport">
+            <div id="game-ui">
+                <!-- Score HUD -->
+                <div id="hud-top">
+                    <div class="hud-box">
+                        <span class="hud-label">SCORE</span>
+                        <span id="score-display">0</span>
+                    </div>
+                    <div class="hud-box">
+                        <span class="hud-label">LEVEL</span>
+                        <span id="level-display">1</span>
+                    </div>
+                    <div class="hud-box">
+                        <span class="hud-label">LINES</span>
+                        <span id="lines-display">0</span>
+                    </div>
+                </div>
+
+                <div id="main-area">
+                    <canvas id="tetris-board" width="300" height="600"></canvas>
+                    
+                    <div id="right-column">
+                        <div id="side-panel">
+                            <div class="side-box">
+                                <span class="hud-label">NEXT</span>
+                                <canvas id="next-piece" width="100" height="100"></canvas>
+                            </div>
+                            <div class="side-box">
+                                <span class="hud-label">BEST SCORE</span>
+                                <span id="best-display" class="highlight-text">0</span>
+                            </div>
+                            
+                            <!-- Desktop Controls Hint -->
+                            <div class="controls-hint">
+                                <p><b>Controls:</b></p>
+                                <p>⬅️ ➡️ Move</p>
+                                <p>⬆️ Rotate</p>
+                                <p>⬇️ Soft Drop</p>
+                                <p>SPACE Hard Drop</p>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Controls (Shown via CSS on small screens) -->
+                        <div id="mobile-controls">
+                            <div class="m-pad-row">
+                                <button id="btn-rotate" class="m-btn"><i class="fa-solid fa-rotate-right"></i></button>
+                            </div>
+                            <div class="m-pad-row">
+                                <button id="btn-left" class="m-btn"><i class="fa-solid fa-arrow-left"></i></button>
+                                <button id="btn-right" class="m-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                            <div class="m-pad-row">
+                                <button id="btn-down" class="m-btn"><i class="fa-solid fa-arrow-down"></i></button>
+                            </div>
+                            <div class="m-pad-row" style="margin-top: 15px;">
+                                <button id="btn-drop" class="m-btn drop-btn"><i class="fa-solid fa-angles-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overlays -->
+                <div id="overlay" class="overlay">
+                    <div class="overlay-content">
+                        <h2 id="overlay-title">Tetris</h2>
+                        <p id="overlay-msg">Classic block puzzle!</p>
+                        <button id="overlay-btn" class="primary-btn">Play Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Article Section -->
+        <section class="game-article">
+            <h2>How to Play Tetris</h2>
+            <p>Tetris is a timeless puzzle game where you must strategically place falling blocks, known as Tetrominoes. The goal is to create complete horizontal lines of blocks without any gaps. When a line is complete, it disappears, granting you points and freeing up space.</p>
+            
+            <h3>Game Rules & Tips</h3>
+            <ul>
+                <li><strong>Clear Lines:</strong> Try to clear multiple lines at once (a "Tetris") for maximum points.</li>
+                <li><strong>Plan Ahead:</strong> Always keep an eye on the "Next" box to see which piece is coming up.</li>
+                <li><strong>Keep it Flat:</strong> Avoid creating deep wells or tall spires. Keep your stack as flat as possible.</li>
+                <li><strong>Level Up:</strong> As you clear lines, the level increases, causing the blocks to fall faster!</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Adsterra Ad Unit (Bottom Sticky) -->
+    <div id="pmg-bottom-ad"></div>
+
+    <!-- Scripts -->
+    <script src="../sidebar.js"></script>
+    <script src="game.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../analytics.js"></script>
+    
+    <!-- Delay Ad Initialization to ensure page is fully loaded -->
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof prepSystem === 'function') {
+                prepSystem(); 
+            }
+        });
+    </script>
+</body>
+</html>
