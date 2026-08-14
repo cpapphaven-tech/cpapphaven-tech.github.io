@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Word Guess Game Online - Free Unlimited Wordle Puzzle</title>
+    <meta name="description" content="Play Word Guess free online! Guess the 5-letter word in 6 tries. Unlimited gameplay, no daily limits. Train your brain with this highly addictive word puzzle.">
+    <meta name="keywords" content="word guess, wordle, word puzzle, unlimited wordle, 5 letter word game, play word guess online">
+    <link rel="canonical" href="https://playmixgames.in/WordGuess/index.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Word Guess Game Online - Free Unlimited Word Puzzle">
+    <meta property="og:description" content="Play Word Guess free online! Guess the 5-letter word in 6 tries. Unlimited gameplay.">
+    <meta property="og:url" content="https://playmixgames.in/WordGuess/index.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Portal Styles & Icons -->
+    <link rel="stylesheet" href="../portal-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Game Specific Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Word Guess",
+      "description": "Guess the 5-letter word in 6 tries. An unlimited word guessing puzzle game.",
+      "url": "https://playmixgames.in/WordGuess/index.html",
+      "genre": ["Word", "Puzzle"],
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="portal-index">
+    
+    <!-- Main Header -->
+    <header class="top-nav">
+        <a href="../index.html" class="nav-logo">
+            <span class="logo-emoji">🎮</span>
+            <div class="logo-text">
+                <h1>PlayMix</h1>
+                <span>Games</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <button class="nav-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="nav-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu (Injected by script) -->
+    <div id="sidebar-container"></div>
+
+    <main class="game-container">
+        <!-- Game Header -->
+        <div class="game-header">
+            <div class="game-info">
+                <div class="game-icon-box" style="background: linear-gradient(135deg, #10b981, #3b82f6)">🅰️</div>
+                <div class="game-title">
+                    <h2>Word Guess</h2>
+                    <span class="game-tag">Unlimited Word Puzzle</span>
+                </div>
+            </div>
+            <div class="game-actions">
+                <button class="action-btn share-btn" aria-label="Share">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- The Game Viewport -->
+        <div class="game-viewport">
+            <div id="game-ui">
+                <!-- Score HUD -->
+                <div id="hud-top">
+                    <div class="hud-box">
+                        <span class="hud-label">TRIES</span>
+                        <span id="tries-display" class="highlight-text" style="color: #ef4444 !important; text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);">5</span>
+                    </div>
+                    <div class="hud-box clue-box">
+                        <span class="hud-label" style="color: #3b82f6;">SCRAMBLED CLUE</span>
+                        <span id="clue-display" style="letter-spacing: 4px; font-weight: 800; color: #fff;">-----</span>
+                    </div>
+                    <div class="hud-box">
+                        <span class="hud-label">STREAK</span>
+                        <span id="streak-display">0</span>
+                    </div>
+                </div>
+
+                <!-- Toast Notifications -->
+                <div id="toast-container"></div>
+
+                <!-- 5x6 Grid Area -->
+                <div id="grid-container">
+                    <div id="board">
+                        <!-- Tiles injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Hidden Input to trigger native mobile keyboard -->
+                <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; opacity: 0; pointer-events: none; height: 0; width: 0; top: 0;">
+
+                <!-- Game Over / Next Word Overlay -->
+                <div id="overlay" class="overlay hidden">
+                    <div class="overlay-content">
+                        <h2 id="overlay-title">You Won!</h2>
+                        <p id="overlay-msg">The word was: <strong id="answer-word" class="highlight-text">APPLE</strong></p>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <div class="stat-num" id="stat-streak">1</div>
+                                <div class="stat-lbl">Streak</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" id="stat-best">5</div>
+                                <div class="stat-lbl">Best</div>
+                            </div>
+                        </div>
+                        <button id="next-btn" class="primary-btn">Next Word</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Article Section -->
+        <section class="game-article">
+            <h2>How to Play Word Guess</h2>
+            <p>Word Guess is an addictive unlimited word puzzle game where your goal is to guess the hidden 5-letter word in six attempts or fewer.</p>
+            
+            <h3>Rules & Color Clues</h3>
+            <ul>
+                <li><strong>Green Tile:</strong> The letter is in the word and in the <strong>correct</strong> spot.</li>
+                <li><strong>Yellow Tile:</strong> The letter is in the word but in the <strong>wrong</strong> spot.</li>
+                <li><strong>Gray Tile:</strong> The letter is <strong>not</strong> in the word at all.</li>
+            </ul>
+            <p>Every guess must be a valid 5-letter word. Press ENTER to submit your guess. Unlike daily challenges, this version allows you to play <em>unlimited</em> times in a row. Build your longest win streak and challenge your friends!</p>
+        </section>
+    </main>
+
+    <!-- Adsterra Ad Unit (Bottom Sticky) -->
+    <div id="pmg-bottom-ad"></div>
+
+    <!-- Scripts -->
+    <script src="../sidebar.js"></script>
+    <script src="game.js"></script>
+    <script src="../ads.js"></script>
+    <script src="../analytics.js"></script>
+    
+    <!-- Delay Ad Initialization to ensure page is fully loaded -->
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof prepSystem === 'function') {
+                prepSystem(); 
+            }
+        });
+    </script>
+</body>
+</html>

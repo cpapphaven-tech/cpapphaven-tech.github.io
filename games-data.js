@@ -1,6 +1,7 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Word Guess", tag: "🔥 Viral Hit", desc: "Guess the 5-letter hidden word in 6 attempts!", href: "WordGuess/index.html", gradient: "linear-gradient(135deg,#10b981,#3b82f6,#1e1b4b)", icon: "🅰️", badge: "hot", image: "" },
     { name: "Tetris", tag: "🔥 Classic", desc: "Stack falling blocks, clear lines, and score high!", href: "Tetris/index.html", gradient: "linear-gradient(135deg,#0a0a1a,#a855f7,#00FFFF)", icon: "🧩", badge: "hot", image: "" },
     { name: "2048", tag: "🔥 Most Popular", desc: "Slide & merge tiles to reach the legendary 2048!", href: "Game2048/index.html", gradient: "linear-gradient(135deg,#1a0a2e,#f5a623,#e040fb)", icon: "🔢", badge: "hot", image: "" },
     { name: "Geometry Jump", tag: "🔥 New Game", desc: "Jump, dash, and fly your cube through rhythm spikes!", href: "GeometryDash/game.html", gradient: "linear-gradient(135deg,#06b6d4,#a855f7,#ec4899)", icon: "🔺", badge: "new", image: "" },
@@ -66,6 +67,7 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Word Guess",       genre: "Word",     icon: "",                                 href: "WordGuess/index.html",           badge: "hot",  emoji: "🅰️" },
         { name: "Tetris",           genre: "Puzzle",   icon: "",                                 href: "Tetris/index.html",              badge: "hot",  emoji: "🧩" },
         { name: "2048",             genre: "Puzzle",   icon: "",                                 href: "Game2048/index.html",            badge: "hot",  emoji: "🔢" },
         { name: "Marble Sort",      genre: "Puzzle",   icon: "",                                 href: "MarbleSort/game.html",           badge: "new",  emoji: "🔮" },
