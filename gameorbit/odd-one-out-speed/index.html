@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Odd One Out Spot Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Odd One Out Spot Game free online! Experience the ultimate Difference Finder with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="odd one out game online, spot the difference free, visual puzzle game">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Odd One Out Spot Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Odd One Out Spot Game free online! Experience the ultimate Difference Finder with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/odd-one-out-speed/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/odd-one-out-speed/index.html">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/OddOneOut/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/OddOneOut/index.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script defer src="../../sidebar.js"></script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Odd One Out Spot Game",
+  "description": "Play Odd One Out Spot Game free online! Experience the ultimate Difference Finder with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/OddOneOut/index.html",
+  "genre": ["Puzzle", "Brain", "Casual"],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "ratingCount": "218",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0d0d2b;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0d0d2b;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #a78bfa, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(167, 139, 250, 0.1);
+            border-top-color: #a78bfa;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #7c3aed, #ec4899);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin { to { transform: rotate(360deg); } }
+        @keyframes pmgPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.7; transform: scale(0.98); }
+        }
+        @keyframes pmgFill {
+            0%   { width: 0%; }
+            100% { width: 95%; }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible { opacity: 1; }
+    </style>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="twitter:title" content="Odd One Out – Brain Puzzle Game | Find the Difference | PlayMixGames">
+    <meta property="twitter:description" content="Play Odd One Out free online! Find the emoji, color or shape that doesn">
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="Odd One Out Brain Puzzle Game" src="game.html" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <section class="seo-content" style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #a78bfa;">Why Play Odd One Out on PlayMix Games?</h2>
+        <ul style="padding-left: 20px;">
+            <li>100% free – no downloads, no subscriptions</li>
+            <li>Instant play in your browser (HTML5, no plugins needed)</li>
+            <li>Fully optimized for touchscreens and mobile devices</li>
+            <li>Progressive difficulty across 12 levels</li>
+            <li>Three puzzle types: Emoji, Color, and Shape</li>
+        </ul>
+
+        <h2 style="color: #a78bfa;">Frequently Asked Questions</h2>
+        <p><strong>Is Odd One Out free to play?</strong> Yes, completely free and unlimited plays.</p>
+        <p><strong>Does it work on mobile?</strong> Absolutely! The game is designed mobile-first with large tap targets and smooth touch controls.</p>
+        <p><strong>How do I score higher?</strong> Build streaks by answering correctly in a row — streaks multiply your points!</p>
+        <p><strong>What happens if I tap wrong?</strong> A wrong tap deducts 5 points and removes 5 seconds from your timer, so be careful!</p>
+    </section>
+
+    <script>
+        (function () {
+            const frame  = document.getElementById('game-frame');
+            const loader = document.getElementById('pmg-loader');
+            const start  = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Odd One Out Spot Game Free Online</h2>
+            <p>Welcome to <strong>Odd One Out Spot Game</strong>! Searching for the best free online OddOneOut experience? Look no further. This high-energy <strong>Difference Finder</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Difference Finder Mode:</strong> High-speed action featuring Odd One Out Speed variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Odd One Out Spot Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on odd one out speed variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Odd One Out Spot Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/odd-one-out-speed/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Odd One Out Spot Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Odd One Out Spot Game features an upgraded <strong>Difference Finder</strong> format. Highlights include: Odd One Out Speed variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Odd One Out Spot Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Odd One Out Spot Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Odd One Out Spot Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage odd one out speed variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

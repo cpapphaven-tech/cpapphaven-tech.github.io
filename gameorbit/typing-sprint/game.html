@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Typing Speed Test WPM Game - Play Free Online Game | GameOrbit</title>
+
+    <!-- Essential Scripts -->
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+    <script src="../../sidebar.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        onload="console.log('✅ Supabase loaded')"
+        onerror="console.warn('⚠️ Supabase failed')">
+    </script>
+
+    <!-- Phaser 3 -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/typingtest600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/typingtest600.png">
+    <meta property="og:title" content="Typing Speed Test WPM Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Typing Speed Test WPM Game free online! Experience the ultimate Keyboard WPM Trainer with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/typing-sprint/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Typing Speed Test Arena">
+    <meta property="twitter:description" content="Play TypingSpeedTest for free online at PlayMixGames. No download required!">
+    <meta name="description" content="Play Typing Speed Test WPM Game free online! Experience the ultimate Keyboard WPM Trainer with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/typing-sprint/index.html">
+    <meta name="keywords" content="typing test online free, typing speed test wpm, keyboard typing game">
+</head>
+
+<body class="pmg-sidebar-start-closed">
+
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Warming up keyboard...</p>
+    </div>
+
+    <!-- Back Button -->
+    <a href="../../index.html" class="back-btn">← Back</a>
+
+    <!-- Main Game Wrapper -->
+    <div id="game-wrapper">
+
+        <!-- Phaser Canvas Container -->
+        <div id="phaser-container"></div>
+
+        <!-- Hidden Input for Mobile Keyboards -->
+        <input type="text" id="mobile-keyboard-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-hidden="true" tabindex="-1">
+        
+        <!-- Mobile Tap Target -->
+        <div id="mobile-focus-overlay"></div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-box">
+                <div class="screen-icon">⌨️</div>
+                <h1>TYPING ARENA</h1>
+                <p>Type the falling words to destroy them and test your WPM!<br><br><span style="font-size:0.8rem;color:#4ade80;">Mobile Users: Tap PLAY to open keyboard.</span></p>
+                <button class="pmg-btn pmg-btn-primary" id="start-btn">🎯 PLAY NOW</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-box">
+                <div class="screen-icon">🔥</div>
+                <h1>SPEED TEST COMPLETE</h1>
+                
+                <div class="go-stats">
+                    <div class="go-stat-box">
+                        <div class="go-stat-label">Your Speed</div>
+                        <div class="go-stat-val go-wpm"><span id="go-val-wpm">0</span> <span>WPM</span></div>
+                    </div>
+                    <div class="go-stat-box">
+                        <div class="go-stat-label">Accuracy</div>
+                        <div class="go-stat-val go-acc"><span id="go-val-acc">0</span><span>%</span></div>
+                    </div>
+                </div>
+
+                <div class="go-stats" style="margin-top:-15px;">
+                    <div class="go-stat-box">
+                        <div class="go-stat-label">Best WPM</div>
+                        <div class="go-stat-val go-wpm"><span id="go-val-bestwpm">0</span></div>
+                    </div>
+                    <div class="go-stat-box">
+                        <div class="go-stat-label">Keys Hit</div>
+                        <div class="go-stat-val go-acc"><span id="go-val-keys">0</span></div>
+                    </div>
+                </div>
+
+                <button class="pmg-btn pmg-btn-primary" id="retry-btn">🔄 TYPE AGAIN</button>
+                <a href="../../index.html" class="pmg-btn pmg-btn-outline" style="padding:14px;border-radius:50px;">🏠 More Games</a>
+            </div>
+        </div>
+
+    </div><!-- end #game-wrapper -->
+
+    <script src="game.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) loader.classList.add('hidden');
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Typing Speed Test WPM Game Free Online</h2>
+            <p>Welcome to <strong>Typing Speed Test WPM Game</strong>! Searching for the best free online TypingSpeedTest experience? Look no further. This high-energy <strong>Keyboard WPM Trainer</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Keyboard WPM Trainer Mode:</strong> High-speed action featuring Typing Sprint variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Typing Speed Test WPM Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on typing sprint variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Typing Speed Test WPM Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/typing-sprint/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Typing Speed Test WPM Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Typing Speed Test WPM Game features an upgraded <strong>Keyboard WPM Trainer</strong> format. Highlights include: Typing Sprint variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Typing Speed Test WPM Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Typing Speed Test WPM Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Typing Speed Test WPM Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage typing sprint variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

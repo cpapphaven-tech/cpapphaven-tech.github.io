@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Math Games Daily Calculator - Play Free Online Game | GameOrbit</title>
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+    <script defer src="../../sidebar.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onerror="console.warn('Supabase failed')"></script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/mathlearning600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/mathlearning600.png">
+    <meta property="og:title" content="Math Games Daily Calculator - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Math Games Daily Calculator free online! Experience the ultimate Mental Arithmetic Quiz with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/math-equator-blitz/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Daily Math Equator – KBC Math Quiz">
+    <meta property="twitter:description" content="Play DailyMathEquator for free online at PlayMixGames. No download required!">
+    <meta name="description" content="Play Math Games Daily Calculator free online! Experience the ultimate Mental Arithmetic Quiz with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/math-equator-blitz/index.html">
+    <meta name="keywords" content="math games online free, mental math quiz, arithmetic equator solver">
+</head>
+<body>
+
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+        <p class="pmg-tip">Preparing your questions...</p>
+    </div>
+
+    <div id="game-wrapper">
+
+        <!-- ── HEADER ── -->
+        <div class="game-header">
+            <a href="../../index.html" class="back-btn">← Back</a>
+            <div class="header-center">
+                <div class="header-title">🔢 Math Genius Quiz</div>
+                <div class="header-sub" id="level-display">Level 1 – Q1</div>
+            </div>
+            <div class="score-badge">
+                <div class="score-label">Score</div>
+                <div class="score-val" id="score-val">0</div>
+            </div>
+        </div>
+
+        <!-- ── MAIN GAME AREA ── -->
+        <div id="main-area">
+
+            <!-- Timer Ring -->
+            <div class="timer-container">
+                <svg class="timer-ring" viewBox="0 0 100 100">
+                    <circle class="timer-bg" cx="50" cy="50" r="44"/>
+                    <circle class="timer-arc" id="timer-arc" cx="50" cy="50" r="44"/>
+                </svg>
+                <div class="timer-text" id="timer-text">30</div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="question-card" id="question-card">
+                <div class="question-number" id="q-number">Q1</div>
+                <div class="question-text" id="question-text">Loading...</div>
+            </div>
+
+            <!-- Options Grid -->
+            <div class="options-grid" id="options-grid">
+                <button class="option-btn" id="opt-A"><span class="opt-label">A</span><span class="opt-text" id="opt-A-text"></span></button>
+                <button class="option-btn" id="opt-B"><span class="opt-label">B</span><span class="opt-text" id="opt-B-text"></span></button>
+                <button class="option-btn" id="opt-C"><span class="opt-label">C</span><span class="opt-text" id="opt-C-text"></span></button>
+                <button class="option-btn" id="opt-D"><span class="opt-label">D</span><span class="opt-text" id="opt-D-text"></span></button>
+            </div>
+
+            <!-- Lifelines -->
+            <div class="lifelines" id="lifelines">
+                <button class="lifeline-btn" id="ll-5050" title="50:50">✂️<span>50:50</span></button>
+                <button class="lifeline-btn" id="ll-skip" title="Skip Question">⏭️<span>Skip</span></button>
+                <button class="lifeline-btn" id="ll-double" title="Double Points">⚡<span>2×pts</span></button>
+            </div>
+        </div>
+
+        <!-- ── SCREENS ── -->
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="full-screen-overlay">
+            <div class="overlay-box">
+                <div class="overlay-icon">🎯</div>
+                <h1 class="overlay-title">Math Genius Quiz</h1>
+                <p class="overlay-sub">Answer unlimited math questions across levels!<br>Each correct answer scores points. Use lifelines wisely. Beat your all-time best score!</p>
+                <div class="prize-preview">
+                    <span>📈 Points per answer: <strong>+100 × Level</strong></span>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="start-btn">🎮 START PLAYING</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="full-screen-overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon" id="go-icon">💔</div>
+                <h1 class="overlay-title" id="go-title">Game Over!</h1>
+                <div class="prize-won" id="prize-won">Score: 0</div>
+                <p class="overlay-sub" id="go-sub">Better luck next time!</p>
+                <div class="final-stats">
+                    <div class="fstat"><div class="fstat-val" id="fstat-qs">0</div><div class="fstat-lbl">Answered</div></div>
+                    <div class="fstat"><div class="fstat-val" id="fstat-acc">0%</div><div class="fstat-lbl">Accuracy</div></div>
+                    <div class="fstat"><div class="fstat-val" id="fstat-best">0</div><div class="fstat-lbl">Best Score</div></div>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="retry-btn">🔄 Play Again</button>
+                <a href="../../index.html" class="pmg-btn pmg-btn-outline" style="margin-top:10px;">🏠 More Games</a>
+            </div>
+        </div>
+
+    </div><!-- end game-wrapper -->
+
+    <!-- Toast -->
+    <div id="toast"></div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('pmg-loader');
+            if (loader) loader.classList.add('hidden');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Math Games Daily Calculator Free Online</h2>
+            <p>Welcome to <strong>Math Games Daily Calculator</strong>! Searching for the best free online DailyMathEquator experience? Look no further. This high-energy <strong>Mental Arithmetic Quiz</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Mental Arithmetic Quiz Mode:</strong> High-speed action featuring Math Equator Blitz variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Math Games Daily Calculator</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on math equator blitz variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Math Games Daily Calculator online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/math-equator-blitz/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Math Games Daily Calculator?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Math Games Daily Calculator features an upgraded <strong>Mental Arithmetic Quiz</strong> format. Highlights include: Math Equator Blitz variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Math Games Daily Calculator unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Math Games Daily Calculator is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Math Games Daily Calculator?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage math equator blitz variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

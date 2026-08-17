@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Play Hangman Online Free - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Play Hangman Online Free free online! Experience the ultimate Classic Word Guessing with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta name="keywords" content="play hangman online, hangman game free, online hangman for kids">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/hangman-multiplier/index.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Play Hangman Online Free - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Play Hangman Online Free free online! Experience the ultimate Classic Word Guessing with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/hangman-multiplier/index.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Portal Styles & Icons -->
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Game Specific Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Play Hangman Online Free",
+      "description": "Play Play Hangman Online Free free online! Experience the ultimate Classic Word Guessing with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+      "url": "https://playmixgames.in/Hangman/index.html",
+      "genre": ["Word", "Puzzle", "Educational"],
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="portal-index">
+    
+    <!-- Main Header -->
+    <header class="top-nav">
+        <a href="../../index.html" class="nav-logo">
+            <span class="logo-emoji">🎮</span>
+            <div class="logo-text">
+                <h1>PlayMix</h1>
+                <span>Games</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <button class="nav-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="nav-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu (Injected by script) -->
+    <div id="sidebar-container"></div>
+
+    <main class="game-container">
+        <!-- Game Header -->
+        <div class="game-header">
+            <div class="game-info">
+                <div class="game-icon-box" style="background: linear-gradient(135deg, #10b981, #f59e0b)">🔤</div>
+                <div class="game-title">
+                    <h2>Play Hangman Online Free</h2>
+                    <span class="game-tag">🚀 Classic Word Guessing</span>
+                </div>
+            </div>
+            <div class="game-actions">
+                <button class="action-btn share-btn" aria-label="Share">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- The Game Viewport -->
+        <div class="game-viewport">
+            <div id="game-ui">
+                <!-- Score HUD -->
+                <div id="hud-top">
+                    <div class="hud-box">
+                        <span class="hud-label">MISTAKES</span>
+                        <span id="mistakes-display" class="highlight-text" style="color: #ef4444 !important; text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);">0 / 6</span>
+                    </div>
+                    <div class="hud-box">
+                        <span class="hud-label">STREAK</span>
+                        <span id="streak-display">0</span>
+                    </div>
+                    <div class="hud-box">
+                        <span class="hud-label">BEST</span>
+                        <span id="best-display" class="highlight-text">0</span>
+                    </div>
+                </div>
+
+                <!-- Canvas Area for drawing the Hangman -->
+                <div id="canvas-container">
+                    <canvas id="hangman-canvas" width="200" height="200"></canvas>
+                </div>
+
+                <!-- Word Reveal Area -->
+                <div id="word-container">
+                    <!-- Letter spans injected via JS -->
+                </div>
+                
+                <!-- Clue Sentence -->
+                <div id="category-display">💡 <em><span id="category-text"></span></em></div>
+
+                <!-- Hidden input to trigger native mobile keyboard -->
+                <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="position:absolute;opacity:0;pointer-events:none;height:0;width:0;top:0;">
+
+                <!-- Tap hint for mobile -->
+                <p id="tap-hint">⌨️ Type a letter — or <span id="tap-to-type" style="color:#3b82f6;cursor:pointer;font-weight:700;">tap here on mobile</span></p>
+
+                <!-- Game Over / Next Word Overlay -->
+                <div id="overlay" class="overlay hidden">
+                    <div class="overlay-content">
+                        <h2 id="overlay-title">You Won!</h2>
+                        <p id="overlay-msg">The word was: <strong id="answer-word" class="highlight-text">APPLE</strong></p>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <div class="stat-num" id="stat-streak">1</div>
+                                <div class="stat-lbl">Streak</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" id="stat-best">5</div>
+                                <div class="stat-lbl">Best</div>
+                            </div>
+                        </div>
+                        <button id="next-btn" class="primary-btn">Next Word</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Article Section -->
+        
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Play Hangman Online Free Free Online</h2>
+            <p>Welcome to <strong>Play Hangman Online Free</strong>! Searching for the best free online Hangman experience? Look no further. This high-energy <strong>Classic Word Guessing</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Classic Word Guessing Mode:</strong> High-speed action featuring Hangman Multiplier variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Play Hangman Online Free</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on hangman multiplier variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Play Hangman Online Free online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/hangman-multiplier/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Play Hangman Online Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Play Hangman Online Free features an upgraded <strong>Classic Word Guessing</strong> format. Highlights include: Hangman Multiplier variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Play Hangman Online Free unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Play Hangman Online Free is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Play Hangman Online Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage hangman multiplier variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+<!-->
+            <h2>How to Play Hangman</h2>
+            <p>Hangman is the classic vocabulary and spelling game where your goal is to figure out the hidden word before running out of guesses.</p>
+            
+            <h3>Game Rules</h3>
+            <ul>
+                <li><strong>Guess a Letter:</strong> Use the on-screen keyboard to guess a letter you think is in the hidden word.</li>
+                <li><strong>Correct Guesses:</strong> The letter will be revealed in its correct position(s) in the blanks.</li>
+                <li><strong>Incorrect Guesses:</strong> A new part of the hangman figure is drawn on the gallows.</li>
+            </ul>
+            <p>You have exactly <strong>6 mistakes</strong> allowed (Head, Body, Left Arm, Right Arm, Left Leg, Right Leg). If the drawing is completed before you reveal the word, it's Game Over! Can you build the ultimate winning streak?</p>
+        </section>
+    </main>
+
+    <!-- Adsterra Ad Unit (Bottom Sticky) -->
+    <div id="pmg-bottom-ad"></div>
+
+    <!-- Scripts -->
+    <script src="../../sidebar.js"></script>
+    <script src="game.js"></script>
+    <script src="../../ads.js"></script>
+    <script src="../../analytics.js"></script>
+    
+    <!-- Delay Ad Initialization to ensure page is fully loaded -->
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof prepSystem === 'function') {
+                prepSystem(); 
+            }
+        });
+    </script>
+</body>
+</html>

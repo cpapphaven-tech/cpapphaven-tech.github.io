@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Word Guess Wordle Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Word Guess Wordle Game free online! Experience the ultimate 5-Letter Word Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta name="keywords" content="wordle game online, word guess game free, daily wordle solver">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/word-guess-sprint/index.html">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Word Guess Wordle Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Word Guess Wordle Game free online! Experience the ultimate 5-Letter Word Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/word-guess-sprint/index.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Portal Styles & Icons -->
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Game Specific Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Word Guess Wordle Game",
+      "description": "Play Word Guess Wordle Game free online! Experience the ultimate 5-Letter Word Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+      "url": "https://playmixgames.in/WordGuess/index.html",
+      "genre": ["Word", "Puzzle"],
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="portal-index">
+    
+    <!-- Main Header -->
+    <header class="top-nav">
+        <a href="../../index.html" class="nav-logo">
+            <span class="logo-emoji">🎮</span>
+            <div class="logo-text">
+                <h1>PlayMix</h1>
+                <span>Games</span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <button class="nav-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="nav-btn" id="menuBtn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu (Injected by script) -->
+    <div id="sidebar-container"></div>
+
+    <main class="game-container">
+        <!-- Game Header -->
+        <div class="game-header">
+            <div class="game-info">
+                <div class="game-icon-box" style="background: linear-gradient(135deg, #10b981, #3b82f6)">🅰️</div>
+                <div class="game-title">
+                    <h2>Word Guess Wordle Game</h2>
+                    <span class="game-tag">🚀 5-Letter Word Puzzle</span>
+                </div>
+            </div>
+            <div class="game-actions">
+                <button class="action-btn share-btn" aria-label="Share">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- The Game Viewport -->
+        <div class="game-viewport">
+            <div id="game-ui">
+                <!-- Score HUD -->
+                <div id="hud-top">
+                    <div class="hud-box">
+                        <span class="hud-label">TRIES</span>
+                        <span id="tries-display" class="highlight-text" style="color: #ef4444 !important; text-shadow: 0 0 10px rgba(239, 68, 68, 0.5);">5</span>
+                    </div>
+                    <div class="hud-box clue-box">
+                        <span class="hud-label" style="color: #3b82f6;">SCRAMBLED CLUE</span>
+                        <span id="clue-display" style="letter-spacing: 4px; font-weight: 800; color: #fff;">-----</span>
+                    </div>
+                    <div class="hud-box">
+                        <span class="hud-label">STREAK</span>
+                        <span id="streak-display">0</span>
+                    </div>
+                </div>
+
+                <!-- Toast Notifications -->
+                <div id="toast-container"></div>
+
+                <!-- 5x6 Grid Area -->
+                <div id="grid-container">
+                    <div id="board">
+                        <!-- Tiles injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Hidden Input to trigger native mobile keyboard -->
+                <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; opacity: 0; pointer-events: none; height: 0; width: 0; top: 0;">
+
+                <!-- Game Over / Next Word Overlay -->
+                <div id="overlay" class="overlay hidden">
+                    <div class="overlay-content">
+                        <h2 id="overlay-title">You Won!</h2>
+                        <p id="overlay-msg">The word was: <strong id="answer-word" class="highlight-text">APPLE</strong></p>
+                        <div class="stats-row">
+                            <div class="stat-box">
+                                <div class="stat-num" id="stat-streak">1</div>
+                                <div class="stat-lbl">Streak</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-num" id="stat-best">5</div>
+                                <div class="stat-lbl">Best</div>
+                            </div>
+                        </div>
+                        <button id="next-btn" class="primary-btn">Next Word</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Article Section -->
+        
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Word Guess Wordle Game Free Online</h2>
+            <p>Welcome to <strong>Word Guess Wordle Game</strong>! Searching for the best free online WordGuess experience? Look no further. This high-energy <strong>5-Letter Word Puzzle</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>5-Letter Word Puzzle Mode:</strong> High-speed action featuring Word Guess Sprint variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Word Guess Wordle Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on word guess sprint variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Word Guess Wordle Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/word-guess-sprint/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Word Guess Wordle Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Word Guess Wordle Game features an upgraded <strong>5-Letter Word Puzzle</strong> format. Highlights include: Word Guess Sprint variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Word Guess Wordle Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Word Guess Wordle Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Word Guess Wordle Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage word guess sprint variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+<!-->
+            <h2>How to Play Word Guess</h2>
+            <p>Word Guess is an addictive unlimited word puzzle game where your goal is to guess the hidden 5-letter word in six attempts or fewer.</p>
+            
+            <h3>Rules & Color Clues</h3>
+            <ul>
+                <li><strong>Green Tile:</strong> The letter is in the word and in the <strong>correct</strong> spot.</li>
+                <li><strong>Yellow Tile:</strong> The letter is in the word but in the <strong>wrong</strong> spot.</li>
+                <li><strong>Gray Tile:</strong> The letter is <strong>not</strong> in the word at all.</li>
+            </ul>
+            <p>Every guess must be a valid 5-letter word. Press ENTER to submit your guess. Unlike daily challenges, this version allows you to play <em>unlimited</em> times in a row. Build your longest win streak and challenge your friends!</p>
+        </section>
+    </main>
+
+    <!-- Adsterra Ad Unit (Bottom Sticky) -->
+    <div id="pmg-bottom-ad"></div>
+
+    <!-- Scripts -->
+    <script src="../../sidebar.js"></script>
+    <script src="game.js"></script>
+    <script src="../../ads.js"></script>
+    <script src="../../analytics.js"></script>
+    
+    <!-- Delay Ad Initialization to ensure page is fully loaded -->
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof prepSystem === 'function') {
+                prepSystem(); 
+            }
+        });
+    </script>
+</body>
+</html>

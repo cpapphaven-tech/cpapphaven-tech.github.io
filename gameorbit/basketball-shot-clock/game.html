@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Basketball 3D Shooting Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Basketball 3D Shooting Game free online! Experience the ultimate Hoops Shot Clock with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Project Scripts -->
+    <script src="../../sidebar.js"></script>
+    <script src="../../ads.js"></script>
+    <script type="module" src="../../analytics.js"></script>
+    <script defer src="game.js"></script>
+
+    <!-- Cookie Consent Script -->
+    <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+                console.log('✅ Cookie consent accepted');
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+                console.log('❌ Cookie consent declined');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script>
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="../../sidebar.js"></script>
+    <meta name="theme-color" content="#e65100">
+    <link rel="apple-touch-icon" href="../../icons/icon-192x192.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                if (window.DEV_MODE) {
+                    return;
+                }
+                loadSocialBarAd();
+            }, 100);
+        });
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:title" content="Basketball 3D Shooting Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Basketball 3D Shooting Game free online! Experience the ultimate Hoops Shot Clock with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/basketball-shot-clock/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Basketball 3D Hoops Swish | Flick Throw Sports Game Online | PlayMixGames">
+    <meta property="twitter:description" content="Swipe to shoot hoops! Compete in a rapid-fire 3D basketball simulation. Score consecutive swishes for massive combo multipliers.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/basketball-shot-clock/index.html">
+    <meta name="keywords" content="play basketball online, basketball 3d free, basketball shooting game">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+
+    <!-- Leaderboards Removed -->
+
+
+
+
+    <div id="party-welcome" class="hidden">
+        <div id="party-text">🎉 Welcome!</div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+
+    <div id="game-wrapper">
+        <canvas id="game-canvas"></canvas>
+        <!-- UI Overlay -->
+        <div id="ui-container">
+            <div id="score-container">
+                <h1 id="score">0</h1>
+            </div>
+
+            <div id="goal-feedback" class="hidden">BASKET!</div>
+
+            <!-- Challenge Message -->
+            <div id="challenge-message" class="hidden">
+                <div class="challenge-emoji">🏀</div>
+                <div class="challenge-text">Can you strike the ball<br>in hoop at least 5 times?</div>
+                <div class="challenge-subtext">Let's shoot! 🎯</div>
+            </div>
+
+            <div id="swipe-guide" class="visible">
+                <div class="swipe-hand">👆</div>
+                <p>SWIPE UP TO SHOOT!</p>
+            </div>
+
+            <div id="main-menu" class="overlay hidden">
+                <h2 id="title">BASKETBALL 3D</h2>
+                <p id="prompt">🏀 Swipe up to shoot for the hoop!</p>
+                <button id="start-btn">PLAY BALL</button>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <h2>GAME OVER!</h2>
+                <p>Points: <span id="final-score">0</span></p>
+                <p>Best: <span id="best-score">0</span></p>
+
+                <div id="gameover-input-area">
+                    <input id="player-name-gameover" placeholder="Enter Name for Leaderboard" maxlength="12">
+                    <button id="submit-score-btn">Submit Score</button>
+                </div>
+
+                <button id="bonus-btn" class="hidden">🎁 Watch Ad & Get +1 Life</button>
+                <button id="restart-btn">Try Again</button>
+
+
+                <!-- Game Scroller Container -->
+                <div id="game-over-scroller"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-icon">🍪</span>
+                <span>We use cookies & tracking for ads. <a href="../../privacy.html" target="_blank"
+                        style="color: #ff9800; text-decoration: underline;">Learn more</a></span>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- SEMANTIC DESCRIPTION FOR SEO -->
+    <section class="game-description" style="margin-top: 300px;">
+        <h2 style="color: #fff; margin-bottom: 20px;">Master the Perfect Shot</h2>
+        <p>Play free online Basketball 3D game. Basketball 3D brings the excitement of the court to your browser. Use your timing and aim to sink as many
+            baskets as you can. As your score increases, the challenge grows with moving targets and increased
+            distances.</p>
+
+        <h3 style="color: #fff; margin: 30px 0 15px;">How to Play</h3>
+        <ul style="list-style-position: inside; margin-bottom: 30px;">
+            <li><strong>Shoot:</strong> Swipe up or click and drag upward to throw the ball.</li>
+            <li><strong>Arc:</strong> The speed and length of your swipe determine the power and arc of your shot.</li>
+            <li><strong>Challenge:</strong> Rack up points and compete on the global leaderboard!</li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="../../index.html" style="color: #ff9800; text-decoration: none; font-weight: bold;">← Back to
+                Portal</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links" style="text-align:center; padding: 40px;">
+            <a href="../../privacy.html" style="color: #666; text-decoration: none; margin: 0 10px;">Privacy</a>
+            <a href="../../terms.html" style="color: #666; text-decoration: none; margin: 0 10px;">Terms</a>
+        </div>
+    </footer>
+
+
+
+    <!-- BOTTOM BANNER AD -->
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Basketball 3D Shooting Game Free Online</h2>
+            <p>Welcome to <strong>Basketball 3D Shooting Game</strong>! Searching for the best free online Basketball3D experience? Look no further. This high-energy <strong>Hoops Shot Clock</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Hoops Shot Clock Mode:</strong> High-speed action featuring Basketball 3D Shot Clock variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Basketball 3D Shooting Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on basketball 3d shot clock variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Basketball 3D Shooting Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/basketball-shot-clock/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Basketball 3D Shooting Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Basketball 3D Shooting Game features an upgraded <strong>Hoops Shot Clock</strong> format. Highlights include: Basketball 3D Shot Clock variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Basketball 3D Shooting Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Basketball 3D Shooting Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Basketball 3D Shooting Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage basketball 3d shot clock variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

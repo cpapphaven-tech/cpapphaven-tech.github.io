@@ -1,6 +1,7 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "GameOrbit (88 Games)", tag: "🚀 New Collection", desc: "Discover 88 all-new game variants with unique rules and fast gameplay!", href: "gameorbit/index.html", gradient: "linear-gradient(135deg,#a855f7,#06b6d4,#1e1b4b)", icon: "🚀", badge: "hot", image: "" },
     { name: "Hangman", tag: "🔥 Viral Hit", desc: "Guess letters to save the stickman! Classic word puzzle.", href: "Hangman/index.html", gradient: "linear-gradient(135deg,#10b981,#f59e0b,#1e1b4b)", icon: "🔤", badge: "hot", image: "" },
     { name: "Word Guess", tag: "🔥 Viral Hit", desc: "Guess the 5-letter hidden word in 6 attempts!", href: "WordGuess/index.html", gradient: "linear-gradient(135deg,#10b981,#3b82f6,#1e1b4b)", icon: "🅰️", badge: "hot", image: "" },
     { name: "Tetris", tag: "🔥 Classic", desc: "Stack falling blocks, clear lines, and score high!", href: "Tetris/index.html", gradient: "linear-gradient(135deg,#0a0a1a,#a855f7,#00FFFF)", icon: "🧩", badge: "hot", image: "" },

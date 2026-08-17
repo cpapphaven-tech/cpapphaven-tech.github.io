@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Brick Breaker Game Online - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Brick Breaker Game Online free online! Experience the ultimate Classic Breakout Arcade with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play brick breaker online, breakout game free, classic brick breaker">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ブロック崩し - クラシック・レトロ・アーケード">
+    <meta name="twitter:description:ja" content="パドルとボールですべてのネオンブロックを打ち砕きましょう！ダウンロード不要、ブラウザで直接プレイ。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Rompe Ladrillos - Arcade retro clásico">
+    <meta name="twitter:description:es" content="¡Rompe todos los ladrillos de neón con tu paleta y pelota! Juega a este clásico juego de arcade retro.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Casse-briques - Arcade rétro classique">
+    <meta name="twitter:description:fr" content="Brisez toutes les briques néon avec votre raquette et votre balle ! Jouez à ce jeu d'arcade rétro classique.">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script defer src="../../sidebar.js"></script>
+
+
+    <!-- Three.js r128 (Global Build — works on file:// protocol) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <!-- Post-Processing Addons (must load after Three.js, in this order) -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <!-- Load Ads -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                if (window.DEV_MODE) return;
+                // loadSocialBarAd();
+            }, 100);
+        });
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Cookie Consent -->
+    <!-- <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() { const s = localStorage.getItem(CONSENT_KEY); return s ? JSON.parse(s) : null; }
+            function showCookieBanner() { if (!getCookieConsent()) document.getElementById('cookie-consent')?.classList.remove('hidden'); }
+            function acceptCookies() { localStorage.setItem(CONSENT_KEY, JSON.stringify({ accepted: true })); document.getElementById('cookie-consent')?.classList.add('hidden'); window.cookieConsent = true; }
+            function declineCookies() { localStorage.setItem(CONSENT_KEY, JSON.stringify({ accepted: false })); document.getElementById('cookie-consent')?.classList.add('hidden'); window.cookieConsent = false; }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 800);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script> -->
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="../../icons/icon-192x192.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+
+
+    <meta property="og:title" content="Brick Breaker Game Online - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Brick Breaker Game Online free online! Experience the ultimate Classic Breakout Arcade with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/brick-breaker-precision/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/brick-breaker-precision/index.html">
+            <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Brick Breaker Game Online",
+  "description": "Play Brick Breaker Game Online free online! Experience the ultimate Classic Breakout Arcade with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/BrickBreaker/game.html",
+  "image": "https://playmixgames.in/assets/brickbreaker200.png",
+  "genre": [
+    "Classic",
+    "Arcade",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "ratingCount": "90",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="twitter:title" content="Classic Brick Breaker Retro | Arkanoid Arcade Game Free | PlayMixGames">
+    <meta property="twitter:description" content="Smash all the neon bricks with your paddle and ball! Play this classic retro breakout arcade game directly in your browser without downloads.">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Brick Breaker 3D...</p>
+    </div>
+    <!-- ========================================= -->
+
+    <main class="game-container">
+        <div id="tap-overlay">
+            TAP TO START
+        </div>
+
+        <h1>Brick Breaker</h1>
+
+        <div id="game-ui">
+            <!-- HUD -->
+            <div id="hud">
+                <div id="lives-display">
+                    <span class="heart" id="h1">♥</span>
+                    <span class="heart" id="h2">♥</span>
+                    <span class="heart" id="h3">♥</span>
+                </div>
+                <div id="level-badge">LVL <span id="level-num">1</span></div>
+                <div id="score-display">0</div>
+            </div>
+
+            <!-- Main Menu Overlay -->
+            <div id="main-menu" class="overlay">
+                <div class="overlay-inner">
+                    <div class="game-logo">🧱</div>
+                    <h2>BRICK BREAKER</h2>
+                    <p class="subtitle">3D Neon Edition</p>
+                    <div id="best-score-display" class="best-score">BEST: 0</div>
+                    <button id="start-btn" class="primary-btn">▶ &nbsp;PLAY NOW</button>
+                    <div class="controls-hint">
+                        <span>🖱 Move mouse / drag finger</span>
+                        <span>👆 Tap to launch ball</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Level Complete Banner -->
+            <div id="level-banner" class="level-banner hidden">
+                <span id="level-banner-text">LEVEL 2</span>
+            </div>
+
+            <!-- Game Over / Win Overlay -->
+            <div id="game-over" class="overlay hidden">
+                <div class="overlay-inner">
+                    <h2 id="result-title">GAME OVER</h2>
+                    <div class="score-block">
+                        <div id="result-score" class="final-score">0</div>
+                        <div id="result-best" class="final-best">BEST: 0</div>
+                    </div>
+                    <button id="restart-btn" class="primary-btn">🔄 Play Again</button>
+                    <button id="bonus-btn" class="bonus-btn">🎁 Watch Ad &amp; +1 Life</button>
+                    <!-- Scroller Removed -->
+
+                </div>
+            </div>
+
+            <!-- Three.js Canvas (rendered behind overlays) -->
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <section class="game-description">
+            <h2>About Brick Breaker 3D</h2>
+            <p>Play free online Brick Breaker game. A blazing modern reinvention of the arcade classic — rendered in real-time 3D with HDR bloom lighting,
+                neon glowing bricks, and dynamic physics. Every hit triggers particle explosions and a dynamic light
+                that tracks the ball across the scene.</p>
+            <p>Unlimited levels! Progress further as bricks get tougher, the grid widens, and the ball gets faster.
+                How high can you score?</p>
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Move Paddle:</strong> Move your mouse or drag on mobile.</li>
+                <li><strong>Launch:</strong> Tap or click to launch the ball.</li>
+                <li><strong>Break Bricks:</strong> Clear all bricks to advance a level.</li>
+                <li><strong>Lives:</strong> You have 3 lives — don't let the ball fall!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+
+
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-icon">🍪</span>
+                <span>We use cookies &amp; tracking for ads. <a href="../../privacy.html" target="_blank"
+                        style="color:#a78bfa;text-decoration:underline;">Learn more</a></span>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game script — regular (non-module) to work with file:// protocol -->
+    <script defer src="game.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 400);
+            }
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Brick Breaker Game Online Free Online</h2>
+            <p>Welcome to <strong>Brick Breaker Game Online</strong>! Searching for the best free online BrickBreaker experience? Look no further. This high-energy <strong>Classic Breakout Arcade</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Classic Breakout Arcade Mode:</strong> High-speed action featuring Brick Breaker Precision variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Brick Breaker Game Online</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on brick breaker precision variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Brick Breaker Game Online online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/brick-breaker-precision/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Brick Breaker Game Online?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Brick Breaker Game Online features an upgraded <strong>Classic Breakout Arcade</strong> format. Highlights include: Brick Breaker Precision variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Brick Breaker Game Online unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Brick Breaker Game Online is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Brick Breaker Game Online?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage brick breaker precision variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

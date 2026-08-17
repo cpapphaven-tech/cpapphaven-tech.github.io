@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ludo King Board Game Free - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Ludo King Board Game Free free online! Experience the ultimate Classic Ludo Dice with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play ludo online, ludo king free game, 4 player ludo online">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ルドマスター - クラシックなダイスボードゲーム">
+    <meta name="twitter:description:ja" content="サイコロを振ってトークンを競わせましょう！有名なクラシック・ルド・ボードゲームをオンラインで無料で。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Maestro del Ludo - Juego de mesa clásico">
+    <meta name="twitter:description:es" content="¡Tira los dados y compite con tus fichas! Juega al famoso juego de mesa clásico Ludo gratis.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Maître du Ludo - Jeu de société classique">
+    <meta name="twitter:description:fr" content="Lancez les dés et faites la course ! Jouez au célèbre jeu de société classique Ludo.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script src="../../sidebar.js"></script>
+
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/ludo600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/ludo600.png">
+    <meta property="og:title" content="Ludo King Board Game Free - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Ludo King Board Game Free free online! Experience the ultimate Classic Ludo Dice with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/ludo-speed-mode/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Ludo Master Classic Board Game | Play Dice Multiplayer | PlayMixGames">
+    <meta property="twitter:description" content="Roll the dice and race your tokens! Play the famous classic Ludo board game online for free. A fun strategy game for friends and family.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/ludo-speed-mode/index.html">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+
+    <!-- Header -->
+    <header>
+        <a href="../../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">LUDO MASTER</h1>
+        <div id="turn-display" style="font-weight: 900; font-size: 0.9rem;">TURN: RED</div>
+    </header>
+
+
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- Game regions populated by JS -->
+        <div id="ludo-board">
+            <!-- Dice -->
+        </div>
+
+        <div id="controls-area">
+            <div id="dice-btn" class="dice-container">🎲</div>
+            <div id="message-area">Roll Dice</div>
+        </div>
+
+        <!-- UI Overlays -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-content">
+                <h1 style="color: #e91e63; font-size: 2.2rem; margin-bottom: 10px;">LUDO MASTER</h1>
+                <p style="color: #ccc; margin-bottom: 25px;">Choose Mode</p>
+
+                <button id="mode-2p" class="game-btn" style="background: var(--ludo-red); color: white;">Play with AI -
+                    2 Players</button>
+                <button id="mode-4p" class="game-btn" style="background: var(--ludo-blue); color: white;">Play with AI -
+                    4
+                    Players</button>
+            </div>
+        </div>
+
+        <!-- Winner Screen -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 id="winner-text" style="color: #ffc107; font-size: 2.5rem; margin-bottom: 10px;">BLUE WINS!</h1>
+                <div style="font-size: 5rem; margin-bottom: 20px;">👑</div>
+                <button id="restart-btn" class="game-btn"
+                    style="background: linear-gradient(135deg, #e91e63, #f06292); color: white;">
+                    New Match
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+    <!-- SEO: About Game & How to Play Section -->
+    
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Ludo King Board Game Free Free Online</h2>
+            <p>Welcome to <strong>Ludo King Board Game Free</strong>! Searching for the best free online Ludo experience? Look no further. This high-energy <strong>Classic Ludo Dice</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Classic Ludo Dice Mode:</strong> High-speed action featuring Ludo Speed Mode variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Ludo King Board Game Free</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on ludo speed mode variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Ludo King Board Game Free online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/ludo-speed-mode/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Ludo King Board Game Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Ludo King Board Game Free features an upgraded <strong>Classic Ludo Dice</strong> format. Highlights include: Ludo Speed Mode variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Ludo King Board Game Free unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Ludo King Board Game Free is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Ludo King Board Game Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage ludo speed mode variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

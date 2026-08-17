@@ -1,0 +1,37 @@
+/* Full Leaderboard Row Styling (More "Card" like) */
+#full-lb-list .lb-row {
+    padding: 15px 20px;
+    /* Taller, more substantial */
+    margin-bottom: 8px;
+    /* More gap */
+    background: rgba(255, 255, 255, 0.05);
+    /* Slightly lighter background */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#full-lb-list .lb-rank {
+    font-size: 1.8rem;
+    /* Bigger rank */
+    min-width: 50px;
+}
+
+#full-lb-list .lb-user {
+    font-size: 1.4rem;
+    /* Bigger Name */
+    max-width: none;
+    /* Let it grow */
+    padding-left: 20px;
+}
+
+#full-lb-list .lb-user small {
+    font-size: 0.85rem;
+    opacity: 0.5;
+    margin-top: 4px;
+    /* More gap between name and country */
+}
+
+#full-lb-list .lb-score {
+    font-size: 1.8rem;
+    /* Bigger score */
+    min-width: 80px;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Hole io Eat Everything Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Hole io Eat Everything Game free online! Experience the ultimate Black Hole Arcade with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+    <script defer src="../../sidebar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // loadSocialBarAd();
+        });
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4a0e78">
+    <link rel="apple-touch-icon" href="../../icons/icon-192x192.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:title" content="Hole io Eat Everything Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Hole io Eat Everything Game free online! Experience the ultimate Black Hole Arcade with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/all-in-hole-havoc/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="All in Hole: Black Hole Games - Satisfying Eat & Grow Puzzle | PlayMixGames">
+    <meta property="twitter:description" content="Slide a tiny hole, devour small objects to grow, and use playful physics to gobble every target treat. A satisfying black-hole puzzle game!">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/all-in-hole-havoc/index.html">
+    <meta name="keywords" content="hole io game online, play hole io free, eat everything hole game">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <span class="header-stat stat-level" id="hdr-level">Lv.1</span>
+        </div>
+        <div class="header-center">
+            <h1 class="game-title">ALL IN HOLE</h1>
+        </div>
+        <div class="header-right">
+            <span class="header-stat stat-target" id="hdr-target">🎯 0/3</span>
+        </div>
+    </header>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <div id="play-area">
+            <canvas id="game-canvas"></canvas>
+            <div id="wrong-flash"></div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-content">
+                <h1>🕳️ ALL IN HOLE</h1>
+                <p class="subtitle">Only eat the glowing targets — avoid everything else!</p>
+                <p style="color: #fbbf24; font-size: 0.85rem; margin-bottom: 16px;" id="best-menu">Best: 0</p>
+                <button id="start-btn" class="game-btn btn-start">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Level Complete Screen -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h2 style="color: #10b981;">🎉 LEVEL CLEAR!</h2>
+                <p>Level <span id="completed-level">1</span> Complete</p>
+                <div class="stars-container">
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                    <span class="star">⭐</span>
+                </div>
+                <p>Score: <span id="level-score">0</span></p>
+                <button id="next-level-btn" class="game-btn btn-next">Next Level ➜</button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h2 id="game-over-title" style="color: #ef4444;">💀 GAME OVER</h2>
+                <div class="final-score-val" id="final-score">0</div>
+                <p class="best-score-val">Best: <span id="best-score">0</span></p>
+                <button id="restart-btn" class="game-btn btn-restart">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+
+    <script defer src="game.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Hole io Eat Everything Game Free Online</h2>
+            <p>Welcome to <strong>Hole io Eat Everything Game</strong>! Searching for the best free online AllInHole experience? Look no further. This high-energy <strong>Black Hole Arcade</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Black Hole Arcade Mode:</strong> High-speed action featuring Hole Havoc variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Hole io Eat Everything Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on hole havoc variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Hole io Eat Everything Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/all-in-hole-havoc/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Hole io Eat Everything Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Hole io Eat Everything Game features an upgraded <strong>Black Hole Arcade</strong> format. Highlights include: Hole Havoc variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Hole io Eat Everything Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Hole io Eat Everything Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Hole io Eat Everything Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage hole havoc variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

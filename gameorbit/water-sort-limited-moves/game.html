@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Water Sort Puzzle Free - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Water Sort Puzzle Free free online! Experience the ultimate Liquid Sorting Game with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="water sort puzzle online, play water sort free, liquid sort color puzzle">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ウォーターソート 3D - 液体を並べ替えるパズル">
+    <meta name="twitter:description:ja" content="正しいチューブに色とりどりの水を注いで完璧に分類しましょう。中毒になるロジックパズル。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Ordenar Agua 3D - Rompecabezas de lógica">
+    <meta name="twitter:description:es" content="¡Vierte agua de colores en los tubos correctos para clasificarlos perfectamente! Un juego de lógica adictivo.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Trier l'Eau 3D - Casse-tête de logique">
+    <meta name="twitter:description:fr" content="Versez l'eau colorée dans les bons tubes pour les trier parfaitement ! Un jeu de logique relaxant.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script src="../../sidebar.js"></script>
+
+
+
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../../analytics.js"></script>
+
+    <!-- Load Ads Script -->
+    <script src="../../ads.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // loadSocialBarAd();
+        });
+    </script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/watersort6002.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/watersort6002.png">
+    <meta property="og:title" content="Water Sort Puzzle Free - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Water Sort Puzzle Free free online! Experience the ultimate Liquid Sorting Game with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/water-sort-limited-moves/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Water Sort Color Puzzle | Relaxing Liquid Glass Brain Game | PlayMixGames">
+    <meta property="twitter:description" content="Pour colored water into the correct tubes to sort them perfectly. An addictive logic and relaxing brain-training sorting puzzle game.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/water-sort-limited-moves/index.html">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <!-- Header -->
+    <header>
+        <a href="../../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">🧪 Water Sort 3D</h1>
+        <div class="level-display">
+            LEVEL <span id="current-level">1</span>
+        </div>
+    </header>
+
+
+
+    <!-- Game Container -->
+    <div id="game-container">
+
+        <!-- Instructions Section Retired -->
+
+
+        <!-- Game Area (Canvas) -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Bottom Controls -->
+        <div id="game-controls">
+            <button id="restart-btn" class="control-btn" title="Restart Level">
+                <span class="icon">🔄</span>
+                <span class="label">Restart</span>
+            </button>
+            <button id="undo-btn" class="control-btn" title="Undo Move">
+                <span class="icon">↩️</span>
+                <span class="label">Undo</span>
+            </button>
+        </div>
+
+        <!-- Undo Confirmation Modal -->
+        <div id="undo-modal" class="overlay-screen hidden" style="z-index: 2000;">
+            <div class="screen-content" style="max-width: 320px;">
+                <h2 class="title-main" style="font-size: 1.8rem;">Undo Move?</h2>
+                <p style="margin-bottom: 20px; color: #ccc;">Watch a short ad to undo your last move.</p>
+                <div class="button-group" style="display: flex; gap: 10px; justify-content: center;">
+                    <button id="cancel-undo-btn" class="game-btn"
+                        style="background: #444; font-size: 0.9rem; padding: 10px 20px;">Cancel</button>
+                    <button id="confirm-undo-btn" class="game-btn primary-btn"
+                        style="font-size: 0.9rem; padding: 10px 20px;">
+                        Watch 📺
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Level Complete Screen -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 class="title-main">Level Complete!</h1>
+                <h2 class="title-sub">Outstanding Sorting! 🧪</h2>
+                <div class="stars-container">
+                    <span>⭐</span><span>⭐</span><span>⭐</span>
+                </div>
+                <button id="next-level-btn" class="game-btn primary-btn">
+                    Next Level
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+    <!-- SEO: About Game & How to Play Section -->
+    
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Water Sort Puzzle Free Free Online</h2>
+            <p>Welcome to <strong>Water Sort Puzzle Free</strong>! Searching for the best free online WaterSort3D experience? Look no further. This high-energy <strong>Liquid Sorting Game</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Liquid Sorting Game Mode:</strong> High-speed action featuring Water Sort Limited Moves variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Water Sort Puzzle Free</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on water sort limited moves variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Water Sort Puzzle Free online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/water-sort-limited-moves/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Water Sort Puzzle Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Water Sort Puzzle Free features an upgraded <strong>Liquid Sorting Game</strong> format. Highlights include: Water Sort Limited Moves variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Water Sort Puzzle Free unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Water Sort Puzzle Free is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Water Sort Puzzle Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage water sort limited moves variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

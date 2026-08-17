@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>3D Bowling Game Free - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play 3D Bowling Game Free free online! Experience the ultimate 10 Pin Bowling Alley with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play 3d bowling online, free bowling game, 10 pin bowling online">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ボウリングマスター 3D - リアルなテンピンゲーム">
+    <meta name="twitter:description:ja" content="ボールをフリックして10本すべてのピンを倒しましょう！オンラインで究極の3Dボウリングシミュレーション。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Maestro del Bowling 3D - Juego de bolos realista">
+    <meta name="twitter:description:es" content="¡Lanza la bola y derriba los 10 pinos! El simulador de bolos 3D definitivo.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Maître du Bowling 3D - Jeu de quilles réaliste">
+    <meta name="twitter:description:fr" content="Lancez la boule et renversez les 10 quilles ! Le simulateur de bowling 3D ultime.">
+    
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+    <script defer src="../../sidebar.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "3D Bowling Game Free",
+  "description": "Play 3D Bowling Game Free free online! Experience the ultimate 10 Pin Bowling Alley with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/Bowling/game.html",
+  "image": "https://playmixgames.in/assets/Bowling200.png",
+  "genre": [
+    "Sports",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "ratingCount": "155",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:title" content="3D Bowling Game Free - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play 3D Bowling Game Free free online! Experience the ultimate 10 Pin Bowling Alley with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/bowling-strike-chain/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Bowling Master Strike 3D | Realistic Ten Pin Game Online | PlayMixGames">
+    <meta property="twitter:description" content="Flick the ball and knock down all 10 pins! The ultimate 3D bowling simulation sports game online. Aim for a perfect strike!">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/bowling-strike-chain/index.html">
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Waxing The Lanes...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <main id="game-wrapper">
+        <!-- Main Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Score HUD -->
+        <div id="ui-overlay">
+            <div class="detailed-scoreboard" id="scoreboard-container">
+                <div class="score-header">
+                    <div class="player-name">Player</div>
+                    <div class="frames-container" id="player-frames">
+                        <!-- JS will inject 10 frames here -->
+                    </div>
+                    <div class="total-score" id="player-total">0</div>
+                </div>
+                <div class="score-header ai">
+                    <div class="player-name">AI</div>
+                    <div class="frames-container" id="ai-frames">
+                        <!-- JS will inject 10 frames here -->
+                    </div>
+                    <div class="total-score" id="ai-total">0</div>
+                </div>
+            </div>
+            
+            <div id="pin-status-display" class="pin-status-wrapper">
+                <div class="pin-triangle" id="pin-triangle">
+                    <!-- JS will inject 10 pin icons here matching physical state -->
+                </div>
+            </div>
+            
+            <div id="turn-indicator" class="turn-indicator hidden">YOUR TURN</div>
+            <div id="status-text" class="status-msg hidden">STRIKE!</div>
+        </div>
+
+        <!-- Start / Game Over Overlay -->
+        <div id="start-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon">🎳</div>
+                <h1 class="overlay-title">3D BOWLING<br>CLASH</h1>
+                <p class="overlay-sub">Bowl 10 Rounds against the AI Opponent!</p>
+                <div class="instructions">
+                    <p>👆 <strong>Drag horizontally</strong> to position your ball.</p>
+                    <p>⬆️ <strong>Swipe UP fast</strong> to bowl!</p>
+                    <p>🎳 Highest score after 10 rounds wins.</p>
+                </div>
+                <button id="start-btn" class="pmg-btn">▶ BOWL NOW</button>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon" id="result-icon">🏆</div>
+                <h1 class="overlay-title" id="result-title">VICTORY!</h1>
+                <p class="overlay-sub" id="result-sub">You won the match!</p>
+                <div id="final-score-display" style="font-size: 1.5rem; color: #ffdf00; margin-bottom: 20px; font-weight: bold;"></div>
+                <button id="restart-btn" class="pmg-btn" style="margin-top:15px;">🔄 PLAY AGAIN</button>
+                <a href="../../index.html" class="pmg-btn-outline"
+                    style="margin-top:10px;display:block;text-align:center;text-decoration:none;">🏠 More Games</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- SEO Section -->
+    <section class="game-description" style="background:#111; padding:40px 20px; color:#999; text-align:center;">
+        <div style="max-width:800px; margin: 0 auto;">
+            <h2 style="color:#fff;">Master Your Throw</h2>
+            <p>Play free online 3D Bowling Clash game. 3D Bowling Clash is an immersive 3D bowling game where you can master the perfect curve ball. Experience
+                realistic physics, vibrant 3D graphics, and intuitive swipe controls to beat the AI in a complete 10-frame game.</p>
+            <h3 style="color:#fff; margin-top:20px;">How to Play</h3>
+            <p>Drag left or right before swiping up to position your ball. Then, swipe UP fast to throw it down the lane! The height of your swipe controls your power, and the left/right angle of your swipe curves the ball!</p>
+            <h3 style="color:#fff; margin-top:20px;">FAQ</h3>
+            <p><strong>Is this game completely free?</strong> Yes! You can play all 10 frames against the AI immediately directly in your browser.</p>
+        </div>
+    </section>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play 3D Bowling Game Free Free Online</h2>
+            <p>Welcome to <strong>3D Bowling Game Free</strong>! Searching for the best free online Bowling experience? Look no further. This high-energy <strong>10 Pin Bowling Alley</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>10 Pin Bowling Alley Mode:</strong> High-speed action featuring Bowling Strike Chain variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>3D Bowling Game Free</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on bowling strike chain variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play 3D Bowling Game Free online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/bowling-strike-chain/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of 3D Bowling Game Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: 3D Bowling Game Free features an upgraded <strong>10 Pin Bowling Alley</strong> format. Highlights include: Bowling Strike Chain variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is 3D Bowling Game Free unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! 3D Bowling Game Free is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in 3D Bowling Game Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage bowling strike chain variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

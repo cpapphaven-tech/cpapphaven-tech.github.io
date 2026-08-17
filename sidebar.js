@@ -4,8 +4,12 @@
     let prefix = '';
     for (let i = 0; i < scripts.length; i++) {
         const src = scripts[i].getAttribute('src');
-        if (src && src.includes('sidebar.js') && src.startsWith('..')) {
-            prefix = '../';
+        if (src && src.includes('sidebar.js')) {
+            if (src.startsWith('../../')) {
+                prefix = '../../';
+            } else if (src.startsWith('../')) {
+                prefix = '../';
+            }
             break;
         }
     }
@@ -114,6 +118,7 @@
         navDiv.className = 'sidebar-nav';
         navDiv.innerHTML = `
             <a href="${prefix}index.html">Home</a>
+            <a href="${prefix}gameorbit/index.html" style="color: #a855f7; font-weight: bold;">🚀 GameOrbit</a>
             <a href="${prefix}privacy.html">Privacy</a>
             <a href="${prefix}contact.html">Support</a>
         `;

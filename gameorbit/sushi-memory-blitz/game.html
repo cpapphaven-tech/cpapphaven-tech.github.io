@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Match Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Memory Card Match Game free online! Experience the ultimate Flip & Match Memory with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script src="../../sidebar.js"></script>
+
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <!-- Firebase Analytics -->
+    <script type="module" src="../../analytics.js"></script>
+
+    <!-- Load Ads Script -->
+    <script src="../../ads.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+        });
+    </script>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:title" content="Memory Card Match Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Memory Card Match Game free online! Experience the ultimate Flip & Match Memory with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/sushi-memory-blitz/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Sushi Match 3D Pair Connect | Memory Mahjong Puzzle | PlayMixGames">
+    <meta property="twitter:description" content="Find and pair the matching 3D sushi tiles! An addictive and relaxing mahjong-style memory connection game perfectly suited for puzzle logic fans.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/sushi-memory-blitz/index.html">
+    <meta name="keywords" content="memory card game online, sushi match free, brain memory trainer">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <!-- Header -->
+    <header>
+        <a href="../../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">寿司マッチ3D</h1>
+        <div class="score-display">
+            <span id="score">0</span>
+        </div>
+    </header>
+
+    <!-- Game Container -->
+    <div id="game-container">
+        <!-- Instructions Retired -->
+
+
+        <!-- Game Over Screen -->
+        <div id="gameover-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 class="title-japanese">ゲームオーバー</h1>
+                <h2 class="title-english">Game Over</h2>
+                <div class="final-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">レベル (Level)</span>
+                        <span class="stat-value" id="final-level">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">スコア (Score)</span>
+                        <span class="stat-value" id="final-score">0</span>
+                    </div>
+                </div>
+                <button id="restart-btn" class="game-btn primary-btn">
+                    もう一度 (Play Again)
+                </button>
+                <button id="home-btn" class="game-btn secondary-btn">
+                    ホーム (Home)
+                </button>
+            </div>
+        </div>
+
+        <!-- Level Complete Screen -->
+        <div id="levelcomplete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 class="title-japanese">素晴らしい！</h1>
+                <h2 class="title-english">Level Complete!</h2>
+                <div class="level-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">ボーナス (Bonus)</span>
+                        <span class="stat-value" id="time-bonus">+0</span>
+                    </div>
+                </div>
+                <button id="next-level-btn" class="game-btn primary-btn">
+                    次のレベル (Next Level)
+                </button>
+            </div>
+        </div>
+
+        <!-- Game HUD -->
+        <div id="game-hud" class="hidden">
+            <div class="hud-top">
+                <div class="hud-item">
+                    <span class="hud-label">レベル</span>
+                    <span class="hud-value" id="level">1</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">時間</span>
+                    <span class="hud-value" id="timer">60</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">残り</span>
+                    <span class="hud-value" id="remaining">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Cherry Blossom Particles -->
+        <div id="sakura-container"></div>
+    </div>
+
+    <!-- Banner Ad Container -->
+    <div id="banner-ad-container" style="text-align: center; margin: 20px auto; max-width: 728px;">
+        <!-- Adsterra Banner Ad -->
+        <div id="banner-ad"></div>
+    </div>
+
+    <!-- Game Script -->
+    <script src="game.js"></script>
+
+    <!-- BOTTOM BANNER AD -->
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+    <!-- SEO: About Game & How to Play Section -->
+    
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Memory Card Match Game Free Online</h2>
+            <p>Welcome to <strong>Memory Card Match Game</strong>! Searching for the best free online SushiMatch experience? Look no further. This high-energy <strong>Flip & Match Memory</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Flip & Match Memory Mode:</strong> High-speed action featuring Sushi Memory Blitz variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Memory Card Match Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on sushi memory blitz variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Memory Card Match Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/sushi-memory-blitz/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Memory Card Match Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Memory Card Match Game features an upgraded <strong>Flip & Match Memory</strong> format. Highlights include: Sushi Memory Blitz variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Memory Card Match Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Memory Card Match Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Memory Card Match Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage sushi memory blitz variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Solitaire Card Game Free - Play Free Online Game | GameOrbit</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../../ads.js"></script>
+    <script type="module" src="../../analytics.js"></script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:title" content="Solitaire Card Game Free - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Solitaire Card Game Free free online! Experience the ultimate Classic Klondike Solitaire with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/solitaire-challenge/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Klondike Solitaire">
+    <meta property="twitter:description" content="Play Solitaire for free online at PlayMixGames. No download required!">
+    <meta name="description" content="Play Solitaire Card Game Free free online! Experience the ultimate Classic Klondike Solitaire with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/solitaire-challenge/index.html">
+    <meta name="keywords" content="play solitaire online, free solitaire card game, klondike solitaire free">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <a href="../../index.html" class="back-btn">← Back</a>
+            <h1>♠ Klondike Solitaire ♥</h1>
+            <div class="stats">
+                <div class="stat-box">Score: <span id="score">0</span></div>
+                <div class="stat-box">Moves: <span id="moves">0</span></div>
+                <div class="stat-box">Time: <span id="time">0:00</span></div>
+            </div>
+            <div class="controls">
+                <button onclick="game.newGame()">New Game</button>
+                <button onclick="game.autoMove()">Auto Move</button>
+                <button onclick="game.undo()">Undo</button>
+            </div>
+        </div>
+
+        <div class="top-row">
+            <div class="stock-pile" id="stock" onclick="game.drawFromStock()">
+                <span>🔄</span>
+            </div>
+            <div class="waste-pile" id="waste"></div>
+            <div style="grid-column: span 1;"></div>
+            <div class="foundation" id="foundation-0" data-suit="hearts">
+                <span class="foundation-label">♥</span>
+            </div>
+            <div class="foundation" id="foundation-1" data-suit="diamonds">
+                <span class="foundation-label">♦</span>
+            </div>
+            <div class="foundation" id="foundation-2" data-suit="clubs">
+                <span class="foundation-label">♣</span>
+            </div>
+            <div class="foundation" id="foundation-3" data-suit="spades">
+                <span class="foundation-label">♠</span>
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="tableau" id="tableau-0"></div>
+            <div class="tableau" id="tableau-1"></div>
+            <div class="tableau" id="tableau-2"></div>
+            <div class="tableau" id="tableau-3"></div>
+            <div class="tableau" id="tableau-4"></div>
+            <div class="tableau" id="tableau-5"></div>
+            <div class="tableau" id="tableau-6"></div>
+        </div>
+    </div>
+
+    <div class="win-overlay" id="winOverlay">
+        <div class="win-text">🎉 You Win! 🎉</div>
+        <div class="win-stats">
+            Score: <span id="winScore">0</span> | Moves: <span id="winMoves">0</span> | Time: <span id="winTime">0:00</span>
+        </div>
+        <button onclick="game.newGame(); document.getElementById('winOverlay').classList.remove('show');">Play Again</button>
+    </div>
+
+    <div class="hint" id="hint"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+    <script src="game.js"></script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Solitaire Card Game Free Free Online</h2>
+            <p>Welcome to <strong>Solitaire Card Game Free</strong>! Searching for the best free online Solitaire experience? Look no further. This high-energy <strong>Classic Klondike Solitaire</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Classic Klondike Solitaire Mode:</strong> High-speed action featuring Solitaire Challenge variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Solitaire Card Game Free</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on solitaire challenge variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Solitaire Card Game Free online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/solitaire-challenge/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Solitaire Card Game Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Solitaire Card Game Free features an upgraded <strong>Classic Klondike Solitaire</strong> format. Highlights include: Solitaire Challenge variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Solitaire Card Game Free unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Solitaire Card Game Free is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Solitaire Card Game Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage solitaire challenge variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

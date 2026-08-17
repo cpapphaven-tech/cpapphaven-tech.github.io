@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Sudoku Daily Puzzle Free - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Sudoku Daily Puzzle Free free online! Experience the ultimate Number Logic Game with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play sudoku online, free daily sudoku, sudoku solver puzzle">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ナンプレ (数独) - 無料クラシック・ナンバーパズル">
+    <meta name="twitter:description:ja" content="毎日のクラシックな数独で頭脳を刺激しましょう！複数の難易度レベルを備えた無料の9x9グリッド数学ロジックパズル。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Sudoku Clásico - Rompecabezas de lógica gratuito">
+    <meta name="twitter:description:es" content="¡Desafía tu mente con el Sudoku clásico diario! Rompecabezas de lógica de números en cuadrícula de 9x9 gratis.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Sudoku Classique - Puzzle de logique gratuit">
+    <meta name="twitter:description:fr" content="Défiez votre esprit avec le Sudoku classique quotidien ! Des puzzles de logique gratuits en grille 9x9.">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/Sudoku/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/Sudoku/index.html" />
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #4facfe;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(79, 172, 254, 0.1);
+            border-top-color: #4facfe;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4facfe, #00f2fe);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pmgPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes pmgFill {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 95%;
+            }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+    </style>
+
+    <meta property="og:title" content="Sudoku Daily Puzzle Free - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Sudoku Daily Puzzle Free free online! Experience the ultimate Number Logic Game with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/sudoku-sprint/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/sudoku-sprint/index.html">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <script defer src="../../sidebar.js"></script>
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Sudoku Daily Puzzle Free",
+  "description": "Play Sudoku Daily Puzzle Free free online! Experience the ultimate Number Logic Game with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/Sudoku/index.html",
+  "image": "https://playmixgames.in/assets/sudoku200.png",
+  "genre": [
+    "Logic",
+    "Puzzle",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "ratingCount": "162",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/sudoku600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/sudoku600.png">
+    <meta property="twitter:title" content="Play Sudoku Classic Free Online | Daily Number Logic Puzzle | PlayMixGames">
+    <meta property="twitter:description" content="Challenge your mind with daily classic Sudoku! Free 9x9 grid number logic puzzles with multiple difficulty levels to train your brain.">
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <main>
+        <iframe id="game-frame" title="Sudoku Game" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <section class="seo-content"
+        style="max-width: 800px; margin: 40px auto; padding: 20px; color: #ccc; line-height: 1.6;">
+        <h2 style="color: #4facfe;">Tips for Beginners</h2>
+        <ul style="padding-left: 20px;">
+            <li>Start with rows/columns that already have the most numbers filled in</li>
+            <li>Use pencil marks to track possible numbers per cell</li>
+            <li>Look for "naked singles" — cells where only one number fits</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Why Play Sudoku on PlayMix Games?</h2>
+        <ul style="padding-left: 20px;">
+            <li>Completely free, no account needed</li>
+            <li>Works on mobile, tablet, and desktop</li>
+            <li>Unlimited puzzles — never the same game twice</li>
+            <li>Fast loading with no downloads or installs</li>
+        </ul>
+
+        <h2 style="color: #4facfe;">Frequently Asked Questions</h2>
+        <p><strong>Is this Sudoku free?</strong> Yes, 100% free, forever.</p>
+        <p><strong>Does it work on mobile?</strong> Yes, fully touch-optimized.</p>
+        <p><strong>Do I need to create an account?</strong> No account needed.</p>
+    </section>
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Sudoku Daily Puzzle Free Free Online</h2>
+            <p>Welcome to <strong>Sudoku Daily Puzzle Free</strong>! Searching for the best free online Sudoku experience? Look no further. This high-energy <strong>Number Logic Game</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Number Logic Game Mode:</strong> High-speed action featuring Sudoku Sprint variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Sudoku Daily Puzzle Free</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on sudoku sprint variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Sudoku Daily Puzzle Free online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/sudoku-sprint/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Sudoku Daily Puzzle Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Sudoku Daily Puzzle Free features an upgraded <strong>Number Logic Game</strong> format. Highlights include: Sudoku Sprint variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Sudoku Daily Puzzle Free unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Sudoku Daily Puzzle Free is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Sudoku Daily Puzzle Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage sudoku sprint variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

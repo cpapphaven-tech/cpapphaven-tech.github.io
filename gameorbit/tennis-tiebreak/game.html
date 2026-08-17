@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>3D Tennis Game Online - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play 3D Tennis Game Online free online! Experience the ultimate Grand Slam Court with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play tennis online free, 3d tennis game browser, tennis tiebreak match">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="アーケードテニス - 3Dスポーツグランドスラム">
+    <meta name="twitter:description:ja" content="リアルな3Dテニスの物理を体験！サーブ、トップスピン、スマッシュで究極のグランドスラム・チャンピオンシップを勝ち取りましょう。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Tenis Arcade - Campeonato 3D">
+    <meta name="twitter:description:es" content="¡Experimenta la física realista del tenis en 3D! Sirve, golpea y aplasta la pelota para ganar el campeonato.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Tennis Arcade - Championnat 3D">
+    <meta name="twitter:description:fr" content="Découvrez la physique réaliste du tennis en 3D ! Servez et smatchez pour gagner le championnat ultime.">
+    
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+    <script defer src="../../sidebar.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/RGBELoader.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "3D Tennis Game Online",
+  "description": "Play 3D Tennis Game Online free online! Experience the ultimate Grand Slam Court with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/Tennis/game.html",
+  "image": "https://playmixgames.in/assets/Tennis200.png",
+  "genre": [
+    "Sports",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "ratingCount": "210",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/tennis600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/tennis600.png">
+    <meta property="og:title" content="3D Tennis Game Online - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play 3D Tennis Game Online free online! Experience the ultimate Grand Slam Court with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/tennis-tiebreak/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Tennis Master 3D Sport | Play Open Tournament Online | PlayMixGames">
+    <meta property="twitter:description" content="Experience realistic 3D tennis physics! Swipe to serve, hit top-spins, and smash the ball to win the ultimate grand slam championship.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/tennis-tiebreak/index.html">
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Preparing the Court...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <main id="game-wrapper">
+        <canvas id="game-canvas"></canvas>
+
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div class="scoreboard-compact">
+                <div class="team player">
+                    <div class="team-label">YOU</div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="label">SETS</span>
+                            <div class="set-progress"><span id="player-sets-val" class="val">0</span><span class="total">/3</span></div>
+                        </div>
+                        <div id="player-score" class="score-val">0</div>
+                    </div>
+                </div>
+                
+                <div class="match-format">
+                    <div class="vs">VS</div>
+                    <div class="format-tag">5 SET</div>
+                </div>
+
+                <div class="team ai">
+                    <div class="stats">
+                        <div id="ai-score" class="score-val">0</div>
+                        <div class="stat-item">
+                            <span class="label">SETS</span>
+                            <div class="set-progress"><span id="ai-sets-val" class="val">0</span><span class="total">/3</span></div>
+                        </div>
+                    </div>
+                    <div class="team-label">AI</div>
+                </div>
+            </div>
+
+            <div id="turn-indicator" class="turn-indicator hidden">YOUR SERVE</div>
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="overlay hidden">
+                <div class="overlay-box">
+                    <div style="font-size: 5rem; margin-bottom: 10px;">🎾</div>
+                    <h1 style="font-size: 2.5rem; margin: 0; color: #fff;">ARCADE TENNIS</h1>
+                    <p style="color: #ccc; margin-bottom: 20px;">Match Format: <strong>Best of 5 Sets</strong> (15 pts each)</p>
+                    <button id="start-btn" class="pmg-btn">START MATCH</button>
+                    <div class="instructions-box">
+                        <p>🖱️ <strong>Drag</strong> your racket anywhere in your half.</p>
+                        <p>🎾 Ball <strong>bounces</strong> off your racket automatically.</p>
+                        <p>⚡ The faster you move, the <strong>harder</strong> you hit!</p>
+                        <p>🏆 First to <strong>15 points</strong> is the champion.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="game-over-screen" class="overlay hidden">
+                <div class="overlay-box">
+                    <div id="result-emoji" style="font-size: 5rem;">🏆</div>
+                    <h1 id="result-title" style="font-size: 2.5rem; margin: 0; color: #fff;">VICTORY!</h1>
+                    <p id="result-desc" style="color: #ccc; margin-bottom: 30px;">You beat the AI champion.</p>
+                    <button id="restart-btn" class="pmg-btn">PLAY AGAIN</button>
+                    <a href="../../index.html" style="display: block; margin-top: 15px; color: #aaa; text-decoration: none; font-weight: bold;">← Back to Menu</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <a href="../../index.html" class="back-btn"
+        style="position: absolute; top: 15px; left: 15px; z-index: 10000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">← Back</a>
+
+    <!-- Information Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Master the court with these simple steps:</p>
+                    <ul>
+                        <li><strong>Movement:</strong> Drag your racket (mouse/touch) anywhere in the lower half of the court.</li>
+                        <li><strong>Positioning:</strong> Move forward toward the net to cut off angles, or stay back to defend powerful shots.</li>
+                        <li><strong>Hitting:</strong> The ball will automatically bounce off your racket. Your position and speed determine the trajectory.</li>
+                        <li><strong>Winning:</strong> Outsmart the AI by hitting the ball where it can't reach. First to 15 points wins!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>About Arcade Tennis</h2>
+                <div class="info-content">
+                    <p>Play free online Arcade Tennis. Experience the thrill of classic arcade-style tennis with modern physics and smooth 2D graphics. This game brings the classic "Pong" mechanic to the next level with character positioning, depth strategy, and a dynamically scaling AI opponent.</p>
+                    <p>Play free online Arcade Tennis game. Arcade Tennis is a fast-paced reaction-based sports duel designed to test your reflexes and strategy. Face off against a smart AI opponent in this beautiful arcade environment.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>Frequently Asked Questions</h2>
+                <div class="info-content">
+                    <div class="faq-item">
+                        <h4>Is the game free to play?</h4>
+                        <p>Yes, Arcade Tennis Champion is 100% free and playable directly in your web browser.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How do I increase my score?</h4>
+                        <p>You score a point whenever the ball passes the AI's baseline. Try hitting the ball at sharp angles to make it harder for the AI to return.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I play on my phone?</h4>
+                        <p>Absolutely! The game is optimized for touch controls and works seamlessly on all modern smartphones and tablets.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is there a 2-player mode?</h4>
+                        <p>Currently, the game features a single-player mode against an AI opponent. We are constantly improving our games based on user feedback!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play 3D Tennis Game Online Free Online</h2>
+            <p>Welcome to <strong>3D Tennis Game Online</strong>! Searching for the best free online Tennis experience? Look no further. This high-energy <strong>Grand Slam Court</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Grand Slam Court Mode:</strong> High-speed action featuring Tennis Tiebreak Blitz variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>3D Tennis Game Online</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on tennis tiebreak blitz variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play 3D Tennis Game Online online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/tennis-tiebreak/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of 3D Tennis Game Online?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: 3D Tennis Game Online features an upgraded <strong>Grand Slam Court</strong> format. Highlights include: Tennis Tiebreak Blitz variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is 3D Tennis Game Online unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! 3D Tennis Game Online is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in 3D Tennis Game Online?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage tennis tiebreak blitz variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

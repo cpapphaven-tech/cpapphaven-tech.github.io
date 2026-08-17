@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Ping Pong Table Tennis 3D - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Ping Pong Table Tennis 3D free online! Experience the ultimate Table Tennis Racket with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+    <script src="../../sidebar.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:title" content="Ping Pong Table Tennis 3D - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Ping Pong Table Tennis 3D free online! Experience the ultimate Table Tennis Racket with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/table-tennis-smash/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Ping Pong Table Tennis 3D | Fast Ping Pong Sports Game | PlayMixGames">
+    <meta property="twitter:description" content="Return the serve and smash the ball in Table Tennis 3D! Master topspin and backspin in this hyper-realistic ping pong sports simulator.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/table-tennis-smash/index.html">
+    <meta name="keywords" content="play ping pong online, table tennis 3d free, ping pong browser game">
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Setting Up The Table...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <div id="game-wrapper">
+        <!-- HUD -->
+        <div id="game-hud">
+            <div id="hud-left">
+                <div class="player-label">🙋 YOU</div>
+                <div id="score-player" class="score-display">0</div>
+                <div id="set-player" class="set-display">Sets: 0</div>
+            </div>
+            <div id="hud-center">
+                <div id="set-label">SET 1</div>
+                <div id="match-status">SERVE TO START</div>
+            </div>
+            <div id="hud-right">
+                <div class="player-label">🤖 AI</div>
+                <div id="score-ai" class="score-display">0</div>
+                <div id="set-ai" class="set-display">Sets: 0</div>
+            </div>
+        </div>
+
+        <!-- Main Canvas -->
+        <canvas id="game-canvas"></canvas>
+        <!-- HDR Layer Canvas -->
+        <canvas id="hdr-canvas" style="position:absolute;inset:0;pointer-events:none;z-index:5;"></canvas>
+
+        <!-- Control Buttons (Mobile) -->
+        <div id="mobile-controls">
+            <div id="ctrl-area">Drag paddle here</div>
+        </div>
+
+        <!-- Match Message Overlay -->
+        <div id="match-msg" class="hidden"></div>
+
+        <!-- Start / Game Over Overlay -->
+        <div id="start-screen" class="overlay">
+            <div class="overlay-box">
+                <div class="overlay-icon">🏓</div>
+                <h1 class="overlay-title">TABLE TENNIS<br>WORLD TOUR</h1>
+                <p class="overlay-sub">Challenge the AI to a best-of-5 sets match!</p>
+                <div class="instructions">
+                    <p>🖱️ <strong>Desktop:</strong> Move mouse to control paddle</p>
+                    <p>👆 <strong>Mobile:</strong> Drag finger on lower half of screen</p>
+                    <p>🏓 First to 11 pts wins a set. Win 3 sets to win!</p>
+                </div>
+                <button id="start-btn" class="pmg-btn">▶ SERVE &amp; PLAY</button>
+            </div>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon" id="result-icon">🏆</div>
+                <h1 class="overlay-title" id="result-title">VICTORY!</h1>
+                <p class="overlay-sub" id="result-sub">You won the match!</p>
+                <div id="final-score-display"></div>
+                <button id="restart-btn" class="pmg-btn" style="margin-top:15px;">🔄 PLAY AGAIN</button>
+                <a href="../../index.html" class="pmg-btn-outline"
+                    style="margin-top:10px;display:block;text-align:center;text-decoration:none;">🏠 More Games</a>
+            </div>
+        </div>
+
+        <a href="../../index.html" class="back-btn">← Back</a>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Ping Pong Table Tennis 3D Free Online</h2>
+            <p>Welcome to <strong>Ping Pong Table Tennis 3D</strong>! Searching for the best free online TableTennis experience? Look no further. This high-energy <strong>Table Tennis Racket</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Table Tennis Racket Mode:</strong> High-speed action featuring Table Tennis Smash Cup variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Ping Pong Table Tennis 3D</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on table tennis smash cup variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Ping Pong Table Tennis 3D online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/table-tennis-smash/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Ping Pong Table Tennis 3D?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Ping Pong Table Tennis 3D features an upgraded <strong>Table Tennis Racket</strong> format. Highlights include: Table Tennis Smash Cup variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Ping Pong Table Tennis 3D unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Ping Pong Table Tennis 3D is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Ping Pong Table Tennis 3D?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage table tennis smash cup variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

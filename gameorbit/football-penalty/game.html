@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Penalty Shootout Football Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Penalty Shootout Football Game free online! Experience the ultimate 3D Soccer Penalty with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script src="../../sidebar.js"></script>
+
+    <!-- Three.js + Cannon.js for physics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+    <!-- Supabase SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+        });
+    </script> -->
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/football600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/football600.png">
+    <meta property="og:title" content="Penalty Shootout Football Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Penalty Shootout Football Game free online! Experience the ultimate 3D Soccer Penalty with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/football-penalty/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Football 3D Penalty Kick | Play Soccer Free Online | PlayMixGames">
+    <meta property="twitter:description" content="Flick to shoot and score incredible goals! Experience realistic 3D soccer physics and penalty kicks in this free online football sports game.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/football-penalty/index.html">
+    <meta name="keywords" content="penalty shootout game online, football penalty kick free, soccer shootout">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <!-- Leaderboard Removed -->
+
+    <a href="../../index.html" class="back-btn"
+        style="position: absolute; top: 15px; left: 15px; z-index: 10000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">←
+        Back</a>
+
+
+    <div id="party-welcome" class="hidden">
+        <div id="party-text">🎉 Welcome!</div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+    <div id="game-wrapper">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-container">
+            <div id="score-container">
+                <h1 id="score">0</h1>
+            </div>
+            <div id="sound-toggle">🔊</div>
+
+            <div id="goal-feedback" class="hidden">GOAL!</div>
+
+            <!-- Challenge Message -->
+            <div id="challenge-message" class="hidden">
+                <div class="challenge-emoji">⚽</div>
+                <div class="challenge-text">Can you score<br>at least 5 goals?</div>
+                <div class="challenge-subtext">Tap to start! 🎯</div>
+            </div>
+
+            <div id="swipe-guide" class="visible">
+                <div class="swipe-hand">👆</div>
+                <p>SWIPE TO KICK!</p>
+            </div>
+
+            <div id="main-menu" class="overlay hidden">
+                <h2 id="title">FOOTBALL 3D</h2>
+                <p id="prompt">⚽ Swipe to score a Goal!</p>
+                <button id="start-btn">KICK OFF</button>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <h2>GAME OVER!</h2>
+                <p>Score: <span id="final-score">0</span></p>
+                <p>Best: <span id="best-score">0</span></p>
+
+                <div id="gameover-input-area">
+                    <input id="player-name-gameover" placeholder="Enter Name for Leaderboard" maxlength="12">
+                    <button id="submit-score-btn">Submit Score</button>
+                </div>
+
+                <div class="gameover-btns">
+                    <button id="restart-btn" class="primary-gv-btn">Try Again</button>
+                    <button id="bonus-btn" class="bonus-btn hidden">🎁 Watch Ad & Get +1 Life</button>
+                </div>
+
+                <!-- Game Scroller Container -->
+                <div id="game-over-scroller"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+    <!-- SEO Section -->
+    <section class="game-description" style="background:#111; padding:40px 20px; color:#999; text-align:center;">
+        <div style="max-width:800px; margin: 0 auto;">
+            <h2 style="color:#fff;">Master Your Kick</h2>
+            <p>Play free online Football 3D game. Football 3D is an immersive sports game where you can master the art of the perfect free kick. Experience
+                realistic physics, vibrant 3D graphics, and intuitive controls.</p>
+            <h3 style="color:#fff; margin-top:20px;">How to Play</h3>
+            <p>Swipe the screen to kick the ball. The speed and direction of your swipe control the kick. Aim for the
+                corners to beat the keeper!</p>
+        </div>
+    </section>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Penalty Shootout Football Game Free Online</h2>
+            <p>Welcome to <strong>Penalty Shootout Football Game</strong>! Searching for the best free online Football3D experience? Look no further. This high-energy <strong>3D Soccer Penalty</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>3D Soccer Penalty Mode:</strong> High-speed action featuring Football 3D Penalty Shootout variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Penalty Shootout Football Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on football 3d penalty shootout variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Penalty Shootout Football Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/football-penalty/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Penalty Shootout Football Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Penalty Shootout Football Game features an upgraded <strong>3D Soccer Penalty</strong> format. Highlights include: Football 3D Penalty Shootout variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Penalty Shootout Football Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Penalty Shootout Football Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Penalty Shootout Football Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage football 3d penalty shootout variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

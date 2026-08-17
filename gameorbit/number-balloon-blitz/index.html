@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Number Balloon Blitz | GameOrbit – PlayMix Games</title>
+  <meta name="description" content="Shoot balloons in numerical order.">
+  <link rel="canonical" href="https://playmixgames.in/gameorbit/number-balloon-blitz/">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="stylesheet" href="../../gameorbit/gameorbit.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Number Balloon Blitz","description":"Shoot balloons in numerical order.","url":"https://playmixgames.in/gameorbit/number-balloon-blitz/","genre":["Arcade"],"playMode":"SinglePlayer","applicationCategory":"Game","operatingSystem":"Web Browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <style>
+    #game-container { width: 100%; height: 100%; position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #000; color: #fff; }
+    canvas { max-width: 100%; max-height: 100%; object-fit: contain; }
+    .go-btn { padding: 10px 20px; background: #3b82f6; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin: 5px; }
+    .go-grid { display: grid; gap: 2px; background: #333; padding: 2px; }
+    .go-cell { background: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #000; cursor: pointer; user-select: none; }
+  </style>
+</head>
+<body>
+  <nav class="go-nav">
+    <a href="../../index.html" class="go-nav-logo">
+      <span class="logo-emoji">🎮</span>
+      <div class="logo-text"><h1>PlayMix</h1><span>GameOrbit</span></div>
+    </a>
+    <span class="go-nav-badge">GameOrbit</span>
+    <div class="go-nav-actions">
+      <button class="go-nav-btn" id="go-menu-btn" aria-label="Home"><i class="fa-solid fa-house"></i></button>
+    </div>
+  </nav>
+
+  <main class="go-main">
+    <a href="../../gameorbit/" class="go-back-link"><i class="fa-solid fa-arrow-left"></i> GameOrbit</a>
+
+    <div class="go-game-header">
+      <div class="go-game-icon" style="background:linear-gradient(135deg,#1e40af,#f97316)">🎈</div>
+      <div class="go-game-title">
+        <h2>Number Balloon Blitz <span class="go-badge go-badge-hot">GameOrbit</span></h2>
+        <div class="go-game-tag">Fast Sequence</div>
+      </div>
+    </div>
+
+    <div class="go-hud">
+      <div class="go-hud-box"><div class="go-hud-label">SCORE</div><div class="go-hud-val accent" id="hud-score">0</div></div>
+      <div class="go-hud-box"><div class="go-hud-label">BEST</div><div class="go-hud-val" id="hud-best">0</div></div>
+      <div class="go-hud-box"><div class="go-hud-label" id="hud-extra-lbl">TIME</div><div class="go-hud-val" id="hud-extra">0</div></div>
+    </div>
+
+    <div class="go-viewport" id="go-viewport">
+      <div class="go-toast-wrap" id="toast-wrap"></div>
+      
+      <div id="game-container"></div>
+      
+      <div class="go-overlay hidden" id="go-overlay">
+        <div class="go-overlay-card">
+          <h3 class="go-overlay-title">Game Over</h3>
+          <p class="go-overlay-msg">Well played!</p>
+          <div class="go-stats">
+            <div class="go-stat"><div class="go-stat-num go-stat-score">0</div><div class="go-stat-lbl">Score</div></div>
+            <div class="go-stat"><div class="go-stat-num go-stat-best">0</div><div class="go-stat-lbl">Best</div></div>
+          </div>
+          <button class="go-btn-primary" id="go-overlay-btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="go-article">
+      <h2>How to Play Number Balloon Blitz</h2>
+      <p>Shoot balloons in numerical order.</p>
+      <h3>Controls</h3>
+      <p>Click numbers in sequence.</p>
+      <h3>Objective</h3>
+      <p>Clear 1 to 30 fast.</p>
+      <h3>Game Over</h3>
+      <p>Miss order or time.</p>
+    </section>
+
+    <div class="go-related">
+      <h3>You Might Also Like</h3>
+      <div class="go-related-grid">
+        <a href="../../NumberBalloonShooter/index.html" class="go-related-card"><span>🎈</span><p>Classic Game</p></a>
+        <a href="../../gameorbit/" class="go-related-card"><span>🚀</span><p>GameOrbit Hub</p></a>
+      </div>
+    </div>
+  </main>
+
+  <div id="pmg-bottom-ad"></div>
+  <script src="../../gameorbit/gameorbit.js"></script>
+  <script src="game.js"></script>
+  <script src="../../ads.js"></script>
+  <script src="../../analytics.js"></script>
+  <script>window.addEventListener('load',function(){if(typeof prepSystem==='function')prepSystem();});</script>
+</body>
+</html>

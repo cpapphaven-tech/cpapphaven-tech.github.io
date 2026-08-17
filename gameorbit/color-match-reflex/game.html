@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Match Reaction Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Color Match Reaction Game free online! Experience the ultimate Reflex Tap Action with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="color match game online, reaction speed game free, color tap reflex">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="カラーマッチ 3D - 高速反応パズル・脳トレ">
+    <meta name="twitter:description:ja" content="タイマーが始まったら、一致する色をタップしてください！視覚的にスリリングな超高速反応メモリパズルゲーム。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Color Match 3D - Prueba de cerebro rápida">
+    <meta name="twitter:description:es" content="¡Toca el color coincidente cuando comience el cronómetro! Un juego de rompecabezas de memoria de reacción rápida.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Color Match 3D - Test de cerveau rapide">
+    <meta name="twitter:description:fr" content="Appuyez sur la couleur correspondante au démarrage du chronomètre ! Un jeu de puzzle de réaction visuelle passionnant.">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/ColorMatch/game.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/ColorMatch/game.html" />
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script src="../../sidebar.js"></script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../../analytics.js"></script>
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+
+    <!-- Cookie Consent Script -->
+    <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+                console.log('✅ Cookie consent accepted');
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+                console.log('❌ Cookie consent declined');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="../../icons/icon-192x192.png">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:title" content="Color Match Reaction Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Color Match Reaction Game free online! Experience the ultimate Reflex Tap Action with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/color-match-reflex/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Color Match 3D Brain Test | Fast Reaction Puzzle Game | PlayMixGames">
+    <meta property="twitter:description" content="Tap the matching color when the timer starts! A visually thrilling hyperspeed reaction memory puzzle game. Train your brain">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/color-match-reflex/index.html">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+
+
+    <main class="game-container">
+        <h1>Color Match 3D</h1>
+
+        <div id="game-ui">
+            <div id="top-bar">
+                <div id="score-label">Score: <span id="score">0</span></div>
+                <div id="timer-label">Time: <span id="timer">30</span>s</div>
+            </div>
+
+            <div id="target-container">
+                <p>Tap this color:</p>
+                <div id="target-color-display"></div>
+            </div>
+
+            <div id="main-menu" class="overlay">
+                <h2>COLOR MATCH</h2>
+                <p>Fast reaction puzzle! Tap the matching cubes.</p>
+                <button id="start-btn">Start Game</button>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <h2>TIME'S UP!</h2>
+                <p>Your Score: <span id="final-score">0</span></p>
+                <button id="restart-btn">Play Again</button>
+            </div>
+        </div>
+
+        <canvas id="game-canvas"></canvas>
+
+        <!-- COOKIE CONSENT BANNER -->
+        <div id="cookie-consent" class="cookie-banner hidden">
+            <div class="cookie-content">
+                <div class="cookie-text">
+                    <span class="cookie-icon">🍪</span>
+                    <span>We use cookies & tracking for ads. <a href="../../privacy.html" target="_blank"
+                            style="color: #4d79ff; text-decoration: underline;">Learn more</a></span>
+                </div>
+                <div class="cookie-buttons">
+                    <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                    <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="game-description">
+            <h2>About Color Match 3D</h2>
+            <p>Play free online Color Match 3D game. Color Match 3D is a vibrant and addictive reaction game designed to test your visual processing speed and
+                accuracy. In this 3D environment, you are presented with a series of colorful cubes and a single "Target
+                Color." Your mission is to identify and tap only the cubes that match the target before they disappear
+                or the time runs out.</p>
+
+            <p>Perfect for quick gaming sessions, Color Match 3D features procedurally generated levels and a dynamic
+                difficulty curve. As you score more points, the colors become more similar and the pace quickens,
+                pushing your reflexes to the limit. It's a simple yet incredibly satisfying experience built with
+                high-performance WebGL technology for the smootliest possible gameplay.</p>
+
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Identify Target:</strong> Look at the color displayed in the "Tap this color" box at the
+                    top.</li>
+                <li><strong>Tap Cubes:</strong> Click or tap the 3D cubes in the arena that match that exact color.</li>
+            </ul>
+
+            <h3>Scoring Rules</h3>
+            <p>Every correct match earns you 1 point. Be careful: tapping a cube of the wrong color will deduct 2
+                seconds from your remaining time, ending your run much sooner!</p>
+
+            <h3>Reaction Tips</h3>
+            <p>Don't just look at one cube—try to scan the entire 3x3 grid as soon as a new color is assigned. Your
+                brain can process colors faster than individual shapes, so trust your first instinct and tap quickly to
+                maximize your score within the 30-second limit.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../privacy.html">Privacy Policy</a>
+            <a href="../../terms.html">Terms of Service</a>
+            <a href="../../contact.html">Contact</a>
+        </div>
+        <p class="copyright">&copy; 2026 PlayMixGames. <span id="app-version"
+                style="opacity: 0.5; font-size: 0.7em;"></span></p>
+    </footer>
+
+    <script src="game.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Color Match Reaction Game Free Online</h2>
+            <p>Welcome to <strong>Color Match Reaction Game</strong>! Searching for the best free online ColorMatch experience? Look no further. This high-energy <strong>Reflex Tap Action</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Reflex Tap Action Mode:</strong> High-speed action featuring Color Match Reflex variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Color Match Reaction Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on color match reflex variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Color Match Reaction Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/color-match-reflex/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Color Match Reaction Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Color Match Reaction Game features an upgraded <strong>Reflex Tap Action</strong> format. Highlights include: Color Match Reflex variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Color Match Reaction Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Color Match Reaction Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Color Match Reaction Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage color match reflex variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

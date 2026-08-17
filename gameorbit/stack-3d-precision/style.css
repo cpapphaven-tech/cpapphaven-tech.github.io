@@ -1,0 +1,1168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a2e;
+    color: white;
+    min-height: 100vh;
+    padding-top: 0px;
+    padding-bottom: 0;
+}
+
+body>h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#game-canvas {
+    display: block;
+    width: 100%;
+    height: 55vh;
+    /* slightly smaller */
+    background: #000;
+    touch-action: none;
+    margin-top: 3vh;
+    /* gap below score */
+    margin-bottom: 130px;
+    /* BIG gap above ad */
+}
+
+
+
+#ui-container {
+    position: relative;
+    z-index: 10;
+    pointer-events: none;
+    width: 100%;
+    height: 0;
+    /* Let overlays handle their own positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score-container {
+    position: fixed;
+    top: 20px;           /* distance from top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    pointer-events: none;
+}
+
+#score {
+    font-size: 6rem;
+    font-weight: 900;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+}
+
+#banner-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    pointer-events: auto;
+    width: 320px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Premium Glassmorphism for Overlays */
+.overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(30, 30, 50, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 30px;
+    width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    pointer-events: auto;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2000;
+}
+
+#game-over {
+    background: linear-gradient(135deg, rgba(80, 40, 150, 0.9), rgba(40, 20, 80, 0.9));
+}
+
+
+
+.hidden {
+    display: none !important;
+    opacity: 0;
+}
+
+#title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+#prompt {
+    font-size: 1.2rem;
+    animation: pulse 1.5s infinite;
+}
+
+#game-over {
+    background: linear-gradient(135deg, rgba(30, 15, 60, 0.95), rgba(15, 5, 30, 0.95));
+    width: 280px;
+    /* Slimmer */
+    padding: 20px;
+    /* Less padding */
+    border-radius: 20px;
+}
+
+#game-over h2 {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    /* Smaller heading */
+    color: #ff4d4d;
+    letter-spacing: 2px;
+}
+
+#game-over p {
+    font-size: 0.95rem;
+    /* Smaller text */
+    margin: 4px 0;
+    opacity: 0.9;
+}
+
+#game-over #final-score,
+#game-over #best-score {
+    font-weight: 900;
+    color: #4d79ff;
+}
+
+#game-over button {
+    margin-top: 8px;
+    /* Tighter spacing */
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#game-over button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#game-over button:active {
+    transform: scale(0.96);
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/* Challenge Message Styles */
+#challenge-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, rgba(255, 100, 50, 0.95), rgba(255, 150, 100, 0.95));
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+    z-index: 1500;
+    box-shadow: 0 15px 50px rgba(255, 100, 50, 0.4), inset 0 0 30px rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+    animation: challengeSlideIn 0.5s ease-out;
+    max-width: 90%;
+}
+
+#challenge-message.hidden {
+    animation: challengeFadeOut 0.6s ease-in forwards;
+}
+
+.challenge-emoji {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 15px;
+    animation: emojiPulse 0.8s ease-in-out;
+}
+
+.challenge-text {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    line-height: 1.4;
+}
+
+.challenge-subtext {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes challengeSlideIn {
+    0% {
+        transform: translate(-50%, -70%);
+        opacity: 0;
+        scale: 0.8;
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes challengeFadeOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+}
+
+@keyframes emojiPulse {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    25% {
+        transform: scale(1.15) rotate(-5deg);
+    }
+
+    75% {
+        transform: scale(1.15) rotate(5deg);
+    }
+}
+
+#bottom-ad {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 50px;
+    z-index: 9999;
+}
+
+/* Show on all screens */
+#bottom-ad {
+    display: block;
+}
+
+/* On tablets / desktop slightly higher */
+@media (min-width: 768px) {
+    #home-btn {
+        bottom: 55px;
+    }
+}
+
+
+#bonus-btn {
+    border-color: rgba(255, 152, 0, 0.5);
+    /* Subtle hint for bonus */
+}
+
+/* Increase gap between SCORE and SOCIAL BAR */
+/* Increase gap between SCORE and SOCIAL BAR */
+/* Increase gap between SCORE and SOCIAL BAR */
+#bottom-bar {
+    position: fixed;
+    bottom: 50px;
+    /* Moved up to clear bottom ad */
+    left: 12px;
+    right: auto;
+    /* Don't stretch */
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically */
+    align-items: flex-start;
+    /* Align to left */
+    gap: 4px;
+    /* Reduced space between buttons */
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#bottom-bar a {
+    pointer-events: auto;
+}
+
+
+#home-btn,
+#tg-btn {
+    background: linear-gradient(135deg, #00ff88, #00ccff);
+    color: #000;
+    font-weight: 800;
+    border-radius: 12px;
+    padding: 6px 10px;
+    /* Slightly larger hit area */
+    font-size: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+#tg-btn:active {
+    transform: scale(0.95);
+}
+
+/* ... content skipped ... */
+
+/* Global Background Leaderboard (Compact Mini-Box) */
+#side-leaderboard {
+    position: fixed;
+    left: 12px;
+    bottom: 130px;
+    /* Raised higher to avoid overlap with buttons */
+    /* Positioned above bottom-bar/telegram button */
+    width: 250px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 12px;
+    padding: 10px;
+    z-index: 5;
+    opacity: 0.3;
+    pointer-events: auto;
+    transition: opacity 0.5s ease, background 0.5s ease;
+}
+
+#side-leaderboard:hover {
+    opacity: 1;
+    background: rgba(20, 20, 40, 0.7);
+}
+
+/* Always visible on Desktop */
+@media (min-width: 1024px) {
+    #side-leaderboard {
+        opacity: 1;
+        background: rgba(20, 20, 40, 0.6);
+    }
+}
+
+#side-leaderboard h3 {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+#view-full-lb {
+    margin-top: 8px;
+    font-size: 0.65rem;
+    color: #4d79ff;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 800;
+    padding: 4px;
+    background: rgba(77, 121, 255, 0.1);
+    border-radius: 4px;
+    display: block;
+    transition: all 0.2s;
+}
+
+#view-full-lb:hover {
+    background: rgba(77, 121, 255, 0.3);
+    color: #fff;
+}
+
+/* Dedicated Full Leaderboard Popup */
+#full-leaderboard {
+    width: 450px;
+    max-width: 95vw;
+    background: rgba(15, 15, 30, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+#full-leaderboard .close-btn {
+    margin-top: 30px;
+}
+
+
+.lb-header h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #fff, #4d79ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    width: 100%;
+}
+
+.lb-header p {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lb-header {
+    text-align: center;
+    width: 100%;
+}
+
+.lb-scroll-area {
+    max-height: 55vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+
+.close-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 800;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn:active {
+    transform: scale(0.97);
+}
+
+/* Floating X Close Button */
+.lb-close-x {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.lb-close-x:hover {
+    background: rgba(255, 77, 77, 0.2);
+    border-color: rgba(255, 77, 77, 0.4);
+    transform: rotate(90deg);
+}
+
+.lb-flag {
+    margin-right: 8px;
+    font-size: 1.1rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Mobile specific styling */
+
+#leaderboard-popup {
+    z-index: 2000;
+    width: 380px;
+    max-width: 90vw;
+    background: rgba(20, 20, 40, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#full-leaderboard h2,
+#leaderboard-popup h2,
+#side-leaderboard h2 {
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: left;
+    background: linear-gradient(135deg, #fff, #aaa);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#leaderboard-list,
+#side-lb-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.lb-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    margin-bottom: 4px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Specific side list micro-tweaks */
+#side-lb-list .lb-row {
+    padding: 4px 6px;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0;
+}
+
+#side-lb-list .lb-rank {
+    font-size: 0.75rem;
+    min-width: 20px;
+}
+
+#side-lb-list .lb-user {
+    font-size: 0.7rem;
+    padding-left: 5px;
+}
+
+#side-lb-list .lb-user small {
+    display: inline;
+    font-size: 0.6rem;
+    opacity: 0.5;
+    margin-left: 2px;
+}
+
+/* Hide country in mini-box to save space */
+#side-lb-list .lb-score {
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+.lb-row:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px) scale(1.02);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.lb-rank {
+    font-size: 1.3rem;
+    font-weight: 900;
+    min-width: 40px;
+}
+
+.lb-user {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.lb-user small {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
+
+.lb-score {
+    font-weight: 900;
+    color: #4d79ff;
+    font-size: 1.3rem;
+    text-shadow: 0 0 15px rgba(77, 121, 255, 0.3);
+}
+
+/* Scrollbar for lists */
+#leaderboard-list::-webkit-scrollbar,
+#side-lb-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+#leaderboard-list::-webkit-scrollbar-thumb,
+#side-lb-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#name-dialog {
+    z-index: 3000;
+}
+
+#name-dialog .dialog-box {
+    background: rgba(20, 20, 40, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+#name-dialog h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+#player-name {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    outline: none;
+    text-align: center;
+}
+
+#player-name:focus {
+    border-color: #4d79ff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Helix Ball Game Ad Banner - Compact Version */
+#helix-ad-banner {
+    position: fixed;
+    top: 20px;
+    /* Moved to Top */
+    left: 20px;
+    /* Moved to Left */
+    bottom: auto;
+    /* Clear bottom */
+    right: auto;
+    /* Clear right */
+    width: 320px;
+    background: #3b5998;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#helix-ad-banner:hover {
+    transform: translateY(-2px);
+}
+
+#helix-ad-banner .ad-icon {
+    width: 50px;
+    /* Smaller icon */
+    height: 50px;
+    border-radius: 10px;
+    background: url('../assets/helixbounce.png') center/cover;
+    flex-shrink: 0;
+}
+
+#helix-ad-banner .ad-content {
+    flex-grow: 1;
+}
+
+#helix-ad-banner .ad-title {
+    font-weight: 800;
+    font-size: 0.9rem;
+    /* Smaller title */
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+#helix-ad-banner .ad-desc {
+    font-size: 0.75rem;
+    /* Smaller description */
+    opacity: 0.85;
+    line-height: 1.2;
+}
+
+#helix-ad-banner .play-now-btn {
+    background: white;
+    color: #3b5998;
+    padding: 6px 12px;
+    /* Tighter padding */
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 0.75rem;
+    /* Smaller font */
+    text-transform: uppercase;
+    border: none;
+    white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+#helix-ad-banner .close-ad-x {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    font-size: 1.1rem;
+    color: white;
+    opacity: 0.6;
+    cursor: pointer;
+    line-height: 1;
+}
+
+#helix-ad-banner .close-ad-x:hover {
+    opacity: 1;
+}
+
+/* Hide on Mobile/Tablet - User specifically requested Desktop Only */
+@media (max-width: 1024px) {
+    #helix-ad-banner {
+        display: none !important;
+    }
+}
+
+/* Adsterra Banner - Right Side Center (Desktop Only) */
+/* Adsterra Banner - Right Side Bottom (Desktop Only) */
+#adsterra-banner {
+    position: fixed;
+    top: auto;
+    bottom: 5px;
+    right: 10px;
+    transform: none;
+    z-index: 9000;
+    display: none;
+    width: 160px;
+    height: 600px;
+}
+
+@media (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
+    }
+}
+
+/* Cross Promotion UI (Slim Banners at Top Left) */
+#cross-promo-container {
+    position: fixed;
+    top: 70px;
+    /* Moved down to avoid social bar ad */
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 10005;
+}
+
+.promo-banner {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+    width: 240px;
+    transition: transform 0.2s, border-color 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    pointer-events: auto;
+}
+
+.promo-banner:hover {
+    transform: translateX(5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.promo-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.promo-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-title {
+    font-size: 0.75rem;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.promo-btn {
+    background: white;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    flex-shrink: 0;
+}
+
+.game-description {
+    padding: 180px 20px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #111;
+    color: #fff;
+}
+
+/* Benefit popup overlay */
+/* Benefit popup overlay */
+#benefit-box {
+    position: fixed;
+    left: 12px;
+
+    /* Place ABOVE leaderboard */
+    top: 50px;
+    left: 10px;
+
+    width: 250px;
+    background: linear-gradient(135deg, #ffcc00, #ff6600);
+    color: #000;
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(255, 150, 0, 0.5);
+    z-index: 6;
+
+}
+
+#benefit-box .benefit-title {
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+#benefit-box ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+#benefit-box li {
+    margin-bottom: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    #benefit-box,
+    #side-leaderboard,
+    #tutorial-overlay {
+        display: none !important;
+    }
+}
+
+#tutorial-overlay {
+    position: fixed;
+    left: 10px;
+    top: 160px;
+    z-index: 9999;
+    pointer-events: none;
+    /* game remains playable */
+}
+
+#tutorial-dialog {
+    width: 260px;
+    height: 260px;
+    border-radius: 16px;
+    padding: 3px;
+
+    background: linear-gradient(135deg, #4d79ff, #9c27ff, #00e5ff);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    overflow: hidden;
+
+    pointer-events: auto;
+    /* allow skip button click */
+}
+
+
+
+#tutorial-dialog {
+    position: fixed;
+
+    /* SAME LEFT as benefit box */
+    left: 10px;
+
+    /* BELOW benefit box */
+    top: 10px;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 18px;
+    padding: 3px;
+
+    background: linear-gradient(135deg, #4d79ff, #9c27ff, #00e5ff);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+
+#tutorial-dialog {
+    width: 300px;
+    height: 300px;
+    border-radius: 18px;
+    padding: 3px;
+
+    background: linear-gradient(135deg, #4d79ff, #9c27ff, #00e5ff);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+
+    overflow: hidden;
+}
+
+/* Inner container fixes corner cutting */
+#tutorial-inner {
+    width: 100%;
+    height: 100%;
+    background: black;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Video section (top 65%) */
+#tutorial-video-container {
+    flex: 0 0 40%;
+}
+
+
+#tutorial-video {
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+}
+
+/* Text section (bottom area) */
+#tutorial-text {
+    flex: 1;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    font-weight: bold;
+}
+
+#tutorial-text {
+    margin-top: -25px;
+}
+
+
+#tutorial-text h3 {
+    font-size: 14px;
+}
+
+#tutorial-text p {
+    font-size: 12px;
+}
+
+#party-welcome {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+#party-text {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+
+    text-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+
+    animation: partyPop 0.6s ease-out;
+}
+
+@keyframes partyPop {
+    0% {
+        transform: translateX(-50%) scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+#confetti-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* COOKIE CONSENT BANNER */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 26, 46, 0.95);
+    border-top: 1px solid rgba(77, 121, 255, 0.3);
+    padding: 8px 12px;
+    z-index: 10000;
+    font-size: 11px;
+    animation: slideUp 0.3s ease-out;
+    backdrop-filter: blur(5px);
+}
+
+.cookie-banner.hidden {
+    display: none;
+}
+
+.cookie-content {
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cookie-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    min-width: 150px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.3;
+}
+
+.cookie-icon {
+    font-size: 14px;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.cookie-btn-accept {
+    background: linear-gradient(135deg, #4d79ff, #3366ff);
+    color: white;
+}
+
+.cookie-btn-accept:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(77, 121, 255, 0.4);
+}
+
+.cookie-btn-decline {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cookie-btn-decline:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+    .cookie-banner {
+        padding: 6px 8px;
+    }
+
+    .cookie-content {
+        gap: 6px;
+    }
+
+    .cookie-text {
+        font-size: 10px;
+        gap: 4px;
+    }
+
+    .cookie-btn {
+        padding: 4px 8px;
+        font-size: 9px;
+    }
+
+    .cookie-icon {
+        font-size: 12px;
+    }
+}

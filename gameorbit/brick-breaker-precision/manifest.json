@@ -1,0 +1,22 @@
+{
+    "name": "Brick Breaker",
+    "short_name": "BrickBreaker",
+    "description": "Smash all the bricks with a bouncing ball and paddle!",
+    "start_url": "./game.html",
+    "display": "standalone",
+    "background_color": "#0a0a1a",
+    "theme_color": "#0a0a1a",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "../icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "../icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

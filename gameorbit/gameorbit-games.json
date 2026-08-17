@@ -1,0 +1,1058 @@
+[
+  {
+    "original_game": "BubbleShooter",
+    "original_url": "/BubbleShooter/index.html",
+    "gameorbit_name": "Bubble Shooter Free Online",
+    "gameorbit_url": "/gameorbit/bubble-shooter-time-attack/index.html",
+    "variant_type": "Pop & Match Puzzle",
+    "gameplay_differences": [
+      "Bubble Shooter Time Attack variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "MarbleSort",
+    "original_url": "/MarbleSort/index.html",
+    "gameorbit_name": "Marble Sort Color Puzzle",
+    "gameorbit_url": "/gameorbit/marble-sort-race/index.html",
+    "variant_type": "Color Sorting Game",
+    "gameplay_differences": [
+      "Marble Sort Race variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "WaterSort3D",
+    "original_url": "/WaterSort3D/index.html",
+    "gameorbit_name": "Water Sort Puzzle Free",
+    "gameorbit_url": "/gameorbit/water-sort-limited-moves/index.html",
+    "variant_type": "Liquid Sorting Game",
+    "gameplay_differences": [
+      "Water Sort Limited Moves variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Tetris",
+    "original_url": "/Tetris/index.html",
+    "gameorbit_name": "Classic Tetris Game Online",
+    "gameorbit_url": "/gameorbit/tetris-blitz/index.html",
+    "variant_type": "Retro Block Puzzle",
+    "gameplay_differences": [
+      "Tetris Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Game2048",
+    "original_url": "/Game2048/index.html",
+    "gameorbit_name": "2048 Puzzle Game Online",
+    "gameorbit_url": "/gameorbit/2048-hexagon/index.html",
+    "variant_type": "Number Merge Puzzle",
+    "gameplay_differences": [
+      "2048 Hexagon variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "WordGuess",
+    "original_url": "/WordGuess/index.html",
+    "gameorbit_name": "Word Guess Wordle Game",
+    "gameorbit_url": "/gameorbit/word-guess-sprint/index.html",
+    "variant_type": "5-Letter Word Puzzle",
+    "gameplay_differences": [
+      "Word Guess Sprint variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Hangman",
+    "original_url": "/Hangman/index.html",
+    "gameorbit_name": "Play Hangman Online Free",
+    "gameorbit_url": "/gameorbit/hangman-multiplier/index.html",
+    "variant_type": "Classic Word Guessing",
+    "gameplay_differences": [
+      "Hangman Multiplier variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Minesweeper",
+    "original_url": "/Minesweeper/index.html",
+    "gameorbit_name": "Minesweeper Classic Free",
+    "gameorbit_url": "/gameorbit/minesweeper-speed-run/index.html",
+    "variant_type": "Retro Mine Sweeper",
+    "gameplay_differences": [
+      "Minesweeper Speed Run variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Solitaire",
+    "original_url": "/Solitaire/index.html",
+    "gameorbit_name": "Solitaire Card Game Free",
+    "gameorbit_url": "/gameorbit/solitaire-challenge/index.html",
+    "variant_type": "Classic Klondike Solitaire",
+    "gameplay_differences": [
+      "Solitaire Challenge variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Sudoku",
+    "original_url": "/Sudoku/index.html",
+    "gameorbit_name": "Sudoku Daily Puzzle Free",
+    "gameorbit_url": "/gameorbit/sudoku-sprint/index.html",
+    "variant_type": "Number Logic Game",
+    "gameplay_differences": [
+      "Sudoku Sprint variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Chess",
+    "original_url": "/Chess/index.html",
+    "gameorbit_name": "Chess Game Online 2 Player",
+    "gameorbit_url": "/gameorbit/chess-puzzles/index.html",
+    "variant_type": "Classic Strategy Chess",
+    "gameplay_differences": [
+      "Chess Puzzle Mode variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "NeonSnake",
+    "original_url": "/NeonSnake/index.html",
+    "gameorbit_name": "Snake Game Online Free",
+    "gameorbit_url": "/gameorbit/snake-survival/index.html",
+    "variant_type": "Classic Slither Arcade",
+    "gameplay_differences": [
+      "Snake Survival variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "NeonPacman",
+    "original_url": "/NeonPacman/index.html",
+    "gameorbit_name": "Pacman Arcade Game Free",
+    "gameorbit_url": "/gameorbit/pacman-maze-rush/index.html",
+    "variant_type": "Retro Ghost Maze",
+    "gameplay_differences": [
+      "Pac-Man Maze Rush variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "GeometryDash",
+    "original_url": "/GeometryDash/index.html",
+    "gameorbit_name": "Geometry Dash Online Free",
+    "gameorbit_url": "/gameorbit/geometry-dash-creator/index.html",
+    "variant_type": "Rhythm Jump Runner",
+    "gameplay_differences": [
+      "Geometry Dash Neon variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "FlappyRise",
+    "original_url": "/FlappyRise/index.html",
+    "gameorbit_name": "Flappy Bird Game Online",
+    "gameorbit_url": "/gameorbit/flappy-gauntlet/index.html",
+    "variant_type": "Tap & Fly Arcade",
+    "gameplay_differences": [
+      "Flappy Gauntlet variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "DoodleJump",
+    "original_url": "/DoodleJump/index.html",
+    "gameorbit_name": "Doodle Jump Online Unblocked",
+    "gameorbit_url": "/gameorbit/doodle-jump-dark/index.html",
+    "variant_type": "Endless Jump Platformer",
+    "gameplay_differences": [
+      "Doodle Jump Dark Zone variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "KnifeHit",
+    "original_url": "/KnifeHit/index.html",
+    "gameorbit_name": "Knife Hit Game Free",
+    "gameorbit_url": "/gameorbit/knife-hit-frenzy/index.html",
+    "variant_type": "Target Throw Arcade",
+    "gameplay_differences": [
+      "Knife Hit Frenzy variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "CrossyRoad",
+    "original_url": "/CrossyRoad/index.html",
+    "gameorbit_name": "Crossy Road Game Online",
+    "gameorbit_url": "/gameorbit/crossy-road-night/index.html",
+    "variant_type": "Endless Road Hopper",
+    "gameplay_differences": [
+      "Crossy Road Night Rush variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "HighwayRush",
+    "original_url": "/HighwayRush/index.html",
+    "gameorbit_name": "Traffic Racer Highway Racing",
+    "gameorbit_url": "/gameorbit/highway-rush-storm/index.html",
+    "variant_type": "Endless Car Racer",
+    "gameplay_differences": [
+      "Highway Rush Storm variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "GalaxyAssault",
+    "original_url": "/GalaxyAssault/index.html",
+    "gameorbit_name": "Space Invaders Shooter Free",
+    "gameorbit_url": "/gameorbit/galaxy-boss-rush/index.html",
+    "variant_type": "Retro Space Arcade",
+    "gameplay_differences": [
+      "Galaxy Assault Boss Rush variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "BrickBreaker",
+    "original_url": "/BrickBreaker/index.html",
+    "gameorbit_name": "Brick Breaker Game Online",
+    "gameorbit_url": "/gameorbit/brick-breaker-precision/index.html",
+    "variant_type": "Classic Breakout Arcade",
+    "gameplay_differences": [
+      "Brick Breaker Precision variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "NeonSlicer",
+    "original_url": "/NeonSlicer/index.html",
+    "gameorbit_name": "Fruit Ninja Slash Game",
+    "gameorbit_url": "/gameorbit/slice-sprint/index.html",
+    "variant_type": "Swipe Blade Action",
+    "gameplay_differences": [
+      "Slice Sprint variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "RetroRacer",
+    "original_url": "/RetroRacer/index.html",
+    "gameorbit_name": "3D Car Racing Game Free",
+    "gameorbit_url": "/gameorbit/retro-racer-drag/index.html",
+    "variant_type": "Arcade Drag Racing",
+    "gameplay_differences": [
+      "Retro Racer Drag variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "NumberMaster",
+    "original_url": "/NumberMaster/index.html",
+    "gameorbit_name": "Number Run Math Game",
+    "gameorbit_url": "/gameorbit/number-master-endless/index.html",
+    "variant_type": "Multiplier Runner",
+    "gameplay_differences": [
+      "Number Master Endless variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "DancingLine",
+    "original_url": "/DancingLine/index.html",
+    "gameorbit_name": "Dancing Line Music Game",
+    "gameorbit_url": "/gameorbit/dancing-line-remix/index.html",
+    "variant_type": "Rhythm Tap Runner",
+    "gameplay_differences": [
+      "Dancing Line Remix variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "IdleBallEscape",
+    "original_url": "/IdleBallEscape/index.html",
+    "gameorbit_name": "Idle Ball Breakout Game",
+    "gameorbit_url": "/gameorbit/idle-ball-escape-blitz/index.html",
+    "variant_type": "Idle Arcade Physics",
+    "gameplay_differences": [
+      "Ball Escape Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "HelixBounce",
+    "original_url": "/HelixBounce/index.html",
+    "gameorbit_name": "Helix Jump Drop Game",
+    "gameorbit_url": "/gameorbit/helix-bounce-neon/index.html",
+    "variant_type": "Spiral Tower Drop",
+    "gameplay_differences": [
+      "Helix Bounce Neon Fury variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Stack3D",
+    "original_url": "/Stack3D/index.html",
+    "gameorbit_name": "Stack 3D Tower Game",
+    "gameorbit_url": "/gameorbit/stack-3d-precision/index.html",
+    "variant_type": "Block Stacking Physics",
+    "gameplay_differences": [
+      "Stack 3D Precision Mode variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "AllInHole",
+    "original_url": "/AllInHole/index.html",
+    "gameorbit_name": "Hole io Eat Everything Game",
+    "gameorbit_url": "/gameorbit/all-in-hole-havoc/index.html",
+    "variant_type": "Black Hole Arcade",
+    "gameplay_differences": [
+      "Hole Havoc variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "ZenBounce",
+    "original_url": "/ZenBounce/index.html",
+    "gameorbit_name": "Zen Physics Ball Bounce",
+    "gameorbit_url": "/gameorbit/zen-bounce-challenge/index.html",
+    "variant_type": "Relaxing Ball Puzzle",
+    "gameplay_differences": [
+      "Zen Bounce Challenge variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "JigsawPuzzle",
+    "original_url": "/JigsawPuzzle/index.html",
+    "gameorbit_name": "Jigsaw Puzzle Free Online",
+    "gameorbit_url": "/gameorbit/jigsaw-speed-solve/index.html",
+    "variant_type": "Picture Solving Game",
+    "gameplay_differences": [
+      "Jigsaw Speed Solve variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "BlockPuzzle",
+    "original_url": "/BlockPuzzle/index.html",
+    "gameorbit_name": "Block Puzzle Jewel Game",
+    "gameorbit_url": "/gameorbit/block-puzzle-blitz/index.html",
+    "variant_type": "10x10 Grid Puzzle",
+    "gameplay_differences": [
+      "Block Puzzle Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "MergeNumbers",
+    "original_url": "/MergeNumbers/index.html",
+    "gameorbit_name": "2048 Merge Blocks Game",
+    "gameorbit_url": "/gameorbit/merge-numbers-chain/index.html",
+    "variant_type": "Chain Number Merge",
+    "gameplay_differences": [
+      "Merge Numbers Chain variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Crossmath",
+    "original_url": "/Crossmath/index.html",
+    "gameorbit_name": "Crossmath Math Puzzle Free",
+    "gameorbit_url": "/gameorbit/crossmath-speed-quiz/index.html",
+    "variant_type": "Arithmetic Crossword",
+    "gameplay_differences": [
+      "Crossmath Speed Quiz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "DotConnect",
+    "original_url": "/DotConnect/index.html",
+    "gameorbit_name": "Connect The Dots Game",
+    "gameorbit_url": "/gameorbit/dot-connect-marathon/index.html",
+    "variant_type": "Flow Line Connection",
+    "gameplay_differences": [
+      "Dot Connect Marathon variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "WordSearch",
+    "original_url": "/WordSearch/index.html",
+    "gameorbit_name": "Word Search Puzzle Free",
+    "gameorbit_url": "/gameorbit/word-search-blitz/index.html",
+    "variant_type": "Find Hidden Words",
+    "gameplay_differences": [
+      "Word Search Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "HiddenWord",
+    "original_url": "/HiddenWord/index.html",
+    "gameorbit_name": "Word Finder Puzzle Game",
+    "gameorbit_url": "/gameorbit/hidden-word-sprint/index.html",
+    "variant_type": "Word Guessing Sprint",
+    "gameplay_differences": [
+      "Hidden Word Sprint variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "WordCrossword",
+    "original_url": "/WordCrossword/index.html",
+    "gameorbit_name": "Daily Crossword Puzzle Free",
+    "gameorbit_url": "/gameorbit/crossword-daily/index.html",
+    "variant_type": "Classic Word Grid",
+    "gameplay_differences": [
+      "Crossword Daily Challenge variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "NumMatch",
+    "original_url": "/NumMatch/index.html",
+    "gameorbit_name": "NumMatch Pair Game Online",
+    "gameorbit_url": "/gameorbit/numatch-lightning/index.html",
+    "variant_type": "Number Matching Pair",
+    "gameplay_differences": [
+      "NumMatch Lightning variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Numpuz",
+    "original_url": "/Numpuz/index.html",
+    "gameorbit_name": "15 Sliding Tile Puzzle",
+    "gameorbit_url": "/gameorbit/numpuz-speed-slide/index.html",
+    "variant_type": "Number Slide Game",
+    "gameplay_differences": [
+      "Numpuz Speed Slide variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "HiddenObjects",
+    "original_url": "/HiddenObjects/index.html",
+    "gameorbit_name": "Hidden Objects Game Free",
+    "gameorbit_url": "/gameorbit/hidden-objects-time-hunt/index.html",
+    "variant_type": "Seek & Find Objects",
+    "gameplay_differences": [
+      "Hidden Objects Time Hunt variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "ColorMatch",
+    "original_url": "/ColorMatch/index.html",
+    "gameorbit_name": "Color Match Reaction Game",
+    "gameorbit_url": "/gameorbit/color-match-reflex/index.html",
+    "variant_type": "Reflex Tap Action",
+    "gameplay_differences": [
+      "Color Match Reflex variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "FruitSplash",
+    "original_url": "/FruitSplash/index.html",
+    "gameorbit_name": "Fruit Splash Match 3",
+    "gameorbit_url": "/gameorbit/fruit-splash-frenzy/index.html",
+    "variant_type": "Juicy Fruit Matching",
+    "gameplay_differences": [
+      "Fruit Splash Frenzy variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "CandyBlast",
+    "original_url": "/CandyBlast/index.html",
+    "gameorbit_name": "Candy Match 3 Puzzle",
+    "gameorbit_url": "/gameorbit/candy-blast-noswap/index.html",
+    "variant_type": "Sweet Blast Tap",
+    "gameplay_differences": [
+      "Candy Blast No-Swap variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "GemMatch",
+    "original_url": "/GemMatch/index.html",
+    "gameorbit_name": "Bejeweled Gem Match 3",
+    "gameorbit_url": "/gameorbit/gem-match-marathon/index.html",
+    "variant_type": "Jewel Cascade Game",
+    "gameplay_differences": [
+      "Gem Match Marathon variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "SushiMatch",
+    "original_url": "/SushiMatch/index.html",
+    "gameorbit_name": "Memory Card Match Game",
+    "gameorbit_url": "/gameorbit/sushi-memory-blitz/index.html",
+    "variant_type": "Flip & Match Memory",
+    "gameplay_differences": [
+      "Sushi Memory Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "PetPop",
+    "original_url": "/PetPop/index.html",
+    "gameorbit_name": "Pet Pop Matching Game",
+    "gameorbit_url": "/gameorbit/pet-pop-puzzle/index.html",
+    "variant_type": "Animal Cube Blast",
+    "gameplay_differences": [
+      "Pet Pop Puzzle variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "FruitSort",
+    "original_url": "/FruitSort/index.html",
+    "gameorbit_name": "Fruit Sorting Puzzle Game",
+    "gameorbit_url": "/gameorbit/fruit-sort-blitz/index.html",
+    "variant_type": "Fruit Color Sort",
+    "gameplay_differences": [
+      "Fruit Sort Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "CandySort",
+    "original_url": "/CandySort/index.html",
+    "gameorbit_name": "Candy Sort Puzzle Free",
+    "gameorbit_url": "/gameorbit/candy-sort-frenzy/index.html",
+    "variant_type": "Conveyor Candy Sort",
+    "gameplay_differences": [
+      "Candy Sort Frenzy variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "BallSort",
+    "original_url": "/BallSort/index.html",
+    "gameorbit_name": "Ball Sort Color Puzzle",
+    "gameorbit_url": "/gameorbit/ball-sort-puzzle-pro/index.html",
+    "variant_type": "Sphere Sorting Game",
+    "gameplay_differences": [
+      "Ball Sort Puzzle Pro variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "JewelSort",
+    "original_url": "/JewelSort/index.html",
+    "gameorbit_name": "Jewel Sort Color Game",
+    "gameorbit_url": "/gameorbit/jewel-sort-race/index.html",
+    "variant_type": "Gem Tube Sort",
+    "gameplay_differences": [
+      "Jewel Sort Race variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "EggSort",
+    "original_url": "/EggSort/index.html",
+    "gameorbit_name": "Egg Sort Nest Puzzle",
+    "gameorbit_url": "/gameorbit/egg-sort-challenge/index.html",
+    "variant_type": "Patterned Egg Sort",
+    "gameplay_differences": [
+      "Egg Sort Challenge variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "MarbleBlast",
+    "original_url": "/MarbleBlast/index.html",
+    "gameorbit_name": "Zuma Marble Shooter Game",
+    "gameorbit_url": "/gameorbit/marble-blast-obstacle/index.html",
+    "variant_type": "Marble Track Blast",
+    "gameplay_differences": [
+      "Marble Blast Obstacle variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "GemShooter",
+    "original_url": "/GemShooter/index.html",
+    "gameorbit_name": "Gem Bubble Shooter Game",
+    "gameorbit_url": "/gameorbit/gem-shooter-endless/index.html",
+    "variant_type": "Jewel Cannon Shooter",
+    "gameplay_differences": [
+      "Gem Shooter Endless variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "NumberBalloonShooter",
+    "original_url": "/NumberBalloonShooter/index.html",
+    "gameorbit_name": "Math Game Balloon Pop",
+    "gameorbit_url": "/gameorbit/balloon-math-blitz/index.html",
+    "variant_type": "Arithmetic Shooter",
+    "gameplay_differences": [
+      "Balloon Math Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "PlanetShooter",
+    "original_url": "/PlanetShooter/index.html",
+    "gameorbit_name": "Space Shooter Alien Game",
+    "gameorbit_url": "/gameorbit/planet-shooter-survival/index.html",
+    "variant_type": "Cosmic Galaxy Defender",
+    "gameplay_differences": [
+      "Planet Shooter Survival variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "VirusShooter",
+    "original_url": "/VirusShooter/index.html",
+    "gameorbit_name": "Virus Blast Shooter Game",
+    "gameorbit_url": "/gameorbit/virus-shooter-outbreak/index.html",
+    "variant_type": "Outbreak Defender",
+    "gameplay_differences": [
+      "Virus Shooter Outbreak variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "CandyBubblePop",
+    "original_url": "/CandyBubblePop/index.html",
+    "gameorbit_name": "Candy Bubble Shooter Free",
+    "gameorbit_url": "/gameorbit/candy-bubble-pop-rush/index.html",
+    "variant_type": "Sweet Bubble Cannon",
+    "gameplay_differences": [
+      "Candy Bubble Pop Rush variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "StrikerLeague",
+    "original_url": "/StrikerLeague/index.html",
+    "gameorbit_name": "Soccer Football Game Online",
+    "gameorbit_url": "/gameorbit/striker-league-cup/index.html",
+    "variant_type": "League Soccer Striker",
+    "gameplay_differences": [
+      "Striker League Cup variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "HeadFootball",
+    "original_url": "/HeadFootball/index.html",
+    "gameorbit_name": "Head Soccer 1v1 Football",
+    "gameorbit_url": "/gameorbit/head-football-worldcup/index.html",
+    "variant_type": "Big Head Soccer",
+    "gameplay_differences": [
+      "Head Football World Cup variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "CricketMaster",
+    "original_url": "/CricketMaster/index.html",
+    "gameorbit_name": "Cricket T20 Game Online",
+    "gameorbit_url": "/gameorbit/cricket-master-t5/index.html",
+    "variant_type": "Cricket Batting Game",
+    "gameplay_differences": [
+      "Cricket Master T5 variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Pool",
+    "original_url": "/Pool/index.html",
+    "gameorbit_name": "8 Ball Pool Game Online",
+    "gameorbit_url": "/gameorbit/pool-time-pressure/index.html",
+    "variant_type": "3D Billiards Simulator",
+    "gameplay_differences": [
+      "8 Ball Time Pressure variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "AirHockey3D",
+    "original_url": "/AirHockey3D/index.html",
+    "gameorbit_name": "Air Hockey 3D Game Free",
+    "gameorbit_url": "/gameorbit/air-hockey-turbo/index.html",
+    "variant_type": "2 Player Puck Battle",
+    "gameplay_differences": [
+      "Air Hockey Turbo variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Bowling",
+    "original_url": "/Bowling/index.html",
+    "gameorbit_name": "3D Bowling Game Free",
+    "gameorbit_url": "/gameorbit/bowling-strike-chain/index.html",
+    "variant_type": "10 Pin Bowling Alley",
+    "gameplay_differences": [
+      "Bowling Strike Chain variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "TableTennis",
+    "original_url": "/TableTennis/index.html",
+    "gameorbit_name": "Ping Pong Table Tennis 3D",
+    "gameorbit_url": "/gameorbit/table-tennis-smash/index.html",
+    "variant_type": "Table Tennis Racket",
+    "gameplay_differences": [
+      "Table Tennis Smash Cup variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "VolleyballArena",
+    "original_url": "/VolleyballArena/index.html",
+    "gameorbit_name": "Beach Volleyball 3D Game",
+    "gameorbit_url": "/gameorbit/volleyball-beach-blitz/index.html",
+    "variant_type": "Spike Volleyball Court",
+    "gameplay_differences": [
+      "Volleyball Beach Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Basketball3D",
+    "original_url": "/Basketball3D/index.html",
+    "gameorbit_name": "Basketball 3D Shooting Game",
+    "gameorbit_url": "/gameorbit/basketball-shot-clock/index.html",
+    "variant_type": "Hoops Shot Clock",
+    "gameplay_differences": [
+      "Basketball 3D Shot Clock variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Football3D",
+    "original_url": "/Football3D/index.html",
+    "gameorbit_name": "Penalty Shootout Football Game",
+    "gameorbit_url": "/gameorbit/football-penalty/index.html",
+    "variant_type": "3D Soccer Penalty",
+    "gameplay_differences": [
+      "Football 3D Penalty Shootout variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Tennis",
+    "original_url": "/Tennis/index.html",
+    "gameorbit_name": "3D Tennis Game Online",
+    "gameorbit_url": "/gameorbit/tennis-tiebreak/index.html",
+    "variant_type": "Grand Slam Court",
+    "gameplay_differences": [
+      "Tennis Tiebreak Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "PocketGolf",
+    "original_url": "/PocketGolf/index.html",
+    "gameorbit_name": "Mini Golf 3D Game Free",
+    "gameorbit_url": "/gameorbit/pocket-golf-par/index.html",
+    "variant_type": "Putt Pocket Golf",
+    "gameplay_differences": [
+      "Pocket Golf Par Challenge variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "BottleShoot3D",
+    "original_url": "/BottleShoot3D/index.html",
+    "gameorbit_name": "Bottle Shoot 3D Game",
+    "gameorbit_url": "/gameorbit/bottle-shoot-chain/index.html",
+    "variant_type": "Target Shooting Gallery",
+    "gameplay_differences": [
+      "Bottle Shoot Chain variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "ArcheryMaster",
+    "original_url": "/ArcheryMaster/index.html",
+    "gameorbit_name": "Archery Master Bow Game",
+    "gameorbit_url": "/gameorbit/archery-precision/index.html",
+    "variant_type": "Bullseye Bow Arrow",
+    "gameplay_differences": [
+      "Archery Precision Challenge variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "SkiFree",
+    "original_url": "/SkiFree/index.html",
+    "gameorbit_name": "SkiFree Retro Ski Game",
+    "gameorbit_url": "/gameorbit/skifree-slalom/index.html",
+    "variant_type": "Mountain Slalom Skiing",
+    "gameplay_differences": [
+      "SkiFree Slalom Rush variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "StickDuel",
+    "original_url": "/StickDuel/index.html",
+    "gameorbit_name": "Stickman Warriors Fight Game",
+    "gameorbit_url": "/gameorbit/stickman-survival/index.html",
+    "variant_type": "Stickman Brawl Arena",
+    "gameplay_differences": [
+      "Stickman Survival Arena variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Ludo",
+    "original_url": "/Ludo/index.html",
+    "gameorbit_name": "Ludo King Board Game Free",
+    "gameorbit_url": "/gameorbit/ludo-speed-mode/index.html",
+    "variant_type": "Classic Ludo Dice",
+    "gameplay_differences": [
+      "Ludo Speed Mode variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "SnakesAndLadders",
+    "original_url": "/SnakesAndLadders/index.html",
+    "gameorbit_name": "Snakes and Ladders Game",
+    "gameorbit_url": "/gameorbit/snakes-ladders-blitz/index.html",
+    "variant_type": "Classic Board Dice",
+    "gameplay_differences": [
+      "Snakes & Ladders Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "Backgammon",
+    "original_url": "/Backgammon/index.html",
+    "gameorbit_name": "Backgammon Board Game Free",
+    "gameorbit_url": "/gameorbit/backgammon-sprint/index.html",
+    "variant_type": "Classic Checker Dice",
+    "gameplay_differences": [
+      "Backgammon Sprint variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "TicTacToe",
+    "original_url": "/TicTacToe/index.html",
+    "gameorbit_name": "Tic Tac Toe 2 Player Free",
+    "gameorbit_url": "/gameorbit/tic-tac-toe-5x5/index.html",
+    "variant_type": "Xs and Os Board",
+    "gameplay_differences": [
+      "Tic Tac Toe 5x5 variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "FamilyTree",
+    "original_url": "/FamilyTree/index.html",
+    "gameorbit_name": "Family Tree Logic Game",
+    "gameorbit_url": "/gameorbit/family-tree-challenger/index.html",
+    "variant_type": "Genealogy Puzzle",
+    "gameplay_differences": [
+      "Family Tree Challenger variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "BurgerStack",
+    "original_url": "/BurgerStack/index.html",
+    "gameorbit_name": "Burger Cooking Stack Game",
+    "gameorbit_url": "/gameorbit/burger-stack-rush/index.html",
+    "variant_type": "Chef Kitchen Rush",
+    "gameplay_differences": [
+      "Burger Stack Rush variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "VeggieSmash",
+    "original_url": "/VeggieSmash/index.html",
+    "gameorbit_name": "Veggie Match 3 Smash",
+    "gameorbit_url": "/gameorbit/veggie-smash-frenzy/index.html",
+    "variant_type": "Garden Vegetable Crush",
+    "gameplay_differences": [
+      "Veggie Smash Frenzy variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "OddOneOut",
+    "original_url": "/OddOneOut/index.html",
+    "gameorbit_name": "Odd One Out Spot Game",
+    "gameorbit_url": "/gameorbit/odd-one-out-speed/index.html",
+    "variant_type": "Difference Finder",
+    "gameplay_differences": [
+      "Odd One Out Speed variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "DailyMathEquator",
+    "original_url": "/DailyMathEquator/index.html",
+    "gameorbit_name": "Math Games Daily Calculator",
+    "gameorbit_url": "/gameorbit/math-equator-blitz/index.html",
+    "variant_type": "Mental Arithmetic Quiz",
+    "gameplay_differences": [
+      "Math Equator Blitz variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "KidsBalloonPop",
+    "original_url": "/KidsBalloonPop/index.html",
+    "gameorbit_name": "Balloon Pop Kids Game Free",
+    "gameorbit_url": "/gameorbit/kids-balloon-pop-frenzy/index.html",
+    "variant_type": "Toddler Pop Fun",
+    "gameplay_differences": [
+      "Kids Balloon Pop Frenzy variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "ColoringKids",
+    "original_url": "/ColoringKids/index.html",
+    "gameorbit_name": "Coloring Book Kids Game",
+    "gameorbit_url": "/gameorbit/coloring-kids-magic/index.html",
+    "variant_type": "Digital Color Painting",
+    "gameplay_differences": [
+      "Coloring Kids Magic variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "TypingSpeedTest",
+    "original_url": "/TypingSpeedTest/index.html",
+    "gameorbit_name": "Typing Speed Test WPM Game",
+    "gameorbit_url": "/gameorbit/typing-sprint/index.html",
+    "variant_type": "Keyboard WPM Trainer",
+    "gameplay_differences": [
+      "Typing Sprint variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "TrafficJam",
+    "original_url": "/TrafficJam/index.html",
+    "gameorbit_name": "Traffic Jam Unblock Car Game",
+    "gameorbit_url": "/gameorbit/traffic-jam-rush-hour/index.html",
+    "variant_type": "Rush Hour Parking",
+    "gameplay_differences": [
+      "Traffic Jam Rush Hour variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  },
+  {
+    "original_game": "ABCTracing",
+    "original_url": "/ABCTracing/index.html",
+    "gameorbit_name": "ABC Tracing Alphabet Kids",
+    "gameorbit_url": "/gameorbit/abc-tracing-adventure/index.html",
+    "variant_type": "Letter Tracing Fun",
+    "gameplay_differences": [
+      "ABC Tracing Adventure variant with customized rules and themes",
+      "Enhanced game HUD and modern responsive styling",
+      "Dedicated standalone GameOrbit indexable page"
+    ]
+  }
+]

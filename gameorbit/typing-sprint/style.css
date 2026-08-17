@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --bg: #0d0f1a;
+    --surface: rgba(18, 20, 30, 0.92);
+    --accent: #4ade80;
+    --accent-hover: #22c55e;
+    --gold: #fbbf24;
+    --danger: #ef4444;
+    --panel: rgba(18, 20, 30, 0.88);
+    --glow: 0 0 20px rgba(74, 222, 128, 0.4);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden; /* Prevent bounce on mobile */
+    background: var(--bg);
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* ===========================
+   GAME WRAPPER
+=========================== */
+#game-wrapper {
+    position: relative;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px; /* Space for Mobile Bottom Ad */
+    box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+    #game-wrapper {
+        width: calc(100% - 160px);
+    }
+}
+
+/* ===========================
+   HIDDEN MOBILE INPUT
+=========================== */
+#mobile-keyboard-input {
+    position: fixed;
+    top: -1000px;
+    left: -1000px;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+}
+
+/* ===========================
+   PHASER CANVAS
+=========================== */
+#phaser-container {
+    position: absolute;
+    inset: 0;
+    bottom: 60px;
+}
+#game-canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    cursor: text;
+}
+
+/* ===========================
+   UI OVERLAYS
+=========================== */
+.overlay-screen {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    z-index: 50; transition: opacity 0.3s ease;
+}
+.overlay-screen.hidden {
+    opacity: 0; pointer-events: none;
+}
+
+.screen-box {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 35px 30px;
+    text-align: center;
+    max-width: 380px; width: 90%;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.1);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8) translateY(20px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.screen-icon { font-size: 4rem; margin-bottom: 10px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.4)); }
+.screen-box h1 { font-size: 1.8rem; margin: 0 0 10px; font-weight: 900; letter-spacing: 1px; color: var(--accent); }
+.screen-box p { font-size: 0.95rem; color: #a0a0c0; margin: 0 0 25px; line-height: 1.5; }
+
+/* Buttons */
+.pmg-btn {
+    border: none; outline: none;
+    font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.1rem;
+    padding: 16px 20px; border-radius: 50px;
+    cursor: pointer; width: 100%; transition: all 0.2s;
+    text-transform: uppercase; letter-spacing: 1.5px;
+}
+.pmg-btn-primary {
+    background: var(--accent); color: #000;
+    box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4);
+}
+.pmg-btn-primary:active { transform: scale(0.96); }
+
+.pmg-btn-outline {
+    background: transparent; color: #fff;
+    border: 2px solid rgba(255,255,255,0.2);
+    margin-top: 15px; display: block; text-decoration: none;
+}
+.pmg-btn-outline:active { background: rgba(255,255,255,0.1); }
+
+/* Game Over Stats */
+.go-stats {
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    padding: 15px; margin-bottom: 25px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 10px; border: 1px solid rgba(255,255,255,0.05);
+}
+.go-stat-box { display: flex; flex-direction: column; }
+.go-stat-label { font-size: 0.75rem; color: #888; text-transform: uppercase; font-weight: 800; margin-bottom: 5px; }
+.go-stat-val { font-size: 1.6rem; font-weight: 900; color: #fff; display: flex; align-items: baseline; justify-content: center; gap: 4px; }
+.go-stat-val span { font-size: 0.9rem; color: #888; }
+.go-wpm { color: var(--accent); }
+.go-acc { color: var(--gold); }
+
+/* Back Button */
+.back-btn {
+    position: absolute; bottom: 75px; left: 15px;
+    z-index: 100;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white; padding: 8px 16px;
+    border-radius: 50px; font-weight: 700;
+    text-decoration: none; font-size: 0.85rem;
+    transition: background 0.2s;
+}
+.back-btn:active { background: rgba(255,255,255,0.1); }
+
+/* Mobile Tap to Focus overlay - Optional if we need physical tap trigger */
+#mobile-focus-overlay {
+    position: absolute; inset: 0; bottom: 60px;
+    z-index: 40; pointer-events: auto;
+    display: none;
+}
+.mobile #mobile-focus-overlay {
+    display: block;
+}
+
+/* ===========================
+   UTILITIES
+=========================== */
+.hidden { display: none !important; }

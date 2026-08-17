@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Word Search Puzzle Free - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Word Search Puzzle Free free online! Experience the ultimate Find Hidden Words with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script src="../../sidebar.js"></script>
+
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6129521314653726"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadSocialBarAd();
+        });
+    </script>
+
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/wordsrarch200.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/wordsrarch200.png">
+    <meta property="og:title" content="Word Search Puzzle Free - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Word Search Puzzle Free free online! Experience the ultimate Find Hidden Words with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/word-search-blitz/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Classic Word Search Puzzle | Find English Words Game Online | PlayMixGames">
+    <meta property="twitter:description" content="Find the hidden words in the grid! Keep your brain sharp with endless daily word search logic puzzles. Free educational vocabulary game.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/word-search-blitz/index.html">
+    <meta name="keywords" content="play word search online, free word search puzzle, word hunt game">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+    <!-- ========================================= -->
+    <!-- Header -->
+    <header>
+        <a href="../../index.html" class="back-btn">← PlayMixGames</a>
+        <h1 class="game-title">WORD SEARCH</h1>
+        <div class="level-display">
+            LVL <span id="current-level">1</span>
+        </div>
+    </header>
+
+
+
+    <!-- Game Container -->
+    <div id="game-container">
+
+        <div id="theme-display">
+            <div id="theme-label">Current Theme</div>
+            <div id="theme-name">ANIMALS</div>
+        </div>
+
+        <!-- The Grid -->
+        <div id="word-grid">
+            <canvas id="highlight-canvas"></canvas>
+            <!-- Cells generated by JS -->
+        </div>
+
+        <!-- Word List -->
+        <div id="word-list">
+            <!-- Words generated by JS -->
+        </div>
+
+        <!-- Controls -->
+        <div id="controls">
+            <button id="hint-btn" class="control-btn" title="Hint">💡</button>
+            <button id="reset-btn" class="control-btn" title="Reset Level">🔄</button>
+        </div>
+
+        <!-- Level Complete Screen -->
+        <div id="level-complete-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 style="color: var(--h-green); font-size: 2rem; margin-bottom: 10px;">FOUND IT!</h1>
+                <p style="color: #ccc; margin-bottom: 20px;">You are becoming wiser!</p>
+                <div style="font-size: 3rem; margin-bottom: 20px;">🎓</div>
+                <button id="next-level-btn" class="game-btn">
+                    Next Exploration
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+    <!-- SEO: About Game & How to Play Section -->
+    
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Word Search Puzzle Free Free Online</h2>
+            <p>Welcome to <strong>Word Search Puzzle Free</strong>! Searching for the best free online WordSearch experience? Look no further. This high-energy <strong>Find Hidden Words</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Find Hidden Words Mode:</strong> High-speed action featuring Word Search Blitz variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Word Search Puzzle Free</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on word search blitz variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Word Search Puzzle Free online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/word-search-blitz/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Word Search Puzzle Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Word Search Puzzle Free features an upgraded <strong>Find Hidden Words</strong> format. Highlights include: Word Search Blitz variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Word Search Puzzle Free unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Word Search Puzzle Free is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Word Search Puzzle Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage word search blitz variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+</body>
+
+</html>

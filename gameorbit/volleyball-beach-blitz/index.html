@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Beach Volleyball 3D Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Beach Volleyball 3D Game free online! Experience the ultimate Spike Volleyball Court with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play volleyball online, beach volleyball 3d free, volleyball game browser">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="バレーボールアリーナ 3D - 高速オンラインスポーツ">
+    <meta name="twitter:description:ja" content="スパイク、ブロック、ダイブ！高速ビーチバレーボールマッチをオンラインで無料で楽しみましょう。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Arena de Voleibol 3D - Juego de deportes rápido">
+    <meta name="twitter:description:es" content="¡Remata, bloquea y lánzate en Volleyball Arena 3D! Compite en partidos de voleibol playa rápidamente.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Arène de Volleyball 3D - Jeu de sport rapide">
+    <meta name="twitter:description:fr" content="Smatchez, bloquez et plongez dans Volleyball Arena 3D ! Participez à des matchs de beach-volley rapides.">
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/VolleyballArena/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/VolleyballArena/index.html" />
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #ff9800; /* changed to orange tone for volleyball */
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(255, 152, 0, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 152, 0, 0.1);
+            border-top-color: #ff9800;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #ff9800, #ffeb3b);
+            animation: pmgFill 5s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pmgPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(0.98);
+            }
+        }
+
+        @keyframes pmgFill {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 95%;
+            }
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        .about-faq {
+            background: #111;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+    </style>
+
+    <meta property="og:title" content="Beach Volleyball 3D Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Beach Volleyball 3D Game free online! Experience the ultimate Spike Volleyball Court with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/volleyball-beach-blitz/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/volleyball-beach-blitz/index.html">
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Beach Volleyball 3D Game",
+  "description": "Play Beach Volleyball 3D Game free online! Experience the ultimate Spike Volleyball Court with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/VolleyballArena/index.html",
+  "image": "https://playmixgames.in/assets/volley200.png",
+  "genre": [
+    "Sports",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "ratingCount": "104",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/volley600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/volley600.png">
+    <meta property="twitter:title" content="Volleyball Arena 3D | Fast Paced Sports Game Online | PlayMixGames">
+    <meta property="twitter:description" content="Spike, block, and dive in Volleyball Arena 3D! Compete in fast-paced beach volleyball matches online for free. Mobile friendly sports game.">
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Game...</p>
+    </div>
+
+    <main>
+        <iframe id="game-frame" title="Volleyball Arena Game" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <section class="seo-content about-faq">
+        <h2 style="color: #ff9800; border-bottom: 2px solid #333; padding-bottom: 10px;">About Volleyball Arena</h2>
+        <p style="color: #bbb; line-height: 1.6;">
+            Play free online Volleyball Arena game. Volleyball Arena is an action-packed, fast-paced sports duel that brings the excitement of beach volleyball to your browser. Control your player with precision and battle against the AI in intense, floaty 10-round matches. Your goal is simple: hit the ball over the net and make it land on your opponent's side of the court. Jump, bump, and smash your way to victory by scoring 5 points before the AI does! This game is perfect for fans of casual sports games, featuring smooth physics and quick, addictive matches.
+        </p>
+        
+        <h2 style="color: #ff9800; margin-top: 30px; border-bottom: 2px solid #333; padding-bottom: 10px;">Features</h2>
+        <ul style="color: #bbb; line-height: 1.6; padding-left: 20px;">
+            <li>Exciting bouncy 1v1 volleyball match dynamics</li>
+            <li>Intelligent AI with progressive difficulty</li>
+            <li>Responsive mechanics tailored for satisfying hits</li>
+            <li>Fully optimized for desktop and mobile devices</li>
+        </ul>
+
+        <h2 style="color: #ff9800; margin-top: 30px; border-bottom: 2px solid #333; padding-bottom: 10px;">Frequently Asked Questions (FAQ)</h2>
+        <div style="margin-bottom: 15px;">
+            <strong style="color: #eee;">How do I play on a desktop?</strong>
+            <p style="color: #bbb; margin-top: 5px;">Use the Left and Right arrow keys to move. Press the Up arrow to jump, and the Spacebar to hit/bump the ball with extra force.</p>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <strong style="color: #eee;">Can I play Volleyball Arena on my mobile phone?</strong>
+            <p style="color: #bbb; margin-top: 5px;">Absolutely! The game detects mobile devices and provides responsive on-screen touch buttons for seamless gameplay.</p>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <strong style="color: #eee;">How do I win a match?</strong>
+            <p style="color: #bbb; margin-top: 5px;">A match ends when either you or the AI reaches 5 points. Make sure the ball lands on the opponent's side while defending your own area.</p>
+        </div>
+        <div>
+            <strong style="color: #eee;">Is there any cost to play?</strong>
+            <p style="color: #bbb; margin-top: 5px;">No! Volleyball Arena is 100% free with no hidden charges. You can play directly from your browser without needing to download anything or sign in.</p>
+        </div>
+    </section>
+
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(1000 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Beach Volleyball 3D Game Free Online</h2>
+            <p>Welcome to <strong>Beach Volleyball 3D Game</strong>! Searching for the best free online VolleyballArena experience? Look no further. This high-energy <strong>Spike Volleyball Court</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Spike Volleyball Court Mode:</strong> High-speed action featuring Volleyball Beach Blitz variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Beach Volleyball 3D Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on volleyball beach blitz variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Beach Volleyball 3D Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/volleyball-beach-blitz/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Beach Volleyball 3D Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Beach Volleyball 3D Game features an upgraded <strong>Spike Volleyball Court</strong> format. Highlights include: Volleyball Beach Blitz variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Beach Volleyball 3D Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Beach Volleyball 3D Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Beach Volleyball 3D Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage volleyball beach blitz variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Chess Game Online 2 Player - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Chess Game Online 2 Player free online! Experience the ultimate Classic Strategy Chess with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play chess online free, 2 player chess game, chess vs computer">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="チェスマスター - 3D戦略ボードゲーム">
+    <meta name="twitter:description:ja" content="古典的なチェスで戦略的思考をテストしましょう！美しいリアルな3DグラフィックスでスマートなAIと対戦。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Maestro del Ajedrez - Juego de estrategia 3D">
+    <meta name="twitter:description:es" content="¡Pon a prueba tu mente estratégica con el ajedrez clásico! Juega contra una IA inteligente en hermosos gráficos 3D.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Maître des Échecs - Jeu de stratégie 3D">
+    <meta name="twitter:description:fr" content="Testez votre esprit stratégique avec les échecs classiques ! Jouez contre une IA intelligente en 3D réaliste.">
+    <meta property="og:title" content="Chess Game Online 2 Player - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Chess Game Online 2 Player free online! Experience the ultimate Classic Strategy Chess with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/chess-puzzles/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/chess-puzzles/index.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+    <script defer src="../../sidebar.js"></script>
+
+            <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Chess Game Online 2 Player",
+  "description": "Play Chess Game Online 2 Player free online! Experience the ultimate Classic Strategy Chess with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/Chess/index.html",
+  "image": "https://playmixgames.in/assets/chess200.png",
+  "genre": [
+    "Board",
+    "Strategy",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "ratingCount": "102",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="twitter:title" content="Play Master Chess Online Free | 3D Strategy Board Game | PlayMixGames">
+    <meta property="twitter:description" content="Test your strategic mind with classic Chess! Play against smart AI in beautiful realistic 3D graphics in this ultimate brain training board game.">
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- Ad slots -->
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <!-- Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-bar-track"><div class="pmg-bar-fill"></div></div>
+    </div>
+
+    <a href="../../index.html" class="back-btn" style="position:fixed;top:15px;left:15px;z-index:10000;color:white;text-decoration:none;font-size:1.1rem;font-weight:700;background:rgba(0,0,0,0.55);padding:7px 14px;border-radius:20px;backdrop-filter:blur(5px);">← Back</a>
+
+    <main id="game-wrapper" aria-label="Chess Master">
+
+        <!-- MODE SELECTION SCREEN -->
+        <div id="modeScreen" class="mode-screen">
+            <div class="mode-box">
+                <div class="chess-logo">♟</div>
+                <h1>Chess Master</h1>
+                <p class="mode-sub">Choose your battle</p>
+                <div class="mode-buttons">
+                    <button type="button" id="vsAiBtn" class="mode-btn mode-btn-primary">
+                        <span class="mode-icon">🤖</span>
+                        <span>
+                            <strong>Play vs AI</strong>
+                            <small>Challenge the computer</small>
+                        </span>
+                    </button>
+                    <button type="button" id="vsFriendBtn" class="mode-btn">
+                        <span class="mode-icon">👥</span>
+                        <span>
+                            <strong>Play vs Friend</strong>
+                            <small>2 players, same device</small>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- GAME SCREEN -->
+        <div id="gameScreen" class="game-screen hidden">
+
+            <!-- Top HUD -->
+            <div class="chess-hud">
+                <div class="hud-left">
+                    <span class="chess-title">♟ Chess Master</span>
+                    <span class="mode-badge" id="modeBadge">Vs AI</span>
+                </div>
+                <div class="hud-right">
+                    <div id="turnLabel" class="turn-label">⬜ White to move</div>
+                    <button type="button" id="newGameBtn" class="chess-btn">New Game</button>
+                    <button type="button" id="changeModeBtn" class="chess-btn chess-btn-ghost">Modes</button>
+                </div>
+            </div>
+
+            <!-- Difficulty row (shown only vs AI) -->
+            <div id="diffRow" class="diff-row" style="display:none;">
+                <span class="diff-label-text">AI Difficulty:</span>
+                <button class="diff-btn" data-depth="1">🟢 Easy</button>
+                <button class="diff-btn" data-depth="2">🟡 Medium</button>
+                <button class="diff-btn" data-depth="3">🔴 Hard</button>
+                <span id="diffLabel" class="diff-current">🟢 Easy</span>
+            </div>
+
+            <!-- Captured pieces display -->
+            <div class="captured-row">
+                <div class="captured-side" id="capturedByWhite">
+                    <span class="cap-label">White took:</span>
+                    <span class="cap-pieces" id="capWhitePieces"></span>
+                </div>
+                <div class="captured-side" id="capturedByBlack">
+                    <span class="cap-label">Black took:</span>
+                    <span class="cap-pieces" id="capBlackPieces"></span>
+                </div>
+            </div>
+
+            <!-- Board -->
+            <div class="board-wrap">
+                <!-- Column labels -->
+                <div class="board-labels-top">
+                    <span></span>
+                    <span>a</span><span>b</span><span>c</span><span>d</span>
+                    <span>e</span><span>f</span><span>g</span><span>h</span>
+                </div>
+                <div class="board-with-ranks">
+                    <div class="ranks-left" id="ranksLeft"></div>
+                    <div class="board-outer">
+                        <div id="board" class="board" role="grid" aria-label="Chess board"></div>
+                        <!-- Promotion overlay -->
+                        <div class="promotion-overlay hidden" id="promotionOverlay">
+                            <p>Promote pawn:</p>
+                            <div class="promotion-pieces" id="promotionPieces"></div>
+                        </div>
+                    </div>
+                    <div class="ranks-right" id="ranksRight"></div>
+                </div>
+            </div>
+
+            <!-- Move history -->
+            <div class="move-history-wrap">
+                <div class="move-history-label">Move History</div>
+                <div id="moveHistory" class="move-history"></div>
+            </div>
+        </div>
+
+        <!-- GAME OVER OVERLAY -->
+        <div id="gameOverOverlay" class="game-over-overlay hidden">
+            <div class="game-over-box">
+                <div class="game-over-icon" id="gameOverIcon">♛</div>
+                <h2 id="gameOverTitle">Checkmate!</h2>
+                <p id="gameOverMessage">Black wins</p>
+                <button type="button" id="playAgainBtn" class="chess-btn chess-btn-large">Play Again</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Info Sections -->
+    <section class="game-info" style="margin-top:70px;">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Classic chess rules with a modern neon twist:</p>
+                    <ul>
+                        <li><strong>Select:</strong> Tap or click a piece to select it. Valid moves will highlight in green.</li>
+                        <li><strong>Move:</strong> Tap a highlighted square to move your piece there.</li>
+                        <li><strong>Special Moves:</strong> Castling, en passant, and pawn promotion are all fully supported!</li>
+                        <li><strong>Check:</strong> Your king glows red when in check. You must resolve it immediately.</li>
+                        <li><strong>Win:</strong> Checkmate the opponent's king to win the game!</li>
+                        <li><strong>AI Mode:</strong> The AI thinks 2 moves ahead using minimax + alpha-beta pruning.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-card">
+                <h2>About Chess Master</h2>
+                <div class="info-content">
+                    <p>Play free online Chess Master — a beautifully redesigned chess experience built for PlayMix. Features a neon dark-themed board, piece capture tracking, move history, full chess rules, and a smart AI opponent.</p>
+                    <p>Works perfectly on mobile with large tap targets and a responsive board layout.</p>
+                    <p style="font-size:0.85rem;color:#555;margin-top:12px;">
+                        <em>Chess engine adapted from open-source Chess Game by Talha (he-is-talha, MIT License). Redesigned with Playmix neon UI, captured pieces display, move history, rank/file labels, and Playmix platform integration.</em>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align:center;padding:20px;background:#050510;color:#555;font-size:0.85rem;">
+        &copy; 2026 PlayMix Games · Chess engine by <a href="https://github.com/he-is-talha" style="color:#4d79ff;" target="_blank" rel="noopener">Talha</a> (MIT License)
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 350);
+            }
+        });
+    </script>
+    <script defer src="game.js"></script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Chess Game Online 2 Player Free Online</h2>
+            <p>Welcome to <strong>Chess Game Online 2 Player</strong>! Searching for the best free online Chess experience? Look no further. This high-energy <strong>Classic Strategy Chess</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Classic Strategy Chess Mode:</strong> High-speed action featuring Chess Puzzle Mode variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Chess Game Online 2 Player</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on chess puzzle mode variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Chess Game Online 2 Player online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/chess-puzzles/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Chess Game Online 2 Player?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Chess Game Online 2 Player features an upgraded <strong>Classic Strategy Chess</strong> format. Highlights include: Chess Puzzle Mode variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Chess Game Online 2 Player unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Chess Game Online 2 Player is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Chess Game Online 2 Player?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage chess puzzle mode variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

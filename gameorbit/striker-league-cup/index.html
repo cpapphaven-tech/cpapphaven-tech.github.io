@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                }
+            });
+        })();
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Soccer Football Game Online - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Soccer Football Game Online free online! Experience the ultimate League Soccer Striker with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play soccer online free, football game browser, striker league soccer">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ストライカー・リーグ - オンラインサッカー選手権">
+    <meta name="twitter:description:ja" content="ストライカー・リーグでチームを勝利に導こう！戦略的なフォーメーションと物理ベースのシュートが楽しめる高速2Dサッカー。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Striker League - Campeonato de Fútbol">
+    <meta name="twitter:description:es" content="¡Lleva a tu equipo a la victoria en Striker League! Fútbol 2D rápido con formaciones estratégicas.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Striker League - Championnat de Football">
+    <meta name="twitter:description:fr" content="Menez votre équipe à la victoire dans Striker League ! Action de football 2D rapide.">
+    
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+    <script defer src="../../sidebar.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Soccer Football Game Online",
+  "description": "Play Soccer Football Game Online free online! Experience the ultimate League Soccer Striker with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/StrikerLeague/index.html",
+  "image": "https://playmixgames.in/assets/Strikerleague200.png",
+  "genre": [
+    "Football",
+    "Sports",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "148",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:title" content="Soccer Football Game Online - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Soccer Football Game Online free online! Experience the ultimate League Soccer Striker with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/striker-league-cup/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Striker League Soccer | Play Online Football Championship | PlayMixGames">
+    <meta property="twitter:description" content="Lead your team to victory in Striker League! Experience fast-paced 2D soccer action with strategic formations and physics-based shooting. Play free online.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/striker-league-cup/index.html">
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Pitching the field...</p>
+    </div>
+
+    <a href="../../index.html" class="back-btn">← Back</a>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="ui-layer">
+        <div id="hud">
+            <div class="hud-team">
+                <div class="team-color-indicator" style="background: #00ff44;"></div>
+                <div>
+                    <div class="hud-name">HOME</div>
+                    <div id="score-home" class="hud-score" style="color: #00ff44;">0</div>
+                </div>
+            </div>
+            <div id="match-timer" class="hud-timer">00:00</div>
+            <div class="hud-team">
+                <div style="text-align: right;">
+                    <div class="hud-name">CPU</div>
+                    <div id="score-away" class="hud-score" style="color: #ff4444;">0</div>
+                </div>
+                <div class="team-color-indicator" style="background: #ff4444;"></div>
+            </div>
+        </div>
+
+        <div id="match-events"></div>
+
+        <div id="power-bar-container">
+            <div id="power-bar"></div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen">
+            <div class="game-title">
+                <span class="title-green">STRIKER</span> <span class="title-white">LEAGUE</span>
+            </div>
+            <div class="subtitle">FOOTBALL CHAMPIONSHIP</div>
+
+            <div style="margin-bottom: 25px; text-align: center;">
+                <div style="font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 3px; font-family: 'Orbitron';">Choose Formation</div>
+                <div class="formation-selector">
+                    <button class="formation-btn active" data-form="442">4-4-2</button>
+                    <button class="formation-btn" data-form="433">4-3-3</button>
+                    <button class="formation-btn" data-form="352">3-5-2</button>
+                </div>
+            </div>
+
+            <button class="pmg-btn" id="start-btn">PLAY MATCH</button>
+            <button class="pmg-btn pmg-btn-secondary" id="howto-btn">HOW TO PLAY</button>
+        </div>
+
+        <!-- Match Over Screen -->
+        <div id="matchover-screen" class="screen hidden">
+            <div class="game-title" style="font-size: 40px;">
+                <span class="title-green">MATCH</span> <span class="title-white">OVER</span>
+            </div>
+
+            <div style="font-family: 'Orbitron', monospace; font-size: 56px; margin: 20px 0; display: flex; align-items: center; gap: 20px;">
+                <span id="final-home" style="color: #00ff44;">0</span>
+                <span style="color: rgba(255,255,255,0.2); font-size: 32px;">VS</span>
+                <span id="final-away" style="color: #ff4444;">0</span>
+            </div>
+
+            <div id="match-result" style="font-size: 24px; font-family: 'Orbitron'; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 6px;"></div>
+
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-val" id="stat-shots">0</div>
+                    <div class="stat-lab">Shots</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="stat-passes">0</div>
+                    <div class="stat-lab">Passes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="stat-possession">50%</div>
+                    <div class="stat-lab">Possession</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-val" id="stat-saves">0</div>
+                    <div class="stat-lab">Saves</div>
+                </div>
+            </div>
+
+            <button class="pmg-btn" id="rematch-btn">REMATCH</button>
+            <button class="pmg-btn pmg-btn-secondary" id="menu-btn">MENU</button>
+        </div>
+
+        <!-- How To Play -->
+        <div id="howto-screen" class="screen hidden">
+            <div class="game-title" style="font-size: 32px;">
+                <span class="title-green">CONTROLS</span>
+            </div>
+
+            <div style="max-width: 320px; text-align: left; margin: 30px 0; line-height: 2.2; color: #cbd5e1; font-size: 1.1rem;">
+                <p>⚡ <strong>DRAG</strong> on your player to aim</p>
+                <p>⚡ <strong>PULL BACK</strong> for more power</p>
+                <p>⚡ <strong>RELEASE</strong> to shoot or pass</p>
+                <p>⚡ <strong>STRATEGY:</strong> Aim at goal to score!</p>
+            </div>
+
+            <button class="pmg-btn" id="howto-back-btn">READY</button>
+        </div>
+    </div>
+
+    <!-- Information Section -->
+    <section class="game-info" style="position: relative; z-index: 1; background: #050f05; padding-top: 50px;">
+        <div class="info-container" style="max-width: 800px; margin: 0 auto; padding: 40px 20px;">
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #00ff44; margin-bottom: 20px; font-family: 'Orbitron'; font-size: 1.5rem;">The Soccer Championship Awaits</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <p>Enter the arena in <strong>Striker League</strong>, the ultimate 2D soccer experience crafted for tactical masters and fast-reacting strikers. Control your dream team through intuitive drag-and-aim mechanics, allowing you to execute pinpoint passes and devastating shots with simple touch or mouse controls.</p>
+                </div>
+            </div>
+
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #00ff44; margin-bottom: 20px; font-family: 'Orbitron'; font-size: 1.5rem;">Why Play Striker League?</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <p>Striker League is designed for football enthusiasts who enjoy the strategy of a <strong>soccer simulator</strong> combined with the fast-paced thrill of <strong>arcade sports games</strong>. Whether you're a fan of the English Premier League, La Liga, or World Cup tournaments, this game lets you step into the shoes of a manager and a striker simultaneously.</p>
+                </div>
+            </div>
+
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #00ff44; margin-bottom: 20px; font-family: 'Orbitron'; font-size: 1.5rem;">Soccer Game Strategy Tips</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <p>To win the <strong>Striker League Championship</strong>, focus on possession. Use short passes to move your teammates up the field, then look for an opening to unleash a high-power shot. Remember, the 3-5-2 formation is excellent for controlling the midfield, while 4-3-3 provides maximum attacking pressure on the CPU defense.</p>
+                </div>
+            </div>
+
+            <div class="info-card" style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 30px;">
+                <h2 style="color: #00ff44; margin-bottom: 20px; font-family: 'Orbitron'; font-size: 1.5rem;">Frequently Asked Questions (FAQ)</h2>
+                <div class="info-content" style="color: #94a3b8; line-height: 1.8;">
+                    <p><strong>Is Striker League free to play?</strong><br>Yes! You can play Striker League Soccer for free directly in your web browser with no download required.</p>
+                    <p><strong>Can I play on mobile?</strong><br>Absolutely. The game is fully optimized for touch controls on iPhone, iPad, and Android devices.</p>
+                    <p><strong>How do I score more goals?</strong><br>Try aiming for the corners of the net where the goalkeeper is less likely to reach, and use the pull-back drag mechanic to maximize your power.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Soccer Football Game Online Free Online</h2>
+            <p>Welcome to <strong>Soccer Football Game Online</strong>! Searching for the best free online StrikerLeague experience? Look no further. This high-energy <strong>League Soccer Striker</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>League Soccer Striker Mode:</strong> High-speed action featuring Striker League Cup variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Soccer Football Game Online</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on striker league cup variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Soccer Football Game Online online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/striker-league-cup/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Soccer Football Game Online?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Soccer Football Game Online features an upgraded <strong>League Soccer Striker</strong> format. Highlights include: Striker League Cup variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Soccer Football Game Online unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Soccer Football Game Online is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Soccer Football Game Online?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage striker league cup variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

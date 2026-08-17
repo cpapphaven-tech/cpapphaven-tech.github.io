@@ -1,0 +1,384 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Outfit', sans-serif;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+}
+
+#adsterra-banner {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 160px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+#bottom-ad {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+@media screen and (min-width: 1024px) {
+    #adsterra-banner {
+        display: block;
+    }
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #100f24, #182245);
+    background-size: cover;
+    display: none; /* Blocked until js init */
+}
+
+/* Floating letters in background */
+#bda span {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    font-size: 40px;
+    font-weight: 900;
+    color: rgba(79, 172, 254, 0.15);
+    z-index: 1;
+}
+
+@keyframes anim2 {
+    0% { top: 100%; transform: rotate(0deg); }
+    100% { top: -30%; transform: rotate(360deg); }
+}
+
+/* Canvas drawing layer */
+#gameContainer {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 5;
+    pointer-events: auto; /* Catch touch/mouse events */
+}
+
+/* Tutorial Hand */
+#tutorialHand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    pointer-events: none;
+    display: none;
+    text-align: center;
+}
+
+#tutorialHand .icon {
+    font-size: 50px;
+    display: block;
+    animation: swipe 2s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+}
+
+#tutorialHand .text {
+    display: inline-block;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    animation: fadePulse 2s ease-in-out infinite;
+}
+
+@keyframes swipe {
+    0% { transform: translate(-30px, 30px) rotate(-15deg); }
+    50% { transform: translate(30px, -30px) rotate(15deg) scale(1.1); }
+    100% { transform: translate(-30px, 30px) rotate(-15deg); }
+}
+
+@keyframes fadePulse {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* Top Words Container */
+#wContainer {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    z-index: 2;
+}
+
+#topBar {
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 400px;
+}
+
+#header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#levelDiv {
+    margin: 0;
+    transition: all 0.5s linear;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+}
+
+#level {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#coinDiv {
+    display: flex;
+    align-items: center;
+    color: #facc15;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+#coinSign {
+    margin-left: 5px;
+}
+
+/* Slots for CROSSWORD GRID */
+#wcont {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/* Crossword Cell Wrapper */
+.wl, .wld, .empty-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: max(2px, min(1vw, 6px)); /* Responsive corners */
+    font-weight: 800;
+    text-transform: uppercase;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.empty-cell {
+    background: transparent;
+}
+
+.wl {
+    background: rgba(255, 255, 255, 0.08); /* Empty block */
+    color: transparent;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255,255,255,0.1);
+}
+
+.wld {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    border: 2px solid transparent;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 242, 254, 0.4), inset 0px -2px 5px rgba(0,0,0,0.2);
+    animation: anim1 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes anim1 {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* The circle of letters */
+#lContainer {
+    position: absolute;
+    z-index: 2; /* Needs to be behind canvas for touches if canvas covers it */
+    transition: transform 0.5s ease-out;
+    pointer-events: none; /* Let touches fall through to canvas */
+}
+
+.l {
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    position: absolute;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(236, 72, 153, 0.4), inset 0px -4px 5px rgba(0,0,0,0.2);
+    transition: transform 0.1s linear, box-shadow 0.1s;
+    text-transform: uppercase;
+}
+
+.l.active {
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(236, 72, 153, 0.6), inset 0px -2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+#preview {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#preview span {
+    background: rgba(255, 255, 255, 0.9);
+    display: none;
+    padding: 8px 24px;
+    color: #111;
+    font-size: 24px;
+    font-weight: 900;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    border: 2px solid transparent; /* modified dynamically */
+}
+
+/* Game Over / Wave Cleared Screen */
+#over {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(5, 5, 16, 0.85);
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+}
+
+#complete {
+    font-size: 38px;
+    font-weight: 900;
+    color: #4ade80;
+    text-shadow: 0 0 20px rgba(74, 222, 128, 0.5);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#starCnt {
+    position: relative;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-bottom: 40px;
+}
+
+#starbg { opacity: 0.2; }
+#star { position: absolute; top: 0; left: 0; width: 100%; text-align: center; }
+
+#star span {
+    display: inline-block;
+    animation: bounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+#star span:nth-child(2) { animation-delay: 0.15s; }
+#star span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounce {
+    0% { transform: scale(0); }
+    80% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pmg-btn {
+    background: linear-gradient(135deg, #4ade80, #10b981);
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 15px 40px;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+    outline: none;
+    text-transform: uppercase;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pmg-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.4);
+}
+
+/* Tool Buttons (Shuffle, Hint) */
+.tool-btn {
+    position: absolute;
+    bottom: 30px;
+    z-index: 20;
+    font-size: 26px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.tool-btn:active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0.9);
+}
+
+/* Mobile defaults */
+#shuffle { left: 40px; }
+#hint { right: 40px; }
+
+/* Large Desktop - Keep away from Right Ad Sidebar which is 160px wide */
+@media screen and (min-width: 768px) {
+    #hint { right: 200px; } /* Push away from the 160px sidebar */
+    
+    /* Tutorial Hand Positioning compensation */
+    #tutorialHand {
+        left: calc(50% - 80px); /* Adjust center considering right panel is excluded natively via js */
+    }
+}

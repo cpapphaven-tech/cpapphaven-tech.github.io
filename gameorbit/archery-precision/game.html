@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Archery Master Bow Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Archery Master Bow Game free online! Experience the ultimate Bullseye Bow Arrow with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+
+    <!-- Analytics & Ads -->
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+    <script src="../../sidebar.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+        onload="console.log('✅ Supabase loaded')"
+        onerror="console.warn('⚠️ Supabase failed')">
+    </script>
+
+    <!-- Phaser 3 -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:title" content="Archery Master Bow Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Archery Master Bow Game free online! Experience the ultimate Bullseye Bow Arrow with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/archery-precision/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Archery Master Bow Physics | Play 2D Slingshot Shooter Game | PlayMixGames">
+    <meta property="twitter:description" content="Draw your bow, factor the wind, and release! Step into the Archery Master arena in this realistic physics-based slingshot target game.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/archery-precision/index.html">
+    <meta name="keywords" content="play archery online, archery master free, bow and arrow target game">
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <!-- PMG Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading the Range...</p>
+    </div>
+
+    <!-- Back Button -->
+    <a href="../../index.html" class="back-btn" id="back-btn">← Back</a>
+
+    <!-- Main Game Wrapper -->
+    <div id="game-wrapper">
+
+        <!-- HUD is now rendered inside the Phaser Canvas -->
+        <!-- Phaser Canvas container -->
+        <div id="phaser-container"></div>
+
+        <!-- Toast removed -->
+        <!-- Pull Power Meter -->
+        <div id="pull-meter" style="display:none;position:absolute;bottom:72px;left:50%;transform:translateX(-50%);width:160px;height:8px;background:rgba(255,255,255,0.08);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);z-index:600;">
+            <div id="pull-fill" style="height:100%;width:0%;border-radius:10px;transition:width 0.05s,background 0.2s;"></div>
+        </div>
+        <!-- Mobile Shoot Button - HOLD to draw, release to fire -->
+        <button id="shoot-btn" aria-label="Hold to draw bow">🏹 HOLD</button>
+
+        <!-- Orientation Hint -->
+        <div id="orientation-hint">
+            <div class="hint-content">
+                <div class="rotate-icon">📱</div>
+                <p>Please rotate your device to Portrait Mode to play!</p>
+            </div>
+        </div>
+
+        <!-- ========= START SCREEN ========= -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-box">
+                <div class="screen-icon">🎯</div>
+                <h1>Archery<br>Master</h1>
+                <p>Pull the slingshot DOWN and release to shoot arrows. Pop as many colored balloons as you can before the 60 second timer runs out to clear the level!</p>
+                <div class="best-score-row">
+                    <div class="stat-box">
+                        <div class="stat-label">Best Score</div>
+                        <div class="stat-value" id="start-best">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Best Level</div>
+                        <div class="stat-value" id="start-level">1</div>
+                    </div>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="start-btn">▶ PLAY NOW</button>
+            </div>
+        </div>
+
+        <!-- ========= LEVEL CLEAR SCREEN ========= -->
+        <div id="level-clear-screen" class="overlay-screen hidden">
+            <div class="screen-box">
+                <div class="screen-icon">⭐</div>
+                <h2 id="level-clear-title">LEVEL 1 CLEAR!</h2>
+                <p id="level-clear-sub">Great shooting! Ready for the next challenge?</p>
+                <div class="best-score-row">
+                    <div class="stat-box">
+                        <div class="stat-label">Score</div>
+                        <div class="stat-value" id="lc-score">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Accuracy</div>
+                        <div class="stat-value" id="lc-acc">-</div>
+                    </div>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="next-level-btn">NEXT LEVEL →</button>
+            </div>
+        </div>
+
+        <!-- ========= GAME OVER SCREEN ========= -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-box">
+                <div class="screen-icon" id="go-icon">💔</div>
+                <h1 id="go-title">GAME OVER</h1>
+                <div id="final-score-display">0</div>
+                <div id="final-level-display">Level 1</div>
+                <div class="divider"></div>
+                <div class="best-score-row">
+                    <div class="stat-box">
+                        <div class="stat-label">Best Score</div>
+                        <div class="stat-value" id="go-best">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Best Level</div>
+                        <div class="stat-value" id="go-best-level">1</div>
+                    </div>
+                </div>
+                <button class="pmg-btn pmg-btn-primary" id="retry-btn">🔄 TRY AGAIN</button>
+                <a href="../../index.html" class="pmg-btn pmg-btn-secondary" style="display:block;text-align:center;text-decoration:none;margin-top:10px;padding:14px;border-radius:50px;">🏠 More Games</a>
+            </div>
+        </div>
+
+    </div><!-- end #game-wrapper -->
+
+    <!-- Game Logic -->
+    <script src="game.js"></script>
+
+    <!-- Loader hide -->
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                loader.classList.add('hidden');
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Archery Master Bow Game Free Online</h2>
+            <p>Welcome to <strong>Archery Master Bow Game</strong>! Searching for the best free online ArcheryMaster experience? Look no further. This high-energy <strong>Bullseye Bow Arrow</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Bullseye Bow Arrow Mode:</strong> High-speed action featuring Archery Precision Challenge variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Archery Master Bow Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on archery precision challenge variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Archery Master Bow Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/archery-precision/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Archery Master Bow Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Archery Master Bow Game features an upgraded <strong>Bullseye Bow Arrow</strong> format. Highlights include: Archery Precision Challenge variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Archery Master Bow Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Archery Master Bow Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Archery Master Bow Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage archery precision challenge variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

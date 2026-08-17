@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Head Soccer 1v1 Football - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Head Soccer 1v1 Football free online! Experience the ultimate Big Head Soccer with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+    <script src="../../sidebar.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/headfootball600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/headfootball600.png">
+    <meta property="og:title" content="Head Soccer 1v1 Football - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Head Soccer 1v1 Football free online! Experience the ultimate Big Head Soccer with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/head-football-worldcup/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Head Football Soccer Heads | 1v1 Big Head Sports Game | PlayMixGames">
+    <meta property="twitter:description" content="Jump, kick, and headbutt the ball in explosive 1v1 soccer matches! Play fun big head football tournaments online for free.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/head-football-worldcup/index.html">
+    <meta name="keywords" content="head soccer game online, play head football free, 1v1 soccer game">
+</head>
+
+<body class="pmg-sidebar-start-closed">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Court...</p>
+    </div>
+
+    <a href="../../index.html" class="back-btn"
+        style="position: absolute; top: 15px; left: 15px; z-index: 10000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">←
+        Back</a>
+
+    <div id="game-wrapper">
+        <div class="score-board"
+            style="position: absolute; top: 15px; left: 50%; transform: translateX(-50%); z-index: 10000;">
+            <span class="score-p1" id="score-p1">0</span>
+            <span style="color: white; opacity: 0.5;">:</span>
+            <span class="score-p2" id="score-p2">0</span>
+        </div>
+
+        <!-- Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Overlay Messages -->
+        <div id="match-message" class="hidden">GOAL!</div>
+
+        <!-- Mobile Controls -->
+        <div id="mobile-controls">
+            <div class="d-pad">
+                <div class="ctrl-btn" id="btn-left">◀</div>
+                <div class="ctrl-btn" id="btn-right">▶</div>
+            </div>
+            <div class="action-pad">
+                <div class="ctrl-btn" id="btn-kick">⚽</div>
+                <div class="ctrl-btn" id="btn-jump">▲</div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay-screen">
+            <div class="screen-content">
+                <h1 style="color: #4facfe; font-size: 2.5rem; margin-top: 0; margin-bottom: 20px;">Head Football</h1>
+                <p style="color: #ccc; margin-bottom: 30px;">
+                    First to 5 Goals Wins!<br>
+                    <span style="font-size: 0.9rem; opacity: 0.7;">Desktop: Arrows to move, Up to jump, Space to
+                        kick<br>Mobile: Use on-screen buttons</span>
+                </p>
+
+                <button id="start-btn" class="game-btn">
+                    ▶ PLAY MATCH
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="overlay-screen hidden">
+            <div class="screen-content">
+                <h1 id="winner-text" style="color: #4facfe; font-size: 2.2rem; margin-bottom: 10px;">MATCH OVER</h1>
+                <div id="final-score" style="font-size: 3rem; margin-bottom: 20px; font-weight: bold; color: white;">0 -
+                    0
+                </div>
+
+                <button id="restart-btn" class="game-btn">
+                    🔄 PLAY AGAIN
+                </button>
+            </div>
+        </div>
+
+        <!-- Orientation Hint -->
+        <div id="orientation-hint" class="hidden">
+            <div class="hint-content">
+                <div class="rotate-icon">📱</div>
+                <p>Please rotate your device for the best experience!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Head Soccer 1v1 Football Free Online</h2>
+            <p>Welcome to <strong>Head Soccer 1v1 Football</strong>! Searching for the best free online HeadFootball experience? Look no further. This high-energy <strong>Big Head Soccer</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Big Head Soccer Mode:</strong> High-speed action featuring Head Football World Cup variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Head Soccer 1v1 Football</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on head football world cup variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Head Soccer 1v1 Football online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/head-football-worldcup/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Head Soccer 1v1 Football?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Head Soccer 1v1 Football features an upgraded <strong>Big Head Soccer</strong> format. Highlights include: Head Football World Cup variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Head Soccer 1v1 Football unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Head Soccer 1v1 Football is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Head Soccer 1v1 Football?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage head football world cup variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

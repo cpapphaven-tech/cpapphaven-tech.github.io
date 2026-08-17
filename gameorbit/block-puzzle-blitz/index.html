@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Block Puzzle Jewel Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Block Puzzle Jewel Game free online! Experience the ultimate 10x10 Grid Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play block puzzle online, block puzzle jewel free, 10x10 block game">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ブロックパズル・ダッシュ - 無料ウッドブロック・パズル">
+    <meta name="twitter:description:ja" content="ブロックをドロップしてグリッドを埋め、ラインを消しましょう！リラックスできる脳トレロジックパズル。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Block Puzzle Dash - Rompecabezas de bloques clásico">
+    <meta name="twitter:description:es" content="¡Suelta bloques para completar la cuadrícula! Un rompecabezas de lógica relajante y desafiante.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Block Puzzle Dash - Puzzle de blocs classique">
+    <meta name="twitter:description:fr" content="Placez les blocs pour remplir la grille ! Un puzzle de logique relaxant pour tous les âges.">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/BlockPuzzle/game.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/BlockPuzzle/game.html" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => { setTimeout(() => { if (!window.DEV_MODE) loadSocialBarAd(); }, 100); });
+    </script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="../../sidebar.js"></script>
+    <link rel="apple-touch-icon" href="../../icons/icon-192x192.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+
+
+    <meta property="og:title" content="Block Puzzle Jewel Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Block Puzzle Jewel Game free online! Experience the ultimate 10x10 Grid Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/block-puzzle-blitz/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/block-puzzle-blitz/index.html">
+            <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Block Puzzle Jewel Game",
+  "description": "Play Block Puzzle Jewel Game free online! Experience the ultimate 10x10 Grid Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/BlockPuzzle/game.html",
+  "image": "https://playmixgames.in/assets/block_puzzle_thumbnail_1772348265891.png",
+  "genre": [
+    "Puzzle",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "259",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/playmix-default.png">
+    <meta property="twitter:title" content="Block Puzzle Dash Classic | Play Wood Block Puzzle Free | PlayMixGames">
+    <meta property="twitter:description" content="Drop blocks to fill the grid and clear lines! Block Puzzle Dash is a relaxing and challenging brain training logic puzzle for all ages.">
+</head>
+
+<body>
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Block Puzzle Dash...</p>
+    </div>
+
+    <div id="tutorial-popup" class="tutorial-popup hidden">
+        <div class="tutorial-box">
+            <div class="tutorial-icon">🧩</div>
+            <div class="tutorial-text">
+                Drag blocks onto the grid.<br>
+                Fill rows or columns to clear them.<br>
+                Reach the target before moves run out!
+            </div>
+        </div>
+    </div>
+
+
+
+    <main class="game-container">
+        <h1>Block Puzzle Dash</h1>
+
+        <div id="game-ui">
+            <!-- HUD -->
+            <div id="hud">
+                <div class="hud-item level">
+                    <span class="label">LEVEL</span>
+                    <span id="level-val" class="value">1</span>
+                </div>
+                <div class="hud-item moves">
+                    <span id="moves-val" class="value yellow">20</span>
+                    <span class="label">MOVES</span>
+                </div>
+                <div class="hud-item score">
+                    <span id="score-val" class="value">0</span>
+                    <span id="target-val" class="label">TARGET: 300</span>
+                    <div class="progress-bar-container score-bar">
+                        <div id="score-progress" class="progress-bar score"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Overlays -->
+            <div id="level-complete" class="overlay hidden">
+                <div class="overlay-content">
+                    <div class="stars">⭐⭐⭐</div>
+                    <h2>LEVEL COMPLETE!</h2>
+                    <p id="lc-score-text">Target Reached!</p>
+                    <button id="next-level-btn" class="primary-btn">NEXT LEVEL →</button>
+                </div>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2 id="go-title">NO MOVES LEFT!</h2>
+                    <p class="go-lvl">Reached Level <span id="go-level-num">1</span></p>
+                    <div class="final-score-box">
+                        <span id="go-score" class="final-score">0</span>
+                        <span id="go-best" class="best-score">BEST: 0</span>
+                    </div>
+                    <button id="restart-btn" class="primary-btn">🔄 TRY AGAIN</button>
+                    <div id="promo-scroller"></div>
+                </div>
+            </div>
+
+            <div id="canvas-container">
+                <canvas id="game-canvas"></canvas>
+            </div>
+
+            <div id="piece-selector">
+                <canvas id="piece-canvas"></canvas>
+            </div>
+        </div>
+
+        <section class="game-description">
+            <h2>How to Play</h2>
+            <p>Play free online Block Puzzle Dash game. This addictive brain-teaser challenges you to fit various shapes into a grid, clearing lines to score big. Experience smooth 2D graphics and increasingly difficult levels as you strive to beat your high score!</p>
+            <ul>
+                <li><strong>Drag Shapes:</strong> Drag the blocks from the bottom row onto the grid.</li>
+                <li><strong>Clear Lines:</strong> Fill an entire horizontal or vertical line to clear it and score
+                    points.</li>
+                <li><strong>Beat the Clock:</strong> Reach the level target before the 60-second timer runs out.</li>
+                <li><strong>Strategy:</strong> Plan ahead to clear multiple lines simultaneously for massive combo
+                    bonuses!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links"><a href="../../index.html">Home</a><a href="../../privacy.html">Privacy Policy</a></div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+    <script defer src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () { var l = document.getElementById('pmg-loader'); if (l) { var f = l.querySelector('.pmg-bar-fill'); if (f) f.style.width = '100%'; setTimeout(function () { l.classList.add('hidden'); }, 400); } });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Block Puzzle Jewel Game Free Online</h2>
+            <p>Welcome to <strong>Block Puzzle Jewel Game</strong>! Searching for the best free online BlockPuzzle experience? Look no further. This high-energy <strong>10x10 Grid Puzzle</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>10x10 Grid Puzzle Mode:</strong> High-speed action featuring Block Puzzle Blitz variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Block Puzzle Jewel Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on block puzzle blitz variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Block Puzzle Jewel Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/block-puzzle-blitz/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Block Puzzle Jewel Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Block Puzzle Jewel Game features an upgraded <strong>10x10 Grid Puzzle</strong> format. Highlights include: Block Puzzle Blitz variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Block Puzzle Jewel Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Block Puzzle Jewel Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Block Puzzle Jewel Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage block puzzle blitz variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

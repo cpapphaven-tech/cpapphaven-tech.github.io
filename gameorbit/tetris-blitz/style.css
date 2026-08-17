@@ -1,0 +1,296 @@
+/* TETRIS SPECIFIC STYLES */
+
+.game-viewport {
+    background: #0a0a1a;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#game-ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* HUD */
+#hud-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 450px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hud-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.hud-label {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+#score-display, #level-display, #lines-display, #best-display {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+}
+
+.highlight-text {
+    color: #f5a623 !important;
+    text-shadow: 0 0 10px rgba(245, 166, 35, 0.5);
+}
+
+/* Main Area */
+#main-area {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+canvas {
+    background: #000;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8), 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+/* Side Panel */
+#side-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-box {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls-hint {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+.controls-hint p {
+    margin: 4px 0;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10, 10, 26, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    border-radius: 16px;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-content {
+    background: linear-gradient(135deg, #1e1b4b, #312e81);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    max-width: 90%;
+}
+
+.overlay-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.overlay-content p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #a855f7, #ec4899);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Outfit', sans-serif;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(236, 72, 153, 0.4);
+}
+
+/* Mobile Controls */
+#mobile-controls {
+    display: none; /* hidden on desktop */
+}
+
+.m-btn {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.m-btn:active {
+    background: rgba(255,255,255,0.25);
+    transform: scale(0.95);
+}
+
+.m-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.drop-btn {
+    width: 75px;
+    height: 75px;
+    font-size: 1.8rem;
+    background: rgba(245, 166, 35, 0.2);
+    border-color: rgba(245, 166, 35, 0.5);
+    color: #f5a623;
+}
+
+.drop-btn:active {
+    background: rgba(245, 166, 35, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #main-area {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    #right-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #side-panel {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .side-box {
+        padding: 10px;
+    }
+    
+    .controls-hint {
+        display: none;
+    }
+    
+    #mobile-controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        margin-top: 5px;
+    }
+    
+    .m-pad-row {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+    }
+    
+    #tetris-board {
+        /* JS dynamic sizing handles this now */
+    }
+    
+    #next-piece {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .game-viewport {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .m-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+    
+    .drop-btn {
+        width: 65px;
+        height: 65px;
+        font-size: 1.5rem;
+    }
+    
+    #mobile-controls {
+        gap: 5px;
+        margin-top: 5px;
+    }
+    
+    .m-col {
+        gap: 10px;
+    }
+    
+    #game-ui {
+        gap: 10px;
+    }
+}

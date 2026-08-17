@@ -1,0 +1,312 @@
+/* ================================================
+   2048 – PlayMixGames Style CSS
+   ================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', 'Open Sans', sans-serif;
+    background: #0f111a;
+    color: #fff;
+    min-height: 100vh;
+}
+
+#game-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(ellipse at top, #1a1d2e 0%, #0a0c14 100%);
+    padding-bottom: 80px;
+    overflow-x: hidden;
+}
+
+/* ---- HUD ---- */
+#hud {
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 16px 10px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hud-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #f5a623, #f76b1c, #e040fb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.hud-scores {
+    display: flex;
+    gap: 10px;
+}
+
+.score-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 8px 18px;
+    text-align: center;
+    min-width: 72px;
+    backdrop-filter: blur(6px);
+}
+
+.score-box.best {
+    border-color: rgba(245, 166, 35, 0.4);
+    background: rgba(245, 166, 35, 0.08);
+}
+
+.score-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.score-val {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-top: 2px;
+}
+
+/* ---- Buttons ---- */
+.pmg-btn-sm {
+    background: linear-gradient(135deg, #f5a623, #f76b1c);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(247, 107, 28, 0.4);
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.pmg-btn-sm:hover, .pmg-btn-sm:active {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(247, 107, 28, 0.55);
+}
+
+.pmg-btn {
+    background: linear-gradient(135deg, #f5a623, #f76b1c);
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(247, 107, 28, 0.4);
+    transition: transform 0.15s, box-shadow 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pmg-btn:hover { transform: translateY(-2px); }
+
+.pmg-btn-outline {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.3);
+    box-shadow: none;
+    color: #fff;
+}
+
+.pmg-btn-outline:hover {
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-2px);
+}
+
+/* ---- Board ---- */
+#board-container {
+    position: relative;
+    padding: 10px;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 10px;
+    position: relative;          /* REQUIRED — tiles are absolute children */
+    width: min(90vw, 440px);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(245,166,35,0.1);
+    user-select: none;
+    touch-action: none;
+    cursor: grab;
+}
+
+#board:active { cursor: grabbing; }
+
+.cell {
+    background: rgba(255,255,255,0.04);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.tile {
+    position: absolute;   /* positioned by JS — requires #board position:relative */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 1;
+    transition: none;     /* JS handles positioning — no transition lag */
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Tile appear animation */
+@keyframes tileAppear {
+    from { transform: scale(0); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes tileMerge {
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.18); }
+    100% { transform: scale(1); }
+}
+
+.tile.new    { animation: tileAppear 0.15s ease-out; }
+.tile.merged { animation: tileMerge 0.2s ease; }
+
+/* Tile colors — vibrant neon-dark palette */
+.tile[data-val="2"]    { background: #2d3748; color: #e2e8f0; }
+.tile[data-val="4"]    { background: #2d4a5e; color: #e2e8f0; }
+.tile[data-val="8"]    { background: #1d5c6e; color: #fff; }
+.tile[data-val="16"]   { background: #1a6e5a; color: #fff; font-size: 1.7rem; }
+.tile[data-val="32"]   { background: #285e3e; color: #fff; font-size: 1.7rem; }
+.tile[data-val="64"]   { background: #c45500; color: #fff; font-size: 1.6rem; box-shadow: 0 0 14px rgba(245,166,35,0.3); }
+.tile[data-val="128"]  { background: #c2870f; color: #fff; font-size: 1.4rem; box-shadow: 0 0 16px rgba(245,166,35,0.4); }
+.tile[data-val="256"]  { background: #b07d0c; color: #fff; font-size: 1.3rem; box-shadow: 0 0 18px rgba(245,166,35,0.5); }
+.tile[data-val="512"]  { background: #9a5e1c; color: #fff; font-size: 1.2rem; box-shadow: 0 0 20px rgba(247,107,28,0.5); }
+.tile[data-val="1024"] { background: linear-gradient(135deg, #f5a623, #f76b1c); color: #fff; font-size: 1rem; box-shadow: 0 0 24px rgba(247,107,28,0.6); }
+.tile[data-val="2048"] { background: linear-gradient(135deg, #e040fb, #7c4dff, #f5a623); color: #fff; font-size: 1rem; box-shadow: 0 0 32px rgba(224,64,251,0.7); }
+.tile[data-val="4096"] { background: linear-gradient(135deg, #00e5ff, #00b0ff); color: #fff; font-size: 0.9rem; box-shadow: 0 0 32px rgba(0,229,255,0.7); }
+.tile[data-val="8192"] { background: linear-gradient(135deg, #69f0ae, #00bfa5); color: #111; font-size: 0.85rem; box-shadow: 0 0 32px rgba(105,240,174,0.7); }
+
+/* ---- Overlay ---- */
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9990;
+    backdrop-filter: blur(12px);
+}
+
+.overlay.hidden { display: none; }
+
+.overlay-box {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+    padding: 40px 32px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    max-width: 360px;
+    width: 88%;
+}
+
+.overlay-box h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.overlay-box p {
+    color: #94a3b8;
+    margin-bottom: 28px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.overlay-btns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ---- Game info / How to play ---- */
+.game-info {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 16px 100px;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.info-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.info-card h2 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: #f5a623;
+}
+
+.info-content p, .info-content li {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+.info-content ul { padding-left: 18px; }
+.info-content li { margin-bottom: 6px; }
+.info-content strong { color: #e2e8f0; }
+
+/* ---- Responsive ---- */
+@media (max-width: 520px) {
+    .hud-title { font-size: 2rem; }
+    .score-val { font-size: 1.1rem; }
+    .tile { font-size: 1.5rem; }
+    .tile[data-val="1024"] { font-size: 0.85rem; }
+    .tile[data-val="2048"] { font-size: 0.8rem; }
+    .info-container { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 380px) {
+    .hud-title { font-size: 1.7rem; }
+    .tile { font-size: 1.2rem; }
+}

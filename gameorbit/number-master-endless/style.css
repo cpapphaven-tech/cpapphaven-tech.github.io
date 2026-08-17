@@ -1,0 +1,160 @@
+/* Number Master specific styles */
+
+#game-ui {
+    position: relative;
+    width: 100%;
+    max-width: 480px; /* Mobile width */
+    height: 80vh;
+    max-height: 800px;
+    margin: 0 auto;
+    background: #0f172a; /* Dark slate background */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+#game-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none; /* Prevent browser scrolling when swiping */
+}
+
+/* HUD Overlay */
+#hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    z-index: 10;
+    pointer-events: none; /* Let clicks pass through to canvas */
+}
+
+.hud-cell {
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 10px 15px;
+    text-align: center;
+    min-width: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hud-big {
+    font-size: 24px;
+    font-weight: 900;
+    color: #f8fafc;
+    margin-bottom: 4px;
+}
+
+.hud-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
+
+/* Overlays */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    transition: opacity 0.3s ease;
+}
+
+.overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay-inner {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 320px;
+}
+
+.overlay-inner h2 {
+    font-size: 28px;
+    margin: 0 0 15px 0;
+    color: #f8fafc;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.overlay-inner p {
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    transition: transform 0.1s, box-shadow 0.1s;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+}
+
+.primary-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+}
+
+.lc-stars {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.lc-score-line {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fbbf24;
+    margin-bottom: 15px;
+}
+
+.go-score-wrap {
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.go-score {
+    font-size: 32px;
+    font-weight: 900;
+    color: #3b82f6;
+}
+
+.go-lvl {
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 700;
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <title>Snake Game Online Free - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Snake Game Online Free free online! Experience the ultimate Classic Slither Arcade with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play snake game online, classic snake free, google snake game">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ネオンスネーク - クラシックなアーケードゲーム">
+    <meta name="twitter:description:ja" content="モダンなネオンのひねりを加えたクラシックなスネークレトロゲームをプレイしましょう！光るドットを食べ、尻尾を伸ばし、生き残りましょう。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Serpiente Neón - Juego clásico de arcade">
+    <meta name="twitter:description:es" content="¡Juega al clásico juego retro de la serpiente con un toque moderno de neón! Sobrevive en el laberinto infinito.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Serpent Néon - Jeu d'arcade classique">
+    <meta name="twitter:description:fr" content="Jouez au jeu rétro classique Snake avec une touche néon moderne ! Mangez les points brillants et survivez.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/snake-survival/index.html">
+    
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+    <script defer src="../../sidebar.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Snake Game Online Free",
+  "description": "Play Snake Game Online Free free online! Experience the ultimate Classic Slither Arcade with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/NeonSnake/index.html",
+  "image": "https://playmixgames.in/assets/snake200.png",
+  "genre": [
+    "Classic",
+    "Arcade",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "103",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/snake600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/snake600.png">
+    <meta property="og:title" content="Snake Game Online Free - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Snake Game Online Free free online! Experience the ultimate Classic Slither Arcade with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/snake-survival/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Neon Snake Classic Arcade | Play Modern Snake Online Free | PlayMixGames">
+    <meta property="twitter:description" content="Play the classic Snake retro game with a modern neon twist! Eat the glowing dots, grow your tail, and survive the endless maze for a high score.">
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- Ad Space -->
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <main class="game-main">
+        <div id="game-wrapper">
+            
+            <a href="../../index.html" class="back-btn" style="position: absolute; top: 15px; left: 15px; z-index: 1000; color: white; text-decoration: none; font-size: 1.2rem; font-weight: 700; background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 20px;">← Back</a>
+
+            <div id="ui-overlay">
+                <div id="score-board" role="status" aria-live="polite" aria-label="Game scores">
+                    <span class="hud-item highlight-pill green">Lvl: <span id="level-display">1</span></span>
+                    <span class="hud-item highlight-pill yellow">Target: <span id="target-score">5</span></span>
+                    <span class="hud-item highlight-pill blue">Score: <span id="current-score">0</span></span>
+                    <span class="hud-item highlight-pill red" id="timer-container">Time: <span id="time-left">60</span>s</span>
+                </div>
+            </div>
+
+            <!-- The Canvas Board -->
+            <canvas id="play-board"></canvas>
+
+            <!-- Start Screen -->
+            <div id="start-screen" class="overlay hidden" style="display:none;" role="dialog">
+                <div class="overlay-box">
+                    <h2 id="game-title" style="color: #4ade80; font-size: 2.5rem; margin-top: 0;">Neon Snake</h2>
+                    <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.6;">
+                        Collect glowing dots before time runs out!<br>
+                        <strong>Desktop:</strong> Move mouse to guide the snake.<br>
+                        <strong>Mobile:</strong> Swipe to turn.
+                    </p>
+                    <button id="start-btn" class="pmg-btn">PLAY NOW</button>
+                </div>
+            </div>
+
+            <!-- Game Over / Level Complete Screen -->
+            <div id="game-over-screen" class="overlay hidden" role="dialog">
+                <div class="overlay-box">
+                    <h2 id="result-title" style="color: #f43f5e; font-size: 2.5rem; margin-top: 0;">Game Over</h2>
+                    <p id="result-desc" style="margin-bottom: 20px; font-size: 1.1rem;">You hit the wall or time ran out!</p>
+                    <button id="restart-btn" class="pmg-btn">PLAY AGAIN</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- How to Play Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play</h2>
+                <div class="info-content">
+                    <p>Navigate the neon grid with your snake:</p>
+                    <ul>
+                        <li><strong>Controls (Desktop):</strong> The snake automatically turns toward your hovering mouse cursor. No clicking required!</li>
+                        <li><strong>Controls (Mobile):</strong> Swipe anywhere on the screen (Up, Down, Left, Right) to direct the snake.</li>
+                        <li><strong>Rules:</strong> Collect glowing orbs to gain points. You must reach the Target Score before the countdown timer hits zero to advance to the next level.</li>
+                        <li><strong>Beware:</strong> If you crash into the arena borders or bite your own glowing tail, it's game over!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h2>About Neon Snake</h2>
+                <div class="info-content">
+                    <p>Play free online Neon Snake game. An enhanced, level-based adaptation of the classic Snake arcade game featuring dynamic mouse-hover controls, swipe support for mobile, and a thrilling countdown element.</p>
+                    <p><em>Based on original open-source Snake mechanics by Talha Bin Yousaf (MIT License). Re-imagined with modern Neon aesthetics, precision tracking, and progressive level design exclusively for Playmix Games.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Generic script hooks -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+    <script defer src="game.js"></script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Snake Game Online Free Free Online</h2>
+            <p>Welcome to <strong>Snake Game Online Free</strong>! Searching for the best free online NeonSnake experience? Look no further. This high-energy <strong>Classic Slither Arcade</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Classic Slither Arcade Mode:</strong> High-speed action featuring Snake Survival variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Snake Game Online Free</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on snake survival variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Snake Game Online Free online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/snake-survival/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Snake Game Online Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Snake Game Online Free features an upgraded <strong>Classic Slither Arcade</strong> format. Highlights include: Snake Survival variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Snake Game Online Free unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Snake Game Online Free is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Snake Game Online Free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage snake survival variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

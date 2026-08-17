@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Zen Physics Ball Bounce - Play Free Online Game | GameOrbit</title>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    <meta name="description" content="Play Zen Physics Ball Bounce free online! Experience the ultimate Relaxing Ball Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="zen bounce game online, relaxing physics game free, ball bounce puzzle">
+    
+    <meta property="og:title" content="Zen Physics Ball Bounce - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Zen Physics Ball Bounce free online! Experience the ultimate Relaxing Ball Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/zen-bounce-challenge/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/zen-bounce-challenge/index.html">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Zen Physics Ball Bounce",
+  "description": "Play Zen Physics Ball Bounce free online! Experience the ultimate Relaxing Ball Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/ZenBounce/index.html",
+  "image": "https://playmixgames.in/img/192.png",
+  "genre": [
+    "Puzzle",
+    "Casual"
+  ],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "ratingCount": "267",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <!-- Loaders & Analytics -->
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+    <script src="../../sidebar.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="../../loader.css">
+    
+    <!-- Matter.js for 2D Physics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/image600.png">
+    <meta property="twitter:title" content="Zen Bounce Puzzle | Relaxing Physics Game | PlayMixGames">
+    <meta property="twitter:description" content="Drag, aim, and release to clear all blocks! Enjoy the relaxing minimalist physics puzzle game where every bounce counts. Can you solve all levels?">
+</head>
+<body class="pmg-sidebar-start-open">
+    <!-- PlayMixGames Universal Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Calculating Angles...</p>
+    </div>
+
+    <!-- Game Wrapper -->
+    <div id="game-wrapper">
+        <div id="level-indicator">LEVEL 1</div>
+        <button id="reset-btn" class="icon-btn" title="Reset Level">🔄</button>
+        <div id="hint-text">DRAG TO AIM & SHOOT</div>
+        
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Message Overlay -->
+        <div id="message-overlay" class="hidden">
+            <h1 id="message-title">LEVEL CLEARED</h1>
+        </div>
+        
+        <!-- Game Complete Screen -->
+        <div id="game-over-screen" class="overlay hidden">
+            <div class="overlay-box">
+                <div class="overlay-icon">🌟</div>
+                <h1 class="overlay-title">ALL LEVELS CLEARED!</h1>
+                <p class="overlay-sub">You are a Zen Master.</p>
+                <button id="restart-btn" class="pmg-btn" style="margin-top:15px;">🔄 PLAY AGAIN</button>
+                <a href="../../index.html" class="pmg-btn-outline" style="margin-top:10px;display:block;text-align:center;text-decoration:none;">🏠 More Games</a>
+            </div>
+        </div>
+
+        <a href="../../index.html" class="back-btn">← Back</a>
+    </div>
+
+    <!-- About / FAQ Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>About Zen Bounce Puzzle</h2>
+                <p>Zen Bounce Puzzle is a minimalist physics-based puzzle game. Your goal is to clear the board of all white blocks by launching a ball. Calculate the perfect angles, let the ball bounce around, and enjoy the satisfying sounds of clearing a level.</p>
+            </div>
+            <div class="info-card">
+                <h2>Game Rules</h2>
+                <ul>
+                    <li><strong>Objective:</strong> The ball must touch all white targets to clear the level.</li>
+                    <li><strong>Obstacles:</strong> Black blocks act as walls for the ball to bounce off but do not need to be cleared.</li>
+                    <li><strong>One Shot:</strong> You only get one shot per attempt. If the ball leaves the screen without hitting all white targets, you must restart the level.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h4>How do I play?</h4>
+                    <p>Touch and drag anywhere on the screen to draw an aiming line. Release to shoot the ball in that direction.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What if I get stuck?</h4>
+                    <p>Experiment with different angles! Sometimes bouncing the ball off the edge of the screen or an obstacle is the key to victory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="game.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Zen Physics Ball Bounce Free Online</h2>
+            <p>Welcome to <strong>Zen Physics Ball Bounce</strong>! Searching for the best free online ZenBounce experience? Look no further. This high-energy <strong>Relaxing Ball Puzzle</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Relaxing Ball Puzzle Mode:</strong> High-speed action featuring Zen Bounce Challenge variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Zen Physics Ball Bounce</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on zen bounce challenge variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Zen Physics Ball Bounce online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/zen-bounce-challenge/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Zen Physics Ball Bounce?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Zen Physics Ball Bounce features an upgraded <strong>Relaxing Ball Puzzle</strong> format. Highlights include: Zen Bounce Challenge variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Zen Physics Ball Bounce unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Zen Physics Ball Bounce is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Zen Physics Ball Bounce?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage zen bounce challenge variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

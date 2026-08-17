@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <title>2048 Puzzle Game Online - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play 2048 Puzzle Game Online free online! Experience the ultimate Number Merge Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="play 2048 online, 2048 game free, number merge puzzle 2048">
+
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="2048ゲーム - 数字パズルゲーム">
+    <meta name="twitter:description:ja" content="2048を無料でオンラインプレイ！タイルをスライドして同じ数字を合体させて2048を目指せ！">
+
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Juego 2048 - Puzzle de Números Online">
+    <meta name="twitter:description:es" content="¡Juega 2048 gratis online! Desliza fichas y combina números iguales para llegar a la ficha 2048.">
+
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Jeu 2048 - Puzzle de Nombres en Ligne">
+    <meta name="twitter:description:fr" content="Jouez à 2048 gratuitement en ligne ! Faites glisser les tuiles et fusionnez les nombres identiques pour atteindre 2048.">
+
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/2048-hexagon/index.html">
+
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script defer type="module" src="../../analytics.js"></script>
+    <script defer src="../../ads.js"></script>
+    <script defer src="../../sidebar.js"></script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "2048 Puzzle Game Online",
+  "description": "Play 2048 Puzzle Game Online free online! Experience the ultimate Number Merge Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!",
+  "url": "https://playmixgames.in/Game2048/index.html",
+  "image": "https://playmixgames.in/assets/2048.png",
+  "genre": ["Puzzle", "Strategy", "Casual"],
+  "gamePlatform": "Web Browser",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PlayMixGames",
+    "url": "https://playmixgames.in"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "4820",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+    </script>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/assets/2048.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/assets/2048.png">
+    <meta property="og:title" content="2048 Puzzle Game Online - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play 2048 Puzzle Game Online free online! Experience the ultimate Number Merge Puzzle with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/2048-hexagon/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="2048 Game Online – Play Free Number Merge Puzzle | PlayMixGames">
+    <meta property="twitter:description" content="Play 2048 free online! Slide tiles, merge matching numbers and reach the legendary 2048 tile. Addictive number puzzle – no download needed.">
+</head>
+
+<body class="pmg-sidebar-start-open">
+    <!-- Ad Space -->
+    <div id="adsterra-banner" class="pmg-side-ad"></div>
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <main class="game-main">
+        <div id="game-wrapper">
+
+            <a href="../../index.html" class="back-btn" style="position:absolute;top:15px;left:15px;z-index:1000;color:white;text-decoration:none;font-size:1.1rem;font-weight:700;background:rgba(0,0,0,0.5);padding:8px 15px;border-radius:20px;">← Back</a>
+
+            <!-- HUD -->
+            <div id="hud">
+                <div class="hud-title">2048</div>
+                <div class="hud-scores">
+                    <div class="score-box">
+                        <div class="score-label">SCORE</div>
+                        <div class="score-val" id="score-display">0</div>
+                    </div>
+                    <div class="score-box best">
+                        <div class="score-label">BEST</div>
+                        <div class="score-val" id="best-display">0</div>
+                    </div>
+                </div>
+                <button id="new-game-btn" class="pmg-btn-sm">New Game</button>
+            </div>
+
+            <!-- Game Board -->
+            <div id="board-container">
+                <div id="board" role="grid" aria-label="2048 game board"></div>
+            </div>
+
+            <!-- Win / Game Over overlay -->
+            <div id="overlay" class="overlay hidden" role="dialog" aria-modal="true">
+                <div class="overlay-box">
+                    <h2 id="overlay-title">🎉 You Win!</h2>
+                    <p id="overlay-msg">You reached the 2048 tile!</p>
+                    <div class="overlay-btns">
+                        <button id="overlay-continue" class="pmg-btn">Keep Going</button>
+                        <button id="overlay-restart" class="pmg-btn pmg-btn-outline">New Game</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- How to Play Section -->
+    <section class="game-info">
+        <div class="info-container">
+            <div class="info-card">
+                <h2>How to Play 2048</h2>
+                <div class="info-content">
+                    <p>Slide tiles on the 4×4 grid to merge matching numbers:</p>
+                    <ul>
+                        <li><strong>Desktop:</strong> Use arrow keys (↑ ↓ ← →) to slide all tiles.</li>
+                        <li><strong>Mobile:</strong> Swipe Up, Down, Left, or Right on the board.</li>
+                        <li><strong>Goal:</strong> Merge tiles with the same number — they add together. Reach the <strong>2048</strong> tile to win!</li>
+                        <li><strong>Game Over:</strong> If the board fills up and no moves are left, the game ends.</li>
+                        <li><strong>Tip:</strong> Keep your highest tile in a corner for maximum control.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-card">
+                <h2>About 2048</h2>
+                <div class="info-content">
+                    <p>2048 is one of the most popular puzzle games ever created. Originally made by Gabriele Cirulli in 2014, it became a global sensation — played by hundreds of millions of people worldwide. The concept is deceptively simple: merge tiles to double them, and keep going until you hit 2048 (or beyond!).</p>
+                    <p>Our version features a <strong>smooth neon dark theme</strong>, animated tile slides, local best-score saving, and full touch support for mobile play.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad + Script hooks -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") prepSystem();
+        });
+    </script>
+    <script defer src="game.js"></script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play 2048 Puzzle Game Online Free Online</h2>
+            <p>Welcome to <strong>2048 Puzzle Game Online</strong>! Searching for the best free online Game2048 experience? Look no further. This high-energy <strong>Number Merge Puzzle</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Number Merge Puzzle Mode:</strong> High-speed action featuring 2048 Hexagon variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>2048 Puzzle Game Online</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on 2048 hexagon variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play 2048 Puzzle Game Online online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/2048-hexagon/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of 2048 Puzzle Game Online?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: 2048 Puzzle Game Online features an upgraded <strong>Number Merge Puzzle</strong> format. Highlights include: 2048 Hexagon variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is 2048 Puzzle Game Online unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! 2048 Puzzle Game Online is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in 2048 Puzzle Game Online?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage 2048 hexagon variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+</html>

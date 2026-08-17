@@ -1,0 +1,220 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+  background: #0b0c10;
+  font-family: 'Inter', "Nunito", sans-serif;
+  color: #c5c6c7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.game-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: min(480px, 95vw);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 20px auto; /* Centered explicitly like chess */
+  box-shadow: 0 0 30px rgba(102, 252, 241, 0.2), 0 0 0 2px rgba(102, 252, 241, 0.4);
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 480 / 600;
+  max-height: 70vh;
+  height: auto;
+  background: radial-gradient(circle at center, #1f2833 0%, #0b0c10 100%); /* Cyberpunk dark */
+  cursor: pointer;
+  touch-action: none;
+}
+
+.game-ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), transparent);
+}
+
+.score-label,
+.high-score-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.score-group {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.score-value {
+  font-size: 32px;
+  font-weight: 900;
+  color: #66fcf1;  /* Highlighting Score with bright cyan! */
+  text-shadow: 0 0 15px #66fcf1, 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.high-score-value {
+  font-size: 24px;
+  font-weight: 900;
+  color: #ffd93d; /* Distinctly gold best score */
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 24px;
+  text-align: center;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-start h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #66fcf1;
+  margin: 0 0 16px;
+  text-shadow: 0 0 10px #45a29e, 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.overlay-start p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.overlay-start kbd {
+  display: inline-block;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9em;
+}
+
+/* Base global button from PlayMix */
+.pmg-btn {
+    background: linear-gradient(135deg, #00f2fe, #4facfe);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,242,254,0.4);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+.pmg-btn:active { transform: scale(0.95); }
+
+.pmg-btn-outline {
+    background: transparent;
+    border: 2px solid #888;
+    padding: 12px 24px;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.overlay-gameover h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #ff6b6b;
+  margin: 0 0 8px;
+}
+
+.overlay-gameover p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.overlay-gameover #finalScoreEl {
+  color: #ffd93d;
+  font-weight: 900;
+}
+
+/* Mobile control buttons */
+.mobile-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.mobile-controls .ctrl-btn {
+  pointer-events: auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s, background 0.1s;
+}
+
+.mobile-controls .ctrl-btn:active,
+.mobile-controls .ctrl-btn.active {
+  background: rgba(107, 203, 119, 0.8);
+  transform: scale(0.95);
+}
+
+@media (hover: hover) {
+  .mobile-controls .ctrl-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+}
+
+.overlay-start .mobile-hint {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    opacity: 0.5;
+    z-index: 50;
+}

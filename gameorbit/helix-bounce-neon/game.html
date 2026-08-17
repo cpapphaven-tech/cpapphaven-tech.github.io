@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helix Jump Drop Game - Play Free Online Game | GameOrbit</title>
+    <meta name="description" content="Play Helix Jump Drop Game free online! Experience the ultimate Spiral Tower Drop with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <link rel="stylesheet" href="../../portal-style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_additions.css">
+    <link rel="stylesheet" href="../../loader.css">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Cannon.js (Physics) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+    <script type="module" src="../../analytics.js"></script>
+    <script src="../../ads.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" onload="console.log('✅ Supabase script loaded')"
+        onerror="console.error('❌ Supabase failed to load')">
+        </script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js"></script>
+
+    <!-- Load Ads Using Professional Control System -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+
+                if (window.DEV_MODE) {
+                    return;
+                }
+
+                //  loadSocialBarAd();
+
+
+            }, 100);
+        });
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet" media="print"
+        onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Cookie Consent Script -->
+    <!-- <script>
+        (function () {
+            const CONSENT_KEY = 'play-mix-games-cookie-consent';
+            function getCookieConsent() {
+                const stored = localStorage.getItem(CONSENT_KEY);
+                return stored ? JSON.parse(stored) : null;
+            }
+            function showCookieBanner() {
+                const consent = getCookieConsent();
+                if (!consent) {
+                    const banner = document.getElementById('cookie-consent');
+                    if (banner) banner.classList.remove('hidden');
+                }
+            }
+            function acceptCookies() {
+                const consent = { accepted: true, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = true;
+                console.log('✅ Cookie consent accepted');
+            }
+            function declineCookies() {
+                const consent = { accepted: false, timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30') };
+                localStorage.setItem(CONSENT_KEY, JSON.stringify(consent));
+                document.getElementById('cookie-consent')?.classList.add('hidden');
+                window.cookieConsent = false;
+                console.log('❌ Cookie consent declined');
+            }
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('cookie-accept')?.addEventListener('click', acceptCookies);
+                document.getElementById('cookie-decline')?.addEventListener('click', declineCookies);
+                setTimeout(showCookieBanner, 500);
+            });
+            window.cookieConsent = getCookieConsent()?.accepted ?? null;
+        })();
+    </script> -->
+
+    <link rel="preload" href="game.js" as="script">
+
+    <link rel="manifest" href="manifest.json">
+    <script src="../../sidebar.js"></script>
+    <link rel="apple-touch-icon" href="../../icons/icon-192x192.png">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/helix600.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:image" content="https://playmixgames.in/img/covers/helix600.png">
+    <meta property="og:title" content="Helix Jump Drop Game - Play Free Online Game | GameOrbit">
+    <meta property="og:description" content="Play Helix Jump Drop Game free online! Experience the ultimate Spiral Tower Drop with fast gameplay, high score multipliers, and instant browser play on mobile and desktop!">
+    <meta property="og:url" content="https://playmixgames.in/gameorbit/helix-bounce-neon/index.html">
+    <meta property="og:type" content="website">
+    <meta property="twitter:title" content="Helix Bounce 3D | Play Addictive Drop Ball Game Free | PlayMixGames">
+    <meta property="twitter:description" content="Smash your way down through the rotating platforms in Helix Bounce! A highly addictive casual jumping 3D ball drop game requiring quick reflexes.">
+    <link rel="canonical" href="https://playmixgames.in/gameorbit/helix-bounce-neon/index.html">
+    <meta name="keywords" content="play helix jump online, helix bounce free, spiral tower ball drop">
+</head>
+
+<body>
+    <!-- ===== PlayMixGames Universal Loader ===== -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading...</p>
+    </div>
+
+
+
+    <!-- ========================================= -->
+    <!-- HEADER REMOVED to match Stack 3D Clean Look -->
+    <!--
+    <header>
+        <a href="../../index.html" class="logo">PlayMixGames</a>
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    -->
+
+    <!-- Leaderboards Retired -->
+
+
+
+
+    <div id="party-welcome" class="hidden">
+        <div id="party-text">🎉 Welcome!</div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+
+    <main class="game-container">
+
+
+        <h1>Helix Bounce</h1>
+
+        <div id="game-ui">
+            <div id="level">Level 1</div>
+            <div id="score">0</div>
+
+            <!-- Challenge Message -->
+            <div id="challenge-message" class="hidden">
+                <div class="challenge-emoji">🏔️</div>
+                <div class="challenge-text">Can you complete<br>5 levels?</div>
+                <div class="challenge-subtext">Show your skills! 💪</div>
+            </div>
+
+
+
+            <div id="main-menu" class="overlay hidden"> <!-- Hidden by default for auto-start -->
+                <h2>HELIX BOUNCE</h2>
+                <p>Rotate the tower to fall through the gaps!</p>
+                <button id="resume-btn" class="hidden">Resume Level <span id="resume-level">1</span></button>
+                <button id="start-btn">Start New Game</button>
+            </div>
+
+            <div id="game-over" class="overlay hidden">
+                <h2>CRASHED!</h2>
+
+                <!-- Name Input for Leaderboard -->
+                <div id="gameover-input-area" style="margin: 15px 0; width: 90%;">
+                    <input id="player-name-gameover" placeholder="Enter Name for Leaderboard" maxlength="12" style="
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 8px;
+                        border: 1px solid rgba(255,255,255,0.3);
+                        background: rgba(0,0,0,0.3);
+                        color: white;
+                        text-align: center;
+                        margin-bottom: 5px;
+                    ">
+                    <button id="submit-score-btn"
+                        style="background: linear-gradient(135deg, #4d79ff, #3366ff); border:none; width:100%; padding: 10px;">Submit
+                        & Save Level</button>
+
+                </div>
+
+                <button id="next-level-btn" class="hidden">Next Level</button>
+
+                <button id="restart-btn">Try Again</button>
+
+                <!-- REWARDED SMARTLINK -->
+                <button id="bonus-btn" class="bonus-btn">
+                    🎁 Watch Ad & Get +1 Life
+                </button>
+
+                <!-- Leaderboard Link Retired -->
+
+
+                <!-- Game Scroller Container -->
+                <!-- <div id="game-over-scroller"></div> -->
+            </div>
+
+            <canvas id="game-canvas"></canvas>
+        </div>
+
+        <section class="game-description">
+            <h2>About Helix Bounce</h2>
+            <p>Play free online Helix Bounce game. Helix Bounce is a thrilling and addictive arcade experience where gravity meets precision. Guide a bouncing ball through a complex series of rotating helix platforms by timing your rotations perfectly. Aim for the gaps to descend deeper into the
+                tower. But be warned: touching the colored "death zones" will end your run instantly!</p>
+
+            <p>Designed with smooth 3D physics and vibrant visuals, Helix Bounce offers an addictive "just one more go"
+                gameplay loop. As you progress, the speed increases and the gaps become narrower, testing even the most
+                seasoned arcade players. How deep can you go?</p>
+
+            <h3>How to Play</h3>
+            <ul>
+                <li><strong>Rotate Tower:</strong> Click and drag (Desktop) or swipe (Mobile) horizontally to rotate the
+                    helix tower.</li>
+                <li><strong>Avoid Red Zones:</strong> Landing on a red segment will result in a game over.</li>
+                <li><strong>Score Points:</strong> Each floor you pass through increases your score. Clear multiple
+                    levels in a single jump for a combo bonus!</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../../index.html">Home</a>
+            <a href="../../privacy.html">Privacy Policy</a>
+        </div>
+        <p class="copyright">&copy; 2026 PlayMixGames.</p>
+    </footer>
+
+    <script defer src="game.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js');
+            });
+        }
+    </script>
+
+    <!-- Cross-Promotion scroller will appear in Game Over -->
+
+    <!-- COOKIE CONSENT BANNER -->
+    <!-- <div id="cookie-consent" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <span class="cookie-icon">🍪</span>
+                <span>We use cookies & tracking for ads. <a href="../../privacy.html" target="_blank"
+                        style="color: #cc00cc; text-decoration: underline;">Learn more</a></span>
+            </div>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+                <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            if (typeof prepSystem === "function") {
+                prepSystem();
+            }
+        });
+    </script>
+
+
+
+    <script>
+        window.addEventListener('load', function () {
+            var loader = document.getElementById('pmg-loader');
+            if (loader) {
+                var fill = loader.querySelector('.pmg-bar-fill');
+                if (fill) fill.style.width = '100%';
+                setTimeout(function () { loader.classList.add('hidden'); }, 300);
+            }
+        });
+    </script>
+
+        
+        <section class="game-article" style="margin-top: 30px;">
+            <h2>🚀 Play Helix Jump Drop Game Free Online</h2>
+            <p>Welcome to <strong>Helix Jump Drop Game</strong>! Searching for the best free online HelixBounce experience? Look no further. This high-energy <strong>Spiral Tower Drop</strong> brings non-stop fun, responsive controls, and high-score challenges directly to your browser.</p>
+            
+            <h3>🌟 High Ranking Game Features</h3>
+            <ul>
+                <li><strong>Spiral Tower Drop Mode:</strong> High-speed action featuring Helix Bounce Neon Fury variant with customized rules and themes.</li>
+                <li><strong>Instant Play:</strong> No download, no install — plays directly on mobile, tablet, and PC.</li>
+                <li><strong>SEO & Performance Optimized:</strong> Ultra-fast loading speeds for seamless, lag-free gameplay.</li>
+            </ul>
+            
+            <h3>🎮 Gameplay Instructions</h3>
+            <p>In <strong>Helix Jump Drop Game</strong>, your objective is to clear targets, score big combos, and beat your high score. Focus on helix bounce neon fury variant with customized rules and themes to climb the leaderboards!</p>
+            
+            <h3>💻 Controls</h3>
+            <p><strong>Desktop:</strong> Mouse clicks, spacebar, or arrow keys depending on game mechanics.</p>
+            <p><strong>Mobile/Tablet:</strong> Tap or drag directly on the screen for intuitive touch controls.</p>
+            
+            
+        <section class="game-faq" style="margin-top: 30px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 12px; padding: 24px; color: #333;">
+            <h3 style="color: #1a73e8; font-size: 1.3rem; font-weight: 800; margin-bottom: 16px;">❓ Frequently Asked Questions</h3>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How do I play Helix Jump Drop Game online for free?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Simply visit https://playmixgames.in/gameorbit/helix-bounce-neon/ in any web browser on your phone, tablet, or PC! Click 'Play Now' to start instantly with no download or signup required.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: What are the main features of Helix Jump Drop Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Helix Jump Drop Game features an upgraded <strong>Spiral Tower Drop</strong> format. Highlights include: Helix Bounce Neon Fury variant with customized rules and themes, Enhanced game HUD and modern responsive styling, Dedicated standalone GameOrbit indexable page.</p>
+            </div>
+            
+            <div class="faq-item" style="margin-bottom: 16px;">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: Is Helix Jump Drop Game unblocked for school and mobile devices?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Yes! Helix Jump Drop Game is fully optimized for web browsers and works smoothly as an unblocked game on mobile, Chromebook, and desktop screens.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h4 style="color: #202124; font-size: 1rem; font-weight: 700; margin-bottom: 6px;">Q: How can I score higher in Helix Jump Drop Game?</h4>
+                <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage helix bounce neon fury variant with customized rules and themes for maximum score boosts!</p>
+            </div>
+        </section>
+    
+        </section>
+    
+    
+        </section>
+    
+</body>
+
+</html>

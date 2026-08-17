@@ -1,0 +1,22 @@
+{
+    "name": "Sushi Match 3D - 寿司マッチ3D",
+    "short_name": "SushiMatch",
+    "description": "Match delicious sushi in this addictive 3D puzzle game with Japanese aesthetics",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#1a0a0a",
+    "theme_color": "#c8102e",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "../icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "../icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
