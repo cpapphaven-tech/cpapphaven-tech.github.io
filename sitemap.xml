@@ -4,7 +4,18 @@
   <url>
     <loc>https://playmixgames.in/</loc>
     <priority>1.0</priority>
-  </url>  <!-- Word Guess Game -->
+  </url>  <!-- Hangman Game -->
+  <url>
+    <loc>https://playmixgames.in/Hangman/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/Hangman/index.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://playmixgames.in/Hangman/index.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://playmixgames.in/Hangman/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/Hangman/index.html" />
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Word Guess Game -->
   <url>
     <loc>https://playmixgames.in/WordGuess/index.html</loc>
     <xhtml:link rel="alternate" hreflang="ja" href="https://playmixgames.in/WordGuess/index.html" />
