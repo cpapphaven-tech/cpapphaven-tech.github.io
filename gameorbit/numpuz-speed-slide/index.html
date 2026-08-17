@@ -161,7 +161,7 @@
 
         #game-frame {
             width: 100%;
-            height: 100vh;
+            height: 650px; max-height: 85vh; max-width: 500px; margin: 15px auto; border-radius: 16px; box-shadow: 0 8px 25px rgba(0,0,0,0.5);
             border: none;
             display: block;
             opacity: 0;
@@ -275,7 +275,7 @@
         <p class="pmg-tip">Loading Numpuz...</p>
     </div>
     
-    <main>
+    <main style="max-width: 900px; margin: 0 auto; padding: 10px;">
         <iframe id="game-frame" src="game.html" title="Numpuz Logic Puzzle" allow="autoplay; fullscreen; gamepad"></iframe>
     </main>
 
@@ -323,14 +323,7 @@
                 <p style="color: #5f6368; font-size: 0.92rem; line-height: 1.6;">A: Practice your timing, maintain continuous match streaks, and leverage numpuz speed slide variant with customized rules and themes for maximum score boosts!</p>
             </div>
         </section>
-    
-        </section>
-    
-    
-        </section>
-    
-
-    <script>
+<script>
         (function () {
             const frame = document.getElementById('game-frame');
             const urlParams = new URLSearchParams(window.location.search);

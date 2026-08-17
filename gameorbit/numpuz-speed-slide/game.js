@@ -54,19 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function calculateSizes() {
-        // Calculate max width accounting for window width and height 
-        // Leaves ~250px for the header, controls, and bottom ad
+        const availableHeight = window.innerHeight > 0 ? window.innerHeight : 650;
         const maxBoardSize = Math.min(
-            window.innerWidth - 40, 
-            500 - 40, 
-            window.innerHeight - 260
+            window.innerWidth - 30,
+            440,
+            availableHeight - 210
         );
-        
-        boardSize = Math.max(maxBoardSize, 200); // minimum 200px
+        boardSize = Math.max(Math.min(maxBoardSize, 350), 200);
         tileSize = boardSize / size;
-        
-        boardEl.style.width = `${boardSize}px`;
-        boardEl.style.height = `${boardSize}px`;
+        boardEl.style.width = boardSize + 'px';
+        boardEl.style.height = boardSize + 'px';
     }
 
     function startNewGame() {
