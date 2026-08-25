@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Memory Card Match", tag: "🔥 Most Popular", desc: "Flip 3D cards, match emoji pairs, build combo streaks!", href: "MemoryMatch/index.html", gradient: "linear-gradient(135deg,#0ea5e9,#6366f1,#1e1b4b)", icon: "🃏", badge: "hot", image: "" },
+
     { name: "GameOrbit (88 Games)", tag: "🚀 New Collection", desc: "Discover 88 all-new game variants with unique rules and fast gameplay!", href: "gameorbit/index.html", gradient: "linear-gradient(135deg,#a855f7,#06b6d4,#1e1b4b)", icon: "🚀", badge: "hot", image: "" },
     { name: "Hangman", tag: "🔥 Viral Hit", desc: "Guess letters to save the stickman! Classic word puzzle.", href: "Hangman/index.html", gradient: "linear-gradient(135deg,#10b981,#f59e0b,#1e1b4b)", icon: "🔤", badge: "hot", image: "" },
     { name: "Word Guess", tag: "🔥 Viral Hit", desc: "Guess the 5-letter hidden word in 6 attempts!", href: "WordGuess/index.html", gradient: "linear-gradient(135deg,#10b981,#3b82f6,#1e1b4b)", icon: "🅰️", badge: "hot", image: "" },
@@ -69,6 +71,8 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Memory Card Match", genre: "Memory", icon: "", href: "MemoryMatch/index.html", badge: "hot", emoji: "🃏" },
+
         { name: "Hangman",          genre: "Word",     icon: "",                                 href: "Hangman/index.html",             badge: "hot",  emoji: "🔤" },
         { name: "Word Guess",       genre: "Word",     icon: "",                                 href: "WordGuess/index.html",           badge: "hot",  emoji: "🅰️" },
         { name: "Tetris",           genre: "Puzzle",   icon: "",                                 href: "Tetris/index.html",              badge: "hot",  emoji: "🧩" },

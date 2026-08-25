@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Memory Card Match Free Online | Flip & Pair Puzzle Game | PlayMixGames</title>
+    <meta name="description" content="Test your brain and memory skills in Memory Card Match! Flip 3D cards, match emoji pairs, build combo multipliers, and race against the clock for 3 stars.">
+
+    <!-- Libraries & Project Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="../ads.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <!-- Game Header & Stats -->
+    <header>
+        <div class="title-group">
+            <h1>🃏 Memory Match</h1>
+        </div>
+        <div class="hud-stats">
+            <div class="stat-chip">
+                <span class="stat-label">Moves</span>
+                <span class="stat-value" id="moves-val">0</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Pairs</span>
+                <span class="stat-value" id="pairs-val">0 / 8</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Time</span>
+                <span class="stat-value" id="timer-val">1:40</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Toolbar: Difficulty & Theme Selectors -->
+    <div class="toolbar">
+        <div class="bar-row">
+            <button class="pill-btn diff-btn active" data-diff="easy">Easy (4x4)</button>
+            <button class="pill-btn diff-btn" data-diff="medium">Medium (4x5)</button>
+            <button class="pill-btn diff-btn" data-diff="hard">Hard (5x6)</button>
+            <button class="pill-btn diff-btn" data-diff="expert">Expert (6x6)</button>
+        </div>
+        <div class="bar-row">
+            <button class="pill-btn theme-btn active" data-theme="animals">🐶 Animals</button>
+            <button class="pill-btn theme-btn" data-theme="fruits">🍓 Fruits</button>
+            <button class="pill-btn theme-btn" data-theme="sports">⚽ Sports</button>
+            <button class="pill-btn theme-btn" data-theme="nature">🌸 Nature</button>
+            <button class="pill-btn" id="new-game-btn" style="background: rgba(239, 68, 68, 0.2); border-color: #ef4444; color: #fca5a5;">🔄 New</button>
+        </div>
+        <div style="text-align: center;">
+            <span id="combo-banner">🔥 2X COMBO!</span>
+        </div>
+    </div>
+
+    <!-- 3D Card Board -->
+    <div class="board-container">
+        <div id="board"></div>
+    </div>
+
+    <!-- Win Modal -->
+    <div class="modal" id="win-modal">
+        <div class="modal-box">
+            <h2 class="win-title">🎉 Stage Cleared!</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem;">You matched all cards successfully!</p>
+            <div class="stars-row" id="win-stars">⭐⭐⭐</div>
+            <div class="results-grid">
+                <div class="res-item">
+                    <span class="res-label">Moves</span>
+                    <span class="res-val" id="win-moves">14</span>
+                </div>
+                <div class="res-item">
+                    <span class="res-label">Time</span>
+                    <span class="res-val" id="win-time">0:45</span>
+                </div>
+                <div class="res-item">
+                    <span class="res-label">Best Streak</span>
+                    <span class="res-val" id="win-combo">4x</span>
+                </div>
+            </div>
+            <button class="action-btn" id="play-again-btn">Play Again 🚀</button>
+        </div>
+    </div>
+
+    <!-- Time Out / Lose Modal -->
+    <div class="modal" id="lose-modal">
+        <div class="modal-box">
+            <h2 class="lose-title">⏰ Time's Up!</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">You ran out of time. Sharpen your memory and try again!</p>
+            <button class="action-btn" id="retry-btn">Try Again 🔄</button>
+        </div>
+    </div>
+
+    <!-- Bottom Ad Container -->
+    <div id="pmg-bottom-ad" style="width: 100%; position: fixed; bottom: 0; left: 0; z-index: 40; display: flex; justify-content: center;"></div>
+
+    <script>
+        // Trigger Adsterra banner injection from ads.js
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</body>
+
+</html>
