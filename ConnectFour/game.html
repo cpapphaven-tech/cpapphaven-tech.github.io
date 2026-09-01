@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Connect Four 4 in a Row | Classic Strategy Board Game | PlayMixGames</title>
+    <meta name="description" content="Play Connect Four free online! Drop red and yellow discs into the 7x6 grid, outsmart the AI or play with a friend in 2-player mode. Connect 4 in a row to win!">
+
+    <!-- Libraries & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="../ads.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <!-- Game Header & Turn HUD -->
+    <header>
+        <div class="title-group">
+            <h1>🔴 Connect 4</h1>
+        </div>
+        <div class="hud-turn-badge">
+            <div class="turn-dot red" id="turn-dot"></div>
+            <span id="turn-text">Your Turn</span>
+        </div>
+    </header>
+
+    <!-- Score Bar -->
+    <div class="score-bar">
+        <div class="score-card red">
+            <span class="score-label">Red (P1)</span>
+            <span class="score-val" id="score-red">0</span>
+        </div>
+        <div class="score-card draw">
+            <span class="score-label">Draws</span>
+            <span class="score-val" id="score-draw">0</span>
+        </div>
+        <div class="score-card yellow">
+            <span class="score-label">Yellow (P2/AI)</span>
+            <span class="score-val" id="score-yellow">0</span>
+        </div>
+    </div>
+
+    <!-- Toolbar: Mode, Difficulty & Actions -->
+    <div class="toolbar">
+        <div class="bar-row">
+            <button class="pill-btn mode-btn active" data-mode="ai">🤖 vs AI</button>
+            <button class="pill-btn mode-btn" data-mode="pvp">👥 2 Players</button>
+            <button class="pill-btn diff-btn" data-diff="easy">Easy</button>
+            <button class="pill-btn diff-btn active" data-diff="medium">Medium</button>
+            <button class="pill-btn diff-btn" data-diff="master">Master</button>
+        </div>
+        <div class="bar-row" style="margin-top: 2px;">
+            <button class="pill-btn" id="undo-btn">↩️ Undo</button>
+            <button class="pill-btn" id="restart-btn" style="background: rgba(239, 68, 68, 0.2); border-color: #ef4444; color: #fca5a5;">🔄 New Game</button>
+        </div>
+    </div>
+
+    <!-- Board Wrapper -->
+    <div class="board-wrapper">
+        <div class="drop-guide-row" id="drop-guide-row"></div>
+        <div class="connect-board" id="connect-board"></div>
+    </div>
+
+    <!-- Game Over Win / Draw Modal -->
+    <div class="modal" id="win-modal">
+        <div class="modal-box">
+            <h2 class="win-title" id="win-title">🎉 Red Wins!</h2>
+            <p class="modal-desc" id="win-desc">Outstanding strategy! You connected 4 in a row.</p>
+            <button class="action-btn" id="play-again-btn">Play Again 🚀</button>
+        </div>
+    </div>
+
+    <!-- Bottom Ad Container -->
+    <div id="pmg-bottom-ad" style="width: 100%; position: fixed; bottom: 0; left: 0; z-index: 40; display: flex; justify-content: center;"></div>
+
+    <script>
+        // Trigger bottom ad injection from ads.js
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</body>
+
+</html>

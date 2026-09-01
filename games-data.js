@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Connect Four", tag: "🔥 Trending Board", desc: "Drop discs and connect 4 in a row to win vs smart AI or friends!", href: "ConnectFour/index.html", gradient: "linear-gradient(135deg,#1d4ed8,#ef4444,#1e1b4b)", icon: "🔴", badge: "hot", image: "" },
+
     { name: "Memory Card Match", tag: "🔥 Most Popular", desc: "Flip 3D cards, match emoji pairs, build combo streaks!", href: "MemoryMatch/index.html", gradient: "linear-gradient(135deg,#0ea5e9,#6366f1,#1e1b4b)", icon: "🃏", badge: "hot", image: "" },
 
     { name: "GameOrbit (88 Games)", tag: "🚀 New Collection", desc: "Discover 88 all-new game variants with unique rules and fast gameplay!", href: "gameorbit/index.html", gradient: "linear-gradient(135deg,#a855f7,#06b6d4,#1e1b4b)", icon: "🚀", badge: "hot", image: "" },
@@ -108,6 +110,8 @@ window.PMG_DATA = {
       more: false,
       tab: "games",
       items: [
+        { name: "Connect Four", genre: "Board", icon: "", href: "ConnectFour/index.html", badge: "hot", emoji: "🔴" },
+
         { name: "Chess Master",     genre: "Board",    icon: "assets/chess200.png",              href: "Chess/index.html",               badge: "",     emoji: "♟" },
         { name: "Ludo Classic",     genre: "Board",    icon: "assets/ludo200.png",               href: "Ludo/index.html",                badge: "",     emoji: "🎲" },
         { name: "Snakes & Ladders", genre: "Board",    icon: "",                                 href: "SnakesAndLadders/index.html",    badge: "new",  emoji: "🎲" },

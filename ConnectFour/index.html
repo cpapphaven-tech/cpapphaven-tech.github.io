@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Connect Four Online Free | 4 in a Row 2 Player & AI Board Game | PlayMixGames</title>
+    <meta name="description" content="Play Connect Four (4 in a Row) free online! Challenge smart AI or play with a friend in 2-player mode. Drop red and yellow discs into the 7x6 grid to connect 4 and win.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="connect four, connect 4 online, 4 in a row game, four in a row free, connect four 2 player, board games online, 四目並べ 無料, コネクトフォー, cuatro en raya online, puissance 4 gratuit, connect 4 unblocked">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="コネクトフォー - 無料四目並べボードゲーム">
+    <meta name="twitter:description:ja" content="ディスクを落として縦・横・斜めに4つ揃えましょう！AI対戦＆2人プレイ対応。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Cuatro en Raya Gratis Online">
+    <meta name="twitter:description:es" content="¡Conecta 4 fichas en línea recta antes que tu rival! Juega contra la IA o con 2 jugadores gratis.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Puissance 4 Gratuit en Ligne">
+    <meta name="twitter:description:fr" content="Alignez 4 jetons de même couleur horizontalement, verticalement ou en diagonale. Jouez gratuitement !">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/ConnectFour/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/ConnectFour/index.html" />
+    
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #f8fafc;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #38bdf8;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(56, 189, 248, 0.1);
+            border-top-color: #38bdf8;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #38bdf8, #6366f1);
+            animation: pmgFill 3s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pmgPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.98); }
+        }
+
+        @keyframes pmgFill {
+            0% { width: 0%; }
+            100% { width: 95%; }
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #game-frame {
+            width: 100%;
+            max-width: 520px;
+            height: 700px;
+            max-height: 85vh;
+            border: none;
+            display: block;
+            margin: 15px auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        /* SEO Article & Info Section */
+        .seo-section {
+            background: #111827;
+            border-top: 1px solid #1f2937;
+            padding: 50px 20px;
+            margin-top: 30px;
+            color: #e5e7eb;
+        }
+
+        .seo-container {
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .seo-container h2 {
+            font-size: 1.8rem;
+            color: #38bdf8;
+            margin-bottom: 16px;
+        }
+
+        .seo-container h3 {
+            font-size: 1.3rem;
+            color: #93c5fd;
+            margin: 28px 0 12px;
+        }
+
+        .seo-container p {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-bottom: 16px;
+        }
+
+        .seo-container ul, .seo-container ol {
+            margin: 12px 0 20px 24px;
+            color: #d1d5db;
+        }
+
+        .seo-container li {
+            margin-bottom: 8px;
+        }
+
+        .faq-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .faq-card h4 {
+            font-size: 1.05rem;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .faq-card p {
+            margin-bottom: 0;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+    </style>
+
+    <meta property="og:title" content="Connect Four Online Free | 4 in a Row 2 Player & AI Board Game | PlayMixGames">
+    <meta property="og:description" content="Play Connect Four free online! Challenge smart AI or play with a friend in 2-player mode. Connect 4 in a row to win!">
+    <meta property="og:url" content="https://playmixgames.in/ConnectFour/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/ConnectFour/index.html" />
+    <script defer src="../sidebar.js"></script>
+
+    <!-- Schema.org VideoGame Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Connect Four (4 in a Row)",
+      "description": "Play free online Connect Four! Drop colored discs into the vertical 7x6 grid, outsmart the AI or play locally with 2 players to connect 4 in a row.",
+      "url": "https://playmixgames.in/ConnectFour/index.html",
+      "image": "https://playmixgames.in/img/covers/puzzle.png",
+      "genre": [
+        "Board",
+        "Strategy",
+        "Puzzle"
+      ],
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayMixGames",
+        "url": "https://playmixgames.in"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "380",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Brand Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Connect Four...</p>
+    </div>
+
+    <!-- Game Viewport Container -->
+    <main>
+        <iframe id="game-frame" src="game.html" title="Connect Four Board Game" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <!-- SEO Content & FAQ Section -->
+    <section class="seo-section">
+        <div class="seo-container">
+            <h2>🔴 Play Connect Four (4 in a Row) Online Free</h2>
+            <p>
+                Welcome to <strong>Connect Four</strong> (also known as <em>4 in a Row</em>, <em>Four in a Line</em>, or <em>Captain's Mistress</em>), the world-famous two-player vertical connection board game! Whether you want to test your tactical skills against an intelligent computer AI or challenge a friend in local 2-Player pass-and-play mode, Connect Four on PlayMix delivers smooth disc drop physics, crisp audio effects, and pure strategic fun right in your browser.
+            </p>
+
+            <h3>🌟 Key Game Features</h3>
+            <ul>
+                <li><strong>Single Player vs AI:</strong> Choose from 3 AI difficulty settings: <em>Easy</em> (casual), <em>Medium</em> (tactical), and <em>Master</em> (Minimax AI with Alpha-Beta pruning).</li>
+                <li><strong>Local 2-Player Pass & Play:</strong> Play on the same screen with friends, family, or classmates.</li>
+                <li><strong>Smooth 3D Drop Physics:</strong> Watch discs drop down columns with realistic bounce animations and synthesized sound effects.</li>
+                <li><strong>Winning 4-in-a-Row Glow:</strong> Connect 4 discs horizontally, vertically, or diagonally to trigger the victory glow and celebration fanfare!</li>
+                <li><strong>Undo Move & Score Tracking:</strong> Keep track of Red wins, Yellow wins, and Draws across your entire gaming session.</li>
+                <li><strong>100% Free & Mobile Friendly:</strong> Works smoothly across iPhones, Android phones, tablets, Chromebooks, and PCs with no download needed.</li>
+            </ul>
+
+            <h3>🎮 How to Play Connect Four</h3>
+            <ol>
+                <li><strong>Choose a Column:</strong> The board consists of a vertical grid with 7 columns and 6 rows (42 slots). On your turn, tap or click the column where you want to drop your colored disc.</li>
+                <li><strong>Gravity Mechanics:</strong> The disc drops to the lowest unoccupied slot in the chosen column.</li>
+                <li><strong>Take Turns:</strong> Red and Yellow alternate turns dropping one disc at a time.</li>
+                <li><strong>Win Condition:</strong> The first player to form a straight line of 4 discs of their color — horizontally, vertically, or diagonally — wins the match!</li>
+            </ol>
+
+            <h3>🧠 Pro Strategies to Win at Connect Four</h3>
+            <ul>
+                <li><strong>Control the Center Column:</strong> The center column (Column 4) is part of the majority of potential 4-in-a-row winning combinations. Owning the center gives you massive positional leverage.</li>
+                <li><strong>Set Up "7-Traps" and Double Threats:</strong> Create board states where you threaten two simultaneous 4-in-a-row connections on the same turn. Your opponent can only block one, guaranteeing your win on the next move!</li>
+                <li><strong>Do Not Enable Your Opponent:</strong> Never drop a disc directly below a slot that would allow your opponent to complete 4 in a row on their next turn.</li>
+                <li><strong>Look for Diagonal Traps:</strong> Diagonal 4-in-a-row paths are the hardest for opponents to spot. Build ascending diagonal threats early.</li>
+            </ul>
+
+            <h3>❓ Frequently Asked Questions (FAQ)</h3>
+
+            <div class="faq-card">
+                <h4>Q: Is Connect Four completely free to play?</h4>
+                <p>A: Yes! You can play Connect Four free with unlimited games, both single-player vs AI and 2-player local mode, on PlayMix with zero downloads or registration.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Can you play Connect Four with 2 players on the same phone?</h4>
+                <p>A: Yes! Select the "👥 2 Players" mode from the toolbar to take turns on the same mobile phone, tablet, or desktop computer.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: How does the Connect Four AI work?</h4>
+                <p>A: The Master difficulty uses a Minimax decision algorithm with Alpha-Beta pruning to calculate multiple moves ahead and evaluate center control, threats, and potential traps.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: What happens if all 42 slots are filled with no winner?</h4>
+                <p>A: If all columns are full and neither player has connected 4 in a row, the game ends in a Draw.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement & Loader Bridge Script -->
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(800 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>
