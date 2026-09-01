@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Piano Tiles Free Online | Magic Music Rhythm Game | PlayMixGames</title>
+    <meta name="description" content="Play Piano Tiles free online! Tap falling black piano keys to play classical masterpieces like Für Elise, Ode to Joy, and Canon in D. Test your rhythm reflexes.">
+
+    <!-- Libraries & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="../ads.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <!-- Game Header & HUD -->
+    <header>
+        <div class="title-group">
+            <h1>🎹 Piano Tiles</h1>
+        </div>
+        <div class="hud-stats">
+            <div class="stat-chip">
+                <span class="stat-label">Score</span>
+                <span class="stat-value" id="score-val">0</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Combo</span>
+                <span class="stat-value" id="combo-val">0x</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Song</span>
+                <span class="stat-value" id="song-name" style="font-size: 0.75rem;">Für Elise</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="song-progress-container">
+        <div class="song-progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- Toolbar: Song Selection -->
+    <div class="toolbar">
+        <div class="bar-row">
+            <button class="pill-btn song-btn active" data-song="furelise">🎼 Für Elise</button>
+            <button class="pill-btn song-btn" data-song="ode">🎵 Ode to Joy</button>
+            <button class="pill-btn song-btn" data-song="canon">🎻 Canon in D</button>
+            <button class="pill-btn song-btn" data-song="moonlight">🌙 Moonlight</button>
+        </div>
+        <div style="text-align: center;">
+            <span id="combo-banner">🔥 5X COMBO!</span>
+        </div>
+    </div>
+
+    <!-- 4-Lane Piano Highway -->
+    <div class="piano-viewport" id="piano-viewport">
+        <div class="piano-lane" id="lane-0"></div>
+        <div class="piano-lane" id="lane-1"></div>
+        <div class="piano-lane" id="lane-2"></div>
+        <div class="piano-lane" id="lane-3"></div>
+
+        <!-- Start Overlay -->
+        <div class="start-overlay" id="start-overlay">
+            <h2>🎹 Ready to Play?</h2>
+            <p>Tap black keys to play the melody. Don't tap empty space!</p>
+            <div class="tap-indicator">👆 Tap to Start</div>
+        </div>
+    </div>
+
+    <!-- Win / Song Completed Modal -->
+    <div class="modal" id="win-modal">
+        <div class="modal-box">
+            <h2 class="win-title">🎉 Song Completed!</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem;">Flawless rhythm performance!</p>
+            <div class="stars-row" id="win-stars">⭐⭐⭐</div>
+            <div class="results-grid">
+                <div class="res-item">
+                    <span class="res-label">Score</span>
+                    <span class="res-val" id="win-score">0</span>
+                </div>
+                <div class="res-item">
+                    <span class="res-label">Accuracy</span>
+                    <span class="res-val" id="win-accuracy">100%</span>
+                </div>
+                <div class="res-item">
+                    <span class="res-label">Grade</span>
+                    <span class="res-val" style="color: var(--gold);">S+</span>
+                </div>
+            </div>
+            <button class="action-btn" id="play-again-btn">Play Again 🚀</button>
+        </div>
+    </div>
+
+    <!-- Game Over Miss Modal -->
+    <div class="modal" id="lose-modal">
+        <div class="modal-box">
+            <h2 class="lose-title">❌ Off Beat!</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 20px;">You tapped empty space or missed a tile. Keep your rhythm and try again!</p>
+            <div class="results-grid" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+                <div class="res-item">
+                    <span class="res-label">Score Achieved</span>
+                    <span class="res-val" id="lose-score">0</span>
+                </div>
+            </div>
+            <button class="action-btn" id="retry-btn">Try Again 🔄</button>
+        </div>
+    </div>
+
+    <!-- Bottom Ad Container -->
+    <div id="pmg-bottom-ad" style="width: 100%; position: fixed; bottom: 0; left: 0; z-index: 40; display: flex; justify-content: center;"></div>
+
+    <script>
+        // Trigger bottom ad injection from ads.js
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</body>
+
+</html>

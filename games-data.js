@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Piano Tiles", tag: "🔥 Rhythm Hit", desc: "Tap falling black piano keys to perform classical masterpieces in real-time!", href: "PianoTiles/index.html", gradient: "linear-gradient(135deg,#0ea5e9,#a855f7,#1e1b4b)", icon: "🎹", badge: "hot", image: "" },
+
     { name: "Whack-a-Mole", tag: "🔥 Carnival Hit", desc: "Smash popping moles, catch golden bonus kings, and build crazy combos!", href: "WhackAMole/index.html", gradient: "linear-gradient(135deg,#f59e0b,#ef4444,#1e1b4b)", icon: "🔨", badge: "hot", image: "" },
 
     { name: "Connect Four", tag: "🔥 Trending Board", desc: "Drop discs and connect 4 in a row to win vs smart AI or friends!", href: "ConnectFour/index.html", gradient: "linear-gradient(135deg,#1d4ed8,#ef4444,#1e1b4b)", icon: "🔴", badge: "hot", image: "" },
@@ -29,6 +31,8 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Piano Tiles", genre: "Rhythm", icon: "", href: "PianoTiles/index.html", badge: "hot", emoji: "🎹" },
+
         { name: "Whack-a-Mole", genre: "Arcade", icon: "", href: "WhackAMole/index.html", badge: "hot", emoji: "🔨" },
 
         { name: "Geometry Jump",    genre: "Action",   icon: "",                                 href: "GeometryDash/game.html",         badge: "new",     emoji: "🔺" },

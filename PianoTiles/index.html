@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Piano Tiles Free Online | Magic Piano Rhythm Music Game | PlayMixGames</title>
+    <meta name="description" content="Play Piano Tiles free online! Tap falling black piano keys to play classical songs like Für Elise, Ode to Joy, and Canon in D. Test your rhythm reflexes in your browser.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="piano tiles, piano tiles online, magic tiles free, piano rhythm game, music game online, play piano tiles, ピアノタイル 無料, ピアノゲーム, piano tiles online gratis, jeu de piano gratuit, piano tiles unblocked">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="ピアノタイル - 無料リズム音楽ゲーム">
+    <meta name="twitter:description:ja" content="流れてくる黒いタイルをタップしてエリーゼのためにや第九を演奏しよう！">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Piano Tiles Gratis Online">
+    <meta name="twitter:description:es" content="¡Toca las teclas negras del piano al ritmo de la música y no toques las blancas! Juega gratis.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Piano Tiles Gratuit en Ligne">
+    <meta name="twitter:description:fr" content="Tapez sur les tuiles noires pour jouer de magnifiques morceaux de piano classiques gratuitement.">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/PianoTiles/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/PianoTiles/index.html" />
+    
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #f8fafc;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #38bdf8;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(56, 189, 248, 0.1);
+            border-top-color: #38bdf8;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #38bdf8, #a855f7);
+            animation: pmgFill 3s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pmgPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.98); }
+        }
+
+        @keyframes pmgFill {
+            0% { width: 0%; }
+            100% { width: 95%; }
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #game-frame {
+            width: 100%;
+            max-width: 520px;
+            height: 700px;
+            max-height: 85vh;
+            border: none;
+            display: block;
+            margin: 15px auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        /* SEO Article & Info Section */
+        .seo-section {
+            background: #111827;
+            border-top: 1px solid #1f2937;
+            padding: 50px 20px;
+            margin-top: 30px;
+            color: #e5e7eb;
+        }
+
+        .seo-container {
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .seo-container h2 {
+            font-size: 1.8rem;
+            color: #38bdf8;
+            margin-bottom: 16px;
+        }
+
+        .seo-container h3 {
+            font-size: 1.3rem;
+            color: #93c5fd;
+            margin: 28px 0 12px;
+        }
+
+        .seo-container p {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-bottom: 16px;
+        }
+
+        .seo-container ul, .seo-container ol {
+            margin: 12px 0 20px 24px;
+            color: #d1d5db;
+        }
+
+        .seo-container li {
+            margin-bottom: 8px;
+        }
+
+        .faq-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .faq-card h4 {
+            font-size: 1.05rem;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .faq-card p {
+            margin-bottom: 0;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+    </style>
+
+    <meta property="og:title" content="Piano Tiles Free Online | Magic Piano Rhythm Music Game | PlayMixGames">
+    <meta property="og:description" content="Play Piano Tiles free online! Tap falling black piano keys to play classical songs like Für Elise, Ode to Joy, and Canon in D.">
+    <meta property="og:url" content="https://playmixgames.in/PianoTiles/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/PianoTiles/index.html" />
+    <script defer src="../sidebar.js"></script>
+
+    <!-- Schema.org VideoGame Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Piano Tiles (Magic Piano Rhythm)",
+      "description": "Play free online Piano Tiles! Tap the falling black musical keys in rhythm to perform classical piano masterpieces including Für Elise, Ode to Joy, Canon in D, and Moonlight Sonata.",
+      "url": "https://playmixgames.in/PianoTiles/index.html",
+      "image": "https://playmixgames.in/img/covers/image600.png",
+      "genre": [
+        "Rhythm",
+        "Music",
+        "Arcade"
+      ],
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayMixGames",
+        "url": "https://playmixgames.in"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "410",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Brand Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Piano Tiles...</p>
+    </div>
+
+    <!-- Game Viewport Container -->
+    <main>
+        <iframe id="game-frame" src="game.html" title="Piano Tiles Music Game" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <!-- SEO Content & FAQ Section -->
+    <section class="seo-section">
+        <div class="seo-container">
+            <h2>🎹 Play Piano Tiles (Magic Piano) Online Free</h2>
+            <p>
+                Unleash your inner virtuoso pianist with <strong>Piano Tiles</strong> (also known as <em>Don't Tap the White Tile</em> or <em>Magic Piano</em>) on PlayMix! Immerse yourself in the world of classical music by tapping descending black piano keys in sync with the rhythm to perform world-famous masterpieces note-by-note. With an acoustic piano synthesizer engine, multiple beloved songs, and escalating tempo challenges, Piano Tiles delivers an exhilarating rhythm gaming experience directly in your web browser.
+            </p>
+
+            <h3>🌟 Key Game Features</h3>
+            <ul>
+                <li><strong>Iconic Masterpiece Song Library:</strong>
+                    <ul>
+                        <li>🎼 <strong>Für Elise</strong> (Ludwig van Beethoven)</li>
+                        <li>🎵 <strong>Ode to Joy</strong> (Symphony No. 9 – Beethoven)</li>
+                        <li>🎻 <strong>Canon in D</strong> (Johann Pachelbel)</li>
+                        <li>🌙 <strong>Moonlight Sonata</strong> (Beethoven)</li>
+                    </ul>
+                </li>
+                <li><strong>Polyphonic Acoustic Piano Synthesizer:</strong> Plays real acoustic piano frequencies (A0 to C8) with natural acoustic resonance via the Web Audio API without needing external audio downloads.</li>
+                <li><strong>Dynamic Rhythm Velocity:</strong> The music conveyor gradually accelerates as you progress through the piece, challenging your reflex speed and dexterity.</li>
+                <li><strong>Combo Streak Multipliers:</strong> Chain uninterrupted note hits to trigger fiery combo streaks and score multipliers.</li>
+                <li><strong>Full Desktop & Mobile Support:</strong> Play with multi-finger taps on mobile touchscreens or keyboard hotkeys (1, 2, 3, 4 / D, F, J, K) on desktop PC.</li>
+            </ul>
+
+            <h3>🎮 How to Play Piano Tiles</h3>
+            <ol>
+                <li><strong>Pick a Song:</strong> Select your favorite classical masterpiece from the top song selection bar.</li>
+                <li><strong>Tap to Begin:</strong> Tap the start overlay to launch the falling note highway.</li>
+                <li><strong>Hit the Black Tiles:</strong> Tap or click each black tile as it descends down the 4 lanes. Each tap plays the authentic musical note of the melody!</li>
+                <li><strong>Don't Tap the Empty Space:</strong> Tapping an empty lane or missing a tile off the bottom ends the song performance.</li>
+                <li><strong>Achieve 3 Stars:</strong> Complete 100% of the piece to earn a Grade S+ and maximum 3-star rating!</li>
+            </ol>
+
+            <h3>🧠 Pro Tips to Master Piano Tiles</h3>
+            <ul>
+                <li><strong>Use Both Hands on Mobile:</strong> Hold your phone in portrait and use both thumbs (left thumb for Lanes 1 & 2, right thumb for Lanes 3 & 4) to distribute reaction load evenly.</li>
+                <li><strong>Use Keyboard Hotkeys on Desktop:</strong> Use keys <code>D</code>, <code>F</code>, <code>J</code>, <code>K</code> for lightning-fast arcade finger drumming on computer keyboards.</li>
+                <li><strong>Listen to the Melody:</strong> Align your taps with the musical cadence of the melody rather than purely relying on visual scanning.</li>
+            </ul>
+
+            <h3>❓ Frequently Asked Questions (FAQ)</h3>
+
+            <div class="faq-card">
+                <h4>Q: Is Piano Tiles completely free to play?</h4>
+                <p>A: Yes! You can play all songs in Piano Tiles free with unlimited attempts, no downloads, and no registration required on PlayMix.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Can you play Piano Tiles with keyboard keys?</h4>
+                <p>A: Yes! On desktop computers and Chromebooks, you can use the number keys <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code> or letter keys <code>D</code>, <code>F</code>, <code>J</code>, <code>K</code> to tap corresponding lanes.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Does Piano Tiles help hand-eye coordination?</h4>
+                <p>A: Yes! Rhythm games significantly improve visual processing speed, bilateral finger dexterity, and musical beat synchronization.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Does this game work on iPhone and Android?</h4>
+                <p>A: Absolutely. Piano Tiles is optimized with multi-touch support for smooth, lag-free tapping on all smartphones and tablets.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement & Loader Bridge Script -->
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(800 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>
