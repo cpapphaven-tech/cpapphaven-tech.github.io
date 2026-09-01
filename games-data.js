@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Whack-a-Mole", tag: "🔥 Carnival Hit", desc: "Smash popping moles, catch golden bonus kings, and build crazy combos!", href: "WhackAMole/index.html", gradient: "linear-gradient(135deg,#f59e0b,#ef4444,#1e1b4b)", icon: "🔨", badge: "hot", image: "" },
+
     { name: "Connect Four", tag: "🔥 Trending Board", desc: "Drop discs and connect 4 in a row to win vs smart AI or friends!", href: "ConnectFour/index.html", gradient: "linear-gradient(135deg,#1d4ed8,#ef4444,#1e1b4b)", icon: "🔴", badge: "hot", image: "" },
 
     { name: "Memory Card Match", tag: "🔥 Most Popular", desc: "Flip 3D cards, match emoji pairs, build combo streaks!", href: "MemoryMatch/index.html", gradient: "linear-gradient(135deg,#0ea5e9,#6366f1,#1e1b4b)", icon: "🃏", badge: "hot", image: "" },
@@ -27,6 +29,8 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Whack-a-Mole", genre: "Arcade", icon: "", href: "WhackAMole/index.html", badge: "hot", emoji: "🔨" },
+
         { name: "Geometry Jump",    genre: "Action",   icon: "",                                 href: "GeometryDash/game.html",         badge: "new",     emoji: "🔺" },
         { name: "Knife Hit",        genre: "Arcade",   icon: "",                                 href: "KnifeHit/game.html",             badge: "new",     emoji: "🎯" },
         { name: "Balloon Ninja",    genre: "Arcade",   icon: "assets/ninja200.png",             href: "NeonSlicer/index.html",          badge: "hot",     emoji: "🗡️" },

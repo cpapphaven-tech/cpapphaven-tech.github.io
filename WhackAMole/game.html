@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Whack-a-Mole Free Online | Classic Carnival Arcade Game | PlayMixGames</title>
+    <meta name="description" content="Play Whack-a-Mole free online! Smash pesky moles, catch the golden king mole, avoid bombs, and rack up huge combo streaks in this fast arcade reaction game.">
+
+    <!-- Libraries & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="../ads.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <!-- Game Header & HUD -->
+    <header>
+        <div class="title-group">
+            <h1>🔨 Whack-a-Mole</h1>
+        </div>
+        <div class="hud-stats">
+            <div class="stat-chip">
+                <span class="stat-label">Score</span>
+                <span class="stat-value" id="score-val">0</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Time</span>
+                <span class="stat-value" id="timer-val">60</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Best</span>
+                <span class="stat-value" id="high-val">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Toolbar: Modes & Reset -->
+    <div class="toolbar">
+        <div class="bar-row">
+            <button class="pill-btn mode-btn active" data-mode="classic">⏱️ Classic (60s)</button>
+            <button class="pill-btn mode-btn" data-mode="blitz">⚡ Blitz (45s)</button>
+            <button class="pill-btn mode-btn" data-mode="frenzy">🔥 Frenzy (30s)</button>
+            <button class="pill-btn" id="restart-btn" style="background: rgba(239, 68, 68, 0.2); border-color: #ef4444; color: #fca5a5;">🔄 Reset</button>
+        </div>
+        <div style="text-align: center;">
+            <span id="combo-banner">🔥 2X COMBO STREAK!</span>
+        </div>
+    </div>
+
+    <!-- Board Container: 3x3 Dirt Mounds -->
+    <div class="board-container" id="board-container">
+        <div class="mole-grid" id="mole-grid"></div>
+    </div>
+
+    <!-- Game Over Win Modal -->
+    <div class="modal" id="win-modal">
+        <div class="modal-box">
+            <h2>🎉 Time's Up!</h2>
+            <p style="color: #94a3b8; font-size: 0.9rem;">Awesome reflex smashing!</p>
+            <div class="results-grid">
+                <div class="res-item">
+                    <span class="res-label">Final Score</span>
+                    <span class="res-val" id="win-score">0</span>
+                </div>
+                <div class="res-item">
+                    <span class="res-label">High Score</span>
+                    <span class="res-val" id="win-high">0</span>
+                </div>
+                <div class="res-item">
+                    <span class="res-label">Max Combo</span>
+                    <span class="res-val" id="win-combo">0x</span>
+                </div>
+            </div>
+            <button class="action-btn" id="play-again-btn">Play Again 🚀</button>
+        </div>
+    </div>
+
+    <!-- Bottom Ad Container -->
+    <div id="pmg-bottom-ad" style="width: 100%; position: fixed; bottom: 0; left: 0; z-index: 40; display: flex; justify-content: center;"></div>
+
+    <script>
+        // Trigger bottom banner injection from ads.js
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</body>
+
+</html>

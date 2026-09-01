@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Whack-a-Mole Free Online | Classic Carnival Arcade Reflex Game | PlayMixGames</title>
+    <meta name="description" content="Play Whack-a-Mole free online! Smash popping moles, catch bonus golden king moles, dodge explosive bombs, and test your reaction speed across Classic, Blitz, and Frenzy modes.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="whack a mole, whack a mole online, play whack a mole free, carnival games online, reflex arcade game, mole hammer game, モグラ叩き 無料, もぐらたたき ゲーム, golpear al topo online, jeu de taupe gratuit, whack a mole unblocked">
+    
+    <!-- Open Graph / Japanese (JP) -->
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta name="twitter:title:ja" content="モグラ叩き - 無料アーケードゲーム">
+    <meta name="twitter:description:ja" content="飛び出すモグラをハンマーで叩いてハイスコアを目指そう！反射神経トレーニングゲーム。">
+    
+    <!-- Open Graph / Spanish (ES) -->
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta name="twitter:title:es" content="Golpea al Topo Gratis Online">
+    <meta name="twitter:description:es" content="¡Golpea a los topos antes de que se escondan! Evita las bombas y consigue combos en este clásico juego de arcade.">
+    
+    <!-- Open Graph / French (FR) -->
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:title:fr" content="Jeu de Tape-Taupe Gratuit">
+    <meta name="twitter:description:fr" content="Tapez sur les taupes qui surgissent des trous pour marquer un maximum de points en ligne !">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/WhackAMole/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/WhackAMole/index.html" />
+    
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0a1a;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #f8fafc;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0a1a;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #f59e0b;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(245, 158, 11, 0.1);
+            border-top-color: #f59e0b;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #f59e0b, #ef4444);
+            animation: pmgFill 3s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.3);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pmgPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.98); }
+        }
+
+        @keyframes pmgFill {
+            0% { width: 0%; }
+            100% { width: 95%; }
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #game-frame {
+            width: 100%;
+            max-width: 520px;
+            height: 700px;
+            max-height: 85vh;
+            border: none;
+            display: block;
+            margin: 15px auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        /* SEO Article & Info Section */
+        .seo-section {
+            background: #111827;
+            border-top: 1px solid #1f2937;
+            padding: 50px 20px;
+            margin-top: 30px;
+            color: #e5e7eb;
+        }
+
+        .seo-container {
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .seo-container h2 {
+            font-size: 1.8rem;
+            color: #f59e0b;
+            margin-bottom: 16px;
+        }
+
+        .seo-container h3 {
+            font-size: 1.3rem;
+            color: #fcd34d;
+            margin: 28px 0 12px;
+        }
+
+        .seo-container p {
+            font-size: 1rem;
+            color: #9ca3af;
+            margin-bottom: 16px;
+        }
+
+        .seo-container ul, .seo-container ol {
+            margin: 12px 0 20px 24px;
+            color: #d1d5db;
+        }
+
+        .seo-container li {
+            margin-bottom: 8px;
+        }
+
+        .faq-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .faq-card h4 {
+            font-size: 1.05rem;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .faq-card p {
+            margin-bottom: 0;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+    </style>
+
+    <meta property="og:title" content="Whack-a-Mole Free Online | Classic Carnival Arcade Reflex Game | PlayMixGames">
+    <meta property="og:description" content="Play Whack-a-Mole free online! Smash popping moles, catch bonus golden king moles, dodge bombs, and test your reaction speed across 3 game modes.">
+    <meta property="og:url" content="https://playmixgames.in/WhackAMole/index.html">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://playmixgames.in/WhackAMole/index.html" />
+    <script defer src="../sidebar.js"></script>
+
+    <!-- Schema.org VideoGame Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Whack-a-Mole",
+      "description": "Play free online Whack-a-Mole! Test your reflexes, whack mischievous moles, snag golden bonus moles, avoid TNT bombs, and build crazy combo streaks in this iconic carnival arcade classic.",
+      "url": "https://playmixgames.in/WhackAMole/index.html",
+      "image": "https://playmixgames.in/img/covers/image600.png",
+      "genre": [
+        "Arcade",
+        "Action",
+        "Casual"
+      ],
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayMixGames",
+        "url": "https://playmixgames.in"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "295",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Brand Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Loading Whack-a-Mole...</p>
+    </div>
+
+    <!-- Game Viewport Container -->
+    <main>
+        <iframe id="game-frame" src="game.html" title="Whack-a-Mole Arcade Game" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <!-- SEO Content & FAQ Section -->
+    <section class="seo-section">
+        <div class="seo-container">
+            <h2>🔨 Play Whack-a-Mole Online Free</h2>
+            <p>
+                Step right up to the classic midway arcade carnival experience with <strong>Whack-a-Mole</strong> on PlayMix! Fast, exciting, and endlessly addictive, Whack-a-Mole challenges your hand-eye coordination, peripheral vision, and rapid reflexes. Tap or click popping moles as fast as they appear, chain together consecutive hits for massive combo multipliers, and avoid explosive TNT bombs to set new all-time high scores!
+            </p>
+
+            <h3>🌟 Key Game Features</h3>
+            <ul>
+                <li><strong>3 Action-Packed Modes:</strong> Choose from <em>Classic (60s)</em> for standard carnival fun, <em>Blitz (45s)</em> for high-speed pops, or <em>Frenzy (30s)</em> for double-point mayhem!</li>
+                <li><strong>Dynamic Mole Types:</strong>
+                    <ul>
+                        <li>🐹 <strong>Standard Mole:</strong> +10 Points (multiplied by your active combo streak).</li>
+                        <li>👑 <strong>Golden King Mole:</strong> +30 Points and instant streak bonus!</li>
+                        <li>💣 <strong>TNT Bomb:</strong> -20 Points penalty and breaks your current combo streak.</li>
+                    </ul>
+                </li>
+                <li><strong>Combo Multiplier System:</strong> Whack multiple moles in succession without missing to unlock 2x, 3x, and 4x score multipliers!</li>
+                <li><strong>Punchy Web Audio Sound FX:</strong> Satisfying bonk sounds, cute mole squeaks, sparkling gold chimes, and deep bomb explosion rumbles synthesized in real time.</li>
+                <li><strong>100% Mobile & Touch Optimized:</strong> Zero downloads or installations required. Plays smoothly with single-finger tap controls on iPhones, Android phones, tablets, Chromebooks, and PCs.</li>
+            </ul>
+
+            <h3>🎮 How to Play Whack-a-Mole</h3>
+            <ol>
+                <li><strong>Select a Game Mode:</strong> Choose your preferred round duration (60s, 45s, or 30s) from the top toolbar.</li>
+                <li><strong>Start Whacking:</strong> Tap any hole or click with your mouse as soon as a mole pops out of the dirt mound.</li>
+                <li><strong>Build Your Multiplier:</strong> Quick, uninterrupted hits build your combo streak from 1x up to 4x.</li>
+                <li><strong>Watch Out for Bombs:</strong> When a 💣 bomb appears, leave it alone! Hitting a bomb costs 20 points and resets your combo.</li>
+                <li><strong>Beat the High Score:</strong> Keep whacking until the countdown timer expires and try to beat your personal best!</li>
+            </ol>
+
+            <h3>🧠 Pro Tips to Score Higher</h3>
+            <ul>
+                <li><strong>Focus on the Center of the Grid:</strong> Rest your gaze in the middle of the 3x3 board so your peripheral vision catches moles appearing in all four corners instantly.</li>
+                <li><strong>Prioritize Golden Moles:</strong> Golden moles grant 30 base points and accelerate your combo multiplier rapidly.</li>
+                <li><strong>Do Not Panic Click:</strong> Rushing to click every pop can lead to accidentally whacking bombs. Develop rhythm and accuracy over raw speed.</li>
+            </ul>
+
+            <h3>❓ Frequently Asked Questions (FAQ)</h3>
+
+            <div class="faq-card">
+                <h4>Q: Is Whack-a-Mole completely free to play?</h4>
+                <p>A: Yes, 100%! You can play unlimited rounds of Whack-a-Mole for free directly in your web browser with no downloads or account registration.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Does Whack-a-Mole help improve reflexes and reaction time?</h4>
+                <p>A: Yes! Whack-a-Mole is one of the most effective and entertaining ways to train fast motor reflexes, visual reaction time, and spatial hand-eye coordination.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Can I play Whack-a-Mole on mobile phones?</h4>
+                <p>A: Absolutely. The game is fully responsive and optimized for rapid single-finger tapping on any smartphone or tablet touchscreen.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Does the game save my high scores?</h4>
+                <p>A: Yes, your highest achieved score is automatically saved in your browser so you can return anytime to challenge your record.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement & Loader Bridge Script -->
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(800 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>
