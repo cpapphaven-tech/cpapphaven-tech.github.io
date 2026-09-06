@@ -511,6 +511,40 @@
         trainGroup.position.set(lx, 0, z);
         scene.add(trainGroup);
 
+        var hasRamp = (Math.random() < 0.75); // 75% of trains have front ramps to surf!
+        var rampLength = 5.5;
+        var roofY = 3.4;
+
+        if (hasRamp) {
+            // Build 3D inclined ramp in front of train
+            var rampMeshGeo = new THREE.BoxGeometry(2.0, 0.25, Math.hypot(rampLength, 2.9));
+            var rampMat = new THREE.MeshStandardMaterial({ color: 0xf59e0b, roughness: 0.4 });
+            var rampMesh = new THREE.Mesh(rampMeshGeo, rampMat);
+            var rampAngle = Math.atan2(2.9, rampLength);
+            rampMesh.rotation.x = rampAngle;
+            rampMesh.position.set(0, 1.7, length / 2 + rampLength / 2);
+            rampMesh.castShadow = true;
+            trainGroup.add(rampMesh);
+
+            // Hazard warning stripes on ramp
+            var stripeGeo = new THREE.BoxGeometry(2.02, 0.26, 0.45);
+            var stripeMat = new THREE.MeshBasicMaterial({ color: 0x0f172a });
+            for (var sz = length / 2 + 1; sz < length / 2 + rampLength; sz += 1.4) {
+                var s = new THREE.Mesh(stripeGeo, stripeMat);
+                var progress = (sz - length / 2) / rampLength;
+                s.position.set(0, 3.4 - progress * 2.9, sz);
+                s.rotation.x = rampAngle;
+                trainGroup.add(s);
+            }
+
+            // Coin trail leading up the ramp onto the train!
+            for (var crz = length / 2 + rampLength - 1; crz >= length / 2; crz -= 1.8) {
+                var rprog = (crz - length / 2) / rampLength;
+                var cy = 0.5 + (1 - rprog) * 2.9 + 0.9;
+                spawnCoin(lane, z + crz, cy);
+            }
+        }
+
         obstacles.push({
             type: 'train',
             mesh: trainGroup,
@@ -520,15 +554,16 @@
             w: 1.9,
             h: 3.2,
             d: length,
-            canJumpOver: false,
+            roofY: roofY,
+            hasRamp: hasRamp,
+            rampLength: rampLength,
+            canJumpOver: true,
             canRollUnder: false
         });
 
-        // Put coins on train roof occasionally
-        if (Math.random() < 0.6) {
-            for (var rz = -length / 2 + 2; rz <= length / 2 - 2; rz += 3.5) {
-                spawnCoin(lane, z + rz, 3.8);
-            }
+        // Put coins on train roof
+        for (var rz = -length / 2 + 2; rz <= length / 2 - 2; rz += 3.2) {
+            spawnCoin(lane, z + rz, roofY + 0.85);
         }
     }
 
@@ -720,6 +755,38 @@
         }
     }
 
+    // --- Dynamic Ground Level (Track at 0.5, Ramps, or Train Roof at 3.4) ---
+    function getCurrentGroundLevel(px, pz) {
+        var baseGroundY = 0.5;
+
+        for (var i = 0; i < obstacles.length; i++) {
+            var obs = obstacles[i];
+            if (obs.type === 'train') {
+                var inX = Math.abs(px - obs.x) < (obs.w / 2 + 0.35);
+                if (!inX) continue;
+
+                // Check front ramp
+                if (obs.hasRamp) {
+                    var rampFront = obs.z + obs.d / 2 + obs.rampLength;
+                    var rampBack = obs.z + obs.d / 2;
+                    if (pz <= rampFront && pz >= rampBack) {
+                        var progress = (rampFront - pz) / obs.rampLength;
+                        return 0.5 + progress * (obs.roofY - 0.5);
+                    }
+                }
+
+                // Check train roof
+                var trainFront = obs.z + obs.d / 2;
+                var trainBack = obs.z - obs.d / 2;
+                if (pz <= trainFront && pz >= trainBack) {
+                    return obs.roofY;
+                }
+            }
+        }
+
+        return baseGroundY;
+    }
+
     // --- Main Game Loop ---
     var lastFrameTime = performance.now();
 
@@ -742,13 +809,27 @@
         // Smooth Lane Switching (Lerp)
         playerGroup.position.x = THREE.MathUtils.lerp(playerGroup.position.x, targetX, 14 * dt);
 
-        // Jumping & Gravity Physics
-        if (!isGrounded) {
+        // Dynamic Ground Level (Track at 0.5, Ramps, or Train Roof at 3.4)
+        var currentGroundY = getCurrentGroundLevel(playerGroup.position.x, playerGroup.position.z);
+
+        if (isGrounded) {
+            if (playerY < currentGroundY) {
+                // Ascending onto ramp or train roof
+                playerY = currentGroundY;
+            } else if (playerY > currentGroundY + 0.15) {
+                // Stepped or ran off the back of a train: start falling!
+                isGrounded = false;
+                playerVY = 0;
+            } else {
+                playerY = currentGroundY;
+            }
+        } else {
+            // In air (jumping or falling)
             playerVY += gravity * dt;
             playerY += playerVY * dt;
 
-            if (playerY <= groundY) {
-                playerY = groundY;
+            if (playerY <= currentGroundY) {
+                playerY = currentGroundY;
                 playerVY = 0;
                 isGrounded = true;
             }
@@ -928,13 +1009,30 @@
         if (!inZ || !inX) return false;
 
         if (obs.type === 'train') {
-            // Train hits unless player is safely running on its roof (py > 3.0)
-            return (py < 2.9);
+            // 1. If player is running on or above train roof, completely SAFE!
+            if (py >= (obs.roofY || 3.4) - 0.25) {
+                return false;
+            }
+
+            // 2. If train has a front ramp and player is on the ramp, completely SAFE!
+            if (obs.hasRamp) {
+                var rampFrontZ = obs.z + obs.d / 2 + obs.rampLength;
+                var rampBackZ = obs.z + obs.d / 2;
+                if (pz <= rampFrontZ && pz >= rampBackZ) {
+                    return false;
+                }
+            }
+
+            // 3. Otherwise, if inside solid train body: CRASH!
+            var inZ = (pz < obs.z + obs.d / 2) && (pz > obs.z - obs.d / 2);
+            if (inZ && py < (obs.roofY || 3.4) - 0.25) {
+                return true;
+            }
+
+            return false;
         } else if (obs.type === 'low_barrier') {
-            // Low barrier: hits unless jumping above 1.1 units
             return (py < 1.1);
         } else if (obs.type === 'high_barrier') {
-            // High barrier: hits unless rolling flat (isRolling === true)
             return !isRolling;
         }
 
