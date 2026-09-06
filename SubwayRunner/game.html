@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Subway Runner 3D | Endless Track Surfer Game | PlayMixGames</title>
+    <meta name="description" content="Play Subway Runner 3D free online! Dash down 3-lane railway tracks, dodge oncoming trains, jump over roadblocks, slide under barriers, and collect coins in your browser.">
+
+    <!-- Libraries & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="../ads.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <!-- Game Header & HUD -->
+    <header>
+        <div class="title-group">
+            <h1>🚇 Subway Runner 3D</h1>
+        </div>
+        <div class="hud-stats">
+            <div class="stat-chip">
+                <span class="stat-label">Score</span>
+                <span class="stat-value score" id="score-val">0</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Coins</span>
+                <span class="stat-value" id="coins-val">🪙 0</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Mult</span>
+                <span class="stat-value multiplier" id="mult-val">1x</span>
+            </div>
+            <div class="stat-chip">
+                <span class="stat-label">Best</span>
+                <span class="stat-value" id="high-val">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3D Canvas Viewport Container -->
+    <div id="canvas-container">
+        <canvas id="subway-canvas"></canvas>
+
+        <!-- Powerup Banner on HUD -->
+        <div class="powerup-bar">
+            <div class="powerup-pill" id="pill-magnet">🧲 MAGNET <span id="time-magnet">10s</span></div>
+            <div class="powerup-pill" id="pill-jumpboost">🦘 SUPER JUMP <span id="time-jumpboost">10s</span></div>
+            <div class="powerup-pill" id="pill-2x">⚡ 2X MULT <span id="time-2x">10s</span></div>
+            <div class="powerup-pill" id="pill-shield">🛹 SHIELD ACTIVE</div>
+        </div>
+
+        <!-- Start Game Overlay -->
+        <div class="start-overlay" id="start-overlay">
+            <h2>🚇 SUBWAY RUNNER 3D</h2>
+            <p>Dash along the subway tracks, dodge trains & barriers, and grab power-ups!</p>
+            <div class="control-guide">
+                <div class="guide-item">
+                    <strong>◀ / ▶ ARROWS</strong>
+                    Switch 3 Lanes
+                </div>
+                <div class="guide-item">
+                    <strong>▲ / SPACE</strong>
+                    Jump Over Obstacles
+                </div>
+                <div class="guide-item">
+                    <strong>▼ DOWN ARROW</strong>
+                    Slide / Roll Under
+                </div>
+                <div class="guide-item">
+                    <strong>MOBILE TOUCH</strong>
+                    Swipe or Touch Bar
+                </div>
+            </div>
+            <div class="play-prompt">🚀 TAP TO RUN</div>
+        </div>
+
+        <!-- Mobile Touch Control Bar -->
+        <div class="touch-bar">
+            <button class="touch-btn" id="btn-left" aria-label="Switch Left">◀ LEFT</button>
+            <button class="touch-btn jump" id="btn-jump" aria-label="Jump">▲ JUMP</button>
+            <button class="touch-btn roll" id="btn-roll" aria-label="Roll / Slide">▼ ROLL</button>
+            <button class="touch-btn" id="btn-right" aria-label="Switch Right">▶ RIGHT</button>
+        </div>
+    </div>
+
+    <!-- Game Over Crash Modal -->
+    <div class="modal" id="win-modal">
+        <div class="modal-box">
+            <h2>💥 CRASHED!</h2>
+            <p style="color: #94a3b8; font-size: 0.85rem;">You hit an obstacle on the tracks! Practice your timing to run even further.</p>
+            <div class="results-grid">
+                <div class="res-item">
+                    <span class="res-label">Distance Score</span>
+                    <span class="res-val" id="win-score">0</span>
+                </div>
+                <div class="res-item">
+                    <span class="res-label">Coins Gathered</span>
+                    <span class="res-val coins" id="win-coins">🪙 0</span>
+                </div>
+                <div class="res-item" style="grid-column: span 2;">
+                    <span class="res-label">All-Time Best</span>
+                    <span class="res-val" id="win-high">0</span>
+                </div>
+            </div>
+            <button class="action-btn" id="play-again-btn">Run Again 🚀</button>
+        </div>
+    </div>
+
+    <!-- Bottom Ad Container -->
+    <div id="pmg-bottom-ad" style="width: 100%; position: fixed; bottom: 0; left: 0; z-index: 40; display: flex; justify-content: center;"></div>
+
+    <script>
+        // Trigger bottom banner injection from ads.js
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</body>
+
+</html>

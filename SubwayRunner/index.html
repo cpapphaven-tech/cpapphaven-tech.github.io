@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Subway Runner 3D Free Online | Endless Track Surfer Game | PlayMixGames</title>
+    <meta name="description" content="Play Subway Runner 3D free online! Dash down 3-lane railway tracks, dodge trains, leap hurdles, roll under barriers, grab coin magnets, and surf endless subway lines in your browser.">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="subway runner 3d, subway runner 3d, subway track runner, endless runner 3d, 3d train runner, metro runner online, 地下鉄ランナー 3d, juego subway runner gratis, jeu subway runner 3d">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Subway Runner 3D | Endless Track Surfer Game | PlayMixGames">
+    <meta property="og:description" content="Dash along high-speed subway railway tracks, leap over barriers, dodge oncoming trains, and collect gold coins in this thrilling 3D endless runner!">
+    <meta property="og:type" content="game">
+    <meta property="og:url" content="https://playmixgames.in/SubwayRunner/index.html">
+    
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/SubwayRunner/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/SubwayRunner/index.html" />
+    
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0a0f1d;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: #f8fafc;
+        }
+
+        #pmg-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a0f1d;
+            transition: opacity 0.5s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #fbbf24;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+            animation: pmgPulse 2s infinite;
+        }
+
+        .pmg-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(251, 191, 36, 0.15);
+            border-top-color: #fbbf24;
+            border-radius: 50%;
+            animation: pmgSpin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .pmg-bar-track {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .pmg-bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #fbbf24, #f97316);
+            animation: pmgFill 3s cubic-bezier(0.1, 0, 0.1, 1) forwards;
+        }
+
+        .pmg-tip {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.35);
+            margin-top: 15px;
+        }
+
+        @keyframes pmgSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes pmgPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.98); }
+        }
+
+        @keyframes pmgFill {
+            0% { width: 0%; }
+            100% { width: 95%; }
+        }
+
+        main {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        #game-frame {
+            width: 100%;
+            max-width: 520px;
+            height: 720px;
+            max-height: 85vh;
+            border: none;
+            display: block;
+            margin: 15px auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        /* SEO Article & Info Section */
+        .seo-section {
+            background: #0f172a;
+            border-top: 1px solid #1e293b;
+            padding: 50px 20px;
+            margin-top: 30px;
+            color: #e2e8f0;
+        }
+
+        .seo-container {
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .seo-container h1 {
+            font-size: 2.2rem;
+            color: #fbbf24;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .seo-container h2 {
+            font-size: 1.5rem;
+            color: #38bdf8;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 8px;
+        }
+
+        .seo-container h3 {
+            font-size: 1.2rem;
+            color: #f97316;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        .seo-container p {
+            margin-bottom: 18px;
+            color: #94a3b8;
+        }
+
+        .seo-container ul, .seo-container ol {
+            margin-bottom: 20px;
+            padding-left: 24px;
+            color: #cbd5e1;
+        }
+
+        .seo-container li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: rgba(30, 41, 59, 0.7);
+            border-left: 4px solid #fbbf24;
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+            color: #e2e8f0;
+        }
+
+        .faq-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 14px;
+        }
+
+        .faq-card h4 {
+            margin: 0 0 8px 0;
+            color: #fbbf24;
+            font-size: 1.05rem;
+        }
+
+        .faq-card p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 0.92rem;
+        }
+    </style>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Subway Runner 3D",
+      "url": "https://playmixgames.in/SubwayRunner/index.html",
+      "description": "Subway Runner 3D is a fast-paced, 3-lane endless railway surfer runner game. Dash down subway tracks, dodge trains, jump roadblocks, roll under high barriers, and grab coin magnets.",
+      "genre": ["Arcade", "Runner", "3D Action"],
+      "playMode": "SinglePlayer",
+      "applicationCategory": "Game",
+      "operatingSystem": "Any Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayMixGames",
+        "url": "https://playmixgames.in"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Brand Preloader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">SUBWAY RUNNER 3D</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <div class="pmg-tip">Loading 3D Railway Tracks & Train Physics...</div>
+    </div>
+
+    <!-- Main Game Frame -->
+    <main>
+        <iframe id="game-frame" title="Subway Runner 3D Game Viewport"></iframe>
+    </main>
+
+    <!-- Comprehensive SEO Article Section -->
+    <section class="seo-section">
+        <div class="seo-container">
+            <h1>Subway Runner 3D: Free Online Endless Railway Surfer</h1>
+            
+            <p>Welcome to <strong>Subway Runner 3D</strong>, the ultimate 3-lane endless running adventure directly in your web browser! Subway Runner 3D puts your reflexes to the test on high-voltage railway tracks surrounded by towering neon skyscrapers.</p>
+            
+            <div class="highlight-box">
+                <strong>🚀 Quick Highlights:</strong> Instant browser play, zero downloads, 60 FPS WebGL 3D graphics, full keyboard & mobile touch swipe support, rich audio sound effects, and exciting power-ups including Coin Magnets and Super Jump Boots!
+            </div>
+
+            <h2>🎮 How to Play Subway Runner 3D</h2>
+            <p>The goal is straightforward: run as far down the railway lines as possible without crashing into oncoming subway trains, roadblocks, or overhead bridge signs while collecting shiny gold coins to multiply your score.</p>
+            
+            <ol>
+                <li><strong>Switch Lanes (Left & Right):</strong> Use <code>◀ Left Arrow / A</code> and <code>▶ Right Arrow / D</code> to dodge incoming trains across the 3 parallel railway tracks. On mobile, swipe left or right or use the touch buttons.</li>
+                <li><strong>Leap Over Roadblocks:</strong> Press <code>▲ Up Arrow / Space / W</code> to jump clear over yellow-and-black hazard barriers and leap onto train cars.</li>
+                <li><strong>Roll / Duck Under Overhead Signs:</strong> Press <code>▼ Down Arrow / S</code> to drop into a fast slide and glide safely underneath high overhead clearance signs.</li>
+                <li><strong>Collect Spinning Coins:</strong> Grab golden coins to boost your bank and climb the leaderboard.</li>
+            </ol>
+
+            <h2>⚡ Power-Ups & Special Equipment</h2>
+            <p>During your sprint along the subway lines, keep your eyes open for glowing booster cubes:</p>
+            <ul>
+                <li><strong>🧲 Coin Magnet (Red):</strong> Magnetically pulls every nearby gold coin from all 3 lanes directly to your runner for 10 seconds!</li>
+                <li><strong>👟 Super Jump Boots (Green):</strong> Amplifies your jump velocity by 1.7x, letting you leap completely over full-sized subway train carriages!</li>
+                <li><strong>⚡ 2X Score Multiplier (Cyan):</strong> Doubles the value of every collected coin while active.</li>
+                <li><strong>🛹 Hoverboard Shield (Magenta):</strong> Equips a futuristic hoverboard beneath your feet that absorbs one collision without ending your run!</li>
+            </ul>
+
+            <h2>🧠 Pro Tips for High Score Runs</h2>
+            <ul>
+                <li><strong>Look Several Chunks Ahead:</strong> Never stare directly at your runner character. Focus your gaze 20–30 meters ahead down the tracks to prepare for upcoming train configurations.</li>
+                <li><strong>Fast-Fall Jump Cancel:</strong> If you jump and realize an overhead obstacle or train is right in front of your landing zone, tap <code>▼ Down / Roll</code> in mid-air to immediately slam down into a slide!</li>
+                <li><strong>Prioritize Center Lane:</strong> Staying in the middle track gives you quick access to both left and right escape routes when an unexpected train appears.</li>
+            </ul>
+
+            <h2>❓ Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-card">
+                <h4>Q: Can I play Subway Runner 3D on my mobile phone?</h4>
+                <p>A: Yes! Subway Runner 3D features native touch gestures (swiping left, right, up to jump, down to roll) as well as an on-screen tactile button bar optimized for smartphones and tablets.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Is Subway Runner 3D completely free?</h4>
+                <p>A: Absolutely. You can play unlimited runs 100% free with no account creation or downloads required on PlayMixGames.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: Does my high score save automatically?</h4>
+                <p>A: Yes! Your personal best distance record is saved locally in your web browser so you can challenge your friends anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement & Loader Bridge Script -->
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(800 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+    </script>
+</body>
+
+</html>

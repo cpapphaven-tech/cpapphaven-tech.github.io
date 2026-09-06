@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Subway Runner 3D", tag: "🚇 Global #1 Hit", desc: "Surf 3-lane railway tracks, dodge speeding subway trains, leap roadblocks, and grab coin magnets!", href: "SubwayRunner/index.html", gradient: "linear-gradient(135deg,#fbbf24,#f97316,#ef4444)", icon: "🚇", badge: "hot", image: "" },
+
     { name: "Cyber Dino: Double Jump", tag: "🦖 Legendary Hit", desc: "Double jump in mid-air, collect energy crystals, and leap over downhill neon energy spikes!", href: "DinoRun/index.html", gradient: "linear-gradient(135deg,#22c55e,#38bdf8,#1e1b4b)", icon: "🦖", badge: "hot", image: "" },
 
     { name: "Slope Game 3D", tag: "⚡ Viral 3D Runner", desc: "Steer your 3D neon ball down steep slopes and dodge red obstacles at breakneck speeds!", href: "SlopeGame/index.html", gradient: "linear-gradient(135deg,#22c55e,#06b6d4,#1e1b4b)", icon: "⚡", badge: "hot", image: "" },
@@ -37,6 +39,8 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Subway Runner 3D", genre: "Runner", icon: "", href: "SubwayRunner/index.html", badge: "hot", emoji: "🚇" },
+
         { name: "Cyber Dino: Double Jump", genre: "Arcade", icon: "", href: "DinoRun/index.html", badge: "hot", emoji: "🦖" },
 
         { name: "Slope Game 3D", genre: "Action", icon: "", href: "SlopeGame/index.html", badge: "hot", emoji: "⚡" },
