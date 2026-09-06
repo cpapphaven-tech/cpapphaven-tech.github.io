@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Cyber Dino: Double Jump", tag: "🦖 Legendary Hit", desc: "Double jump in mid-air, collect energy crystals, and leap over downhill neon energy spikes!", href: "DinoRun/index.html", gradient: "linear-gradient(135deg,#22c55e,#38bdf8,#1e1b4b)", icon: "🦖", badge: "hot", image: "" },
+
     { name: "Slope Game 3D", tag: "⚡ Viral 3D Runner", desc: "Steer your 3D neon ball down steep slopes and dodge red obstacles at breakneck speeds!", href: "SlopeGame/index.html", gradient: "linear-gradient(135deg,#22c55e,#06b6d4,#1e1b4b)", icon: "⚡", badge: "hot", image: "" },
 
     { name: "Checkers (Draughts)", tag: "👑 Classic Legend", desc: "Jump, capture, crown kings, and outsmart the AI or friends in classic 8x8 checkers!", href: "Checkers/index.html", gradient: "linear-gradient(135deg,#f59e0b,#ef4444,#1e1b4b)", icon: "👑", badge: "hot", image: "" },
@@ -35,6 +37,8 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Cyber Dino: Double Jump", genre: "Arcade", icon: "", href: "DinoRun/index.html", badge: "hot", emoji: "🦖" },
+
         { name: "Slope Game 3D", genre: "Action", icon: "", href: "SlopeGame/index.html", badge: "hot", emoji: "⚡" },
 
         { name: "Piano Tiles", genre: "Rhythm", icon: "", href: "PianoTiles/index.html", badge: "hot", emoji: "🎹" },
