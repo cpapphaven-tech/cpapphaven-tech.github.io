@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Checkers (Draughts)", tag: "👑 Classic Legend", desc: "Jump, capture, crown kings, and outsmart the AI or friends in classic 8x8 checkers!", href: "Checkers/index.html", gradient: "linear-gradient(135deg,#f59e0b,#ef4444,#1e1b4b)", icon: "👑", badge: "hot", image: "" },
+
     { name: "Piano Tiles", tag: "🔥 Rhythm Hit", desc: "Tap falling black piano keys to perform classical masterpieces in real-time!", href: "PianoTiles/index.html", gradient: "linear-gradient(135deg,#0ea5e9,#a855f7,#1e1b4b)", icon: "🎹", badge: "hot", image: "" },
 
     { name: "Whack-a-Mole", tag: "🔥 Carnival Hit", desc: "Smash popping moles, catch golden bonus kings, and build crazy combos!", href: "WhackAMole/index.html", gradient: "linear-gradient(135deg,#f59e0b,#ef4444,#1e1b4b)", icon: "🔨", badge: "hot", image: "" },
@@ -118,6 +120,8 @@ window.PMG_DATA = {
       more: false,
       tab: "games",
       items: [
+        { name: "Checkers", genre: "Board", icon: "", href: "Checkers/index.html", badge: "hot", emoji: "👑" },
+
         { name: "Connect Four", genre: "Board", icon: "", href: "ConnectFour/index.html", badge: "hot", emoji: "🔴" },
 
         { name: "Chess Master",     genre: "Board",    icon: "assets/chess200.png",              href: "Chess/index.html",               badge: "",     emoji: "♟" },
