@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Four Colors | Classic Color Card Game Free Online | PlayMixGames</title>
+    <meta name="description" content="Play Four Colors free online! Match cards by color or number, play Skip, Reverse, Draw 2, and Wild cards, call 1 CARD, and outsmart smart AI opponents.">
+
+    <!-- Libraries & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="../ads.js"></script>
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <!-- Game Header & Turn HUD -->
+    <header>
+        <div class="title-group">
+            <h1>🌈 Four Colors</h1>
+        </div>
+        <div class="hud-turn-badge">
+            <div class="turn-dot" id="turn-dot"></div>
+            <span id="turn-text">Your Turn</span>
+        </div>
+    </header>
+
+    <!-- Toolbar: Player Count Mode -->
+    <div class="toolbar">
+        <button class="pill-btn mode-btn active" data-players="2">👥 2 Players</button>
+        <button class="pill-btn mode-btn" data-players="3">👥 3 Players</button>
+        <button class="pill-btn mode-btn" data-players="4">👥 4 Players</button>
+    </div>
+
+    <!-- Card Table Arena -->
+    <main class="game-arena">
+        <!-- Top Opponent(s) -->
+        <div class="opponents-top" id="opponents-top">
+            <div class="bot-badge" id="badge-bot1">
+                <span class="bot-name">🤖 Bot 1</span>
+                <span class="bot-cards-count" id="count-bot1">7 Cards</span>
+            </div>
+            <div class="bot-badge" id="badge-bot2" style="display: none;">
+                <span class="bot-name">🤖 Bot 2</span>
+                <span class="bot-cards-count" id="count-bot2">7 Cards</span>
+            </div>
+            <div class="bot-badge" id="badge-bot3" style="display: none;">
+                <span class="bot-name">🤖 Bot 3</span>
+                <span class="bot-cards-count" id="count-bot3">7 Cards</span>
+            </div>
+        </div>
+
+        <!-- Center Table: Deck, Discard, Direction, 1-Card Alert -->
+        <div class="table-center">
+            <div class="direction-indicator" id="dir-indicator">
+                <span>Direction:</span> <strong id="dir-text">↻ Clockwise</strong>
+            </div>
+
+            <!-- Draw Pile -->
+            <div class="deck-slot" id="draw-deck" title="Click to Draw Card">
+                <div class="card-item face-down">
+                    <div class="card-center-oval">🌈</div>
+                </div>
+                <span class="deck-label">Draw Deck</span>
+            </div>
+
+            <!-- Discard Pile -->
+            <div class="deck-slot" id="discard-slot">
+                <div id="discard-card-wrap">
+                    <!-- Discard card rendered by JS -->
+                </div>
+                <span class="deck-label" id="active-color-label">Active Card</span>
+            </div>
+
+            <!-- 1 CARD! Penalty Alert Button -->
+            <button class="one-card-btn" id="btn-one-card">⚡ 1 CARD!</button>
+        </div>
+
+        <!-- Player Hand Section -->
+        <div class="player-hand-section">
+            <div class="hand-label-row">
+                <span>Your Hand (<span id="player-card-count">7</span> cards)</span>
+                <span id="hint-text" style="color: #facc15;">Tap any glowing card to play</span>
+            </div>
+            <div class="player-cards-tray" id="player-cards-tray">
+                <!-- Player cards dynamically injected here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Wild Color Picker Modal -->
+    <div class="modal" id="wild-modal">
+        <div class="modal-box">
+            <h2>🌈 Choose Next Color</h2>
+            <p style="color: #94a3b8; font-size: 0.88rem;">Select which color the next player must match:</p>
+            <div class="color-picker-grid">
+                <button class="color-choice-btn red" data-color="red">🔴 Red</button>
+                <button class="color-choice-btn green" data-color="green">🟢 Green</button>
+                <button class="color-choice-btn blue" data-color="blue">🔵 Blue</button>
+                <button class="color-choice-btn yellow" data-color="yellow">🟡 Yellow</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Win / Loss Modal -->
+    <div class="modal" id="win-modal">
+        <div class="modal-box">
+            <h2 id="win-title">🎉 YOU WON!</h2>
+            <p id="win-msg" style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 20px;">You emptied your hand first! Brilliant card strategy.</p>
+            <button class="action-btn" id="play-again-btn">Play Again 🚀</button>
+        </div>
+    </div>
+
+    <!-- Bottom Ad Container -->
+    <div id="pmg-bottom-ad" style="width: 100%; position: fixed; bottom: 0; left: 0; z-index: 40; display: flex; justify-content: center;"></div>
+
+    <script>
+        // Trigger bottom banner injection from ads.js
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</body>
+
+</html>

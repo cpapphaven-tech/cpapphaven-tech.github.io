@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --bg-main: #0b0f19;
+    --card-red: #ef4444;
+    --card-green: #10b981;
+    --card-blue: #3b82f6;
+    --card-yellow: #facc15;
+    --card-wild: #8b5cf6;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+body {
+    background: radial-gradient(circle at 50% 20%, #1e1b4b, var(--bg-main) 75%);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 75px; /* Space for bottom banner ad */
+}
+
+/* Header & Turn HUD */
+header {
+    width: 100%;
+    max-width: 560px;
+    padding: 8px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11, 15, 25, 0.9);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.title-group h1 {
+    font-size: 1.15rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ef4444, #facc15, #10b981, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hud-turn-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(30, 41, 59, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.turn-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 8px #10b981;
+    animation: turnPulse 1.5s infinite;
+}
+
+@keyframes turnPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Player Mode Toolbar */
+.toolbar {
+    width: 100%;
+    max-width: 560px;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pill-btn {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    color: var(--text-muted);
+    padding: 4px 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pill-btn.active, .pill-btn:hover {
+    background: rgba(59, 130, 246, 0.4);
+    border-color: #3b82f6;
+    color: #fff;
+}
+
+/* Card Table Arena */
+.game-arena {
+    width: 100%;
+    max-width: 560px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 12px;
+    position: relative;
+    min-height: 520px;
+}
+
+/* Opponent Areas */
+.opponents-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    min-height: 70px;
+}
+
+.opponents-sides {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.bot-badge {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 6px 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    transition: all 0.25s;
+}
+
+.bot-badge.active-turn {
+    border-color: #facc15;
+    box-shadow: 0 0 16px rgba(250, 204, 21, 0.45);
+    transform: scale(1.05);
+}
+
+.bot-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+.bot-cards-count {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #38bdf8;
+}
+
+/* Center Table: Deck, Discard, Direction, 1-Card Button */
+.table-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin: 15px 0;
+    position: relative;
+}
+
+.deck-slot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.deck-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.direction-indicator {
+    position: absolute;
+    top: -24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    background: rgba(30, 41, 59, 0.6);
+    padding: 2px 10px;
+    border-radius: 12px;
+}
+
+/* ONE CARD! Warning Alert Button */
+.one-card-btn {
+    position: absolute;
+    bottom: -32px;
+    background: linear-gradient(135deg, #ef4444, #f59e0b);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 24px;
+    padding: 6px 18px;
+    font-size: 0.85rem;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(239, 68, 68, 0.6);
+    display: none;
+    animation: oneCardPulse 0.9s infinite alternate;
+}
+
+.one-card-btn.visible {
+    display: block;
+}
+
+@keyframes oneCardPulse {
+    from { transform: scale(1); box-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
+    to { transform: scale(1.08); box-shadow: 0 0 25px rgba(250, 204, 21, 0.9); }
+}
+
+/* Player Hand Container */
+.player-hand-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.hand-label-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 8px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.player-cards-tray {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 115px;
+    overflow-x: auto;
+    padding: 10px 4px 4px 4px;
+    scrollbar-width: thin;
+}
+
+/* Card Visual Design */
+.card-item {
+    width: 62px;
+    height: 94px;
+    border-radius: 10px;
+    background: #1e1b4b;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 6px;
+    color: #fff;
+    font-weight: 900;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.15s;
+    margin-left: -18px; /* Overlap cards in hand */
+}
+
+.card-item:first-child {
+    margin-left: 0;
+}
+
+.card-item.playable {
+    border-color: #facc15;
+    box-shadow: 0 0 12px rgba(250, 204, 21, 0.7);
+    transform: translateY(-8px);
+}
+
+.card-item.playable:hover {
+    transform: translateY(-16px) scale(1.06);
+    z-index: 30;
+}
+
+/* Card Colors */
+.card-item.red { background: linear-gradient(145deg, #ef4444, #b91c1c); }
+.card-item.green { background: linear-gradient(145deg, #10b981, #047857); }
+.card-item.blue { background: linear-gradient(145deg, #3b82f6, #1d4ed8); }
+.card-item.yellow { background: linear-gradient(145deg, #facc15, #d97706); color: #0f172a; }
+.card-item.wild { background: linear-gradient(135deg, #ef4444, #3b82f6, #10b981, #facc15); text-shadow: 0 0 5px rgba(0,0,0,0.8); }
+
+/* Face-down deck card */
+.card-item.face-down {
+    background: radial-gradient(circle, #312e81, #0f172a);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-center-oval {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 44px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.card-corner-top {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.card-corner-bottom {
+    align-self: flex-end;
+    font-size: 0.75rem;
+    line-height: 1;
+    transform: rotate(180deg);
+}
+
+/* Draw deck pulse when player must draw */
+.deck-slot.must-draw .card-item.face-down {
+    border-color: #38bdf8;
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.8);
+    animation: drawPulse 1s infinite alternate;
+}
+
+@keyframes drawPulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.06); }
+}
+
+/* Modals */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(10px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    padding: 16px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-box {
+    background: #0f172a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 24px;
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    animation: popModal 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popModal {
+    from { transform: scale(0.85); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-box h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+/* Color Picker Wheel Grid */
+.color-picker-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.color-choice-btn {
+    height: 70px;
+    border-radius: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+    transition: transform 0.1s;
+}
+
+.color-choice-btn.red { background: #ef4444; }
+.color-choice-btn.green { background: #10b981; }
+.color-choice-btn.blue { background: #3b82f6; }
+.color-choice-btn.yellow { background: #facc15; color: #0f172a; }
+
+.color-choice-btn:active {
+    transform: scale(0.92);
+}
+
+.action-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #10b981, #3b82f6);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 900;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+    margin-top: 15px;
+}
+
+.action-btn:active {
+    transform: scale(0.96);
+}

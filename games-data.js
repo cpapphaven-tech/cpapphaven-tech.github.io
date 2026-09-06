@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Four Colors", tag: "🌈 Legendary Card Hit", desc: "Match colors and numbers, play Skip, Reverse, Draw 2, and Wild cards vs smart AI!", href: "FourColors/index.html", gradient: "linear-gradient(135deg,#ef4444,#facc15,#10b981,#3b82f6)", icon: "🌈", badge: "hot", image: "" },
+
     { name: "Subway Runner 3D", tag: "🚇 Global #1 Hit", desc: "Surf 3-lane railway tracks, dodge speeding subway trains, leap roadblocks, and grab coin magnets!", href: "SubwayRunner/index.html", gradient: "linear-gradient(135deg,#fbbf24,#f97316,#ef4444)", icon: "🚇", badge: "hot", image: "" },
 
     { name: "Cyber Dino: Double Jump", tag: "🦖 Legendary Hit", desc: "Double jump in mid-air, collect energy crystals, and leap over downhill neon energy spikes!", href: "DinoRun/index.html", gradient: "linear-gradient(135deg,#22c55e,#38bdf8,#1e1b4b)", icon: "🦖", badge: "hot", image: "" },
@@ -132,6 +134,8 @@ window.PMG_DATA = {
       more: false,
       tab: "games",
       items: [
+        { name: "Four Colors", genre: "Card", icon: "", href: "FourColors/index.html", badge: "hot", emoji: "🌈" },
+
         { name: "Checkers", genre: "Board", icon: "", href: "Checkers/index.html", badge: "hot", emoji: "👑" },
 
         { name: "Connect Four", genre: "Board", icon: "", href: "ConnectFour/index.html", badge: "hot", emoji: "🔴" },
