@@ -280,6 +280,7 @@
     <meta property="og:url" content="https://playmixgames.in/FourColors/index.html">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://playmixgames.in/FourColors/index.html" />
+    <script defer src="../ads.js"></script>
     <script defer src="../sidebar.js"></script>
 
     <!-- Schema.org VideoGame Markup -->
@@ -319,6 +320,9 @@
 </head>
 
 <body>
+    <!-- Bottom Ad Slot -->
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
     <!-- Brand Loader -->
     <div id="pmg-loader">
         <div class="pmg-brand">PlayMixGames</div>
@@ -416,6 +420,10 @@
                 }, delay);
             };
         })();
+
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
     </script>
 </body>
 

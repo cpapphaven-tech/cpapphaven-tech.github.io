@@ -9,7 +9,6 @@
 
     <!-- Libraries & Scripts -->
     <link rel="stylesheet" href="style.css">
-    <script src="../ads.js"></script>
     <script type="module" src="../analytics.js"></script>
     <script defer src="game.js"></script>
 </head>
@@ -111,16 +110,6 @@
             <button class="action-btn" id="play-again-btn">Play Again 🚀</button>
         </div>
     </div>
-
-    <!-- Bottom Ad Container -->
-    <div id="pmg-bottom-ad" style="width: 100%; position: fixed; bottom: 0; left: 0; z-index: 40; display: flex; justify-content: center;"></div>
-
-    <script>
-        // Trigger bottom banner injection from ads.js
-        window.addEventListener('load', function () {
-            if (typeof prepSystem === 'function') prepSystem();
-        });
-    </script>
 </body>
 
 </html>

@@ -73,6 +73,9 @@
     
     <link rel="alternate" hreflang="en" href="https://playmixgames.in/SubwayRunner/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/SubwayRunner/index.html" />
+    <link rel="canonical" href="https://playmixgames.in/SubwayRunner/index.html" />
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
     
     <style>
         body,
@@ -269,6 +272,22 @@
             color: #94a3b8;
             font-size: 0.92rem;
         }
+
+        /* Bottom Ad Banner — matches portal-style.css for games without it */
+        .pmg-bottom-ad,
+        #bottom-ad {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+            min-height: 50px;
+            pointer-events: auto;
+        }
     </style>
 
     <!-- Schema.org JSON-LD -->
@@ -298,6 +317,9 @@
 </head>
 
 <body>
+    <!-- Bottom Ad Slot -->
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
     <!-- Brand Preloader -->
     <div id="pmg-loader">
         <div class="pmg-brand">SUBWAY RUNNER 3D</div>
@@ -386,6 +408,10 @@
                 }, delay);
             };
         })();
+
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
     </script>
 </body>
 
