@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Early Tracking Script -->
+    <script>
+        (function () {
+            const startTime = Date.now();
+            const anonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJqcGdvdmZ6b25sbWpycnVhc3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzAyNjA0MDQsImV4cCI6MjA4NTgzNjQwNH0.fwBaiOgXtnQVgq0IOdPmOskQHDqgOWWqr0mm3PSu57I";
+            const endpoint = "https://bjpgovfzonlmjrruaspp.supabase.co/functions/v1/collect";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid');
+
+            const hitData = {
+                timestamp: new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30'),
+                url: location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                screen: { width: screen.width, height: screen.height },
+                loadStage: "pre-init",
+                placement_id: placementId
+            };
+
+            const sendHit = (stage) => {
+                hitData.loadStage = stage;
+                hitData.timestamp = new Date(Date.now() + 19800000).toISOString().replace('Z', '+05:30');
+
+                if (stage === "early-exit") {
+                    hitData.duration_seconds = Math.round((Date.now() - startTime) / 1000);
+                }
+
+                if (stage === "normal-exit") {
+                    hitData.placement_id = placementId + 'p';
+                }
+
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": anonKey,
+                        "Authorization": "Bearer " + anonKey
+                    },
+                    body: JSON.stringify(hitData),
+                    keepalive: true
+                });
+            };
+
+            sendHit("pre-init");
+
+            window.addEventListener("pagehide", function () {
+                if (!window.FIREBASE_INITIALIZED) {
+                    sendHit("early-exit");
+                } else {
+                    sendHit("normal-exit");
+                }
+            });
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Watermelon Drop | Suika Fruit Merge Game Online Free | PlayMixGames</title>
+    <meta name="description" content="Play Watermelon Drop (Suika Game) free online! Drop, bounce, and merge juicy fruits from cherries to giant watermelons in this addictive physics puzzle. No downloads needed!">
+    
+    <!-- Multi-Language SEO Support -->
+    <meta name="keywords" content="watermelon drop, suika game, fruit merge online, watermelon game, play watermelon game free,スイカゲーム 無料, watermelon drop unblocked, juego de la sandia gratis, jeu de la pasteque gratuit, suika puzzle online">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Watermelon Drop | Suika Fruit Merge Game Online Free | PlayMixGames">
+    <meta property="og:description" content="Drop, roll, and merge juicy fruits! Combine matching fruits to create larger ones until you reach the glorious giant Watermelon in this viral physics sensation!">
+    <meta property="og:type" content="game">
+    <meta property="og:url" content="https://playmixgames.in/WatermelonDrop/index.html">
+    <meta property="og:image" content="https://playmixgames.in/img/covers/puzzle.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Watermelon Drop | Suika Fruit Merge Game Online">
+    <meta name="twitter:description" content="Aim, drop, and merge sweet fruits to create the ultimate Watermelon! Free web physics puzzle game.">
+    <meta name="twitter:image" content="https://playmixgames.in/img/covers/puzzle.png">
+
+    <link rel="alternate" hreflang="en" href="https://playmixgames.in/WatermelonDrop/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/WatermelonDrop/index.html" />
+    <link rel="canonical" href="https://playmixgames.in/WatermelonDrop/index.html" />
+
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
+
+    <!-- Schema.org VideoGame Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Watermelon Drop",
+      "alternateName": ["Suika Game", "Fruit Merge Watermelon", "Watermelon Game"],
+      "description": "Play Watermelon Drop free online! Drop and merge juicy fruits from cherries and strawberries up to giant striped watermelons in this satisfying 2D physics puzzle game.",
+      "url": "https://playmixgames.in/WatermelonDrop/index.html",
+      "image": "https://playmixgames.in/img/covers/puzzle.png",
+      "genre": ["Puzzle", "Physics", "Casual", "Arcade"],
+      "gamePlatform": "Web Browser",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "inLanguage": "en",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PlayMixGames",
+        "url": "https://playmixgames.in"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "890",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    }
+    </script>
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0f172a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #f8fafc;
+        }
+
+        /* Brand Loader */
+        #pmg-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+        }
+
+        #pmg-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .pmg-brand {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #10b981, #22c55e, #ef4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
+        }
+
+        .pmg-spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(34, 197, 94, 0.15);
+            border-top-color: #22c55e;
+            border-radius: 50%;
+            animation: pmg-spin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes pmg-spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .pmg-bar-track {
+            width: 220px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .pmg-bar-fill {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #10b981, #22c55e, #ef4444);
+            animation: pmg-progress 1.5s ease-in-out infinite;
+            transform-origin: left;
+        }
+
+        @keyframes pmg-progress {
+            0% { transform: scaleX(0); }
+            50% { transform: scaleX(0.7); }
+            100% { transform: scaleX(1); }
+        }
+
+        .pmg-tip {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            letter-spacing: 0.2px;
+        }
+
+        /* Game Viewport Container */
+        main {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: #090d16;
+        }
+
+        #game-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(34, 197, 94, 0.15);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #game-frame.visible {
+            opacity: 1;
+        }
+
+        /* Bottom Ad Banner Styling — matches portal-style.css */
+        .pmg-bottom-ad,
+        #bottom-ad {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+            min-height: 50px;
+            pointer-events: auto;
+        }
+
+        /* SEO Article & Strategy Section */
+        .seo-section {
+            background: #0b1120;
+            border-top: 1px solid #1e293b;
+            padding: 50px 20px 80px;
+            margin-top: 30px;
+            color: #e5e7eb;
+        }
+
+        .seo-container {
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        .seo-container h1,
+        .seo-container h2 {
+            font-size: 1.8rem;
+            color: #4ade80;
+            margin-bottom: 16px;
+        }
+
+        .seo-container h3 {
+            font-size: 1.3rem;
+            color: #86efac;
+            margin: 28px 0 12px;
+        }
+
+        .seo-container p {
+            font-size: 1rem;
+            color: #cbd5e1;
+            margin-bottom: 16px;
+        }
+
+        .seo-container ul,
+        .seo-container ol {
+            margin: 12px 0 20px 24px;
+            color: #cbd5e1;
+        }
+
+        .seo-container li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 4px solid #22c55e;
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            color: #bbf7d0;
+        }
+
+        .fruit-ladder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .fruit-ladder-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .fruit-ladder-card .emoji {
+            font-size: 2rem;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .fruit-ladder-card .name {
+            font-weight: 700;
+            color: #f8fafc;
+            font-size: 0.95rem;
+        }
+
+        .fruit-ladder-card .pts {
+            color: #38bdf8;
+            font-size: 0.82rem;
+        }
+
+        .faq-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .faq-card h4 {
+            font-size: 1.05rem;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .faq-card p {
+            margin-bottom: 0;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bottom Ad Slot (Only here at bottom of screen) -->
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
+    <!-- Brand Loader -->
+    <div id="pmg-loader">
+        <div class="pmg-brand">PlayMixGames</div>
+        <div class="pmg-spinner"></div>
+        <div class="pmg-bar-track">
+            <div class="pmg-bar-fill"></div>
+        </div>
+        <p class="pmg-tip">Polishing Fresh Fruits & Calibrating Physics...</p>
+    </div>
+
+    <!-- Game Viewport Container -->
+    <main>
+        <iframe id="game-frame" src="game.html" title="Watermelon Drop Viewport" allow="autoplay; fullscreen; gamepad"></iframe>
+    </main>
+
+    <!-- SEO Content & Strategy Guide -->
+    <section class="seo-section">
+        <div class="seo-container">
+            <h1>🍉 Play Watermelon Drop Online Free | The Ultimate Suika Fruit Merge Game</h1>
+            
+            <p>Welcome to <strong>Watermelon Drop</strong>, the world-famous fruit merge puzzle phenomenon that captured the internet! Inspired by the legendary <em>Suika Game (スイカゲーム)</em>, Watermelon Drop combines delightful 2D physics, juicy bouncy animations, and strategic spatial puzzle mechanics. Aim your cloud dropper, release fruits into the container, and watch matching fruits collide and merge into bigger, sweeter varieties until you forge the legendary giant Watermelon!</p>
+            
+            <div class="highlight-box">
+                <strong>✨ Key Highlights:</strong> 100% free instant browser play, mobile touch-optimized drag-and-drop controls, realistic multi-step circle collision physics, cute animated fruit expressions, tactile audio juice, emergency shake mechanic, and persistent local high-score tracking!
+            </div>
+
+            <h2>🍎 The Fruit Evolution Ladder</h2>
+            <p>Every time two identical fruits touch with sufficient velocity, they merge into the next fruit in the evolutionary ladder. Study the order to plan your container layout:</p>
+
+            <div class="fruit-ladder-grid">
+                <div class="fruit-ladder-card"><span class="emoji">🍒</span><div class="name">1. Cherry</div><div class="pts">+1 Pt</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍓</span><div class="name">2. Strawberry</div><div class="pts">+3 Pts</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍇</span><div class="name">3. Grape</div><div class="pts">+6 Pts</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍊</span><div class="name">4. Dekopon Orange</div><div class="pts">+10 Pts</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍎</span><div class="name">5. Apple</div><div class="pts">+15 Pts</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍐</span><div class="name">6. Pear</div><div class="pts">+21 Pts</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍑</span><div class="name">7. Peach</div><div class="pts">+28 Pts</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍍</span><div class="name">8. Pineapple</div><div class="pts">+36 Pts</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍈</span><div class="name">9. Melon</div><div class="pts">+45 Pts</div></div>
+                <div class="fruit-ladder-card"><span class="emoji">🍉</span><div class="name">10. Watermelon</div><div class="pts">+100 Pts</div></div>
+            </div>
+
+            <h2>🎮 How to Play Watermelon Drop</h2>
+            <ol>
+                <li><strong>Aim the Cloud Dropper:</strong> Slide your finger across the top on mobile, or move your mouse on desktop. The dotted guide line projects where your fruit will land.</li>
+                <li><strong>Drop the Fruit:</strong> Release your touch or click the mouse to release the fruit into the glass container.</li>
+                <li><strong>Chain Merges:</strong> When two matching fruits collide, they pop and merge into the next tier. Chain reactions can clear space and generate huge combo score bonuses!</li>
+                <li><strong>Mind the Danger Line:</strong> If fruits stack up and cross the dashed red warning line for more than 3 continuous seconds, your container overflows and the game ends!</li>
+                <li><strong>Use the Nudge / Shake Button:</strong> Got an awkward jam where two matching fruits are separated by a millimeter? Use the 🫨 Nudge button to give the container a physical shake!</li>
+            </ol>
+
+            <h2>🧠 Top Pro Strategies & Tips</h2>
+            <ul>
+                <li><strong>Keep Largest Fruits at the Bottom:</strong> Try to anchor your big melons, pineapples, and peaches near the floor and corners. If a huge melon sits on top of tiny cherries, it prevents the cherries from ever meeting their twins!</li>
+                <li><strong>Build an Ascending Slope:</strong> Arrange your fruits in an escalating staircase from left to right (e.g., Cherry -> Strawberry -> Grape -> Orange -> Apple). When a new fruit is dropped, it can trigger a domino cascade of sequential merges!</li>
+                <li><strong>Check the Next Fruit Indicator:</strong> Always look at the top-right "Next Fruit" preview box before choosing where to place your current fruit. Planning two steps ahead is the key to 3,000+ high scores.</li>
+                <li><strong>Utilize Fruit Bounce Momentum:</strong> Dropping a fruit from high up gives it kinetic energy to roll down slopes and push smaller fruits out of the way.</li>
+            </ul>
+
+            <h2>❓ Frequently Asked Questions (FAQ)</h2>
+            <div class="faq-card">
+                <h4>Q: Is Watermelon Drop free to play?</h4>
+                <p>A: Yes, Watermelon Drop is completely free to play in your web browser on mobile phones, tablets, and desktop computers with no download required.</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: What happens if two giant Watermelons merge?</h4>
+                <p>A: Merging two ultimate Watermelons triggers a spectacular Supernova explosion that clears surrounding space and awards a massive 500-point bonus!</p>
+            </div>
+
+            <div class="faq-card">
+                <h4>Q: How does the game save my high score?</h4>
+                <p>A: Your all-time best score is automatically saved to your browser's local storage, so your record will be ready when you return.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement & Loader Bridge Script -->
+    <script>
+        (function () {
+            const frame = document.getElementById('game-frame');
+            const urlParams = new URLSearchParams(window.location.search);
+            const placementId = urlParams.get('utm_content') || urlParams.get('placementid') || "unknown";
+            frame.src = "game.html?placementid=" + encodeURIComponent(placementId);
+
+            const loader = document.getElementById('pmg-loader');
+            const start = Date.now();
+            frame.onload = function () {
+                const delay = Math.max(800 - (Date.now() - start), 200);
+                setTimeout(() => {
+                    frame.classList.add('visible');
+                    loader.classList.add('hidden');
+                }, delay);
+            };
+        })();
+
+        window.addEventListener('load', function () {
+            if (typeof prepSystem === 'function') prepSystem();
+        });
+    </script>
+</body>
+
+</html>

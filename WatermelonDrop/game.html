@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Watermelon Drop | PlayMixGames</title>
+    <meta name="description" content="Drop, roll, and merge fruits to create the giant Watermelon!">
+
+    <!-- Libraries & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <!-- Game Container Wrapper -->
+    <div class="game-wrapper">
+        <!-- Top HUD Header -->
+        <header class="game-hud">
+            <div class="score-card">
+                <span class="hud-label">SCORE</span>
+                <span class="hud-val" id="score-val">0</span>
+            </div>
+
+            <div class="next-fruit-card">
+                <span class="hud-label">NEXT</span>
+                <div class="next-preview" id="next-preview">
+                    <span id="next-emoji">🍓</span>
+                </div>
+            </div>
+
+            <div class="score-card best-card">
+                <span class="hud-label">BEST</span>
+                <span class="hud-val" id="best-val">0</span>
+            </div>
+
+            <div class="hud-buttons">
+                <button id="btn-sound" class="hud-btn" aria-label="Toggle Sound" title="Sound">🔊</button>
+                <button id="btn-guide" class="hud-btn" aria-label="Fruit Guide" title="Fruit Evolution">🍉</button>
+                <button id="btn-nudge" class="hud-btn" aria-label="Nudge Container" title="Nudge/Shake">🫨</button>
+                <button id="btn-restart" class="hud-btn" aria-label="Restart Game" title="Restart">🔄</button>
+            </div>
+        </header>
+
+        <!-- Canvas Play Area -->
+        <div class="canvas-box" id="canvas-box">
+            <canvas id="game-canvas"></canvas>
+            
+            <!-- Warning line overlay text -->
+            <div class="danger-warning" id="danger-warning">⚠️ OVERFLOW DANGER: <span id="danger-timer">3</span>s</div>
+            
+            <!-- Tap to Drop Overlay Hint (Fades out after first drop) -->
+            <div class="tap-hint" id="tap-hint">
+                <span>👆 Drag to aim, release to drop!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fruit Evolution Ladder Modal -->
+    <div class="modal" id="guide-modal">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>🍉 Fruit Evolution Cycle</h2>
+                <button class="close-btn" id="btn-close-guide">&times;</button>
+            </div>
+            <p class="modal-desc">Merge 2 matching fruits to evolve to the next tier:</p>
+            <div class="evolution-chain">
+                <div class="chain-item"><span class="c-emoji">🍒</span><span class="c-name">Cherry</span><span class="c-pts">+1</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item"><span class="c-emoji">🍓</span><span class="c-name">Strawberry</span><span class="c-pts">+3</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item"><span class="c-emoji">🍇</span><span class="c-name">Grape</span><span class="c-pts">+6</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item"><span class="c-emoji">🍊</span><span class="c-name">Orange</span><span class="c-pts">+10</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item"><span class="c-emoji">🍎</span><span class="c-name">Apple</span><span class="c-pts">+15</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item"><span class="c-emoji">🍐</span><span class="c-name">Pear</span><span class="c-pts">+21</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item"><span class="c-emoji">🍑</span><span class="c-name">Peach</span><span class="c-pts">+28</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item"><span class="c-emoji">🍍</span><span class="c-name">Pineapple</span><span class="c-pts">+36</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item"><span class="c-emoji">🍈</span><span class="c-name">Melon</span><span class="c-pts">+45</span></div>
+                <div class="chain-arrow">➔</div>
+                <div class="chain-item final"><span class="c-emoji">🍉</span><span class="c-name">Watermelon</span><span class="c-pts">+100</span></div>
+            </div>
+            <button class="action-btn" id="btn-got-it">Got it, Let's Play!</button>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameover-modal">
+        <div class="modal-box gameover-box">
+            <h2 id="gameover-title">Container Overflowed! 📦</h2>
+            <div class="gameover-fruit" id="gameover-fruit">🍉</div>
+            
+            <div class="results-grid">
+                <div class="res-item">
+                    <span class="res-label">FINAL SCORE</span>
+                    <strong class="res-val" id="final-score">0</strong>
+                </div>
+                <div class="res-item">
+                    <span class="res-label">BEST RECORD</span>
+                    <strong class="res-val" id="final-best">0</strong>
+                </div>
+            </div>
+
+            <div class="high-score-badge" id="new-high-badge" style="display: none;">
+                🎉 NEW HIGH SCORE RECORD! 🎉
+            </div>
+
+            <div class="modal-actions">
+                <button class="action-btn play-again-btn" id="btn-play-again">Play Again 🔄</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
