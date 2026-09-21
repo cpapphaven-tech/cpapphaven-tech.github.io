@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "total_games": 118,
+  "total_games": 119,
   "games": {
     "ABCTracing": {
       "name": "ABC Tracing - Learn to Write ABC & Numbers",
@@ -2009,6 +2009,47 @@
           "session-progression"
         ],
         "gameplay_loop": "interact with on-screen elements in Geometry Jump: Play Dash Online Free to achieve game objectives",
+        "interaction_pattern": "tap-or-click",
+        "progression_system": "score increases with gameplay duration",
+        "scoring_system": "session point accumulation",
+        "win_condition": "complete game objective",
+        "loss_condition": "session ends on failure",
+        "level_structure": "single-session",
+        "archetype": "unknown",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ],
+        "confidence": "low"
+      }
+    },
+    "GravityFlipRunner": {
+      "name": "Gravity Flip Runner",
+      "slug": "gravityfliprunner",
+      "folder": "GravityFlipRunner",
+      "entry": "index.html",
+      "category": "arcade",
+      "archetype": "unknown",
+      "confidence": "low",
+      "mechanics": [
+        "gravityfliprunner-interactive-action",
+        "session-progression"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "gameplay_loop": "interact with on-screen elements in Gravity Flip Runner to achieve game objectives",
+      "gameplay_signature": "gravityfliprunner-interactive-action | tap-or-click | single-session | [session-progression]",
+      "description": "Tap to flip gravity and navigate a neon spacecraft through deadly obstacle corridors at warp speed!",
+      "fingerprint": {
+        "primary_mechanic": "gravityfliprunner-interactive-action",
+        "secondary_mechanics": [
+          "session-progression"
+        ],
+        "gameplay_loop": "interact with on-screen elements in Gravity Flip Runner to achieve game objectives",
         "interaction_pattern": "tap-or-click",
         "progression_system": "score increases with gameplay duration",
         "scoring_system": "session point accumulation",
@@ -4909,47 +4950,47 @@
         "confidence": "low"
       }
     },
-    "GravityFlipRunner": {
-      "name": "Gravity Flip Runner",
-      "slug": "gravity-flip-runner",
-      "folder": "GravityFlipRunner",
+    "LaserBrickBlaster": {
+      "name": "Laser Brick Blaster",
+      "slug": "laser-brick-blaster",
+      "folder": "LaserBrickBlaster",
       "entry": "index.html",
       "category": "arcade",
-      "archetype": "gravity_runner",
+      "archetype": "breakout",
       "mechanics": [
-        "gravity-flip",
-        "obstacle-dodge",
-        "speed-ramp"
+        "ball-paddle-reflection",
+        "power-up-catch",
+        "triple-shot"
       ],
       "controls": [
         "touch",
         "mouse",
         "keyboard"
       ],
-      "gameplay_loop": "Tap to flip gravity and navigate a neon spacecraft through deadly obstacle corridors at warp speed!",
-      "gameplay_signature": "gravity_runner:generated",
-      "description": "Tap to flip gravity and navigate a neon spacecraft through deadly obstacle corridors at warp speed!",
+      "gameplay_loop": "Fire laser pulses to destroy brick fortresses! Power-ups split the beam into triple-shots and ricochet walls.",
+      "gameplay_signature": "breakout:generated",
+      "description": "Fire laser pulses to destroy brick fortresses! Power-ups split the beam into triple-shots and ricochet walls.",
       "fingerprint": {
-        "primary_mechanic": "gravity-flip-navigation",
+        "primary_mechanic": "ball-paddle-reflection",
         "secondary_mechanics": [
-          "obstacle-dodge",
-          "collectible-pickup",
-          "speed-ramp"
+          "triple-shot-powerup",
+          "laser-beam-special",
+          "shield-wall"
         ],
-        "gameplay_loop": "tap to instantly invert gravity and steer through corridor gaps avoiding ceiling and floor spikes",
-        "interaction_pattern": "tap-gravity-flip",
-        "progression_system": "scroll speed and obstacle density escalate with distance",
-        "scoring_system": "distance survived plus gems collected",
-        "win_condition": "none endless high score",
-        "loss_condition": "player collides with obstacle",
-        "level_structure": "endless",
+        "gameplay_loop": "deflect laser ball with paddle to destroy brick fortress using power-ups including triple-beam and shield wall",
+        "interaction_pattern": "horizontal-paddle-control",
+        "progression_system": "harder brick layouts and faster ball each stage",
+        "scoring_system": "bricks destroyed plus power-up bonus",
+        "win_condition": "all bricks destroyed per level",
+        "loss_condition": "all lives lost when ball escapes paddle",
+        "level_structure": "level-based",
         "controls": [
-          "tap",
-          "click",
+          "mouse",
+          "touch",
           "keyboard"
         ]
       },
-      "created_at": "2026-09-21T23:58:18.727618"
+      "created_at": "2026-09-22T00:21:10.086879"
     }
   }
 }

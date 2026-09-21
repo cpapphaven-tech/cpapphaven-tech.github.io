@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Laser Brick Blaster", tag: "🔴 Laser Breakout", desc: "Fire laser pulses to destroy brick fortresses! Power-ups split the beam into triple-shots and ricochet walls.", href: "LaserBrickBlaster/index.html", gradient: "linear-gradient(135deg,#ef4444,#f59e0b,#10b981)", icon: "🔴", badge: "new", image: "" },
+
     { name: "Virus Shooter - Microscopic Hexa Puzzle!", tag: "🔥 New Hit", desc: "Play Virus Shooter - Microscopic Hexa Puzzle! free online in your browser.", href: "VirusShooter/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
 
     { name: "Traffic Jam 3D - Puzzle Challenge", tag: "🔥 New Hit", desc: "Play Traffic Jam 3D - Puzzle Challenge free online in your browser.", href: "TrafficJam/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
@@ -68,6 +70,8 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Laser Brick Blaster", genre: "Arcade", icon: "", href: "LaserBrickBlaster/index.html", badge: "new", emoji: "🔴" },
+
         { name: "Virus Shooter - Microscopic Hexa Puzzle!", genre: "Arcade", icon: "", href: "VirusShooter/index.html", badge: "new", emoji: "🎮" },
 
         { name: "Traffic Jam 3D - Puzzle Challenge", genre: "Arcade", icon: "", href: "TrafficJam/index.html", badge: "new", emoji: "🎮" },

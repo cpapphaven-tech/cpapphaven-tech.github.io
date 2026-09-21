@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Laser Brick Blaster | PlayMixGames</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="game-hud">
+            <div class="hud-card"><span class="hud-label">SCORE</span><span class="hud-val" id="score-val">0</span></div>
+            <div class="hud-card"><span class="hud-label">LIVES</span><span class="hud-val" id="lives-val">❤️❤️❤️</span></div>
+            <div class="hud-card best-card"><span class="hud-label">BEST</span><span class="hud-val" id="best-val">0</span></div>
+            <button id="btn-sound" class="icon-btn">🔊</button>
+        </header>
+        <div class="canvas-container" id="canvas-container">
+            <canvas id="game-canvas"></canvas>
+            <div class="tap-hint" id="tap-hint"><span>👆 Drag or move paddle to launch!</span></div>
+        </div>
+    </div>
+    <div class="modal" id="gameover-modal">
+        <div class="modal-box">
+            <h2 id="modal-title">GAME OVER</h2>
+            <p>Final Score: <strong id="final-score">0</strong></p>
+            <div id="record-badge" class="record-badge" style="display:none;">🏆 NEW HIGH SCORE! 🏆</div>
+            <button class="action-btn" id="btn-restart">PLAY AGAIN 🔄</button>
+        </div>
+    </div>
+</body>
+</html>
