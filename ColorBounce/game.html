@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Color Bounce Switch | PlayMixGames</title>
+    <meta name="description" content="Tap to bounce upward through rotating colored obstacles! Match colors to survive.">
+    
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <!-- Top HUD Header -->
+        <header class="game-hud">
+            <div class="hud-card">
+                <span class="hud-label">SCORE</span>
+                <span class="hud-val" id="score-val">0</span>
+            </div>
+            
+            <div class="hud-center">
+                <div class="active-color-indicator" id="color-indicator" title="Current Ball Color"></div>
+            </div>
+
+            <div class="hud-card best-card">
+                <span class="hud-label">BEST</span>
+                <span class="hud-val" id="best-val">0</span>
+            </div>
+
+            <div class="hud-controls">
+                <button id="btn-sound" class="icon-btn" aria-label="Toggle Sound" title="Sound">🔊</button>
+                <button id="btn-pause" class="icon-btn" aria-label="Pause Game" title="Pause">⏸️</button>
+            </div>
+        </header>
+
+        <!-- Canvas Container -->
+        <div class="canvas-container" id="canvas-container">
+            <canvas id="game-canvas"></canvas>
+            
+            <!-- Tap to Start / Jump Overlay Hint -->
+            <div class="tap-hint" id="tap-hint">
+                <div class="tap-hand">👆</div>
+                <div class="tap-text">TAP OR CLICK TO JUMP</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameover-modal">
+        <div class="modal-box">
+            <h2 class="modal-title">GAME OVER</h2>
+            <div class="modal-scores">
+                <div class="score-row">
+                    <span>Stars Collected:</span>
+                    <strong id="final-score">0</strong>
+                </div>
+                <div class="score-row">
+                    <span>All-Time Best:</span>
+                    <strong id="final-best">0</strong>
+                </div>
+            </div>
+            <div class="new-record-badge" id="new-record-badge" style="display: none;">
+                🏆 NEW HIGH SCORE! 🏆
+            </div>
+            <button class="action-btn" id="btn-restart">PLAY AGAIN 🔄</button>
+        </div>
+    </div>
+
+    <!-- Pause Modal -->
+    <div class="modal" id="pause-modal">
+        <div class="modal-box">
+            <h2 class="modal-title">GAME PAUSED</h2>
+            <p class="modal-text">Take a breath and tap below to jump back in!</p>
+            <button class="action-btn" id="btn-resume">RESUME ▶️</button>
+        </div>
+    </div>
+</body>
+
+</html>

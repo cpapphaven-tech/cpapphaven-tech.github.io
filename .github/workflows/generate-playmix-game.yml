@@ -1,0 +1,56 @@
+name: Generate PlayMix Game
+
+on:
+  workflow_dispatch:
+    inputs:
+      generate_count:
+        description: 'Number of new games to generate'
+        required: true
+        default: '1'
+        type: string
+  # Optional weekly schedule (uncomment below to run every Monday at 03:00 UTC)
+  # schedule:
+  #   - cron: "0 3 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: generate-playmix-game
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    name: Generate & Validate Game
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run PlayMix Game Factory
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 game-factory/scripts/factory.py --count ${{ github.event.inputs.generate_count || 1 }}
+
+      - name: Commit & Push Generated Game
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "ℹ️ No changes detected. No commit needed."
+          else
+            git commit -m "feat: [Game Factory] Auto-generate new PlayMix game"
+            git push
+            echo "🚀 Successfully generated and pushed new game!"
+          fi

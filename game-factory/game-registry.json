@@ -1,0 +1,2213 @@
+{
+  "version": "1.0.0",
+  "total_games": 115,
+  "games": {
+    "ABCTracing": {
+      "name": "ABC Tracing - Learn to Write ABC & Numbers",
+      "slug": "abctracing",
+      "folder": "ABCTracing",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "sliding-tile",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "ba40259e357b",
+      "description": "Learn to write uppercase & lowercase English alphabet letters, numbers 1-10, and simple words (animals, fruits, family) with this fun educational tracing game."
+    },
+    "AIReadiness": {
+      "name": "AI Readiness Quiz \u2013 What's Your AI Persona?",
+      "slug": "aireadiness",
+      "folder": "AIReadiness",
+      "entry": "index.html",
+      "category": "arcade",
+      "mechanics": [
+        "casual-arcade"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c76d15681e59",
+      "description": "Take the AI Readiness Quiz to discover your AI persona. Are you a Prompter, Automator, or Visionary? Fast 2-choice test for the AI revolution."
+    },
+    "AirHockey3D": {
+      "name": "Air Hockey 3D Arcade | Play Neon Disk Sports Game",
+      "slug": "airhockey3d",
+      "folder": "AirHockey3D",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "ccb4e5fe7984",
+      "description": "Smash the glowing puck into the goal in fast-paced neon Air Hockey 3D! An electric arcade sports simulation free to play online."
+    },
+    "AllInHole": {
+      "name": "All in Hole: Black Hole Games - Satisfying Eat & Grow Puzzle",
+      "slug": "allinhole",
+      "folder": "AllInHole",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "sliding-tile",
+        "board-strategy",
+        "aim-shoot",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "cbd5c1b52472",
+      "description": "Slide a tiny hole, devour small objects to grow, and use playful physics to gobble every target treat. An oddly satisfying black-hole puzzle game!"
+    },
+    "AnimeArchetype": {
+      "name": "Anime Archetype Test \u2013 Which Anime Character Are You?",
+      "slug": "animearchetype",
+      "folder": "AnimeArchetype",
+      "entry": "index.html",
+      "category": "arcade",
+      "mechanics": [
+        "casual-arcade"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c76d15681e59",
+      "description": "Discover your anime archetype with our 2-choice quiz! Are you a Shonen Hero, a Quiet Genius, or an Anti-Hero? Fast, fun, and addictive anime personality test."
+    },
+    "ArcheryMaster": {
+      "name": "Archery Master Bow Physics | Play 2D Slingshot Shooter Game",
+      "slug": "archerymaster",
+      "folder": "ArcheryMaster",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "a63f06398646",
+      "description": "Draw your bow, factor the wind, and release! Step into the Archery Master arena in this realistic physics-based slingshot target game."
+    },
+    "Backgammon": {
+      "name": "Play Backgammon Online Free | Classic Board Game",
+      "slug": "backgammon",
+      "folder": "Backgammon",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "match-3",
+        "board-strategy",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "6fe28a8db08e",
+      "description": "Play the classic strategy game Backgammon online for free. Roll the dice, move your checkers, and bear them off to win! Try 2-player local multiplayer or play vs computer."
+    },
+    "BallSort": {
+      "name": "Ball Sort: Color Puzzle Game",
+      "slug": "ballsort",
+      "folder": "BallSort",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "aim-shoot",
+        "tube-sort",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14e07084c313",
+      "description": "Drop balls from trays, guide them across the conveyor belt, and sort them into matching color boxes. Play Ball Sort: Color Puzzle game online for free!"
+    },
+    "Basketball3D": {
+      "name": "Basketball 3D Hoops Swish | Flick Throw Sports Game Online",
+      "slug": "basketball3d",
+      "folder": "Basketball3D",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "board-strategy",
+        "aim-shoot",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "b7ffe3e37944",
+      "description": "Swipe to shoot hoops! Compete in a rapid-fire 3D basketball simulation. Score consecutive swishes for massive combo multipliers."
+    },
+    "BlockPuzzle": {
+      "name": "Block Puzzle Dash Classic | Play Wood Block Puzzle Free",
+      "slug": "blockpuzzle",
+      "folder": "BlockPuzzle",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "sliding-tile",
+        "falling-blocks",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "cce2f511141a",
+      "description": "Drop blocks to fill the grid and clear lines! Block Puzzle Dash is a relaxing and challenging brain training logic puzzle for all ages."
+    },
+    "BottleShoot3D": {
+      "name": "Bottle Shoot 3D Gun Game | Sniper Target Practice Free",
+      "slug": "bottleshoot3d",
+      "folder": "BottleShoot3D",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "ccb4e5fe7984",
+      "description": "Aim down the sights and smash bottles! A realistic 3D sniper simulation target practice shooting game. Test your accuracy for free."
+    },
+    "Bowling": {
+      "name": "Bowling Master Strike 3D | Realistic Ten Pin Game Online",
+      "slug": "bowling",
+      "folder": "Bowling",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "board-strategy",
+        "aim-shoot",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "47b1d29fff01",
+      "description": "Flick the ball and knock down all 10 pins! The ultimate 3D bowling simulation sports game online. Aim for a perfect strike!"
+    },
+    "BrickBreaker": {
+      "name": "Classic Brick Breaker Retro | Arkanoid Arcade Game Free",
+      "slug": "brickbreaker",
+      "folder": "BrickBreaker",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "board-strategy",
+        "reaction-tap"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "ecf7192354d2",
+      "description": "Smash all the neon bricks with your paddle and ball! Play this classic retro breakout arcade game directly in your browser without downloads."
+    },
+    "BubbleShooter": {
+      "name": "Classic Bubble Shooter Pop | Match 3 Color Arcade Game",
+      "slug": "bubbleshooter",
+      "folder": "BubbleShooter",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "c2d8732cb6e9",
+      "description": "Aim and match 3 colors to burst all the bubbles! A classic satisfying arcade puzzle. Play Bubble Shooter for free and clear endless levels."
+    },
+    "BurgerStack": {
+      "name": "Burger Stack 3D Cooking Game | Free Food Builder Online",
+      "slug": "burgerstack",
+      "folder": "BurgerStack",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "39ea659a1f25",
+      "description": "Catch ingredients to build the tallest burger tower! A crazy fast-paced 3D arcade physics game focusing on timing and food stacking fun."
+    },
+    "CandyBlast": {
+      "name": "Candy Blast \u2013",
+      "slug": "candyblast",
+      "folder": "CandyBlast",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14d3d71df791",
+      "description": "Play Candy Blast game online free! Match 3 or more identical candies to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+    },
+    "CandyBubblePop": {
+      "name": "Candy Bubble Pop - Sweet Puzzle Adventure!",
+      "slug": "candybubblepop",
+      "folder": "CandyBubblePop",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "c2d8732cb6e9",
+      "description": "Aim and match 3 colors to burst all the candys! A classic satisfying arcade puzzle. Play Candy Candy Pop for free and clear endless levels."
+    },
+    "CandySort": {
+      "name": "Candy Sort: Sweet Color Puzzle",
+      "slug": "candysort",
+      "folder": "CandySort",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "reaction-tap",
+        "aim-shoot",
+        "tube-sort"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14e07084c313",
+      "description": "Drop sweet candies from trays, watch them ride the conveyor belt, and sort them into matching dessert boxes. Play Candy Sort: Sweet Color Puzzle game online for free!"
+    },
+    "Checkers": {
+      "name": "Checkers",
+      "slug": "checkers",
+      "folder": "Checkers",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "falling-blocks",
+        "board-strategy"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "03e13513e497",
+      "description": "Play Classic Checkers (Draughts) free online! Jump, capture, crown kings, and outsmart the AI or play with a friend in 2-player mode directly in your browser."
+    },
+    "Chess": {
+      "name": "Play Master Chess Online Free | 3D Strategy Board Game",
+      "slug": "chess",
+      "folder": "Chess",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "863c4fde02e9",
+      "description": "Test your strategic mind with classic Chess! Play against smart AI in beautiful realistic 3D graphics in this ultimate brain training board game."
+    },
+    "ColorBounce": {
+      "name": "Color Bounce Switch | Play Online Free",
+      "slug": "colorbounce",
+      "folder": "ColorBounce",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "reaction-tap"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "af00875ad38b",
+      "description": "Tap to bounce upward through rotating colored obstacles! Match colors to pass through and collect stars."
+    },
+    "ColorMatch": {
+      "name": "Color Match 3D Brain Test | Fast Reaction Puzzle Game",
+      "slug": "colormatch",
+      "folder": "ColorMatch",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "reaction-tap",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "b9640ba7bdb2",
+      "description": "Tap the matching color when the timer starts! A visually thrilling hyperspeed reaction memory puzzle game. Train your brain"
+    },
+    "ColoringKids": {
+      "name": "Coloring for Kids 2\u20136 \u2013 Draw, Color & Paint",
+      "slug": "coloringkids",
+      "folder": "ColoringKids",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "board-strategy",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "df55585f92a3",
+      "description": "Free coloring game for kids aged 2\u20136! Color cute animals, dinosaurs, cars, and ocean pictures on white templates with black outlines, or enjoy free draw mode. Safe, ad-free, works offline."
+    },
+    "ConnectFour": {
+      "name": "Connect Four Online Free | 4 in a Row 2 Player & AI Board Game",
+      "slug": "connectfour",
+      "folder": "ConnectFour",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "sliding-tile",
+        "falling-blocks",
+        "board-strategy"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "df426c13db3d",
+      "description": "Play Connect Four (4 in a Row) free online! Challenge smart AI or play with a friend in 2-player mode. Drop red and yellow discs into the 7x6 grid to connect 4 and win."
+    },
+    "CricketMaster": {
+      "name": "Cricket Master World Cup | Play T20 Cricket Game Free",
+      "slug": "cricketmaster",
+      "folder": "CricketMaster",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot",
+        "sports-sim"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "88650f14dd10",
+      "description": "Hit massive sixes and win the match! A highly addictive 2D side-scrolling cricket sports game simulating top T20 world cup excitement."
+    },
+    "Crossmath": {
+      "name": "Crossmath\u00ae - Math Puzzle Games",
+      "slug": "crossmath",
+      "folder": "Crossmath",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "19faeb053131",
+      "description": "The BEST FREE math crossword puzzle games for you! Relax and train your brain with number puzzles! Play the game anywhere, anytime!"
+    },
+    "CrossyRoad": {
+      "name": "CrossyRoad",
+      "slug": "crossyroad",
+      "folder": "CrossyRoad",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "ccd12f526ebf",
+      "description": "Play Cross Road with Balloon free online! Cross the road, collect number balloons, and reach the target score while dodging traffic. Mobile-friendly arcade action."
+    },
+    "DailyMathEquator": {
+      "name": "Math Learning Quiz \u2013 Free Brain Training MCQ Game for Kids &amp; Adults",
+      "slug": "dailymathequator",
+      "folder": "DailyMathEquator",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "board-strategy",
+        "tube-sort"
+      ],
+      "controls": [
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "3e94055df5e6",
+      "description": "Play Math Learning Quiz online free! Answer unlimited math MCQ questions to boost your brain. A fun educational quiz game for kids, students &amp; adults. Learn maths fast with this addictive brain training game."
+    },
+    "DancingLine": {
+      "name": "Dancing Line - Music Game | Free Rhythm Arcade Game",
+      "slug": "dancingline",
+      "folder": "DancingLine",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "match-3",
+        "board-strategy",
+        "rhythm-timing",
+        "reaction-tap"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "60eac9e8cae6",
+      "description": "Guide an ever-growing Line through multiple environments. Tap to turn, avoid obstacles, and follow the beat! Test your reflexes and rhythm skills."
+    },
+    "DinoRun": {
+      "name": "Cyber Dino: Downhill Triple Jump Runner",
+      "slug": "dinorun",
+      "folder": "DinoRun",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "falling-blocks",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "5091ddd4718a",
+      "description": "Play Cyber Dino Double Jump Runner free online! Perform double jumps in mid-air, collect energy crystals, leap over downhill energy spikes, and set high scores in your browser."
+    },
+    "DoodleJump": {
+      "name": "Smiley Doodle Jump - Endless Jumping Arcade Game",
+      "slug": "doodlejump",
+      "folder": "DoodleJump",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "f78a92071659",
+      "description": "Play Smiley Doodle Jump online. Jump from platform to platform endlessly, dodge obstacles, and see how high you can climb in this completely revamped synthwave arcade game!"
+    },
+    "DotConnect": {
+      "name": "Dot Connect Puzzle",
+      "slug": "dotconnect",
+      "folder": "DotConnect",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot",
+        "idle-clicker"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "3f026ba47062",
+      "description": "Connect lines of dots, relax with fun puzzles, and match the colors in this addictive logic puzzle game inspired by Two Dots."
+    },
+    "EggSort": {
+      "name": "Egg Sort: Easter Color Puzzle",
+      "slug": "eggsort",
+      "folder": "EggSort",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "aim-shoot",
+        "tube-sort"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "cce2f511141a",
+      "description": "Drop beautiful patterned Easter eggs from trays, guide them on the conveyor belt, and sort them into matching nests. Play Egg Sort: Easter Color Puzzle game online for free!"
+    },
+    "EnglishGrammarQuiz": {
+      "name": "English Grammar Quiz \u2013 Learn English Grammar",
+      "slug": "englishgrammarquiz",
+      "folder": "EnglishGrammarQuiz",
+      "entry": "index.html",
+      "category": "action",
+      "mechanics": [
+        "platform-jump",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "4f3869a41ee3",
+      "description": "Test and improve your English grammar with our free online quiz! MCQ questions on tenses, articles, prepositions, verbs &amp; more. A fun educational English learning game for students, kids &amp; adults."
+    },
+    "FamilyTree": {
+      "name": "Family Tree! - Logic Puzzles",
+      "slug": "familytree",
+      "folder": "FamilyTree",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "lane-runner",
+        "word-puzzle",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "b24133e8f229",
+      "description": "Play Family Tree! - Logic Puzzles online. Boost your IQ, train your focus, and elevate your memory. Unlock the intricate branches of different families with the help of clues."
+    },
+    "FitnessReels": {
+      "name": "Fitness Reels - Workout Hacks & Self-Improvement",
+      "slug": "fitnessreels",
+      "folder": "FitnessReels",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "board-strategy",
+        "rhythm-timing",
+        "aim-shoot"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "2d6ebb019039",
+      "description": "Discover powerful fat loss tips, gym hacks, and discipline strategies in this fast-paced, intuitive infinite scrolling fitness reel viewer."
+    },
+    "FlappyRise": {
+      "name": "Flappy Rise Bird Game | Play Infinite Flight Challenge Online",
+      "slug": "flappyrise",
+      "folder": "FlappyRise",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "physics-merge",
+        "board-strategy",
+        "reaction-tap"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "f78a92071659",
+      "description": "Play Flappy Rise online free! Experience physics-based infinite bird flight. Tap to flap, avoid pipes, and climb the global leaderboards in this addictive arcade hit."
+    },
+    "Football3D": {
+      "name": "Football 3D Penalty Kick | Play Soccer",
+      "slug": "football3d",
+      "folder": "Football3D",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "board-strategy",
+        "aim-shoot",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "5337c379fce6",
+      "description": "Flick to shoot and score incredible goals! Experience realistic 3D soccer physics and penalty kicks in this free online football sports game."
+    },
+    "FootballReels": {
+      "name": "Football Reels - Live Football Facts & Knowledge",
+      "slug": "footballreels",
+      "folder": "FootballReels",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "lane-runner",
+        "match-3",
+        "rhythm-timing",
+        "sports-sim"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "486e22a574f8",
+      "description": "Explore legendary football facts, historical moments, and interesting trivia in this fast-paced, intuitive infinite scrolling football reel viewer."
+    },
+    "FourColors": {
+      "name": "Four Colors",
+      "slug": "fourcolors",
+      "folder": "FourColors",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "falling-blocks",
+        "card-game",
+        "board-strategy"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "2e372e83c80c",
+      "description": "Play Classic Four Colors (Draughts) free online! Jump, capture, crown kings, and outsmart the AI or play with a friend in 2-player mode directly in your browser."
+    },
+    "FruitSort": {
+      "name": "Fruit Sort: Juice Color Puzzle",
+      "slug": "fruitsort",
+      "folder": "FruitSort",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "reaction-tap",
+        "aim-shoot",
+        "tube-sort"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14e07084c313",
+      "description": "Drop fresh juicy fruits from trays, watch them ride the conveyor belt, and sort them into matching crates. Play Fruit Sort: Juice Color Puzzle game online for free!"
+    },
+    "FruitSplash": {
+      "name": "Fruit Splash \u2013",
+      "slug": "fruitsplash",
+      "folder": "FruitSplash",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14d3d71df791",
+      "description": "Play Fruit Splash game online free! Match 3 or more identical fruits to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+    },
+    "GalaxyAssault": {
+      "name": "GalaxyAssault",
+      "slug": "galaxyassault",
+      "folder": "GalaxyAssault",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "dc6427afdf03",
+      "description": "Defend the galaxy in this fast-paced space shooter! Blast incoming aliens and meteors in this thrilling free arcade sci-fi online game."
+    },
+    "Game2048": {
+      "name": "2048 Game Online \u2013 Play Free Number Merge Puzzle",
+      "slug": "game2048",
+      "folder": "Game2048",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "physics-merge",
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "rhythm-timing",
+        "reaction-tap"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "2d52dd6ca794",
+      "description": "Play 2048 free online! Slide numbered tiles on a 4\u00d74 grid, merge matching numbers, and reach the legendary 2048 tile. Addictive number puzzle game \u2013 no download needed."
+    },
+    "GemMatch": {
+      "name": "Gem Match \u2013",
+      "slug": "gemmatch",
+      "folder": "GemMatch",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14d3d71df791",
+      "description": "Play Gem Match game online free! Match 3 or more identical gems to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+    },
+    "GemShooter": {
+      "name": "Gem Shooter - Sparkling Jewel Puzzle!",
+      "slug": "gemshooter",
+      "folder": "GemShooter",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "c2d8732cb6e9",
+      "description": "Aim and match 3 colors to burst all the gems! A classic satisfying arcade puzzle. Play Gem Shooter for free and clear endless levels."
+    },
+    "GeometryDash": {
+      "name": "Geometry Jump: Play Dash Online Free",
+      "slug": "geometrydash",
+      "folder": "GeometryDash",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "falling-blocks",
+        "board-strategy",
+        "rhythm-timing",
+        "reaction-tap"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "5091ddd4718a",
+      "description": "Play Geometry Jump online for free! Dash, jump, and fly your neon block through rhythmic spike obstacles and platforms. Play instantly in your browser now."
+    },
+    "Hangman": {
+      "name": "Hangman Game Online",
+      "slug": "hangman",
+      "folder": "Hangman",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot",
+        "sports-sim"
+      ],
+      "controls": [
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "9ae5c0690509",
+      "description": "Play Hangman free online! Guess the hidden word letter by letter before the stickman is fully drawn. A fun, educational classic word guessing game for all ages."
+    },
+    "HeadFootball": {
+      "name": "Head Football Soccer Heads | 1v1 Big Head Sports Game",
+      "slug": "headfootball",
+      "folder": "HeadFootball",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "af00875ad38b",
+      "description": "Jump, kick, and headbutt the ball in explosive 1v1 soccer matches! Play fun big head football tournaments online for free."
+    },
+    "HealthHeroTrivia": {
+      "name": "Health Hero \u2013 Daily Wellness Trivia",
+      "slug": "healthherotrivia",
+      "folder": "HealthHeroTrivia",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "falling-blocks",
+        "card-game"
+      ],
+      "controls": [
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "0f1b7a998e96",
+      "description": "Play Health Hero Trivia! Test and improve your general health knowledge with our fun wellness quiz. Practice nutrition facts, sleep hygiene, and first-aid online."
+    },
+    "HelixBounce": {
+      "name": "Helix Bounce 3D | Play Addictive Drop Ball Game Free",
+      "slug": "helixbounce",
+      "folder": "HelixBounce",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "reaction-tap",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "fbf7d019cac9",
+      "description": "Smash your way down through the rotating platforms in Helix Bounce! A highly addictive casual jumping 3D ball drop game requiring quick reflexes."
+    },
+    "HiddenObjects": {
+      "name": "Hidden Objects - Mystery Finder | Play",
+      "slug": "hiddenobjects",
+      "folder": "HiddenObjects",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "card-game",
+        "board-strategy",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "318cc4517386",
+      "description": "Play Hidden Objects online for free! Train your brain, find all the hidden items in kids rooms, enchanted jungles, and retro garages. Fully mobile-friendly."
+    },
+    "HiddenTalent": {
+      "name": "Hidden Talent Test \u2013 Discover Your Secret Superpower",
+      "slug": "hiddentalent",
+      "folder": "HiddenTalent",
+      "entry": "index.html",
+      "category": "arcade",
+      "mechanics": [
+        "casual-arcade"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c76d15681e59",
+      "description": "Discover your hidden talent with our 2-choice quiz! Are you a Pattern Finder or an Empath? Fast, fun, and addictive test to reveal your secret strengths."
+    },
+    "HiddenWord": {
+      "name": "Hidden Word Finder",
+      "slug": "hiddenword",
+      "folder": "HiddenWord",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "sliding-tile",
+        "board-strategy",
+        "word-puzzle",
+        "rhythm-timing",
+        "reaction-tap",
+        "aim-shoot",
+        "tube-sort"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "46259976940c",
+      "description": "Find the hidden word specified in the header from the grid of letters! A fun and challenging word search game."
+    },
+    "HighwayRush": {
+      "name": "Highway Rush: Traffic Dodge \u2013",
+      "slug": "highwayrush",
+      "folder": "HighwayRush",
+      "entry": "index.html",
+      "category": "action",
+      "mechanics": [
+        "lane-runner"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "9342903ae8f1",
+      "description": "Play Highway Rush: Traffic Dodge! A classic arcade racing game. Dodge traffic cones and other cars on the busy highway. How far can you go?"
+    },
+    "IdleBallEscape": {
+      "name": "Idle Ball Escape: Smash Rings | Play Online",
+      "slug": "idleballescape",
+      "folder": "IdleBallEscape",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "board-strategy",
+        "reaction-tap",
+        "idle-clicker"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "b7ffe3e37944",
+      "description": "Idle Ball Escape is a relaxing casual game. Guide a bouncing ball inside a rotating ring maze. Tap to jump, use gentle gravity, and break each ring!"
+    },
+    "JewelSort": {
+      "name": "Jewel Sort: Sparkle Color Puzzle",
+      "slug": "jewelsort",
+      "folder": "JewelSort",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "aim-shoot",
+        "tube-sort"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14e07084c313",
+      "description": "Drop sparkling gemstones from trays, watch them ride the conveyor belt, and sort them into matching treasure crates. Play Jewel Sort: Sparkle Color Puzzle game online for free!"
+    },
+    "JigsawPuzzle": {
+      "name": "Premium Jigsaw Puzzle Game | Drag & Snap",
+      "slug": "jigsawpuzzle",
+      "folder": "JigsawPuzzle",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "sliding-tile",
+        "falling-blocks",
+        "match-3",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "e34d8d29a30f",
+      "description": "Play free online Jigsaw Puzzle games! Pick beautiful photos or cool abstract vector images, choose your difficulty, and match interlocking pieces in this premium canvas game."
+    },
+    "KidsBalloonPop": {
+      "name": "Kids Balloon Pop - Learn ABCs, Numbers, Colors & Shapes",
+      "slug": "kidsballoonpop",
+      "folder": "KidsBalloonPop",
+      "entry": "index.html",
+      "category": "physics",
+      "mechanics": [
+        "physics-merge"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "f53702acfc94",
+      "description": "Free kids balloon pop educational game! Pop colorful balloons to learn the alphabet A-Z, numbers 1-20, colors and shapes. Safe, ad-free play for toddlers. Available in 12 languages including Hindi, Tamil, Gujarati, Telugu, Marathi, Kannada, Malayalam, English, Spanish, French, German, and Japanese."
+    },
+    "KnifeHit": {
+      "name": "Knife Hit Game Online | Play Knife Throw Arcade Free",
+      "slug": "knifehit",
+      "folder": "KnifeHit",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "board-strategy",
+        "reaction-tap",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "76ca1b11a3ee",
+      "description": "Play Knife Hit online for free! Throw sharp knives into rotating target logs, slice juicy apples to score points, and avoid hitting other knives. High-speed casual reaction game."
+    },
+    "KnowledgeReels": {
+      "name": "Knowledge Reels - Daily Fun Facts & Shorts",
+      "slug": "knowledgereels",
+      "folder": "KnowledgeReels",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "board-strategy",
+        "reaction-tap"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "89204e77f971",
+      "description": "Discover mind-blowing facts about space, the human body, and general knowledge in this fast-paced, intuitive infinite scrolling reel viewer."
+    },
+    "LeadershipStyle": {
+      "name": "Leadership Style Quiz \u2013 What Kind of Leader Are You?",
+      "slug": "leadershipstyle",
+      "folder": "LeadershipStyle",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "match-3"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "be27c979e6bc",
+      "description": "Find out your leadership style with our 2-choice quiz! Are you a Commander, a Visionary, or a Coach? Fast and insightful leadership personality test."
+    },
+    "LifeSkillsReels": {
+      "name": "Life Skills Reels - Personal Growth & Hacks",
+      "slug": "lifeskillsreels",
+      "folder": "LifeSkillsReels",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "match-3"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "be27c979e6bc",
+      "description": "Discover practical life skills, personal growth hacks, and self-improvement strategies in this fast-paced, intuitive infinite scrolling reel viewer."
+    },
+    "Ludo": {
+      "name": "Ludo Master Classic Board Game | Play Dice Multiplayer",
+      "slug": "ludo",
+      "folder": "Ludo",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "board-strategy"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "5a301f2ec65d",
+      "description": "Roll the dice and race your tokens! Play the famous classic Ludo board game online for free. A fun strategy game for friends and family."
+    },
+    "MarbleBlast": {
+      "name": "Marble Blast - Classic Glass Marbles!",
+      "slug": "marbleblast",
+      "folder": "MarbleBlast",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "c2d8732cb6e9",
+      "description": "Aim and match 3 colors to burst all the marbles! A classic satisfying arcade puzzle. Play Marble Blast for free and clear endless levels."
+    },
+    "MarbleSort": {
+      "name": "Marble Sort: Color Puzzle",
+      "slug": "marblesort",
+      "folder": "MarbleSort",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "aim-shoot",
+        "tube-sort"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14e07084c313",
+      "description": "Drop marbles from trays, guide them across the conveyor belt, and sort them into matching color boxes. A relaxing yet brain-teasing color puzzle game!"
+    },
+    "MemoryMatch": {
+      "name": "Memory Card Match",
+      "slug": "memorymatch",
+      "folder": "MemoryMatch",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "match-3",
+        "card-game",
+        "board-strategy"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c71dfeddaec6",
+      "description": "Play Memory Card Match online for free! Flip 3D cards, match emoji pairs, build combo streaks, and sharpen your memory across 4 fun themes and difficulty levels."
+    },
+    "MergeNumbers": {
+      "name": "Merge Numbers 2048 Puzzle | Addictive Math Brain Game",
+      "slug": "mergenumbers",
+      "folder": "MergeNumbers",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "sliding-tile",
+        "board-strategy",
+        "rhythm-timing",
+        "aim-shoot",
+        "idle-clicker"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "cbd5c1b52472",
+      "description": "Sharpen your brain with Merge Numbers! Combine tiles to reach huge sums in this addictive math logic puzzle game inspired by 2048."
+    },
+    "Minesweeper": {
+      "name": "Play Minesweeper",
+      "slug": "minesweeper",
+      "folder": "Minesweeper",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "board-strategy",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "17c66c272c4c",
+      "description": "Play classic Minesweeper online for free! Enjoy standard difficulty levels (Easy, Medium, Hard), clean design, and smooth controls on mobile or desktop."
+    },
+    "NeonPacman": {
+      "name": "Neon Pacman Arcade",
+      "slug": "neonpacman",
+      "folder": "NeonPacman",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "ccd12f526ebf",
+      "description": "Play Neon Pacman Arcade online for free! Dodge cyber ghosts, chomp glowing neon dots, and conquer the maze in this massive reboot of the classic pac man game."
+    },
+    "NeonSlicer": {
+      "name": "NeonSlicer",
+      "slug": "neonslicer",
+      "folder": "NeonSlicer",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "sliding-tile",
+        "board-strategy",
+        "word-puzzle",
+        "reaction-tap",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "cce2f511141a",
+      "description": "Play Balloon Ninja free online! Swipe to slash flying balloons, dodge the bombs, and set explosive high scores. A gorgeous mobile-friendly arcade hit."
+    },
+    "NeonSnake": {
+      "name": "Neon Snake Classic Arcade | Play Modern Snake Online Free",
+      "slug": "neonsnake",
+      "folder": "NeonSnake",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "ccb4e5fe7984",
+      "description": "Play the classic Snake retro game with a modern neon twist! Eat the glowing dots, grow your tail, and survive the endless maze for a high score."
+    },
+    "NumMatch": {
+      "name": "NumMatch - Logic Puzzle",
+      "slug": "nummatch",
+      "folder": "NumMatch",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "reaction-tap",
+        "sports-sim"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c71dfeddaec6",
+      "description": "Match pairs of numbers or numbers that add up to 10 to clear the board! A relaxing and addictive logic puzzle game. Play NumMatch online for free."
+    },
+    "NumberBalloonShooter": {
+      "name": "Math Balloon Pop Shooter | Number Adding Puzzle Game",
+      "slug": "numberballoonshooter",
+      "folder": "NumberBalloonShooter",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "board-strategy",
+        "reaction-tap",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "26d3150e240a",
+      "description": "Improve your math skills by popping numbered balloons! A fun educational arcade shooter to test your quick calculation reflexes."
+    },
+    "NumberMaster": {
+      "name": "Number Master: Run, Merge & Grow",
+      "slug": "numbermaster",
+      "folder": "NumberMaster",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "physics-merge",
+        "board-strategy",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "dc6427afdf03",
+      "description": "Swipe to collect numbers, grow your value, and break through walls! Dodge saws, avoid red threat numbers, and aim for the highest score. Free hyper-casual math runner game."
+    },
+    "Numpuz": {
+      "name": "Numpuz: Number Puzzle Games",
+      "slug": "numpuz",
+      "folder": "Numpuz",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "falling-blocks",
+        "board-strategy",
+        "rhythm-timing",
+        "reaction-tap",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "091fb3813c56",
+      "description": "Numpuz is a classic logic puzzle game. Tap and move the wood number blocks, challenge your brainpower, have fun and enjoy number games!"
+    },
+    "NutritionQuiz": {
+      "name": "Nutrition Quiz \u2013 Guess Food Macros | Free Health Knowledge Game",
+      "slug": "nutritionquiz",
+      "folder": "NutritionQuiz",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "physics-merge",
+        "word-puzzle"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "adbf078b509b",
+      "description": "Test your nutrition knowledge! Guess the correct calories, carbs, protein and fat for fruits, vegetables, grains and more. A fun free health quiz game for all ages."
+    },
+    "OddOneOut": {
+      "name": "Odd One Out \u2013 Brain Puzzle Game | Find the Difference",
+      "slug": "oddoneout",
+      "folder": "OddOneOut",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "sliding-tile",
+        "rhythm-timing",
+        "sports-sim"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "0cb7bd50c0a8",
+      "description": "Play Odd One Out free online! Find the emoji, color or shape that doesn"
+    },
+    "PersonalityTest": {
+      "name": "2-Choice Personality Test \u2013 Fast & Addictive Quiz",
+      "slug": "personalitytest",
+      "folder": "PersonalityTest",
+      "entry": "index.html",
+      "category": "arcade",
+      "mechanics": [
+        "casual-arcade"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c76d15681e59",
+      "description": "Take our 2-choice personality test! Discover your gaming personality type in under 60 seconds. Fun, fast, and addictive online quiz to know yourself better."
+    },
+    "PetPop": {
+      "name": "Pet Pop \u2013",
+      "slug": "petpop",
+      "folder": "PetPop",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14d3d71df791",
+      "description": "Play Pet Pop game online free! Match 3 or more identical pets to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+    },
+    "PianoTiles": {
+      "name": "Piano Tiles",
+      "slug": "pianotiles",
+      "folder": "PianoTiles",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "sliding-tile",
+        "falling-blocks",
+        "board-strategy",
+        "rhythm-timing",
+        "reaction-tap"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "75968ffa885d",
+      "description": "Play Piano Tiles free online! Tap falling black piano keys to play classical songs like F\u00fcr Elise, Ode to Joy, and Canon in D. Test your rhythm reflexes in your browser."
+    },
+    "PlanetShooter": {
+      "name": "Planet Shooter - Galactic Space Puzzle!",
+      "slug": "planetshooter",
+      "folder": "PlanetShooter",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "b9640ba7bdb2",
+      "description": "Aim and match 3 colors to burst all the planets! A classic satisfying arcade puzzle. Play Planet Shooter for free and clear endless levels."
+    },
+    "PocketGolf": {
+      "name": "Mini Golf Pocket 3D | Play Fun Putt Putt Course Online",
+      "slug": "pocketgolf",
+      "folder": "PocketGolf",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "board-strategy",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "ae67ce5d644f",
+      "description": "Putt your way through crazy mini golf courses! Discover obstacles, perfect your swing, and get a hole-in-one in this relaxing free sports game."
+    },
+    "Pool": {
+      "name": "Pool",
+      "slug": "pool",
+      "folder": "Pool",
+      "entry": "index.html",
+      "category": "sports",
+      "mechanics": [
+        "lane-runner",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "cea4ed05b5b9",
+      "description": "Play the best realistic 8 Ball Pool multiplayer online for free! Improve your billiards skills, practice trick shots, and become the pool master without downloading."
+    },
+    "RetroRacer": {
+      "name": "Car Race 3D -",
+      "slug": "retroracer",
+      "folder": "RetroRacer",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "falling-blocks",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "5d69ffee554b",
+      "description": "Play Car Race 3D free online! Drive a fast car, dodge opponents and race to the finish on a beautiful 3D road. Free browser car racing game, no download needed."
+    },
+    "SimplyDraw": {
+      "name": "Simply Draw - Learn to Draw",
+      "slug": "simplydraw",
+      "folder": "SimplyDraw",
+      "entry": "index.html",
+      "category": "physics",
+      "mechanics": [
+        "physics-merge"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "f53702acfc94",
+      "description": "Learn and practice drawing beautiful sketches. Enjoy customized learning journeys and video-like trace-along sessions to master your drawing skills."
+    },
+    "SkiFree": {
+      "name": "Ski",
+      "slug": "skifree",
+      "folder": "SkiFree",
+      "entry": "index.html",
+      "category": "action",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "1ce1be07163e",
+      "description": "Play SkiFree online for free! Dodge trees, jump ramps, and escape the infamous Abominable Snow Monster in this HTML5 port of the classic 90s skiing arcade game."
+    },
+    "SlopeGame": {
+      "name": "Slope Game",
+      "slug": "slopegame",
+      "folder": "SlopeGame",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "physics-merge",
+        "falling-blocks",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "f78a92071659",
+      "description": "Play Slope Game free online! Roll your 3D neon ball down steep slopes, dodge red obstacle walls, make massive gap jumps, and survive at high speeds in your browser."
+    },
+    "SnakesAndLadders": {
+      "name": "Snakes and Ladders Online | Play Classic Snake Board Game Free",
+      "slug": "snakesandladders",
+      "folder": "SnakesAndLadders",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c2fe5441da43",
+      "description": "Roll the dice, climb the ladders, and slide down the snakes! Play the ultimate Snakes and Ladders board game online. Try 2-player local multiplayer or challenge our smart AI."
+    },
+    "Solitaire": {
+      "name": "Play Klondike Solitaire",
+      "slug": "solitaire",
+      "folder": "Solitaire",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "falling-blocks",
+        "card-game",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "bff3751f9d95",
+      "description": "Play classic Klondike Solitaire online for free! Enjoy the classic card game with undo and auto-move features. Play instantly on mobile or desktop."
+    },
+    "Stack3D": {
+      "name": "Stack 3D Puzzle Game | Play Free Tower Builder Online",
+      "slug": "stack3d",
+      "folder": "Stack3D",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "physics-merge",
+        "falling-blocks",
+        "board-strategy",
+        "reaction-tap"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "a63f06398646",
+      "description": "Test your reflexes in Stack 3D! Build the highest block tower by perfectly dropping shapes. Fun free physics puzzle game for mobile and desktop."
+    },
+    "StickDuel": {
+      "name": "Stickman Warriors Duel | Epic Ragdoll Fighting Game Free",
+      "slug": "stickduel",
+      "folder": "StickDuel",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "physics-merge",
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "f78a92071659",
+      "description": "Enter the arena in Stickman Warriors Duel! An action-packed physics-based ragdoll fighting game with insane weapons and combat maneuvers."
+    },
+    "StrikerLeague": {
+      "name": "Striker League Soccer | Play Online Football Championship",
+      "slug": "strikerleague",
+      "folder": "StrikerLeague",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "falling-blocks",
+        "match-3",
+        "board-strategy",
+        "aim-shoot",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "22d1c19e2a07",
+      "description": "Lead your team to victory in Striker League! Experience fast-paced 2D soccer action with strategic formations and physics-based shooting. Play free online."
+    },
+    "SubwayRunner": {
+      "name": "Subway Runner 3D",
+      "slug": "subwayrunner",
+      "folder": "SubwayRunner",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "board-strategy",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "1ba45f1b5ebf",
+      "description": "Play Subway Runner 3D free online! Dash down 3-lane railway tracks, dodge trains, leap hurdles, roll under barriers, grab coin magnets, and surf endless subway lines in your browser."
+    },
+    "Sudoku": {
+      "name": "Play Sudoku Classic",
+      "slug": "sudoku",
+      "folder": "Sudoku",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "sliding-tile",
+        "board-strategy",
+        "word-puzzle",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "e3347264ad73",
+      "description": "Challenge your mind with daily classic Sudoku! Free 9x9 grid number logic puzzles with multiple difficulty levels to train your brain."
+    },
+    "SushiMatch": {
+      "name": "Sushi Match 3D Pair Connect | Memory Mahjong Puzzle",
+      "slug": "sushimatch",
+      "folder": "SushiMatch",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "match-3",
+        "card-game",
+        "board-strategy",
+        "rhythm-timing"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "44deb75d8e4e",
+      "description": "Find and pair the matching 3D sushi tiles! An addictive and relaxing mahjong-style memory connection game perfectly suited for puzzle logic fans."
+    },
+    "TableTennis": {
+      "name": "Table Tennis Online \u2013 Free 3D Ping Pong Game",
+      "slug": "tabletennis",
+      "folder": "TableTennis",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "lane-runner",
+        "match-3",
+        "rhythm-timing",
+        "aim-shoot",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "26d658a22e42",
+      "description": "Play table tennis online free! Challenge smart AI in this realistic 3D ping pong game. Master topspin, smashes &amp; angled shots. No download needed \u2014 works on mobile &amp; desktop instantly."
+    },
+    "Tennis": {
+      "name": "Tennis Master 3D Sport | Play Open Tournament Online",
+      "slug": "tennis",
+      "folder": "Tennis",
+      "entry": "game.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "match-3",
+        "board-strategy",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "762f11551763",
+      "description": "Experience realistic 3D tennis physics! Swipe to serve, hit top-spins, and smash the ball to win the ultimate grand slam championship."
+    },
+    "Tetris": {
+      "name": "Tetris Game Online - Free Classic Block Puzzle",
+      "slug": "tetris",
+      "folder": "Tetris",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "physics-merge",
+        "sliding-tile",
+        "falling-blocks",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "2d52dd6ca794",
+      "description": "Play the classic Tetris game free online! Stack falling blocks, clear lines, and score high in this addictive retro puzzle game. No download required."
+    },
+    "TicTacToe": {
+      "name": "Play Tic Tac Toe",
+      "slug": "tictactoe",
+      "folder": "TicTacToe",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "board-strategy",
+        "rhythm-timing",
+        "aim-shoot"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "56bfb3665fa2",
+      "description": "Play classic Tic Tac Toe online for free! Enjoy 1 vs 1 mode with a friend or challenge the unbeatable AI. Play instantly on mobile or desktop."
+    },
+    "TrafficJam": {
+      "name": "Traffic Jam 3D - Puzzle Challenge",
+      "slug": "trafficjam",
+      "folder": "TrafficJam",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "lane-runner",
+        "sliding-tile",
+        "falling-blocks",
+        "match-3"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "0bd407420f6b",
+      "description": "Solve the traffic gridlock! Slide cars and clear the path in this addictive 3D traffic management puzzle game."
+    },
+    "TravelDestiny": {
+      "name": "Travel Destiny Quiz \u2013 Where Should You Travel Next?",
+      "slug": "traveldestiny",
+      "folder": "TravelDestiny",
+      "entry": "index.html",
+      "category": "arcade",
+      "mechanics": [
+        "casual-arcade"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c76d15681e59",
+      "description": "Discover your travel destiny with our 2-choice quiz! Find out if you"
+    },
+    "TypingSpeedTest": {
+      "name": "Typing Speed Test Arena - Learn to Type Fast",
+      "slug": "typingspeedtest",
+      "folder": "TypingSpeedTest",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "1ba45f1b5ebf",
+      "description": "Play the definitive Typing Speed Test Arena! Improve your WPM (Words Per Minute), train your keyboard muscle memory, and save your city from falling words in this free online educational typing game."
+    },
+    "VeggieSmash": {
+      "name": "Veggie Smash \u2013",
+      "slug": "veggiesmash",
+      "folder": "VeggieSmash",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "match-3",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "14d3d71df791",
+      "description": "Play Veggie Smash game online free! Match 3 or more identical veggies to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+    },
+    "VirusShooter": {
+      "name": "Virus Shooter - Microscopic Hexa Puzzle!",
+      "slug": "virusshooter",
+      "folder": "VirusShooter",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "sliding-tile",
+        "match-3",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "c2d8732cb6e9",
+      "description": "Aim and match 3 colors to burst all the viruss! A classic satisfying arcade puzzle. Play Virus Shooter for free and clear endless levels."
+    },
+    "VolleyballArena": {
+      "name": "Volleyball Arena 3D | Fast Paced Sports Game Online",
+      "slug": "volleyballarena",
+      "folder": "VolleyballArena",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "physics-merge",
+        "falling-blocks",
+        "match-3",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "bbce77c2cdad",
+      "description": "Spike, block, and dive in Volleyball Arena 3D! Compete in fast-paced beach volleyball matches online for free. Mobile friendly sports game."
+    },
+    "WaterSort3D": {
+      "name": "Water Sort Color Puzzle | Relaxing Liquid Glass Brain Game",
+      "slug": "watersort3d",
+      "folder": "WaterSort3D",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "board-strategy",
+        "word-puzzle",
+        "aim-shoot",
+        "tube-sort"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "b7ffe3e37944",
+      "description": "Pour colored water into the correct tubes to sort them perfectly. An addictive logic and relaxing brain-training sorting puzzle game."
+    },
+    "WatermelonDrop": {
+      "name": "Watermelon Drop | Suika Fruit Merge Game Online Free",
+      "slug": "watermelondrop",
+      "folder": "WatermelonDrop",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "falling-blocks",
+        "board-strategy"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "e168da0b8eb8",
+      "description": "Play Watermelon Drop (Suika Game) free online! Drop, bounce, and merge juicy fruits from cherries to giant watermelons in this addictive physics puzzle. No downloads needed!"
+    },
+    "WellnessReels": {
+      "name": "Wellness Reels - Mental Health & Mindset",
+      "slug": "wellnessreels",
+      "folder": "WellnessReels",
+      "entry": "index.html",
+      "category": "puzzle",
+      "mechanics": [
+        "sliding-tile",
+        "word-puzzle"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "f58a6154a71b",
+      "description": "Relatable mental health tips, mindset shifts, and psychological frameworks delivered in an intuitive, infinite scrolling reel viewer."
+    },
+    "WhackAMole": {
+      "name": "Whack-a-Mole",
+      "slug": "whackamole",
+      "folder": "WhackAMole",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "falling-blocks",
+        "board-strategy",
+        "reaction-tap"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "4b4e75613cbb",
+      "description": "Play Whack-a-Mole free online! Smash popping moles, catch bonus golden king moles, dodge explosive bombs, and test your reaction speed across Classic, Blitz, and Frenzy modes."
+    },
+    "WordCrossword": {
+      "name": "Word Crossword Game",
+      "slug": "wordcrossword",
+      "folder": "WordCrossword",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "physics-merge",
+        "board-strategy",
+        "word-puzzle"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "ccb4e5fe7984",
+      "description": "Play Word Crossword for free online. Connect letters, find hidden words, and solve challenging crossword puzzles in this modern, mobile-friendly word game."
+    },
+    "WordGuess": {
+      "name": "Word Guess Game Online - Free Unlimited Wordle Puzzle",
+      "slug": "wordguess",
+      "folder": "WordGuess",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "lane-runner",
+        "platform-jump",
+        "sliding-tile",
+        "board-strategy",
+        "word-puzzle",
+        "rhythm-timing",
+        "aim-shoot"
+      ],
+      "controls": [
+        "keyboard",
+        "mouse"
+      ],
+      "signature": "e3347264ad73",
+      "description": "Play Word Guess free online! Guess the 5-letter word in 6 tries. Unlimited gameplay, no daily limits. Train your brain with this highly addictive word puzzle."
+    },
+    "WordSearch": {
+      "name": "Classic Word Search Puzzle | Find English Words Game Online",
+      "slug": "wordsearch",
+      "folder": "WordSearch",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "sliding-tile",
+        "board-strategy",
+        "word-puzzle",
+        "sports-sim"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "f8dc06231d15",
+      "description": "Find the hidden words in the grid! Keep your brain sharp with endless daily word search logic puzzles. Free educational vocabulary game."
+    },
+    "WorldTour": {
+      "name": "World Tour \u2014 Interactive Street View Explorer",
+      "slug": "worldtour",
+      "folder": "WorldTour",
+      "entry": "index.html",
+      "category": "arcade",
+      "mechanics": [
+        "casual-arcade"
+      ],
+      "controls": [
+        "mouse"
+      ],
+      "signature": "c76d15681e59",
+      "description": "Take a virtual world tour across the globe. Explore over 100+ iconic streets, monuments, and landmarks from the USA, UK, France, Japan, Italy, and dozens of other countries in fully interactive 360-degree Street View."
+    },
+    "ZenBounce": {
+      "name": "Zen Bounce Puzzle | Relaxing Physics Game",
+      "slug": "zenbounce",
+      "folder": "ZenBounce",
+      "entry": "index.html",
+      "category": "board",
+      "mechanics": [
+        "platform-jump",
+        "physics-merge",
+        "falling-blocks",
+        "board-strategy",
+        "rhythm-timing",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "mouse"
+      ],
+      "signature": "faeaab7ff429",
+      "description": "Drag, aim, and release to clear all blocks! Enjoy the relaxing minimalist physics puzzle game where every bounce counts. Can you solve all levels?"
+    }
+  }
+}

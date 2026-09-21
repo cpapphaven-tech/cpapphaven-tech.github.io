@@ -1,6 +1,9 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+
+    { name: "Color Bounce Switch", tag: "⚡ Neon Timing Hit", desc: "Tap to bounce upward through rotating colored obstacles! Match colors to pass through and collect stars.", href: "ColorBounce/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7,#f43f5e)", icon: "⚡", badge: "new", image: "" },
+
     { name: "Watermelon Drop", tag: "🍉 Viral Suika Hit", desc: "Drop, bounce, and merge juicy fruits into giant watermelons with satisfying 2D physics!", href: "WatermelonDrop/index.html", gradient: "linear-gradient(135deg,#10b981,#22c55e,#ef4444)", icon: "🍉", badge: "hot", image: "" },
 
     { name: "Four Colors", tag: "🌈 Legendary Card Hit", desc: "Match colors and numbers, play Skip, Reverse, Draw 2, and Wild cards vs smart AI!", href: "FourColors/index.html", gradient: "linear-gradient(135deg,#ef4444,#facc15,#10b981,#3b82f6)", icon: "🌈", badge: "hot", image: "" },
@@ -44,6 +47,8 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Color Bounce Switch", genre: "Arcade", icon: "", href: "ColorBounce/index.html", badge: "new", emoji: "⚡" },
+
         { name: "Subway Runner 3D", genre: "Runner", icon: "", href: "SubwayRunner/index.html", badge: "hot", emoji: "🚇" },
 
         { name: "Cyber Dino: Double Jump", genre: "Arcade", icon: "", href: "DinoRun/index.html", badge: "hot", emoji: "🦖" },
@@ -100,6 +105,7 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+
         { name: "Watermelon Drop", genre: "Physics", icon: "", href: "WatermelonDrop/index.html", badge: "hot", emoji: "🍉" },
         { name: "Memory Card Match", genre: "Memory", icon: "", href: "MemoryMatch/index.html", badge: "hot", emoji: "🃏" },
 
