@@ -1,6 +1,9 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+
+    { name: "Cyber Reflex Sprint", tag: "⚡ Reflex Test", desc: "How fast are your reflexes? Tap the correct target the instant it flashes — track your millisecond reaction times and build streaks!", href: "CyberReflexSprint/index.html", gradient: "linear-gradient(135deg,#00ffff,#a855f7,#f43f5e)", icon: "⚡", badge: "new", image: "" },
+
     { name: "Neon Maze Escape", tag: "🔥 New Hit", desc: "Play Neon Maze Escape free online in your browser. Mobile-friendly, no download required!", href: "NeonMaze/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
 
 
@@ -49,6 +52,9 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+
+        { name: "Cyber Reflex Sprint", genre: "Arcade", icon: "", href: "CyberReflexSprint/index.html", badge: "new", emoji: "⚡" },
+
         { name: "Neon Maze Escape", genre: "Arcade", icon: "", href: "NeonMaze/index.html", badge: "new", emoji: "🎮" },
 
         { name: "Color Bounce Switch", genre: "Arcade", icon: "", href: "ColorBounce/index.html", badge: "new", emoji: "⚡" },

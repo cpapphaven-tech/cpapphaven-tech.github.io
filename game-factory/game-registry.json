@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "total_games": 116,
+  "total_games": 117,
   "games": {
     "ABCTracing": {
       "name": "ABC Tracing - Learn to Write ABC & Numbers",
@@ -1132,6 +1132,49 @@
         "loss_condition": "collide with obstacle or barrier",
         "level_structure": "level-based",
         "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
+    },
+    "CyberReflexSprint": {
+      "name": "Cyber Reflex Sprint | Play Online Free",
+      "slug": "cyberreflexsprint",
+      "folder": "CyberReflexSprint",
+      "entry": "index.html",
+      "category": "arcade",
+      "archetype": "bubble_shooter",
+      "mechanics": [
+        "board-strategy",
+        "reaction-tap",
+        "aim-shoot"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "gameplay_loop": "aim cannon and shoot colored bubbles to clear hanging clusters",
+      "gameplay_signature": "bubble_shooter:aim-shoot-board-strategy-reaction-tap:keyboard-mouse-touch",
+      "description": "How fast are your reflexes? Tap the correct target the instant it flashes \u2014 track your millisecond reaction times and build streaks!",
+      "fingerprint": {
+        "primary_mechanic": "aim-shoot-cluster-clear",
+        "secondary_mechanics": [
+          "color-matching",
+          "ricochet-shot",
+          "cluster-pop",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "aim and fire colored bubbles to match and pop hanging clusters before they descend",
+        "interaction_pattern": "aim-and-fire",
+        "progression_system": "clusters descend faster and patterns more complex each level",
+        "scoring_system": "bubbles popped per shot multiplied by cluster size bonus",
+        "win_condition": "all bubbles cleared from the board",
+        "loss_condition": "bubbles descend below the danger line",
+        "level_structure": "level-based",
+        "archetype": "bubble_shooter",
         "controls": [
           "touch",
           "keyboard",
