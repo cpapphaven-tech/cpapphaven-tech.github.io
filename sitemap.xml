@@ -1543,5 +1543,21 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/blog/color-bounce.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/blog/color-bounce.html"/>
   </url>
+  <url>
+    <loc>https://playmixgames.in/NeonMaze/index.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/NeonMaze/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/NeonMaze/index.html"/>
+  </url>
+  <url>
+    <loc>https://playmixgames.in/blog/neon-maze-escape.html</loc>
+    <lastmod>2026-09-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://playmixgames.in/blog/neon-maze-escape.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://playmixgames.in/blog/neon-maze-escape.html"/>
+  </url>
 </urlset>
 

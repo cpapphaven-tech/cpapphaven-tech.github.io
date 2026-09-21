@@ -1,6 +1,8 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Neon Maze Escape", tag: "🔥 New Hit", desc: "Play Neon Maze Escape free online in your browser. Mobile-friendly, no download required!", href: "NeonMaze/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
+
 
     { name: "Color Bounce Switch", tag: "⚡ Neon Timing Hit", desc: "Tap to bounce upward through rotating colored obstacles! Match colors to pass through and collect stars.", href: "ColorBounce/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7,#f43f5e)", icon: "⚡", badge: "new", image: "" },
 
@@ -47,6 +49,8 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Neon Maze Escape", genre: "Arcade", icon: "", href: "NeonMaze/index.html", badge: "new", emoji: "🎮" },
+
         { name: "Color Bounce Switch", genre: "Arcade", icon: "", href: "ColorBounce/index.html", badge: "new", emoji: "⚡" },
 
         { name: "Subway Runner 3D", genre: "Runner", icon: "", href: "SubwayRunner/index.html", badge: "hot", emoji: "🚇" },

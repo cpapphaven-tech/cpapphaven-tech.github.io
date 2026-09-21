@@ -1,9 +1,11 @@
-#!/usr/bin/env python3
-"""
-Color Switch / Obstacle Timing Game Engine Archetype
-Generates a complete, high-performance HTML5 canvas game where a ball bounces
-through rotating geometric obstacles matching its color.
-"""
+ARCHETYPE = "color_switch"
+PRIMARY_MECHANIC = "color-matching"
+DEFAULT_MECHANICS = ["reaction-tap", "rhythm-timing", "color-matching", "obstacle-timing"]
+DEFAULT_CONTROLS = ["touch", "keyboard", "mouse"]
+GAMEPLAY_LOOP = "tap to bounce a colored ball upward through rotating multi-colored obstacles matching its current color"
+
+def generate(game_title="Color Bounce Switch", folder_name="ColorBounce", primary_color="#38bdf8", **kwargs):
+    return generate_color_switch_game(game_title=game_title, folder_name=folder_name, primary_color=primary_color)
 
 def generate_color_switch_game(game_title="Color Bounce Switch", folder_name="ColorBounce", primary_color="#38bdf8"):
     slug = folder_name.lower()

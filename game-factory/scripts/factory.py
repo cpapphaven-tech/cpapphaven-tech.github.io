@@ -20,17 +20,82 @@ from pathlib import Path
 CURRENT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = CURRENT_DIR.parent.parent
 
-sys.path.insert(0, str(CURRENT_DIR))
+sys.path.insert(0, str(CURRENT_DIR.parent))  # makes 'engines' package importable
+sys.path.insert(0, str(CURRENT_DIR))           # makes sibling scripts importable
 
 from inventory import scan_repository
 from duplicate_detector import DuplicateDetector
 from ai_generator import AIGameGenerator
 from validator import GameValidator
 from site_updater import SiteUpdater
+from engines import classify_concept, select_underrepresented_archetype
 
-# High-Demand Trending Web Game Candidate Pool
-# Checked against the live registry during generation
+# High-Demand Trending Web Game Candidate Pool (diverse archetypes, not all color_switch)
 CANDIDATE_CONCEPTS = [
+    {
+        'name': 'Neon Maze Escape',
+        'folder': 'NeonMaze',
+        'slug': 'neon-maze-escape',
+        'archetype': 'maze',
+        'category': 'puzzle',
+        'genre': 'Puzzle',
+        'tag': '🔮 Neon Labyrinth',
+        'desc': 'Navigate procedurally generated neon labyrinths with fog-of-war lighting, collect power crystals, and escape through the portal!',
+        'keywords': 'neon maze, maze game online, escape maze free, labyrinth game, neon maze escape',
+        'icon': '🔮',
+        'emoji': '🔮',
+        'gradient': 'linear-gradient(135deg,#06b6d4,#8b5cf6,#f43f5e)',
+        'mechanics': ['maze-pathfinding', 'fog-of-war', 'crystal-collection'],
+        'controls': ['touch', 'keyboard', 'mouse']
+    },
+    {
+        'name': 'Tower Stack Blitz',
+        'folder': 'TowerStackBlitz',
+        'slug': 'tower-stack-blitz',
+        'archetype': 'stack',
+        'category': 'arcade',
+        'genre': 'Arcade',
+        'tag': '🏗️ Precision Stacker',
+        'desc': 'Slice perfectly timed falling blocks to build the tallest tower! Perfect taps keep the full block width — chain combos for massive scores.',
+        'keywords': 'tower stack game, block stacking game online, stack game free, precision tap game',
+        'icon': '🏗️',
+        'emoji': '🏗️',
+        'gradient': 'linear-gradient(135deg,#f59e0b,#ef4444,#a855f7)',
+        'mechanics': ['precision-timing', 'block-slicing', 'combo-chain'],
+        'controls': ['touch', 'mouse', 'keyboard']
+    },
+    {
+        'name': 'Cyber Reflex Sprint',
+        'folder': 'CyberReflexSprint',
+        'slug': 'cyber-reflex-sprint',
+        'archetype': 'reaction',
+        'category': 'arcade',
+        'genre': 'Arcade',
+        'tag': '⚡ Reflex Test',
+        'desc': 'How fast are your reflexes? Tap the correct target the instant it flashes — track your millisecond reaction times and build streaks!',
+        'keywords': 'reflex game online, reaction time game, tap reflex test, quick tap game free',
+        'icon': '⚡',
+        'emoji': '⚡',
+        'gradient': 'linear-gradient(135deg,#00ffff,#a855f7,#f43f5e)',
+        'mechanics': ['reaction-tap', 'streak-combo', 'millisecond-timing'],
+        'controls': ['touch', 'mouse']
+    },
+    {
+        'name': 'Gem Crush Cascade',
+        'folder': 'GemCrushCascade',
+        'slug': 'gem-crush-cascade',
+        'archetype': 'match3',
+        'category': 'puzzle',
+        'genre': 'Puzzle',
+        'tag': '💎 Match & Cascade',
+        'desc': 'Swap dazzling gems on an 8x8 grid, trigger gravity cascades, and chain match-3/4/5 combos for monster scores!',
+        'keywords': 'gem crush game, match 3 game online, candy crush style game, gem swap puzzle free',
+        'icon': '💎',
+        'emoji': '💎',
+        'gradient': 'linear-gradient(135deg,#ec4899,#f59e0b,#10b981)',
+        'mechanics': ['gem-swap', 'match-3', 'cascade-gravity', 'special-gems'],
+        'controls': ['touch', 'mouse']
+    },
     {
         'name': 'Color Bounce Switch',
         'folder': 'ColorBounce',
@@ -40,29 +105,13 @@ CANDIDATE_CONCEPTS = [
         'genre': 'Arcade',
         'tag': '⚡ Neon Timing Hit',
         'desc': 'Tap to bounce upward through rotating colored obstacles! Match colors to pass through and collect stars.',
-        'keywords': 'color bounce, color switch online, play color bounce free, color jump arcade, neon reflex game',
+        'keywords': 'color bounce, color switch online, play color bounce free, color jump arcade',
         'icon': '⚡',
         'emoji': '⚡',
         'gradient': 'linear-gradient(135deg,#38bdf8,#a855f7,#f43f5e)',
         'mechanics': ['reaction-tap', 'rhythm-timing'],
         'controls': ['touch', 'keyboard', 'mouse']
     },
-    {
-        'name': 'Hexa Sort 3D',
-        'folder': 'HexaSort3D',
-        'slug': 'hexa-sort-3d',
-        'archetype': 'puzzle',
-        'category': 'puzzle',
-        'genre': 'Puzzle',
-        'tag': '🧩 Trending Hex Stack',
-        'desc': 'Stack and merge colorful hexagonal tiles on a honeycomb board!',
-        'keywords': 'hexa sort, hexagon stack, puzzle merge online, hexa sort 3d free',
-        'icon': '🧩',
-        'emoji': '🧩',
-        'gradient': 'linear-gradient(135deg,#10b981,#06b6d4,#6366f1)',
-        'mechanics': ['sliding-tile', 'physics-merge'],
-        'controls': ['touch', 'mouse']
-    }
 ]
 
 def run_factory(count=1, custom_name=None, custom_folder=None, dry_run=False):
@@ -92,21 +141,26 @@ def run_factory(count=1, custom_name=None, custom_folder=None, dry_run=False):
     if custom_name:
         folder = custom_folder or re.sub(r'[^a-zA-Z0-9]', '', custom_name)
         slug = re.sub(r'[^a-z0-9]+', '-', custom_name.lower()).strip('-')
+        # Auto-classify the archetype from the game name — never blindly default to color_switch
+        detected_archetype = classify_concept(custom_name, '')
+        if not detected_archetype:
+            detected_archetype = 'maze'  # diverse fallback
+        print(f"Auto-detected archetype for '{custom_name}': '{detected_archetype}'")
         concepts_to_try.append({
             'name': custom_name,
             'folder': folder,
             'slug': slug,
-            'archetype': 'color_switch',
+            'archetype': detected_archetype,
             'category': 'action',
             'genre': 'Arcade',
             'tag': '🔥 New Hit',
-            'desc': f'Play {custom_name} free online in your browser.',
-            'keywords': f'{custom_name.lower()}, play online free, arcade',
+            'desc': f'Play {custom_name} free online in your browser. Mobile-friendly, no download required!',
+            'keywords': f'{custom_name.lower()}, play online free, arcade, {detected_archetype.replace("_", " ")}',
             'icon': '🎮',
             'emoji': '🎮',
             'gradient': 'linear-gradient(135deg,#38bdf8,#a855f7)',
-            'mechanics': ['reaction-tap'],
-            'controls': ['touch', 'mouse']
+            'mechanics': [detected_archetype],
+            'controls': ['touch', 'mouse', 'keyboard']
         })
     else:
         concepts_to_try = CANDIDATE_CONCEPTS

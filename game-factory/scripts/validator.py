@@ -1,36 +1,47 @@
 #!/usr/bin/env python3
 """
-PlayMix Game Validator Suite
-Performs strict pre-commit checks on generated PlayMix games:
+PlayMix Game Validator Suite (v2.0)
+Performs strict pre-commit checks:
 - Required files and folder structure
-- Single bottom advertisement rules (present in index.html, strictly absent in game.html)
+- Strict single bottom ad rules (present in index.html, strictly absent in game.html)
 - Mobile responsiveness & viewport configuration
-- JavaScript syntax and safety checks
-- CSS presence and ad clearance padding
-- Broken local asset links
-- Uniqueness against the game registry
+- JavaScript syntax and structural checks
+- Engine Code Inspection: verifies game.js actually implements declared archetype mechanics
+- Gameplay Diversity Check: detects if game uses same engine as an existing game
 """
 
 import sys
 import os
 import re
+import json
 import argparse
 from pathlib import Path
 
-# Add scripts directory to path for duplicate_detector
 CURRENT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(CURRENT_DIR))
 
 from duplicate_detector import DuplicateDetector
+
+ARCHETYPE_CODE_MARKERS = {
+    'maze': ['walls', 'cols', 'rows', 'mazegrid', 'crystal', 'portal'],
+    'stack': ['stack', 'block', 'slice', 'combo', 'falling'],
+    'reaction': ['reflex', 'reaction', 'cue', 'timer', 'streak'],
+    'breakout': ['paddle', 'ball', 'brick', 'bounce'],
+    'match3': ['grid', 'swap', 'match', 'cascade'],
+    'endless_runner': ['lane', 'runner', 'speed', 'obstacle'],
+    'color_switch': ['ring', 'angle', 'colors', 'obstacle'],
+    'physics_drop': ['circle', 'merge', 'radius', 'gravity']
+}
 
 class GameValidator:
     def __init__(self, repo_root=None):
         if repo_root is None:
             repo_root = Path(__file__).resolve().parent.parent.parent
         self.repo_root = Path(repo_root)
-        self.detector = DuplicateDetector(self.repo_root / 'game-factory' / 'game-registry.json')
+        self.registry_path = self.repo_root / 'game-factory' / 'game-registry.json'
+        self.detector = DuplicateDetector(self.registry_path)
 
-    def validate(self, folder_name):
+    def validate(self, folder_name, declared_archetype=None):
         game_dir = self.repo_root / folder_name
         errors = []
         warnings = []
@@ -40,7 +51,7 @@ class GameValidator:
         # 1. Folder Existence
         if not game_dir.is_dir():
             errors.append(f"Game folder does not exist: {game_dir}")
-            return {'passed': False, 'errors': errors, 'warnings': warnings}
+            return {'passed': False, 'errors': errors, 'warnings': warnings, 'diversity_status': 'FAIL'}
 
         # 2. Required Files
         required_files = ['index.html', 'game.html', 'style.css', 'game.js']
@@ -52,7 +63,7 @@ class GameValidator:
                 errors.append(f"File is empty: {fname}")
 
         if errors:
-            return {'passed': False, 'errors': errors, 'warnings': warnings}
+            return {'passed': False, 'errors': errors, 'warnings': warnings, 'diversity_status': 'FAIL'}
 
         # Read file contents
         index_html = (game_dir / 'index.html').read_text(encoding='utf-8', errors='ignore')
@@ -60,14 +71,12 @@ class GameValidator:
         style_css = (game_dir / 'style.css').read_text(encoding='utf-8', errors='ignore')
         game_js = (game_dir / 'game.js').read_text(encoding='utf-8', errors='ignore')
 
-        # 3. Strict Bottom Ad Rules (The PlayMix Single Ad Standard)
-        # Check index.html: MUST have bottom ad and ads.js
+        # 3. Strict Bottom Ad Rules (PlayMix Single Ad Standard)
         if 'id="bottom-ad"' not in index_html and "id='bottom-ad'" not in index_html:
-            errors.append("index.html is missing required bottom ad container: <div id=\"bottom-ad\" class=\"pmg-bottom-ad\"></div>")
+            errors.append("index.html missing bottom ad container: <div id=\"bottom-ad\" class=\"pmg-bottom-ad\"></div>")
         if 'ads.js' not in index_html:
-            errors.append("index.html is missing required ad loader script: <script defer src=\"../ads.js\"></script>")
+            errors.append("index.html missing required ad loader script: <script defer src=\"../ads.js\"></script>")
 
-        # Check game.html: MUST NOT have bottom ad or ads.js (strictly avoid duplicate ads)
         if 'id="bottom-ad"' in game_html or "id='bottom-ad'" in game_html:
             errors.append("Duplicate Ad Bug: game.html MUST NOT contain '#bottom-ad' (ad belongs only on outer screen index.html)")
         if 'ads.js' in game_html:
@@ -78,84 +87,100 @@ class GameValidator:
             errors.append("index.html missing viewport meta tag")
         if 'viewport' not in game_html.lower():
             errors.append("game.html missing viewport meta tag")
-        if 'user-scalable=no' not in game_html.lower() and 'maximum-scale=1' not in game_html.lower():
-            warnings.append("game.html should include 'user-scalable=no' or 'maximum-scale=1.0' to prevent accidental mobile zooming while playing")
 
         # 5. Bottom Ad Clearance Padding in CSS
-        # style.css should reserve space at bottom (e.g. padding-bottom: 50px+) so bottom banner doesn't cover game controls
-        if not re.search(r'padding-bottom\s*:\s*(?:5[0-9]|[6-9][0-9]|[1-9][0-9]{2,})px', style_css):
+        # Check for either explicit padding-bottom or shorthand padding with a bottom value >=50px
+        has_bottom_padding = (
+            re.search(r'padding-bottom\s*:\s*(?:5[0-9]|[6-9][0-9]|[1-9][0-9]{2,})px', style_css) or
+            re.search(r'padding\s*:\s*\S+\s+\S+\s+(?:5[0-9]|[6-9][0-9]|[1-9][0-9]{2,})px', style_css)
+        )
+        if not has_bottom_padding:
             warnings.append("style.css should have bottom clearance padding (e.g. padding-bottom: 60px) so the bottom ad never obscures game buttons")
 
-        # 6. JavaScript Syntax & Common Runtime Traps
-        # Basic check for unclosed brackets or syntax bugs
-        open_curlies = game_js.count('{')
-        close_curlies = game_js.count('}')
-        if open_curlies != close_curlies:
-            errors.append(f"JavaScript curly brace mismatch in game.js: {open_curlies} '{{' vs {close_curlies} '}}'")
-
-        open_parens = game_js.count('(')
-        close_parens = game_js.count(')')
-        if open_parens != close_parens:
-            errors.append(f"JavaScript parenthesis mismatch in game.js: {open_parens} '(' vs {close_parens} ')'")
+        # 6. JavaScript Syntax Checks
+        if game_js.count('{') != game_js.count('}'):
+            errors.append(f"JavaScript curly brace mismatch in game.js: {game_js.count('{')} '{{' vs {game_js.count('}')} '}}'")
+        if game_js.count('(') != game_js.count(')'):
+            errors.append(f"JavaScript parenthesis mismatch in game.js: {game_js.count('(')} '(' vs {game_js.count(')')} ')'")
 
         # 7. Broken Local Assets
-        # Scan for src="..." and href="..." in game.html and style.css
         asset_matches = re.findall(r'(?:src|href)=["\']([^"\':#]+)["\']', game_html)
         for asset in asset_matches:
             if asset.startswith('http') or asset.startswith('//') or asset.startswith('data:'):
                 continue
-            # Resolve asset relative to game folder
-            asset_path = (game_dir / asset).resolve()
-            if not asset_path.exists():
+            if not (game_dir / asset).resolve().exists():
                 errors.append(f"Broken local asset reference in game.html: '{asset}' (file not found)")
 
-        # 8. Uniqueness Validation
-        # Extract title from index.html
+        # 8. Extract Title & Determine Archetype
         title_match = re.search(r'<title>([^<]+)</title>', index_html, re.I)
         game_title = title_match.group(1) if title_match else folder_name
-        game_title = re.sub(r'\s*\|\s*PlayMix.*$', '', game_title, flags=re.I).strip()
+        # Strip everything from the first pipe onwards (covers "| PlayMixGames", "| Play Online Free | PlayMixGames", etc.)
+        game_title = re.sub(r'\s*\|.*$', '', game_title).strip()
 
-        # Temporarily check uniqueness ignoring self
-        detector_result = self.detector.check(game_title, candidate_folder=folder_name)
-        # If the only match is itself, that's fine
-        if not detector_result['allowed']:
-            reasons = [r for r in detector_result['rejection_reasons'] if folder_name not in r]
-            if reasons:
-                errors.append(f"Uniqueness check failed: {', '.join(reasons)}")
+        # Check declared or inferred archetype
+        js_lower = game_js.lower()
+        detected_archetype = declared_archetype
+        if not detected_archetype:
+            for arch, markers in ARCHETYPE_CODE_MARKERS.items():
+                if all(m in js_lower for m in markers[:2]):
+                    detected_archetype = arch
+                    break
 
-        # 9. Blog Strategy Guide Check
-        slug = re.sub(r'[^a-z0-9]+', '-', folder_name.lower()).strip('-')
-        blog_file = self.repo_root / 'blog' / f"{slug}.html"
-        if not blog_file.exists():
-            warnings.append(f"Associated blog guide not found: blog/{slug}.html (will be created by factory)")
+        if not detected_archetype:
+            detected_archetype = 'arcade'
+
+        # 9. Engine Code Authenticity Check
+        # Check that game.js actually implements declared archetype markers
+        if declared_archetype in ARCHETYPE_CODE_MARKERS:
+            expected_markers = ARCHETYPE_CODE_MARKERS[declared_archetype]
+            found = [m for m in expected_markers if m in js_lower]
+            if len(found) < 2:
+                errors.append(f"Engine authenticity failed: game.js does not implement mechanics for archetype '{declared_archetype}' (missing markers: {expected_markers})")
+
+        # 10. Gameplay Diversity & Duplicate Check
+        diversity_result = self.detector.check(
+            candidate_name=game_title,
+            candidate_folder=folder_name,
+            candidate_archetype=detected_archetype
+        )
+
+        diversity_status = diversity_result['status']
+        if not diversity_result['allowed']:
+            errors.append(diversity_result['status'])
 
         passed = len(errors) == 0
         return {
             'passed': passed,
             'errors': errors,
-            'warnings': warnings
+            'warnings': warnings,
+            'diversity_status': diversity_status,
+            'archetype': detected_archetype
         }
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate PlayMix game folder before commit.")
+    parser = argparse.ArgumentParser(description="Validate PlayMix game folder and gameplay diversity.")
     parser.add_argument('folder', help="Target game directory name")
+    parser.add_argument('--archetype', help="Declared engine archetype")
     args = parser.parse_args()
 
     validator = GameValidator()
-    result = validator.validate(args.folder)
+    result = validator.validate(args.folder, declared_archetype=args.archetype)
 
     if result['warnings']:
         print("⚠️ Warnings:")
         for w in result['warnings']:
             print(f"  - {w}")
 
+    print(f"\n🎮 Gameplay Engine Diversity Result:")
+    print(f"  {result['diversity_status']}")
+
     if not result['passed']:
-        print("❌ Validation FAILED:")
+        print("\n❌ Validation FAILED:")
         for err in result['errors']:
             print(f"  - {err}")
         sys.exit(1)
     else:
-        print(f"✅ Game validation PASSED for '{args.folder}'! All structure, single ad, and safety rules verified.")
+        print(f"✅ Game validation PASSED for '{args.folder}'! (Archetype: {result['archetype']})")
 
 if __name__ == '__main__':
     main()

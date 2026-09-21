@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Neon Maze Escape | PlayMixGames</title>
+    <meta name="description" content="Navigate procedural neon mazes, collect power crystals, and find the escape portal before battery runs out!">
+    
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+
+<body>
+    <div class="game-wrapper">
+        <!-- Top HUD -->
+        <header class="game-hud">
+            <div class="hud-card">
+                <span class="hud-label">STAGE</span>
+                <span class="hud-val" id="stage-val">1</span>
+            </div>
+            <div class="hud-card">
+                <span class="hud-label">CRYSTALS</span>
+                <span class="hud-val" id="crystal-val">0/5</span>
+            </div>
+            <div class="hud-card timer-card">
+                <span class="hud-label">BATTERY</span>
+                <span class="hud-val" id="timer-val">45s</span>
+            </div>
+            <div class="hud-card best-card">
+                <span class="hud-label">SCORE</span>
+                <span class="hud-val" id="score-val">0</span>
+            </div>
+            <div class="hud-controls">
+                <button id="btn-sound" class="icon-btn" aria-label="Sound" title="Sound">🔊</button>
+            </div>
+        </header>
+
+        <!-- Canvas Play Area -->
+        <div class="canvas-container" id="canvas-container">
+            <canvas id="game-canvas"></canvas>
+            
+            <!-- Mobile Virtual D-Pad Touch Controls -->
+            <div class="virtual-dpad" id="virtual-dpad">
+                <button class="dpad-btn up" data-dir="up">▲</button>
+                <div class="dpad-middle">
+                    <button class="dpad-btn left" data-dir="left">◀</button>
+                    <div class="dpad-center">●</div>
+                    <button class="dpad-btn right" data-dir="right">▶</button>
+                </div>
+                <button class="dpad-btn down" data-dir="down">▼</button>
+            </div>
+
+            <!-- Swipe / Tap Hint -->
+            <div class="swipe-hint" id="swipe-hint">
+                <span>👆 Swipe or use D-Pad to move!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stage Complete Modal -->
+    <div class="modal" id="stage-modal">
+        <div class="modal-box">
+            <h2 class="modal-title win-title">PORTAL ESCAPED! 🌀</h2>
+            <p class="modal-text">Stage clear! Power restored to cyber core.</p>
+            <div class="score-summary">
+                <div>Bonus: <strong id="stage-bonus">+500</strong></div>
+                <div>Total Score: <strong id="stage-total">0</strong></div>
+            </div>
+            <button class="action-btn" id="btn-next-stage">NEXT MAZE ➔</button>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameover-modal">
+        <div class="modal-box">
+            <h2 class="modal-title lose-title">BATTERY DEPLETED! ⚡</h2>
+            <p class="modal-text">The labyrinth darkness overtook your core.</p>
+            <div class="score-summary">
+                <div>Final Score: <strong id="final-score">0</strong></div>
+                <div>Best Score: <strong id="final-best">0</strong></div>
+            </div>
+            <div class="record-badge" id="record-badge" style="display: none;">🏆 NEW HIGH SCORE! 🏆</div>
+            <button class="action-btn" id="btn-restart">RETRY MAZE 🔄</button>
+        </div>
+    </div>
+</body>
+
+</html>
