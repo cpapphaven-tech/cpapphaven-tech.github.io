@@ -1,6 +1,22 @@
 // PlayMix Games Data - used by App Store UI renderer
 window.PMG_DATA = {
   featured: [
+    { name: "Virus Shooter - Microscopic Hexa Puzzle!", tag: "🔥 New Hit", desc: "Play Virus Shooter - Microscopic Hexa Puzzle! free online in your browser.", href: "VirusShooter/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
+
+    { name: "Traffic Jam 3D - Puzzle Challenge", tag: "🔥 New Hit", desc: "Play Traffic Jam 3D - Puzzle Challenge free online in your browser.", href: "TrafficJam/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
+
+    { name: "Planet Shooter - Galactic Space Puzzle!", tag: "🔥 New Hit", desc: "Play Planet Shooter - Galactic Space Puzzle! free online in your browser.", href: "PlanetShooter/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
+
+    { name: "Odd One Out – Brain Puzzle Game", tag: "🔥 New Hit", desc: "Play Odd One Out – Brain Puzzle Game free online in your browser.", href: "OddOneOut/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
+
+    { name: "Marble Blast - Classic Glass Marbles!", tag: "🔥 New Hit", desc: "Play Marble Blast - Classic Glass Marbles! free online in your browser.", href: "MarbleBlast/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
+
+    { name: "Gem Shooter - Sparkling Jewel Puzzle!", tag: "🔥 New Hit", desc: "Play Gem Shooter - Sparkling Jewel Puzzle! free online in your browser.", href: "GemShooter/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
+
+    { name: "Candy Bubble Pop - Sweet Puzzle Adventure!", tag: "🔥 New Hit", desc: "Play Candy Bubble Pop - Sweet Puzzle Adventure! free online in your browser.", href: "CandyBubblePop/index.html", gradient: "linear-gradient(135deg,#38bdf8,#a855f7)", icon: "🎮", badge: "new", image: "" },
+
+    { name: "Gravity Flip Runner", tag: "🚀 Gravity Flipper", desc: "Tap to flip gravity and navigate a neon spacecraft through deadly obstacle corridors at warp speed!", href: "GravityFlipRunner/index.html", gradient: "linear-gradient(135deg,#0ea5e9,#7c3aed,#f43f5e)", icon: "🚀", badge: "new", image: "" },
+
 
     { name: "Cyber Reflex Sprint", tag: "⚡ Reflex Test", desc: "How fast are your reflexes? Tap the correct target the instant it flashes — track your millisecond reaction times and build streaks!", href: "CyberReflexSprint/index.html", gradient: "linear-gradient(135deg,#00ffff,#a855f7,#f43f5e)", icon: "⚡", badge: "new", image: "" },
 
@@ -52,6 +68,22 @@ window.PMG_DATA = {
       more: true,
       tab: "games",
       items: [
+        { name: "Virus Shooter - Microscopic Hexa Puzzle!", genre: "Arcade", icon: "", href: "VirusShooter/index.html", badge: "new", emoji: "🎮" },
+
+        { name: "Traffic Jam 3D - Puzzle Challenge", genre: "Arcade", icon: "", href: "TrafficJam/index.html", badge: "new", emoji: "🎮" },
+
+        { name: "Planet Shooter - Galactic Space Puzzle!", genre: "Arcade", icon: "", href: "PlanetShooter/index.html", badge: "new", emoji: "🎮" },
+
+        { name: "Odd One Out – Brain Puzzle Game", genre: "Arcade", icon: "", href: "OddOneOut/index.html", badge: "new", emoji: "🎮" },
+
+        { name: "Marble Blast - Classic Glass Marbles!", genre: "Arcade", icon: "", href: "MarbleBlast/index.html", badge: "new", emoji: "🎮" },
+
+        { name: "Gem Shooter - Sparkling Jewel Puzzle!", genre: "Arcade", icon: "", href: "GemShooter/index.html", badge: "new", emoji: "🎮" },
+
+        { name: "Candy Bubble Pop - Sweet Puzzle Adventure!", genre: "Arcade", icon: "", href: "CandyBubblePop/index.html", badge: "new", emoji: "🎮" },
+
+        { name: "Gravity Flip Runner", genre: "Arcade", icon: "", href: "GravityFlipRunner/index.html", badge: "new", emoji: "🚀" },
+
 
         { name: "Cyber Reflex Sprint", genre: "Arcade", icon: "", href: "CyberReflexSprint/index.html", badge: "new", emoji: "⚡" },
 

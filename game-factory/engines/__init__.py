@@ -15,6 +15,7 @@ from . import match3_engine
 from . import endless_runner_engine
 from . import physics_drop_engine
 from . import color_switch_engine
+from . import gravity_runner_engine
 
 ENGINES = {
     'maze': maze_engine,
@@ -25,11 +26,13 @@ ENGINES = {
     'endless_runner': endless_runner_engine,
     'physics_drop': physics_drop_engine,
     'color_switch': color_switch_engine,
+    'gravity_runner': gravity_runner_engine,
 }
 
 # Semantic keyword rules to classify custom game names
 KEYWORD_MAPPINGS = [
     (r'\b(maze|labyrinth|path|corridor|dungeon|escape)\b', 'maze'),
+    (r'\b(gravity|flip|invert|antigrav|float)\b', 'gravity_runner'),
     (r'\b(stack|tower|build|skyscraper|pile|slice)\b', 'stack'),
     (r'\b(reflex|reaction|quick|speed|twitch|prompt)\b', 'reaction'),
     (r'\b(breakout|brick|paddle|bounce|smash|ball)\b', 'breakout'),
@@ -182,6 +185,18 @@ DEFAULT_FINGERPRINTS = {
         'loss_condition':      'board completely filled with no valid merge moves remaining',
         'level_structure':     'single-board',
         'controls':            ['swipe', 'keyboard'],
+    },
+    'gravity_runner': {
+        'primary_mechanic':    'gravity-flip-navigation',
+        'secondary_mechanics': ['obstacle-dodge', 'collectible-pickup', 'speed-ramp'],
+        'gameplay_loop':       'tap to flip gravity between floor and ceiling while dodging obstacles and collecting power-ups in an auto-scrolling corridor',
+        'interaction_pattern': 'tap-gravity-flip',
+        'progression_system':  'scroll speed and obstacle density increase with distance',
+        'scoring_system':      'distance survived plus collectibles multiplied by score multiplier',
+        'win_condition':       'none endless high score survival',
+        'loss_condition':      'player collides with obstacle or boundary',
+        'level_structure':     'endless',
+        'controls':            ['tap', 'click', 'keyboard'],
     },
     'bubble_shooter': {
         'primary_mechanic':    'aim-shoot-cluster-clear',

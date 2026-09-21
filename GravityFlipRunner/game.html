@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Gravity Flip Runner | PlayMixGames</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="game-hud">
+            <div class="hud-card">
+                <span class="hud-label">DISTANCE</span>
+                <span class="hud-val" id="dist-val">0m</span>
+            </div>
+            <div class="hud-card">
+                <span class="hud-label">ORBS</span>
+                <span class="hud-val" id="orb-val">0</span>
+            </div>
+            <div class="hud-card best-card">
+                <span class="hud-label">BEST</span>
+                <span class="hud-val" id="best-val">0m</span>
+            </div>
+            <button class="icon-btn" id="btn-sound" aria-label="Toggle Sound">🔊</button>
+        </header>
+
+        <div class="canvas-container" id="canvas-container">
+            <canvas id="game-canvas"></canvas>
+            <div class="tap-hint" id="tap-hint">
+                <span>👆 Tap, Click, or Space to Flip Gravity!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div class="modal" id="gameover-modal">
+        <div class="modal-box">
+            <h2 class="modal-title gameover-title">RUN TERMINATED 💥</h2>
+            <div class="modal-stat">Distance: <span id="final-dist" class="highlight-val">0m</span></div>
+            <div class="modal-stat">Orbs Gathered: <span id="final-orbs">0</span></div>
+            <div id="record-badge" class="record-badge" style="display:none;">🏆 NEW RECORD!</div>
+            <button class="action-btn" id="btn-restart">RUN AGAIN ⚡</button>
+        </div>
+    </div>
+</body>
+</html>

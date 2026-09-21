@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "total_games": 117,
+  "total_games": 118,
   "games": {
     "ABCTracing": {
       "name": "ABC Tracing - Learn to Write ABC & Numbers",
@@ -4908,6 +4908,48 @@
         ],
         "confidence": "low"
       }
+    },
+    "GravityFlipRunner": {
+      "name": "Gravity Flip Runner",
+      "slug": "gravity-flip-runner",
+      "folder": "GravityFlipRunner",
+      "entry": "index.html",
+      "category": "arcade",
+      "archetype": "gravity_runner",
+      "mechanics": [
+        "gravity-flip",
+        "obstacle-dodge",
+        "speed-ramp"
+      ],
+      "controls": [
+        "touch",
+        "mouse",
+        "keyboard"
+      ],
+      "gameplay_loop": "Tap to flip gravity and navigate a neon spacecraft through deadly obstacle corridors at warp speed!",
+      "gameplay_signature": "gravity_runner:generated",
+      "description": "Tap to flip gravity and navigate a neon spacecraft through deadly obstacle corridors at warp speed!",
+      "fingerprint": {
+        "primary_mechanic": "gravity-flip-navigation",
+        "secondary_mechanics": [
+          "obstacle-dodge",
+          "collectible-pickup",
+          "speed-ramp"
+        ],
+        "gameplay_loop": "tap to instantly invert gravity and steer through corridor gaps avoiding ceiling and floor spikes",
+        "interaction_pattern": "tap-gravity-flip",
+        "progression_system": "scroll speed and obstacle density escalate with distance",
+        "scoring_system": "distance survived plus gems collected",
+        "win_condition": "none endless high score",
+        "loss_condition": "player collides with obstacle",
+        "level_structure": "endless",
+        "controls": [
+          "tap",
+          "click",
+          "keyboard"
+        ]
+      },
+      "created_at": "2026-09-21T23:58:18.727618"
     }
   }
 }
