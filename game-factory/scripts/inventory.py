@@ -12,6 +12,13 @@ import json
 import hashlib
 from pathlib import Path
 
+import sys as _sys
+_sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parent.parent))
+try:
+    from engines import DEFAULT_FINGERPRINTS as _DEFAULT_FP
+except Exception:
+    _DEFAULT_FP = {}
+
 NON_GAME_DIRS = {
     'scripts', 'assets', 'blog', 'icons', 'img', 'leads', 'licenses',
     'logs', 'output', 'prope', 'temp_videos', 'videos', 'youtube_uploader',
@@ -148,6 +155,46 @@ def generate_signature(archetype, mechanics, controls):
     ctrl_str = '-'.join(sorted(controls))
     return f"{archetype}:{mech_str}:{ctrl_str}"
 
+def build_fingerprint(archetype, mechanics, js_content='', html_content='', controls=None):
+    """
+    Builds a gameplay fingerprint dict for a game.
+    Starts from the canonical DEFAULT_FINGERPRINT for the archetype, then
+    verifies / enriches using actual JS/HTML code where possible.
+    """
+    base = dict(_DEFAULT_FP.get(archetype, _DEFAULT_FP.get('arcade_casual', {})))
+    fp = {
+        'primary_mechanic':    base.get('primary_mechanic', 'casual-interaction'),
+        'secondary_mechanics': list(base.get('secondary_mechanics', [])),
+        'gameplay_loop':       base.get('gameplay_loop', ''),
+        'interaction_pattern': base.get('interaction_pattern', 'casual-tap-or-click'),
+        'progression_system':  base.get('progression_system', ''),
+        'scoring_system':      base.get('scoring_system', ''),
+        'win_condition':       base.get('win_condition', ''),
+        'loss_condition':      base.get('loss_condition', ''),
+        'level_structure':     base.get('level_structure', 'endless'),
+        'archetype':           archetype,
+        'controls':            controls or base.get('controls', ['touch', 'mouse']),
+    }
+    # Code-based verification enrichments
+    code = (js_content + ' ' + html_content).lower()
+    # Detect timer presence
+    if any(k in code for k in ['countdown', 'timeleft', 'timer', 'seconds']):
+        if 'timer-countdown' not in fp['secondary_mechanics']:
+            fp['secondary_mechanics'].append('timer-countdown')
+    # Detect lives system
+    if any(k in code for k in ['lives', 'hearts', 'extraball']):
+        if 'lives-system' not in fp['secondary_mechanics']:
+            fp['secondary_mechanics'].append('lives-system')
+    # Detect power-ups
+    if any(k in code for k in ['powerup', 'power_up', 'boost', 'shield']):
+        if 'power-up-activation' not in fp['secondary_mechanics']:
+            fp['secondary_mechanics'].append('power-up-activation')
+    # Override level_structure based on code evidence
+    if any(k in code for k in ['nextstage', 'nextlevel', 'level complete', 'stage complete']):
+        fp['level_structure'] = 'level-based'
+    return fp
+
+
 def scan_repository(repo_root):
     games = {}
     repo_path = Path(repo_root)
@@ -220,6 +267,8 @@ def scan_repository(repo_root):
 
         slug = re.sub(r'[^a-z0-9]+', '-', folder_name.lower()).strip('-')
 
+        fingerprint = build_fingerprint(archetype, mechanics, js_content, html_content, controls)
+
         games[folder_name] = {
             'name': title,
             'slug': slug,
@@ -231,7 +280,8 @@ def scan_repository(repo_root):
             'controls': controls,
             'gameplay_loop': gameplay_loop,
             'gameplay_signature': signature,
-            'description': description
+            'description': description,
+            'fingerprint': fingerprint,
         }
 
     return games

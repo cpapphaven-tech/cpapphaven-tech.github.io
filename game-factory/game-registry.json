@@ -20,7 +20,27 @@
       ],
       "gameplay_loop": "slide tiles in 4 directions to merge identical numbers towards 2048",
       "gameplay_signature": "2048_merge:aim-shoot-sliding-tile-word-puzzle:mouse-touch",
-      "description": "Learn to write uppercase & lowercase English alphabet letters, numbers 1-10, and simple words (animals, fruits, family) with this fun educational tracing game."
+      "description": "Learn to write uppercase & lowercase English alphabet letters, numbers 1-10, and simple words (animals, fruits, family) with this fun educational tracing game.",
+      "fingerprint": {
+        "primary_mechanic": "directional-tile-slide",
+        "secondary_mechanics": [
+          "number-merge",
+          "board-fill-management",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "slide all tiles in one direction to merge identical numbers toward the 2048 target",
+        "interaction_pattern": "swipe-direction-select",
+        "progression_system": "board fills up making moves harder as tile values increase",
+        "scoring_system": "cumulative value of all merged tiles",
+        "win_condition": "create a 2048 tile",
+        "loss_condition": "board completely filled with no valid merge moves remaining",
+        "level_structure": "single-board",
+        "archetype": "2048_merge",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "AIReadiness": {
       "name": "AI Readiness Quiz \u2013 What's Your AI Persona?",
@@ -37,7 +57,25 @@
       ],
       "gameplay_loop": "interact via casual-arcade to achieve the highest score",
       "gameplay_signature": "arcade_casual:casual-arcade:mouse",
-      "description": "Take the AI Readiness Quiz to discover your AI persona. Are you a Prompter, Automator, or Visionary? Fast 2-choice test for the AI revolution."
+      "description": "Take the AI Readiness Quiz to discover your AI persona. Are you a Prompter, Automator, or Visionary? Fast 2-choice test for the AI revolution.",
+      "fingerprint": {
+        "primary_mechanic": "casual-interaction",
+        "secondary_mechanics": [
+          "score-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "interact via casual mechanics to achieve the highest score",
+        "interaction_pattern": "casual-tap-or-click",
+        "progression_system": "difficulty increases with score",
+        "scoring_system": "raw score accumulation",
+        "win_condition": "none high score",
+        "loss_condition": "game-specific failure condition",
+        "level_structure": "endless",
+        "archetype": "arcade_casual",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "AirHockey3D": {
       "name": "Air Hockey 3D Arcade | Play Neon Disk Sports Game",
@@ -58,7 +96,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:board-strategy-physics-merge-word-puzzle:mouse-touch",
-      "description": "Smash the glowing puck into the goal in fast-paced neon Air Hockey 3D! An electric arcade sports simulation free to play online."
+      "description": "Smash the glowing puck into the goal in fast-paced neon Air Hockey 3D! An electric arcade sports simulation free to play online.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "AllInHole": {
       "name": "All in Hole: Black Hole Games - Satisfying Eat & Grow Puzzle",
@@ -80,7 +139,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:board-strategy-physics-merge-sliding-tile:mouse-touch",
-      "description": "Slide a tiny hole, devour small objects to grow, and use playful physics to gobble every target treat. An oddly satisfying black-hole puzzle game!"
+      "description": "Slide a tiny hole, devour small objects to grow, and use playful physics to gobble every target treat. An oddly satisfying black-hole puzzle game!",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "level-based",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "AnimeArchetype": {
       "name": "Anime Archetype Test \u2013 Which Anime Character Are You?",
@@ -97,7 +177,25 @@
       ],
       "gameplay_loop": "interact via casual-arcade to achieve the highest score",
       "gameplay_signature": "arcade_casual:casual-arcade:mouse",
-      "description": "Discover your anime archetype with our 2-choice quiz! Are you a Shonen Hero, a Quiet Genius, or an Anti-Hero? Fast, fun, and addictive anime personality test."
+      "description": "Discover your anime archetype with our 2-choice quiz! Are you a Shonen Hero, a Quiet Genius, or an Anti-Hero? Fast, fun, and addictive anime personality test.",
+      "fingerprint": {
+        "primary_mechanic": "casual-interaction",
+        "secondary_mechanics": [
+          "score-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "interact via casual mechanics to achieve the highest score",
+        "interaction_pattern": "casual-tap-or-click",
+        "progression_system": "difficulty increases with score",
+        "scoring_system": "raw score accumulation",
+        "win_condition": "none high score",
+        "loss_condition": "game-specific failure condition",
+        "level_structure": "endless",
+        "archetype": "arcade_casual",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "ArcheryMaster": {
       "name": "Archery Master Bow Physics | Play 2D Slingshot Shooter Game",
@@ -120,7 +218,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-physics-merge-platform-jump:mouse-touch",
-      "description": "Draw your bow, factor the wind, and release! Step into the Archery Master arena in this realistic physics-based slingshot target game."
+      "description": "Draw your bow, factor the wind, and release! Step into the Archery Master arena in this realistic physics-based slingshot target game.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Backgammon": {
       "name": "Play Backgammon Online Free | Classic Board Game",
@@ -140,7 +259,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:aim-shoot-board-strategy-match-3:mouse-touch",
-      "description": "Play the classic strategy game Backgammon online for free. Roll the dice, move your checkers, and bear them off to win! Try 2-player local multiplayer or play vs computer."
+      "description": "Play the classic strategy game Backgammon online for free. Roll the dice, move your checkers, and bear them off to win! Try 2-player local multiplayer or play vs computer.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "BallSort": {
       "name": "Ball Sort: Color Puzzle Game",
@@ -164,7 +304,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-physics-merge:mouse-touch",
-      "description": "Drop balls from trays, guide them across the conveyor belt, and sort them into matching color boxes. Play Ball Sort: Color Puzzle game online for free!"
+      "description": "Drop balls from trays, guide them across the conveyor belt, and sort them into matching color boxes. Play Ball Sort: Color Puzzle game online for free!",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Basketball3D": {
       "name": "Basketball 3D Hoops Swish | Flick Throw Sports Game Online",
@@ -186,7 +347,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-platform-jump:mouse-touch",
-      "description": "Swipe to shoot hoops! Compete in a rapid-fire 3D basketball simulation. Score consecutive swishes for massive combo multipliers."
+      "description": "Swipe to shoot hoops! Compete in a rapid-fire 3D basketball simulation. Score consecutive swishes for massive combo multipliers.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "BlockPuzzle": {
       "name": "Block Puzzle Dash Classic | Play Wood Block Puzzle Free",
@@ -208,7 +391,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-physics-merge-sliding-tile:mouse-touch",
-      "description": "Drop blocks to fill the grid and clear lines! Block Puzzle Dash is a relaxing and challenging brain training logic puzzle for all ages."
+      "description": "Drop blocks to fill the grid and clear lines! Block Puzzle Dash is a relaxing and challenging brain training logic puzzle for all ages.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "BottleShoot3D": {
       "name": "Bottle Shoot 3D Gun Game | Sniper Target Practice Free",
@@ -229,7 +434,29 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:board-strategy-physics-merge-word-puzzle:mouse-touch",
-      "description": "Aim down the sights and smash bottles! A realistic 3D sniper simulation target practice shooting game. Test your accuracy for free."
+      "description": "Aim down the sights and smash bottles! A realistic 3D sniper simulation target practice shooting game. Test your accuracy for free.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown",
+          "lives-system"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Bowling": {
       "name": "Bowling Master Strike 3D | Realistic Ten Pin Game Online",
@@ -250,7 +477,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:aim-shoot-board-strategy-lane-runner:mouse-touch",
-      "description": "Flick the ball and knock down all 10 pins! The ultimate 3D bowling simulation sports game online. Aim for a perfect strike!"
+      "description": "Flick the ball and knock down all 10 pins! The ultimate 3D bowling simulation sports game online. Aim for a perfect strike!",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "BrickBreaker": {
       "name": "Classic Brick Breaker Retro | Arkanoid Arcade Game Free",
@@ -270,7 +519,29 @@
       ],
       "gameplay_loop": "reflect ball with paddle to destroy all bricks in the matrix",
       "gameplay_signature": "breakout:board-strategy-paddle-bounce-reaction-tap:mouse-touch",
-      "description": "Smash all the neon bricks with your paddle and ball! Play this classic retro breakout arcade game directly in your browser without downloads."
+      "description": "Smash all the neon bricks with your paddle and ball! Play this classic retro breakout arcade game directly in your browser without downloads.",
+      "fingerprint": {
+        "primary_mechanic": "ball-paddle-reflection",
+        "secondary_mechanics": [
+          "brick-destruction",
+          "power-up-catch",
+          "ball-angle-control",
+          "timer-countdown",
+          "lives-system"
+        ],
+        "gameplay_loop": "reflect ball with paddle to destroy all bricks then advance to next level",
+        "interaction_pattern": "horizontal-paddle-control",
+        "progression_system": "more bricks, harder patterns, and faster ball each level",
+        "scoring_system": "points per brick destroyed with combo for multi-brick hits",
+        "win_condition": "all bricks in layout destroyed",
+        "loss_condition": "ball passes paddle and all lives depleted",
+        "level_structure": "level-based",
+        "archetype": "breakout",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "BubbleShooter": {
       "name": "Classic Bubble Shooter Pop | Match 3 Color Arcade Game",
@@ -292,7 +563,28 @@
       ],
       "gameplay_loop": "aim cannon and shoot colored bubbles to clear hanging clusters",
       "gameplay_signature": "bubble_shooter:board-strategy-match-3-sliding-tile:mouse-touch",
-      "description": "Aim and match 3 colors to burst all the bubbles! A classic satisfying arcade puzzle. Play Bubble Shooter for free and clear endless levels."
+      "description": "Aim and match 3 colors to burst all the bubbles! A classic satisfying arcade puzzle. Play Bubble Shooter for free and clear endless levels.",
+      "fingerprint": {
+        "primary_mechanic": "aim-shoot-cluster-clear",
+        "secondary_mechanics": [
+          "color-matching",
+          "ricochet-shot",
+          "cluster-pop",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "aim and fire colored bubbles to match and pop hanging clusters before they descend",
+        "interaction_pattern": "aim-and-fire",
+        "progression_system": "clusters descend faster and patterns more complex each level",
+        "scoring_system": "bubbles popped per shot multiplied by cluster size bonus",
+        "win_condition": "all bubbles cleared from the board",
+        "loss_condition": "bubbles descend below the danger line",
+        "level_structure": "level-based",
+        "archetype": "bubble_shooter",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "BurgerStack": {
       "name": "Burger Stack 3D Cooking Game | Free Food Builder Online",
@@ -312,7 +604,28 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:block-slicing-board-strategy-lane-runner:mouse-touch",
-      "description": "Catch ingredients to build the tallest burger tower! A crazy fast-paced 3D arcade physics game focusing on timing and food stacking fun."
+      "description": "Catch ingredients to build the tallest burger tower! A crazy fast-paced 3D arcade physics game focusing on timing and food stacking fun.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "CandyBlast": {
       "name": "Candy Blast \u2013",
@@ -333,7 +646,29 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-physics-merge:mouse-touch",
-      "description": "Play Candy Blast game online free! Match 3 or more identical candies to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+      "description": "Play Candy Blast game online free! Match 3 or more identical candies to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "CandyBubblePop": {
       "name": "Candy Bubble Pop - Sweet Puzzle Adventure!",
@@ -355,7 +690,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-sliding-tile:mouse-touch",
-      "description": "Aim and match 3 colors to burst all the candys! A classic satisfying arcade puzzle. Play Candy Candy Pop for free and clear endless levels."
+      "description": "Aim and match 3 colors to burst all the candys! A classic satisfying arcade puzzle. Play Candy Candy Pop for free and clear endless levels.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "CandySort": {
       "name": "Candy Sort: Sweet Color Puzzle",
@@ -379,7 +735,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-physics-merge:mouse-touch",
-      "description": "Drop sweet candies from trays, watch them ride the conveyor belt, and sort them into matching dessert boxes. Play Candy Sort: Sweet Color Puzzle game online for free!"
+      "description": "Drop sweet candies from trays, watch them ride the conveyor belt, and sort them into matching dessert boxes. Play Candy Sort: Sweet Color Puzzle game online for free!",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Checkers": {
       "name": "Checkers",
@@ -398,7 +775,27 @@
       ],
       "gameplay_loop": "take tactical turns capturing opponent pieces on a board",
       "gameplay_signature": "board_strategy:board-strategy-falling-blocks-platform-jump:mouse",
-      "description": "Play Classic Checkers (Draughts) free online! Jump, capture, crown kings, and outsmart the AI or play with a friend in 2-player mode directly in your browser."
+      "description": "Play Classic Checkers (Draughts) free online! Jump, capture, crown kings, and outsmart the AI or play with a friend in 2-player mode directly in your browser.",
+      "fingerprint": {
+        "primary_mechanic": "turn-based-piece-movement",
+        "secondary_mechanics": [
+          "capture-mechanics",
+          "positional-strategy",
+          "opponent-ai",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "take tactical turns moving pieces to capture opponent pieces or achieve board objective",
+        "interaction_pattern": "select-and-place",
+        "progression_system": "opponent AI difficulty increases across matches",
+        "scoring_system": "pieces captured or board position dominance",
+        "win_condition": "capture key piece or control board objective",
+        "loss_condition": "key piece captured or position surrendered",
+        "level_structure": "match-based",
+        "archetype": "board_strategy",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "Chess": {
       "name": "Play Master Chess Online Free | 3D Strategy Board Game",
@@ -418,7 +815,28 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-physics-merge:mouse",
-      "description": "Test your strategic mind with classic Chess! Play against smart AI in beautiful realistic 3D graphics in this ultimate brain training board game."
+      "description": "Test your strategic mind with classic Chess! Play against smart AI in beautiful realistic 3D graphics in this ultimate brain training board game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "ColorBounce": {
       "name": "Color Bounce Switch | Play Online Free",
@@ -442,7 +860,29 @@
       ],
       "gameplay_loop": "tap to bounce through rotating obstacles of matching color",
       "gameplay_signature": "color_switch:match-3-physics-merge-platform-jump:keyboard-mouse-touch",
-      "description": "Tap to bounce upward through rotating colored obstacles! Match colors to pass through and collect stars."
+      "description": "Tap to bounce upward through rotating colored obstacles! Match colors to pass through and collect stars.",
+      "fingerprint": {
+        "primary_mechanic": "color-matching-passage",
+        "secondary_mechanics": [
+          "rhythm-timing",
+          "star-collection",
+          "color-orb-switch",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "tap to bounce ball through rotating obstacles only where color segments match ball color",
+        "interaction_pattern": "tap-gravity-timing",
+        "progression_system": "obstacles rotate faster and patterns more complex at higher scores",
+        "scoring_system": "obstacles passed plus stars collected",
+        "win_condition": "none highest score survival",
+        "loss_condition": "ball touches mismatched color segment",
+        "level_structure": "endless",
+        "archetype": "color_switch",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "ColorMatch": {
       "name": "Color Match 3D Brain Test | Fast Reaction Puzzle Game",
@@ -465,7 +905,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-sliding-tile:mouse-touch",
-      "description": "Tap the matching color when the timer starts! A visually thrilling hyperspeed reaction memory puzzle game. Train your brain"
+      "description": "Tap the matching color when the timer starts! A visually thrilling hyperspeed reaction memory puzzle game. Train your brain",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "ColoringKids": {
       "name": "Coloring for Kids 2\u20136 \u2013 Draw, Color & Paint",
@@ -485,7 +946,27 @@
       ],
       "gameplay_loop": "slide tiles in 4 directions to merge identical numbers towards 2048",
       "gameplay_signature": "2048_merge:board-strategy-rhythm-timing-sliding-tile:mouse-touch",
-      "description": "Free coloring game for kids aged 2\u20136! Color cute animals, dinosaurs, cars, and ocean pictures on white templates with black outlines, or enjoy free draw mode. Safe, ad-free, works offline."
+      "description": "Free coloring game for kids aged 2\u20136! Color cute animals, dinosaurs, cars, and ocean pictures on white templates with black outlines, or enjoy free draw mode. Safe, ad-free, works offline.",
+      "fingerprint": {
+        "primary_mechanic": "directional-tile-slide",
+        "secondary_mechanics": [
+          "number-merge",
+          "board-fill-management",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "slide all tiles in one direction to merge identical numbers toward the 2048 target",
+        "interaction_pattern": "swipe-direction-select",
+        "progression_system": "board fills up making moves harder as tile values increase",
+        "scoring_system": "cumulative value of all merged tiles",
+        "win_condition": "create a 2048 tile",
+        "loss_condition": "board completely filled with no valid merge moves remaining",
+        "level_structure": "single-board",
+        "archetype": "2048_merge",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "ConnectFour": {
       "name": "Connect Four Online Free | 4 in a Row 2 Player & AI Board Game",
@@ -505,7 +986,27 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:falling-blocks-physics-merge-sliding-tile:mouse",
-      "description": "Play Connect Four (4 in a Row) free online! Challenge smart AI or play with a friend in 2-player mode. Drop red and yellow discs into the 7x6 grid to connect 4 and win."
+      "description": "Play Connect Four (4 in a Row) free online! Challenge smart AI or play with a friend in 2-player mode. Drop red and yellow discs into the 7x6 grid to connect 4 and win.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "CricketMaster": {
       "name": "Cricket Master World Cup | Play T20 Cricket Game Free",
@@ -528,7 +1029,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:match-3-physics-merge-platform-jump:mouse",
-      "description": "Hit massive sixes and win the match! A highly addictive 2D side-scrolling cricket sports game simulating top T20 world cup excitement."
+      "description": "Hit massive sixes and win the match! A highly addictive 2D side-scrolling cricket sports game simulating top T20 world cup excitement.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "lives-system"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "Crossmath": {
       "name": "Crossmath\u00ae - Math Puzzle Games",
@@ -548,7 +1070,28 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-sliding-tile:mouse",
-      "description": "The BEST FREE math crossword puzzle games for you! Relax and train your brain with number puzzles! Play the game anywhere, anytime!"
+      "description": "The BEST FREE math crossword puzzle games for you! Relax and train your brain with number puzzles! Play the game anywhere, anytime!",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "CrossyRoad": {
       "name": "CrossyRoad",
@@ -571,7 +1114,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-physics-merge:keyboard-mouse-touch",
-      "description": "Play Cross Road with Balloon free online! Cross the road, collect number balloons, and reach the target score while dodging traffic. Mobile-friendly arcade action."
+      "description": "Play Cross Road with Balloon free online! Cross the road, collect number balloons, and reach the target score while dodging traffic. Mobile-friendly arcade action.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "DailyMathEquator": {
       "name": "Math Learning Quiz \u2013 Free Brain Training MCQ Game for Kids &amp; Adults",
@@ -591,7 +1157,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-tube-sort:keyboard-mouse",
-      "description": "Play Math Learning Quiz online free! Answer unlimited math MCQ questions to boost your brain. A fun educational quiz game for kids, students &amp; adults. Learn maths fast with this addictive brain training game."
+      "description": "Play Math Learning Quiz online free! Answer unlimited math MCQ questions to boost your brain. A fun educational quiz game for kids, students &amp; adults. Learn maths fast with this addictive brain training game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "DancingLine": {
       "name": "Dancing Line - Music Game | Free Rhythm Arcade Game",
@@ -613,7 +1201,29 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-rhythm-timing:keyboard-mouse-touch",
-      "description": "Guide an ever-growing Line through multiple environments. Tap to turn, avoid obstacles, and follow the beat! Test your reflexes and rhythm skills."
+      "description": "Guide an ever-growing Line through multiple environments. Tap to turn, avoid obstacles, and follow the beat! Test your reflexes and rhythm skills.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "DinoRun": {
       "name": "Cyber Dino: Downhill Triple Jump Runner",
@@ -635,7 +1245,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:falling-blocks-lane-runner-platform-jump:keyboard-mouse-touch",
-      "description": "Play Cyber Dino Double Jump Runner free online! Perform double jumps in mid-air, collect energy crystals, leap over downhill energy spikes, and set high scores in your browser."
+      "description": "Play Cyber Dino Double Jump Runner free online! Perform double jumps in mid-air, collect energy crystals, leap over downhill energy spikes, and set high scores in your browser.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "DoodleJump": {
       "name": "Smiley Doodle Jump - Endless Jumping Arcade Game",
@@ -658,7 +1291,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-physics-merge-platform-jump:keyboard-mouse-touch",
-      "description": "Play Smiley Doodle Jump online. Jump from platform to platform endlessly, dodge obstacles, and see how high you can climb in this completely revamped synthwave arcade game!"
+      "description": "Play Smiley Doodle Jump online. Jump from platform to platform endlessly, dodge obstacles, and see how high you can climb in this completely revamped synthwave arcade game!",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "DotConnect": {
       "name": "Dot Connect Puzzle",
@@ -682,7 +1338,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:match-3-physics-merge-sliding-tile:mouse-touch",
-      "description": "Connect lines of dots, relax with fun puzzles, and match the colors in this addictive logic puzzle game inspired by Two Dots."
+      "description": "Connect lines of dots, relax with fun puzzles, and match the colors in this addictive logic puzzle game inspired by Two Dots.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "EggSort": {
       "name": "Egg Sort: Easter Color Puzzle",
@@ -706,7 +1383,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-physics-merge-sliding-tile:mouse-touch",
-      "description": "Drop beautiful patterned Easter eggs from trays, guide them on the conveyor belt, and sort them into matching nests. Play Egg Sort: Easter Color Puzzle game online for free!"
+      "description": "Drop beautiful patterned Easter eggs from trays, guide them on the conveyor belt, and sort them into matching nests. Play Egg Sort: Easter Color Puzzle game online for free!",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "EnglishGrammarQuiz": {
       "name": "English Grammar Quiz \u2013 Learn English Grammar",
@@ -726,7 +1424,29 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:block-slicing-platform-jump-rhythm-timing:keyboard-mouse",
-      "description": "Test and improve your English grammar with our free online quiz! MCQ questions on tenses, articles, prepositions, verbs &amp; more. A fun educational English learning game for students, kids &amp; adults."
+      "description": "Test and improve your English grammar with our free online quiz! MCQ questions on tenses, articles, prepositions, verbs &amp; more. A fun educational English learning game for students, kids &amp; adults.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation",
+          "timer-countdown",
+          "lives-system"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "FamilyTree": {
       "name": "Family Tree! - Logic Puzzles",
@@ -745,7 +1465,27 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-rhythm-timing-word-puzzle:mouse",
-      "description": "Play Family Tree! - Logic Puzzles online. Boost your IQ, train your focus, and elevate your memory. Unlock the intricate branches of different families with the help of clues."
+      "description": "Play Family Tree! - Logic Puzzles online. Boost your IQ, train your focus, and elevate your memory. Unlock the intricate branches of different families with the help of clues.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "FitnessReels": {
       "name": "Fitness Reels - Workout Hacks & Self-Improvement",
@@ -764,7 +1504,28 @@
       ],
       "gameplay_loop": "aim cannon and shoot colored bubbles to clear hanging clusters",
       "gameplay_signature": "bubble_shooter:aim-shoot-board-strategy-rhythm-timing:mouse",
-      "description": "Discover powerful fat loss tips, gym hacks, and discipline strategies in this fast-paced, intuitive infinite scrolling fitness reel viewer."
+      "description": "Discover powerful fat loss tips, gym hacks, and discipline strategies in this fast-paced, intuitive infinite scrolling fitness reel viewer.",
+      "fingerprint": {
+        "primary_mechanic": "aim-shoot-cluster-clear",
+        "secondary_mechanics": [
+          "color-matching",
+          "ricochet-shot",
+          "cluster-pop",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "aim and fire colored bubbles to match and pop hanging clusters before they descend",
+        "interaction_pattern": "aim-and-fire",
+        "progression_system": "clusters descend faster and patterns more complex each level",
+        "scoring_system": "bubbles popped per shot multiplied by cluster size bonus",
+        "win_condition": "all bubbles cleared from the board",
+        "loss_condition": "bubbles descend below the danger line",
+        "level_structure": "level-based",
+        "archetype": "bubble_shooter",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "FlappyRise": {
       "name": "Flappy Rise Bird Game | Play Infinite Flight Challenge Online",
@@ -787,7 +1548,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-physics-merge-platform-jump:keyboard-mouse-touch",
-      "description": "Play Flappy Rise online free! Experience physics-based infinite bird flight. Tap to flap, avoid pipes, and climb the global leaderboards in this addictive arcade hit."
+      "description": "Play Flappy Rise online free! Experience physics-based infinite bird flight. Tap to flap, avoid pipes, and climb the global leaderboards in this addictive arcade hit.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "Football3D": {
       "name": "Football 3D Penalty Kick | Play Soccer",
@@ -809,7 +1593,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-sliding-tile:mouse-touch",
-      "description": "Flick to shoot and score incredible goals! Experience realistic 3D soccer physics and penalty kicks in this free online football sports game."
+      "description": "Flick to shoot and score incredible goals! Experience realistic 3D soccer physics and penalty kicks in this free online football sports game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "FootballReels": {
       "name": "Football Reels - Live Football Facts & Knowledge",
@@ -829,7 +1635,27 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-rhythm-timing:mouse",
-      "description": "Explore legendary football facts, historical moments, and interesting trivia in this fast-paced, intuitive infinite scrolling football reel viewer."
+      "description": "Explore legendary football facts, historical moments, and interesting trivia in this fast-paced, intuitive infinite scrolling football reel viewer.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "FourColors": {
       "name": "Four Colors",
@@ -849,7 +1675,27 @@
       ],
       "gameplay_loop": "play matching suit and number cards to clear hand vs opponents",
       "gameplay_signature": "card_game:card-game-falling-blocks-platform-jump:mouse",
-      "description": "Play Classic Four Colors (Draughts) free online! Jump, capture, crown kings, and outsmart the AI or play with a friend in 2-player mode directly in your browser."
+      "description": "Play Classic Four Colors (Draughts) free online! Jump, capture, crown kings, and outsmart the AI or play with a friend in 2-player mode directly in your browser.",
+      "fingerprint": {
+        "primary_mechanic": "card-matching-play",
+        "secondary_mechanics": [
+          "hand-management",
+          "turn-based-play",
+          "suit-color-matching",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "play matching suit or color cards onto the discard pile to empty hand first",
+        "interaction_pattern": "card-select-play",
+        "progression_system": "opponent AI improves and special cards appear more frequently",
+        "scoring_system": "points from remaining cards in opponent hand at round end",
+        "win_condition": "empty hand before opponents",
+        "loss_condition": "opponent empties hand before player",
+        "level_structure": "round-based",
+        "archetype": "card_game",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "FruitSort": {
       "name": "Fruit Sort: Juice Color Puzzle",
@@ -873,7 +1719,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-physics-merge:mouse-touch",
-      "description": "Drop fresh juicy fruits from trays, watch them ride the conveyor belt, and sort them into matching crates. Play Fruit Sort: Juice Color Puzzle game online for free!"
+      "description": "Drop fresh juicy fruits from trays, watch them ride the conveyor belt, and sort them into matching crates. Play Fruit Sort: Juice Color Puzzle game online for free!",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "FruitSplash": {
       "name": "Fruit Splash \u2013",
@@ -894,7 +1761,29 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-physics-merge:mouse-touch",
-      "description": "Play Fruit Splash game online free! Match 3 or more identical fruits to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+      "description": "Play Fruit Splash game online free! Match 3 or more identical fruits to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "GalaxyAssault": {
       "name": "GalaxyAssault",
@@ -916,7 +1805,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-physics-merge:mouse-touch",
-      "description": "Defend the galaxy in this fast-paced space shooter! Blast incoming aliens and meteors in this thrilling free arcade sci-fi online game."
+      "description": "Defend the galaxy in this fast-paced space shooter! Blast incoming aliens and meteors in this thrilling free arcade sci-fi online game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown",
+          "lives-system"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Game2048": {
       "name": "2048 Game Online \u2013 Play Free Number Merge Puzzle",
@@ -941,7 +1853,27 @@
       ],
       "gameplay_loop": "slide tiles in 4 directions to merge identical numbers towards 2048",
       "gameplay_signature": "2048_merge:physics-merge-platform-jump-sliding-tile:keyboard-mouse-touch",
-      "description": "Play 2048 free online! Slide numbered tiles on a 4\u00d74 grid, merge matching numbers, and reach the legendary 2048 tile. Addictive number puzzle game \u2013 no download needed."
+      "description": "Play 2048 free online! Slide numbered tiles on a 4\u00d74 grid, merge matching numbers, and reach the legendary 2048 tile. Addictive number puzzle game \u2013 no download needed.",
+      "fingerprint": {
+        "primary_mechanic": "directional-tile-slide",
+        "secondary_mechanics": [
+          "number-merge",
+          "board-fill-management"
+        ],
+        "gameplay_loop": "slide all tiles in one direction to merge identical numbers toward the 2048 target",
+        "interaction_pattern": "swipe-direction-select",
+        "progression_system": "board fills up making moves harder as tile values increase",
+        "scoring_system": "cumulative value of all merged tiles",
+        "win_condition": "create a 2048 tile",
+        "loss_condition": "board completely filled with no valid merge moves remaining",
+        "level_structure": "single-board",
+        "archetype": "2048_merge",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "GemMatch": {
       "name": "Gem Match \u2013",
@@ -962,7 +1894,29 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-physics-merge:mouse-touch",
-      "description": "Play Gem Match game online free! Match 3 or more identical gems to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+      "description": "Play Gem Match game online free! Match 3 or more identical gems to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "GemShooter": {
       "name": "Gem Shooter - Sparkling Jewel Puzzle!",
@@ -984,7 +1938,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-sliding-tile:mouse-touch",
-      "description": "Aim and match 3 colors to burst all the gems! A classic satisfying arcade puzzle. Play Gem Shooter for free and clear endless levels."
+      "description": "Aim and match 3 colors to burst all the gems! A classic satisfying arcade puzzle. Play Gem Shooter for free and clear endless levels.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "GeometryDash": {
       "name": "Geometry Jump: Play Dash Online Free",
@@ -1008,7 +1983,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:falling-blocks-lane-runner-platform-jump:keyboard-mouse-touch",
-      "description": "Play Geometry Jump online for free! Dash, jump, and fly your neon block through rhythmic spike obstacles and platforms. Play instantly in your browser now."
+      "description": "Play Geometry Jump online for free! Dash, jump, and fly your neon block through rhythmic spike obstacles and platforms. Play instantly in your browser now.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "Hangman": {
       "name": "Hangman Game Online",
@@ -1030,7 +2028,28 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:aim-shoot-board-strategy-word-puzzle:keyboard-mouse",
-      "description": "Play Hangman free online! Guess the hidden word letter by letter before the stickman is fully drawn. A fun, educational classic word guessing game for all ages."
+      "description": "Play Hangman free online! Guess the hidden word letter by letter before the stickman is fully drawn. A fun, educational classic word guessing game for all ages.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "HeadFootball": {
       "name": "Head Football Soccer Heads | 1v1 Big Head Sports Game",
@@ -1054,7 +2073,30 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:match-3-physics-merge-platform-jump:keyboard-mouse-touch",
-      "description": "Jump, kick, and headbutt the ball in explosive 1v1 soccer matches! Play fun big head football tournaments online for free."
+      "description": "Jump, kick, and headbutt the ball in explosive 1v1 soccer matches! Play fun big head football tournaments online for free.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "HealthHeroTrivia": {
       "name": "Health Hero \u2013 Daily Wellness Trivia",
@@ -1074,7 +2116,29 @@
       ],
       "gameplay_loop": "play matching suit and number cards to clear hand vs opponents",
       "gameplay_signature": "card_game:card-game-falling-blocks-platform-jump:keyboard-mouse",
-      "description": "Play Health Hero Trivia! Test and improve your general health knowledge with our fun wellness quiz. Practice nutrition facts, sleep hygiene, and first-aid online."
+      "description": "Play Health Hero Trivia! Test and improve your general health knowledge with our fun wellness quiz. Practice nutrition facts, sleep hygiene, and first-aid online.",
+      "fingerprint": {
+        "primary_mechanic": "card-matching-play",
+        "secondary_mechanics": [
+          "hand-management",
+          "turn-based-play",
+          "suit-color-matching",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "play matching suit or color cards onto the discard pile to empty hand first",
+        "interaction_pattern": "card-select-play",
+        "progression_system": "opponent AI improves and special cards appear more frequently",
+        "scoring_system": "points from remaining cards in opponent hand at round end",
+        "win_condition": "empty hand before opponents",
+        "loss_condition": "opponent empties hand before player",
+        "level_structure": "round-based",
+        "archetype": "card_game",
+        "controls": [
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "HelixBounce": {
       "name": "Helix Bounce 3D | Play Addictive Drop Ball Game Free",
@@ -1099,7 +2163,28 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:match-3-physics-merge-platform-jump:mouse-touch",
-      "description": "Smash your way down through the rotating platforms in Helix Bounce! A highly addictive casual jumping 3D ball drop game requiring quick reflexes."
+      "description": "Smash your way down through the rotating platforms in Helix Bounce! A highly addictive casual jumping 3D ball drop game requiring quick reflexes.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "level-based",
+        "archetype": "stack",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "HiddenObjects": {
       "name": "Hidden Objects - Mystery Finder | Play",
@@ -1120,7 +2205,28 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:card-game-lane-runner-sliding-tile:mouse",
-      "description": "Play Hidden Objects online for free! Train your brain, find all the hidden items in kids rooms, enchanted jungles, and retro garages. Fully mobile-friendly."
+      "description": "Play Hidden Objects online for free! Train your brain, find all the hidden items in kids rooms, enchanted jungles, and retro garages. Fully mobile-friendly.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "HiddenTalent": {
       "name": "Hidden Talent Test \u2013 Discover Your Secret Superpower",
@@ -1137,7 +2243,25 @@
       ],
       "gameplay_loop": "interact via casual-arcade to achieve the highest score",
       "gameplay_signature": "arcade_casual:casual-arcade:mouse",
-      "description": "Discover your hidden talent with our 2-choice quiz! Are you a Pattern Finder or an Empath? Fast, fun, and addictive test to reveal your secret strengths."
+      "description": "Discover your hidden talent with our 2-choice quiz! Are you a Pattern Finder or an Empath? Fast, fun, and addictive test to reveal your secret strengths.",
+      "fingerprint": {
+        "primary_mechanic": "casual-interaction",
+        "secondary_mechanics": [
+          "score-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "interact via casual mechanics to achieve the highest score",
+        "interaction_pattern": "casual-tap-or-click",
+        "progression_system": "difficulty increases with score",
+        "scoring_system": "raw score accumulation",
+        "win_condition": "none high score",
+        "loss_condition": "game-specific failure condition",
+        "level_structure": "endless",
+        "archetype": "arcade_casual",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "HiddenWord": {
       "name": "Hidden Word Finder",
@@ -1163,7 +2287,28 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-platform-jump-sliding-tile:mouse-touch",
-      "description": "Find the hidden word specified in the header from the grid of letters! A fun and challenging word search game."
+      "description": "Find the hidden word specified in the header from the grid of letters! A fun and challenging word search game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "HighwayRush": {
       "name": "Highway Rush: Traffic Dodge \u2013",
@@ -1181,7 +2326,28 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner:mouse-touch",
-      "description": "Play Highway Rush: Traffic Dodge! A classic arcade racing game. Dodge traffic cones and other cars on the busy highway. How far can you go?"
+      "description": "Play Highway Rush: Traffic Dodge! A classic arcade racing game. Dodge traffic cones and other cars on the busy highway. How far can you go?",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "IdleBallEscape": {
       "name": "Idle Ball Escape: Smash Rings | Play Online",
@@ -1205,7 +2371,28 @@
       ],
       "gameplay_loop": "navigate procedural labyrinth, collect crystals, and reach portal before time expires",
       "gameplay_signature": "maze:board-strategy-lane-runner-platform-jump:mouse-touch",
-      "description": "Idle Ball Escape is a relaxing casual game. Guide a bouncing ball inside a rotating ring maze. Tap to jump, use gentle gravity, and break each ring!"
+      "description": "Idle Ball Escape is a relaxing casual game. Guide a bouncing ball inside a rotating ring maze. Tap to jump, use gentle gravity, and break each ring!",
+      "fingerprint": {
+        "primary_mechanic": "maze-navigation",
+        "secondary_mechanics": [
+          "fog-of-war",
+          "crystal-collection",
+          "timer-countdown",
+          "exit-portal"
+        ],
+        "gameplay_loop": "navigate procedural labyrinth collecting crystals and reach exit portal before timer expires",
+        "interaction_pattern": "directional-navigation",
+        "progression_system": "maze dimensions grow and battery time shrinks each level",
+        "scoring_system": "crystals collected multiplied by remaining time bonus",
+        "win_condition": "player reaches exit portal before timer reaches zero",
+        "loss_condition": "countdown timer reaches zero before portal reached",
+        "level_structure": "level-based",
+        "archetype": "maze",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "JewelSort": {
       "name": "Jewel Sort: Sparkle Color Puzzle",
@@ -1228,7 +2415,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-physics-merge:mouse-touch",
-      "description": "Drop sparkling gemstones from trays, watch them ride the conveyor belt, and sort them into matching treasure crates. Play Jewel Sort: Sparkle Color Puzzle game online for free!"
+      "description": "Drop sparkling gemstones from trays, watch them ride the conveyor belt, and sort them into matching treasure crates. Play Jewel Sort: Sparkle Color Puzzle game online for free!",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "JigsawPuzzle": {
       "name": "Premium Jigsaw Puzzle Game | Drag & Snap",
@@ -1250,7 +2458,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:falling-blocks-platform-jump-sliding-tile:mouse-touch",
-      "description": "Play free online Jigsaw Puzzle games! Pick beautiful photos or cool abstract vector images, choose your difficulty, and match interlocking pieces in this premium canvas game."
+      "description": "Play free online Jigsaw Puzzle games! Pick beautiful photos or cool abstract vector images, choose your difficulty, and match interlocking pieces in this premium canvas game.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "KidsBalloonPop": {
       "name": "Kids Balloon Pop - Learn ABCs, Numbers, Colors & Shapes",
@@ -1268,7 +2497,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:physics-merge:mouse-touch",
-      "description": "Free kids balloon pop educational game! Pop colorful balloons to learn the alphabet A-Z, numbers 1-20, colors and shapes. Safe, ad-free play for toddlers. Available in 12 languages including Hindi, Tamil, Gujarati, Telugu, Marathi, Kannada, Malayalam, English, Spanish, French, German, and Japanese."
+      "description": "Free kids balloon pop educational game! Pop colorful balloons to learn the alphabet A-Z, numbers 1-20, colors and shapes. Safe, ad-free play for toddlers. Available in 12 languages including Hindi, Tamil, Gujarati, Telugu, Marathi, Kannada, Malayalam, English, Spanish, French, German, and Japanese.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "KnifeHit": {
       "name": "Knife Hit Game Online | Play Knife Throw Arcade Free",
@@ -1289,7 +2539,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-reaction-tap:mouse-touch",
-      "description": "Play Knife Hit online for free! Throw sharp knives into rotating target logs, slice juicy apples to score points, and avoid hitting other knives. High-speed casual reaction game."
+      "description": "Play Knife Hit online for free! Throw sharp knives into rotating target logs, slice juicy apples to score points, and avoid hitting other knives. High-speed casual reaction game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "KnowledgeReels": {
       "name": "Knowledge Reels - Daily Fun Facts & Shorts",
@@ -1309,7 +2581,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-platform-jump:mouse",
-      "description": "Discover mind-blowing facts about space, the human body, and general knowledge in this fast-paced, intuitive infinite scrolling reel viewer."
+      "description": "Discover mind-blowing facts about space, the human body, and general knowledge in this fast-paced, intuitive infinite scrolling reel viewer.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown",
+          "lives-system"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "LeadershipStyle": {
       "name": "Leadership Style Quiz \u2013 What Kind of Leader Are You?",
@@ -1326,7 +2620,27 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:match-3:mouse",
-      "description": "Find out your leadership style with our 2-choice quiz! Are you a Commander, a Visionary, or a Coach? Fast and insightful leadership personality test."
+      "description": "Find out your leadership style with our 2-choice quiz! Are you a Commander, a Visionary, or a Coach? Fast and insightful leadership personality test.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "LifeSkillsReels": {
       "name": "Life Skills Reels - Personal Growth & Hacks",
@@ -1344,7 +2658,27 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:block-slicing-match-3:mouse",
-      "description": "Discover practical life skills, personal growth hacks, and self-improvement strategies in this fast-paced, intuitive infinite scrolling reel viewer."
+      "description": "Discover practical life skills, personal growth hacks, and self-improvement strategies in this fast-paced, intuitive infinite scrolling reel viewer.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "Ludo": {
       "name": "Ludo Master Classic Board Game | Play Dice Multiplayer",
@@ -1361,7 +2695,27 @@
       ],
       "gameplay_loop": "take tactical turns capturing opponent pieces on a board",
       "gameplay_signature": "board_strategy:board-strategy:mouse",
-      "description": "Roll the dice and race your tokens! Play the famous classic Ludo board game online for free. A fun strategy game for friends and family."
+      "description": "Roll the dice and race your tokens! Play the famous classic Ludo board game online for free. A fun strategy game for friends and family.",
+      "fingerprint": {
+        "primary_mechanic": "turn-based-piece-movement",
+        "secondary_mechanics": [
+          "capture-mechanics",
+          "positional-strategy",
+          "opponent-ai",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "take tactical turns moving pieces to capture opponent pieces or achieve board objective",
+        "interaction_pattern": "select-and-place",
+        "progression_system": "opponent AI difficulty increases across matches",
+        "scoring_system": "pieces captured or board position dominance",
+        "win_condition": "capture key piece or control board objective",
+        "loss_condition": "key piece captured or position surrendered",
+        "level_structure": "match-based",
+        "archetype": "board_strategy",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "MarbleBlast": {
       "name": "Marble Blast - Classic Glass Marbles!",
@@ -1383,7 +2737,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-sliding-tile:mouse-touch",
-      "description": "Aim and match 3 colors to burst all the marbles! A classic satisfying arcade puzzle. Play Marble Blast for free and clear endless levels."
+      "description": "Aim and match 3 colors to burst all the marbles! A classic satisfying arcade puzzle. Play Marble Blast for free and clear endless levels.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "MarbleSort": {
       "name": "Marble Sort: Color Puzzle",
@@ -1406,7 +2781,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-physics-merge:mouse-touch",
-      "description": "Drop marbles from trays, guide them across the conveyor belt, and sort them into matching color boxes. A relaxing yet brain-teasing color puzzle game!"
+      "description": "Drop marbles from trays, guide them across the conveyor belt, and sort them into matching color boxes. A relaxing yet brain-teasing color puzzle game!",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "MemoryMatch": {
       "name": "Memory Card Match",
@@ -1427,7 +2823,27 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-sliding-tile:mouse",
-      "description": "Play Memory Card Match online for free! Flip 3D cards, match emoji pairs, build combo streaks, and sharpen your memory across 4 fun themes and difficulty levels."
+      "description": "Play Memory Card Match online for free! Flip 3D cards, match emoji pairs, build combo streaks, and sharpen your memory across 4 fun themes and difficulty levels.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "MergeNumbers": {
       "name": "Merge Numbers 2048 Puzzle | Addictive Math Brain Game",
@@ -1450,7 +2866,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:board-strategy-physics-merge-sliding-tile:mouse-touch",
-      "description": "Sharpen your brain with Merge Numbers! Combine tiles to reach huge sums in this addictive math logic puzzle game inspired by 2048."
+      "description": "Sharpen your brain with Merge Numbers! Combine tiles to reach huge sums in this addictive math logic puzzle game inspired by 2048.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "level-based",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Minesweeper": {
       "name": "Play Minesweeper",
@@ -1470,7 +2907,71 @@
       ],
       "gameplay_loop": "slide tiles in 4 directions to merge identical numbers towards 2048",
       "gameplay_signature": "2048_merge:aim-shoot-board-strategy-sliding-tile:mouse-touch",
-      "description": "Play classic Minesweeper online for free! Enjoy standard difficulty levels (Easy, Medium, Hard), clean design, and smooth controls on mobile or desktop."
+      "description": "Play classic Minesweeper online for free! Enjoy standard difficulty levels (Easy, Medium, Hard), clean design, and smooth controls on mobile or desktop.",
+      "fingerprint": {
+        "primary_mechanic": "directional-tile-slide",
+        "secondary_mechanics": [
+          "number-merge",
+          "board-fill-management",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "slide all tiles in one direction to merge identical numbers toward the 2048 target",
+        "interaction_pattern": "swipe-direction-select",
+        "progression_system": "board fills up making moves harder as tile values increase",
+        "scoring_system": "cumulative value of all merged tiles",
+        "win_condition": "create a 2048 tile",
+        "loss_condition": "board completely filled with no valid merge moves remaining",
+        "level_structure": "single-board",
+        "archetype": "2048_merge",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
+    },
+    "NeonMaze": {
+      "name": "Neon Maze Escape | Play Online Free",
+      "slug": "neonmaze",
+      "folder": "NeonMaze",
+      "entry": "index.html",
+      "category": "puzzle",
+      "archetype": "maze",
+      "mechanics": [
+        "lane-runner",
+        "board-strategy",
+        "maze-pathfinding"
+      ],
+      "controls": [
+        "touch",
+        "keyboard",
+        "mouse"
+      ],
+      "gameplay_loop": "navigate procedural labyrinth, collect crystals, and reach portal before time expires",
+      "gameplay_signature": "maze:board-strategy-lane-runner-maze-pathfinding:keyboard-mouse-touch",
+      "description": "Play Neon Maze Escape free online in your browser. Mobile-friendly, no download required!",
+      "fingerprint": {
+        "primary_mechanic": "maze-navigation",
+        "secondary_mechanics": [
+          "fog-of-war",
+          "crystal-collection",
+          "timer-countdown",
+          "exit-portal",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "navigate procedural labyrinth collecting crystals and reach exit portal before timer expires",
+        "interaction_pattern": "directional-navigation",
+        "progression_system": "maze dimensions grow and battery time shrinks each level",
+        "scoring_system": "crystals collected multiplied by remaining time bonus",
+        "win_condition": "player reaches exit portal before timer reaches zero",
+        "loss_condition": "countdown timer reaches zero before portal reached",
+        "level_structure": "level-based",
+        "archetype": "maze",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "NeonPacman": {
       "name": "Neon Pacman Arcade",
@@ -1493,7 +2994,30 @@
       ],
       "gameplay_loop": "navigate procedural labyrinth, collect crystals, and reach portal before time expires",
       "gameplay_signature": "maze:board-strategy-lane-runner-physics-merge:keyboard-mouse-touch",
-      "description": "Play Neon Pacman Arcade online for free! Dodge cyber ghosts, chomp glowing neon dots, and conquer the maze in this massive reboot of the classic pac man game."
+      "description": "Play Neon Pacman Arcade online for free! Dodge cyber ghosts, chomp glowing neon dots, and conquer the maze in this massive reboot of the classic pac man game.",
+      "fingerprint": {
+        "primary_mechanic": "maze-navigation",
+        "secondary_mechanics": [
+          "fog-of-war",
+          "crystal-collection",
+          "timer-countdown",
+          "exit-portal",
+          "lives-system"
+        ],
+        "gameplay_loop": "navigate procedural labyrinth collecting crystals and reach exit portal before timer expires",
+        "interaction_pattern": "directional-navigation",
+        "progression_system": "maze dimensions grow and battery time shrinks each level",
+        "scoring_system": "crystals collected multiplied by remaining time bonus",
+        "win_condition": "player reaches exit portal before timer reaches zero",
+        "loss_condition": "countdown timer reaches zero before portal reached",
+        "level_structure": "level-based",
+        "archetype": "maze",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "NeonSlicer": {
       "name": "NeonSlicer",
@@ -1517,7 +3041,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-physics-merge-sliding-tile:mouse-touch",
-      "description": "Play Balloon Ninja free online! Swipe to slash flying balloons, dodge the bombs, and set explosive high scores. A gorgeous mobile-friendly arcade hit."
+      "description": "Play Balloon Ninja free online! Swipe to slash flying balloons, dodge the bombs, and set explosive high scores. A gorgeous mobile-friendly arcade hit.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "NeonSnake": {
       "name": "Neon Snake Classic Arcade | Play Modern Snake Online Free",
@@ -1538,7 +3084,28 @@
       ],
       "gameplay_loop": "navigate procedural labyrinth, collect crystals, and reach portal before time expires",
       "gameplay_signature": "maze:board-strategy-physics-merge-word-puzzle:mouse-touch",
-      "description": "Play the classic Snake retro game with a modern neon twist! Eat the glowing dots, grow your tail, and survive the endless maze for a high score."
+      "description": "Play the classic Snake retro game with a modern neon twist! Eat the glowing dots, grow your tail, and survive the endless maze for a high score.",
+      "fingerprint": {
+        "primary_mechanic": "maze-navigation",
+        "secondary_mechanics": [
+          "fog-of-war",
+          "crystal-collection",
+          "timer-countdown",
+          "exit-portal"
+        ],
+        "gameplay_loop": "navigate procedural labyrinth collecting crystals and reach exit portal before timer expires",
+        "interaction_pattern": "directional-navigation",
+        "progression_system": "maze dimensions grow and battery time shrinks each level",
+        "scoring_system": "crystals collected multiplied by remaining time bonus",
+        "win_condition": "player reaches exit portal before timer reaches zero",
+        "loss_condition": "countdown timer reaches zero before portal reached",
+        "level_structure": "level-based",
+        "archetype": "maze",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "NumMatch": {
       "name": "NumMatch - Logic Puzzle",
@@ -1560,7 +3127,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-sliding-tile:mouse",
-      "description": "Match pairs of numbers or numbers that add up to 10 to clear the board! A relaxing and addictive logic puzzle game. Play NumMatch online for free."
+      "description": "Match pairs of numbers or numbers that add up to 10 to clear the board! A relaxing and addictive logic puzzle game. Play NumMatch online for free.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "NumberBalloonShooter": {
       "name": "Math Balloon Pop Shooter | Number Adding Puzzle Game",
@@ -1581,7 +3169,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:board-strategy-physics-merge-reaction-tap:mouse-touch",
-      "description": "Improve your math skills by popping numbered balloons! A fun educational arcade shooter to test your quick calculation reflexes."
+      "description": "Improve your math skills by popping numbered balloons! A fun educational arcade shooter to test your quick calculation reflexes.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "level-based",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "NumberMaster": {
       "name": "Number Master: Run, Merge & Grow",
@@ -1602,7 +3211,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-physics-merge:mouse-touch",
-      "description": "Swipe to collect numbers, grow your value, and break through walls! Dodge saws, avoid red threat numbers, and aim for the highest score. Free hyper-casual math runner game."
+      "description": "Swipe to collect numbers, grow your value, and break through walls! Dodge saws, avoid red threat numbers, and aim for the highest score. Free hyper-casual math runner game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Numpuz": {
       "name": "Numpuz: Number Puzzle Games",
@@ -1626,7 +3257,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:falling-blocks-lane-runner-sliding-tile:mouse-touch",
-      "description": "Numpuz is a classic logic puzzle game. Tap and move the wood number blocks, challenge your brainpower, have fun and enjoy number games!"
+      "description": "Numpuz is a classic logic puzzle game. Tap and move the wood number blocks, challenge your brainpower, have fun and enjoy number games!",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "NutritionQuiz": {
       "name": "Nutrition Quiz \u2013 Guess Food Macros | Free Health Knowledge Game",
@@ -1644,7 +3297,27 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:physics-merge-word-puzzle:mouse",
-      "description": "Test your nutrition knowledge! Guess the correct calories, carbs, protein and fat for fruits, vegetables, grains and more. A fun free health quiz game for all ages."
+      "description": "Test your nutrition knowledge! Guess the correct calories, carbs, protein and fat for fruits, vegetables, grains and more. A fun free health quiz game for all ages.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "OddOneOut": {
       "name": "Odd One Out \u2013 Brain Puzzle Game | Find the Difference",
@@ -1663,7 +3336,26 @@
       ],
       "gameplay_loop": "slide tiles in 4 directions to merge identical numbers towards 2048",
       "gameplay_signature": "2048_merge:rhythm-timing-sliding-tile-sports-sim:mouse",
-      "description": "Play Odd One Out free online! Find the emoji, color or shape that doesn"
+      "description": "Play Odd One Out free online! Find the emoji, color or shape that doesn",
+      "fingerprint": {
+        "primary_mechanic": "directional-tile-slide",
+        "secondary_mechanics": [
+          "number-merge",
+          "board-fill-management",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "slide all tiles in one direction to merge identical numbers toward the 2048 target",
+        "interaction_pattern": "swipe-direction-select",
+        "progression_system": "board fills up making moves harder as tile values increase",
+        "scoring_system": "cumulative value of all merged tiles",
+        "win_condition": "create a 2048 tile",
+        "loss_condition": "board completely filled with no valid merge moves remaining",
+        "level_structure": "single-board",
+        "archetype": "2048_merge",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "PersonalityTest": {
       "name": "2-Choice Personality Test \u2013 Fast & Addictive Quiz",
@@ -1680,7 +3372,25 @@
       ],
       "gameplay_loop": "interact via casual-arcade to achieve the highest score",
       "gameplay_signature": "arcade_casual:casual-arcade:mouse",
-      "description": "Take our 2-choice personality test! Discover your gaming personality type in under 60 seconds. Fun, fast, and addictive online quiz to know yourself better."
+      "description": "Take our 2-choice personality test! Discover your gaming personality type in under 60 seconds. Fun, fast, and addictive online quiz to know yourself better.",
+      "fingerprint": {
+        "primary_mechanic": "casual-interaction",
+        "secondary_mechanics": [
+          "score-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "interact via casual mechanics to achieve the highest score",
+        "interaction_pattern": "casual-tap-or-click",
+        "progression_system": "difficulty increases with score",
+        "scoring_system": "raw score accumulation",
+        "win_condition": "none high score",
+        "loss_condition": "game-specific failure condition",
+        "level_structure": "endless",
+        "archetype": "arcade_casual",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "PetPop": {
       "name": "Pet Pop \u2013",
@@ -1701,7 +3411,29 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-physics-merge:mouse-touch",
-      "description": "Play Pet Pop game online free! Match 3 or more identical pets to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+      "description": "Play Pet Pop game online free! Match 3 or more identical pets to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "PianoTiles": {
       "name": "Piano Tiles",
@@ -1726,7 +3458,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-platform-jump-sliding-tile:keyboard-mouse-touch",
-      "description": "Play Piano Tiles free online! Tap falling black piano keys to play classical songs like F\u00fcr Elise, Ode to Joy, and Canon in D. Test your rhythm reflexes in your browser."
+      "description": "Play Piano Tiles free online! Tap falling black piano keys to play classical songs like F\u00fcr Elise, Ode to Joy, and Canon in D. Test your rhythm reflexes in your browser.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "PlanetShooter": {
       "name": "Planet Shooter - Galactic Space Puzzle!",
@@ -1749,7 +3504,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-match-3-sliding-tile:mouse-touch",
-      "description": "Aim and match 3 colors to burst all the planets! A classic satisfying arcade puzzle. Play Planet Shooter for free and clear endless levels."
+      "description": "Aim and match 3 colors to burst all the planets! A classic satisfying arcade puzzle. Play Planet Shooter for free and clear endless levels.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "PocketGolf": {
       "name": "Mini Golf Pocket 3D | Play Fun Putt Putt Course Online",
@@ -1768,7 +3544,28 @@
       ],
       "gameplay_loop": "take tactical turns capturing opponent pieces on a board",
       "gameplay_signature": "board_strategy:board-strategy-sports-sim:mouse-touch",
-      "description": "Putt your way through crazy mini golf courses! Discover obstacles, perfect your swing, and get a hole-in-one in this relaxing free sports game."
+      "description": "Putt your way through crazy mini golf courses! Discover obstacles, perfect your swing, and get a hole-in-one in this relaxing free sports game.",
+      "fingerprint": {
+        "primary_mechanic": "turn-based-piece-movement",
+        "secondary_mechanics": [
+          "capture-mechanics",
+          "positional-strategy",
+          "opponent-ai",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "take tactical turns moving pieces to capture opponent pieces or achieve board objective",
+        "interaction_pattern": "select-and-place",
+        "progression_system": "opponent AI difficulty increases across matches",
+        "scoring_system": "pieces captured or board position dominance",
+        "win_condition": "capture key piece or control board objective",
+        "loss_condition": "key piece captured or position surrendered",
+        "level_structure": "match-based",
+        "archetype": "board_strategy",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Pool": {
       "name": "Pool",
@@ -1788,7 +3585,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-sports-sim:keyboard-mouse-touch",
-      "description": "Play the best realistic 8 Ball Pool multiplayer online for free! Improve your billiards skills, practice trick shots, and become the pool master without downloading."
+      "description": "Play the best realistic 8 Ball Pool multiplayer online for free! Improve your billiards skills, practice trick shots, and become the pool master without downloading.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "RetroRacer": {
       "name": "Car Race 3D -",
@@ -1809,7 +3629,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-falling-blocks-lane-runner:keyboard-mouse-touch",
-      "description": "Play Car Race 3D free online! Drive a fast car, dodge opponents and race to the finish on a beautiful 3D road. Free browser car racing game, no download needed."
+      "description": "Play Car Race 3D free online! Drive a fast car, dodge opponents and race to the finish on a beautiful 3D road. Free browser car racing game, no download needed.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "SimplyDraw": {
       "name": "Simply Draw - Learn to Draw",
@@ -1827,7 +3670,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:physics-merge:mouse-touch",
-      "description": "Learn and practice drawing beautiful sketches. Enjoy customized learning journeys and video-like trace-along sessions to master your drawing skills."
+      "description": "Learn and practice drawing beautiful sketches. Enjoy customized learning journeys and video-like trace-along sessions to master your drawing skills.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "SkiFree": {
       "name": "Ski",
@@ -1847,7 +3711,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-platform-jump:keyboard-mouse-touch",
-      "description": "Play SkiFree online for free! Dodge trees, jump ramps, and escape the infamous Abominable Snow Monster in this HTML5 port of the classic 90s skiing arcade game."
+      "description": "Play SkiFree online for free! Dodge trees, jump ramps, and escape the infamous Abominable Snow Monster in this HTML5 port of the classic 90s skiing arcade game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "SlopeGame": {
       "name": "Slope Game",
@@ -1870,7 +3757,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:lane-runner-physics-merge-platform-jump:keyboard-mouse-touch",
-      "description": "Play Slope Game free online! Roll your 3D neon ball down steep slopes, dodge red obstacle walls, make massive gap jumps, and survive at high speeds in your browser."
+      "description": "Play Slope Game free online! Roll your 3D neon ball down steep slopes, dodge red obstacle walls, make massive gap jumps, and survive at high speeds in your browser.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "SnakesAndLadders": {
       "name": "Snakes and Ladders Online | Play Classic Snake Board Game Free",
@@ -1890,7 +3800,27 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-sliding-tile:mouse",
-      "description": "Roll the dice, climb the ladders, and slide down the snakes! Play the ultimate Snakes and Ladders board game online. Try 2-player local multiplayer or challenge our smart AI."
+      "description": "Roll the dice, climb the ladders, and slide down the snakes! Play the ultimate Snakes and Ladders board game online. Try 2-player local multiplayer or challenge our smart AI.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "Solitaire": {
       "name": "Play Klondike Solitaire",
@@ -1910,7 +3840,29 @@
       ],
       "gameplay_loop": "play matching suit and number cards to clear hand vs opponents",
       "gameplay_signature": "card_game:board-strategy-card-game-falling-blocks:mouse-touch",
-      "description": "Play classic Klondike Solitaire online for free! Enjoy the classic card game with undo and auto-move features. Play instantly on mobile or desktop."
+      "description": "Play classic Klondike Solitaire online for free! Enjoy the classic card game with undo and auto-move features. Play instantly on mobile or desktop.",
+      "fingerprint": {
+        "primary_mechanic": "card-matching-play",
+        "secondary_mechanics": [
+          "hand-management",
+          "turn-based-play",
+          "suit-color-matching",
+          "timer-countdown",
+          "lives-system"
+        ],
+        "gameplay_loop": "play matching suit or color cards onto the discard pile to empty hand first",
+        "interaction_pattern": "card-select-play",
+        "progression_system": "opponent AI improves and special cards appear more frequently",
+        "scoring_system": "points from remaining cards in opponent hand at round end",
+        "win_condition": "empty hand before opponents",
+        "loss_condition": "opponent empties hand before player",
+        "level_structure": "round-based",
+        "archetype": "card_game",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Stack3D": {
       "name": "Stack 3D Puzzle Game | Play Free Tower Builder Online",
@@ -1934,7 +3886,28 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:lane-runner-physics-merge-platform-jump:mouse-touch",
-      "description": "Test your reflexes in Stack 3D! Build the highest block tower by perfectly dropping shapes. Fun free physics puzzle game for mobile and desktop."
+      "description": "Test your reflexes in Stack 3D! Build the highest block tower by perfectly dropping shapes. Fun free physics puzzle game for mobile and desktop.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "StickDuel": {
       "name": "Stickman Warriors Duel | Epic Ragdoll Fighting Game Free",
@@ -1960,7 +3933,30 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:lane-runner-physics-merge-platform-jump:keyboard-mouse-touch",
-      "description": "Enter the arena in Stickman Warriors Duel! An action-packed physics-based ragdoll fighting game with insane weapons and combat maneuvers."
+      "description": "Enter the arena in Stickman Warriors Duel! An action-packed physics-based ragdoll fighting game with insane weapons and combat maneuvers.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "StrikerLeague": {
       "name": "Striker League Soccer | Play Online Football Championship",
@@ -1983,7 +3979,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:falling-blocks-lane-runner-match-3:mouse-touch",
-      "description": "Lead your team to victory in Striker League! Experience fast-paced 2D soccer action with strategic formations and physics-based shooting. Play free online."
+      "description": "Lead your team to victory in Striker League! Experience fast-paced 2D soccer action with strategic formations and physics-based shooting. Play free online.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "SubwayRunner": {
       "name": "Subway Runner 3D",
@@ -2005,7 +4022,30 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-platform-jump:keyboard-mouse-touch",
-      "description": "Play Subway Runner 3D free online! Dash down 3-lane railway tracks, dodge trains, leap hurdles, roll under barriers, grab coin magnets, and surf endless subway lines in your browser."
+      "description": "Play Subway Runner 3D free online! Dash down 3-lane railway tracks, dodge trains, leap hurdles, roll under barriers, grab coin magnets, and surf endless subway lines in your browser.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "Sudoku": {
       "name": "Play Sudoku Classic",
@@ -2029,7 +4069,28 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:lane-runner-platform-jump-sliding-tile:keyboard-mouse",
-      "description": "Challenge your mind with daily classic Sudoku! Free 9x9 grid number logic puzzles with multiple difficulty levels to train your brain."
+      "description": "Challenge your mind with daily classic Sudoku! Free 9x9 grid number logic puzzles with multiple difficulty levels to train your brain.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "SushiMatch": {
       "name": "Sushi Match 3D Pair Connect | Memory Mahjong Puzzle",
@@ -2050,7 +4111,27 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:card-game-match-3-sliding-tile:mouse",
-      "description": "Find and pair the matching 3D sushi tiles! An addictive and relaxing mahjong-style memory connection game perfectly suited for puzzle logic fans."
+      "description": "Find and pair the matching 3D sushi tiles! An addictive and relaxing mahjong-style memory connection game perfectly suited for puzzle logic fans.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "TableTennis": {
       "name": "Table Tennis Online \u2013 Free 3D Ping Pong Game",
@@ -2073,7 +4154,29 @@
       ],
       "gameplay_loop": "reflect ball with paddle to destroy all bricks in the matrix",
       "gameplay_signature": "breakout:lane-runner-match-3-rhythm-timing:mouse-touch",
-      "description": "Play table tennis online free! Challenge smart AI in this realistic 3D ping pong game. Master topspin, smashes &amp; angled shots. No download needed \u2014 works on mobile &amp; desktop instantly."
+      "description": "Play table tennis online free! Challenge smart AI in this realistic 3D ping pong game. Master topspin, smashes &amp; angled shots. No download needed \u2014 works on mobile &amp; desktop instantly.",
+      "fingerprint": {
+        "primary_mechanic": "ball-paddle-reflection",
+        "secondary_mechanics": [
+          "brick-destruction",
+          "power-up-catch",
+          "ball-angle-control",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "reflect ball with paddle to destroy all bricks then advance to next level",
+        "interaction_pattern": "horizontal-paddle-control",
+        "progression_system": "more bricks, harder patterns, and faster ball each level",
+        "scoring_system": "points per brick destroyed with combo for multi-brick hits",
+        "win_condition": "all bricks in layout destroyed",
+        "loss_condition": "ball passes paddle and all lives depleted",
+        "level_structure": "level-based",
+        "archetype": "breakout",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Tennis": {
       "name": "Tennis Master 3D Sport | Play Open Tournament Online",
@@ -2094,7 +4197,29 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-lane-runner-match-3:mouse-touch",
-      "description": "Experience realistic 3D tennis physics! Swipe to serve, hit top-spins, and smash the ball to win the ultimate grand slam championship."
+      "description": "Experience realistic 3D tennis physics! Swipe to serve, hit top-spins, and smash the ball to win the ultimate grand slam championship.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "Tetris": {
       "name": "Tetris Game Online - Free Classic Block Puzzle",
@@ -2118,7 +4243,28 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:physics-merge-platform-jump-sliding-tile:keyboard-mouse-touch",
-      "description": "Play the classic Tetris game free online! Stack falling blocks, clear lines, and score high in this addictive retro puzzle game. No download required."
+      "description": "Play the classic Tetris game free online! Stack falling blocks, clear lines, and score high in this addictive retro puzzle game. No download required.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "TicTacToe": {
       "name": "Play Tic Tac Toe",
@@ -2138,7 +4284,27 @@
       ],
       "gameplay_loop": "aim cannon and shoot colored bubbles to clear hanging clusters",
       "gameplay_signature": "bubble_shooter:board-strategy-platform-jump-rhythm-timing:mouse",
-      "description": "Play classic Tic Tac Toe online for free! Enjoy 1 vs 1 mode with a friend or challenge the unbeatable AI. Play instantly on mobile or desktop."
+      "description": "Play classic Tic Tac Toe online for free! Enjoy 1 vs 1 mode with a friend or challenge the unbeatable AI. Play instantly on mobile or desktop.",
+      "fingerprint": {
+        "primary_mechanic": "aim-shoot-cluster-clear",
+        "secondary_mechanics": [
+          "color-matching",
+          "ricochet-shot",
+          "cluster-pop",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "aim and fire colored bubbles to match and pop hanging clusters before they descend",
+        "interaction_pattern": "aim-and-fire",
+        "progression_system": "clusters descend faster and patterns more complex each level",
+        "scoring_system": "bubbles popped per shot multiplied by cluster size bonus",
+        "win_condition": "all bubbles cleared from the board",
+        "loss_condition": "bubbles descend below the danger line",
+        "level_structure": "level-based",
+        "archetype": "bubble_shooter",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "TrafficJam": {
       "name": "Traffic Jam 3D - Puzzle Challenge",
@@ -2159,7 +4325,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:falling-blocks-lane-runner-sliding-tile:mouse-touch",
-      "description": "Solve the traffic gridlock! Slide cars and clear the path in this addictive 3D traffic management puzzle game."
+      "description": "Solve the traffic gridlock! Slide cars and clear the path in this addictive 3D traffic management puzzle game.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "TravelDestiny": {
       "name": "Travel Destiny Quiz \u2013 Where Should You Travel Next?",
@@ -2176,7 +4363,25 @@
       ],
       "gameplay_loop": "interact via casual-arcade to achieve the highest score",
       "gameplay_signature": "arcade_casual:casual-arcade:mouse",
-      "description": "Discover your travel destiny with our 2-choice quiz! Find out if you"
+      "description": "Discover your travel destiny with our 2-choice quiz! Find out if you",
+      "fingerprint": {
+        "primary_mechanic": "casual-interaction",
+        "secondary_mechanics": [
+          "score-accumulation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "interact via casual mechanics to achieve the highest score",
+        "interaction_pattern": "casual-tap-or-click",
+        "progression_system": "difficulty increases with score",
+        "scoring_system": "raw score accumulation",
+        "win_condition": "none high score",
+        "loss_condition": "game-specific failure condition",
+        "level_structure": "endless",
+        "archetype": "arcade_casual",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "TypingSpeedTest": {
       "name": "Typing Speed Test Arena - Learn to Type Fast",
@@ -2199,7 +4404,31 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-platform-jump:keyboard-mouse-touch",
-      "description": "Play the definitive Typing Speed Test Arena! Improve your WPM (Words Per Minute), train your keyboard muscle memory, and save your city from falling words in this free online educational typing game."
+      "description": "Play the definitive Typing Speed Test Arena! Improve your WPM (Words Per Minute), train your keyboard muscle memory, and save your city from falling words in this free online educational typing game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown",
+          "lives-system"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "endless",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "VeggieSmash": {
       "name": "Veggie Smash \u2013",
@@ -2220,7 +4449,29 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-physics-merge:mouse-touch",
-      "description": "Play Veggie Smash game online free! Match 3 or more identical veggies to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop."
+      "description": "Play Veggie Smash game online free! Match 3 or more identical veggies to score big. Addictive match-3 puzzle with unlimited levels. No download needed \u2014 works instantly on mobile &amp; desktop.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown",
+          "power-up-activation"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "VirusShooter": {
       "name": "Virus Shooter - Microscopic Hexa Puzzle!",
@@ -2242,7 +4493,28 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:board-strategy-match-3-sliding-tile:mouse-touch",
-      "description": "Aim and match 3 colors to burst all the viruss! A classic satisfying arcade puzzle. Play Virus Shooter for free and clear endless levels."
+      "description": "Aim and match 3 colors to burst all the viruss! A classic satisfying arcade puzzle. Play Virus Shooter for free and clear endless levels.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "VolleyballArena": {
       "name": "Volleyball Arena 3D | Fast Paced Sports Game Online",
@@ -2265,7 +4537,29 @@
       ],
       "gameplay_loop": "swap adjacent tiles to create lines of 3 or more matching colors",
       "gameplay_signature": "match3:falling-blocks-physics-merge-platform-jump:keyboard-mouse-touch",
-      "description": "Spike, block, and dive in Volleyball Arena 3D! Compete in fast-paced beach volleyball matches online for free. Mobile friendly sports game."
+      "description": "Spike, block, and dive in Volleyball Arena 3D! Compete in fast-paced beach volleyball matches online for free. Mobile friendly sports game.",
+      "fingerprint": {
+        "primary_mechanic": "gem-swap-match",
+        "secondary_mechanics": [
+          "cascade-gravity",
+          "chain-reaction",
+          "special-gem-explosion",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "swap adjacent gems to create lines of 3 or more matching colors triggering cascade chains",
+        "interaction_pattern": "drag-swap-selection",
+        "progression_system": "target score increases and board complexity grows each level",
+        "scoring_system": "base points per match multiplied by cascade depth",
+        "win_condition": "reach target score within move or time limit",
+        "loss_condition": "moves or time exhausted before target score reached",
+        "level_structure": "level-based",
+        "archetype": "match3",
+        "controls": [
+          "touch",
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "WaterSort3D": {
       "name": "Water Sort Color Puzzle | Relaxing Liquid Glass Brain Game",
@@ -2288,7 +4582,29 @@
       ],
       "gameplay_loop": "switch lanes and jump over obstacles as speed increases",
       "gameplay_signature": "endless_runner:board-strategy-lane-runner-platform-jump:mouse-touch",
-      "description": "Pour colored water into the correct tubes to sort them perfectly. An addictive logic and relaxing brain-training sorting puzzle game."
+      "description": "Pour colored water into the correct tubes to sort them perfectly. An addictive logic and relaxing brain-training sorting puzzle game.",
+      "fingerprint": {
+        "primary_mechanic": "lane-switching",
+        "secondary_mechanics": [
+          "jumping",
+          "rolling",
+          "coin-collecting",
+          "power-up-activation",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "switch lanes and jump over obstacles as running speed increases endlessly",
+        "interaction_pattern": "reactive-dodge",
+        "progression_system": "speed increases with distance travelled",
+        "scoring_system": "distance plus collectibles multiplied by speed multiplier",
+        "win_condition": "none endless survival high score",
+        "loss_condition": "collide with obstacle or barrier",
+        "level_structure": "level-based",
+        "archetype": "endless_runner",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "WatermelonDrop": {
       "name": "Watermelon Drop | Suika Fruit Merge Game Online Free",
@@ -2308,7 +4624,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:board-strategy-falling-blocks-physics-merge:mouse-touch",
-      "description": "Play Watermelon Drop (Suika Game) free online! Drop, bounce, and merge juicy fruits from cherries to giant watermelons in this addictive physics puzzle. No downloads needed!"
+      "description": "Play Watermelon Drop (Suika Game) free online! Drop, bounce, and merge juicy fruits from cherries to giant watermelons in this addictive physics puzzle. No downloads needed!",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "WellnessReels": {
       "name": "Wellness Reels - Mental Health & Mindset",
@@ -2326,7 +4663,26 @@
       ],
       "gameplay_loop": "slide tiles in 4 directions to merge identical numbers towards 2048",
       "gameplay_signature": "2048_merge:sliding-tile-word-puzzle:mouse",
-      "description": "Relatable mental health tips, mindset shifts, and psychological frameworks delivered in an intuitive, infinite scrolling reel viewer."
+      "description": "Relatable mental health tips, mindset shifts, and psychological frameworks delivered in an intuitive, infinite scrolling reel viewer.",
+      "fingerprint": {
+        "primary_mechanic": "directional-tile-slide",
+        "secondary_mechanics": [
+          "number-merge",
+          "board-fill-management",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "slide all tiles in one direction to merge identical numbers toward the 2048 target",
+        "interaction_pattern": "swipe-direction-select",
+        "progression_system": "board fills up making moves harder as tile values increase",
+        "scoring_system": "cumulative value of all merged tiles",
+        "win_condition": "create a 2048 tile",
+        "loss_condition": "board completely filled with no valid merge moves remaining",
+        "level_structure": "single-board",
+        "archetype": "2048_merge",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "WhackAMole": {
       "name": "Whack-a-Mole",
@@ -2346,7 +4702,27 @@
       ],
       "gameplay_loop": "tap popup targets while avoiding penalty traps before timer expires",
       "gameplay_signature": "whack_target:board-strategy-falling-blocks-lane-runner:mouse",
-      "description": "Play Whack-a-Mole free online! Smash popping moles, catch bonus golden king moles, dodge explosive bombs, and test your reaction speed across Classic, Blitz, and Frenzy modes."
+      "description": "Play Whack-a-Mole free online! Smash popping moles, catch bonus golden king moles, dodge explosive bombs, and test your reaction speed across Classic, Blitz, and Frenzy modes.",
+      "fingerprint": {
+        "primary_mechanic": "tap-popup-target",
+        "secondary_mechanics": [
+          "timer-pressure",
+          "penalty-avoidance",
+          "combo-speed",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "tap rising targets before they disappear while avoiding penalty objects",
+        "interaction_pattern": "rapid-tap",
+        "progression_system": "targets appear faster and penalty items multiply at higher scores",
+        "scoring_system": "targets hit with combo multiplier for rapid successive hits",
+        "win_condition": "none high score survival",
+        "loss_condition": "timer expires or too many misses",
+        "level_structure": "endless",
+        "archetype": "whack_target",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "WordCrossword": {
       "name": "Word Crossword Game",
@@ -2366,7 +4742,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:board-strategy-physics-merge-word-puzzle:mouse-touch",
-      "description": "Play Word Crossword for free online. Connect letters, find hidden words, and solve challenging crossword puzzles in this modern, mobile-friendly word game."
+      "description": "Play Word Crossword for free online. Connect letters, find hidden words, and solve challenging crossword puzzles in this modern, mobile-friendly word game.",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "WordGuess": {
       "name": "Word Guess Game Online - Free Unlimited Wordle Puzzle",
@@ -2391,7 +4788,27 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:lane-runner-platform-jump-sliding-tile:keyboard-mouse",
-      "description": "Play Word Guess free online! Guess the 5-letter word in 6 tries. Unlimited gameplay, no daily limits. Train your brain with this highly addictive word puzzle."
+      "description": "Play Word Guess free online! Guess the 5-letter word in 6 tries. Unlimited gameplay, no daily limits. Train your brain with this highly addictive word puzzle.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "keyboard",
+          "mouse"
+        ]
+      }
     },
     "WordSearch": {
       "name": "Classic Word Search Puzzle | Find English Words Game Online",
@@ -2413,7 +4830,27 @@
       ],
       "gameplay_loop": "slide tiles in 4 directions to merge identical numbers towards 2048",
       "gameplay_signature": "2048_merge:board-strategy-platform-jump-sliding-tile:mouse-touch",
-      "description": "Find the hidden words in the grid! Keep your brain sharp with endless daily word search logic puzzles. Free educational vocabulary game."
+      "description": "Find the hidden words in the grid! Keep your brain sharp with endless daily word search logic puzzles. Free educational vocabulary game.",
+      "fingerprint": {
+        "primary_mechanic": "directional-tile-slide",
+        "secondary_mechanics": [
+          "number-merge",
+          "board-fill-management",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "slide all tiles in one direction to merge identical numbers toward the 2048 target",
+        "interaction_pattern": "swipe-direction-select",
+        "progression_system": "board fills up making moves harder as tile values increase",
+        "scoring_system": "cumulative value of all merged tiles",
+        "win_condition": "create a 2048 tile",
+        "loss_condition": "board completely filled with no valid merge moves remaining",
+        "level_structure": "level-based",
+        "archetype": "2048_merge",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     },
     "WorldTour": {
       "name": "World Tour \u2014 Interactive Street View Explorer",
@@ -2430,7 +4867,26 @@
       ],
       "gameplay_loop": "tap to slice moving blocks and stack a tall tower without letting pieces fall",
       "gameplay_signature": "stack:block-slicing:mouse",
-      "description": "Take a virtual world tour across the globe. Explore over 100+ iconic streets, monuments, and landmarks from the USA, UK, France, Japan, Italy, and dozens of other countries in fully interactive 360-degree Street View."
+      "description": "Take a virtual world tour across the globe. Explore over 100+ iconic streets, monuments, and landmarks from the USA, UK, France, Japan, Italy, and dozens of other countries in fully interactive 360-degree Street View.",
+      "fingerprint": {
+        "primary_mechanic": "precision-timing-slice",
+        "secondary_mechanics": [
+          "combo-chain",
+          "overhang-trim",
+          "width-accumulation"
+        ],
+        "gameplay_loop": "tap to slice a moving block onto the growing tower with minimum overhang",
+        "interaction_pattern": "single-tap-timing",
+        "progression_system": "block swing speed increases with each successful slice",
+        "scoring_system": "height reached multiplied by combo multiplier",
+        "win_condition": "none highest score survival",
+        "loss_condition": "platform width reaches zero from accumulated overhang",
+        "level_structure": "endless",
+        "archetype": "stack",
+        "controls": [
+          "mouse"
+        ]
+      }
     },
     "ZenBounce": {
       "name": "Zen Bounce Puzzle | Relaxing Physics Game",
@@ -2453,25 +4909,28 @@
       ],
       "gameplay_loop": "drop and merge matching circle bodies to forge higher tier fruits or planets",
       "gameplay_signature": "physics_drop:falling-blocks-physics-merge-platform-jump:mouse-touch",
-      "description": "Drag, aim, and release to clear all blocks! Enjoy the relaxing minimalist physics puzzle game where every bounce counts. Can you solve all levels?"
-    },
-    "NeonMaze": {
-      "name": "Neon Maze Escape",
-      "slug": "neon-maze-escape",
-      "folder": "NeonMaze",
-      "entry": "index.html",
-      "category": "action",
-      "mechanics": [
-        "maze"
-      ],
-      "controls": [
-        "touch",
-        "mouse",
-        "keyboard"
-      ],
-      "signature": "generated",
-      "description": "Play Neon Maze Escape free online in your browser. Mobile-friendly, no download required!",
-      "created_at": "2026-09-21T20:44:57.484058"
+      "description": "Drag, aim, and release to clear all blocks! Enjoy the relaxing minimalist physics puzzle game where every bounce counts. Can you solve all levels?",
+      "fingerprint": {
+        "primary_mechanic": "aim-and-drop",
+        "secondary_mechanics": [
+          "physics-collision",
+          "merge-chain",
+          "tier-progression",
+          "timer-countdown"
+        ],
+        "gameplay_loop": "drop fruits into container aiming to merge matching tiers into higher-value fruits",
+        "interaction_pattern": "aim-release",
+        "progression_system": "higher tier merges become harder to achieve as container fills",
+        "scoring_system": "cumulative value of all merged fruit tiers",
+        "win_condition": "none highest score before overflow",
+        "loss_condition": "fruit stack overflows the container boundary",
+        "level_structure": "endless",
+        "archetype": "physics_drop",
+        "controls": [
+          "touch",
+          "mouse"
+        ]
+      }
     }
   }
 }

@@ -173,8 +173,11 @@ def run_factory(count=1, custom_name=None, custom_folder=None, dry_run=False):
         check_result = detector.check(
             candidate_name=concept['name'],
             candidate_folder=concept['folder'],
+            candidate_archetype=concept.get('archetype'),
+            candidate_fingerprint=concept.get('fingerprint'),
             candidate_category=concept['category'],
-            candidate_mechanics=concept['mechanics']
+            candidate_mechanics=concept.get('mechanics'),
+            verbose=True
         )
 
         if not check_result['allowed']:

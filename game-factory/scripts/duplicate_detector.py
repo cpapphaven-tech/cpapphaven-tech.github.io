@@ -1,8 +1,14 @@
 #!/usr/bin/env python3
 """
-PlayMix Duplicate & Gameplay Diversity Detector
-Enforces title uniqueness, slug safety, AND gameplay engine diversity.
-Rejects clones that share the same gameplay loop or mechanics engine.
+PlayMix Duplicate & Gameplay Diversity Detector (v3.0)
+========================================================
+Uses a structured GameplayFingerprint similarity score as the primary
+uniqueness signal. Title similarity and slug collision are also verified.
+
+Reject threshold: fingerprint similarity >= 0.72
+A different engine does NOT automatically mean a unique game.
+A shared engine does NOT automatically mean a duplicate.
+The gameplay fingerprint is the authoritative uniqueness signal.
 """
 
 import sys
@@ -12,8 +18,19 @@ import argparse
 from pathlib import Path
 from difflib import SequenceMatcher
 
+CURRENT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = CURRENT_DIR.parent.parent
+sys.path.insert(0, str(CURRENT_DIR.parent))  # game-factory/ -> engines importable
+sys.path.insert(0, str(CURRENT_DIR))          # scripts/ -> fingerprint importable
+
+from fingerprint import (
+    GameplayFingerprint, compute_similarity, print_uniqueness_report,
+    SIMILARITY_THRESHOLD, generate_explanation
+)
+from engines import DEFAULT_FINGERPRINTS
+
 def normalize_text(text):
-    text = text.lower()
+    text = (text or '').lower()
     text = re.sub(r'[^a-z0-9\s]', '', text)
     return ' '.join(text.split())
 
@@ -30,8 +47,7 @@ def token_jaccard(a, b):
 class DuplicateDetector:
     def __init__(self, registry_path=None):
         if registry_path is None:
-            repo_root = Path(__file__).resolve().parent.parent.parent
-            registry_path = repo_root / 'game-factory' / 'game-registry.json'
+            registry_path = REPO_ROOT / 'game-factory' / 'game-registry.json'
         
         self.registry_path = Path(registry_path)
         self.registry = self._load_registry()
@@ -47,96 +63,128 @@ class DuplicateDetector:
             print(f"Warning: Could not read registry: {e}", file=sys.stderr)
             return {}
 
-    def check(self, candidate_name, candidate_folder=None, candidate_category='action',
-              candidate_archetype='maze', candidate_mechanics=None, candidate_loop=None):
-        """
-        Evaluates proposed game for both metadata duplicates AND gameplay engine clones.
-        """
-        if candidate_mechanics is None:
-            candidate_mechanics = []
+    def get_fingerprint_for_game(self, game_dict):
+        """Extract or reconstruct a GameplayFingerprint from game record."""
+        fp_data = game_dict.get('fingerprint')
+        if fp_data and isinstance(fp_data, dict):
+            return GameplayFingerprint.from_dict(fp_data)
+        
+        # Fallback to reconstructing from archetype & metadata
+        archetype = game_dict.get('archetype', 'arcade_casual')
+        base = dict(DEFAULT_FINGERPRINTS.get(archetype, DEFAULT_FINGERPRINTS.get('arcade_casual', {})))
+        base['archetype'] = archetype
+        base['controls'] = game_dict.get('controls', base.get('controls', ['touch', 'mouse']))
+        if 'gameplay_loop' in game_dict:
+            base['gameplay_loop'] = game_dict['gameplay_loop']
+        if 'mechanics' in game_dict and game_dict['mechanics']:
+            base['secondary_mechanics'] = game_dict['mechanics']
+        return GameplayFingerprint.from_dict(base)
 
+    def check(self, candidate_name, candidate_folder=None, candidate_fingerprint=None,
+              candidate_archetype=None, candidate_category='action', candidate_mechanics=None,
+              verbose=True):
+        """
+        Evaluates candidate game against registry using gameplay fingerprint comparison.
+        Returns evaluation dict with full uniqueness metrics and decision.
+        """
         norm_name = normalize_text(candidate_name)
         candidate_slug = re.sub(r'[^a-z0-9]+', '-', candidate_name.lower()).strip('-')
         candidate_folder_slug = re.sub(r'[^a-z0-9]+', '-', (candidate_folder or candidate_name).lower()).strip('-')
 
-        reasons = []
-        highest_sim = 0.0
-        closest_game = None
+        # Construct candidate fingerprint if passed as dict or None
+        if isinstance(candidate_fingerprint, dict):
+            cand_fp = GameplayFingerprint.from_dict(candidate_fingerprint)
+        elif isinstance(candidate_fingerprint, GameplayFingerprint):
+            cand_fp = candidate_fingerprint
+        else:
+            arch = candidate_archetype or 'arcade_casual'
+            base = dict(DEFAULT_FINGERPRINTS.get(arch, DEFAULT_FINGERPRINTS.get('arcade_casual', {})))
+            base['archetype'] = arch
+            if candidate_mechanics:
+                base['secondary_mechanics'] = candidate_mechanics
+            cand_fp = GameplayFingerprint.from_dict(base)
 
-        candidate_mech_set = set(m.lower().strip() for m in candidate_mechanics)
+        reasons = []
+        highest_fp_sim = 0.0
+        closest_game_name = "None"
+        closest_fp = None
+        closest_sim_result = None
+
+        highest_title_sim = 0.0
 
         for folder, g in self.registry.items():
-            # Skip checking against self if re-validating an existing game
-            if candidate_folder and folder == candidate_folder:
+            # Skip checking against self if re-evaluating existing folder
+            if candidate_folder and folder.lower() == candidate_folder.lower():
                 continue
 
-            existing_name = g.get('name', '')
+            existing_name = g.get('name', folder)
             existing_slug = g.get('slug', '')
             existing_folder = g.get('folder', folder)
-            existing_archetype = g.get('archetype', '')
-            existing_mechanics = set(m.lower().strip() for m in g.get('mechanics', []))
-            existing_loop = g.get('gameplay_loop', '')
 
-            # 1. Exact Name match
+            # 1. Exact Name Collision Check
             if norm_name == normalize_text(existing_name):
                 reasons.append(f"Exact title match with existing game: '{existing_name}' ({folder})")
-                return {
-                    'allowed': False,
-                    'status': f"FAIL: Exact title match with '{existing_name}'",
-                    'uniqueness_score': 0.0,
-                    'rejection_reasons': reasons,
-                    'closest_game': existing_name,
-                    'highest_similarity': 1.0
-                }
 
-            # 2. Slug / Folder collision
+            # 2. Slug / Folder Collision Check
             if candidate_slug == existing_slug or candidate_folder_slug == existing_folder.lower():
                 reasons.append(f"Folder or slug collision with existing directory '{existing_folder}'")
-                return {
-                    'allowed': False,
-                    'status': f"FAIL: Slug/folder collision with '{existing_folder}'",
-                    'uniqueness_score': 0.0,
-                    'rejection_reasons': reasons,
-                    'closest_game': existing_name,
-                    'highest_similarity': 1.0
-                }
 
-            # 3. Fuzzy Name & Token Similarity
-            sim = string_similarity(candidate_name, existing_name)
-            jaccard = token_jaccard(candidate_name, existing_name)
-            combined_name_sim = max(sim, jaccard)
+            # Title similarity tracking
+            t_sim = max(string_similarity(candidate_name, existing_name), token_jaccard(candidate_name, existing_name))
+            if t_sim > highest_title_sim:
+                highest_title_sim = t_sim
 
-            if combined_name_sim > highest_sim:
-                highest_sim = combined_name_sim
-                closest_game = existing_name
+            # 3. GAMEPLAY FINGERPRINT COMPARISON (Authoritative Signal)
+            existing_fp = self.get_fingerprint_for_game(g)
+            sim_res = compute_similarity(cand_fp, existing_fp)
+            sim_score = sim_res['overall']
 
-            if combined_name_sim >= 0.72:
-                reasons.append(f"Title too similar to '{existing_name}' (similarity: {combined_name_sim:.2f})")
+            if sim_score > highest_fp_sim:
+                highest_fp_sim = sim_score
+                closest_game_name = existing_name
+                closest_fp = existing_fp
+                closest_sim_result = sim_res
 
-            # 4. GAMEPLAY DIVERSITY CHECK (Crucial rule)
-            # If same archetype AND mechanic overlap >= 75% AND (title similarity >= 0.40 or thematic clone)
-            if existing_archetype and candidate_archetype == existing_archetype:
-                mech_overlap = len(candidate_mech_set & existing_mechanics) / max(len(candidate_mech_set | existing_mechanics), 1)
-                
-                # E.g. Color Switch vs Color Jump / Color Bounce Switch
-                if candidate_archetype == 'color_switch':
-                    reasons.append(f"Gameplay engine too similar to '{existing_name}' (Color Switch archetype already exists in PlayMix)")
-                elif mech_overlap >= 0.70 and combined_name_sim >= 0.35:
-                    reasons.append(f"Gameplay engine too similar to existing game '{existing_name}' (shared archetype '{candidate_archetype}', mechanic overlap: {mech_overlap:.2f})")
+        # Fallback if registry was empty
+        if not closest_fp:
+            closest_fp = cand_fp
+            closest_sim_result = {'overall': 0.0, 'fields': {}}
 
-        uniqueness_score = round(max(0.0, 1.0 - highest_sim), 3)
-        allowed = (len(reasons) == 0) and (uniqueness_score >= 0.35)
+        decision = "FAIL" if (highest_fp_sim >= SIMILARITY_THRESHOLD or len(reasons) > 0) else "PASS"
 
-        status_msg = "PASS: Different gameplay engine." if allowed else f"FAIL: {reasons[0] if reasons else 'Too similar to existing games'}"
+        if highest_fp_sim >= SIMILARITY_THRESHOLD:
+            reasons.append(f"Gameplay fingerprint similarity ({highest_fp_sim:.4f}) with '{closest_game_name}' exceeds threshold ({SIMILARITY_THRESHOLD}).")
 
-        return {
-            'allowed': allowed,
-            'status': status_msg,
-            'uniqueness_score': uniqueness_score,
+        explanation = generate_explanation(cand_fp, closest_fp, closest_sim_result.get('fields', {}), decision)
+        if reasons and decision == 'FAIL' and not explanation.startswith("This game is a gameplay clone"):
+            explanation = f"{reasons[0]} {explanation}"
+
+        report_data = {
+            'candidate_name': candidate_name,
+            'archetype': cand_fp.archetype,
+            'gameplay_signature': cand_fp.signature(),
+            'closest_game': closest_game_name,
+            'similarity': highest_fp_sim,
+            'decision': decision,
+            'explanation': explanation,
             'rejection_reasons': reasons,
-            'closest_game': closest_game,
-            'highest_similarity': round(highest_sim, 3)
+            'uniqueness_score': round(1.0 - highest_fp_sim, 4),
+            'allowed': (decision == "PASS")
         }
+
+        if verbose:
+            print("\n" + "=" * 62)
+            print("GAMEPLAY UNIQUENESS CHECK")
+            print("=" * 62)
+            print(f"  Archetype:          {report_data['archetype']}")
+            print(f"  Gameplay signature: {report_data['gameplay_signature']}")
+            print(f"  Closest existing:   {report_data['closest_game']}")
+            print(f"  Similarity:         {report_data['similarity']:.4f}")
+            print(f"  Decision:           {report_data['decision']}")
+            print(f"  Explanation:        {report_data['explanation']}")
+            print("=" * 62 + "\n")
+
+        return report_data
 
 def main():
     parser = argparse.ArgumentParser(description="Check game uniqueness and gameplay diversity.")
@@ -153,13 +201,12 @@ def main():
     result = detector.check(
         candidate_name=args.name,
         candidate_folder=args.folder,
-        candidate_category=args.category,
         candidate_archetype=args.archetype,
-        candidate_mechanics=mechanics
+        candidate_category=args.category,
+        candidate_mechanics=mechanics,
+        verbose=True
     )
 
-    print(json.dumps(result, indent=2))
-    print(result['status'])
     if not result['allowed']:
         sys.exit(1)
 
