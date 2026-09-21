@@ -5,7 +5,8 @@ Safely updates:
 - games-data.js (featured and category sections)
 - sitemap.xml (game URL and blog URL with valid XML verification)
 - blog/index.html (adds article card to blog-grid)
-- game-factory/game-registry.json
+- game-factory/game-registry.json (with full gameplay fingerprint)
+- sync_missing_games: Auto-discovers any game on disk missing from sitemap or games-data.js
 """
 
 import sys
@@ -16,30 +17,26 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime
 
+CURRENT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = CURRENT_DIR.parent.parent
+sys.path.insert(0, str(CURRENT_DIR.parent))
+sys.path.insert(0, str(CURRENT_DIR))
+
+try:
+    from inventory import build_fingerprint, NON_GAME_DIRS
+except Exception:
+    NON_GAME_DIRS = set()
+    build_fingerprint = None
+
 class SiteUpdater:
     def __init__(self, repo_root=None):
         if repo_root is None:
-            repo_root = Path(__file__).resolve().parent.parent.parent
+            repo_root = REPO_ROOT
         self.repo_root = Path(repo_root)
 
     def update_all(self, game_info):
         """
-        game_info dict:
-        {
-            'name': 'Color Bounce Switch',
-            'folder': 'ColorBounce',
-            'slug': 'color-bounce',
-            'tag': '⚡ Neon Timing Hit',
-            'desc': 'Tap to bounce upward through rotating colored obstacles...',
-            'category': 'action', # action, puzzle, sports, board
-            'genre': 'Arcade',
-            'icon': '⚡',
-            'emoji': '⚡',
-            'badge': 'new',
-            'gradient': 'linear-gradient(135deg,#38bdf8,#a855f7,#f43f5e)',
-            'mechanics': ['reaction-tap', 'rhythm-timing'],
-            'controls': ['touch', 'keyboard']
-        }
+        Full platform data registration for a game.
         """
         print(f"🔄 Updating PlayMix platform records for: {game_info['name']}")
 
@@ -57,16 +54,17 @@ class SiteUpdater:
             return
 
         content = games_data_path.read_text(encoding='utf-8')
+        folder = g['folder']
 
         # Check if already present
-        if f'"{g["folder"]}/index.html"' in content or f"'{g['folder']}/index.html'" in content:
-            print(f"Notice: {g['folder']} already referenced in games-data.js")
+        if f'"{folder}/index.html"' in content or f"'{folder}/index.html'" in content:
+            print(f"Notice: {folder} already referenced in games-data.js")
             return
 
         # 1. Insert into featured array (at top)
         featured_entry = (
             f'    {{ name: "{g["name"]}", tag: "{g.get("tag", "🔥 New Hit")}", '
-            f'desc: "{g.get("desc", "")}", href: "{g["folder"]}/index.html", '
+            f'desc: "{g.get("desc", "")}", href: "{folder}/index.html", '
             f'gradient: "{g.get("gradient", "linear-gradient(135deg,#38bdf8,#a855f7)")}", '
             f'icon: "{g.get("icon", "🎮")}", badge: "{g.get("badge", "new")}", image: "" }},\n'
         )
@@ -80,12 +78,14 @@ class SiteUpdater:
 
         # 2. Insert into category items (e.g. action, puzzle, board, etc.)
         cat = g.get('category', 'action').lower()
-        if cat not in ['action', 'sports', 'puzzle', 'board', 'quiz']:
+        if cat in ['arcade', 'racing', 'runner']:
+            cat = 'action'
+        elif cat not in ['action', 'sports', 'puzzle', 'board', 'quiz']:
             cat = 'action'
 
         cat_entry = (
             f'        {{ name: "{g["name"]}", genre: "{g.get("genre", "Arcade")}", '
-            f'icon: "", href: "{g["folder"]}/index.html", badge: "{g.get("badge", "new")}", '
+            f'icon: "", href: "{folder}/index.html", badge: "{g.get("badge", "new")}", '
             f'emoji: "{g.get("emoji", "🎮")}" }},\n'
         )
 
@@ -114,7 +114,7 @@ class SiteUpdater:
         content = sitemap_path.read_text(encoding='utf-8')
         today = datetime.now().strftime('%Y-%m-%d')
         folder = g['folder']
-        slug = g['slug']
+        slug = g.get('slug') or re.sub(r'[^a-z0-9]+', '-', folder.lower()).strip('-')
 
         # Check if URL already present
         if f'https://playmixgames.in/{folder}/index.html' in content:
@@ -157,7 +157,7 @@ class SiteUpdater:
             return
 
         content = blog_index.read_text(encoding='utf-8')
-        slug = g['slug']
+        slug = g.get('slug') or re.sub(r'[^a-z0-9]+', '-', g['folder'].lower()).strip('-')
 
         if f'{slug}.html' in content:
             print(f"Notice: {slug}.html card already in blog/index.html")
@@ -195,16 +195,28 @@ class SiteUpdater:
             data = {'games': {}}
 
         games = data.get('games', {})
-        games[g['folder']] = {
+        folder = g['folder']
+        archetype = g.get('archetype', 'arcade_casual')
+        mechanics = g.get('mechanics', [])
+        controls = g.get('controls', ['touch', 'mouse'])
+
+        fingerprint = g.get('fingerprint')
+        if not fingerprint and build_fingerprint:
+            fingerprint = build_fingerprint(archetype, mechanics, '', '', controls)
+
+        games[folder] = {
             'name': g['name'],
-            'slug': g['slug'],
-            'folder': g['folder'],
+            'slug': g.get('slug') or re.sub(r'[^a-z0-9]+', '-', folder.lower()).strip('-'),
+            'folder': folder,
             'entry': 'index.html',
             'category': g.get('category', 'action'),
-            'mechanics': g.get('mechanics', []),
-            'controls': g.get('controls', ['touch', 'mouse']),
-            'signature': g.get('signature', 'generated'),
+            'archetype': archetype,
+            'mechanics': mechanics,
+            'controls': controls,
+            'gameplay_loop': g.get('gameplay_loop', g.get('desc', '')),
+            'gameplay_signature': g.get('gameplay_signature', f"{archetype}:generated"),
             'description': g.get('desc', ''),
+            'fingerprint': fingerprint,
             'created_at': datetime.now().isoformat()
         }
 
@@ -216,8 +228,80 @@ class SiteUpdater:
 
         print(f"  ✓ Updated game-factory/game-registry.json (total: {len(games)} games)")
 
+    def sync_missing_games(self):
+        """
+        Scans repo for any game folder on disk that is missing from games-data.js or sitemap.xml,
+        and automatically synchronizes them.
+        """
+        print("🔍 Checking platform index synchronization for all games...")
+        games_data_path = self.repo_root / 'games-data.js'
+        sitemap_path = self.repo_root / 'sitemap.xml'
+
+        if not games_data_path.exists() or not sitemap_path.exists():
+            return
+
+        games_data_content = games_data_path.read_text(encoding='utf-8')
+        sitemap_content = sitemap_path.read_text(encoding='utf-8')
+
+        synced_count = 0
+        for entry in sorted(self.repo_root.iterdir()):
+            if not entry.is_dir() or entry.name.startswith('.') or entry.name in NON_GAME_DIRS:
+                continue
+
+            index_file = entry / 'index.html'
+            game_html = entry / 'game.html'
+            if not index_file.exists() or not game_html.exists():
+                continue
+
+            folder = entry.name
+            in_games_data = f'"{folder}/index.html"' in games_data_content or f"'{folder}/index.html'" in games_data_content
+            in_sitemap = f'https://playmixgames.in/{folder}/index.html' in sitemap_content
+
+            if not in_games_data or not in_sitemap:
+                print(f"Found unsynced game on disk: '{folder}' (games-data: {in_games_data}, sitemap: {in_sitemap})")
+                
+                # Extract title
+                html_text = index_file.read_text(encoding='utf-8', errors='ignore')
+                title_match = re.search(r'<title>([^<]+)</title>', html_text, re.I)
+                raw_title = title_match.group(1) if title_match else folder
+                clean_title = re.sub(r'\s*\|.*$', '', raw_title).strip()
+                slug = re.sub(r'[^a-z0-9]+', '-', folder.lower()).strip('-')
+
+                game_info = {
+                    'name': clean_title,
+                    'folder': folder,
+                    'slug': slug,
+                    'tag': '🔥 New Hit',
+                    'desc': f'Play {clean_title} free online in your browser.',
+                    'category': 'action',
+                    'genre': 'Arcade',
+                    'icon': '🎮',
+                    'emoji': '🎮',
+                    'badge': 'new',
+                    'gradient': 'linear-gradient(135deg,#38bdf8,#a855f7)',
+                    'mechanics': [],
+                    'controls': ['touch', 'mouse']
+                }
+
+                if not in_games_data:
+                    self.update_games_data(game_info)
+                    games_data_content = games_data_path.read_text(encoding='utf-8')
+
+                if not in_sitemap:
+                    self.update_sitemap(game_info)
+                    sitemap_content = sitemap_path.read_text(encoding='utf-8')
+
+                synced_count += 1
+
+        if synced_count > 0:
+            print(f"✅ Synchronized {synced_count} missing game(s) to sitemap.xml and games-data.js.")
+        else:
+            print("✅ All repository games are fully synchronized with sitemap.xml and games-data.js.")
+
+
 def main():
-    print("SiteUpdater utility module.")
+    updater = SiteUpdater()
+    updater.sync_missing_games()
 
 if __name__ == '__main__':
     main()

@@ -169,6 +169,11 @@ def run_factory(count=1, custom_name=None, custom_folder=None, dry_run=False):
         if generated_count >= count:
             break
 
+        # If selecting from candidate pool, skip concepts whose game folder already exists on disk
+        if not custom_name and (REPO_ROOT / concept['folder'] / 'index.html').exists():
+            print(f"\n[Step 2/6] Skipping '{concept['name']}': already exists in repository ({concept['folder']}/)")
+            continue
+
         print(f"\n[Step 2/6] Evaluating candidate concept: '{concept['name']}'...")
         check_result = detector.check(
             candidate_name=concept['name'],
@@ -216,7 +221,11 @@ def run_factory(count=1, custom_name=None, custom_folder=None, dry_run=False):
 
         # Step 4: Validate
         print(f"\n[Step 4/6] Running validation suite on '{concept['folder']}'...")
-        val_result = validator.validate(concept['folder'])
+        try:
+            val_result = validator.validate(concept['folder'], declared_archetype=concept.get('archetype'))
+        except Exception as e:
+            print(f"❌ Validation crashed with unexpected error: {e}")
+            val_result = {'passed': False, 'errors': [str(e)]}
 
         if not val_result['passed']:
             print("❌ Validation FAILED! Rolling back generated files...")
@@ -232,7 +241,13 @@ def run_factory(count=1, custom_name=None, custom_folder=None, dry_run=False):
 
         # Step 5: Update Platform Data
         print(f"\n[Step 5/6] Updating games-data.js, sitemap.xml, and blog/index.html...")
-        updater.update_all(concept)
+        try:
+            updater.update_all(concept)
+            # Guarantee every game on disk has sitemap and games-data entries
+            updater.sync_missing_games()
+        except Exception as e:
+            print(f"❌ Error during platform record update: {e}", file=sys.stderr)
+            raise
 
         generated_count += 1
         generated_games.append(concept)
@@ -256,9 +271,18 @@ def main():
     parser.add_argument('--name', help="Custom game name")
     parser.add_argument('--folder', help="Custom folder name")
     parser.add_argument('--dry-run', action='store_true', help="Test concept without writing files")
+    parser.add_argument('--sync', action='store_true', help="Sync all existing games to sitemap.xml and games-data.js")
 
     args = parser.parse_args()
+
+    if args.sync:
+        print("🚀 Running PlayMix Platform Index Synchronizer...")
+        updater = SiteUpdater(REPO_ROOT)
+        updater.sync_missing_games()
+        return
+
     run_factory(count=args.count, custom_name=args.name, custom_folder=args.folder, dry_run=args.dry_run)
 
 if __name__ == '__main__':
     main()
+

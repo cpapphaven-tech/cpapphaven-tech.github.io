@@ -144,9 +144,13 @@ class GameValidator:
             candidate_archetype=detected_archetype
         )
 
-        diversity_status = diversity_result['status']
-        if not diversity_result['allowed']:
-            errors.append(diversity_result['status'])
+        diversity_status = diversity_result.get('status') or (
+            f"PASS: {diversity_result.get('explanation', 'Different gameplay engine.')}"
+            if diversity_result.get('allowed') else
+            f"FAIL: {diversity_result.get('explanation', 'Gameplay engine too similar to existing game.')}"
+        )
+        if not diversity_result.get('allowed', False):
+            errors.append(diversity_status)
 
         passed = len(errors) == 0
         return {

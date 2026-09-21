@@ -56,6 +56,7 @@ class GameplayFingerprint:
     level_structure:     str        = ''
     archetype:           str        = ''
     controls:            List[str]  = field(default_factory=list)
+    confidence:          str        = 'high'   # 'high', 'medium', 'low'
 
     def to_dict(self):
         return asdict(self)
@@ -76,6 +77,7 @@ class GameplayFingerprint:
             level_structure     = d.get('level_structure', ''),
             archetype           = d.get('archetype', ''),
             controls            = d.get('controls', []),
+            confidence          = d.get('confidence', 'high'),
         )
 
     def signature(self):
@@ -88,18 +90,16 @@ class GameplayFingerprint:
 
 def _tokens(text: str):
     """Lower-case word-set, stop-words removed."""
+    if not text:
+        return set()
     words = re.findall(r'[a-z]+', text.lower())
     return set(w for w in words if w not in _STOP and len(w) > 1)
 
 def _text_sim(a: str, b: str) -> float:
-    """Jaccard similarity on word-token sets."""
-    if not a and not b:
-        return 1.0
+    """Jaccard similarity on word-token sets. Empty fields contribute 0.0."""
     if not a or not b:
         return 0.0
     ta, tb = _tokens(a), _tokens(b)
-    if not ta and not tb:
-        return 1.0
     if not ta or not tb:
         return 0.0
     inter = len(ta & tb)
@@ -107,9 +107,7 @@ def _text_sim(a: str, b: str) -> float:
     return inter / union if union else 0.0
 
 def _str_sim(a: str, b: str) -> float:
-    """Exact/partial string similarity for short mechanic/pattern labels."""
-    if not a and not b:
-        return 1.0
+    """Exact/partial string similarity for short mechanic/pattern labels. Empty fields contribute 0.0."""
     if not a or not b:
         return 0.0
     a_clean = a.lower().strip()
@@ -128,11 +126,11 @@ def _str_sim(a: str, b: str) -> float:
     return _text_sim(a, b)
 
 def _list_sim(la: list, lb: list) -> float:
-    """Jaccard over two lists treated as sets."""
-    sa = set(x.lower().strip() for x in la)
-    sb = set(x.lower().strip() for x in lb)
-    if not sa and not sb:
-        return 1.0
+    """Jaccard over two lists treated as sets. Empty lists contribute 0.0."""
+    if not la or not lb:
+        return 0.0
+    sa = set(x.lower().strip() for x in la if x.strip())
+    sb = set(x.lower().strip() for x in lb if x.strip())
     if not sa or not sb:
         return 0.0
     inter = len(sa & sb)
@@ -163,27 +161,42 @@ def compute_similarity(fp_a: GameplayFingerprint, fp_b: GameplayFingerprint) -> 
 
     weighted = sum(FIELD_WEIGHTS[f] * scores[f] for f in FIELD_WEIGHTS)
 
-    # Soft archetype bonus when same archetype
+    # Uncertainty protection: If either game has unknown archetype or low confidence,
+    # do NOT apply archetype bonuses or combo bonuses.
+    is_uncertain = (
+        fp_a.archetype in ('unknown', 'low_confidence', '') or
+        fp_b.archetype in ('unknown', 'low_confidence', '') or
+        fp_a.confidence == 'low' or fp_b.confidence == 'low'
+    )
+
+    # Soft archetype bonus when same confident archetype
     archetype_bonus = 0.0
-    if (fp_a.archetype and fp_b.archetype and
+    if not is_uncertain and (fp_a.archetype and fp_b.archetype and
             fp_a.archetype.lower() == fp_b.archetype.lower()):
         archetype_bonus = 0.05
 
     # Combination bonus: when primary_mechanic + interaction_pattern + level_structure
     # are ALL >= 0.80, a gameplay clone is near-certain. Add up to 0.08 bonus.
     core_scores = [scores['primary_mechanic'], scores['interaction_pattern'], scores['level_structure']]
-    if all(s >= 0.80 for s in core_scores):
+    if not is_uncertain and all(s >= 0.80 for s in core_scores):
         combo_bonus = round(min(0.08, sum(s - 0.80 for s in core_scores) * 0.13), 4)
     else:
         combo_bonus = 0.0
 
-    overall = min(1.0, weighted + archetype_bonus + combo_bonus)
+    # If uncertain classification and primary mechanics do not match,
+    # cap similarity below threshold (<= 0.50) so uncertain games are never falsely declared duplicates.
+    raw_overall = weighted + archetype_bonus + combo_bonus
+    if is_uncertain and scores['primary_mechanic'] < 0.75:
+        overall = min(0.50, raw_overall)
+    else:
+        overall = min(1.0, raw_overall)
 
     return {
         'overall': round(overall, 4),
         'fields': scores,
         'archetype_bonus': archetype_bonus > 0,
         'combo_bonus': combo_bonus,
+        'is_uncertain': is_uncertain
     }
 
 # ---------------------------------------------------------------------------

@@ -166,6 +166,7 @@ class DuplicateDetector:
             'closest_game': closest_game_name,
             'similarity': highest_fp_sim,
             'decision': decision,
+            'status': f"{decision}: {explanation}" if decision == "FAIL" else "PASS: Different gameplay engine.",
             'explanation': explanation,
             'rejection_reasons': reasons,
             'uniqueness_score': round(1.0 - highest_fp_sim, 4),
