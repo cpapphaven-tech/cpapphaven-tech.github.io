@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Cyber Reflex Sprint | PlayMixGames</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="../analytics.js"></script>
+    <script defer src="game.js"></script>
+</head>
+<body>
+    <div class="game-wrapper">
+        <header class="game-hud">
+            <div class="hud-card"><span class="hud-label">STREAK</span><span class="hud-val" id="score-val">0</span></div>
+            <div class="hud-card"><span class="hud-label">AVG TIME</span><span class="hud-val" id="avg-val">0ms</span></div>
+            <div class="hud-card best-card"><span class="hud-label">BEST</span><span class="hud-val" id="best-val">0</span></div>
+            <button id="btn-sound" class="icon-btn">🔊</button>
+        </header>
+
+        <div class="reflex-arena">
+            <div class="timer-bar-track"><div class="timer-bar-fill" id="timer-fill"></div></div>
+            <div class="cue-display" id="cue-display">
+                <div class="cue-arrow" id="cue-arrow">⚡</div>
+                <div class="cue-label" id="cue-label">READY</div>
+            </div>
+
+            <div class="response-grid">
+                <button class="resp-btn" data-dir="left">◀ LEFT</button>
+                <button class="resp-btn" data-dir="up">▲ UP</button>
+                <button class="resp-btn" data-dir="down">▼ DOWN</button>
+                <button class="resp-btn" data-dir="right">▶ RIGHT</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="gameover-modal">
+        <div class="modal-box">
+            <h2>REFLEX OVERLOAD! ⚡</h2>
+            <p>Your streak reached <strong id="final-score">0</strong>.</p>
+            <p>Average reaction: <strong id="final-avg">0ms</strong></p>
+            <div id="record-badge" class="record-badge" style="display:none;">🏆 NEW RECORD! 🏆</div>
+            <button class="action-btn" id="btn-restart">TRY AGAIN 🔄</button>
+        </div>
+    </div>
+</body>
+</html>
