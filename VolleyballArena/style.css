@@ -335,6 +335,7 @@ header {
     }
 }
 
+.pmg-bottom-ad,
 #bottom-ad {
     position: fixed;
     bottom: 0;

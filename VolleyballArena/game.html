@@ -10,8 +10,17 @@
 
     <!-- Loaders & Analytics -->
     <script type="module" src="../analytics.js"></script>
-    <script src="../ads.js"></script>
-    <script src="../sidebar.js"></script>
+    <script>
+        // Only load ads & sidebar if game.html is opened standalone, not inside an iframe
+        if (window.self === window.top) {
+            const s1 = document.createElement('script');
+            s1.src = '../ads.js';
+            document.head.appendChild(s1);
+            const s2 = document.createElement('script');
+            s2.src = '../sidebar.js';
+            document.head.appendChild(s2);
+        }
+    </script>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../loader.css">
@@ -139,7 +148,7 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            if (typeof prepSystem === "function") {
+            if (window.self === window.top && typeof prepSystem === "function") {
                 prepSystem();
             }
         });
