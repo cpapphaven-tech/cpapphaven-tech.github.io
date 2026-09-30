@@ -138,6 +138,7 @@
 </head>
 
 <body class="pmg-sidebar-start-open">
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
     <!-- PlayMixGames Universal Loader -->
     <div id="pmg-loader">
         <div class="pmg-brand">PlayMixGames</div>
@@ -234,6 +235,9 @@
 
     <script defer src="game.js"></script>
     <script>
+        function triggerPrepSystem() {
+            if (typeof prepSystem === "function") prepSystem();
+        }
         window.addEventListener('load', function () {
             var loader = document.getElementById('pmg-loader');
             if (loader) {
@@ -241,10 +245,13 @@
                 if (fill) fill.style.width = '100%';
                 setTimeout(function () { loader.classList.add('hidden'); }, 300);
             }
+            triggerPrepSystem();
         });
-        document.addEventListener("DOMContentLoaded", function () {
-            if (typeof prepSystem === "function") prepSystem();
-        });
+        if (document.readyState === 'loading') {
+            document.addEventListener("DOMContentLoaded", triggerPrepSystem);
+        } else {
+            triggerPrepSystem();
+        }
     </script>
 </body>
 
