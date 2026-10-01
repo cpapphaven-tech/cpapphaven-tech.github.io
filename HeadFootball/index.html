@@ -77,8 +77,27 @@
     <meta name="twitter:description:fr" content="Sautez et shootez dans des matchs 1v1 explosifs ! Participez à des tournois de foot amusants.">
     <link rel="alternate" hreflang="en" href="https://playmixgames.in/HeadFootball/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://playmixgames.in/HeadFootball/index.html" />
+    <link rel="stylesheet" href="../portal-style.css">
+    <script defer src="../ads.js"></script>
+    <script defer src="../sidebar.js"></script>
 
     <style>
+        /* Bottom Ad Banner Styling */
+        .pmg-bottom-ad,
+        #bottom-ad {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+            min-height: 50px;
+            pointer-events: auto;
+        }
+
         body,
         html {
             margin: 0;
@@ -250,6 +269,9 @@
 </head>
 
 <body>
+    <!-- Bottom Ad Slot -->
+    <div id="bottom-ad" class="pmg-bottom-ad"></div>
+
     <div id="pmg-loader">
         <div class="pmg-brand">PlayMixGames</div>
         <div class="pmg-spinner"></div>
@@ -309,6 +331,16 @@
                 }, delay);
             };
         })();
+
+        function triggerPrepSystem() {
+            if (typeof prepSystem === 'function') prepSystem();
+        }
+        window.addEventListener('load', triggerPrepSystem);
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', triggerPrepSystem);
+        } else {
+            triggerPrepSystem();
+        }
     </script>
 </body>
 
