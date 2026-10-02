@@ -8,7 +8,7 @@
 
   <!-- Trending Games (Daily Discovery) -->
   <url>
-    <loc>https://playmixgames.in/TrendingGames/</loc>
+    <loc>https://playmixgames.in/TrendingGames/index.html</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
