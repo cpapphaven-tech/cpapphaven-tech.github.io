@@ -1,0 +1,92 @@
+[
+  {
+    "trend_topic": "Snake Games Online",
+    "search_intent": "snake game online",
+    "relevance_reason": "Classic snake mechanics and grid navigation remain one of the most enduring browser game search interests worldwide.",
+    "game_folder": "SnakesAndLadders",
+    "relevance_score": 0.95,
+    "category": "Board & Classic",
+    "play_cta": "Play Snakes & Ladders Online"
+  },
+  {
+    "trend_topic": "Endless Subway Runners",
+    "search_intent": "subway runner game",
+    "relevance_reason": "High-speed 3D rail-running action is popular with players looking for instant reaction challenges without downloads.",
+    "game_folder": "SubwayRunner",
+    "relevance_score": 0.94,
+    "category": "Action & Arcade",
+    "play_cta": "Play Subway Runner 3D Online"
+  },
+  {
+    "trend_topic": "Classic Block Puzzles",
+    "search_intent": "tetris online game",
+    "relevance_reason": "Falling block geometry and line-clearing logic are among the most frequently searched classic video game concepts.",
+    "game_folder": "Tetris",
+    "relevance_score": 0.93,
+    "category": "Action & Arcade",
+    "play_cta": "Play Classic Tetris Online"
+  },
+  {
+    "trend_topic": "2048 Number Merge Puzzles",
+    "search_intent": "2048 number puzzle",
+    "relevance_reason": "Sliding number tiles to build exponentially higher powers of two is a favorite mental workout across desktop and mobile.",
+    "game_folder": "Game2048",
+    "relevance_score": 0.91,
+    "category": "Puzzle & Brain",
+    "play_cta": "Play 2048 Online"
+  },
+  {
+    "trend_topic": "Bubble Pop & Shooter Puzzles",
+    "search_intent": "bubble shooter game",
+    "relevance_reason": "Color-cluster bubble popping mechanics provide instant relaxing gameplay that continues to draw strong search interest.",
+    "game_folder": "BubbleShooter",
+    "relevance_score": 0.90,
+    "category": "Puzzle & Brain",
+    "play_cta": "Play Bubble Shooter Online"
+  },
+  {
+    "trend_topic": "Online Football & Penalty Kicks",
+    "search_intent": "football game online",
+    "relevance_reason": "Sports enthusiasts frequently search for quick browser soccer penalty kick and free-kick shootout games.",
+    "game_folder": "Football3D",
+    "relevance_score": 0.88,
+    "category": "Sports",
+    "play_cta": "Play Football 3D Online"
+  },
+  {
+    "trend_topic": "Road Crossing Arcade Games",
+    "search_intent": "crossy road online",
+    "relevance_reason": "Timing-based vehicular dodging and endless road-hopping puzzles have maintained dedicated browser interest.",
+    "game_folder": "CrossyRoad",
+    "relevance_score": 0.87,
+    "category": "Action & Arcade",
+    "play_cta": "Play Crossy Road Online"
+  },
+  {
+    "trend_topic": "8 Ball Pool & Billiards",
+    "search_intent": "8 ball pool game",
+    "relevance_reason": "Cue sports simulations with realistic physics and bank shot control remain top search candidates in online casual gaming.",
+    "game_folder": "Pool",
+    "relevance_score": 0.86,
+    "category": "Sports",
+    "play_cta": "Play 8 Ball Pool Online"
+  },
+  {
+    "trend_topic": "Classic Chess Strategy",
+    "search_intent": "chess game online free",
+    "relevance_reason": "Tactical board gaming searches consistently spike for browser-based chess matches and AI sparring.",
+    "game_folder": "Chess",
+    "relevance_score": 0.85,
+    "category": "Board & Classic",
+    "play_cta": "Play Chess Online"
+  },
+  {
+    "trend_topic": "Daily Sudoku Logic Puzzles",
+    "search_intent": "daily sudoku puzzle",
+    "relevance_reason": "Pure logic grid numbers without arithmetic operations are a perennial daily habit for puzzle seekers.",
+    "game_folder": "Sudoku",
+    "relevance_score": 0.84,
+    "category": "Puzzle & Brain",
+    "play_cta": "Play Sudoku Online"
+  }
+]

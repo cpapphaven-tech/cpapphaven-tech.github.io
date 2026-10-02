@@ -1,0 +1,144 @@
+{
+  "update_timestamp": "2026-10-02T03:06:53.713490+00:00",
+  "data_source": "fallback",
+  "content_changed": true,
+  "total_raw_trends": 50,
+  "qualified_gaming_trends": 7,
+  "rejected_count": 43,
+  "selected_count": 10,
+  "selected_trends": [
+    {
+      "topic": "Snake Games Online",
+      "game_name": "Snakes & Ladders",
+      "game_folder": "SnakesAndLadders",
+      "url": "https://playmixgames.in/SnakesAndLadders/index.html",
+      "score": 0.95
+    },
+    {
+      "topic": "Endless Subway Runners",
+      "game_name": "Subway Runner 3D",
+      "game_folder": "SubwayRunner",
+      "url": "https://playmixgames.in/SubwayRunner/index.html",
+      "score": 0.94
+    },
+    {
+      "topic": "Classic Block Puzzles",
+      "game_name": "Tetris",
+      "game_folder": "Tetris",
+      "url": "https://playmixgames.in/Tetris/index.html",
+      "score": 0.93
+    },
+    {
+      "topic": "2048 Number Merge Puzzles",
+      "game_name": "2048",
+      "game_folder": "Game2048",
+      "url": "https://playmixgames.in/Game2048/index.html",
+      "score": 0.91
+    },
+    {
+      "topic": "Bubble Pop & Shooter Puzzles",
+      "game_name": "Bubble Shooter",
+      "game_folder": "BubbleShooter",
+      "url": "https://playmixgames.in/BubbleShooter/index.html",
+      "score": 0.9
+    },
+    {
+      "topic": "Online Football & Penalty Kicks",
+      "game_name": "Football 3D",
+      "game_folder": "Football3D",
+      "url": "https://playmixgames.in/Football3D/index.html",
+      "score": 0.88
+    },
+    {
+      "topic": "Road Crossing Arcade Games",
+      "game_name": "Crossy Road",
+      "game_folder": "CrossyRoad",
+      "url": "https://playmixgames.in/CrossyRoad/index.html",
+      "score": 0.87
+    },
+    {
+      "topic": "8 Ball Pool & Billiards",
+      "game_name": "8 Ball Pool",
+      "game_folder": "Pool",
+      "url": "https://playmixgames.in/Pool/index.html",
+      "score": 0.86
+    },
+    {
+      "topic": "Classic Chess Strategy",
+      "game_name": "Chess Master",
+      "game_folder": "Chess",
+      "url": "https://playmixgames.in/Chess/index.html",
+      "score": 0.85
+    },
+    {
+      "topic": "Daily Sudoku Logic Puzzles",
+      "game_name": "Sudoku Daily",
+      "game_folder": "Sudoku",
+      "url": "https://playmixgames.in/Sudoku/index.html",
+      "score": 0.84
+    }
+  ],
+  "sample_rejected_trends": [
+    {
+      "query": "hurricane rachel",
+      "reason": "Prohibited topic category: 'flood' detected"
+    },
+    {
+      "query": "will forte",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "mason marchment",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "digger",
+      "reason": "Prohibited topic category: 'box office' detected"
+    },
+    {
+      "query": "billie lourd",
+      "reason": "Prohibited topic category: 'shares' detected"
+    },
+    {
+      "query": "oilers vs canucks",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "nhl standings",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "olivier martinez",
+      "reason": "Prohibited topic category: 'actress' detected"
+    },
+    {
+      "query": "trump 500 check",
+      "reason": "Prohibited topic category: 'trump' detected"
+    },
+    {
+      "query": "tmz",
+      "reason": "Prohibited topic category: 'tmz' detected"
+    },
+    {
+      "query": "\u0917\u093e\u0902\u0927\u0940 \u091c\u092f\u0902\u0924\u0940",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "dominican republic vs haiti",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "\u091c\u093f\u0932\u093e\u0927\u093f\u0915\u093e\u0930\u0940",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "flydubai flight pilot",
+      "reason": "Prohibited topic category: 'modi' detected"
+    },
+    {
+      "query": "2 october",
+      "reason": "Prohibited topic category: 'cancer' detected"
+    }
+  ],
+  "error_status": null
+}

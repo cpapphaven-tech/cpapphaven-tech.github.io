@@ -35,7 +35,7 @@ NON_GAME_DIRS = {
     'logs', 'output', 'prope', 'temp_videos', 'videos', 'youtube_uploader',
     'facebook_uploader', 'gameorbit', 'GuidesCommon', 'NewsCommon', 'NewsHub',
     'ReelsCommon', 'TravelHub', 'WeatherApp', 'WeatherCommon', 'WeatherMap',
-    'game-factory', '.git', '.github', 'scratch'
+    'game-factory', '.git', '.github', 'scratch', 'TrendingGames', 'data'
 }
 
 def extract_meta_content(html, name_or_prop):
