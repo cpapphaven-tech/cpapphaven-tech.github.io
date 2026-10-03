@@ -1,5 +1,5 @@
 {
-  "update_timestamp": "2026-10-02T03:06:53.713490+00:00",
+  "update_timestamp": "2026-10-03T09:02:44.625506+00:00",
   "data_source": "fallback",
   "content_changed": true,
   "total_raw_trends": 50,
@@ -80,64 +80,64 @@
   ],
   "sample_rejected_trends": [
     {
-      "query": "hurricane rachel",
-      "reason": "Prohibited topic category: 'flood' detected"
-    },
-    {
-      "query": "will forte",
+      "query": "kamilla rakhimova",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "mason marchment",
+      "query": "india national cricket team vs west indies cricket team match scorecard",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "digger",
+      "query": "bahrain",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "nushrat bharucha",
+      "reason": "Prohibited topic category: 'surgery' detected"
+    },
+    {
+      "query": "apple tv",
+      "reason": "Prohibited topic category: 'war' detected"
+    },
+    {
+      "query": "ind vs wi",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "leylah fernandez",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "demacia cup",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "rublev",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "griffin",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "\u0d06\u0d30\u0d4d. \u0d36\u0d4d\u0d30\u0d40\u0d32\u0d47\u0d16",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "jio hotstar",
       "reason": "Prohibited topic category: 'box office' detected"
     },
     {
-      "query": "billie lourd",
-      "reason": "Prohibited topic category: 'shares' detected"
-    },
-    {
-      "query": "oilers vs canucks",
+      "query": "kl rahul",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "nhl standings",
+      "query": "hotstar",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "olivier martinez",
-      "reason": "Prohibited topic category: 'actress' detected"
-    },
-    {
-      "query": "trump 500 check",
-      "reason": "Prohibited topic category: 'trump' detected"
-    },
-    {
-      "query": "tmz",
-      "reason": "Prohibited topic category: 'tmz' detected"
-    },
-    {
-      "query": "\u0917\u093e\u0902\u0927\u0940 \u091c\u092f\u0902\u0924\u0940",
-      "reason": "No gaming intent detected in search query"
-    },
-    {
-      "query": "dominican republic vs haiti",
-      "reason": "No gaming intent detected in search query"
-    },
-    {
-      "query": "\u091c\u093f\u0932\u093e\u0927\u093f\u0915\u093e\u0930\u0940",
-      "reason": "No gaming intent detected in search query"
-    },
-    {
-      "query": "flydubai flight pilot",
-      "reason": "Prohibited topic category: 'modi' detected"
-    },
-    {
-      "query": "2 october",
-      "reason": "Prohibited topic category: 'cancer' detected"
+      "query": "jiohotstar",
+      "reason": "Prohibited topic category: 'crime' detected"
     }
   ],
   "error_status": null
