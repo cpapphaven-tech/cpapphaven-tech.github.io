@@ -685,6 +685,10 @@ def render_html(selected_items, update_timestamp, is_fallback=False):
 
 <body class="as-body">
 
+<!-- Ad slots -->
+<div id="adsterra-banner" class="pmg-side-ad"></div>
+<div id="bottom-ad" class="pmg-bottom-ad"></div>
+
 <!-- HEADER -->
 <header class="as-header">
   <a href="../index.html" class="as-header-logo">PlayMix</a>
@@ -803,6 +807,11 @@ def render_html(selected_items, update_timestamp, is_fallback=False):
   <p class="as-footer-copy">&copy; 2026 PlayMixGames. All rights reserved.</p>
 </footer>
 
+<script>
+window.addEventListener('load', function () {{
+  if (typeof prepSystem === 'function') prepSystem();
+}});
+</script>
 </body>
 </html>
 '''
