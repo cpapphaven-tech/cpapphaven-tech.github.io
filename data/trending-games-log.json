@@ -1,10 +1,10 @@
 {
-  "update_timestamp": "2026-10-05T10:16:37.704764+00:00",
+  "update_timestamp": "2026-10-06T10:02:11.369904+00:00",
   "data_source": "fallback",
   "content_changed": true,
   "total_raw_trends": 50,
-  "qualified_gaming_trends": 3,
-  "rejected_count": 47,
+  "qualified_gaming_trends": 5,
+  "rejected_count": 45,
   "selected_count": 10,
   "selected_trends": [
     {
@@ -80,63 +80,63 @@
   ],
   "sample_rejected_trends": [
     {
-      "query": "japan open",
+      "query": "william, prince of wales",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "prince harry and meghan markle lunch",
+      "query": "too short",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "gatorade recall",
+      "query": "carlos alcaraz",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "sophie cunningham",
+      "query": "jiri lehecka",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "digger movie 2026",
-      "reason": "Prohibited topic category: 'box office' detected"
+      "query": "marimar martinez civil suit government",
+      "reason": "Prohibited topic category: 'shooting' detected"
     },
     {
-      "query": "john wayne",
-      "reason": "Prohibited topic category: 'war' detected"
+      "query": "why did i get $90 from social security",
+      "reason": "Prohibited topic category: 'trump' detected"
     },
     {
-      "query": "justin bieber",
-      "reason": "Prohibited topic category: 'shares' detected"
-    },
-    {
-      "query": "jonathan owens",
-      "reason": "Prohibited topic category: 'shares' detected"
-    },
-    {
-      "query": "polar vortex 2026",
+      "query": "car",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "sensex index",
+      "query": "carlos alcaraz",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "\u092b\u0932\u093f\u0924 \u091c\u094d\u092f\u094b\u0924\u093f\u0937",
+      "query": "ind vs aus",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "zimw vs wi-w",
+      "query": "honda elevate facelift",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "monsoon",
+      "query": "\u0c35\u0c02\u0c26\u0c47 \u0c2d\u0c3e\u0c30\u0c24\u0c4d \u0c0e\u0c15\u0c4d\u0c38\u0c4d\u0c2a\u0c4d\u0c30\u0c46\u0c38\u0c4d",
       "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "\u0939\u0928\u0941\u092e\u093e\u0928 \u0905\u0902\u0936",
-      "reason": "Prohibited topic category: 'box office' detected"
+      "query": "\u0915\u094d\u0930\u093e\u0907\u092e \u0925\u094d\u0930\u093f\u0932\u0930",
+      "reason": "No gaming intent detected in search query"
     },
     {
-      "query": "\u0bb5\u0bbf\u0bb2\u0bc8",
+      "query": "\u0d07\u0d28\u0d4d\u0d24\u0d4d\u0d2f\u0d28\u0d4d \u0d26\u0d47\u0d36\u0d40\u0d2f \u0d35\u0d28\u0d3f\u0d24\u0d3e \u0d15\u0d4d\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d31\u0d4d\u0d31\u0d4d \u0d1f\u0d40\u0d02",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "\u0c38\u0c30\u0c4d\u0c2a\u0c02\u0c1a\u0c3f",
+      "reason": "No gaming intent detected in search query"
+    },
+    {
+      "query": "\u092e\u093e\u0927\u0941\u0930\u0940 \u0926\u0940\u0915\u094d\u0937\u093f\u0924",
       "reason": "No gaming intent detected in search query"
     }
   ],
