@@ -696,7 +696,6 @@ def render_html(selected_items, update_timestamp, is_fallback=False):
   <div class="as-desktop-tabs">
     <a href="../index.html" class="as-desktop-tab-btn" style="text-decoration:none;">🎮 Games</a>
     <a href="index.html" class="as-desktop-tab-btn active" style="text-decoration:none;">🔥 Trending</a>
-    <a href="../blog/index.html" class="as-desktop-tab-btn" style="text-decoration:none;">📖 Guides</a>
   </div>
 
   <div class="as-header-search">
